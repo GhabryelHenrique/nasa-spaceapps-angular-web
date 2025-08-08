@@ -1,0 +1,82 @@
+<section class="sponsors">
+  <div class="container">
+    <h2>Apoiadores e Patrocinadores</h2>
+    <p class="sponsors-intro">
+      Conheça as organizações que tornam possível o NASA Space Apps Challenge em Uberlândia
+    </p>
+
+    <!-- Diamond Sponsors -->
+    <div class="sponsor-tier diamond" *ngIf="sponsors.diamond.length > 0">
+      <h3>🚀 Patrocinador Oficial</h3>
+      <div class="sponsor-grid diamond-grid">
+        <div class="sponsor-card diamond-card" *ngFor="let sponsor of sponsors.diamond">
+          <a [href]="sponsor.url" target="_blank" rel="noopener">
+            <img [src]="sponsor.logo" [alt]="sponsor.name + ' Logo'" class="sponsor-logo">
+            <span class="sponsor-name">{{ sponsor.name }}</span>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Gold Sponsors -->
+    <div class="sponsor-tier gold" *ngIf="sponsors.gold.length > 0">
+      <h3>🥇 Patrocinadores Ouro</h3>
+      <div class="sponsor-grid gold-grid">
+        <div class="sponsor-card gold-card" *ngFor="let sponsor of sponsors.gold">
+          <a [href]="sponsor.url" target="_blank" rel="noopener">
+            <img [src]="sponsor.logo" [alt]="sponsor.name + ' Logo'" class="sponsor-logo">
+            <span class="sponsor-name">{{ sponsor.name }}</span>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Silver Sponsors -->
+    <div class="sponsor-tier silver" *ngIf="sponsors.silver.length > 0">
+      <h3>🥈 Patrocinadores Prata</h3>
+      <div class="sponsor-grid silver-grid">
+        <div class="sponsor-card silver-card" *ngFor="let sponsor of sponsors.silver">
+          <a [href]="sponsor.url" target="_blank" rel="noopener">
+            <img [src]="sponsor.logo" [alt]="sponsor.name + ' Logo'" class="sponsor-logo">
+            <span class="sponsor-name">{{ sponsor.name }}</span>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Bronze Sponsors -->
+    <div class="sponsor-tier bronze" *ngIf="sponsors.bronze.length > 0">
+      <h3>🥉 Patrocinadores Bronze</h3>
+      <div class="sponsor-grid bronze-grid">
+        <div class="sponsor-card bronze-card" *ngFor="let sponsor of sponsors.bronze">
+          <a [href]="sponsor.url" target="_blank" rel="noopener">
+            <img [src]="sponsor.logo" [alt]="sponsor.name + ' Logo'" class="sponsor-logo">
+            <span class="sponsor-name">{{ sponsor.name }}</span>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Supporters -->
+    <div class="sponsor-tier supporters" *ngIf="sponsors.supporters.length > 0">
+      <h3>🤝 Apoiadores</h3>
+      <div class="sponsor-grid supporters-grid">
+        <div class="sponsor-card supporter-card" *ngFor="let sponsor of sponsors.supporters">
+          <a [href]="sponsor.url" target="_blank" rel="noopener">
+            <img [src]="sponsor.logo" [alt]="sponsor.name + ' Logo'" class="sponsor-logo">
+            <span class="sponsor-name">{{ sponsor.name }}</span>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Become a Sponsor CTA -->
+    <div class="sponsor-cta">
+      <h3>Quer apoiar o evento?</h3>
+      <p>Junte-se a nós e ajude a promover a inovação espacial em Uberlândia!</p>
+      <button class="cta-sponsor">
+        Entre em Contato
+      </button>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,110 @@
+@import '../../../../styles/variables';
+
+.hero {
+  padding: 120px 2rem 60px;
+  display: flex;
+  align-items: center;
+  min-height: 80vh;
+  max-width: 1200px;
+  margin: 0 auto;
+  gap: 4rem;
+
+  .hero-content {
+    flex: 1;
+
+    .hero-title {
+      font-size: 3.5rem;
+      font-weight: 800;
+      margin-bottom: 0.5rem;
+      background: var(--gradient-nasa-primary);
+      background-clip: text;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      line-height: 1.2;
+    }
+
+    .hero-subtitle {
+      font-size: 1.8rem;
+      color: var(--text-secondary);
+      margin-bottom: 1.5rem;
+      font-weight: 300;
+    }
+
+    .hero-description {
+      font-size: 1.2rem;
+      line-height: 1.6;
+      color: var(--text-primary);
+      margin-bottom: 2rem;
+    }
+
+    .hero-actions {
+      display: flex;
+      gap: 1rem;
+
+      .cta-primary, .cta-secondary {
+        padding: 1rem 2rem;
+        border-radius: 30px;
+        font-size: 1.1rem;
+        font-weight: 600;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        border: none;
+      }
+
+      .cta-primary {
+        background: var(--gradient-nasa-red);
+        color: var(--nasa-white);
+
+        &:hover {
+          transform: translateY(-3px);
+          box-shadow: var(--shadow-nasa-red);
+        }
+      }
+
+      .cta-secondary {
+        background: transparent;
+        color: var(--nasa-blue);
+        border: 2px solid var(--nasa-blue);
+
+        &:hover {
+          background: var(--nasa-blue);
+          color: var(--nasa-white);
+          transform: translateY(-3px);
+        }
+      }
+    }
+  }
+
+  .hero-image {
+    flex: 1;
+
+    img {
+      width: 100%;
+      border-radius: 20px;
+      box-shadow: var(--shadow-dark);
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .hero {
+    flex-direction: column;
+    text-align: center;
+    padding: 100px 1rem 40px;
+
+    .hero-content {
+      .hero-title {
+        font-size: 2.5rem;
+      }
+
+      .hero-subtitle {
+        font-size: 1.3rem;
+      }
+
+      .hero-actions {
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+  }
+}

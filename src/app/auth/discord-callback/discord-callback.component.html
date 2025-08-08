@@ -1,0 +1,20 @@
+<div class="callback-container">
+  <div class="callback-content">
+    @if (loading) {
+      <div class="loading">
+        <div class="spinner"></div>
+        <h2>Processando login...</h2>
+        <p>Aguarde enquanto validamos suas credenciais do Discord.</p>
+      </div>
+    }
+    
+    @if (error) {
+      <div class="error">
+        <div class="error-icon">⚠️</div>
+        <h2>Erro na Autenticação</h2>
+        <p>{{ error }}</p>
+        <button class="retry-btn" (click)="goHome()">Voltar ao Início</button>
+      </div>
+    }
+  </div>
+</div>

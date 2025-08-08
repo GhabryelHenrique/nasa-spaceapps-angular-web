@@ -1,0 +1,61 @@
+// NASA Official Colors
+:root {
+  // Primary NASA Colors
+  --nasa-blue: #0B3D91;        // NASA Official Midnight Blue
+  --nasa-red: #FC3D21;         // NASA Official Rocket Red  
+  --nasa-white: #FFFFFF;       // NASA White
+  
+  // Secondary NASA Colors
+  --nasa-worm-red: #E03C31;    // NASA "Worm" Logo Red
+  
+  // Dark Theme Extended Palette
+  --nasa-blue-dark: #061F4A;   // Darker blue for backgrounds
+  --nasa-blue-light: #1A5BBE;  // Lighter blue for hover states
+  --nasa-red-dark: #D73516;    // Darker red
+  --nasa-red-light: #FF5A42;   // Lighter red for highlights
+  
+  // Background and surface colors for dark theme
+  --bg-primary: #000000;       // Deep space black
+  --bg-secondary: #0A0A0A;     // Slightly lighter black
+  --bg-surface: rgba(11, 61, 145, 0.1);  // NASA blue with transparency
+  --bg-surface-hover: rgba(11, 61, 145, 0.2);
+  
+  // Text colors
+  --text-primary: #FFFFFF;
+  --text-secondary: #B8B8B8;
+  --text-muted: #888888;
+  
+  // Accent colors derived from NASA palette
+  --accent-blue: var(--nasa-blue);
+  --accent-red: var(--nasa-red);
+  --accent-success: #28A745;   // Success green
+  --accent-warning: #FFC107;   // Warning yellow
+  
+  // Gradients
+  --gradient-nasa-primary: linear-gradient(45deg, var(--nasa-blue), var(--nasa-red));
+  --gradient-nasa-blue: linear-gradient(135deg, var(--nasa-blue-dark), var(--nasa-blue));
+  --gradient-nasa-red: linear-gradient(135deg, var(--nasa-red-dark), var(--nasa-red));
+  --gradient-space: linear-gradient(135deg, #000000 0%, var(--nasa-blue-dark) 50%, #1a1a2e 100%);
+  
+  // Shadows and effects
+  --shadow-nasa-blue: 0 10px 30px rgba(11, 61, 145, 0.3);
+  --shadow-nasa-red: 0 10px 30px rgba(252, 61, 33, 0.3);
+  --shadow-dark: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+// SCSS Variables (for backward compatibility and calculations)
+$nasa-blue: #0B3D91;
+$nasa-red: #FC3D21;
+$nasa-white: #FFFFFF;
+$nasa-worm-red: #E03C31;
+
+$nasa-blue-dark: #061F4A;
+$nasa-blue-light: #1A5BBE;
+$nasa-red-dark: #D73516;
+$nasa-red-light: #FF5A42;
+
+$bg-primary: #000000;
+$bg-secondary: #0A0A0A;
+$text-primary: #FFFFFF;
+$text-secondary: #B8B8B8;
+$text-muted: #888888;

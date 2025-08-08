@@ -1,0 +1,181 @@
+<section class="event-info" id="info">
+  <div class="container">
+    <h2>Informações do Evento</h2>
+    
+    <!-- Tab Navigation -->
+    <div class="tab-navigation">
+      <button 
+        class="tab-btn" 
+        [class.active]="activeTab === 'evento'"
+        (click)="setActiveTab('evento')">
+        Sobre o Evento
+      </button>
+      <button 
+        class="tab-btn" 
+        [class.active]="activeTab === 'hackathon'"
+        (click)="setActiveTab('hackathon')">
+        O que é o Hackathon
+      </button>
+      <button 
+        class="tab-btn" 
+        [class.active]="activeTab === 'premios'"
+        (click)="setActiveTab('premios')">
+        Modalidades e Prêmios
+      </button>
+    </div>
+
+    <!-- Tab Content -->
+    <div class="tab-content">
+      <!-- Evento Tab -->
+      <div *ngIf="activeTab === 'evento'" class="tab-panel">
+        <div class="info-grid">
+          <div class="info-card">
+            <div class="info-icon">📅</div>
+            <h3>Quando</h3>
+            <p>4-5 de Outubro, 2025<br>48 horas de inovação</p>
+          </div>
+          <div class="info-card">
+            <div class="info-icon">📍</div>
+            <h3>Onde</h3>
+            <p>Toda Uberlândia, MG<br>Múltiplas localizações</p>
+          </div>
+          <div class="info-card">
+            <div class="info-icon">👥</div>
+            <h3>Equipes</h3>
+            <p>2-6 pessoas por equipe<br>Todas as idades</p>
+          </div>
+          <div class="info-card">
+            <div class="info-icon">🏆</div>
+            <h3>Prêmios</h3>
+            <p>Certificados NASA<br>Prêmios locais e globais</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Hackathon Tab -->
+      <div *ngIf="activeTab === 'hackathon'" class="tab-panel">
+        <div class="hackathon-info">
+          <div class="hackathon-description">
+            <h3>O que é o NASA Space Apps Challenge?</h3>
+            <p>
+              O NASA Space Apps Challenge é o maior hackathon internacional da NASA, reunindo milhares de participantes 
+              em mais de 450 cidades ao redor do mundo. Durante 48 horas, equipes multidisciplinares trabalham juntas 
+              para resolver desafios reais propostos pela NASA e suas agências parceiras.
+            </p>
+            
+            <h4>Como funciona?</h4>
+            <ul>
+              <li><strong>Desafios Reais:</strong> Todos os desafios são baseados em problemas reais enfrentados pela NASA</li>
+              <li><strong>Dados Abertos:</strong> Acesso livre a dados e recursos da NASA para desenvolvimento das soluções</li>
+              <li><strong>48 Horas:</strong> Tempo limitado para criar protótipos funcionais e apresentações</li>
+              <li><strong>Equipes Diversas:</strong> Programadores, designers, cientistas, engenheiros e entusiastas</li>
+              <li><strong>Mentoria:</strong> Especialistas disponíveis para orientação técnica</li>
+            </ul>
+
+            <h4>Categorias de Desafios</h4>
+            <div class="challenge-categories">
+              <div class="category">
+                <h5>🌍 Ciências da Terra</h5>
+                <p>Mudanças climáticas, desastres naturais, agricultura sustentável</p>
+              </div>
+              <div class="category">
+                <h5>🚀 Exploração Espacial</h5>
+                <p>Missões a Marte, exploração lunar, tecnologias espaciais</p>
+              </div>
+              <div class="category">
+                <h5>🛰️ Tecnologia Espacial</h5>
+                <p>Satélites, comunicações, navegação e instrumentação</p>
+              </div>
+              <div class="category">
+                <h5>🔬 Ciência Planetária</h5>
+                <p>Astronomia, astrofísica, ciências planetárias</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Prêmios Tab -->
+      <div *ngIf="activeTab === 'premios'" class="tab-panel">
+        <div class="awards-section">
+          <h3>Sistema de Premiação</h3>
+          <p class="awards-intro">
+            O NASA Space Apps Challenge possui um sistema de premiação em três níveis: Local, Global Nominees e Global Winners.
+          </p>
+
+          <div class="award-categories">
+            <h4>Categorias de Prêmios Locais e Globais</h4>
+            
+            <div class="awards-grid">
+              <div class="award-card">
+                <div class="award-icon">🔬</div>
+                <h5>Best Use of Science</h5>
+                <p>Projeto que faz o melhor e mais válido uso da ciência e/ou do método científico.</p>
+              </div>
+
+              <div class="award-card">
+                <div class="award-icon">📊</div>
+                <h5>Best Use of Data</h5>
+                <p>Projeto que melhor torna os dados espaciais acessíveis ou os utiliza para uma aplicação única.</p>
+              </div>
+
+              <div class="award-card">
+                <div class="award-icon">💻</div>
+                <h5>Best Use of Technology</h5>
+                <p>Projeto que exemplifica o uso mais inovador de tecnologia.</p>
+              </div>
+
+              <div class="award-card">
+                <div class="award-icon">🌌</div>
+                <h5>Galactic Impact</h5>
+                <p>Projeto com maior potencial para melhorar a vida na Terra ou no universo.</p>
+              </div>
+
+              <div class="award-card">
+                <div class="award-icon">🚀</div>
+                <h5>Best Mission Concept</h5>
+                <p>Projeto com o conceito e design mais plausível para uma missão espacial.</p>
+              </div>
+
+              <div class="award-card">
+                <div class="award-icon">💖</div>
+                <h5>Most Inspirational</h5>
+                <p>Projeto que captura nossos corações e inspira a comunidade.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="judging-process">
+            <h4>Processo de Avaliação</h4>
+            
+            <div class="judging-steps">
+              <div class="judging-step">
+                <div class="step-number">1</div>
+                <div class="step-content">
+                  <h5>Avaliação Local</h5>
+                  <p>Juízes locais selecionam projetos vencedores em cada categoria para competir globalmente como <strong>Global Nominees</strong>.</p>
+                </div>
+              </div>
+
+              <div class="judging-step">
+                <div class="step-number">2</div>
+                <div class="step-content">
+                  <h5>Avaliação Global</h5>
+                  <p>Especialistas da NASA e agências parceiras avaliam todos os Global Nominees para selecionar os <strong>Global Finalists</strong>.</p>
+                </div>
+              </div>
+
+              <div class="judging-step">
+                <div class="step-number">3</div>
+                <div class="step-content">
+                  <h5>Avaliação Executiva</h5>
+                  <p>Comitê executivo da NASA seleciona os <strong>10 Global Winners</strong> finais entre todos os Global Finalists.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

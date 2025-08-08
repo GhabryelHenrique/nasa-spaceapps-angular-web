@@ -1,0 +1,334 @@
+@import '../../../../styles/variables';
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.event-info {
+  padding: 80px 0;
+  background: rgba(11, 61, 145, 0.05);
+
+  h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+    background: var(--gradient-nasa-primary);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  // Tab Navigation
+  .tab-navigation {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 3rem;
+    border-bottom: 1px solid rgba(11, 61, 145, 0.3);
+
+    .tab-btn {
+      background: transparent;
+      border: none;
+      padding: 1rem 2rem;
+      color: var(--text-secondary);
+      font-size: 1.1rem;
+      font-weight: 500;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      position: relative;
+      border-bottom: 3px solid transparent;
+
+      &:hover {
+        color: var(--nasa-blue);
+      }
+
+      &.active {
+        color: var(--nasa-blue);
+        border-bottom-color: var(--nasa-blue);
+        background: rgba(11, 61, 145, 0.1);
+      }
+    }
+  }
+
+  // Tab Content
+  .tab-content {
+    min-height: 400px;
+
+    .tab-panel {
+      animation: fadeIn 0.5s ease-in-out;
+    }
+  }
+
+  .info-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+
+    .info-card {
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(11, 61, 145, 0.2);
+      border-radius: 20px;
+      padding: 2rem;
+      text-align: center;
+      backdrop-filter: blur(10px);
+      transition: all 0.3s ease;
+
+      &:hover {
+        transform: translateY(-10px);
+        box-shadow: var(--shadow-nasa-blue);
+        border-color: var(--nasa-blue);
+      }
+
+      .info-icon {
+        font-size: 3rem;
+        margin-bottom: 1rem;
+      }
+
+      h3 {
+        font-size: 1.3rem;
+        margin-bottom: 0.5rem;
+        color: var(--nasa-blue);
+      }
+
+      p {
+        color: var(--text-secondary);
+        line-height: 1.6;
+      }
+    }
+  }
+
+  // Hackathon Info Styles
+  .hackathon-info {
+    .hackathon-description {
+      max-width: 800px;
+      margin: 0 auto;
+      text-align: left;
+
+      h3 {
+        font-size: 2rem;
+        color: var(--nasa-blue);
+        margin-bottom: 1.5rem;
+        text-align: center;
+      }
+
+      h4 {
+        font-size: 1.5rem;
+        color: var(--nasa-red);
+        margin: 2rem 0 1rem 0;
+      }
+
+      h5 {
+        font-size: 1.2rem;
+        color: var(--nasa-blue);
+        margin-bottom: 0.5rem;
+      }
+
+      p {
+        color: var(--text-primary);
+        line-height: 1.8;
+        margin-bottom: 1.5rem;
+        font-size: 1.1rem;
+      }
+
+      ul {
+        color: var(--text-primary);
+        line-height: 1.8;
+        margin-bottom: 2rem;
+        padding-left: 1.5rem;
+
+        li {
+          margin-bottom: 0.8rem;
+          
+          strong {
+            color: var(--nasa-blue);
+          }
+        }
+      }
+
+      .challenge-categories {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 1.5rem;
+        margin-top: 2rem;
+
+        .category {
+          background: rgba(11, 61, 145, 0.15);
+          border: 1px solid rgba(11, 61, 145, 0.3);
+          border-radius: 15px;
+          padding: 1.5rem;
+          transition: all 0.3s ease;
+
+          &:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-nasa-blue);
+          }
+
+          h5 {
+            margin-bottom: 0.5rem;
+            font-size: 1.1rem;
+          }
+
+          p {
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+            margin: 0;
+            line-height: 1.5;
+          }
+        }
+      }
+    }
+  }
+
+  // Awards Section Styles
+  .awards-section {
+    max-width: 1000px;
+    margin: 0 auto;
+
+    h3, h4 {
+      text-align: center;
+      color: var(--nasa-blue);
+    }
+
+    h3 { font-size: 2rem; margin-bottom: 1.5rem; }
+    h4 { font-size: 1.5rem; color: var(--nasa-red); margin: 2.5rem 0 1.5rem 0; }
+
+    .awards-intro {
+      color: var(--text-primary);
+      line-height: 1.8;
+      margin-bottom: 2rem;
+      font-size: 1.1rem;
+      text-align: center;
+    }
+
+    .awards-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.5rem;
+      margin-bottom: 3rem;
+
+      .award-card {
+        background: rgba(255, 255, 255, 0.05);
+        border: 1px solid rgba(11, 61, 145, 0.2);
+        border-radius: 15px;
+        padding: 1.5rem;
+        transition: all 0.3s ease;
+        text-align: center;
+        border-left: 4px solid var(--nasa-blue);
+
+        &:hover {
+          transform: translateY(-8px);
+          box-shadow: var(--shadow-nasa-blue);
+        }
+
+        .award-icon {
+          font-size: 2.5rem;
+          margin-bottom: 1rem;
+        }
+
+        h5 {
+          font-size: 1.2rem;
+          color: var(--nasa-blue);
+          margin-bottom: 1rem;
+        }
+
+        p {
+          color: var(--text-secondary);
+          line-height: 1.6;
+          font-size: 0.95rem;
+        }
+      }
+    }
+
+    .judging-steps {
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+      margin-top: 2rem;
+
+      .judging-step {
+        display: flex;
+        align-items: flex-start;
+        gap: 1.5rem;
+        background: rgba(11, 61, 145, 0.1);
+        border-radius: 15px;
+        padding: 2rem;
+        border-left: 4px solid var(--nasa-blue);
+
+        .step-number {
+          background: var(--gradient-nasa-blue);
+          color: var(--nasa-white);
+          width: 40px;
+          height: 40px;
+          border-radius: 50%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          font-weight: bold;
+          font-size: 1.2rem;
+          flex-shrink: 0;
+        }
+
+        .step-content {
+          h5 {
+            font-size: 1.3rem;
+            color: var(--nasa-blue);
+            margin-bottom: 0.5rem;
+          }
+
+          p {
+            color: var(--text-primary);
+            line-height: 1.7;
+            margin: 0;
+
+            strong { color: var(--nasa-red); }
+          }
+        }
+      }
+    }
+  }
+}
+
+// Animation
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+// Responsive Design
+@media (max-width: 768px) {
+  .event-info {
+    .tab-navigation {
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      
+      .tab-btn {
+        padding: 0.8rem 1.2rem;
+        font-size: 1rem;
+      }
+    }
+
+    .awards-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .judging-steps .judging-step {
+      flex-direction: column;
+      text-align: center;
+
+      .step-number {
+        align-self: center;
+      }
+    }
+
+    .challenge-categories {
+      grid-template-columns: 1fr;
+    }
+  }
+}
