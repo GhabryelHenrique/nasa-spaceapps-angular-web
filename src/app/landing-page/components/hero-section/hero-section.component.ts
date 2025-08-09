@@ -15,7 +15,8 @@ export class HeroSectionComponent {
   ) {}
 
   loginWithDiscord(): void {
-    this.discordAuth.loginWithDiscord();
+        window.open('https://discord.gg/FT4Jsvj5vy', '_blank');
+
   }
 
   scrollToInfo(): void {

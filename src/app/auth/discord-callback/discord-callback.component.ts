@@ -30,6 +30,7 @@ export class DiscordCallbackComponent implements OnInit {
       }
 
       if (code) {
+        console.log()
         this.handleDiscordCallback(code);
       } else {
         this.error = 'Código de autorização não encontrado';
@@ -41,6 +42,7 @@ export class DiscordCallbackComponent implements OnInit {
   private async handleDiscordCallback(code: string): Promise<void> {
     try {
       await this.discordAuth.handleCallback(code);
+
       this.router.navigate(['/dashboard']);
     } catch (error) {
       this.error = 'Erro ao processar autenticação';

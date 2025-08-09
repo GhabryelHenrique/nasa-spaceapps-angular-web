@@ -27,6 +27,7 @@ export class LandingPageComponent {
   ) {}
 
   loginWithDiscord(): void {
-    this.discordAuth.loginWithDiscord();
+        window.open('https://discord.gg/FT4Jsvj5vy', '_blank');
+
   }
 }

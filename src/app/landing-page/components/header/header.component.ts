@@ -11,6 +11,6 @@ export class HeaderComponent {
   constructor(private discordAuth: DiscordAuthService) {}
 
   loginWithDiscord(): void {
-    this.discordAuth.loginWithDiscord();
+    window.open('https://discord.gg/FT4Jsvj5vy', '_blank');
   }
 }

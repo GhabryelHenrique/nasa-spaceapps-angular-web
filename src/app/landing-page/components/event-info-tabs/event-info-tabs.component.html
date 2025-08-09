@@ -107,41 +107,16 @@
             <h4>Categorias de Prêmios Locais e Globais</h4>
             
             <div class="awards-grid">
-              <div class="award-card">
-                <div class="award-icon">🔬</div>
-                <h5>Best Use of Science</h5>
-                <p>Projeto que faz o melhor e mais válido uso da ciência e/ou do método científico.</p>
-              </div>
-
-              <div class="award-card">
-                <div class="award-icon">📊</div>
-                <h5>Best Use of Data</h5>
-                <p>Projeto que melhor torna os dados espaciais acessíveis ou os utiliza para uma aplicação única.</p>
-              </div>
-
-              <div class="award-card">
-                <div class="award-icon">💻</div>
-                <h5>Best Use of Technology</h5>
-                <p>Projeto que exemplifica o uso mais inovador de tecnologia.</p>
-              </div>
-
-              <div class="award-card">
-                <div class="award-icon">🌌</div>
-                <h5>Galactic Impact</h5>
-                <p>Projeto com maior potencial para melhorar a vida na Terra ou no universo.</p>
-              </div>
-
-              <div class="award-card">
-                <div class="award-icon">🚀</div>
-                <h5>Best Mission Concept</h5>
-                <p>Projeto com o conceito e design mais plausível para uma missão espacial.</p>
-              </div>
-
-              <div class="award-card">
-                <div class="award-icon">💖</div>
-                <h5>Most Inspirational</h5>
-                <p>Projeto que captura nossos corações e inspira a comunidade.</p>
-              </div>
+              <img src="assets/awards/Art & Technology.png" alt="Art & Technology" class="award-image" (click)="openAwardModal('Art & Technology')">
+              <img src="assets/awards/Best Mission Concept.png" alt="Best Mission Concept" class="award-image" (click)="openAwardModal('Best Mission Concept')">
+              <img src="assets/awards/Best Use of Data.png" alt="Best Use of Data" class="award-image" (click)="openAwardModal('Best Use of Data')">
+              <img src="assets/awards/Best Use of Science.png" alt="Best Use of Science" class="award-image" (click)="openAwardModal('Best Use of Science')">
+              <img src="assets/awards/Best Use of Storytelling.png" alt="Best Use of Storytelling" class="award-image" (click)="openAwardModal('Best Use of Storytelling')">
+              <img src="assets/awards/Best Use of Technology.png" alt="Best Use of Technology" class="award-image" (click)="openAwardModal('Best Use of Technology')">
+              <img src="assets/awards/Galactic Impact.png" alt="Galactic Impact" class="award-image" (click)="openAwardModal('Galactic Impact')">
+              <img src="assets/awards/Global Community.png" alt="Global Community" class="award-image" (click)="openAwardModal('Global Community')">
+              <img src="assets/awards/Local Impact.png" alt="Local Impact" class="award-image" (click)="openAwardModal('Local Impact')">
+              <img src="assets/awards/Most Inspirational.png" alt="Most Inspirational" class="award-image" (click)="openAwardModal('Most Inspirational')">
             </div>
           </div>
 
@@ -174,6 +149,21 @@
               </div>
             </div>
           </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Award Modal -->
+  <div *ngIf="showModal" class="modal-overlay" (click)="closeModal()">
+    <div class="modal-content" (click)="$event.stopPropagation()">
+      <button class="modal-close" (click)="closeModal()">&times;</button>
+      <div *ngIf="selectedAward" class="modal-body">
+        <h3>{{ selectedAward.name }}</h3>
+        <p class="award-description">{{ selectedAward.description }}</p>
+        <div class="award-details">
+          <h4>Sobre este prêmio:</h4>
+          <p>{{ selectedAward.fullDescription }}</p>
         </div>
       </div>
     </div>
