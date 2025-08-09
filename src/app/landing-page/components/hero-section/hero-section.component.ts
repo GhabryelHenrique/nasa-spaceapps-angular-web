@@ -1,6 +1,5 @@
 import { Component, Inject, PLATFORM_ID } from '@angular/core';
 import { isPlatformBrowser } from '@angular/common';
-import { DiscordAuthService } from '../../../services/discord-auth.service';
 
 @Component({
   selector: 'app-hero-section',
@@ -9,14 +8,10 @@ import { DiscordAuthService } from '../../../services/discord-auth.service';
   styleUrl: './hero-section.component.scss'
 })
 export class HeroSectionComponent {
-  constructor(
-    @Inject(PLATFORM_ID) private platformId: Object,
-    private discordAuth: DiscordAuthService
-  ) {}
+  constructor(@Inject(PLATFORM_ID) private platformId: Object) {}
 
-  loginWithDiscord(): void {
-        window.open('https://discord.gg/FT4Jsvj5vy', '_blank');
-
+  registerNow(): void {
+    window.open('https://discord.gg/FT4Jsvj5vy', '_blank');
   }
 
   scrollToInfo(): void {

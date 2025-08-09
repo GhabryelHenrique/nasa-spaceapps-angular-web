@@ -3,25 +3,31 @@
   <app-header></app-header>
 
   <!-- Hero Section Component -->
-  <app-hero-section></app-hero-section>
+  <section class="hero-wrapper">
+    <app-hero-section></app-hero-section>
+  </section>
 
   <!-- Uberlandia Highlights Component -->
   <app-uberlandia-highlights></app-uberlandia-highlights>
 
   <!-- Event Info Tabs Component -->
-  <app-event-info-tabs></app-event-info-tabs>
+  <section class="event-info-wrapper">
+    <app-event-info-tabs></app-event-info-tabs>
+  </section>
 
   <!-- Sponsors Section Component -->
-  <app-sponsors-section></app-sponsors-section>
+  <section class="sponsors-wrapper">
+    <app-sponsors-section></app-sponsors-section>
+  </section>
 
   <!-- Registration CTA -->
   <section class="registration-cta">
     <div class="container">
       <h2>Pronto para a Aventura?</h2>
       <p>Junte-se a centenas de participantes e faça parte da maior competição espacial do mundo!</p>
-      <button class="cta-large" (click)="loginWithDiscord()">
+      <button class="cta-large" (click)="registerNow()">
         <i class="fa-brands fa-discord"></i>
-        Entrar com Discord e Participar
+        Inscreva-se Agora
       </button>
     </div>
   </section>

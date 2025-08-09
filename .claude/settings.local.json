@@ -4,7 +4,10 @@
       "Bash(ng generate:*)",
       "Bash(npm start)",
       "Bash(ng build)",
-      "Bash(taskkill:*)"
+      "Bash(taskkill:*)",
+      "Bash(rm:*)",
+      "Bash(ng build:*)",
+      "Bash(ng test:*)"
     ],
     "deny": []
   }

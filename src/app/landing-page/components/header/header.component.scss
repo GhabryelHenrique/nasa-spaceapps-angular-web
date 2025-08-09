@@ -57,8 +57,7 @@
           box-shadow: var(--shadow-nasa-blue);
         }
 
-        .discord-icon::before {
-          content: '<®';
+        i {
           font-size: 1.2em;
         }
       }
@@ -68,8 +67,17 @@
 
 @media (max-width: 768px) {
   .navbar {
-    flex-direction: column;
-    gap: 1rem;
-    padding: 1rem !important;
+    padding: 0.75rem 1rem !important;
+    justify-content: center;
+    
+    .nav-brand {
+      h1 {
+        font-size: 1.2rem;
+      }
+    }
+    
+    .nav-actions {
+      display: none;
+    }
   }
 }

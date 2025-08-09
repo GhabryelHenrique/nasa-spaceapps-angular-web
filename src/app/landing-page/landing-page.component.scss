@@ -16,11 +16,91 @@
   padding: 0 2rem;
 }
 
+// Hero Section Wrapper
+.hero-wrapper {
+  position: relative;
+  
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url('/assets/patterns/Orbits.png');
+    background-size: 800px 800px;
+    background-repeat: repeat;
+    background-position: center;
+    opacity: 0.08;
+    z-index: -1;
+    pointer-events: none;
+  }
+}
+
+// Event Info Section Wrapper
+.event-info-wrapper {
+  position: relative;
+  
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url('/assets/patterns/Code.png');
+    background-size: 700px 700px;
+    background-repeat: repeat;
+    background-position: center;
+    opacity: 0.04;
+    z-index: -1;
+    pointer-events: none;
+  }
+}
+
+// Sponsors Section Wrapper
+.sponsors-wrapper {
+  position: relative;
+  
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url('/assets/patterns/Voronoi.png');
+    background-size: 500px 500px;
+    background-repeat: repeat;
+    background-position: center;
+    opacity: 0.05;
+    z-index: -1;
+    pointer-events: none;
+  }
+}
+
 // Registration CTA
 .registration-cta {
   padding: 80px 0;
   background: rgba(252, 61, 33, 0.1);
   text-align: center;
+  position: relative;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url('/assets/patterns/Fiduciaries.png');
+    background-size: 400px 400px;
+    background-repeat: repeat;
+    background-position: center;
+    opacity: 0.07;
+    z-index: -1;
+    pointer-events: none;
+  }
 
   h2 {
     font-size: 2.5rem;
@@ -56,8 +136,7 @@
       box-shadow: var(--shadow-nasa-blue);
     }
 
-    .discord-icon::before {
-      content: '🎮';
+    i {
       font-size: 1.4em;
     }
   }
@@ -68,12 +147,31 @@
   background: rgba(0, 0, 0, 0.9);
   border-top: 1px solid rgba(11, 61, 145, 0.3);
   padding: 3rem 0 1rem;
+  position: relative;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url('/assets/patterns/Waves.png');
+    background-size: 600px 300px;
+    background-repeat: repeat-x;
+    background-position: bottom;
+    opacity: 0.04;
+    z-index: 0;
+    pointer-events: none;
+  }
 
   .footer-content {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 2rem;
     margin-bottom: 2rem;
+    position: relative;
+    z-index: 1;
 
     .footer-brand {
       display: flex;
@@ -138,6 +236,8 @@
     padding-top: 2rem;
     border-top: 1px solid rgba(11, 61, 145, 0.2);
     color: var(--text-muted);
+    position: relative;
+    z-index: 1;
   }
 }
 
@@ -146,6 +246,27 @@
   .footer-content {
     grid-template-columns: 1fr;
     text-align: center;
+    
+    .footer-brand {
+      justify-content: center;
+    }
+    
+    .social-links {
+      justify-content: center;
+    }
+  }
+  
+  .registration-cta {
+    padding: 60px 0;
+    
+    h2 {
+      font-size: 2rem;
+    }
+    
+    .cta-large {
+      padding: 1rem 2rem;
+      font-size: 1rem;
+    }
   }
 }
 
