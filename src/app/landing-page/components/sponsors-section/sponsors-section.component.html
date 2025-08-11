@@ -1,13 +1,13 @@
 <section class="sponsors">
   <div class="container">
-    <h2>Apoiadores e Patrocinadores</h2>
+    <h2>Quem faz parte do movimento:</h2>
     <p class="sponsors-intro">
       Conheça as organizações que tornam possível o NASA Space Apps Challenge em Uberlândia
     </p>
 
     <!-- Diamond Sponsors -->
     <div class="sponsor-tier diamond" *ngIf="sponsors.diamond.length > 0">
-      <h3>🚀 Patrocinador Oficial</h3>
+      <h3>🚀 Organizador Oficial</h3>
       <div class="sponsor-grid diamond-grid">
         <div class="sponsor-card diamond-card" *ngFor="let sponsor of sponsors.diamond">
           <a [href]="sponsor.url" target="_blank" rel="noopener">
@@ -69,14 +69,3 @@
         </div>
       </div>
     </div>
-
-    <!-- Become a Sponsor CTA -->
-    <div class="sponsor-cta">
-      <h3>Quer apoiar o evento?</h3>
-      <p>Junte-se a nós e ajude a promover a inovação espacial em Uberlândia!</p>
-      <button class="cta-sponsor">
-        Entre em Contato
-      </button>
-    </div>
-  </div>
-</section>
