@@ -10,7 +10,7 @@ import { CommonModule } from '@angular/common';
 export class SponsorsSectionComponent {
   sponsors = {
     diamond: [
-      { name: 'NASA', logo: 'assets/nasa-logo.png', url: 'https://spaceappschallenge.org' },
+      { name: 'NASA', logo: 'assets/nasa-spaceapps-logo.png', url: 'https://spaceappschallenge.org' },
     ],
     // gold: [
     //   { name: 'Uberlândia Prefeitura', logo: 'assets/sponsors/prefeitura-logo.png', url: '#' },
@@ -29,8 +29,11 @@ export class SponsorsSectionComponent {
     // ],
     supporters: [
       { name: 'UFU', logo: 'https://images.seeklogo.com/logo-png/23/1/ufu-logo-png_seeklogo-238178.png', url: 'https://www.instagram.com/ufu_oficial/?hl=pt-br' },
-      { name: 'Prefeitura de Uberlândia', logo: 'https://www.uberlandia.mg.gov.br/wp-content/uploads/2025/02/Logo-PMU.png', url: 'https://www.uberlandia.mg.gov.br' },
       { name: 'MTI', logo: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR0Kn1y5qhpsISjLd_QmdpK3bjzdJSA7iIorA&s', url: 'https://www.mti.work' },
+      { name: 'MIT', logo: 'https://1000logos.net/wp-content/uploads/2022/08/MIT-Logo.png', url: 'https://web.mit.edu' },
+      { name: 'Harvard', logo: 'https://upload.wikimedia.org/wikipedia/commons/9/97/Harvard-logo_fn55ow6r4uvo1b5prjxvnfb2l.jpg', url: 'https://www.harvard.edu' },
+      { name: 'Google', logo: 'https://upload.wikimedia.org/wikipedia/commons/2/2f/Google_2015_logo.svg', url: 'https://www.google.com' },
+      { name: 'Ifood', logo: 'https://upload.wikimedia.org/wikipedia/commons/thumb/9/90/IFood_logo.svg/1024px-IFood_logo.svg.png', url: 'https://www.ifood.com.br' },
       { name: 'Uberhub', logo: 'https://media.licdn.com/dms/image/v2/C4D0BAQHJfk7zGWfy-A/company-logo_200_200/company-logo_200_200/0/1630575695438?e=2147483647&v=beta&t=4Hrp7xicuchNKYyVQsllWkrGdfxRg4MCzLAdcyjjxME', url: 'https://uberhub.com.br' },
       { name: 'NVIDIA', logo: 'https://store-images.s-microsoft.com/image/apps.2971.13599037783181022.b05b7adf-6b7a-44ae-9a70-9dc9370ea7e6.1a5616ff-237c-407f-a1b2-c07e10ac7c04', url: 'https://www.nvidia.com/pt-br' },
       { name: 'Oracle', logo: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQnOVjTWaheo4E99cgYZ6y14tpsgHlm0VN8Hw&s', url: 'https://www.oracle.com/br' },
