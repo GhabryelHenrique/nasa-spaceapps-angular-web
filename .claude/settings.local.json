@@ -9,6 +9,7 @@
       "Bash(ng build:*)",
       "Bash(ng test:*)"
     ],
-    "deny": []
+    "deny": [],
+    "defaultMode": "acceptEdits"
   }
 }

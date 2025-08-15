@@ -5,7 +5,7 @@
   min-height: 100vh;
   background: var(--gradient-space);
   color: var(--text-primary);
-  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-family: 'Overpass', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
   overflow-x: hidden;
 }
 
@@ -19,7 +19,7 @@
 // Hero Section Wrapper
 .hero-wrapper {
   position: relative;
-  
+
   &::before {
     content: '';
     position: absolute;
@@ -40,7 +40,7 @@
 // Event Info Section Wrapper
 .event-info-wrapper {
   position: relative;
-  
+
   &::before {
     content: '';
     position: absolute;
@@ -61,7 +61,7 @@
 // Sponsors Section Wrapper
 .sponsors-wrapper {
   position: relative;
-  
+
   &::before {
     content: '';
     position: absolute;
@@ -149,21 +149,17 @@
   padding: 3rem 0 1rem;
   position: relative;
 
-  &::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-image: url('/assets/patterns/Waves.png');
-    background-size: 600px 300px;
-    background-repeat: repeat-x;
-    background-position: bottom;
-    opacity: 0.04;
-    z-index: 0;
-    pointer-events: none;
-  }
+  // &::before {
+  //   content: '';
+  //   position: absolute;
+  //   top: 0;
+  //   left: 0;
+  //   right: 0;
+  //   bottom: 0;
+  //   opacity: 0.04;
+  //   z-index: 0;
+  //   pointer-events: none;
+  // }
 
   .footer-content {
     display: grid;
@@ -246,23 +242,23 @@
   .footer-content {
     grid-template-columns: 1fr;
     text-align: center;
-    
+
     .footer-brand {
       justify-content: center;
     }
-    
+
     .social-links {
       justify-content: center;
     }
   }
-  
+
   .registration-cta {
     padding: 60px 0;
-    
+
     h2 {
       font-size: 2rem;
     }
-    
+
     .cta-large {
       padding: 1rem 2rem;
       font-size: 1rem;
