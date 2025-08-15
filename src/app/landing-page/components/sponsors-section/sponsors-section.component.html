@@ -1,6 +1,6 @@
-<section class="sponsors">
+<section class="sponsors" role="region" aria-labelledby="sponsors-title">
   <div class="container">
-    <h2>Quem faz parte do movimento:</h2>
+    <h2 id="sponsors-title">Quem faz parte do movimento:</h2>
     <p class="sponsors-intro">
       Conheça as organizações que tornam possível o NASA Space Apps Challenge em Uberlândia
     </p>
@@ -9,12 +9,12 @@
     <div class="sponsor-tier diamond" *ngIf="sponsors.diamond.length > 0">
       <h3>🚀 Organizador Oficial</h3>
       <div class="sponsor-grid diamond-grid">
-        <div class="sponsor-card diamond-card" *ngFor="let sponsor of sponsors.diamond">
-          <a [href]="sponsor.url" target="_blank" rel="noopener">
-            <img [src]="sponsor.logo" [alt]="sponsor.name + ' Logo'" class="sponsor-logo">
+        <article class="sponsor-card diamond-card" *ngFor="let sponsor of sponsors.diamond">
+          <a [href]="sponsor.url" target="_blank" rel="noopener" [attr.aria-label]="'Visitar site de ' + sponsor.name">
+            <img [src]="sponsor.logo" [alt]="sponsor.name + ' - Organizador oficial do NASA Space Apps Challenge Uberlândia'" class="sponsor-logo" loading="lazy">
             <span class="sponsor-name">{{ sponsor.name }}</span>
           </a>
-        </div>
+        </article>
       </div>
     </div>
 
@@ -61,11 +61,11 @@
     <div class="sponsor-tier supporters" *ngIf="sponsors.supporters.length > 0">
       <h3>🤝 Organizações/Empresas dos Mentores:</h3>
       <div class="sponsor-grid supporters-grid">
-        <div class="sponsor-card supporter-card" *ngFor="let sponsor of sponsors.supporters">
-          <a [href]="sponsor.url" target="_blank" rel="noopener">
-            <img [src]="sponsor.logo" [alt]="sponsor.name + ' Logo'" class="sponsor-logo">
+        <article class="sponsor-card supporter-card" *ngFor="let sponsor of sponsors.supporters">
+          <a [href]="sponsor.url" target="_blank" rel="noopener" [attr.aria-label]="'Visitar site de ' + sponsor.name + ', apoiador do evento'">
+            <img [src]="sponsor.logo" [alt]="sponsor.name + ' - Organização apoiadora dos mentores do NASA Space Apps Challenge'" class="sponsor-logo" loading="lazy">
             <span class="sponsor-name">{{ sponsor.name }}</span>
           </a>
-        </div>
+        </article>
       </div>
     </div>

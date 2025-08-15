@@ -1,25 +1,37 @@
-<section class="event-info" id="info">
+<section class="event-info" id="info" role="region" aria-labelledby="event-info-title">
   <div class="container">
-    <h2>Informações do Evento</h2>
+    <h2 id="event-info-title">Informações do Evento</h2>
     
     <!-- Tab Navigation -->
-    <div class="tab-navigation">
+    <div class="tab-navigation" role="tablist" aria-label="Informações do evento">
       <button 
         class="tab-btn" 
         [class.active]="activeTab === 'evento'"
-        (click)="setActiveTab('evento')">
+        (click)="setActiveTab('evento')"
+        role="tab"
+        [attr.aria-selected]="activeTab === 'evento'"
+        [attr.aria-controls]="'evento-panel'"
+        id="evento-tab">
         Sobre o Evento
       </button>
       <button 
         class="tab-btn" 
         [class.active]="activeTab === 'hackathon'"
-        (click)="setActiveTab('hackathon')">
+        (click)="setActiveTab('hackathon')"
+        role="tab"
+        [attr.aria-selected]="activeTab === 'hackathon'"
+        [attr.aria-controls]="'hackathon-panel'"
+        id="hackathon-tab">
         O que é o Hackathon
       </button>
       <button 
         class="tab-btn" 
         [class.active]="activeTab === 'premios'"
-        (click)="setActiveTab('premios')">
+        (click)="setActiveTab('premios')"
+        role="tab"
+        [attr.aria-selected]="activeTab === 'premios'"
+        [attr.aria-controls]="'premios-panel'"
+        id="premios-tab">
         Modalidades e Prêmios
       </button>
     </div>
@@ -27,33 +39,33 @@
     <!-- Tab Content -->
     <div class="tab-content">
       <!-- Evento Tab -->
-      <div *ngIf="activeTab === 'evento'" class="tab-panel">
+      <div *ngIf="activeTab === 'evento'" class="tab-panel" role="tabpanel" id="evento-panel" aria-labelledby="evento-tab">
         <div class="info-grid">
-          <div class="info-card">
-            <div class="info-icon">📅</div>
+          <article class="info-card">
+            <div class="info-icon" role="img" aria-label="Ícone calendário">📅</div>
             <h3>Quando</h3>
             <p>4-5 de Outubro, 2025<br>48 horas de inovação</p>
-          </div>
-          <div class="info-card">
-            <div class="info-icon">📍</div>
+          </article>
+          <article class="info-card">
+            <div class="info-icon" role="img" aria-label="Ícone localização">📍</div>
             <h3>Onde</h3>
             <p>Toda Uberlândia, MG<br>Múltiplas localizações</p>
-          </div>
-          <div class="info-card">
-            <div class="info-icon">👥</div>
+          </article>
+          <article class="info-card">
+            <div class="info-icon" role="img" aria-label="Ícone equipes">👥</div>
             <h3>Equipes</h3>
             <p>2-6 pessoas por equipe<br>Todas as idades</p>
-          </div>
-          <div class="info-card">
-            <div class="info-icon">🏆</div>
+          </article>
+          <article class="info-card">
+            <div class="info-icon" role="img" aria-label="Ícone prêmios">🏆</div>
             <h3>Prêmios</h3>
             <p>Certificados NASA<br>Prêmios locais e globais</p>
-          </div>
+          </article>
         </div>
       </div>
 
       <!-- Hackathon Tab -->
-      <div *ngIf="activeTab === 'hackathon'" class="tab-panel">
+      <div *ngIf="activeTab === 'hackathon'" class="tab-panel" role="tabpanel" id="hackathon-panel" aria-labelledby="hackathon-tab">
         <div class="hackathon-info">
           <div class="hackathon-description">
             <h3>O que é o NASA Space Apps Challenge?</h3>
@@ -96,7 +108,7 @@
       </div>
 
       <!-- Prêmios Tab -->
-      <div *ngIf="activeTab === 'premios'" class="tab-panel">
+      <div *ngIf="activeTab === 'premios'" class="tab-panel" role="tabpanel" id="premios-panel" aria-labelledby="premios-tab">
         <div class="awards-section">
           <h3>Sistema de Premiação</h3>
           <p class="awards-intro">
