@@ -15,9 +15,74 @@
     <app-event-info-tabs></app-event-info-tabs>
   </section>
 
+    <!-- Mentors and Volunteers Section -->
+  <section class="mentors-volunteers-wrapper">
+    <div class="container">
+      <div class="mentors-volunteers-content">
+        <h2>Seja Parte da Nossa Missão</h2>
+        <p class="section-description">
+          Junte-se a nós como mentor ou voluntário e ajude a transformar ideias em soluções inovadoras que podem mudar o mundo.
+          Sua experiência e dedicação são fundamentais para o sucesso do NASA Space Apps Challenge Uberlândia.
+        </p>
+        <div class="roles-grid">
+          <div class="role-card">
+            <div class="role-icon">🧑‍🏫</div>
+            <h3>Mentores</h3>
+            <p>Compartilhe sua expertise técnica e oriente equipes a desenvolver soluções inovadoras para os desafios da NASA.</p>
+          </div>
+          <div class="role-card">
+            <div class="role-icon">🤝</div>
+            <h3>Voluntários</h3>
+            <p>Ajude na organização do evento e garanta que tudo funcione perfeitamente durante os dois dias de hackathon.</p>
+          </div>
+        </div>
+        <div class="cta-section">
+          <a href="https://docs.google.com/forms/d/e/1FAIpQLScymeJJNAjNw5cHH_swG0kxsaagx2EC__n4wXW7lyJWs1TTZQ/viewform"
+             target="_blank"
+             rel="noopener noreferrer"
+             class="volunteer-btn"
+             aria-label="Formulário para se inscrever como mentor ou voluntário">
+            Quero Participar
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- Sponsors Section Component -->
   <section class="sponsors-wrapper">
     <app-sponsors-section></app-sponsors-section>
+  </section>
+
+
+
+  <!-- Organizers Section -->
+  <section class="organizers-wrapper">
+    <div class="container">
+      <div class="organizers-content">
+        <h2>Nossa Equipe Organizadora</h2>
+        <p class="section-description">
+          Conheça as pessoas que tornam o NASA Space Apps Challenge Uberlândia uma realidade.
+          Uma equipe dedicada e apaixonada por inovação e tecnologia espacial.
+        </p>
+        <div class="organizers-grid">
+          <a class="organizer-card" *ngFor="let organizer of organizers; trackBy: trackByName" href="{{organizer.url}}" target="_blank" >
+            <div class="organizer-photo">
+              <img
+                [src]="organizer.photo"
+                [alt]="'Foto de ' + organizer.name"
+                loading="lazy"
+                onerror="this.src='assets/organizers/placeholder.svg'">
+            </div>
+            <div class="organizer-info">
+              <h3>{{ organizer.name }}</h3>
+              <p class="role">{{ organizer.role }}</p>
+              <p class="description">{{ organizer.description }}</p>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
   </section>
 
 
