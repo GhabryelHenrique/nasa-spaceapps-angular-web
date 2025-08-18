@@ -29,11 +29,13 @@ export class SponsorsSectionComponent {
     // ],
     supporters: [
       { name: 'UFU', logo: 'https://images.seeklogo.com/logo-png/23/1/ufu-logo-png_seeklogo-238178.png', url: 'https://www.instagram.com/ufu_oficial/?hl=pt-br' },
+      { name: 'UFMG', logo: 'https://images.seeklogo.com/logo-png/19/1/ufmg-logo-png_seeklogo-193610.png', url: 'https://www.instagram.com/ufmg' },
       { name: 'MTI', logo: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR0Kn1y5qhpsISjLd_QmdpK3bjzdJSA7iIorA&s', url: 'https://www.mti.work' },
       { name: 'MIT', logo: 'https://m.media-amazon.com/images/I/41VZYP49LiL._UF894,1000_QL80_.jpg', url: 'https://web.mit.edu' },
       { name: 'Harvard', logo: 'https://images.seeklogo.com/logo-png/28/1/harvard-university-logo-png_seeklogo-284458.png', url: 'https://www.harvard.edu' },
       { name: 'Google', logo: 'https://images.seeklogo.com/logo-png/27/1/google-logo-png_seeklogo-273191.png', url: 'https://www.google.com' },
       { name: 'Ifood', logo: 'https://static.ifood.com.br/webapp/images/logo-smile-512x512.png', url: 'https://www.ifood.com.br' },
+      { name: 'Santander', logo: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQyldeRZdWVUtcV4pSSeJzQfKezzu1Q1qGt8w&s', url: 'https://www.santander.com.br' },
       { name: 'Uberhub', logo: 'https://media.licdn.com/dms/image/v2/C4D0BAQHJfk7zGWfy-A/company-logo_200_200/company-logo_200_200/0/1630575695438?e=2147483647&v=beta&t=4Hrp7xicuchNKYyVQsllWkrGdfxRg4MCzLAdcyjjxME', url: 'https://uberhub.com.br' },
       { name: 'NVIDIA', logo: 'https://store-images.s-microsoft.com/image/apps.2971.13599037783181022.b05b7adf-6b7a-44ae-9a70-9dc9370ea7e6.1a5616ff-237c-407f-a1b2-c07e10ac7c04', url: 'https://www.nvidia.com/pt-br' },
       { name: 'Oracle', logo: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQnOVjTWaheo4E99cgYZ6y14tpsgHlm0VN8Hw&s', url: 'https://www.oracle.com/br' },
@@ -42,6 +44,8 @@ export class SponsorsSectionComponent {
       { name: 'Snowflake', logo: 'https://images.seeklogo.com/logo-png/33/1/snowflake-logo-png_seeklogo-336501.png', url: 'https://www.snowflake.com/pt_br' },
       { name: 'Global Shapers Community', logo: 'assets/sponsors/Global Shapers Community.jpg', url: 'https://www.instagram.com/globalshapersuberlandia' },
       { name: 'Ververica', logo: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRBBwUyiWy2T6GQIuecRhAhEucPa38MvgsEJw&s', url: 'https://www.ververica.com' },
+      { name: 'Bizu Space', logo: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR7kR9ABFunhuP5EPW8HagIA1vhVXlWwvswzg&s', url: 'https://www.bizu.space' },
+      { name: 'Geração de Marte', logo: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSMnfGx6ZKspT3Iln4YBFTXYab0O7ji42Tlig&s', url: 'https://www.instagram.com/geracao.de.marte' },
     ]
   };
 }
