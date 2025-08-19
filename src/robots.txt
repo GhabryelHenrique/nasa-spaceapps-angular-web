@@ -1,0 +1,13 @@
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://nasaspaceapps-uberlandia.vercel.app/sitemap.xml
+
+# Crawl-delay for polite crawling
+Crawl-delay: 1
+
+# Disallow tracking URLs and development files
+Disallow: /auth/discord/callback?
+Disallow: /*.json$
+Disallow: /assets/dev/

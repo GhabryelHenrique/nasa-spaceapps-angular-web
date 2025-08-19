@@ -10,10 +10,6 @@ import { isPlatformBrowser } from '@angular/common';
 export class HeroSectionComponent {
   constructor(@Inject(PLATFORM_ID) private platformId: Object) {}
 
-  registerNow(): void {
-    window.open('https://discord.gg/FT4Jsvj5vy', '_blank');
-  }
-
   scrollToInfo(): void {
     if (isPlatformBrowser(this.platformId)) {
       const element = document.getElementById('info');

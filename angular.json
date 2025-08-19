@@ -29,6 +29,9 @@
                 "input": "public"
               },
               "src/favicon.ico",
+              "src/robots.txt",
+              "src/sitemap.xml",
+              "src/site.webmanifest",
               "src/assets"
             ],
             "styles": ["src/styles.scss"],

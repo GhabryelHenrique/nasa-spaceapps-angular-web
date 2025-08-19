@@ -1,4 +1,4 @@
-@import '../../../../styles/variables';
+@import "../../../../styles/variables";
 
 .sponsors {
   padding: 80px 0;
@@ -80,6 +80,7 @@
       transition: all 0.3s ease;
       text-align: center;
       width: 100%;
+      height: 100%;
 
       &:hover {
         transform: translateY(-8px);
@@ -92,7 +93,9 @@
         color: inherit;
         display: flex;
         flex-direction: column;
+        height: 100%;
         align-items: center;
+        justify-content: space-between;
         gap: 1rem;
       }
 
@@ -130,7 +133,7 @@
       }
 
       &.gold-card {
-        border: 2px solid #FFD700;
+        border: 2px solid #ffd700;
         background: rgba(255, 215, 0, 0.1);
 
         .sponsor-logo {
@@ -139,31 +142,31 @@
 
         .sponsor-name {
           font-size: 1.1rem;
-          color: #FFD700;
+          color: #ffd700;
         }
 
         &:hover {
           box-shadow: 0 10px 30px rgba(255, 215, 0, 0.3);
-          border-color: #FFD700;
+          border-color: #ffd700;
         }
       }
 
       &.silver-card {
-        border: 2px solid #C0C0C0;
+        border: 2px solid #c0c0c0;
         background: rgba(192, 192, 192, 0.1);
 
         .sponsor-name {
-          color: #C0C0C0;
+          color: #c0c0c0;
         }
 
         &:hover {
           box-shadow: 0 10px 30px rgba(192, 192, 192, 0.3);
-          border-color: #C0C0C0;
+          border-color: #c0c0c0;
         }
       }
 
       &.bronze-card {
-        border: 2px solid #CD7F32;
+        border: 2px solid #cd7f32;
         background: rgba(205, 127, 50, 0.1);
 
         .sponsor-logo {
@@ -172,12 +175,12 @@
 
         .sponsor-name {
           font-size: 0.85rem;
-          color: #CD7F32;
+          color: #cd7f32;
         }
 
         &:hover {
           box-shadow: 0 10px 30px rgba(205, 127, 50, 0.3);
-          border-color: #CD7F32;
+          border-color: #cd7f32;
         }
       }
 

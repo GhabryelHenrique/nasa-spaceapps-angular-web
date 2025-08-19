@@ -5,7 +5,7 @@
   min-height: 100vh;
   background: var(--gradient-space);
   color: var(--text-primary);
-  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-family: 'Overpass', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
   overflow-x: hidden;
 }
 
@@ -19,7 +19,7 @@
 // Hero Section Wrapper
 .hero-wrapper {
   position: relative;
-  
+
   &::before {
     content: '';
     position: absolute;
@@ -40,7 +40,7 @@
 // Event Info Section Wrapper
 .event-info-wrapper {
   position: relative;
-  
+
   &::before {
     content: '';
     position: absolute;
@@ -58,10 +58,266 @@
   }
 }
 
+// Organizers Section
+.organizers-wrapper {
+  padding: 80px 0;
+  position: relative;
+  background: rgba(252, 61, 33, 0.05);
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url('/assets/patterns/Code.png');
+    background-size: 650px 650px;
+    background-repeat: repeat;
+    background-position: center;
+    opacity: 0.04;
+    z-index: -1;
+    pointer-events: none;
+  }
+
+  .organizers-content {
+    text-align: center;
+    position: relative;
+    z-index: 1;
+
+    h2 {
+      font-size: 2.5rem;
+      margin-bottom: 1.5rem;
+      background: var(--gradient-nasa-red);
+      background-clip: text;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      font-weight: 700;
+    }
+
+    .section-description {
+      font-size: 1.2rem;
+      color: var(--text-secondary);
+      max-width: 800px;
+      margin: 0 auto 3rem;
+      line-height: 1.6;
+    }
+
+    .organizers-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 2rem;
+      max-width: 1400px;
+      margin: 0 auto;
+
+      .organizer-card {
+        background: rgba(255, 255, 255, 0.03);
+        border: 1px solid rgba(252, 61, 33, 0.15);
+        border-radius: 20px;
+        padding: 2rem;
+        text-align: center;
+        transition: all 0.3s ease;
+        backdrop-filter: blur(10px);
+        position: relative;
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        &::before {
+          content: '';
+          position: absolute;
+          top: 0;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          background: linear-gradient(135deg, rgba(252, 61, 33, 0.05) 0%, rgba(69, 183, 209, 0.05) 100%);
+          opacity: 0;
+          transition: opacity 0.3s ease;
+          z-index: -1;
+        }
+
+        &:hover {
+          transform: translateY(-8px);
+          border-color: rgba(252, 61, 33, 0.3);
+          box-shadow: 0 15px 40px rgba(252, 61, 33, 0.15);
+
+          &::before {
+            opacity: 1;
+          }
+
+          .organizer-photo img {
+            transform: scale(1.05);
+          }
+        }
+
+        .organizer-photo {
+          width: 100px;
+          height: 100px;
+          margin-bottom: 1.5rem;
+          position: relative;
+          z-index: 1;
+
+          img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 50%;
+            border: 3px solid rgba(252, 61, 33, 0.3);
+            transition: all 0.3s ease;
+            background: linear-gradient(135deg, rgba(252, 61, 33, 0.1), rgba(69, 183, 209, 0.1));
+          }
+        }
+
+        .organizer-info {
+          text-align: center;
+          z-index: 1;
+
+          h3 {
+            color: var(--nasa-red);
+            font-size: 1.4rem;
+            margin-bottom: 0.5rem;
+            font-weight: 700;
+          }
+
+          .role {
+            color: var(--nasa-blue);
+            font-size: 1rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+          }
+
+          .description {
+            color: var(--text-secondary);
+            line-height: 1.6;
+            font-size: 0.95rem;
+            text-align: left;
+          }
+        }
+      }
+    }
+  }
+}
+
+// Mentors and Volunteers Section
+.mentors-volunteers-wrapper {
+  padding: 80px 0;
+  position: relative;
+  background: rgba(69, 183, 209, 0.08);
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url('/assets/patterns/Orbits.png');
+    background-size: 600px 600px;
+    background-repeat: repeat;
+    background-position: center;
+    opacity: 0.06;
+    z-index: -1;
+    pointer-events: none;
+  }
+
+  .mentors-volunteers-content {
+    text-align: center;
+    position: relative;
+    z-index: 1;
+
+    h2 {
+      font-size: 2.5rem;
+      margin-bottom: 1.5rem;
+      background: var(--gradient-nasa-blue);
+      background-clip: text;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      font-weight: 700;
+    }
+
+    .section-description {
+      font-size: 1.2rem;
+      color: var(--text-secondary);
+      max-width: 800px;
+      margin: 0 auto 3rem;
+      line-height: 1.6;
+    }
+
+    .roles-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem;
+      margin-bottom: 3rem;
+      max-width: 800px;
+      margin-left: auto;
+      margin-right: auto;
+
+      .role-card {
+        background: rgba(255, 255, 255, 0.05);
+        border: 1px solid rgba(69, 183, 209, 0.2);
+        border-radius: 20px;
+        padding: 2rem;
+        text-align: center;
+        transition: all 0.3s ease;
+        backdrop-filter: blur(10px);
+
+        &:hover {
+          transform: translateY(-5px);
+          border-color: rgba(69, 183, 209, 0.4);
+          box-shadow: 0 10px 30px rgba(69, 183, 209, 0.2);
+        }
+
+        .role-icon {
+          font-size: 3rem;
+          margin-bottom: 1rem;
+        }
+
+        h3 {
+          color: var(--nasa-blue);
+          font-size: 1.5rem;
+          margin-bottom: 1rem;
+          font-weight: 600;
+        }
+
+        p {
+          color: var(--text-secondary);
+          line-height: 1.6;
+        }
+      }
+    }
+
+    .cta-section {
+      .volunteer-btn {
+        background: var(--gradient-nasa-blue);
+        border: none;
+        padding: 1.2rem 3rem;
+        border-radius: 35px;
+        color: var(--nasa-white);
+        font-size: 1.2rem;
+        font-weight: 600;
+        text-decoration: none;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        display: inline-flex;
+        align-items: center;
+        gap: 0.8rem;
+
+        &:hover {
+          transform: translateY(-3px);
+          box-shadow: var(--shadow-nasa-blue);
+        }
+      }
+    }
+  }
+}
+
 // Sponsors Section Wrapper
 .sponsors-wrapper {
   position: relative;
-  
+
   &::before {
     content: '';
     position: absolute;
@@ -149,21 +405,17 @@
   padding: 4rem 0 2rem;
   position: relative;
 
-  &::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-image: url('/assets/patterns/Waves.png');
-    background-size: 600px 300px;
-    background-repeat: repeat-x;
-    background-position: bottom;
-    opacity: 0.04;
-    z-index: 0;
-    pointer-events: none;
-  }
+  // &::before {
+  //   content: '';
+  //   position: absolute;
+  //   top: 0;
+  //   left: 0;
+  //   right: 0;
+  //   bottom: 0;
+  //   opacity: 0.04;
+  //   z-index: 0;
+  //   pointer-events: none;
+  // }
 
   .footer-content {
     display: grid;
@@ -331,7 +583,7 @@
     .footer-content {
       grid-template-columns: 1fr 1fr;
       gap: 2rem;
-      
+
       .footer-brand {
         grid-column: 1 / -1;
         justify-content: center;
@@ -345,22 +597,22 @@
 @media (max-width: 768px) {
   .footer {
     padding: 3rem 0 1.5rem;
-    
+
     .footer-content {
       grid-template-columns: 1fr;
       gap: 2rem;
       text-align: center;
-      
+
       .footer-brand {
         flex-direction: column;
         align-items: center;
         text-align: center;
-        
+
         img {
           margin-bottom: 1rem;
         }
       }
-      
+
       .footer-social .social-links {
         flex-direction: row;
         justify-content: center;
@@ -368,17 +620,100 @@
       }
     }
   }
-  
+
   .registration-cta {
     padding: 60px 0;
-    
+
     h2 {
       font-size: 2rem;
     }
-    
+
     .cta-large {
       padding: 1rem 2rem;
       font-size: 1rem;
+    }
+  }
+
+  .organizers-wrapper {
+    padding: 60px 0;
+
+    .organizers-content {
+      h2 {
+        font-size: 2rem;
+      }
+
+      .section-description {
+        font-size: 1.1rem;
+      }
+
+      .organizers-grid {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 1.5rem;
+
+        .organizer-card {
+          padding: 1.5rem;
+
+          .organizer-photo {
+            width: 80px;
+            height: 80px;
+            margin-bottom: 1rem;
+
+            img {
+              border-width: 2px;
+            }
+          }
+
+          .organizer-info {
+            h3 {
+              font-size: 1.2rem;
+            }
+
+            .role {
+              font-size: 0.9rem;
+            }
+
+            .description {
+              font-size: 0.9rem;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .mentors-volunteers-wrapper {
+    padding: 60px 0;
+
+    .mentors-volunteers-content {
+      h2 {
+        font-size: 2rem;
+      }
+
+      .section-description {
+        font-size: 1.1rem;
+      }
+
+      .roles-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+
+        .role-card {
+          padding: 1.5rem;
+
+          .role-icon {
+            font-size: 2.5rem;
+          }
+
+          h3 {
+            font-size: 1.3rem;
+          }
+        }
+      }
+
+      .volunteer-btn {
+        padding: 1rem 2rem;
+        font-size: 1rem;
+      }
     }
   }
 }
@@ -386,5 +721,43 @@
 @media (max-width: 480px) {
   .container {
     padding: 0 1rem;
+  }
+
+  .organizers-wrapper {
+    padding: 40px 0;
+
+    .organizers-content {
+      .organizers-grid {
+        grid-template-columns: 1fr;
+
+        .organizer-card {
+          padding: 1.2rem;
+
+          .organizer-photo {
+            width: 70px;
+            height: 70px;
+            margin-bottom: 0.8rem;
+
+            img {
+              border-width: 2px;
+            }
+          }
+
+          .organizer-info {
+            h3 {
+              font-size: 1.1rem;
+            }
+
+            .role {
+              font-size: 0.85rem;
+            }
+
+            .description {
+              font-size: 0.85rem;
+            }
+          }
+        }
+      }
+    }
   }
 }
