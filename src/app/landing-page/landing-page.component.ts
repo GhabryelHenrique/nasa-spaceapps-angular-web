@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { RouterModule } from '@angular/router';
 import { HeaderComponent } from './components/header/header.component';
 import { HeroSectionComponent } from './components/hero-section/hero-section.component';
 import { UberlandiaHighlightsComponent } from './components/uberlandia-highlights/uberlandia-highlights.component';
@@ -10,6 +11,7 @@ import { SponsorsSectionComponent } from './components/sponsors-section/sponsors
   selector: 'app-landing-page',
   imports: [
     CommonModule,
+    RouterModule,
     HeaderComponent,
     HeroSectionComponent,
     UberlandiaHighlightsComponent,

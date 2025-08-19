@@ -1,0 +1,232 @@
+@import '../../styles/variables';
+
+.privacy-policy-container {
+  min-height: 100vh;
+  background: var(--gradient-space);
+  color: var(--text-primary);
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  padding: 2rem 0;
+  position: relative;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url('/assets/patterns/Code.png');
+    background-size: 700px 700px;
+    background-repeat: repeat;
+    background-position: center;
+    opacity: 0.03;
+    z-index: -1;
+    pointer-events: none;
+  }
+}
+
+.content-wrapper {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  position: relative;
+  z-index: 1;
+
+  h1 {
+    font-size: 3rem;
+    font-weight: 800;
+    text-align: center;
+    margin-bottom: 1rem;
+    background: var(--gradient-nasa-primary);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    line-height: 1.2;
+  }
+
+  .last-updated {
+    text-align: center;
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+    margin-bottom: 3rem;
+    font-style: italic;
+  }
+
+  .policy-section {
+    background: rgba(0, 66, 166, 0.05);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    padding: 2rem;
+    margin-bottom: 2rem;
+    transition: all 0.3s ease;
+    position: relative;
+
+    &:hover {
+      background: rgba(0, 66, 166, 0.08);
+      border-color: rgba(9, 96, 225, 0.3);
+      box-shadow: var(--shadow-nasa-blue);
+      transform: translateY(-2px);
+    }
+
+    h2 {
+      font-size: 1.8rem;
+      font-weight: 700;
+      color: var(--nasa-blue-light);
+      margin-bottom: 1rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+
+      &::before {
+        content: '▶';
+        color: var(--nasa-blue);
+        font-size: 0.8em;
+        font-weight: bold;
+      }
+    }
+
+    h3 {
+      font-size: 1.3rem;
+      font-weight: 600;
+      color: var(--text-primary);
+      margin: 1.5rem 0 0.8rem 0;
+      position: relative;
+
+      &::before {
+        content: '■';
+        color: var(--nasa-red);
+        margin-right: 0.5rem;
+        font-size: 0.7em;
+      }
+    }
+
+    p {
+      color: var(--text-secondary);
+      line-height: 1.7;
+      margin-bottom: 1rem;
+      font-size: 1rem;
+    }
+
+    ul {
+      list-style: none;
+      padding-left: 0;
+      margin: 1rem 0;
+
+      li {
+        position: relative;
+        padding: 0.5rem 0 0.5rem 2rem;
+        color: var(--text-secondary);
+        line-height: 1.6;
+        transition: color 0.3s ease;
+
+        &::before {
+          content: '"';
+          position: absolute;
+          left: 0.8rem;
+          color: var(--nasa-blue);
+          font-weight: bold;
+          font-size: 1.2em;
+        }
+
+        &:hover {
+          color: var(--text-primary);
+        }
+      }
+    }
+  }
+
+  .back-link {
+    text-align: center;
+    margin-top: 3rem;
+    padding-top: 2rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+
+    .btn-back {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      background: var(--gradient-nasa-blue);
+      color: var(--nasa-white);
+      text-decoration: none;
+      padding: 1rem 2rem;
+      border-radius: 25px;
+      font-weight: 600;
+      font-size: 1rem;
+      transition: all 0.3s ease;
+      border: 2px solid transparent;
+
+      &:hover {
+        transform: translateY(-3px);
+        box-shadow: var(--shadow-nasa-blue);
+        background: var(--gradient-nasa-red);
+      }
+
+      &:active {
+        transform: translateY(-1px);
+      }
+    }
+  }
+}
+
+// Responsive Design
+@media (max-width: 768px) {
+  .privacy-policy-container {
+    padding: 1rem 0;
+  }
+
+  .content-wrapper {
+    padding: 0 1rem;
+
+    h1 {
+      font-size: 2.2rem;
+    }
+
+    .policy-section {
+      padding: 1.5rem;
+      margin-bottom: 1.5rem;
+
+      h2 {
+        font-size: 1.5rem;
+      }
+
+      h3 {
+        font-size: 1.2rem;
+      }
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .content-wrapper {
+    h1 {
+      font-size: 1.9rem;
+    }
+
+    .policy-section {
+      padding: 1rem;
+      border-radius: 10px;
+
+      h2 {
+        font-size: 1.3rem;
+      }
+
+      h3 {
+        font-size: 1.1rem;
+      }
+
+      ul li {
+        padding-left: 1.5rem;
+
+        &::before {
+          left: 0.5rem;
+        }
+      }
+    }
+
+    .back-link .btn-back {
+      padding: 0.8rem 1.5rem;
+      font-size: 0.9rem;
+    }
+  }
+}
