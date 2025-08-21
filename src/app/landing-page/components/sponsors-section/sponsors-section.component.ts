@@ -42,6 +42,7 @@ export class SponsorsSectionComponent {
       { name: 'Google', logo: 'https://images.seeklogo.com/logo-png/27/1/google-logo-png_seeklogo-273191.png', url: 'https://www.google.com' },
       { name: 'Ifood', logo: 'https://static.ifood.com.br/webapp/images/logo-smile-512x512.png', url: 'https://www.ifood.com.br' },
       { name: 'Santander', logo: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQyldeRZdWVUtcV4pSSeJzQfKezzu1Q1qGt8w&s', url: 'https://www.santander.com.br' },
+      { name: 'Bradesco', logo: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRDNVTc3mhbojIWSX9gonGIPaDetl3AhP66kA&s', url: 'https://banco.bradesco/marca/' },
       { name: 'NVIDIA', logo: 'https://store-images.s-microsoft.com/image/apps.2971.13599037783181022.b05b7adf-6b7a-44ae-9a70-9dc9370ea7e6.1a5616ff-237c-407f-a1b2-c07e10ac7c04', url: 'https://www.nvidia.com/pt-br' },
       { name: 'Oracle', logo: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQnOVjTWaheo4E99cgYZ6y14tpsgHlm0VN8Hw&s', url: 'https://www.oracle.com/br' },
       { name: 'LangFlow', logo: 'https://pbs.twimg.com/profile_images/1906737039724400640/aUuTetdY_400x400.jpg', url: 'https://www.langflow.org' },
@@ -56,6 +57,7 @@ export class SponsorsSectionComponent {
       { name: 'Ntropy', logo: 'https://media.licdn.com/dms/image/v2/D4E0BAQFOOJ88vk2SUg/company-logo_200_200/company-logo_200_200/0/1685457284078/ntropy_logo?e=1758758400&v=beta&t=g13Dudn03gQHjxsFvpizJzTMYjYvg03mWGtXKewzkzg', url: 'https://www.ntropy.com/' },
       { name: 'Agro Smart', logo: 'https://media.licdn.com/dms/image/v2/C4D0BAQH44jdcui91xA/company-logo_200_200/company-logo_200_200/0/1657037642094/agrosmart_logo?e=2147483647&v=beta&t=uKD3P6woxuauHHnSu2Ir-xijngQMkZJHJZf6ULgxSWo', url: 'https://agrosmart.com.br/' },
       { name: 'LayerX', logo: 'https://images.crunchbase.com/image/upload/c_pad,h_256,w_256,f_auto,q_auto:eco,dpr_1/3ac3080a6c3f415ba2f312d857fec937', url: 'https://layerxsecurity.com/pt/' },
+      { name: 'CyberGênios', logo: 'assets/sponsors/Logo-Cyber_Color.png', url: 'https://www.instagram.com/globalshapersuberlandia' },
     ]
   };
 }
