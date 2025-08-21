@@ -26,6 +26,16 @@
       </button>
       <button 
         class="tab-btn" 
+        [class.active]="activeTab === 'desafios'"
+        (click)="setActiveTab('desafios')"
+        role="tab"
+        [attr.aria-selected]="activeTab === 'desafios'"
+        [attr.aria-controls]="'desafios-panel'"
+        id="desafios-tab">
+        Desafios
+      </button>
+      <button 
+        class="tab-btn" 
         [class.active]="activeTab === 'premios'"
         (click)="setActiveTab('premios')"
         role="tab"
@@ -103,6 +113,75 @@
                 <p>Astronomia, astrofísica, ciências planetárias</p>
               </div>
             </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Desafios Tab -->
+      <div *ngIf="activeTab === 'desafios'" class="tab-panel" role="tabpanel" id="desafios-panel" aria-labelledby="desafios-tab">
+        <div class="challenges-info">
+          <h3>Categorias de Desafios 2025</h3>
+          <p class="challenges-intro">
+            A NASA disponibilizou 19 desafios únicos para 2025, cada um projetado para abordar problemas reais 
+            enfrentados pela agência espacial e pela humanidade. Os desafios são classificados em três níveis de dificuldade.
+          </p>
+
+          <div class="challenge-categories-overview">
+            <div class="category-overview">
+              <div class="category-header">
+                <div class="category-badge beginneryouth">Iniciante/Jovem</div>
+                <span class="category-count">6 desafios</span>
+              </div>
+              <p>Perfeitos para quem está começando ou para participantes mais jovens. Focam em criatividade, storytelling e conceitos fundamentais.</p>
+            </div>
+
+            <div class="category-overview">
+              <div class="category-header">
+                <div class="category-badge intermediate">Intermediário</div>
+                <span class="category-count">12 desafios</span>
+              </div>
+              <p>Requerem conhecimento técnico moderado e habilidades de desenvolvimento. Envolvem análise de dados e prototipagem.</p>
+            </div>
+
+            <div class="category-overview">
+              <div class="category-header">
+                <div class="category-badge advanced">Avançado</div>
+                <span class="category-count">11 desafios</span>
+              </div>
+              <p>Desafios complexos que exigem expertise técnica avançada, incluindo IA, machine learning e modelagem científica complexa.</p>
+            </div>
+          </div>
+
+          <div class="challenge-highlights">
+            <h4>Destaques dos Desafios 2025</h4>
+            <div class="highlights-grid">
+              <div class="highlight-item">
+                <div class="highlight-icon">🛰️</div>
+                <h5>Exoplanetas com IA</h5>
+                <p>Use inteligência artificial para descobrir novos mundos além do nosso sistema solar.</p>
+              </div>
+              <div class="highlight-item">
+                <div class="highlight-icon">🌍</div>
+                <h5>Dados Terra de 25 Anos</h5>
+                <p>Crie animações com dados históricos do satélite Terra da NASA.</p>
+              </div>
+              <div class="highlight-item">
+                <div class="highlight-icon">🏠</div>
+                <h5>Habitats Espaciais</h5>
+                <p>Projete casas no espaço para futuras missões à Lua e Marte.</p>
+              </div>
+              <div class="highlight-item">
+                <div class="highlight-icon">🌸</div>
+                <h5>Floração Global</h5>
+                <p>Monitore padrões de floração de plantas ao redor do mundo usando dados de satélite.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="challenge-cta">
+            <p><strong>Pronto para explorar todos os desafios?</strong></p>
+            <p>Navegue pela seção de desafios abaixo para ver a lista completa com filtros por categoria e detalhes de cada desafio.</p>
+            <a href="#desafios" class="scroll-to-challenges">Ver Todos os Desafios</a>
           </div>
         </div>
       </div>

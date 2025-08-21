@@ -26,18 +26,26 @@
     justify-content: center;
     margin-bottom: 3rem;
     border-bottom: 1px solid rgba(11, 61, 145, 0.3);
+    flex-wrap: wrap;
+    gap: 0.5rem;
 
     .tab-btn {
       background: transparent;
       border: none;
-      padding: 1rem 2rem;
+      padding: 1rem 1.5rem;
       color: var(--text-secondary);
-      font-size: 1.1rem;
+      font-size: 1rem;
       font-weight: 500;
       cursor: pointer;
       transition: all 0.3s ease;
       position: relative;
       border-bottom: 3px solid transparent;
+      white-space: nowrap;
+
+      @media (max-width: 768px) {
+        padding: 0.8rem 1rem;
+        font-size: 0.9rem;
+      }
 
       &:hover {
         color: var(--nasa-blue);
@@ -400,6 +408,157 @@
           font-size: 1.1rem;
           text-align: justify;
         }
+      }
+    }
+  }
+}
+
+// Challenges Tab Styles
+.challenges-info {
+  .challenges-intro {
+    color: var(--text-secondary);
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 2rem;
+    text-align: center;
+  }
+
+  .challenge-categories-overview {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 3rem;
+
+    .category-overview {
+      background: rgba(255, 255, 255, 0.05);
+      border-radius: 12px;
+      padding: 1.5rem;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+
+      .category-header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 1rem;
+
+        .category-badge {
+          padding: 0.5rem 1rem;
+          border-radius: 20px;
+          font-weight: 600;
+          font-size: 0.9rem;
+
+          &.beginneryouth {
+            background: #07173F;
+            color: #ffffff;
+          }
+
+          &.intermediate {
+            background: #FF580A;
+            color: #ffffff;
+          }
+
+          &.advanced {
+            background: #8B0A03;
+            color: #ffffff;
+          }
+        }
+
+        .category-count {
+          background: rgba(78, 205, 196, 0.2);
+          color: #4ecdc4;
+          padding: 0.3rem 0.8rem;
+          border-radius: 12px;
+          font-size: 0.8rem;
+          font-weight: 600;
+        }
+      }
+
+      p {
+        color: var(--text-secondary);
+        line-height: 1.6;
+        margin: 0;
+      }
+    }
+  }
+
+  .challenge-highlights {
+    margin-bottom: 2rem;
+
+    h4 {
+      text-align: center;
+      color: var(--nasa-white);
+      margin-bottom: 2rem;
+      font-size: 1.3rem;
+    }
+
+    .highlights-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1.5rem;
+
+      .highlight-item {
+        text-align: center;
+        padding: 1.5rem;
+        background: rgba(255, 255, 255, 0.03);
+        border-radius: 12px;
+        border: 1px solid rgba(255, 255, 255, 0.08);
+
+        .highlight-icon {
+          font-size: 2.5rem;
+          margin-bottom: 1rem;
+        }
+
+        h5 {
+          color: var(--nasa-white);
+          margin-bottom: 0.5rem;
+          font-size: 1.1rem;
+        }
+
+        p {
+          color: var(--text-secondary);
+          font-size: 0.9rem;
+          line-height: 1.5;
+          margin: 0;
+        }
+      }
+    }
+  }
+
+  .challenge-cta {
+    text-align: center;
+    padding: 2rem;
+    background: rgba(78, 205, 196, 0.1);
+    border-radius: 12px;
+    border: 1px solid rgba(78, 205, 196, 0.2);
+
+    p {
+      color: var(--text-secondary);
+      margin-bottom: 1rem;
+      line-height: 1.6;
+
+      &:last-of-type {
+        margin-bottom: 1.5rem;
+      }
+
+      strong {
+        color: var(--nasa-white);
+      }
+    }
+
+    .scroll-to-challenges {
+      display: inline-block;
+      background: linear-gradient(135deg, #4ecdc4, #45b7d1);
+      color: #ffffff;
+      text-decoration: none;
+      padding: 0.8rem 2rem;
+      border-radius: 8px;
+      font-weight: 600;
+      transition: all 0.3s ease;
+
+      &:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 8px 25px rgba(78, 205, 196, 0.4);
+        background: linear-gradient(135deg, #45b7d1, #4ecdc4);
       }
     }
   }

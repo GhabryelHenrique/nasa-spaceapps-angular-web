@@ -1,0 +1,124 @@
+<section class="challenges-section" id="desafios" role="region" aria-labelledby="challenges-title">
+  <div class="container">
+    <div class="section-header">
+      <h2 id="challenges-title">Desafios NASA Space Apps 2025</h2>
+      <p class="section-description">
+        Explore os 19 desafios oficiais da NASA que estarão disponíveis durante o hackathon.
+        Cada desafio foi cuidadosamente elaborado pelos especialistas da NASA para abordar problemas reais
+        do espaço e da Terra, oferecendo oportunidades para inovação em diferentes níveis de dificuldade.
+      </p>
+    </div>
+
+    <!-- Category Filters -->
+    <div class="category-filters" role="tablist" aria-label="Filtros de categoria dos desafios">
+      <button
+        *ngFor="let category of categories; trackBy: trackByCategoryId"
+        class="category-btn"
+        [class.active]="selectedCategory === category.id"
+        [style.--category-color]="category.color"
+        (click)="filterByCategory(category.id)"
+        role="tab"
+        [attr.aria-selected]="selectedCategory === category.id"
+        [attr.aria-controls]="'challenges-grid'">
+        {{ category.name }}
+        <span class="category-count">{{ getCategoryCount(category.id) }}</span>
+      </button>
+    </div>
+
+    <!-- Challenges Grid -->
+    <div class="challenges-grid" id="challenges-grid" role="tabpanel">
+      <article
+        *ngFor="let challenge of filteredChallenges; trackBy: trackBySlug"
+        class="challenge-card">
+
+        <div class="challenge-image">
+          <img
+            [src]="challenge.featuredImage.url"
+            [alt]="challenge.featuredImage.alt"
+            loading="lazy">
+
+          <div class="challenge-overlay">
+            <div class="category-badges">
+              <span
+                *ngFor="let categoryName of getCategoryBadges(challenge)"
+                class="category-badge"
+                [style.background-color]="getCategoryColor(challenge, categoryName)">
+                {{ categoryName }}
+              </span>
+            </div>
+          </div>
+        </div>
+
+        <div class="challenge-content">
+          <h3 class="challenge-title">{{ challenge.title }}</h3>
+
+          <p class="challenge-excerpt">{{ challenge.excerpt }}</p>
+
+          <div class="challenge-skills" *ngIf="getSkillsCount(challenge.skills) > 0">
+            <h4>Habilidades Sugeridas:</h4>
+            <div class="skills-tags">
+              <span
+                *ngFor="let skill of getSkillsToShow(challenge.skills)"
+                class="skill-tag">
+                {{ skill }}
+              </span>
+              <span
+                *ngIf="getSkillsCount(challenge.skills) > 5"
+                class="skill-tag more-skills">
+                +{{ getRemainingSkillsCount(challenge.skills) }} mais
+              </span>
+            </div>
+          </div>
+
+          <div class="challenge-actions">
+            <a
+              [href]="'https://www.spaceappschallenge.org/2025/challenges/' + challenge.slug"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="challenge-link">
+              Ver Detalhes
+              <span class="external-icon" aria-hidden="true">↗</span>
+            </a>
+          </div>
+        </div>
+      </article>
+    </div>
+
+    <!-- No Results Message -->
+    <div *ngIf="filteredChallenges.length === 0" class="no-results">
+      <div class="no-results-icon">🔍</div>
+      <h3>Nenhum desafio encontrado</h3>
+      <p>Não há desafios disponíveis para a categoria selecionada.</p>
+      <button
+        class="reset-filters-btn"
+        (click)="filterByCategory('all')">
+        Ver Todos os Desafios
+      </button>
+    </div>
+
+    <!-- Call to Action -->
+    <div class="challenges-cta">
+      <h3>Pronto para o Desafio?</h3>
+      <p>
+        Escolha seu desafio favorito e prepare-se para 48 horas de inovação intensa!
+        Lembre-se de que você pode formar equipes de 2 a 6 pessoas e que todas as idades são bem-vindas.
+      </p>
+      <div class="cta-buttons">
+        <a
+          href="https://2025.spaceappschallenge.org/locations/uberlandia"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="cta-btn primary">
+          Registrar-se Agora
+        </a>
+        <a
+          href="https://discord.gg/FT4Jsvj5vy"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="cta-btn secondary">
+          Discutir no Discord
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
