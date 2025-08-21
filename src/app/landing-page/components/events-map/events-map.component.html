@@ -1,0 +1,66 @@
+<section class="events-map-section">
+  <div class="container">
+    <h2 class="section-title">Locais dos Eventos Presenciais</h2>
+    <p class="section-description">
+      Confira onde acontecerão os eventos presenciais do NASA Space Apps Challenge em Uberlândia
+    </p>
+
+    <div class="map-container">
+      <!-- Carregando o mapa -->
+      <div *ngIf="!isGoogleMapsLoaded" class="map-loading">
+        <div class="loading-spinner">
+          <div class="spinner"></div>
+        </div>
+        <p>Carregando mapa interativo...</p>
+      </div>
+
+      <!-- Mapa do Google Maps -->
+      <google-map
+        *ngIf="isGoogleMapsLoaded"
+        [center]="center"
+        [zoom]="zoom"
+        [options]="mapOptions"
+        height="400px"
+        width="100%">
+
+        <map-marker
+          *ngFor="let location of eventLocations"
+          [position]="location.position"
+          [title]="location.title">
+
+          <map-info-window>
+            <div class="info-window">
+              <h3>{{ location.title }}</h3>
+              <p>{{ location.info }}</p>
+            </div>
+          </map-info-window>
+        </map-marker>
+      </google-map>
+    </div>
+
+    <div class="map-controls">
+      <button 
+        (click)="resetMapView()" 
+        class="reset-view-btn"
+        [disabled]="!isGoogleMapsLoaded">
+        <span class="btn-icon">🌍</span>
+        Ver Todos os Locais
+      </button>
+    </div>
+
+    <div class="locations-list">
+      <div 
+        class="location-card" 
+        *ngFor="let location of eventLocations"
+        (click)="zoomToLocation(location)"
+        [class.clickable]="isGoogleMapsLoaded">
+        <h3>{{ location.title }}</h3>
+        <p>{{ location.info }}</p>
+        <div class="card-action" *ngIf="isGoogleMapsLoaded">
+          <span class="zoom-icon">🔍</span>
+          <span class="action-text">Clique para localizar no mapa</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

@@ -5,6 +5,7 @@ import { HeaderComponent } from './components/header/header.component';
 import { HeroSectionComponent } from './components/hero-section/hero-section.component';
 import { UberlandiaHighlightsComponent } from './components/uberlandia-highlights/uberlandia-highlights.component';
 import { EventInfoTabsComponent } from './components/event-info-tabs/event-info-tabs.component';
+import { EventsMapComponent } from './components/events-map/events-map.component';
 import { SponsorsSectionComponent } from './components/sponsors-section/sponsors-section.component';
 
 @Component({
@@ -16,6 +17,7 @@ import { SponsorsSectionComponent } from './components/sponsors-section/sponsors
     HeroSectionComponent,
     UberlandiaHighlightsComponent,
     EventInfoTabsComponent,
+    EventsMapComponent,
     SponsorsSectionComponent
   ],
   templateUrl: './landing-page.component.html',
