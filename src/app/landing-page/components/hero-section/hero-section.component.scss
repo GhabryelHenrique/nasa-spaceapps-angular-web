@@ -40,8 +40,9 @@
     .hero-actions {
       display: flex;
       gap: 1rem;
+      flex-wrap: wrap;
 
-      .cta-primary, .cta-secondary {
+      .cta-primary, .cta-secondary, .cta-discord, .cta-whatsapp {
         padding: 1rem 2rem;
         border-radius: 30px;
         font-size: 1.1rem;
@@ -49,6 +50,12 @@
         cursor: pointer;
         transition: all 0.3s ease;
         border: none;
+        text-decoration: none;
+        display: inline-flex;
+        align-items: center;
+        gap: 0.5rem;
+        min-width: 140px;
+        justify-content: center;
       }
 
       .cta-primary {
@@ -72,6 +79,26 @@
           transform: translateY(-3px);
         }
       }
+
+      .cta-discord {
+        background: linear-gradient(135deg, #5865F2, #404EED);
+        color: var(--nasa-white);
+
+        &:hover {
+          transform: translateY(-3px);
+          box-shadow: 0 8px 25px rgba(88, 101, 242, 0.3);
+        }
+      }
+
+      .cta-whatsapp {
+        background: linear-gradient(135deg, #25D366, #128C7E);
+        color: var(--nasa-white);
+
+        &:hover {
+          transform: translateY(-3px);
+          box-shadow: 0 8px 25px rgba(37, 211, 102, 0.3);
+        }
+      }
     }
   }
 
@@ -86,11 +113,33 @@
   }
 }
 
+@media (max-width: 1024px) {
+  .hero {
+    gap: 3rem;
+    padding: 100px 2rem 60px;
+
+    .hero-content {
+      .hero-title {
+        font-size: 3rem;
+      }
+
+      .hero-actions {
+        .cta-primary, .cta-secondary, .cta-discord, .cta-whatsapp {
+          min-width: 120px;
+          padding: 0.9rem 1.5rem;
+          font-size: 1rem;
+        }
+      }
+    }
+  }
+}
+
 @media (max-width: 768px) {
   .hero {
     flex-direction: column;
     text-align: center;
-    padding: 120px 1rem 40px;
+    padding: 100px 1rem 40px;
+    gap: 2rem;
 
     .hero-content {
       .hero-title {
@@ -101,9 +150,68 @@
         font-size: 1.3rem;
       }
 
+      .hero-description {
+        font-size: 1.1rem;
+        margin-bottom: 1.5rem;
+      }
+
+      .hero-actions {
+        justify-content: center;
+        gap: 0.8rem;
+
+        .cta-primary, .cta-secondary, .cta-discord, .cta-whatsapp {
+          min-width: 100px;
+          padding: 0.8rem 1.2rem;
+          font-size: 0.95rem;
+        }
+      }
+    }
+
+    .hero-image {
+      img {
+        max-width: 300px;
+      }
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .hero {
+    padding: 80px 1rem 30px;
+
+    .hero-content {
+      .hero-title {
+        font-size: 2rem;
+        line-height: 1.1;
+      }
+
+      .hero-subtitle {
+        font-size: 1.1rem;
+        margin-bottom: 1rem;
+      }
+
+      .hero-description {
+        font-size: 1rem;
+        margin-bottom: 1.2rem;
+      }
+
       .hero-actions {
         flex-direction: column;
+        gap: 0.8rem;
         align-items: center;
+
+        .cta-primary, .cta-secondary, .cta-discord, .cta-whatsapp {
+          width: 100%;
+          max-width: 280px;
+          padding: 1rem;
+          font-size: 1rem;
+        }
+      }
+    }
+
+    .hero-image {
+      img {
+        max-width: 250px;
       }
     }
   }

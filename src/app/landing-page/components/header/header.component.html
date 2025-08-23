@@ -1,9 +1,21 @@
 <header class="header">
   <nav class="navbar" role="navigation" aria-label="Navegação principal">
-    <div class="nav-brand">
-      <h1 class="brand-text">Nasa Space Apps Uberlândia</h1>
+    <div class="nav-brand" (click)="goToLandingPage()">
+      <img src="assets/nasa-spaceapps-logo-removebg-preview.png" alt="Logo do NASA Space Apps Challenge - Hackathon espacial internacional" width="10%"  loading="lazy" style="cursor: pointer;">
     </div>
     <div class="nav-actions">
+      <button class="social-btn whatsapp-btn" (click)="openWhatsApp()">
+        <i class="fa-brands fa-whatsapp"></i>
+        WhatsApp
+      </button>
+      <button class="social-btn discord-btn" (click)="joinDiscordServer()">
+        <i class="fa-brands fa-discord"></i>
+        Discord
+      </button>
+      <a routerLink="/times" class="register-btn">
+        <i class="fa-solid fa-users"></i>
+        Times
+      </a>
       <a href="https://docs.google.com/forms/d/e/1FAIpQLSfXZyu0PCuyIGgC_33jCLaOk-dmB1SugvrIt2eUK7EaWvq6mg/viewform" class="login-btn" target="_blank" rel="noopener noreferrer">
         <i class="fa-solid fa-user-plus"></i>
         Inscreva-se Agora

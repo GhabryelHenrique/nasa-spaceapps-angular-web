@@ -1,0 +1,188 @@
+<div class="teams-container">
+  <header class="teams-header">
+    <div class="container">
+      <h1 class="page-title">Times Cadastrados</h1>
+      <p class="page-subtitle">Conheça os times participantes do NASA Space Apps Challenge 2025 em Uberlândia</p>
+
+      <!-- Search Section -->
+      <div class="search-section">
+        <div class="search-bar">
+          <input
+            type="text"
+            [(ngModel)]="searchQuery"
+            placeholder="Buscar times..."
+            class="search-input"
+            (keyup)="onSearch()"
+          >
+          <button class="search-button" (click)="onSearch()" [disabled]="loading">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M21 21L16.514 16.506M19 10.5C19 15.194 15.194 19 10.5 19S2 15.194 2 10.5 5.806 2 10.5 2 19 5.806 19 10.5Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </button>
+        </div>
+        <div class="teams-count" *ngIf="totalCount > 0">
+          {{ totalCount }} time{{ totalCount !== 1 ? 's' : '' }} encontrado{{ totalCount !== 1 ? 's' : '' }}
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main class="teams-main">
+    <div class="container">
+      <!-- Loading State -->
+      <div class="loading-state" *ngIf="loading && teams.length === 0">
+        <div class="loading-spinner"></div>
+        <p>Carregando times...</p>
+      </div>
+
+      <!-- Error State -->
+      <div class="error-state" *ngIf="error">
+        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M12 9V13M12 17H12.01M21 12C21 16.971 16.971 21 12 21S3 16.971 3 12 7.029 3 12 3 21 7.029 21 12Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        <h3>Erro ao carregar times</h3>
+        <p>{{ error }}</p>
+        <button class="retry-button" (click)="loadTeams()">Tentar novamente</button>
+      </div>
+
+      <!-- Teams Grid -->
+      <div class="teams-grid" *ngIf="teams.length > 0 && !error">
+        <div class="team-card" *ngFor="let team of teams">
+          <!-- Team Image -->
+          <div class="team-image-container">
+            <img
+              [src]="getTeamImageUrl(team)"
+              [alt]="team.title"
+              class="team-image"
+              onerror="this.src='/assets/organizers/placeholder.svg'"
+            >
+            <div class="team-badges" *ngIf="team.awardBadges && team.awardBadges.length > 0">
+              <span class="badge award-badge" *ngFor="let badge of team.awardBadges">
+                {{ badge }}
+              </span>
+            </div>
+          </div>
+
+          <!-- Team Content -->
+          <div class="team-content">
+            <h3 class="team-title">{{ team.title }}</h3>
+            <p class="team-excerpt" *ngIf="team.excerpt">{{ team.excerpt }}</p>
+
+            <!-- Team Info -->
+            <div class="team-info">
+              <!-- <div class="info-item">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M16 21V19C16 17.9391 15.5786 16.9217 14.8284 16.1716C14.0783 15.4214 13.0609 15 12 15H5C3.93913 15 2.92172 15.4214 2.17157 16.1716C1.42143 16.9217 1 17.9391 1 19V21M12.5 7C12.5 9.20914 10.7091 11 8.5 11C6.29086 11 4.5 9.20914 4.5 7C4.5 4.79086 6.29086 3 8.5 3C10.7091 3 12.5 4.79086 12.5 7ZM20 8V14M23 11H17" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                <span>{{ getMemberCount(team) }} membro{{ getMemberCount(team) !== 1 ? 's' : '' }} {{ getMemberCount(team) === 0 ? '(procurando)' : '' }}</span>
+              </div> -->
+
+              <div class="info-item" *ngIf="team.challengeDetails?.title">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M9 12L11 14L15 10M21 12C21 16.971 16.971 21 12 21S3 16.971 3 12 7.029 3 12 3 21 7.029 21 12Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                <span>{{ team.challengeDetails.title }}</span>
+              </div>
+
+              <div class="info-item" *ngIf="team.locationDetails?.displayName">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M21 10C21 17 12 23 12 23S3 17 3 10C3 7.61305 3.94821 5.32387 5.63604 3.63604C7.32387 1.94821 9.61305 1 12 1C14.3869 1 16.6761 1.94821 18.3639 3.63604C20.0518 5.32387 21 7.61305 21 10Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                  <path d="M12 13C13.6569 13 15 11.6569 15 10C15 8.34315 13.6569 7 12 7C10.3431 7 9 8.34315 9 10C9 11.6569 10.3431 13 12 13Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                <span>{{ team.locationDetails.displayName }}</span>
+              </div>
+            </div>
+
+            <!-- Skills -->
+            <div class="team-skills" *ngIf="team.desiredSkills && team.desiredSkills.length > 0">
+              <h4>Habilidades desejadas:</h4>
+              <div class="skills-tags">
+                <span class="skill-tag" *ngFor="let skill of team.desiredSkills.slice(0, 3)">
+                  {{ skill }}
+                </span>
+                <span class="skill-tag more" *ngIf="team.desiredSkills.length > 3">
+                  +{{ team.desiredSkills.length - 3 }}
+                </span>
+              </div>
+            </div>
+
+            <!-- Languages -->
+            <div class="team-skills" *ngIf="team.languages && team.languages.length > 0">
+              <h4>Idiomas:</h4>
+              <div class="skills-tags">
+                <span class="skill-tag" *ngFor="let lang of team.languages">
+                  {{ lang }}
+                </span>
+              </div>
+            </div>
+
+            <!-- Project Status -->
+            <div class="project-status" *ngIf="team.projectDetails">
+              <div class="status-indicator" [class.submitted]="team.projectSubmitted">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" *ngIf="team.projectSubmitted">
+                  <path d="M9 12L11 14L15 10M21 12C21 16.971 16.971 21 12 21S3 16.971 3 12 7.029 3 12 3 21 7.029 21 12Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" *ngIf="!team.projectSubmitted">
+                  <path d="M12 6V12L16 14M22 12C22 17.523 17.523 22 12 22S2 17.523 2 12 6.477 2 12 2 22 6.477 22 12Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                <span>{{ team.projectSubmitted ? 'Projeto submetido' : 'Em desenvolvimento' }}</span>
+              </div>
+            </div>
+
+            <!-- Team Members -->
+            <div class="team-members" *ngIf="team.memberships && team.memberships.length > 0">
+              <h4>Membros:</h4>
+              <div class="members-avatars">
+                <div class="member-avatar" *ngFor="let member of team.memberships.slice(0, 4)" [title]="member.userDetails.fullName">
+                  <img
+                    [src]="member.userDetails.avatar?.rendition?.fullUrl || '/assets/organizers/placeholder.svg'"
+                    [alt]="member.userDetails.fullName"
+                    onerror="this.src='/assets/organizers/placeholder.svg'"
+                  >
+                </div>
+                <div class="member-avatar more" *ngIf="team.memberships.length > 4" [title]="'+' + (team.memberships.length - 4) + ' membros'">
+                  <span>+{{ team.memberships.length - 4 }}</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Join Button -->
+            <!-- <div class="team-actions">
+              <button class="join-button" [disabled]="!team.joinEnabled" *ngIf="team.joinEnabled">
+                Solicitar para entrar
+              </button>
+              <button class="view-button" *ngIf="!team.joinEnabled">
+                Ver detalhes
+              </button>
+            </div> -->
+          </div>
+        </div>
+      </div>
+
+      <!-- Empty State -->
+      <div class="empty-state" *ngIf="teams.length === 0 && !loading && !error">
+        <svg width="64" height="64" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M16 21V19C16 17.9391 15.5786 16.9217 14.8284 16.1716C14.0783 15.4214 13.0609 15 12 15H5C3.93913 15 2.92172 15.4214 2.17157 16.1716C1.42143 16.9217 1 17.9391 1 19V21M12.5 7C12.5 9.20914 10.7091 11 8.5 11C6.29086 11 4.5 9.20914 4.5 7C4.5 4.79086 6.29086 3 8.5 3C10.7091 3 12.5 4.79086 12.5 7ZM20 8V14M23 11H17" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        <h3>Nenhum time encontrado</h3>
+        <p>Não encontramos times com os critérios de busca utilizados.</p>
+      </div>
+
+      <!-- Load More Button -->
+      <div class="load-more-section" *ngIf="hasNextPage && !loading">
+        <button class="load-more-button" (click)="loadMore()">
+          Carregar mais times
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M19 14L12 21L5 14M12 21V3" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </button>
+      </div>
+
+      <!-- Loading More -->
+      <div class="loading-more" *ngIf="loading && teams.length > 0">
+        <div class="loading-spinner small"></div>
+        <span>Carregando mais times...</span>
+      </div>
+    </div>
+  </main>
+</div>

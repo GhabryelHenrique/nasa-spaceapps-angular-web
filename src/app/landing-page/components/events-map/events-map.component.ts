@@ -33,31 +33,31 @@ export class EventsMapComponent implements OnInit {
       title: 'MTI',
       info: 'Polo de capacitação dos mentores do NASA Space Apps Challenge'
     },
-    // {
-    //   position: { lat: -18.956634, lng: -48.271558 },
-    //   title: 'Unitri',
-    //   info: 'Local de apoio para networking e atividades complementares do NASA Space Apps Challenge'
-    // },
-    // {
-    //   position: { lat: -18.931272, lng: -48.290163 },
-    //   title: 'Colegio Nacional',
-    //   info: 'Local de apoio para networking e atividades complementares do NASA Space Apps Challenge'
-    // },
-    // {
-    //   position: { lat: -18.924682961805495, lng: -48.271471290864355 },
-    //   title: 'UDI Tech',
-    //   info: 'Local de apoio para networking e atividades complementares do NASA Space Apps Challenge'
-    // },
-    // {
-    //   position: { lat: -18.95224632870345, lng: -48.270526751599455 },
-    //   title: 'Cyber Gênios',
-    //   info: 'Local de apoio para networking e atividades complementares do NASA Space Apps Challenge'
-    // },
-    // {
-    //   position: { lat: -18.971304, lng: -49.448551 },
-    //   title: 'UEMG',
-    //   info: 'Local de apoio para networking e atividades complementares do NASA Space Apps Challenge'
-    // }
+    {
+      position: { lat: -18.956634, lng: -48.271558 },
+      title: 'Unitri',
+      info: 'Local de apoio para networking e atividades complementares do NASA Space Apps Challenge'
+    },
+    {
+      position: { lat: -18.931272, lng: -48.290163 },
+      title: 'Colegio Nacional',
+      info: 'Local de apoio para networking e atividades complementares do NASA Space Apps Challenge'
+    },
+    {
+      position: { lat: -18.924682961805495, lng: -48.271471290864355 },
+      title: 'UDI Tech',
+      info: 'Local de apoio para networking e atividades complementares do NASA Space Apps Challenge'
+    },
+    {
+      position: { lat: -18.95224632870345, lng: -48.270526751599455 },
+      title: 'Cyber Gênios',
+      info: 'Local de apoio para networking e atividades complementares do NASA Space Apps Challenge'
+    },
+    {
+      position: { lat: -18.971304, lng: -49.448551 },
+      title: 'UEMG',
+      info: 'Local de apoio para networking e atividades complementares do NASA Space Apps Challenge'
+    }
   ];
 
   mapOptions: any = {

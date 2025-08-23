@@ -1,44 +1,138 @@
-@import '../../../../styles/variables';
+@import "../../../../styles/variables";
 
 .header {
-  background: rgba(0, 0, 0, 0.9);
-  backdrop-filter: blur(10px);
+  background: rgba(0, 0, 0, 0.95);
+  backdrop-filter: blur(15px);
   position: fixed;
   top: 0;
   width: 100%;
   z-index: 1000;
   border-bottom: 1px solid rgba(11, 61, 145, 0.3);
+  transition: all 0.3s ease;
 
   .navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 1rem 2rem;
-    max-width: 1200px;
+    max-width: 1400px;
     margin: 0 auto;
 
     .nav-brand {
       display: flex;
       align-items: center;
       gap: 1rem;
+      cursor: pointer;
 
       .nasa-logo {
         width: 50px;
         height: 40px;
       }
 
-      h1 {
-        font-size: 1.5rem;
-        font-weight: 700;
-        background: var(--gradient-nasa-primary);
-        background-clip: text;
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        margin: 0;
+      .brand-text {
+        h1 {
+          font-size: 1.5rem;
+          font-weight: 700;
+          background: var(--gradient-nasa-primary);
+          background-clip: text;
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+          margin: 0;
+          line-height: 1.2;
+        }
+
+        .brand-subtitle {
+          font-size: 0.85rem;
+          color: #4ecdc4;
+          font-weight: 500;
+        }
+      }
+    }
+
+    .nav-menu {
+      display: flex;
+      justify-content: center;
+      flex-direction: row;
+      align-items: center;
+      gap: 2rem;
+
+      .nav-item {
+        position: relative;
+
+        .nav-link {
+          color: var(--nasa-white);
+          text-decoration: none;
+          font-weight: 500;
+          padding: 0.75rem 1.25rem;
+          border-radius: 25px;
+          transition: all 0.3s ease;
+          display: flex;
+          align-items: center;
+          gap: 0.5rem;
+          cursor: pointer;
+
+          &:hover {
+            background: rgba(78, 205, 196, 0.1);
+            color: #4ecdc4;
+            transform: translateY(-2px);
+          }
+
+          i {
+            font-size: 1em;
+
+            &.fa-chevron-down {
+              font-size: 0.8em;
+              transition: transform 0.3s ease;
+
+              &.rotated {
+                transform: rotate(180deg);
+              }
+            }
+          }
+        }
       }
     }
 
     .nav-actions {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+
+      .social-btn {
+        background: none;
+        border: 2px solid;
+        padding: 0.5rem 1rem;
+        border-radius: 20px;
+        color: var(--nasa-white);
+        font-weight: 600;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        font-size: 0.9rem;
+
+        &.whatsapp-btn {
+          border-color: #25D366;
+
+          &:hover {
+            background: #25D366;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 15px rgba(37, 211, 102, 0.4);
+          }
+        }
+
+        &.discord-btn {
+          border-color: #5865F2;
+
+          &:hover {
+            background: #5865F2;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 15px rgba(88, 101, 242, 0.4);
+          }
+        }
+      }
+
       .login-btn {
         background: var(--gradient-nasa-blue);
         border: none;
@@ -56,9 +150,169 @@
           transform: translateY(-2px);
           box-shadow: var(--shadow-nasa-blue);
         }
+      }
 
-        i {
-          font-size: 1.2em;
+      .register-btn {
+        background: linear-gradient(135deg, #4ecdc4, #45b7d1);
+        border: none;
+        padding: 0.75rem 1.5rem;
+        border-radius: 25px;
+        color: var(--nasa-white);
+        font-weight: 600;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        text-decoration: none;
+
+        &:hover {
+          transform: translateY(-2px);
+          box-shadow: 0 6px 20px rgba(78, 205, 196, 0.4);
+        }
+      }
+
+      .mobile-menu-btn {
+        display: none;
+        background: none;
+        border: none;
+        color: white;
+        font-size: 1.5rem;
+        cursor: pointer;
+        padding: 0.5rem;
+        border-radius: 8px;
+        transition: all 0.3s ease;
+
+        &:hover {
+          background: rgba(78, 205, 196, 0.1);
+          color: #4ecdc4;
+        }
+      }
+    }
+
+    .mobile-menu {
+      position: fixed;
+      top: 100%;
+      left: 0;
+      width: 100%;
+      height: calc(100vh - 100%);
+      background: rgba(0, 0, 0, 0.98);
+      backdrop-filter: blur(20px);
+      transform: translateY(-100%);
+      transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+      z-index: 999;
+      overflow-y: auto;
+
+      &.open {
+        transform: translateY(0);
+      }
+
+      .mobile-menu-content {
+        padding: 2rem 1rem;
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+        max-width: 400px;
+        margin: 0 auto;
+
+        .mobile-menu-item {
+          .mobile-menu-link {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            padding: 1rem;
+            color: white;
+            text-decoration: none;
+            background: none;
+            border: none;
+            width: 100%;
+            text-align: left;
+            border-radius: 15px;
+            transition: all 0.3s ease;
+            font-size: 1rem;
+            font-weight: 500;
+            cursor: pointer;
+
+            &:hover {
+              background: rgba(78, 205, 196, 0.1);
+              color: #4ecdc4;
+            }
+
+            i {
+              width: 20px;
+              text-align: center;
+            }
+          }
+
+          .mobile-submenu {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease;
+            margin-left: 1rem;
+
+            &.open {
+              max-height: 300px;
+            }
+
+            .mobile-challenge-category {
+              display: flex;
+              align-items: center;
+              gap: 1rem;
+              padding: 0.75rem;
+              margin: 0.25rem 0;
+              border-radius: 10px;
+              cursor: pointer;
+              transition: all 0.3s ease;
+
+              &:hover {
+                background: rgba(78, 205, 196, 0.1);
+              }
+
+              .category-icon {
+                width: 35px;
+                height: 35px;
+                border-radius: 50%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                color: white;
+                font-size: 1rem;
+              }
+
+              .category-info {
+                span {
+                  color: white;
+                  font-weight: 500;
+                  display: block;
+                }
+
+                small {
+                  color: #4ecdc4;
+                  font-size: 0.75rem;
+                }
+              }
+            }
+          }
+        }
+
+        .mobile-register-btn {
+          margin-top: 1rem;
+          padding: 1rem 2rem;
+          background: linear-gradient(135deg, #4ecdc4, #45b7d1);
+          color: white;
+          text-decoration: none;
+          border-radius: 25px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          gap: 0.75rem;
+          font-weight: 600;
+          transition: all 0.3s ease;
+
+          &:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(78, 205, 196, 0.4);
+          }
         }
       }
     }
@@ -66,18 +320,33 @@
 }
 
 @media (max-width: 768px) {
-  .navbar {
-    padding: 0.75rem 1rem !important;
-    justify-content: center;
-    
-    .nav-brand {
-      h1 {
-        font-size: 1.2rem;
+  .header .navbar {
+    display: none;
+    padding: 0.75rem 1rem;
+    justify-content: space-between;
+
+    .nav-actions {
+      .social-btn, .register-btn, .login-btn {
+        display: none;
+      }
+
+      .mobile-menu-btn {
+        display: block;
       }
     }
-    
-    .nav-actions {
-      display: none;
+  }
+}
+
+@media (max-width: 480px) {
+  .header .navbar {
+    padding: 0.5rem 1rem;
+
+    .nav-brand {
+      gap: 0.75rem;
+
+      .brand-text h1 {
+        font-size: 1rem;
+      }
     }
   }
 }
