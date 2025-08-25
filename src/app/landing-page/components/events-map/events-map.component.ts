@@ -59,13 +59,13 @@ export class EventsMapComponent implements OnInit {
       info: 'Local de apoio para networking e atividades complementares do NASA Space Apps Challenge'
     },
     {
-      position: { lat: -18.924259, lng: -48.269422 },
+      position: { lat: -18.924301, lng: -48.232747 },
       title: 'Asa Coworking',
       info: 'Local de apoio para networking e atividades complementares do NASA Space Apps Challenge'
     },
     {
-      position: { lat: -18.971304, lng: -49.448551 },
-      title: 'UEMG',
+      position: { lat: -18.9329, lng: -48.279937 },
+      title: 'IFTM - Campus Centro',
       info: 'Local de apoio para networking e atividades complementares do NASA Space Apps Challenge'
     }
   ];
