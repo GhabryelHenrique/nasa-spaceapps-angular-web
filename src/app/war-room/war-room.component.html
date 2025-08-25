@@ -1,0 +1,93 @@
+<div class="war-room-container">
+  <!-- Header Section -->
+  <header class="war-room-header">
+    <div class="header-content">
+      <h1 class="war-room-title">
+        <span class="title-icon">🚀</span>
+        Sala de Guerra
+        <span class="subtitle">NASA Space Apps Challenge 2025</span>
+      </h1>
+      <div class="stats-container">
+        <div class="stat-card">
+          <div class="stat-number">{{ totalCities }}</div>
+          <div class="stat-label">Cidades</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-number">{{ totalParticipants }}</div>
+          <div class="stat-label">Participantes</div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Controls Section -->
+  <div class="controls-section">
+    <div class="sort-controls">
+      <label class="sort-label">Ordenar por participantes:</label>
+      <div class="sort-buttons">
+        <button 
+          class="sort-btn" 
+          [class.active]="sortOrder === 'desc'"
+          (click)="sortCities('desc')">
+          ↓ Maior para Menor
+        </button>
+        <button 
+          class="sort-btn" 
+          [class.active]="sortOrder === 'asc'"
+          (click)="sortCities('asc')">
+          ↑ Menor para Maior
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Cities Grid -->
+  <div class="cities-grid">
+    <div 
+      class="city-card" 
+      *ngFor="let city of cities; trackBy: trackByCity; let i = index"
+      [class.top-city]="i < 3">
+      
+      <!-- City Rank -->
+      <div class="city-rank">
+        <span class="rank-number">{{ i + 1 }}</span>
+        <span class="rank-medal" *ngIf="i === 0">🥇</span>
+        <span class="rank-medal" *ngIf="i === 1">🥈</span>
+        <span class="rank-medal" *ngIf="i === 2">🥉</span>
+      </div>
+
+      <!-- City Info -->
+      <div class="city-info">
+        <div class="city-name">{{ city.city }}</div>
+        <div class="city-country">{{ city.country }}</div>
+        
+        <!-- Event Type -->
+        <div class="event-type" [ngClass]="getEventTypeClass(city.eventType)">
+          <span class="event-icon">{{ getEventTypeIcon(city.eventType) }}</span>
+          <span class="event-label">{{ city.eventType }}</span>
+        </div>
+      </div>
+
+      <!-- Registrations -->
+      <div class="registrations-section">
+        <div class="registrations-count">{{ city.registrations }}</div>
+        <div class="registrations-label">participantes</div>
+      </div>
+
+      <!-- Action Button -->
+      <div class="city-actions">
+        <a [href]="city.url" target="_blank" class="visit-btn">
+          <span class="btn-icon">🔗</span>
+          Ver Evento
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Empty State -->
+  <div class="empty-state" *ngIf="cities.length === 0">
+    <div class="empty-icon">🌌</div>
+    <h3>Nenhuma cidade encontrada</h3>
+    <p>Os dados dos eventos estão sendo carregados...</p>
+  </div>
+</div>
