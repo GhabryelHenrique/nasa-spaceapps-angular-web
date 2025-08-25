@@ -1,0 +1,15 @@
+{
+  "/api/*": {
+    "target": "https://api.spaceappschallenge.org",
+    "secure": true,
+    "changeOrigin": true,
+    "logLevel": "debug",
+    "pathRewrite": {
+      "^/api": ""
+    },
+    "headers": {
+      "Origin": "https://www.spaceappschallenge.org",
+      "Referer": "https://www.spaceappschallenge.org/"
+    }
+  }
+}

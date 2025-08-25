@@ -23,7 +23,7 @@ export class HeaderComponent {
   showInfo = false;
   mobileMenuOpen = false;
   mobileChallengesOpen = false;
-  
+
   challengeCategories: ChallengeCategory[] = [
     {
       id: 1,
@@ -59,7 +59,7 @@ export class HeaderComponent {
   }
 
   private getCategoryCount(slug: string): number {
-    return CHALLENGES_DATA.filter(challenge => 
+    return CHALLENGES_DATA.filter(challenge =>
       challenge.categories.some(cat => cat.slug === slug)
     ).length;
   }
@@ -69,7 +69,7 @@ export class HeaderComponent {
   }
 
   openWhatsApp(): void {
-    window.open('https://wa.me/5534999999999', '_blank');
+    window.open('https://chat.whatsapp.com/LXwUUZaJPXtBOeKr7N4axg', '_blank');
   }
 
   goToLandingPage(): void {

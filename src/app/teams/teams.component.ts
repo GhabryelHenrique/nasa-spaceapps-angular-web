@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
-import { TeamsService } from '../services/teams.service';
+import { TeamResponse, TeamsService } from '../services/teams.service';
 import { Team } from '../shared/data/teams.data';
 
 @Component({
