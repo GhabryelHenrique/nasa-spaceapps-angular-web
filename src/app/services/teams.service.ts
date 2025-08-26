@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { Observable, delay, of } from 'rxjs';
-import { TeamsResponse, realApiResponse } from '../shared/data/teams.data';
+import { TeamsResponse } from '../shared/data/teams.data';
+import * as realApiResponse from '../shared/data/teams.json';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 
 export interface TeamQueryVariables {

@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { localEvents } from '../shared/data/localEvents.data';
-import { CityParticipation, LocalEvent } from '../shared/interfaces/local-event.interface';
+import * as localEvents  from '../shared/data/localEvents.json';
+import { CityParticipation } from '../shared/interfaces/local-event.interface';
 
 @Component({
   selector: 'app-war-room',
@@ -20,7 +20,7 @@ export class WarRoomComponent implements OnInit {
   }
 
   private loadCities() {
-    this.cities = localEvents.map((event: any) => ({
+    this.cities = localEvents.data.map((event: any) => ({
       city: event.node.properties.displayName,
       country: event.node.properties.country,
       registrations: event.node.properties.cachedRegistrations,
