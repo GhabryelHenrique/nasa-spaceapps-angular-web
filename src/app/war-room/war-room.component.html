@@ -84,6 +84,36 @@
     </div>
   </div>
 
+  <!-- Registration Analytics Section -->
+  <section class="analytics-section">
+    <div class="section-header">
+      <h2 class="section-title">
+        <span class="title-icon">📊</span>
+        Dados das Inscrições Uberlândia
+      </h2>
+      <div class="action-buttons">
+        <button 
+          class="demo-btn" 
+          (click)="loadDemoData()"
+          [disabled]="isLoadingFile">
+          <span class="btn-icon">🎯</span>
+          Ver Demo
+        </button>
+        <button 
+          class="upload-btn" 
+          (click)="triggerFileUpload()"
+          [disabled]="isLoadingFile">
+          <span class="btn-icon">📁</span>
+          {{ isLoadingFile ? 'Carregando...' : 'Upload Excel' }}
+        </button>
+      </div>
+    </div>
+    
+    <app-registration-charts 
+      [registrationStats]="registrationStats">
+    </app-registration-charts>
+  </section>
+
   <!-- Empty State -->
   <div class="empty-state" *ngIf="cities.length === 0">
     <div class="empty-icon">🌌</div>

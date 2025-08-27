@@ -317,6 +317,115 @@
   }
 }
 
+// Analytics Section
+.analytics-section {
+  max-width: 1200px;
+  margin: 4rem auto;
+  padding: 0 1rem;
+}
+
+.section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+  flex-wrap: wrap;
+  gap: 1rem;
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
+.action-buttons {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+
+  @media (max-width: 480px) {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+}
+
+.section-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  background: linear-gradient(45deg, #4ecdc4, #45b7d1, #5865F2);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin: 0;
+
+  .title-icon {
+    font-size: 2.5rem;
+    filter: drop-shadow(0 0 15px rgba(78, 205, 196, 0.4));
+  }
+
+  @media (max-width: 768px) {
+    font-size: 2rem;
+    .title-icon {
+      font-size: 2rem;
+    }
+  }
+}
+
+.upload-btn, .demo-btn {
+  border: none;
+  padding: 1rem 2rem;
+  border-radius: 0.75rem;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+
+  &:disabled {
+    opacity: 0.7;
+    cursor: not-allowed;
+    transform: none;
+  }
+
+  .btn-icon {
+    font-size: 1.2rem;
+  }
+
+  @media (max-width: 480px) {
+    padding: 0.75rem 1.5rem;
+    font-size: 0.9rem;
+  }
+}
+
+.upload-btn {
+  background: linear-gradient(45deg, #4ecdc4, #45b7d1);
+  color: #0f0f23;
+  box-shadow: 0 4px 15px rgba(78, 205, 196, 0.2);
+
+  &:hover:not(:disabled) {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(78, 205, 196, 0.3);
+    filter: brightness(1.1);
+  }
+}
+
+.demo-btn {
+  background: linear-gradient(45deg, #5865F2, #7289da);
+  color: #ffffff;
+  box-shadow: 0 4px 15px rgba(88, 101, 242, 0.2);
+
+  &:hover:not(:disabled) {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(88, 101, 242, 0.3);
+    filter: brightness(1.1);
+  }
+}
+
 // Empty State
 .empty-state {
   text-align: center;

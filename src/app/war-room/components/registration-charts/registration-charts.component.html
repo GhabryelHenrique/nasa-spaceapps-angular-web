@@ -1,0 +1,86 @@
+<div class="charts-container" *ngIf="registrationStats">
+  <!-- Statistics Cards -->
+  <div class="stats-overview">
+    <div class="overview-card">
+      <div class="card-icon">📊</div>
+      <div class="card-content">
+        <h3>{{ registrationStats.totalRegistrations }}</h3>
+        <p>Total de Inscrições</p>
+      </div>
+    </div>
+    
+    <div class="overview-card uberlandia-highlight">
+      <div class="card-icon">🌟</div>
+      <div class="card-content">
+        <h3>{{ registrationStats.uberlandiaRegistrations }}</h3>
+        <p>Inscrições em Uberlândia</p>
+      </div>
+    </div>
+    
+    <div class="overview-card">
+      <div class="card-icon">📈</div>
+      <div class="card-content">
+        <h3>{{ registrationStats.averagePerDay }}</h3>
+        <p>Média por Dia</p>
+      </div>
+    </div>
+    
+    <div class="overview-card">
+      <div class="card-icon">🏙️</div>
+      <div class="card-content">
+        <h3>{{ registrationStats.cityStats.length }}</h3>
+        <p>Cidades Diferentes</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Charts Grid -->
+  <div class="charts-grid">
+    <!-- Daily Registrations Chart -->
+    <div class="chart-card">
+      <div class="chart-header">
+        <h4>📅 Evolução das Inscrições</h4>
+      </div>
+      <div class="chart-content">
+        <canvas #dailyChart></canvas>
+      </div>
+    </div>
+
+    <!-- Cities Chart -->
+    <div class="chart-card">
+      <div class="chart-header">
+        <h4>🏙️ Top Cidades</h4>
+      </div>
+      <div class="chart-content">
+        <canvas #cityChart></canvas>
+      </div>
+    </div>
+
+    <!-- Motivation Chart -->
+    <div class="chart-card">
+      <div class="chart-header">
+        <h4>💡 Principais Motivações</h4>
+      </div>
+      <div class="chart-content">
+        <canvas #motivationChart></canvas>
+      </div>
+    </div>
+
+    <!-- Experience Chart -->
+    <div class="chart-card">
+      <div class="chart-header">
+        <h4>🎓 Nível de Experiência</h4>
+      </div>
+      <div class="chart-content">
+        <canvas #experienceChart></canvas>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Loading State -->
+<div class="loading-state" *ngIf="!registrationStats">
+  <div class="loading-icon">📊</div>
+  <h3>Carregando dados das inscrições...</h3>
+  <p>Por favor, faça upload do arquivo Excel para ver os gráficos</p>
+</div>
