@@ -53,8 +53,16 @@
 
       &.gold-grid {
         grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-        max-width: 600px;
         margin: 0 auto;
+
+        img{
+          display: flex
+;
+    align-content: center;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+        }
       }
 
       &.silver-grid {

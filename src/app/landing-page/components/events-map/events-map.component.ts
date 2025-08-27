@@ -53,11 +53,11 @@ export class EventsMapComponent implements OnInit {
       title: 'Cyber Gênios',
       info: 'Local de apoio para networking e atividades complementares do NASA Space Apps Challenge'
     },
-    {
-      position: { lat: -18.951666, lng: -48.232789 },
-      title: 'Portão 3',
-      info: 'Local de apoio para networking e atividades complementares do NASA Space Apps Challenge'
-    },
+    // {
+    //   position: { lat: -18.951666, lng: -48.232789 },
+    //   title: 'Portão 3',
+    //   info: 'Local de apoio para networking e atividades complementares do NASA Space Apps Challenge'
+    // },
     {
       position: { lat: -18.924301, lng: -48.232747 },
       title: 'Asa Coworking',

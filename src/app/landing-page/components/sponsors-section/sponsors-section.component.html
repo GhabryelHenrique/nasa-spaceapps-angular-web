@@ -19,6 +19,17 @@
     </div>
 
     <!-- Supporters -->
+    <div class="sponsor-tier gold" *ngIf="sponsors.gold.length > 0">
+      <h3>❤️ Parceiros do Evento</h3>
+      <div class="sponsor-grid gold-grid">
+        <article class="sponsor-card gold-card" *ngFor="let sponsor of sponsors.gold">
+          <a [href]="sponsor.url" target="_blank" rel="noopener" [attr.aria-label]="'Visitar site de ' + sponsor.name + ', apoiador do evento'">
+            <img [src]="sponsor.logo" [alt]="sponsor.name + ' - Organização apoiadora dos mentores do NASA Space Apps Challenge'" class="sponsor-logo" loading="lazy">
+            <span class="sponsor-name">{{ sponsor.name }}</span>
+          </a>
+        </article>
+      </div>
+    </div>
     <div class="sponsor-tier supporters" *ngIf="sponsors.supporters.length > 0">
       <h3>🤝 Organizações/Empresas dos Mentores:</h3>
       <div class="sponsor-grid supporters-grid">
