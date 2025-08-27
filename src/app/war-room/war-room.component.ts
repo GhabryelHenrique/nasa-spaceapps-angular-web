@@ -132,6 +132,7 @@ export class WarRoomComponent implements OnInit {
 
       await this.registrationDataService.loadExcelData(file);
       this.registrationStats = this.registrationDataService.getRegistrationStats();
+      console.log(this.registrationStats);
 
       if (this.registrationStats.totalRegistrations === 0) {
         alert('O arquivo foi processado mas não contém dados válidos. Verifique se o arquivo tem dados nas colunas corretas.');

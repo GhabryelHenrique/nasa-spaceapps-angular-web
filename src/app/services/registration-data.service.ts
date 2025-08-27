@@ -55,9 +55,30 @@ export class RegistrationDataService {
           
           // Se for HTML/XML disfarçado de Excel, tenta processar diferentemente
           if (fileSignature === 'HTML' || fileSignature === 'Texto/CSV') {
-            console.log('Detectado arquivo HTML/XML. Tentando processar como planilha Excel XML...');
+            console.log('Detectado arquivo HTML/XML/CSV. Analisando conteúdo...');
             const textContent = new TextDecoder('utf-8').decode(data);
-            console.log('Conteúdo do arquivo (primeiros 500 chars):', textContent.substring(0, 500));
+            console.log('Conteúdo do arquivo (primeiros 1000 chars):', textContent.substring(0, 1000));
+            console.log('Contém <table>:', textContent.includes('<table'));
+            console.log('Contém worksheet:', textContent.includes('worksheet'));
+            console.log('Contém <ss:', textContent.includes('<ss:'));
+            console.log('Contém DOCTYPE:', textContent.toLowerCase().includes('<!doctype'));
+            console.log('Contém HTML:', textContent.toLowerCase().includes('<html'));
+            
+            // Verifica se é um CSV simples
+            const lines = textContent.split('\n');
+            const firstLines = lines.slice(0, 5);
+            console.log('Primeiras 5 linhas como texto:', firstLines);
+            
+            // Se parece ser CSV (linhas separadas por vírgula/ponto-e-vírgula)
+            if (this.looksLikeCSV(textContent)) {
+              console.log('Arquivo parece ser CSV. Processando como CSV...');
+              try {
+                resolve(this.processCSVContent(textContent));
+                return;
+              } catch (csvError) {
+                console.error('Erro ao processar como CSV:', csvError);
+              }
+            }
             
             // Se contém estrutura de tabela Excel em XML
             if (textContent.includes('<table') || textContent.includes('worksheet') || textContent.includes('<ss:')) {
@@ -85,6 +106,17 @@ export class RegistrationDataService {
               } catch (htmlError) {
                 console.error('Erro ao processar tabela HTML:', htmlError);
               }
+            }
+
+            // Última tentativa: forçar processamento como texto/dados brutos
+            console.log('Tentando extrair dados como texto bruto...');
+            try {
+              resolve(this.processRawTextData(textContent));
+              return;
+            } catch (textError) {
+              console.error('Erro ao processar como texto bruto:', textError);
+              throw new Error(`Arquivo não pôde ser processado. Conteúdo detectado: ${fileSignature}. ` +
+                             `Por favor, salve como Excel (.xlsx) ou CSV (.csv) válido.`);
             }
           }
           
@@ -209,8 +241,22 @@ export class RegistrationDataService {
     const dailyMap = new Map<string, number>();
     this.registrationData.forEach(reg => {
       if (reg.timestamp) {
-        const date = new Date(reg.timestamp).toISOString().split('T')[0];
-        dailyMap.set(date, (dailyMap.get(date) || 0) + 1);
+        try {
+          const date = new Date(reg.timestamp);
+          if (isNaN(date.getTime())) {
+            // Se a data é inválida, usa data atual
+            const currentDate = new Date().toISOString().split('T')[0];
+            dailyMap.set(currentDate, (dailyMap.get(currentDate) || 0) + 1);
+          } else {
+            const dateStr = date.toISOString().split('T')[0];
+            dailyMap.set(dateStr, (dailyMap.get(dateStr) || 0) + 1);
+          }
+        } catch (dateError) {
+          console.warn('Erro ao processar timestamp:', reg.timestamp, dateError);
+          // Se falhar, usa data atual
+          const currentDate = new Date().toISOString().split('T')[0];
+          dailyMap.set(currentDate, (dailyMap.get(currentDate) || 0) + 1);
+        }
       }
     });
 
@@ -514,6 +560,130 @@ export class RegistrationDataService {
 
     console.log(`Dados processados com sucesso: ${this.registrationData.length} registros válidos`);
     return this.registrationData;
+  }
+
+  // Verifica se o conteúdo parece ser CSV
+  private looksLikeCSV(content: string): boolean {
+    const lines = content.split('\n').filter(line => line.trim().length > 0);
+    if (lines.length < 2) return false;
+
+    // Verifica se as primeiras linhas têm padrão consistente de separadores
+    const separators = [',', ';', '\t'];
+    
+    for (const sep of separators) {
+      const firstLineCount = (lines[0].split(sep)).length;
+      if (firstLineCount < 2) continue;
+      
+      // Verifica se pelo menos 3 linhas têm número similar de colunas
+      let consistentLines = 0;
+      for (let i = 0; i < Math.min(5, lines.length); i++) {
+        const colCount = lines[i].split(sep).length;
+        if (Math.abs(colCount - firstLineCount) <= 1) {
+          consistentLines++;
+        }
+      }
+      
+      if (consistentLines >= 3) {
+        console.log(`CSV detectado com separador '${sep}', ${firstLineCount} colunas`);
+        return true;
+      }
+    }
+    
+    return false;
+  }
+
+  // Processa conteúdo CSV
+  private processCSVContent(csvContent: string): RegistrationData[] {
+    console.log('Processando arquivo como CSV...');
+    
+    // Detecta o separador
+    const separators = [',', ';', '\t'];
+    let separator = ',';
+    let maxColumns = 0;
+    
+    for (const sep of separators) {
+      const firstLine = csvContent.split('\n')[0];
+      const colCount = firstLine.split(sep).length;
+      if (colCount > maxColumns) {
+        maxColumns = colCount;
+        separator = sep;
+      }
+    }
+    
+    console.log(`Usando separador: '${separator}'`);
+    
+    // Converte CSV para array de arrays
+    const lines = csvContent.split('\n')
+      .map(line => line.trim())
+      .filter(line => line.length > 0);
+    
+    const csvData = lines.map(line => {
+      // Tratamento básico de CSV (sem aspas complexas)
+      return line.split(separator).map(cell => cell.trim().replace(/^"|"$/g, ''));
+    });
+    
+    console.log('Dados CSV processados:', csvData.slice(0, 3));
+    return this.processJSONData(csvData);
+  }
+
+  // Processa dados como texto bruto (última tentativa)
+  private processRawTextData(content: string): RegistrationData[] {
+    console.log('Analisando texto bruto para encontrar padrões de dados...');
+    
+    // Remove tags HTML se houver
+    let cleanContent = content.replace(/<[^>]+>/g, '');
+    
+    // Decodifica entities HTML comuns
+    cleanContent = cleanContent
+      .replace(/&nbsp;/g, ' ')
+      .replace(/&amp;/g, '&')
+      .replace(/&lt;/g, '<')
+      .replace(/&gt;/g, '>')
+      .replace(/&quot;/g, '"')
+      .replace(/&#(\d+);/g, (match, dec) => String.fromCharCode(dec));
+    
+    // Divide em linhas e filtra linhas vazias
+    const lines = cleanContent.split(/\r?\n/)
+      .map(line => line.trim())
+      .filter(line => line.length > 0);
+    
+    console.log(`${lines.length} linhas encontradas no texto`);
+    console.log('Primeiras 10 linhas:', lines.slice(0, 10));
+    
+    if (lines.length < 2) {
+      throw new Error('Não foi possível encontrar dados estruturados no arquivo.');
+    }
+    
+    // Tenta diferentes padrões de separação
+    const separators = ['\t', ',', ';', '|', ' ', /\s{2,}/];
+    
+    for (const sep of separators) {
+      try {
+        const testData = lines.map(line => {
+          if (sep instanceof RegExp) {
+            return line.split(sep);
+          } else {
+            return line.split(sep);
+          }
+        }).filter(row => row.length > 1);
+        
+        if (testData.length >= 2) {
+          const firstRowLength = testData[0].length;
+          const consistentRows = testData.filter(row => 
+            Math.abs(row.length - firstRowLength) <= 1
+          );
+          
+          if (consistentRows.length >= Math.min(3, testData.length)) {
+            console.log(`Padrão encontrado com separador '${sep}': ${firstRowLength} colunas, ${consistentRows.length} linhas consistentes`);
+            return this.processJSONData(consistentRows);
+          }
+        }
+      } catch (error) {
+        console.warn(`Erro ao tentar separador '${sep}':`, error);
+      }
+    }
+    
+    throw new Error('Não foi possível identificar um padrão de dados válido no arquivo.');
   }
 
   // Método para carregar dados de demonstração
