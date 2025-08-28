@@ -18,6 +18,42 @@
     <app-challenges-section></app-challenges-section>
   </section>
 
+  <!-- Teams Section -->
+  <section class="teams-section-wrapper">
+    <div class="container">
+      <div class="teams-section-content">
+        <h2>Times Participantes</h2>
+        <p class="section-description">
+          Conheça os times já inscritos no NASA Space Apps Challenge Uberlândia 2025.
+          Veja os projetos em desenvolvimento, habilidades desejadas e encontre sua equipe ideal!
+        </p>
+        <div class="teams-stats">
+          <div class="stat-item">
+            <div class="stat-number">{{ totalTeams }}</div>
+            <div class="stat-label">Times Inscritos</div>
+          </div>
+          <!-- <div class="stat-item">
+            <div class="stat-number">{{ totalMembers }}</div>
+            <div class="stat-label">Participantes</div>
+          </div> -->
+        </div>
+        <div class="teams-cta">
+          <a routerLink="/times" class="teams-btn" aria-label="Ver todos os times participantes">
+            <div class="btn-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M16 21V19C16 17.9391 15.5786 16.9217 14.8284 16.1716C14.0783 15.4214 13.0609 15 12 15H5C3.93913 15 2.92172 15.4214 2.17157 16.1716C1.42143 16.9217 1 17.9391 1 19V21M12.5 7C12.5 9.20914 10.7091 11 8.5 11C6.29086 11 4.5 9.20914 4.5 7C4.5 4.79086 6.29086 3 8.5 3C10.7091 3 12.5 4.79086 12.5 7ZM20 8V14M23 11H17" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </div>
+            <div class="btn-content">
+              <span class="btn-title">Ver Todos os Times</span>
+              <span class="btn-subtitle">Encontre sua equipe ou conheça os participantes</span>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- Community Section -->
   <section class="community-wrapper">
     <div class="container">

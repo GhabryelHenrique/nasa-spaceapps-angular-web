@@ -385,6 +385,42 @@
 
 // Team Actions
 .team-actions {
+  .nasa-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    width: 100%;
+    padding: 0.75rem 1.5rem;
+    background: linear-gradient(135deg, #FC3D21 0%, #E43700 100%);
+    color: white;
+    text-decoration: none;
+    border-radius: 25px;
+    font-weight: 600;
+    font-size: 0.9rem;
+    transition: all 0.3s ease;
+    border: none;
+    cursor: pointer;
+
+    &:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 10px 25px rgba(252, 61, 33, 0.4);
+      background: linear-gradient(135deg, #E43700 0%, #CC2F00 100%);
+    }
+
+    &:active {
+      transform: translateY(0);
+    }
+
+    svg {
+      transition: transform 0.3s ease;
+    }
+
+    &:hover svg {
+      transform: translateX(2px);
+    }
+  }
+
   .join-button, .view-button {
     width: 100%;
     padding: 0.75rem 1.5rem;

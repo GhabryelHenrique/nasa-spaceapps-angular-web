@@ -46,6 +46,9 @@ export interface Project {
 
 export interface Team {
   id: string;
+  meta: {
+    relativeUrl: string;
+  }
   title: string;
   excerpt: string | null;
   description: string | null;

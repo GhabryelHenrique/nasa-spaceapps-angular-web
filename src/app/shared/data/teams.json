@@ -1548,7 +1548,7 @@
                 "type": "TEAM",
                 "slug": "candy_monkeys",
                 "firstPublishedAt": "2025-08-28T14:46:27.884096Z",
-                "lastPublishedAt": "2025-08-28T14:47:39.100234Z",
+                "lastPublishedAt": "2025-08-28T15:22:50.692476Z",
                 "relativeUrl": "/2025/find-a-team/candy_monkeys/",
                 "live": true,
                 "parent": null,
@@ -2881,7 +2881,7 @@
                 "type": "TEAM",
                 "slug": "extraplant",
                 "firstPublishedAt": "2025-08-28T14:39:52.528291Z",
-                "lastPublishedAt": "2025-08-28T14:40:14.242386Z",
+                "lastPublishedAt": "2025-08-28T15:33:32.705121Z",
                 "relativeUrl": "/2025/find-a-team/extraplant/",
                 "live": true,
                 "parent": null,
@@ -2908,10 +2908,54 @@
                 "__typename": "Project"
               },
               "projectSubmitted": false,
-              "featuredImage": null,
+              "featuredImage": {
+                "id": "aWQ6Mjg1MDMw",
+                "meta": {
+                  "type": "images.CustomImage",
+                  "downloadUrl": "https://assets.spaceappschallenge.org/media/original_images/C8434FB7-59AA-4C7C-82D5-39938F8360C2.png",
+                  "__typename": "ImageMeta"
+                },
+                "title": "team_image.15:33:31.404524",
+                "alt": "team_image.15:33:31.404524",
+                "caption": "team_image.15:33:31.404524",
+                "displaySize": "og",
+                "rendition": {
+                  "url": "https://assets.spaceappschallenge.org/media/images/C8434FB7-59AA-4C7C-82D5-39938F8360.2e16d0ba.fill-300x250.png",
+                  "fullUrl": "https://assets.spaceappschallenge.org/media/images/C8434FB7-59AA-4C7C-82D5-39938F8360.2e16d0ba.fill-300x250.png",
+                  "height": 250,
+                  "width": 300,
+                  "__typename": "BaseImage"
+                },
+                "__typename": "DefaultImage"
+              },
               "description": null,
-              "desiredSkills": [],
-              "languages": [],
+              "desiredSkills": [
+                "Software",
+                "Graphic Design",
+                "Web Development",
+                "Arts & Multimedia",
+                "Earth Science",
+                "Data Analysis",
+                "Data Visualization",
+                "Statistics",
+                "Agriculture",
+                "Animation",
+                "Artificial Intelligence & Machine Learning",
+                "Design",
+                "Flora & Fauna",
+                "Forecasting",
+                "Habitats",
+                "Pollution",
+                "Manmade Satellites",
+                "Weather",
+                "Waste & Resources",
+                "Virtual Reality",
+                "Space Weather"
+              ],
+              "languages": [
+                "English",
+                "Portuguese"
+              ],
               "challenge": "aWQ6MzEzMjc=",
               "challengeDetails": {
                 "id": "aWQ6MzEzMjc=",

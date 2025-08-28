@@ -58,6 +58,162 @@
   }
 }
 
+// Teams Section
+.teams-section-wrapper {
+  padding: 80px 0;
+  position: relative;
+  background: rgba(78, 205, 196, 0.08);
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url('/assets/patterns/Orbits.png');
+    background-size: 600px 600px;
+    background-repeat: repeat;
+    background-position: center;
+    opacity: 0.06;
+    z-index: -1;
+    pointer-events: none;
+  }
+
+  .teams-section-content {
+    text-align: center;
+    position: relative;
+    z-index: 1;
+
+    h2 {
+      font-size: 2.5rem;
+      margin-bottom: 1.5rem;
+      background: linear-gradient(135deg, #4ECDC4, #45B7D1);
+      background-clip: text;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      font-weight: 700;
+    }
+
+    .section-description {
+      font-size: 1.2rem;
+      color: var(--text-secondary);
+      max-width: 800px;
+      margin: 0 auto 3rem;
+      line-height: 1.6;
+    }
+
+    .teams-stats {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 2rem;
+      max-width: 600px;
+      margin: 0 auto 3rem;
+
+      .stat-item {
+        background: rgba(255, 255, 255, 0.05);
+        border: 1px solid rgba(78, 205, 196, 0.2);
+        border-radius: 15px;
+        padding: 2rem 1rem;
+        transition: all 0.3s ease;
+        backdrop-filter: blur(10px);
+
+        &:hover {
+          transform: translateY(-5px);
+          border-color: rgba(78, 205, 196, 0.4);
+          box-shadow: 0 10px 30px rgba(78, 205, 196, 0.1);
+        }
+
+        .stat-number {
+          font-size: 3rem;
+          font-weight: 700;
+          color: #4ECDC4;
+          margin-bottom: 0.5rem;
+          line-height: 1;
+        }
+
+        .stat-label {
+          font-size: 1rem;
+          color: var(--text-secondary);
+          text-transform: uppercase;
+          letter-spacing: 0.5px;
+          font-weight: 600;
+        }
+      }
+    }
+
+    .teams-cta {
+      .teams-btn {
+        background: rgba(255, 255, 255, 0.05);
+        border: 1px solid rgba(78, 205, 196, 0.3);
+        border-radius: 20px;
+        padding: 2rem;
+        text-decoration: none;
+        display: inline-flex;
+        align-items: center;
+        gap: 1.5rem;
+        transition: all 0.3s ease;
+        backdrop-filter: blur(10px);
+        position: relative;
+        overflow: hidden;
+        max-width: 400px;
+
+        &::before {
+          content: '';
+          position: absolute;
+          top: 0;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          background: linear-gradient(135deg, rgba(78, 205, 196, 0.1), rgba(69, 183, 209, 0.1));
+          opacity: 0;
+          transition: opacity 0.3s ease;
+          z-index: -1;
+        }
+
+        &:hover {
+          transform: translateY(-5px);
+          border-color: rgba(78, 205, 196, 0.5);
+          box-shadow: 0 15px 40px rgba(78, 205, 196, 0.2);
+
+          &::before {
+            opacity: 1;
+          }
+        }
+
+        .btn-icon {
+          min-width: 3rem;
+
+          svg {
+            width: 3rem;
+            height: 3rem;
+            color: #4ECDC4;
+          }
+        }
+
+        .btn-content {
+          text-align: left;
+
+          .btn-title {
+            display: block;
+            font-size: 1.4rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+            color: #4ECDC4;
+          }
+
+          .btn-subtitle {
+            display: block;
+            font-size: 1rem;
+            color: var(--text-secondary);
+            opacity: 0.9;
+          }
+        }
+      }
+    }
+  }
+}
+
 // Community Section
 .community-wrapper {
   padding: 80px 0;
@@ -756,6 +912,42 @@
     }
   }
 
+  .teams-section-wrapper {
+    padding: 70px 0;
+
+    .teams-section-content {
+      h2 {
+        font-size: 2.2rem;
+      }
+
+      .teams-stats {
+        max-width: 500px;
+        gap: 1.5rem;
+
+        .stat-item {
+          padding: 1.8rem 1rem;
+
+          .stat-number {
+            font-size: 2.5rem;
+          }
+        }
+      }
+
+      .teams-cta .teams-btn {
+        padding: 1.8rem;
+
+        .btn-icon svg {
+          width: 2.8rem;
+          height: 2.8rem;
+        }
+
+        .btn-content .btn-title {
+          font-size: 1.3rem;
+        }
+      }
+    }
+  }
+
   .community-wrapper {
     padding: 70px 0;
 
@@ -810,6 +1002,53 @@
         flex-direction: row;
         justify-content: center;
         flex-wrap: wrap;
+      }
+    }
+  }
+
+  .teams-section-wrapper {
+    padding: 60px 0;
+
+    .teams-section-content {
+      h2 {
+        font-size: 2rem;
+      }
+
+      .section-description {
+        font-size: 1.1rem;
+      }
+
+      .teams-stats {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+
+        .stat-item {
+          padding: 1.5rem;
+
+          .stat-number {
+            font-size: 2.2rem;
+          }
+        }
+      }
+
+      .teams-cta .teams-btn {
+        padding: 1.5rem;
+        max-width: 350px;
+
+        .btn-icon svg {
+          width: 2.5rem;
+          height: 2.5rem;
+        }
+
+        .btn-content {
+          .btn-title {
+            font-size: 1.2rem;
+          }
+
+          .btn-subtitle {
+            font-size: 0.95rem;
+          }
+        }
       }
     }
   }
@@ -952,6 +1191,60 @@
 @media (max-width: 480px) {
   .container {
     padding: 0 1rem;
+  }
+
+  .teams-section-wrapper {
+    padding: 40px 0;
+
+    .teams-section-content {
+      h2 {
+        font-size: 1.8rem;
+        line-height: 1.2;
+      }
+
+      .section-description {
+        font-size: 1rem;
+        margin-bottom: 2rem;
+      }
+
+      .teams-stats {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+
+        .stat-item {
+          padding: 1.2rem;
+
+          .stat-number {
+            font-size: 2rem;
+          }
+        }
+      }
+
+      .teams-cta .teams-btn {
+        padding: 1.2rem;
+        flex-direction: column;
+        text-align: center;
+        gap: 1rem;
+        max-width: 300px;
+
+        .btn-icon svg {
+          width: 2.5rem;
+          height: 2.5rem;
+        }
+
+        .btn-content {
+          text-align: center;
+
+          .btn-title {
+            font-size: 1.1rem;
+          }
+
+          .btn-subtitle {
+            font-size: 0.9rem;
+          }
+        }
+      }
+    }
   }
 
   .community-wrapper {

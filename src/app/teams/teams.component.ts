@@ -63,7 +63,7 @@ export class TeamsComponent implements OnInit {
   }
 
   getTeamImageUrl(team: Team): string {
-    return team.featuredImage?.rendition?.fullUrl || '/assets/organizers/placeholder.svg';
+    return team.featuredImage?.rendition?.fullUrl || '/assets/nasa-spaceapps-logo.png';
   }
 
   getMemberCount(team: Team): number {

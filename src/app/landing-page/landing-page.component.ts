@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
 import { HeaderComponent } from './components/header/header.component';
@@ -8,6 +8,7 @@ import { EventInfoTabsComponent } from './components/event-info-tabs/event-info-
 import { ChallengesSectionComponent } from './components/challenges-section/challenges-section.component';
 import { EventsMapComponent } from './components/events-map/events-map.component';
 import { SponsorsSectionComponent } from './components/sponsors-section/sponsors-section.component';
+import { TeamsService } from '../services/teams.service';
 
 @Component({
   selector: 'app-landing-page',
@@ -25,7 +26,40 @@ import { SponsorsSectionComponent } from './components/sponsors-section/sponsors
   templateUrl: './landing-page.component.html',
   styleUrl: './landing-page.component.scss'
 })
-export class LandingPageComponent {
+export class LandingPageComponent implements OnInit {
+  totalTeams = 0;
+  totalMembers = 0;
+
+  constructor(private teamsService: TeamsService) {}
+
+  ngOnInit(): void {
+    this.loadTeamsStats();
+  }
+
+  private loadTeamsStats(): void {
+    this.teamsService.getTeams(100).subscribe({
+      next: (response) => {
+        if (response.data && response.data[0] && response.data[0].teams) {
+          const teamsData = response.data[0].teams;
+          this.totalTeams = teamsData.totalCount;
+          
+          let memberCount = 0;
+          teamsData.edges.forEach(edge => {
+            if (edge.node.memberships) {
+              memberCount += edge.node.memberships.length;
+            }
+          });
+          this.totalMembers = memberCount;
+        }
+      },
+      error: (error) => {
+        console.error('Error loading teams stats:', error);
+        this.totalTeams = 0;
+        this.totalMembers = 0;
+      }
+    });
+  }
+
   organizers = [
     {
       name: 'Gabriel Chayb',
