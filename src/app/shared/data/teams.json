@@ -6222,7 +6222,7 @@
                 "type": "TEAM",
                 "slug": "zyra-vida-dados-e-inovacao-urbana",
                 "firstPublishedAt": "2025-08-28T17:56:12.364275Z",
-                "lastPublishedAt": "2025-08-28T19:26:32.341056Z",
+                "lastPublishedAt": "2025-08-28T21:19:06.653381Z",
                 "relativeUrl": "/2025/find-a-team/zyra-vida-dados-e-inovacao-urbana/",
                 "live": true,
                 "parent": null,
@@ -6230,7 +6230,7 @@
               },
               "owner": "aWQ6Mzg3NjAx",
               "ownerDetails": null,
-              "excerpt": "🚀Junte-se à Zyra! Formamos um time com uma desenvolvedora  (graduanda em SI – Uniube) e uma engenheira ambiental (mestrado em Engenharia Urbana – UFU). Transformamos dados em decisões que promovem cidades saudáveis, unindo tecnologia, sustentabili...",
+              "excerpt": "🚀Junte-se à Zyra! Formamos um time com uma desenvolvedora  (graduanda em SI – Uniube), uma engenheira ambiental (mestrado em Engenharia Urbana – UFU) e um participante de vários hackthons (Adm - Uniube). Transformamos dados em decisões que promove...",
               "project": "aWQ6MzEwNTg=",
               "projectDetails": {
                 "id": "aWQ6MzEwNTg=",
@@ -6250,19 +6250,19 @@
               },
               "projectSubmitted": false,
               "featuredImage": {
-                "id": "aWQ6Mjg1Mjk4",
+                "id": "aWQ6Mjg1Mzgz",
                 "meta": {
                   "type": "images.CustomImage",
-                  "downloadUrl": "https://assets.spaceappschallenge.org/media/original_images/OIP_psLTQRw.webp",
+                  "downloadUrl": "https://assets.spaceappschallenge.org/media/original_images/OIP_90Ho09t.webp",
                   "__typename": "ImageMeta"
                 },
-                "title": "team_image.19:26:31.037576",
-                "alt": "team_image.19:26:31.037576",
-                "caption": "team_image.19:26:31.037576",
+                "title": "team_image.21:19:05.674825",
+                "alt": "team_image.21:19:05.674825",
+                "caption": "team_image.21:19:05.674825",
                 "displaySize": "og",
                 "rendition": {
-                  "url": "https://assets.spaceappschallenge.org/media/images/OIP_psLTQRw.2e16d0ba.fill-300x250.png",
-                  "fullUrl": "https://assets.spaceappschallenge.org/media/images/OIP_psLTQRw.2e16d0ba.fill-300x250.png",
+                  "url": "https://assets.spaceappschallenge.org/media/images/OIP_90Ho09t.2e16d0ba.fill-300x250.png",
+                  "fullUrl": "https://assets.spaceappschallenge.org/media/images/OIP_90Ho09t.2e16d0ba.fill-300x250.png",
                   "height": 250,
                   "width": 300,
                   "__typename": "BaseImage"
