@@ -72,8 +72,26 @@
 
 .charts-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
   gap: 2rem;
+}
+
+.chart-large {
+  grid-column: 1 / -1;
+  
+  .chart-content {
+    height: 350px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .charts-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  
+  .chart-large {
+    grid-column: span 3;
+  }
 }
 
 .chart-card {
@@ -213,5 +231,179 @@
 
   .chart-header h4 {
     font-size: 1rem;
+  }
+}
+
+// Motivation Table Styles
+.table-container {
+  overflow-x: auto;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.motivation-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.9rem;
+
+  th {
+    background: linear-gradient(135deg, rgba(78, 205, 196, 0.2), rgba(69, 183, 209, 0.2));
+    color: #ffffff;
+    font-weight: 600;
+    padding: 1rem 0.75rem;
+    text-align: left;
+    border-bottom: 1px solid rgba(78, 205, 196, 0.3);
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+
+    &:first-child {
+      border-radius: 8px 0 0 0;
+      text-align: center;
+    }
+
+    &:last-child {
+      border-radius: 0 8px 0 0;
+      text-align: center;
+    }
+  }
+
+  td {
+    padding: 0.75rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    color: rgba(255, 255, 255, 0.9);
+    transition: all 0.2s ease;
+  }
+
+  tr {
+    transition: all 0.3s ease;
+
+    &:hover {
+      background: rgba(78, 205, 196, 0.05);
+      
+      td {
+        color: #ffffff;
+      }
+    }
+
+    &.rank-1 {
+      background: linear-gradient(135deg, rgba(255, 215, 0, 0.1), rgba(255, 193, 7, 0.05));
+      
+      &:hover {
+        background: linear-gradient(135deg, rgba(255, 215, 0, 0.15), rgba(255, 193, 7, 0.1));
+      }
+    }
+
+    &.rank-2 {
+      background: linear-gradient(135deg, rgba(192, 192, 192, 0.1), rgba(169, 169, 169, 0.05));
+      
+      &:hover {
+        background: linear-gradient(135deg, rgba(192, 192, 192, 0.15), rgba(169, 169, 169, 0.1));
+      }
+    }
+
+    &.rank-3 {
+      background: linear-gradient(135deg, rgba(205, 127, 50, 0.1), rgba(184, 115, 51, 0.05));
+      
+      &:hover {
+        background: linear-gradient(135deg, rgba(205, 127, 50, 0.15), rgba(184, 115, 51, 0.1));
+      }
+    }
+  }
+
+  .position {
+    text-align: center;
+    width: 80px;
+    position: relative;
+
+    .rank-number {
+      font-weight: 700;
+      font-size: 1rem;
+      color: #4ecdc4;
+    }
+
+    .rank-medal {
+      margin-left: 0.5rem;
+      font-size: 1.1rem;
+    }
+  }
+
+  .motivation-name {
+    font-weight: 500;
+    color: #ffffff;
+    max-width: 200px;
+    word-break: break-word;
+  }
+
+  .count {
+    text-align: center;
+    font-weight: 600;
+    font-size: 1rem;
+    color: #4ecdc4;
+    width: 100px;
+  }
+
+  .percentage {
+    text-align: center;
+    font-weight: 600;
+    color: rgba(255, 255, 255, 0.8);
+    width: 100px;
+    font-size: 0.9rem;
+  }
+}
+
+// Responsive Table
+@media (max-width: 768px) {
+  .motivation-table {
+    font-size: 0.8rem;
+    
+    th, td {
+      padding: 0.5rem 0.4rem;
+    }
+
+    .position {
+      width: 60px;
+    }
+
+    .count, .percentage {
+      width: 80px;
+    }
+
+    .motivation-name {
+      max-width: 150px;
+      font-size: 0.8rem;
+    }
+
+    .rank-number {
+      font-size: 0.9rem;
+    }
+
+    .rank-medal {
+      font-size: 1rem;
+      margin-left: 0.25rem;
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .motivation-table {
+    font-size: 0.75rem;
+    
+    th, td {
+      padding: 0.4rem 0.3rem;
+    }
+
+    .position {
+      width: 50px;
+    }
+
+    .count, .percentage {
+      width: 70px;
+    }
+
+    .motivation-name {
+      max-width: 120px;
+    }
   }
 }

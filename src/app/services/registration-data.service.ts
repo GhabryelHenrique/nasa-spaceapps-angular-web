@@ -22,6 +22,9 @@ export interface RegistrationStats {
   experienceStats: { level: string; count: number }[];
   cityStats: { city: string; count: number }[];
   averagePerDay: number;
+  ageStats: { ageGroup: string; count: number }[];
+  participationModeStats: { mode: string; count: number }[];
+  phoneAreaStats: { area: string; count: number }[];
 }
 
 @Injectable({
@@ -31,170 +34,6 @@ export class RegistrationDataService {
   private registrationData: RegistrationData[] = [];
 
   constructor() {}
-
-  async loadExcelData(file: File): Promise<RegistrationData[]> {
-    return new Promise((resolve, reject) => {
-      const reader = new FileReader();
-      reader.onload = (e: any) => {
-        try {
-          console.log('Resultado do FileReader:', e.target.result);
-          console.log('Tipo do resultado:', typeof e.target.result);
-          console.log('Tamanho do arquivo:', e.target.result?.byteLength || 'N/A');
-          
-          // Verifica se o resultado existe e tem conteúdo
-          if (!e.target.result || e.target.result.byteLength === 0) {
-            throw new Error('Arquivo vazio ou não pôde ser lido');
-          }
-          
-          const data = new Uint8Array(e.target.result);
-          console.log('Dados convertidos para Uint8Array:', data.length, 'bytes');
-          
-          // Verifica a assinatura do arquivo para detectar o formato
-          const fileSignature = this.detectFileFormat(data);
-          console.log('Formato detectado:', fileSignature);
-          
-          // Se for HTML/XML disfarçado de Excel, tenta processar diferentemente
-          if (fileSignature === 'HTML' || fileSignature === 'Texto/CSV') {
-            console.log('Detectado arquivo HTML/XML/CSV. Analisando conteúdo...');
-            const textContent = new TextDecoder('utf-8').decode(data);
-            console.log('Conteúdo do arquivo (primeiros 1000 chars):', textContent.substring(0, 1000));
-            console.log('Contém <table>:', textContent.includes('<table'));
-            console.log('Contém worksheet:', textContent.includes('worksheet'));
-            console.log('Contém <ss:', textContent.includes('<ss:'));
-            console.log('Contém DOCTYPE:', textContent.toLowerCase().includes('<!doctype'));
-            console.log('Contém HTML:', textContent.toLowerCase().includes('<html'));
-            
-            // Verifica se é um CSV simples
-            const lines = textContent.split('\n');
-            const firstLines = lines.slice(0, 5);
-            console.log('Primeiras 5 linhas como texto:', firstLines);
-            
-            // Se parece ser CSV (linhas separadas por vírgula/ponto-e-vírgula)
-            if (this.looksLikeCSV(textContent)) {
-              console.log('Arquivo parece ser CSV. Processando como CSV...');
-              try {
-                resolve(this.processCSVContent(textContent));
-                return;
-              } catch (csvError) {
-                console.error('Erro ao processar como CSV:', csvError);
-              }
-            }
-            
-            // Se contém estrutura de tabela Excel em XML
-            if (textContent.includes('<table') || textContent.includes('worksheet') || textContent.includes('<ss:')) {
-              try {
-                // Força leitura como string/texto XML
-                const workbook = XLSX.read(textContent, { 
-                  type: 'string',
-                  cellText: false,
-                  cellDates: true,
-                  raw: false
-                });
-                console.log('Sucesso na leitura de Excel XML como string');
-                resolve(this.processWorkbook(workbook));
-                return;
-              } catch (xmlError) {
-                console.error('Erro ao processar como Excel XML:', xmlError);
-              }
-            }
-            
-            // Se for um arquivo HTML exportado do Google Sheets ou Excel Online
-            if (textContent.includes('<table')) {
-              try {
-                resolve(this.processHTMLTable(textContent));
-                return;
-              } catch (htmlError) {
-                console.error('Erro ao processar tabela HTML:', htmlError);
-              }
-            }
-
-            // Última tentativa: forçar processamento como texto/dados brutos
-            console.log('Tentando extrair dados como texto bruto...');
-            try {
-              resolve(this.processRawTextData(textContent));
-              return;
-            } catch (textError) {
-              console.error('Erro ao processar como texto bruto:', textError);
-              throw new Error(`Arquivo não pôde ser processado. Conteúdo detectado: ${fileSignature}. ` +
-                             `Por favor, salve como Excel (.xlsx) ou CSV (.csv) válido.`);
-            }
-          }
-          
-          // Tenta ler o workbook com diferentes estratégias baseadas no formato
-          let workbook;
-          const readOptions = {
-            cellText: false,
-            cellDates: true,
-            raw: false,
-            codepage: 65001 // UTF-8
-          };
-
-          try {
-            // Primeira tentativa com tipo detectado
-            workbook = XLSX.read(data, { 
-              type: 'array',
-              ...readOptions
-            });
-            console.log('Sucesso na leitura com type: array');
-          } catch (xlsxError) {
-            console.error('Erro ao ler com XLSX.read (array):', xlsxError);
-            
-            try {
-              // Segunda tentativa: força como binary
-              const binaryString = Array.from(data).map(byte => String.fromCharCode(byte)).join('');
-              workbook = XLSX.read(binaryString, { 
-                type: 'binary',
-                ...readOptions
-              });
-              console.log('Sucesso na leitura com type: binary');
-            } catch (binaryError) {
-              console.error('Erro ao ler com XLSX.read (binary):', binaryError);
-              
-              try {
-                // Terceira tentativa: como buffer direto
-                workbook = XLSX.read(e.target.result, { 
-                  type: 'buffer',
-                  ...readOptions
-                });
-                console.log('Sucesso na leitura com type: buffer');
-              } catch (bufferError) {
-                console.error('Erro ao ler com XLSX.read (buffer):', bufferError);
-                
-                try {
-                  // Quarta tentativa: forçar como base64
-                  const base64String = btoa(String.fromCharCode(...data));
-                  workbook = XLSX.read(base64String, { 
-                    type: 'base64',
-                    ...readOptions
-                  });
-                  console.log('Sucesso na leitura com type: base64');
-                } catch (base64Error) {
-                  console.error('Erro ao ler com XLSX.read (base64):', base64Error);
-                  const errorMessage = base64Error instanceof Error ? base64Error.message : String(base64Error);
-                  throw new Error(`Não foi possível ler o arquivo. Formatos testados falharam. Último erro: ${errorMessage}`);
-                }
-              }
-            }
-          }
-          
-          console.log('Workbook lido com sucesso:', workbook);
-          console.log('Abas encontradas:', workbook.SheetNames);
-
-          resolve(this.processWorkbook(workbook));
-        } catch (error) {
-          console.error('Erro ao processar arquivo Excel:', error);
-          const errorMessage = error instanceof Error ? error.message : String(error);
-          reject(new Error(`Erro ao processar arquivo Excel: ${errorMessage}`));
-        }
-      };
-
-      reader.onerror = () => {
-        reject(new Error('Erro ao ler o arquivo. Verifique se o arquivo não está corrompido.'));
-      };
-
-      reader.readAsArrayBuffer(file);
-    });
-  }
 
   private parseValue(value: any): string {
     if (value === null || value === undefined) {
@@ -269,23 +108,8 @@ export class RegistrationDataService {
       ? totalRegistrations / dailyRegistrations.length
       : 0;
 
-    // Estatísticas de motivação
-    const motivationMap = new Map<string, number>();
-    this.registrationData.forEach(reg => {
-      if (reg.motivations) {
-        const motivations = reg.motivations.split(',').map(m => m.trim());
-        motivations.forEach(motivation => {
-          if (motivation) {
-            motivationMap.set(motivation, (motivationMap.get(motivation) || 0) + 1);
-          }
-        });
-      }
-    });
-
-    const motivationStats = Array.from(motivationMap.entries())
-      .map(([motivation, count]) => ({ motivation, count }))
-      .sort((a, b) => b.count - a.count)
-      .slice(0, 10);
+    // Estatísticas de principais motivadores (baseado em escolaridade e perfil)
+    const motivationStats = this.calculateMotivationStats();
 
     // Estatísticas de experiência
     const experienceMap = new Map<string, number>();
@@ -300,17 +124,16 @@ export class RegistrationDataService {
       .sort((a, b) => b.count - a.count);
 
     // Estatísticas de cidade
-    const cityMap = new Map<string, number>();
-    this.registrationData.forEach(reg => {
-      if (reg.city) {
-        cityMap.set(reg.city, (cityMap.get(reg.city) || 0) + 1);
-      }
-    });
+    const cityStats = this.calculateCityStats();
 
-    const cityStats = Array.from(cityMap.entries())
-      .map(([city, count]) => ({ city, count }))
-      .sort((a, b) => b.count - a.count)
-      .slice(0, 10);
+    // Estatísticas de idade
+    const ageStats = this.calculateAgeStats();
+
+    // Estatísticas de modo de participação
+    const participationModeStats = this.calculateParticipationModeStats();
+
+    // Estatísticas de código de área (DDD)
+    const phoneAreaStats = this.calculatePhoneAreaStats();
 
     return {
       totalRegistrations,
@@ -319,12 +142,405 @@ export class RegistrationDataService {
       motivationStats,
       experienceStats,
       cityStats,
-      averagePerDay: Math.round(averagePerDay * 100) / 100
+      averagePerDay: Math.round(averagePerDay * 100) / 100,
+      ageStats,
+      participationModeStats,
+      phoneAreaStats
     };
   }
 
   getRegistrationData(): RegistrationData[] {
     return this.registrationData;
+  }
+
+  setRegistrationData(data: RegistrationData[]): void {
+    this.registrationData = data;
+  }
+
+  private calculateAgeStats(): { ageGroup: string; count: number }[] {
+    const ageGroups = new Map<string, number>();
+
+    this.registrationData.forEach(reg => {
+      if (reg.interests) {
+        try {
+          const birthTimestamp = parseFloat(reg.interests);
+          if (birthTimestamp > 0) {
+            const birthDate = new Date(birthTimestamp);
+            const today = new Date();
+            let age = today.getFullYear() - birthDate.getFullYear();
+            const monthDiff = today.getMonth() - birthDate.getMonth();
+            if (monthDiff < 0 || (monthDiff === 0 && today.getDate() < birthDate.getDate())) {
+              age--;
+            }
+
+            let ageGroup: string;
+            if (age < 20) ageGroup = '< 20 anos';
+            else if (age < 25) ageGroup = '20-24 anos';
+            else if (age < 30) ageGroup = '25-29 anos';
+            else if (age < 35) ageGroup = '30-34 anos';
+            else ageGroup = '35+ anos';
+
+            ageGroups.set(ageGroup, (ageGroups.get(ageGroup) || 0) + 1);
+          }
+        } catch (error) {
+          console.warn('Erro ao calcular idade:', error);
+        }
+      }
+    });
+
+    return Array.from(ageGroups.entries())
+      .map(([ageGroup, count]) => ({ ageGroup, count }))
+      .sort((a, b) => {
+        const order = ['< 20 anos', '20-24 anos', '25-29 anos', '30-34 anos', '35+ anos'];
+        return order.indexOf(a.ageGroup) - order.indexOf(b.ageGroup);
+      });
+  }
+
+  private calculateParticipationModeStats(): { mode: string; count: number }[] {
+    const modeMap = new Map<string, number>();
+
+    this.registrationData.forEach(reg => {
+      if (reg.availability) {
+        const availability = reg.availability.toLowerCase();
+        let mode: string;
+
+        if (availability.includes('remotamente de qualquer lugar do mundo')) {
+          mode = '💻 Remoto';
+        } else if (availability.includes('presencialmente em uberlândia')) {
+          mode = '👥 Presencial';
+        } else {
+          mode = '❓ Não especificado';
+        }
+
+        modeMap.set(mode, (modeMap.get(mode) || 0) + 1);
+      }
+    });
+
+    return Array.from(modeMap.entries())
+      .map(([mode, count]) => ({ mode, count }))
+      .sort((a, b) => b.count - a.count);
+  }
+
+  private calculatePhoneAreaStats(): { area: string; count: number }[] {
+    const areaMap = new Map<string, number>();
+
+    this.registrationData.forEach(reg => {
+      if (reg.phone) {
+        const phoneStr = String(reg.phone).replace(/\D/g, '');
+        if (phoneStr.length >= 10) {
+          const area = phoneStr.substring(0, 2);
+          const areaName = this.getAreaName(area);
+          areaMap.set(areaName, (areaMap.get(areaName) || 0) + 1);
+        }
+      }
+    });
+
+    return Array.from(areaMap.entries())
+      .map(([area, count]) => ({ area, count }))
+      .sort((a, b) => b.count - a.count)
+      .slice(0, 8);
+  }
+
+  private getAreaName(ddd: string): string {
+    const areas: { [key: string]: string } = {
+      '11': 'São Paulo (11)',
+      '21': 'Rio de Janeiro (21)',
+      '31': 'Belo Horizonte (31)',
+      '34': 'Uberlândia (34)',
+      '85': 'Fortaleza (85)',
+      '47': 'Joinville (47)',
+      '22': 'Campos/RJ (22)',
+      '16': 'Ribeirão Preto (16)',
+      '61': 'Brasília (61)',
+      '38': 'Montes Claros (38)',
+      '64': 'Rio Verde (64)'
+    };
+
+    return areas[ddd] || `DDD ${ddd}`;
+  }
+
+  private calculateMotivationStats(): { motivation: string; count: number }[] {
+    const motivationMap = new Map<string, number>();
+
+    this.registrationData.forEach(reg => {
+      if (reg.motivations) {
+        const normalizedMotivation = this.normalizeMotivation(reg.motivations);
+        const groupedMotivation = this.findSimilarMotivation(normalizedMotivation, motivationMap);
+
+        if (groupedMotivation) {
+          motivationMap.set(groupedMotivation, (motivationMap.get(groupedMotivation) || 0) + 1);
+        } else {
+          motivationMap.set(normalizedMotivation, (motivationMap.get(normalizedMotivation) || 0) + 1);
+        }
+      }
+    });
+
+    return Array.from(motivationMap.entries())
+      .map(([motivation, count]) => ({ motivation, count }))
+      .sort((a, b) => b.count - a.count);
+  }
+
+  private normalizeMotivation(motivation: string): string {
+    return motivation
+      .trim()
+      .toLowerCase()
+      .normalize('NFD')
+      .replace(/[\u0300-\u036f]/g, '') // Remove acentos
+      .replace(/[^\w\s]/g, '') // Remove pontuação
+      .replace(/\s+/g, ' ') // Normaliza espaços
+      .trim();
+  }
+
+  private findSimilarMotivation(newMotivation: string, existingMap: Map<string, number>): string | null {
+    for (const existingMotivation of existingMap.keys()) {
+      if (this.areMotivationsSimilar(newMotivation, existingMotivation)) {
+        return existingMotivation;
+      }
+    }
+    return null;
+  }
+
+  private areMotivationsSimilar(motivation1: string, motivation2: string): boolean {
+    // 1. Verificação de inclusão (uma contém a outra)
+    if (motivation1.includes(motivation2) || motivation2.includes(motivation1)) {
+      return true;
+    }
+
+    // 2. Verificação de similaridade por palavras-chave
+    const keywords1 = this.extractKeywords(motivation1);
+    const keywords2 = this.extractKeywords(motivation2);
+
+    const commonKeywords = keywords1.filter(word => keywords2.includes(word));
+    const totalKeywords = new Set([...keywords1, ...keywords2]).size;
+
+    // Se mais de 60% das palavras são comuns, considera similar
+    const similarity = commonKeywords.length / Math.max(keywords1.length, keywords2.length);
+    if (similarity > 0.6) {
+      return true;
+    }
+
+    // 3. Verificação de distância de Levenshtein para textos curtos
+    if (motivation1.length <= 20 && motivation2.length <= 20) {
+      const distance = this.levenshteinDistance(motivation1, motivation2);
+      const maxLength = Math.max(motivation1.length, motivation2.length);
+      const similarity2 = 1 - (distance / maxLength);
+      return similarity2 > 0.7;
+    }
+
+    return false;
+  }
+
+  private extractKeywords(text: string): string[] {
+    const stopWords = ['o', 'a', 'os', 'as', 'de', 'da', 'do', 'das', 'dos', 'em', 'no', 'na', 'nos', 'nas',
+                       'por', 'para', 'com', 'sem', 'sobre', 'ate', 'desde', 'entre', 'pela', 'pelo', 'pelas', 'pelos',
+                       'e', 'ou', 'mas', 'que', 'se', 'como', 'quando', 'onde', 'porque', 'pois', 'assim',
+                       'muito', 'mais', 'menos', 'bem', 'mal', 'melhor', 'pior', 'maior', 'menor',
+                       'um', 'uma', 'uns', 'umas', 'este', 'esta', 'estes', 'estas', 'esse', 'essa', 'esses', 'essas',
+                       'aquele', 'aquela', 'aqueles', 'aquelas', 'meu', 'minha', 'meus', 'minhas', 'seu', 'sua', 'seus', 'suas'];
+
+    return text
+      .split(' ')
+      .filter(word => word.length > 2 && !stopWords.includes(word))
+      .filter(word => word.length > 0);
+  }
+
+  private levenshteinDistance(str1: string, str2: string): number {
+    const matrix = Array(str2.length + 1).fill(null).map(() => Array(str1.length + 1).fill(null));
+
+    for (let i = 0; i <= str1.length; i++) {
+      matrix[0][i] = i;
+    }
+
+    for (let j = 0; j <= str2.length; j++) {
+      matrix[j][0] = j;
+    }
+
+    for (let j = 1; j <= str2.length; j++) {
+      for (let i = 1; i <= str1.length; i++) {
+        const indicator = str1[i - 1] === str2[j - 1] ? 0 : 1;
+        matrix[j][i] = Math.min(
+          matrix[j][i - 1] + 1,
+          matrix[j - 1][i] + 1,
+          matrix[j - 1][i - 1] + indicator
+        );
+      }
+    }
+
+    return matrix[str2.length][str1.length];
+  }
+
+  private calculateCityStats(): { city: string; count: number }[] {
+    const cityMap = new Map<string, number>();
+
+    this.registrationData.forEach(reg => {
+      if (reg.city) {
+        const normalizedCity = this.normalizeCityName(reg.city);
+        const groupedCity = this.findSimilarCity(normalizedCity, cityMap);
+        
+        if (groupedCity) {
+          cityMap.set(groupedCity, (cityMap.get(groupedCity) || 0) + 1);
+        } else {
+          cityMap.set(normalizedCity, (cityMap.get(normalizedCity) || 0) + 1);
+        }
+      }
+    });
+
+    // Retorna todas as cidades (sem limitação)
+    return Array.from(cityMap.entries())
+      .map(([city, count]) => ({ city, count }))
+      .sort((a, b) => b.count - a.count);
+  }
+
+  private findSimilarCity(newCity: string, existingMap: Map<string, number>): string | null {
+    for (const existingCity of existingMap.keys()) {
+      if (this.areCitiesSimilar(newCity, existingCity)) {
+        return existingCity;
+      }
+    }
+    return null;
+  }
+
+  private areCitiesSimilar(city1: string, city2: string): boolean {
+    const normalized1 = this.normalizeForComparison(city1);
+    const normalized2 = this.normalizeForComparison(city2);
+
+    // Verificação exata
+    if (normalized1 === normalized2) {
+      return true;
+    }
+
+    // Verificação de inclusão
+    if (normalized1.includes(normalized2) || normalized2.includes(normalized1)) {
+      return true;
+    }
+
+    // Para cidades com nomes curtos, usa distância de Levenshtein
+    if (normalized1.length <= 15 && normalized2.length <= 15) {
+      const distance = this.levenshteinDistance(normalized1, normalized2);
+      const maxLength = Math.max(normalized1.length, normalized2.length);
+      const similarity = 1 - (distance / maxLength);
+      return similarity > 0.8; // 80% de similaridade
+    }
+
+    return false;
+  }
+
+  private normalizeForComparison(city: string): string {
+    return city
+      .trim()
+      .toLowerCase()
+      .normalize('NFD')
+      .replace(/[\u0300-\u036f]/g, '') // Remove acentos
+      .replace(/[^\w\s]/g, '') // Remove pontuação
+      .replace(/\s+/g, '') // Remove espaços
+      .trim();
+  }
+
+  private normalizeCityName(city: string): string {
+    // Remove espaços extras, pontuação e normaliza
+    let normalized = city.trim();
+
+    // Remove sufixos comuns (estado, região, etc.)
+    normalized = normalized.replace(/[,-].*$/, '').trim();
+    normalized = normalized.replace(/\s*\([^)]*\)\s*/g, '').trim();
+    normalized = normalized.replace(/\s*[-/]\s*(mg|minas gerais|sp|são paulo|rj|rio de janeiro|go|goias|goiás|pr|parana|paraná|sc|santa catarina|rs|rio grande do sul|ce|ceara|ceará|ba|bahia|pe|pernambuco|al|alagoas|ma|maranhao|maranhão|ms|mato grosso do sul|df|distrito federal|am|amazonas|se|sergipe)\s*$/gi, '').trim();
+
+    // Correções específicas de ortografia e variações conhecidas
+    const corrections: { [key: string]: string } = {
+      // Uberlândia e variações
+      'uberlandia': 'Uberlândia',
+      'uberlândia': 'Uberlândia',
+      'uber': 'Uberlândia',
+      'uberl': 'Uberlândia',
+      'ubêrlandia': 'Uberlândia',
+      
+      // Outras cidades principais
+      'brasilia': 'Brasília',
+      'brasília': 'Brasília',
+      'sao paulo': 'São Paulo',
+      'são paulo': 'São Paulo',
+      'rio de janeiro': 'Rio de Janeiro',
+      'belo horizonte': 'Belo Horizonte',
+      'fortaleza': 'Fortaleza',
+      'araguari mg': 'Araguari',
+      'araguari minas gerais': 'Araguari',
+      'catalao': 'Catalão',
+      'catalão go': 'Catalão',
+      'catalão goiás': 'Catalão',
+      'uberaba mg': 'Uberaba',
+      'ituiutaba': 'Ituiutaba',
+      'patos de minas': 'Patos de Minas',
+      'araxa': 'Araxá',
+      'araxá mg': 'Araxá',
+      'ibia': 'Ibiá',
+      'ibiá mg': 'Ibiá',
+      'goiatuba': 'Goiatuba',
+      'aparecida de goiania': 'Aparecida de Goiânia',
+      'aguas lindas de goias': 'Águas Lindas de Goiás',
+      'aguas lindas de goiás': 'Águas Lindas de Goiás',
+      'tres coroas': 'Três Coroas',
+      'três coroas': 'Três Coroas',
+      'foz do iguacu': 'Foz do Iguaçu',
+      'foz do iguaçu': 'Foz do Iguaçu',
+      'maceio': 'Maceió',
+      'maceió alagoas': 'Maceió',
+      'sao luis': 'São Luís',
+      'são luís ma': 'São Luís',
+      'saobernardo ma': 'São Bernardo',
+      'são bernardo ma': 'São Bernardo',
+      'rio quente go': 'Rio Quente',
+      'corumbaiba go': 'Corumbaíba',
+      'paranaiba ms': 'Paranaíba',
+      'paranaíba ms': 'Paranaíba',
+      'icaparaima pr': 'Icaraíma',
+      'icaraíma pr': 'Icaraíma',
+      'realeza pr': 'Realeza',
+      'palhoca sc': 'Palhoça',
+      'palhoça sc': 'Palhoça',
+      'criciuma': 'Criciúma',
+      'criciúma': 'Criciúma',
+      'sapucaia do sul': 'Sapucaia do Sul',
+      'catuipe': 'Catuípe',
+      'belford roxo': 'Belford Roxo',
+      'cabo frio rj': 'Cabo Frio',
+      'nova iguacu': 'Nova Iguaçu',
+      'nova iguaçu': 'Nova Iguaçu',
+      'santo andre': 'Santo André',
+      'santo andré': 'Santo André',
+      'sao carlos': 'São Carlos',
+      'são carlos': 'São Carlos',
+      'sertaozinho': 'Sertãozinho',
+      'sertãozinho': 'Sertãozinho',
+      'penapolis': 'Penápolis',
+      'penápolis': 'Penápolis',
+      'vargem grande paulista': 'Vargem Grande Paulista',
+      'itaquaquecetuba': 'Itaquaquecetuba',
+      'maua': 'Mauá',
+      'mauá': 'Mauá',
+      'barueri sp': 'Barueri',
+      'artur nogueira sp': 'Artur Nogueira',
+      'ribeira preto': 'Ribeirão Preto',
+      'ribeirao preto': 'Ribeirão Preto',
+      'guaira': 'Guaíra',
+      'guaíra': 'Guaíra',
+      'aracaju': 'Aracaju',
+      'gravata': 'Gravatá',
+      'gravatá': 'Gravatá',
+      'olinda pe': 'Olinda',
+      'manaus': 'Manaus',
+      'mocambique': 'Moçambique',
+      'moçambique': 'Moçambique'
+    };
+
+    const lowerNormalized = normalized.toLowerCase().trim();
+    
+    // Aplica correções
+    if (corrections[lowerNormalized]) {
+      return corrections[lowerNormalized];
+    }
+
+    // Capitaliza primeira letra de cada palavra
+    return normalized.replace(/\b\w/g, letter => letter.toUpperCase());
   }
 
   // Método para detectar o formato do arquivo pela assinatura
@@ -333,28 +549,28 @@ export class RegistrationDataService {
       // Verifica assinaturas conhecidas
       const signature = Array.from(data.slice(0, 8)).map(byte => byte.toString(16).padStart(2, '0')).join('').toLowerCase();
       console.log('Assinatura do arquivo (primeiros 8 bytes):', signature);
-      
+
       // XLSX/DOCX (ZIP-based) - PK
       if (data[0] === 0x50 && data[1] === 0x4B) {
         return 'XLSX (ZIP-based)';
       }
-      
+
       // XLS (OLE2) - D0CF11E0A1B11AE1
       if (data[0] === 0xD0 && data[1] === 0xCF && data[2] === 0x11 && data[3] === 0xE0) {
         return 'XLS (OLE2)';
       }
-      
+
       // CSV ou texto
       if (this.isTextFile(data)) {
         return 'Texto/CSV';
       }
-      
+
       // HTML
       const textStart = new TextDecoder().decode(data.slice(0, 100)).toLowerCase();
       if (textStart.includes('<html') || textStart.includes('<!doctype') || textStart.includes('<table')) {
         return 'HTML';
       }
-      
+
       return 'Formato desconhecido';
     } catch (error) {
       console.warn('Erro ao detectar formato:', error);
@@ -367,14 +583,14 @@ export class RegistrationDataService {
     try {
       const sample = data.slice(0, 1000);
       let textChars = 0;
-      
+
       for (const byte of sample) {
         // Caracteres ASCII imprimíveis + quebras de linha
         if ((byte >= 32 && byte <= 126) || byte === 9 || byte === 10 || byte === 13) {
           textChars++;
         }
       }
-      
+
       return (textChars / sample.length) > 0.8;
     } catch {
       return false;
@@ -389,7 +605,7 @@ export class RegistrationDataService {
       console.log('Range da planilha:', worksheet['!ref']);
       console.log('Primeira célula:', range.s);
       console.log('Última célula:', range.e);
-      
+
       // Mostra algumas células específicas para debug
       const sampleCells = ['A1', 'B1', 'C1', 'A2', 'B2', 'C2'];
       sampleCells.forEach(cell => {
@@ -412,7 +628,7 @@ export class RegistrationDataService {
     // Pega a primeira aba do Excel
     const sheetName = workbook.SheetNames[0];
     console.log('Usando aba:', sheetName);
-    
+
     const worksheet = workbook.Sheets[sheetName];
     if (!worksheet) {
       throw new Error(`Não foi possível acessar a aba "${sheetName}".`);
@@ -442,34 +658,34 @@ export class RegistrationDataService {
   // Método para processar tabela HTML
   private processHTMLTable(htmlContent: string): RegistrationData[] {
     console.log('Processando tabela HTML...');
-    
+
     // Extrai dados da tabela HTML usando regex ou parsing básico
     const tableRegex = /<table[^>]*>(.*?)<\/table>/is;
     const tableMatch = htmlContent.match(tableRegex);
-    
+
     if (!tableMatch) {
       throw new Error('Não foi possível encontrar uma tabela válida no arquivo HTML.');
     }
-    
+
     const tableContent = tableMatch[1];
     const rowRegex = /<tr[^>]*>(.*?)<\/tr>/gis;
     const rows: string[] = [];
     let rowMatch;
-    
+
     while ((rowMatch = rowRegex.exec(tableContent)) !== null) {
       rows.push(rowMatch[1]);
     }
-    
+
     if (rows.length === 0) {
       throw new Error('Nenhuma linha de dados encontrada na tabela HTML.');
     }
-    
+
     // Converte linhas HTML para array de arrays
     const jsonData = rows.map(row => {
       const cellRegex = /<t[hd][^>]*>(.*?)<\/t[hd]>/gis;
       const cells: string[] = [];
       let cellMatch;
-      
+
       while ((cellMatch = cellRegex.exec(row)) !== null) {
         // Remove tags HTML e decodifica entities
         const cellText = cellMatch[1]
@@ -482,10 +698,10 @@ export class RegistrationDataService {
           .trim();
         cells.push(cellText);
       }
-      
+
       return cells;
     });
-    
+
     console.log('Dados extraídos da tabela HTML:', jsonData.slice(0, 3));
     return this.processJSONData(jsonData);
   }
@@ -569,11 +785,11 @@ export class RegistrationDataService {
 
     // Verifica se as primeiras linhas têm padrão consistente de separadores
     const separators = [',', ';', '\t'];
-    
+
     for (const sep of separators) {
       const firstLineCount = (lines[0].split(sep)).length;
       if (firstLineCount < 2) continue;
-      
+
       // Verifica se pelo menos 3 linhas têm número similar de colunas
       let consistentLines = 0;
       for (let i = 0; i < Math.min(5, lines.length); i++) {
@@ -582,25 +798,25 @@ export class RegistrationDataService {
           consistentLines++;
         }
       }
-      
+
       if (consistentLines >= 3) {
         console.log(`CSV detectado com separador '${sep}', ${firstLineCount} colunas`);
         return true;
       }
     }
-    
+
     return false;
   }
 
   // Processa conteúdo CSV
   private processCSVContent(csvContent: string): RegistrationData[] {
     console.log('Processando arquivo como CSV...');
-    
+
     // Detecta o separador
     const separators = [',', ';', '\t'];
     let separator = ',';
     let maxColumns = 0;
-    
+
     for (const sep of separators) {
       const firstLine = csvContent.split('\n')[0];
       const colCount = firstLine.split(sep).length;
@@ -609,19 +825,19 @@ export class RegistrationDataService {
         separator = sep;
       }
     }
-    
+
     console.log(`Usando separador: '${separator}'`);
-    
+
     // Converte CSV para array de arrays
     const lines = csvContent.split('\n')
       .map(line => line.trim())
       .filter(line => line.length > 0);
-    
+
     const csvData = lines.map(line => {
       // Tratamento básico de CSV (sem aspas complexas)
       return line.split(separator).map(cell => cell.trim().replace(/^"|"$/g, ''));
     });
-    
+
     console.log('Dados CSV processados:', csvData.slice(0, 3));
     return this.processJSONData(csvData);
   }
@@ -629,10 +845,10 @@ export class RegistrationDataService {
   // Processa dados como texto bruto (última tentativa)
   private processRawTextData(content: string): RegistrationData[] {
     console.log('Analisando texto bruto para encontrar padrões de dados...');
-    
+
     // Remove tags HTML se houver
     let cleanContent = content.replace(/<[^>]+>/g, '');
-    
+
     // Decodifica entities HTML comuns
     cleanContent = cleanContent
       .replace(/&nbsp;/g, ' ')
@@ -641,22 +857,22 @@ export class RegistrationDataService {
       .replace(/&gt;/g, '>')
       .replace(/&quot;/g, '"')
       .replace(/&#(\d+);/g, (match, dec) => String.fromCharCode(dec));
-    
+
     // Divide em linhas e filtra linhas vazias
     const lines = cleanContent.split(/\r?\n/)
       .map(line => line.trim())
       .filter(line => line.length > 0);
-    
+
     console.log(`${lines.length} linhas encontradas no texto`);
     console.log('Primeiras 10 linhas:', lines.slice(0, 10));
-    
+
     if (lines.length < 2) {
       throw new Error('Não foi possível encontrar dados estruturados no arquivo.');
     }
-    
+
     // Tenta diferentes padrões de separação
     const separators = ['\t', ',', ';', '|', ' ', /\s{2,}/];
-    
+
     for (const sep of separators) {
       try {
         const testData = lines.map(line => {
@@ -666,13 +882,13 @@ export class RegistrationDataService {
             return line.split(sep);
           }
         }).filter(row => row.length > 1);
-        
+
         if (testData.length >= 2) {
           const firstRowLength = testData[0].length;
-          const consistentRows = testData.filter(row => 
+          const consistentRows = testData.filter(row =>
             Math.abs(row.length - firstRowLength) <= 1
           );
-          
+
           if (consistentRows.length >= Math.min(3, testData.length)) {
             console.log(`Padrão encontrado com separador '${sep}': ${firstRowLength} colunas, ${consistentRows.length} linhas consistentes`);
             return this.processJSONData(consistentRows);
@@ -682,136 +898,7 @@ export class RegistrationDataService {
         console.warn(`Erro ao tentar separador '${sep}':`, error);
       }
     }
-    
+
     throw new Error('Não foi possível identificar um padrão de dados válido no arquivo.');
-  }
-
-  // Método para carregar dados de demonstração
-  loadDemoData(): void {
-    const demoData: RegistrationData[] = [
-      {
-        timestamp: '2024-08-01 10:00:00',
-        name: 'João Silva',
-        email: 'joao@email.com',
-        phone: '(34) 99999-9999',
-        city: 'Uberlândia',
-        motivations: 'Aprender tecnologia espacial, Networking, Inovação',
-        experience: 'Iniciante',
-        interests: 'Programação, Astronomia',
-        availability: 'Fim de semana completo',
-        expectations: 'Aprender e contribuir'
-      },
-      {
-        timestamp: '2024-08-02 14:30:00',
-        name: 'Maria Santos',
-        email: 'maria@email.com',
-        phone: '(34) 88888-8888',
-        city: 'Uberlândia',
-        motivations: 'Inovação, Desafio técnico, Colaboração',
-        experience: 'Intermediário',
-        interests: 'Engenharia, Design',
-        availability: 'Fim de semana completo',
-        expectations: 'Desenvolver soluções criativas'
-      },
-      {
-        timestamp: '2024-08-03 09:15:00',
-        name: 'Pedro Costa',
-        email: 'pedro@email.com',
-        phone: '(11) 77777-7777',
-        city: 'São Paulo',
-        motivations: 'Tecnologia espacial, Networking',
-        experience: 'Avançado',
-        interests: 'Data Science, Machine Learning',
-        availability: 'Apenas sábado',
-        expectations: 'Compartilhar conhecimento'
-      },
-      {
-        timestamp: '2024-08-04 16:45:00',
-        name: 'Ana Oliveira',
-        email: 'ana@email.com',
-        phone: '(31) 66666-6666',
-        city: 'Belo Horizonte',
-        motivations: 'Aprender tecnologia espacial, Inovação',
-        experience: 'Iniciante',
-        interests: 'Astronomia, Física',
-        availability: 'Domingo',
-        expectations: 'Primeira experiência em hackathon'
-      },
-      {
-        timestamp: '2024-08-05 11:20:00',
-        name: 'Carlos Ferreira',
-        email: 'carlos@email.com',
-        phone: '(34) 55555-5555',
-        city: 'Uberlândia',
-        motivations: 'Desafio técnico, Colaboração, Networking',
-        experience: 'Intermediário',
-        interests: 'Robótica, IoT',
-        availability: 'Fim de semana completo',
-        expectations: 'Desenvolver protótipo funcional'
-      },
-      {
-        timestamp: '2024-08-06 13:00:00',
-        name: 'Lucia Almeida',
-        email: 'lucia@email.com',
-        phone: '(21) 44444-4444',
-        city: 'Rio de Janeiro',
-        motivations: 'Inovação, Aprender tecnologia espacial',
-        experience: 'Avançado',
-        interests: 'Inteligência Artificial, Sensores',
-        availability: 'Fim de semana completo',
-        expectations: 'Aplicar IA em problemas espaciais'
-      },
-      {
-        timestamp: '2024-08-07 08:30:00',
-        name: 'Rafael Souza',
-        email: 'rafael@email.com',
-        phone: '(34) 33333-3333',
-        city: 'Uberlândia',
-        motivations: 'Colaboração, Desafio técnico',
-        experience: 'Iniciante',
-        interests: 'Programação, Eletrônica',
-        availability: 'Sábado',
-        expectations: 'Aprender na prática'
-      },
-      {
-        timestamp: '2024-08-08 15:10:00',
-        name: 'Fernanda Lima',
-        email: 'fernanda@email.com',
-        phone: '(85) 22222-2222',
-        city: 'Fortaleza',
-        motivations: 'Networking, Inovação, Aprender tecnologia espacial',
-        experience: 'Intermediário',
-        interests: 'UX/UI, Design Thinking',
-        availability: 'Domingo',
-        expectations: 'Contribuir com design de interface'
-      },
-      {
-        timestamp: '2024-08-09 17:25:00',
-        name: 'Marcos Rocha',
-        email: 'marcos@email.com',
-        phone: '(34) 11111-1111',
-        city: 'Uberlândia',
-        motivations: 'Desafio técnico, Tecnologia espacial',
-        experience: 'Avançado',
-        interests: 'Sistemas Embarcados, Hardware',
-        availability: 'Fim de semana completo',
-        expectations: 'Desenvolver hardware inovador'
-      },
-      {
-        timestamp: '2024-08-10 12:40:00',
-        name: 'Juliana Moreira',
-        email: 'juliana@email.com',
-        phone: '(47) 99999-0000',
-        city: 'Florianópolis',
-        motivations: 'Colaboração, Inovação',
-        experience: 'Intermediário',
-        interests: 'Sustentabilidade, Meio Ambiente',
-        availability: 'Fim de semana completo',
-        expectations: 'Soluções sustentáveis para o espaço'
-      }
-    ];
-
-    this.registrationData = demoData;
-    console.log('Dados de demonstração carregados:', this.registrationData.length, 'registros');
   }
 }

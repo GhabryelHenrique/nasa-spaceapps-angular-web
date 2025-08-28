@@ -5,7 +5,6 @@
       <h1 class="war-room-title">
         <span class="title-icon">🚀</span>
         Sala de Guerra
-        <span class="subtitle">NASA Space Apps Challenge 2025</span>
       </h1>
       <div class="stats-container">
         <div class="stat-card">
@@ -16,23 +15,117 @@
           <div class="stat-number">{{ totalParticipants }}</div>
           <div class="stat-label">Participantes</div>
         </div>
+        <div class="stat-card" *ngIf="registrationStats">
+          <div class="stat-number">{{ registrationStats.totalRegistrations }}</div>
+          <div class="stat-label">Inscrições UDI</div>
+        </div>
+        <div class="stat-card" *ngIf="registrationStats">
+          <div class="stat-number">{{ registrationStats.averagePerDay }}</div>
+          <div class="stat-label">Média/Dia</div>
+        </div>
       </div>
     </div>
   </header>
+
+  <!-- Dashboard Insights -->
+  <div class="insights-dashboard" *ngIf="registrationStats">
+    <h2 class="dashboard-title">📈 Insights dos Dados</h2>
+
+    <div class="insights-grid">
+      <div class="insight-card highlight">
+        <div class="insight-icon">🏆</div>
+        <div class="insight-content">
+          <h3>{{ uberlandia.registrations }}</h3>
+          <p>Inscrições confirmadas para Uberlândia</p>
+          <div class="insight-percentage">
+            {{ ((uberlandia.registrations / registrationStats.totalRegistrations) * 100).toFixed(1) }}% do total
+          </div>
+        </div>
+      </div>
+
+      <div class="insight-card">
+        <div class="insight-icon">📅</div>
+        <div class="insight-content">
+          <h3>{{ registrationStats.dailyRegistrations.length }}</h3>
+          <p>Dias com inscrições ativas</p>
+          <div class="insight-detail">
+            Pico: {{ getDayWithMostRegistrations() }} inscrições
+          </div>
+        </div>
+      </div>
+
+      <div class="insight-card">
+        <div class="insight-icon">🎓</div>
+        <div class="insight-content">
+          <h3>{{ getMostCommonEducation() }}</h3>
+          <p>Escolaridade mais comum</p>
+          <div class="insight-detail">
+            {{ getEducationPercentage() }}% dos participantes
+          </div>
+        </div>
+      </div>
+
+      <div class="insight-card">
+        <div class="insight-icon">👥</div>
+        <div class="insight-content">
+          <h3>{{ getMostCommonAgeGroup() }}</h3>
+          <p>Faixa etária predominante</p>
+          <div class="insight-detail">
+            {{ getAgeGroupPercentage() }}% dos participantes
+          </div>
+        </div>
+      </div>
+
+      <div class="insight-card">
+        <div class="insight-icon">💻</div>
+        <div class="insight-content">
+          <h3>{{ getParticipationMode() }}</h3>
+          <p>Modo de participação preferido</p>
+          <div class="insight-detail">
+            {{ getParticipationPercentage() }}% dos participantes
+          </div>
+        </div>
+      </div>
+
+      <div class="insight-card">
+        <div class="insight-icon">📍</div>
+        <div class="insight-content">
+          <h3>{{ getMostCommonArea() }}</h3>
+          <p>Região com mais participantes</p>
+          <div class="insight-detail">
+            {{ getAreaPercentage() }}% do total
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Registration Map -->
+  <app-registration-map
+    [registrationStats]="registrationStats"
+    [uberlandia]="uberlandia"
+    >
+  </app-registration-map>
+
+  <app-registration-charts
+    [registrationStats]="registrationStats"
+    [uberlandia]="uberlandia"
+    >
+  </app-registration-charts>
 
   <!-- Controls Section -->
   <div class="controls-section">
     <div class="sort-controls">
       <label class="sort-label">Ordenar por participantes:</label>
       <div class="sort-buttons">
-        <button 
-          class="sort-btn" 
+        <button
+          class="sort-btn"
           [class.active]="sortOrder === 'desc'"
           (click)="sortCities('desc')">
           ↓ Maior para Menor
         </button>
-        <button 
-          class="sort-btn" 
+        <button
+          class="sort-btn"
           [class.active]="sortOrder === 'asc'"
           (click)="sortCities('asc')">
           ↑ Menor para Maior
@@ -43,11 +136,11 @@
 
   <!-- Cities Grid -->
   <div class="cities-grid">
-    <div 
-      class="city-card" 
+    <div
+      class="city-card"
       *ngFor="let city of cities; trackBy: trackByCity; let i = index"
       [class.top-city]="i < 3">
-      
+
       <!-- City Rank -->
       <div class="city-rank">
         <span class="rank-number">{{ i + 1 }}</span>
@@ -60,7 +153,7 @@
       <div class="city-info">
         <div class="city-name">{{ city.city }}</div>
         <div class="city-country">{{ city.country }}</div>
-        
+
         <!-- Event Type -->
         <div class="event-type" [ngClass]="getEventTypeClass(city.eventType)">
           <span class="event-icon">{{ getEventTypeIcon(city.eventType) }}</span>
@@ -85,22 +178,22 @@
   </div>
 
   <!-- Registration Analytics Section -->
-  <section class="analytics-section">
+  <!-- <section class="analytics-section">
     <div class="section-header">
       <h2 class="section-title">
         <span class="title-icon">📊</span>
         Dados das Inscrições Uberlândia
       </h2>
       <div class="action-buttons">
-        <button 
-          class="demo-btn" 
+        <button
+          class="demo-btn"
           (click)="loadDemoData()"
           [disabled]="isLoadingFile">
           <span class="btn-icon">🎯</span>
           Ver Demo
         </button>
-        <button 
-          class="upload-btn" 
+        <button
+          class="upload-btn"
           (click)="triggerFileUpload()"
           [disabled]="isLoadingFile">
           <span class="btn-icon">📁</span>
@@ -108,11 +201,9 @@
         </button>
       </div>
     </div>
-    
-    <app-registration-charts 
-      [registrationStats]="registrationStats">
-    </app-registration-charts>
-  </section>
+
+
+  </section> -->
 
   <!-- Empty State -->
   <div class="empty-state" *ngIf="cities.length === 0">

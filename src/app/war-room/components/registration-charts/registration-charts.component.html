@@ -8,15 +8,15 @@
         <p>Total de Inscrições</p>
       </div>
     </div>
-    
+
     <div class="overview-card uberlandia-highlight">
       <div class="card-icon">🌟</div>
       <div class="card-content">
-        <h3>{{ registrationStats.uberlandiaRegistrations }}</h3>
+        <h3>{{ uberlandia.registrations }}</h3>
         <p>Inscrições em Uberlândia</p>
       </div>
     </div>
-    
+
     <div class="overview-card">
       <div class="card-icon">📈</div>
       <div class="card-content">
@@ -24,7 +24,7 @@
         <p>Média por Dia</p>
       </div>
     </div>
-    
+
     <div class="overview-card">
       <div class="card-icon">🏙️</div>
       <div class="card-content">
@@ -37,7 +37,7 @@
   <!-- Charts Grid -->
   <div class="charts-grid">
     <!-- Daily Registrations Chart -->
-    <div class="chart-card">
+    <div class="chart-card chart-large">
       <div class="chart-header">
         <h4>📅 Evolução das Inscrições</h4>
       </div>
@@ -56,23 +56,78 @@
       </div>
     </div>
 
-    <!-- Motivation Chart -->
-    <div class="chart-card">
-      <div class="chart-header">
-        <h4>💡 Principais Motivações</h4>
-      </div>
-      <div class="chart-content">
-        <canvas #motivationChart></canvas>
-      </div>
-    </div>
-
     <!-- Experience Chart -->
     <div class="chart-card">
       <div class="chart-header">
-        <h4>🎓 Nível de Experiência</h4>
+        <h4>🎓 Escolaridade</h4>
       </div>
       <div class="chart-content">
         <canvas #experienceChart></canvas>
+      </div>
+    </div>
+
+    <!-- Age Chart -->
+    <div class="chart-card">
+      <div class="chart-header">
+        <h4>👥 Distribuição por Idade</h4>
+      </div>
+      <div class="chart-content">
+        <canvas #ageChart></canvas>
+      </div>
+    </div>
+
+    <!-- Participation Mode Chart -->
+    <div class="chart-card">
+      <div class="chart-header">
+        <h4>💻 Modo de Participação</h4>
+      </div>
+      <div class="chart-content">
+        <canvas #participationChart></canvas>
+      </div>
+    </div>
+
+    <!-- Phone Area Chart -->
+    <div class="chart-card">
+      <div class="chart-header">
+        <h4>📍 Participantes por Região</h4>
+      </div>
+      <div class="chart-content">
+        <canvas #phoneAreaChart></canvas>
+      </div>
+    </div>
+
+    <!-- Motivation Table -->
+    <div class="chart-card">
+      <div class="chart-header">
+        <h4>🎯 Principais Motivadores</h4>
+      </div>
+      <div class="table-container">
+        <table class="motivation-table">
+          <thead>
+            <tr>
+              <th>Posição</th>
+              <th>Motivador</th>
+              <th>Quantidade</th>
+              <th>Percentual</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let motivation of motivationStats; let i = index"
+                [class]="'rank-' + (i + 1)">
+              <td class="position">
+                <span class="rank-number">{{ i + 1 }}</span>
+                <span class="rank-medal" *ngIf="i === 0">🥇</span>
+                <span class="rank-medal" *ngIf="i === 1">🥈</span>
+                <span class="rank-medal" *ngIf="i === 2">🥉</span>
+              </td>
+              <td class="motivation-name">{{ motivation.motivation | titlecase }}</td>
+              <td class="count">{{ motivation.count }}</td>
+              <td class="percentage">
+                {{ ((motivation.count / registrationStats!.totalRegistrations) * 100).toFixed(1) }}%
+              </td>
+            </tr>
+          </tbody>
+        </table>
       </div>
     </div>
   </div>

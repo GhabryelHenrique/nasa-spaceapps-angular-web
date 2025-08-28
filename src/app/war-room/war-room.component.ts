@@ -1,13 +1,15 @@
 import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import * as localEvents  from '../shared/data/localEvents.json';
+import * as inscricoesData from '../shared/data/inscricoes_nasa_space_apps_2025.json';
 import { CityParticipation } from '../shared/interfaces/local-event.interface';
 import { RegistrationChartsComponent } from './components/registration-charts/registration-charts.component';
+import { RegistrationMapComponent } from './components/registration-map/registration-map.component';
 import { RegistrationDataService, RegistrationStats } from '../services/registration-data.service';
 
 @Component({
   selector: 'app-war-room',
-  imports: [CommonModule, RegistrationChartsComponent],
+  imports: [CommonModule, RegistrationChartsComponent, RegistrationMapComponent],
   templateUrl: './war-room.component.html',
   styleUrl: './war-room.component.scss'
 })
@@ -16,7 +18,7 @@ export class WarRoomComponent implements OnInit {
   sortOrder: 'desc' | 'asc' = 'desc';
   totalParticipants = 0;
   totalCities = 0;
-
+  uberlandia: any
   registrationStats: RegistrationStats | null = null;
   isLoadingFile = false;
 
@@ -24,24 +26,46 @@ export class WarRoomComponent implements OnInit {
 
   ngOnInit() {
     this.loadCities();
-    this.tryLoadExistingFile();
+    this.loadJSONData();
   }
 
-  private async tryLoadExistingFile() {
-    const fileInput = document.createElement('input');
-    fileInput.type = 'file';
-    fileInput.accept = '.xlsx,.xls';
-    fileInput.style.display = 'none';
-
+  private loadJSONData() {
     try {
-      const response = await fetch('INSCRICAO DO NASA SPACE APPS 2025 (respostas).xlsx');
-      if (response.ok) {
-        const blob = await response.blob();
-        const file = new File([blob], 'inscricoes.xlsx', { type: 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet' });
-        await this.processExcelFile(file);
-      }
+      // Processa os dados do arquivo JSON
+      const jsonRegistrations = (inscricoesData as any).default || inscricoesData;
+
+      // Transforma os dados JSON no formato esperado pelo service
+      const registrationData = jsonRegistrations.map((item: any) => ({
+        timestamp: this.convertTimestampToDate(item['Carimbo de data/hora']),
+        phone: String(item['Telefone de Contato:'] || ''),
+        city: item['Cidade onde reside:'] || '',
+        motivations: item['Como você ficou sabendo do Hackathon?'] || '',
+        experience: item['Escolaridade:'] || '',
+        interests: String(item['Data de Nascimento '] || ''),
+        availability: item['Gostaria de fazer o hackathon Presencialmente ou Remotamente?'] || '',
+        expectations: item['Áreas de interesse'] || '',
+      }));
+
+      // Atualiza o service com os dados do JSON
+      this.registrationDataService.setRegistrationData(registrationData);
+      this.registrationStats = this.registrationDataService.getRegistrationStats();
+
+      console.log(`Dados JSON carregados com sucesso: ${this.registrationStats.totalRegistrations} registros`);
     } catch (error) {
-      console.log('Arquivo Excel não encontrado no diretório do projeto');
+      console.error('Erro ao carregar dados do JSON:', error);
+    }
+  }
+
+  private convertTimestampToDate(timestamp: any): string {
+    try {
+      if (typeof timestamp === 'number') {
+        // Se é timestamp em milissegundos
+        const date = new Date(timestamp);
+        return date.toISOString();
+      }
+      return String(timestamp || '');
+    } catch (error) {
+      return '';
     }
   }
 
@@ -53,7 +77,7 @@ export class WarRoomComponent implements OnInit {
       eventType: event.node.properties.eventType,
       url: event.node.properties.meta.htmlUrl
     }));
-
+    this.uberlandia = this.cities.find((city: any) => city.city.toLowerCase().includes('uberlandia') || city.city.toLowerCase().includes('uberlândia'));
     this.sortCities();
     this.calculateStats();
   }
@@ -107,58 +131,70 @@ export class WarRoomComponent implements OnInit {
     return `${city.city}-${city.country}`;
   }
 
-  onFileSelected(event: Event) {
-    const input = event.target as HTMLInputElement;
-    if (input.files && input.files.length > 0) {
-      const file = input.files[0];
-      this.processExcelFile(file);
+  getDayWithMostRegistrations(): number {
+    if (!this.registrationStats || !this.registrationStats.dailyRegistrations.length) {
+      return 0;
     }
+    return Math.max(...this.registrationStats.dailyRegistrations.map(d => d.count));
   }
 
-  private async processExcelFile(file: File) {
-    this.isLoadingFile = true;
-    try {
-      // Validar tipo de arquivo
-      if (!file.name.toLowerCase().endsWith('.xlsx') && !file.name.toLowerCase().endsWith('.xls')) {
-        throw new Error('Por favor, selecione um arquivo Excel (.xlsx ou .xls)');
-      }
-
-      // Validar tamanho do arquivo (máximo 10MB)
-      // if (file.size > 10 * 1024 * 1024) {
-      //   throw new Error('O arquivo é muito grande. Por favor, selecione um arquivo menor que 10MB.');
-      // }
-
-      console.log(`Processando arquivo: ${file.name} (${(file.size / 1024).toFixed(2)} KB)`);
-
-      await this.registrationDataService.loadExcelData(file);
-      this.registrationStats = this.registrationDataService.getRegistrationStats();
-      console.log(this.registrationStats);
-
-      if (this.registrationStats.totalRegistrations === 0) {
-        alert('O arquivo foi processado mas não contém dados válidos. Verifique se o arquivo tem dados nas colunas corretas.');
-      } else {
-        console.log(`Dados carregados com sucesso: ${this.registrationStats.totalRegistrations} registros`);
-      }
-    } catch (error: any) {
-      console.error('Erro ao processar arquivo Excel:', error);
-      const errorMessage = error.message || 'Erro desconhecido ao processar arquivo';
-      alert(`Erro: ${errorMessage}\n\nDicas:\n- Verifique se o arquivo é um Excel válido (.xlsx ou .xls)\n- Certifique-se que a primeira linha contém os cabeçalhos\n- Verifique se há dados nas colunas`);
-    } finally {
-      this.isLoadingFile = false;
+  getMostCommonEducation(): string {
+    if (!this.registrationStats || !this.registrationStats.experienceStats.length) {
+      return 'N/A';
     }
+    return this.registrationStats.experienceStats[0].level;
   }
 
-  triggerFileUpload() {
-    const fileInput = document.createElement('input');
-    fileInput.type = 'file';
-    fileInput.accept = '.xlsx,.xls';
-    fileInput.onchange = (e) => this.onFileSelected(e);
-    fileInput.click();
+  getEducationPercentage(): number {
+    if (!this.registrationStats || !this.registrationStats.experienceStats.length) {
+      return 0;
+    }
+    const mostCommon = this.registrationStats.experienceStats[0];
+    return Math.round((mostCommon.count / this.registrationStats.totalRegistrations) * 100);
   }
 
-  loadDemoData() {
-    this.registrationDataService.loadDemoData();
-    this.registrationStats = this.registrationDataService.getRegistrationStats();
-    console.log('Dados de demonstração carregados com sucesso');
+  getMostCommonAgeGroup(): string {
+    if (!this.registrationStats || !this.registrationStats.ageStats.length) {
+      return 'N/A';
+    }
+    return this.registrationStats.ageStats.sort((a, b) => b.count - a.count)[0].ageGroup;
+  }
+
+  getAgeGroupPercentage(): number {
+    if (!this.registrationStats || !this.registrationStats.ageStats.length) {
+      return 0;
+    }
+    const mostCommon = this.registrationStats.ageStats[0];
+    return Math.round((mostCommon.count / this.registrationStats.totalRegistrations) * 100);
+  }
+
+  getParticipationMode(): string {
+    if (!this.registrationStats || !this.registrationStats.participationModeStats.length) {
+      return 'N/A';
+    }
+    return this.registrationStats.participationModeStats[0].mode;
+  }
+
+  getParticipationPercentage(): number {
+    if (!this.registrationStats || !this.registrationStats.participationModeStats.length) {
+      return 0;
+    }
+    const mostCommon = this.registrationStats.participationModeStats[0];
+    return Math.round((mostCommon.count / this.registrationStats.totalRegistrations) * 100);
+  }
+
+  getMostCommonArea(): string {
+    if (!this.registrationStats || !this.registrationStats.phoneAreaStats.length) {
+      return 'N/A';
+    }
+    return this.registrationStats.phoneAreaStats[0].area;
+  }
+
+  getAreaPercentage(): number {
+    if (!this.registrationStats || !this.registrationStats.phoneAreaStats.length) {
+      return 0;
+    }
+    const mostCommon = this.registrationStats.phoneAreaStats[0];
+    return Math.round((mostCommon.count / this.registrationStats.totalRegistrations) * 100);
   }
 }

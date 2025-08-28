@@ -1,8 +1,8 @@
 import { Component, OnInit, ViewChild, ElementRef, Input, OnChanges, SimpleChanges, OnDestroy } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { 
-  Chart, 
-  ChartConfiguration, 
+import {
+  Chart,
+  ChartConfiguration,
   ChartType,
   CategoryScale,
   LinearScale,
@@ -46,11 +46,15 @@ Chart.register(
 })
 export class RegistrationChartsComponent implements OnInit, OnChanges, OnDestroy {
   @Input() registrationStats: RegistrationStats | null = null;
+  @Input() uberlandia: any | null = null;
   @ViewChild('dailyChart', { static: false }) dailyChart!: ElementRef<HTMLCanvasElement>;
-  @ViewChild('motivationChart', { static: false }) motivationChart!: ElementRef<HTMLCanvasElement>;
   @ViewChild('cityChart', { static: false }) cityChart!: ElementRef<HTMLCanvasElement>;
   @ViewChild('experienceChart', { static: false }) experienceChart!: ElementRef<HTMLCanvasElement>;
+  @ViewChild('ageChart', { static: false }) ageChart!: ElementRef<HTMLCanvasElement>;
+  @ViewChild('participationChart', { static: false }) participationChart!: ElementRef<HTMLCanvasElement>;
+  @ViewChild('phoneAreaChart', { static: false }) phoneAreaChart!: ElementRef<HTMLCanvasElement>;
 
+  motivationStats: { motivation: string; count: number }[] | any = [];
   private charts: Chart[] = [];
 
   ngOnInit() {
@@ -75,9 +79,12 @@ export class RegistrationChartsComponent implements OnInit, OnChanges, OnDestroy
     if (!this.registrationStats) return;
 
     this.createDailyRegistrationsChart();
-    this.createMotivationChart();
+    this.getMotivationStats();
     this.createCityChart();
     this.createExperienceChart();
+    this.createAgeChart();
+    this.createParticipationChart();
+    this.createPhoneAreaChart();
   }
 
   private createDailyRegistrationsChart() {
@@ -89,7 +96,7 @@ export class RegistrationChartsComponent implements OnInit, OnChanges, OnDestroy
     const config: ChartConfiguration = {
       type: 'line' as ChartType,
       data: {
-        labels: this.registrationStats.dailyRegistrations.map(d => 
+        labels: this.registrationStats.dailyRegistrations.map(d =>
           new Date(d.date).toLocaleDateString('pt-BR', { month: 'short', day: 'numeric' })
         ),
         datasets: [{
@@ -132,49 +139,19 @@ export class RegistrationChartsComponent implements OnInit, OnChanges, OnDestroy
     this.charts.push(chart);
   }
 
-  private createMotivationChart() {
-    if (!this.motivationChart || !this.registrationStats) return;
-
-    const ctx = this.motivationChart.nativeElement.getContext('2d');
-    if (!ctx) return;
-
-    const topMotivations = this.registrationStats.motivationStats.slice(0, 5);
-
-    const config: ChartConfiguration = {
-      type: 'doughnut' as ChartType,
-      data: {
-        labels: topMotivations.map(m => m.motivation),
-        datasets: [{
-          data: topMotivations.map(m => m.count),
-          backgroundColor: [
-            '#4ecdc4',
-            '#45b7d1',
-            '#5865F2',
-            '#7289da',
-            '#99aab5'
-          ]
-        }]
-      },
-      options: {
-        responsive: true,
-        maintainAspectRatio: false,
-        plugins: {
-          legend: {
-            position: 'bottom',
-            labels: { color: '#ffffff', padding: 20 }
-          },
-          title: {
-            display: true,
-            text: 'Principais Motivações',
-            color: '#ffffff'
-          }
-        }
-      }
-    };
-
-    const chart = new Chart(ctx, config);
-    this.charts.push(chart);
+getMotivationStats() {
+  if (!this.registrationStats?.motivationStats) {
+    this.motivationStats = [];
+    return;
   }
+
+  // Já vem ordenado e agrupado do service, só pega os 5 primeiros
+  this.motivationStats = this.registrationStats.motivationStats
+    .slice(0, 5);
+
+  console.log('Top 5 motivações:', this.motivationStats);
+}
+
 
   private createCityChart() {
     if (!this.cityChart || !this.registrationStats) return;
@@ -260,7 +237,142 @@ export class RegistrationChartsComponent implements OnInit, OnChanges, OnDestroy
           },
           title: {
             display: true,
-            text: 'Nível de Experiência',
+            text: 'Escolaridade',
+            color: '#ffffff'
+          }
+        }
+      }
+    };
+
+    const chart = new Chart(ctx, config);
+    this.charts.push(chart);
+  }
+
+  private createAgeChart() {
+    if (!this.ageChart || !this.registrationStats) return;
+
+    const ctx = this.ageChart.nativeElement.getContext('2d');
+    if (!ctx) return;
+
+    const config: ChartConfiguration = {
+      type: 'bar' as ChartType,
+      data: {
+        labels: this.registrationStats.ageStats.map(a => a.ageGroup),
+        datasets: [{
+          label: 'Participantes',
+          data: this.registrationStats.ageStats.map(a => a.count),
+          backgroundColor: '#4ecdc4',
+          borderColor: '#45b7d1',
+          borderWidth: 1
+        }]
+      },
+      options: {
+        responsive: true,
+        maintainAspectRatio: false,
+        scales: {
+          y: {
+            beginAtZero: true,
+            grid: { color: 'rgba(255,255,255,0.1)' },
+            ticks: { color: '#ffffff' }
+          },
+          x: {
+            grid: { color: 'rgba(255,255,255,0.1)' },
+            ticks: { color: '#ffffff' }
+          }
+        },
+        plugins: {
+          legend: {
+            labels: { color: '#ffffff' }
+          },
+          title: {
+            display: true,
+            text: 'Distribuição por Idade',
+            color: '#ffffff'
+          }
+        }
+      }
+    };
+
+    const chart = new Chart(ctx, config);
+    this.charts.push(chart);
+  }
+
+  private createParticipationChart() {
+    if (!this.participationChart || !this.registrationStats) return;
+
+    const ctx = this.participationChart.nativeElement.getContext('2d');
+    if (!ctx) return;
+
+    const config: ChartConfiguration = {
+      type: 'doughnut' as ChartType,
+      data: {
+        labels: this.registrationStats.participationModeStats.map(p => p.mode),
+        datasets: [{
+          data: this.registrationStats.participationModeStats.map(p => p.count),
+          backgroundColor: ['#4ecdc4', '#45b7d1', '#5865F2']
+        }]
+      },
+      options: {
+        responsive: true,
+        maintainAspectRatio: false,
+        plugins: {
+          legend: {
+            position: 'bottom',
+            labels: { color: '#ffffff', padding: 20 }
+          },
+          title: {
+            display: true,
+            text: 'Modo de Participação',
+            color: '#ffffff'
+          }
+        }
+      }
+    };
+
+    const chart = new Chart(ctx, config);
+    this.charts.push(chart);
+  }
+
+  private createPhoneAreaChart() {
+    if (!this.phoneAreaChart || !this.registrationStats) return;
+
+    const ctx = this.phoneAreaChart.nativeElement.getContext('2d');
+    if (!ctx) return;
+
+    const config: ChartConfiguration = {
+      type: 'bar' as ChartType,
+      data: {
+        labels: this.registrationStats.phoneAreaStats.map(p => p.area),
+        datasets: [{
+          label: 'Participantes',
+          data: this.registrationStats.phoneAreaStats.map(p => p.count),
+          backgroundColor: '#5865F2',
+          borderColor: '#4ecdc4',
+          borderWidth: 1
+        }]
+      },
+      options: {
+        responsive: true,
+        maintainAspectRatio: false,
+        indexAxis: 'y',
+        scales: {
+          x: {
+            beginAtZero: true,
+            grid: { color: 'rgba(255,255,255,0.1)' },
+            ticks: { color: '#ffffff' }
+          },
+          y: {
+            grid: { color: 'rgba(255,255,255,0.1)' },
+            ticks: { color: '#ffffff' }
+          }
+        },
+        plugins: {
+          legend: {
+            labels: { color: '#ffffff' }
+          },
+          title: {
+            display: true,
+            text: 'Participantes por Região (DDD)',
             color: '#ffffff'
           }
         }

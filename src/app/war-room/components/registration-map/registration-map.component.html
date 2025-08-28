@@ -1,0 +1,49 @@
+<div class="map-container" *ngIf="registrationStats">
+  <div class="map-header">
+    <h3 class="map-title">
+      🗺️ Distribuição Geográfica das Inscrições
+    </h3>
+    <div class="map-legend">
+      <div class="legend-item">
+        <div class="legend-circle high"></div>
+        <span>Alta concentração</span>
+      </div>
+      <div class="legend-item">
+        <div class="legend-circle medium"></div>
+        <span>Média concentração</span>
+      </div>
+      <div class="legend-item">
+        <div class="legend-circle low"></div>
+        <span>Baixa concentração</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="map-wrapper">
+    <div #mapContainer class="leaflet-map"></div>
+
+    <div class="map-info">
+      <div class="info-card">
+        <div class="info-icon">🎯</div>
+        <div class="info-content">
+          <div class="info-number">{{ registrationStats.cityStats.length }}</div>
+          <div class="info-label">Cidades mapeadas</div>
+        </div>
+      </div>
+
+      <div class="info-card highlight">
+        <div class="info-icon">📍</div>
+        <div class="info-content">
+          <div class="info-number">{{ uberlandia.registrations }}</div>
+          <div class="info-label">Inscrições em Uberlândia</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="loading-state" *ngIf="!registrationStats">
+  <div class="loading-icon">🗺️</div>
+  <h3>Carregando mapa...</h3>
+  <p>Preparando visualização geográfica das inscrições</p>
+</div>
