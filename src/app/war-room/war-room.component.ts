@@ -37,7 +37,9 @@ export class WarRoomComponent implements OnInit {
       // Transforma os dados JSON no formato esperado pelo service
       const registrationData = jsonRegistrations.map((item: any) => ({
         timestamp: this.convertTimestampToDate(item['Carimbo de data/hora']),
-        phone: String(item['Telefone de Contato:'] || ''),
+        name: '', // Removido por privacidade
+        email: '', // Removido por privacidade
+        phone: item['DDD'] ? `${item['DDD']}000000000` : '', // Apenas DDD para análise de região
         city: item['Cidade onde reside:'] || '',
         motivations: item['Como você ficou sabendo do Hackathon?'] || '',
         experience: item['Escolaridade:'] || '',
