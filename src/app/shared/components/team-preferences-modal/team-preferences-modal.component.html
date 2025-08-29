@@ -1,0 +1,114 @@
+<div class="modal-backdrop" *ngIf="isOpen" (click)="onBackdropClick($event)">
+  <div class="modal-content" (click)="$event.stopPropagation()">
+    <div class="modal-header">
+      <h2>
+        <i class="fa-solid fa-users-cog"></i>
+        Configure seu Perfil
+      </h2>
+      <button class="close-btn" (click)="closeModal()" [disabled]="isLoading">
+        <i class="fa-solid fa-times"></i>
+      </button>
+    </div>
+
+    <div class="modal-body">
+      <div class="space-theme">
+        <div class="stars"></div>
+        <div class="rocket">
+          <i class="fa-solid fa-rocket"></i>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="intro-section">
+          <div class="icon-container">
+            <i class="fa-solid fa-user-astronaut"></i>
+          </div>
+          <h3>Conte-nos sobre você!</h3>
+          <p>Para conectar você com o time perfeito, precisamos conhecer sua área de atuação e habilidades.</p>
+        </div>
+
+        <form (ngSubmit)="onSubmit()" class="preferences-form">
+          <div class="form-section">
+            <h4>
+              <i class="fa-solid fa-briefcase"></i>
+              Qual sua área de atuação?
+            </h4>
+            <div class="area-grid">
+              <div 
+                class="area-option"
+                *ngFor="let area of areaOptions"
+                [class.selected]="selectedArea === area.id"
+                (click)="selectArea(area.id)">
+                <div class="area-icon">
+                  <i [class]="area.icon"></i>
+                </div>
+                <div class="area-info">
+                  <h5>{{ area.name }}</h5>
+                  <p>{{ area.description }}</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="form-section" *ngIf="selectedArea">
+            <h4>
+              <i class="fa-solid fa-star"></i>
+              Descreva suas habilidades
+            </h4>
+            <p class="section-subtitle">
+              Conte-nos sobre suas especialidades em <strong>{{ getSelectedAreaName() }}</strong>:
+            </p>
+            <div class="input-group">
+              <textarea 
+                [(ngModel)]="skills"
+                name="skills"
+                placeholder="Ex: Desenvolvedor Frontend com 3 anos de experiência em React e TypeScript. Também tenho conhecimentos em Node.js e design de interfaces..."
+                rows="5"
+                maxlength="500"
+                [disabled]="isLoading"
+                required></textarea>
+              <div class="char-counter">
+                {{ skills.length }}/500 caracteres
+              </div>
+            </div>
+          </div>
+
+          <div class="messages" *ngIf="errorMessage || successMessage">
+            <div class="error-message" *ngIf="errorMessage">
+              <i class="fa-solid fa-exclamation-triangle"></i>
+              {{ errorMessage }}
+            </div>
+            
+            <div class="success-message" *ngIf="successMessage">
+              <i class="fa-solid fa-check-circle"></i>
+              {{ successMessage }}
+            </div>
+          </div>
+
+          <div class="form-actions">
+            <button 
+              type="submit" 
+              class="submit-btn"
+              [disabled]="isLoading || !selectedArea || !skills.trim()">
+              <span *ngIf="!isLoading">
+                <i class="fa-solid fa-save"></i>
+                Salvar e Continuar
+              </span>
+              <span *ngIf="isLoading">
+                <i class="fa-solid fa-spinner fa-spin"></i>
+                Salvando...
+              </span>
+            </button>
+          </div>
+        </form>
+
+        <div class="info-box">
+          <i class="fa-solid fa-info-circle"></i>
+          <div>
+            <strong>Dica:</strong> Seja específico sobre suas habilidades! Isso ajudará a encontrar pessoas complementares para formar um time diverso e equilibrado.
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

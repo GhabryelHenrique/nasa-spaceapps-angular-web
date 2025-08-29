@@ -3,11 +3,13 @@ import { LandingPageComponent } from './landing-page/landing-page.component';
 import { PrivacyPolicyComponent } from './privacy-policy/privacy-policy.component';
 import { TeamsComponent } from './teams/teams.component';
 import { WarRoomComponent } from './war-room/war-room.component';
+import { MatchmakingDashboardComponent } from './matchmaking/matchmaking-dashboard.component';
 
 export const routes: Routes = [
   { path: '', component: LandingPageComponent },
   { path: 'times', component: TeamsComponent },
   { path: 'sala-de-guerra', component: WarRoomComponent },
+  { path: 'matchmaking', component: MatchmakingDashboardComponent },
   { path: 'politica-privacidade', component: PrivacyPolicyComponent },
   { path: '**', redirectTo: '' }
 ];

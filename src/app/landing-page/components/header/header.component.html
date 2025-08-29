@@ -16,6 +16,10 @@
         <i class="fa-solid fa-users"></i>
         Times
       </a>
+      <button class="matchmaking-btn" (click)="openMatchmaking()">
+        <i class="fa-solid fa-handshake"></i>
+        Matchmaking
+      </button>
       <a href="https://docs.google.com/forms/d/e/1FAIpQLSfXZyu0PCuyIGgC_33jCLaOk-dmB1SugvrIt2eUK7EaWvq6mg/viewform" class="login-btn" target="_blank" rel="noopener noreferrer">
         <i class="fa-solid fa-user-plus"></i>
         Inscreva-se Agora
@@ -23,3 +27,16 @@
     </div>
   </nav>
 </header>
+
+<app-email-verification-modal
+  [isOpen]="showEmailModal"
+  (close)="showEmailModal = false"
+  (emailVerified)="onEmailVerified($event)">
+</app-email-verification-modal>
+
+<app-code-verification-modal
+  [isOpen]="showCodeModal"
+  [email]="userEmail"
+  (close)="showCodeModal = false"
+  (codeVerified)="onCodeVerified()">
+</app-code-verification-modal>

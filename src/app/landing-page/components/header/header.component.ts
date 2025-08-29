@@ -1,7 +1,10 @@
 import { Component, HostListener } from '@angular/core';
-import { RouterLink } from '@angular/router';
+import { RouterLink, Router } from '@angular/router';
 import { CommonModule } from '@angular/common';
 import { CHALLENGES_DATA, Challenge } from '../../../shared/data/challenges.data';
+import { MatchmakingService } from '../../../shared/services/matchmaking.service';
+import { EmailVerificationModalComponent } from '../../../shared/components/email-verification-modal/email-verification-modal.component';
+import { CodeVerificationModalComponent } from '../../../shared/components/code-verification-modal/code-verification-modal.component';
 
 interface ChallengeCategory {
   id: number;
@@ -14,7 +17,7 @@ interface ChallengeCategory {
 
 @Component({
   selector: 'app-header',
-  imports: [RouterLink, CommonModule],
+  imports: [RouterLink, CommonModule, EmailVerificationModalComponent, CodeVerificationModalComponent],
   templateUrl: './header.component.html',
   styleUrl: './header.component.scss',
 })
@@ -23,6 +26,10 @@ export class HeaderComponent {
   showInfo = false;
   mobileMenuOpen = false;
   mobileChallengesOpen = false;
+  showEmailModal = false;
+  showCodeModal = false;
+  userEmail = '';
+  isLoggedIn = false;
 
   challengeCategories: ChallengeCategory[] = [
     {
@@ -50,6 +57,15 @@ export class HeaderComponent {
       count: this.getCategoryCount('advanced')
     }
   ];
+
+  constructor(
+    private matchmakingService: MatchmakingService,
+    private router: Router
+  ) {
+    this.matchmakingService.isAuthenticated$.subscribe(isAuth => {
+      this.isLoggedIn = isAuth;
+    });
+  }
 
   @HostListener('window:scroll', ['$event'])
   onScroll(): void {
@@ -118,5 +134,26 @@ export class HeaderComponent {
     this.mobileMenuOpen = false;
     this.mobileChallengesOpen = false;
     document.body.style.overflow = 'auto';
+  }
+
+  openMatchmaking(): void {
+    if (this.isLoggedIn) {
+      this.router.navigate(['/matchmaking']);
+    } else {
+      this.showEmailModal = true;
+    }
+  }
+
+  onEmailVerified(data: { email: string; isRegistered: boolean }): void {
+    this.userEmail = data.email;
+    this.showEmailModal = false;
+    if (data.isRegistered) {
+      this.showCodeModal = true;
+    }
+  }
+
+  onCodeVerified(): void {
+    this.showCodeModal = false;
+    this.router.navigate(['/matchmaking']);
   }
 }

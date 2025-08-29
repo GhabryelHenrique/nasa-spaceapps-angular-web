@@ -1,0 +1,78 @@
+<div class="modal-backdrop" *ngIf="isOpen" (click)="onBackdropClick($event)">
+  <div class="modal-content" (click)="$event.stopPropagation()">
+    <div class="modal-header">
+      <h2>
+        <i class="fa-solid fa-rocket"></i>
+        Matchmaking - Space Apps
+      </h2>
+      <button class="close-btn" (click)="closeModal()" [disabled]="isLoading">
+        <i class="fa-solid fa-times"></i>
+      </button>
+    </div>
+
+    <div class="modal-body">
+      <div class="space-theme">
+        <div class="stars"></div>
+        <div class="planet"></div>
+      </div>
+
+      <div class="content">
+        <div class="icon-container">
+          <i class="fa-solid fa-user-astronaut"></i>
+        </div>
+
+        <h3>Bem-vindo ao Sistema de Matchmaking!</h3>
+        <p>Digite seu email para verificarmos se você está inscrito no evento.</p>
+
+        <form (ngSubmit)="onSubmit()" class="email-form">
+          <div class="input-group">
+            <label for="email">Email</label>
+            <input 
+              type="email" 
+              id="email"
+              [(ngModel)]="email"
+              name="email"
+              placeholder="seu.email@exemplo.com"
+              [disabled]="isLoading"
+              required>
+          </div>
+
+          <div class="messages">
+            <div class="error-message" *ngIf="errorMessage">
+              <i class="fa-solid fa-exclamation-triangle"></i>
+              {{ errorMessage }}
+            </div>
+            
+            <div class="success-message" *ngIf="successMessage">
+              <i class="fa-solid fa-check-circle"></i>
+              {{ successMessage }}
+            </div>
+          </div>
+
+          <button 
+            type="submit" 
+            class="submit-btn"
+            [disabled]="isLoading || !email">
+            <span *ngIf="!isLoading">
+              <i class="fa-solid fa-search"></i>
+              Verificar Email
+            </span>
+            <span *ngIf="isLoading">
+              <i class="fa-solid fa-spinner fa-spin"></i>
+              Verificando...
+            </span>
+          </button>
+        </form>
+
+        <div class="registration-notice">
+          <h4>Ainda não se inscreveu?</h4>
+          <p>Você precisa estar inscrito tanto no formulário quanto na NASA Space Apps para participar do matchmaking.</p>
+          <button class="registration-btn" (click)="openRegistrationForms()">
+            <i class="fa-solid fa-external-link-alt"></i>
+            Ir para Inscrições
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
