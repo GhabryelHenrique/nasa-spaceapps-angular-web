@@ -6,10 +6,10 @@
           "hasPreviousPage": false,
           "hasNextPage": false,
           "startCursor": "b2Zmc2V0OjA=",
-          "endCursor": "b2Zmc2V0OjM0",
+          "endCursor": "b2Zmc2V0OjM1",
           "__typename": "PageInfo"
         },
-        "totalCount": 35,
+        "totalCount": 36,
         "edges": [
           {
             "__typename": "TeamPageEdge",
@@ -129,20 +129,13 @@
                 "isTeamPagesActive": true,
                 "isAwardsActive": false,
                 "isChallengePagesActive": false,
-                "localEventEditStatus": 4,
+                "localEventEditStatus": 5,
                 "teamEditStatus": 5,
                 "teamStreamEditStatus": 0,
                 "projectEditStatus": 0,
                 "localEventJudgingStatus": 0,
                 "nominationJudgingStatus": 0,
                 "projectFields": [
-                  {
-                    "title": "Project Name",
-                    "caption": "",
-                    "fieldMapping": "summary",
-                    "fieldType": "TEXT",
-                    "__typename": "ProjectFieldBlock"
-                  },
                   {
                     "title": "Summary",
                     "caption": "",
@@ -318,20 +311,13 @@
                 "isTeamPagesActive": true,
                 "isAwardsActive": false,
                 "isChallengePagesActive": false,
-                "localEventEditStatus": 4,
+                "localEventEditStatus": 5,
                 "teamEditStatus": 5,
                 "teamStreamEditStatus": 0,
                 "projectEditStatus": 0,
                 "localEventJudgingStatus": 0,
                 "nominationJudgingStatus": 0,
                 "projectFields": [
-                  {
-                    "title": "Project Name",
-                    "caption": "",
-                    "fieldMapping": "summary",
-                    "fieldType": "TEXT",
-                    "__typename": "ProjectFieldBlock"
-                  },
                   {
                     "title": "Summary",
                     "caption": "",
@@ -507,20 +493,13 @@
                 "isTeamPagesActive": true,
                 "isAwardsActive": false,
                 "isChallengePagesActive": false,
-                "localEventEditStatus": 4,
+                "localEventEditStatus": 5,
                 "teamEditStatus": 5,
                 "teamStreamEditStatus": 0,
                 "projectEditStatus": 0,
                 "localEventJudgingStatus": 0,
                 "nominationJudgingStatus": 0,
                 "projectFields": [
-                  {
-                    "title": "Project Name",
-                    "caption": "",
-                    "fieldMapping": "summary",
-                    "fieldType": "TEXT",
-                    "__typename": "ProjectFieldBlock"
-                  },
                   {
                     "title": "Summary",
                     "caption": "",
@@ -696,20 +675,13 @@
                 "isTeamPagesActive": true,
                 "isAwardsActive": false,
                 "isChallengePagesActive": false,
-                "localEventEditStatus": 4,
+                "localEventEditStatus": 5,
                 "teamEditStatus": 5,
                 "teamStreamEditStatus": 0,
                 "projectEditStatus": 0,
                 "localEventJudgingStatus": 0,
                 "nominationJudgingStatus": 0,
                 "projectFields": [
-                  {
-                    "title": "Project Name",
-                    "caption": "",
-                    "fieldMapping": "summary",
-                    "fieldType": "TEXT",
-                    "__typename": "ProjectFieldBlock"
-                  },
                   {
                     "title": "Summary",
                     "caption": "",
@@ -885,20 +857,13 @@
                 "isTeamPagesActive": true,
                 "isAwardsActive": false,
                 "isChallengePagesActive": false,
-                "localEventEditStatus": 4,
+                "localEventEditStatus": 5,
                 "teamEditStatus": 5,
                 "teamStreamEditStatus": 0,
                 "projectEditStatus": 0,
                 "localEventJudgingStatus": 0,
                 "nominationJudgingStatus": 0,
                 "projectFields": [
-                  {
-                    "title": "Project Name",
-                    "caption": "",
-                    "fieldMapping": "summary",
-                    "fieldType": "TEXT",
-                    "__typename": "ProjectFieldBlock"
-                  },
                   {
                     "title": "Summary",
                     "caption": "",
@@ -1083,20 +1048,13 @@
                 "isTeamPagesActive": true,
                 "isAwardsActive": false,
                 "isChallengePagesActive": false,
-                "localEventEditStatus": 4,
+                "localEventEditStatus": 5,
                 "teamEditStatus": 5,
                 "teamStreamEditStatus": 0,
                 "projectEditStatus": 0,
                 "localEventJudgingStatus": 0,
                 "nominationJudgingStatus": 0,
                 "projectFields": [
-                  {
-                    "title": "Project Name",
-                    "caption": "",
-                    "fieldMapping": "summary",
-                    "fieldType": "TEXT",
-                    "__typename": "ProjectFieldBlock"
-                  },
                   {
                     "title": "Summary",
                     "caption": "",
@@ -1283,20 +1241,13 @@
                 "isTeamPagesActive": true,
                 "isAwardsActive": false,
                 "isChallengePagesActive": false,
-                "localEventEditStatus": 4,
+                "localEventEditStatus": 5,
                 "teamEditStatus": 5,
                 "teamStreamEditStatus": 0,
                 "projectEditStatus": 0,
                 "localEventJudgingStatus": 0,
                 "nominationJudgingStatus": 0,
                 "projectFields": [
-                  {
-                    "title": "Project Name",
-                    "caption": "",
-                    "fieldMapping": "summary",
-                    "fieldType": "TEXT",
-                    "__typename": "ProjectFieldBlock"
-                  },
                   {
                     "title": "Summary",
                     "caption": "",
@@ -1475,20 +1426,13 @@
                 "isTeamPagesActive": true,
                 "isAwardsActive": false,
                 "isChallengePagesActive": false,
-                "localEventEditStatus": 4,
+                "localEventEditStatus": 5,
                 "teamEditStatus": 5,
                 "teamStreamEditStatus": 0,
                 "projectEditStatus": 0,
                 "localEventJudgingStatus": 0,
                 "nominationJudgingStatus": 0,
                 "projectFields": [
-                  {
-                    "title": "Project Name",
-                    "caption": "",
-                    "fieldMapping": "summary",
-                    "fieldType": "TEXT",
-                    "__typename": "ProjectFieldBlock"
-                  },
                   {
                     "title": "Summary",
                     "caption": "",
@@ -1664,20 +1608,13 @@
                 "isTeamPagesActive": true,
                 "isAwardsActive": false,
                 "isChallengePagesActive": false,
-                "localEventEditStatus": 4,
+                "localEventEditStatus": 5,
                 "teamEditStatus": 5,
                 "teamStreamEditStatus": 0,
                 "projectEditStatus": 0,
                 "localEventJudgingStatus": 0,
                 "nominationJudgingStatus": 0,
                 "projectFields": [
-                  {
-                    "title": "Project Name",
-                    "caption": "",
-                    "fieldMapping": "summary",
-                    "fieldType": "TEXT",
-                    "__typename": "ProjectFieldBlock"
-                  },
                   {
                     "title": "Summary",
                     "caption": "",
@@ -1853,20 +1790,13 @@
                 "isTeamPagesActive": true,
                 "isAwardsActive": false,
                 "isChallengePagesActive": false,
-                "localEventEditStatus": 4,
+                "localEventEditStatus": 5,
                 "teamEditStatus": 5,
                 "teamStreamEditStatus": 0,
                 "projectEditStatus": 0,
                 "localEventJudgingStatus": 0,
                 "nominationJudgingStatus": 0,
                 "projectFields": [
-                  {
-                    "title": "Project Name",
-                    "caption": "",
-                    "fieldMapping": "summary",
-                    "fieldType": "TEXT",
-                    "__typename": "ProjectFieldBlock"
-                  },
                   {
                     "title": "Summary",
                     "caption": "",
@@ -2042,20 +1972,13 @@
                 "isTeamPagesActive": true,
                 "isAwardsActive": false,
                 "isChallengePagesActive": false,
-                "localEventEditStatus": 4,
+                "localEventEditStatus": 5,
                 "teamEditStatus": 5,
                 "teamStreamEditStatus": 0,
                 "projectEditStatus": 0,
                 "localEventJudgingStatus": 0,
                 "nominationJudgingStatus": 0,
                 "projectFields": [
-                  {
-                    "title": "Project Name",
-                    "caption": "",
-                    "fieldMapping": "summary",
-                    "fieldType": "TEXT",
-                    "__typename": "ProjectFieldBlock"
-                  },
                   {
                     "title": "Summary",
                     "caption": "",
@@ -2241,20 +2164,13 @@
                 "isTeamPagesActive": true,
                 "isAwardsActive": false,
                 "isChallengePagesActive": false,
-                "localEventEditStatus": 4,
+                "localEventEditStatus": 5,
                 "teamEditStatus": 5,
                 "teamStreamEditStatus": 0,
                 "projectEditStatus": 0,
                 "localEventJudgingStatus": 0,
                 "nominationJudgingStatus": 0,
                 "projectFields": [
-                  {
-                    "title": "Project Name",
-                    "caption": "",
-                    "fieldMapping": "summary",
-                    "fieldType": "TEXT",
-                    "__typename": "ProjectFieldBlock"
-                  },
                   {
                     "title": "Summary",
                     "caption": "",
@@ -2430,20 +2346,13 @@
                 "isTeamPagesActive": true,
                 "isAwardsActive": false,
                 "isChallengePagesActive": false,
-                "localEventEditStatus": 4,
+                "localEventEditStatus": 5,
                 "teamEditStatus": 5,
                 "teamStreamEditStatus": 0,
                 "projectEditStatus": 0,
                 "localEventJudgingStatus": 0,
                 "nominationJudgingStatus": 0,
                 "projectFields": [
-                  {
-                    "title": "Project Name",
-                    "caption": "",
-                    "fieldMapping": "summary",
-                    "fieldType": "TEXT",
-                    "__typename": "ProjectFieldBlock"
-                  },
                   {
                     "title": "Summary",
                     "caption": "",
@@ -2619,20 +2528,13 @@
                 "isTeamPagesActive": true,
                 "isAwardsActive": false,
                 "isChallengePagesActive": false,
-                "localEventEditStatus": 4,
+                "localEventEditStatus": 5,
                 "teamEditStatus": 5,
                 "teamStreamEditStatus": 0,
                 "projectEditStatus": 0,
                 "localEventJudgingStatus": 0,
                 "nominationJudgingStatus": 0,
                 "projectFields": [
-                  {
-                    "title": "Project Name",
-                    "caption": "",
-                    "fieldMapping": "summary",
-                    "fieldType": "TEXT",
-                    "__typename": "ProjectFieldBlock"
-                  },
                   {
                     "title": "Summary",
                     "caption": "",
@@ -2808,20 +2710,13 @@
                 "isTeamPagesActive": true,
                 "isAwardsActive": false,
                 "isChallengePagesActive": false,
-                "localEventEditStatus": 4,
+                "localEventEditStatus": 5,
                 "teamEditStatus": 5,
                 "teamStreamEditStatus": 0,
                 "projectEditStatus": 0,
                 "localEventJudgingStatus": 0,
                 "nominationJudgingStatus": 0,
                 "projectFields": [
-                  {
-                    "title": "Project Name",
-                    "caption": "",
-                    "fieldMapping": "summary",
-                    "fieldType": "TEXT",
-                    "__typename": "ProjectFieldBlock"
-                  },
                   {
                     "title": "Summary",
                     "caption": "",
@@ -3022,20 +2917,13 @@
                 "isTeamPagesActive": true,
                 "isAwardsActive": false,
                 "isChallengePagesActive": false,
-                "localEventEditStatus": 4,
+                "localEventEditStatus": 5,
                 "teamEditStatus": 5,
                 "teamStreamEditStatus": 0,
                 "projectEditStatus": 0,
                 "localEventJudgingStatus": 0,
                 "nominationJudgingStatus": 0,
                 "projectFields": [
-                  {
-                    "title": "Project Name",
-                    "caption": "",
-                    "fieldMapping": "summary",
-                    "fieldType": "TEXT",
-                    "__typename": "ProjectFieldBlock"
-                  },
                   {
                     "title": "Summary",
                     "caption": "",
@@ -3211,20 +3099,13 @@
                 "isTeamPagesActive": true,
                 "isAwardsActive": false,
                 "isChallengePagesActive": false,
-                "localEventEditStatus": 4,
+                "localEventEditStatus": 5,
                 "teamEditStatus": 5,
                 "teamStreamEditStatus": 0,
                 "projectEditStatus": 0,
                 "localEventJudgingStatus": 0,
                 "nominationJudgingStatus": 0,
                 "projectFields": [
-                  {
-                    "title": "Project Name",
-                    "caption": "",
-                    "fieldMapping": "summary",
-                    "fieldType": "TEXT",
-                    "__typename": "ProjectFieldBlock"
-                  },
                   {
                     "title": "Summary",
                     "caption": "",
@@ -3400,20 +3281,13 @@
                 "isTeamPagesActive": true,
                 "isAwardsActive": false,
                 "isChallengePagesActive": false,
-                "localEventEditStatus": 4,
+                "localEventEditStatus": 5,
                 "teamEditStatus": 5,
                 "teamStreamEditStatus": 0,
                 "projectEditStatus": 0,
                 "localEventJudgingStatus": 0,
                 "nominationJudgingStatus": 0,
                 "projectFields": [
-                  {
-                    "title": "Project Name",
-                    "caption": "",
-                    "fieldMapping": "summary",
-                    "fieldType": "TEXT",
-                    "__typename": "ProjectFieldBlock"
-                  },
                   {
                     "title": "Summary",
                     "caption": "",
@@ -3589,20 +3463,13 @@
                 "isTeamPagesActive": true,
                 "isAwardsActive": false,
                 "isChallengePagesActive": false,
-                "localEventEditStatus": 4,
+                "localEventEditStatus": 5,
                 "teamEditStatus": 5,
                 "teamStreamEditStatus": 0,
                 "projectEditStatus": 0,
                 "localEventJudgingStatus": 0,
                 "nominationJudgingStatus": 0,
                 "projectFields": [
-                  {
-                    "title": "Project Name",
-                    "caption": "",
-                    "fieldMapping": "summary",
-                    "fieldType": "TEXT",
-                    "__typename": "ProjectFieldBlock"
-                  },
                   {
                     "title": "Summary",
                     "caption": "",
@@ -3671,7 +3538,7 @@
                 "type": "TEAM",
                 "slug": "guinea-pigs",
                 "firstPublishedAt": "2025-08-28T18:37:20.154624Z",
-                "lastPublishedAt": "2025-08-29T00:22:14.961913Z",
+                "lastPublishedAt": "2025-08-29T17:37:15.031889Z",
                 "relativeUrl": "/2025/find-a-team/guinea-pigs/",
                 "live": true,
                 "parent": null,
@@ -3759,20 +3626,13 @@
                 "isTeamPagesActive": true,
                 "isAwardsActive": false,
                 "isChallengePagesActive": false,
-                "localEventEditStatus": 4,
+                "localEventEditStatus": 5,
                 "teamEditStatus": 5,
                 "teamStreamEditStatus": 0,
                 "projectEditStatus": 0,
                 "localEventJudgingStatus": 0,
                 "nominationJudgingStatus": 0,
                 "projectFields": [
-                  {
-                    "title": "Project Name",
-                    "caption": "",
-                    "fieldMapping": "summary",
-                    "fieldType": "TEXT",
-                    "__typename": "ProjectFieldBlock"
-                  },
                   {
                     "title": "Summary",
                     "caption": "",
@@ -3948,20 +3808,13 @@
                 "isTeamPagesActive": true,
                 "isAwardsActive": false,
                 "isChallengePagesActive": false,
-                "localEventEditStatus": 4,
+                "localEventEditStatus": 5,
                 "teamEditStatus": 5,
                 "teamStreamEditStatus": 0,
                 "projectEditStatus": 0,
                 "localEventJudgingStatus": 0,
                 "nominationJudgingStatus": 0,
                 "projectFields": [
-                  {
-                    "title": "Project Name",
-                    "caption": "",
-                    "fieldMapping": "summary",
-                    "fieldType": "TEXT",
-                    "__typename": "ProjectFieldBlock"
-                  },
                   {
                     "title": "Summary",
                     "caption": "",
@@ -4151,20 +4004,13 @@
                 "isTeamPagesActive": true,
                 "isAwardsActive": false,
                 "isChallengePagesActive": false,
-                "localEventEditStatus": 4,
+                "localEventEditStatus": 5,
                 "teamEditStatus": 5,
                 "teamStreamEditStatus": 0,
                 "projectEditStatus": 0,
                 "localEventJudgingStatus": 0,
                 "nominationJudgingStatus": 0,
                 "projectFields": [
-                  {
-                    "title": "Project Name",
-                    "caption": "",
-                    "fieldMapping": "summary",
-                    "fieldType": "TEXT",
-                    "__typename": "ProjectFieldBlock"
-                  },
                   {
                     "title": "Summary",
                     "caption": "",
@@ -4321,20 +4167,13 @@
                 "isTeamPagesActive": true,
                 "isAwardsActive": false,
                 "isChallengePagesActive": false,
-                "localEventEditStatus": 4,
+                "localEventEditStatus": 5,
                 "teamEditStatus": 5,
                 "teamStreamEditStatus": 0,
                 "projectEditStatus": 0,
                 "localEventJudgingStatus": 0,
                 "nominationJudgingStatus": 0,
                 "projectFields": [
-                  {
-                    "title": "Project Name",
-                    "caption": "",
-                    "fieldMapping": "summary",
-                    "fieldType": "TEXT",
-                    "__typename": "ProjectFieldBlock"
-                  },
                   {
                     "title": "Summary",
                     "caption": "",
@@ -4491,20 +4330,13 @@
                 "isTeamPagesActive": true,
                 "isAwardsActive": false,
                 "isChallengePagesActive": false,
-                "localEventEditStatus": 4,
+                "localEventEditStatus": 5,
                 "teamEditStatus": 5,
                 "teamStreamEditStatus": 0,
                 "projectEditStatus": 0,
                 "localEventJudgingStatus": 0,
                 "nominationJudgingStatus": 0,
                 "projectFields": [
-                  {
-                    "title": "Project Name",
-                    "caption": "",
-                    "fieldMapping": "summary",
-                    "fieldType": "TEXT",
-                    "__typename": "ProjectFieldBlock"
-                  },
                   {
                     "title": "Summary",
                     "caption": "",
@@ -4661,20 +4493,13 @@
                 "isTeamPagesActive": true,
                 "isAwardsActive": false,
                 "isChallengePagesActive": false,
-                "localEventEditStatus": 4,
+                "localEventEditStatus": 5,
                 "teamEditStatus": 5,
                 "teamStreamEditStatus": 0,
                 "projectEditStatus": 0,
                 "localEventJudgingStatus": 0,
                 "nominationJudgingStatus": 0,
                 "projectFields": [
-                  {
-                    "title": "Project Name",
-                    "caption": "",
-                    "fieldMapping": "summary",
-                    "fieldType": "TEXT",
-                    "__typename": "ProjectFieldBlock"
-                  },
                   {
                     "title": "Summary",
                     "caption": "",
@@ -4850,20 +4675,13 @@
                 "isTeamPagesActive": true,
                 "isAwardsActive": false,
                 "isChallengePagesActive": false,
-                "localEventEditStatus": 4,
+                "localEventEditStatus": 5,
                 "teamEditStatus": 5,
                 "teamStreamEditStatus": 0,
                 "projectEditStatus": 0,
                 "localEventJudgingStatus": 0,
                 "nominationJudgingStatus": 0,
                 "projectFields": [
-                  {
-                    "title": "Project Name",
-                    "caption": "",
-                    "fieldMapping": "summary",
-                    "fieldType": "TEXT",
-                    "__typename": "ProjectFieldBlock"
-                  },
                   {
                     "title": "Summary",
                     "caption": "",
@@ -5039,20 +4857,13 @@
                 "isTeamPagesActive": true,
                 "isAwardsActive": false,
                 "isChallengePagesActive": false,
-                "localEventEditStatus": 4,
+                "localEventEditStatus": 5,
                 "teamEditStatus": 5,
                 "teamStreamEditStatus": 0,
                 "projectEditStatus": 0,
                 "localEventJudgingStatus": 0,
                 "nominationJudgingStatus": 0,
                 "projectFields": [
-                  {
-                    "title": "Project Name",
-                    "caption": "",
-                    "fieldMapping": "summary",
-                    "fieldType": "TEXT",
-                    "__typename": "ProjectFieldBlock"
-                  },
                   {
                     "title": "Summary",
                     "caption": "",
@@ -5209,20 +5020,13 @@
                 "isTeamPagesActive": true,
                 "isAwardsActive": false,
                 "isChallengePagesActive": false,
-                "localEventEditStatus": 4,
+                "localEventEditStatus": 5,
                 "teamEditStatus": 5,
                 "teamStreamEditStatus": 0,
                 "projectEditStatus": 0,
                 "localEventJudgingStatus": 0,
                 "nominationJudgingStatus": 0,
                 "projectFields": [
-                  {
-                    "title": "Project Name",
-                    "caption": "",
-                    "fieldMapping": "summary",
-                    "fieldType": "TEXT",
-                    "__typename": "ProjectFieldBlock"
-                  },
                   {
                     "title": "Summary",
                     "caption": "",
@@ -5401,20 +5205,13 @@
                 "isTeamPagesActive": true,
                 "isAwardsActive": false,
                 "isChallengePagesActive": false,
-                "localEventEditStatus": 4,
+                "localEventEditStatus": 5,
                 "teamEditStatus": 5,
                 "teamStreamEditStatus": 0,
                 "projectEditStatus": 0,
                 "localEventJudgingStatus": 0,
                 "nominationJudgingStatus": 0,
                 "projectFields": [
-                  {
-                    "title": "Project Name",
-                    "caption": "",
-                    "fieldMapping": "summary",
-                    "fieldType": "TEXT",
-                    "__typename": "ProjectFieldBlock"
-                  },
                   {
                     "title": "Summary",
                     "caption": "",
@@ -5590,20 +5387,13 @@
                 "isTeamPagesActive": true,
                 "isAwardsActive": false,
                 "isChallengePagesActive": false,
-                "localEventEditStatus": 4,
+                "localEventEditStatus": 5,
                 "teamEditStatus": 5,
                 "teamStreamEditStatus": 0,
                 "projectEditStatus": 0,
                 "localEventJudgingStatus": 0,
                 "nominationJudgingStatus": 0,
                 "projectFields": [
-                  {
-                    "title": "Project Name",
-                    "caption": "",
-                    "fieldMapping": "summary",
-                    "fieldType": "TEXT",
-                    "__typename": "ProjectFieldBlock"
-                  },
                   {
                     "title": "Summary",
                     "caption": "",
@@ -5760,20 +5550,13 @@
                 "isTeamPagesActive": true,
                 "isAwardsActive": false,
                 "isChallengePagesActive": false,
-                "localEventEditStatus": 4,
+                "localEventEditStatus": 5,
                 "teamEditStatus": 5,
                 "teamStreamEditStatus": 0,
                 "projectEditStatus": 0,
                 "localEventJudgingStatus": 0,
                 "nominationJudgingStatus": 0,
                 "projectFields": [
-                  {
-                    "title": "Project Name",
-                    "caption": "",
-                    "fieldMapping": "summary",
-                    "fieldType": "TEXT",
-                    "__typename": "ProjectFieldBlock"
-                  },
                   {
                     "title": "Summary",
                     "caption": "",
@@ -5949,20 +5732,13 @@
                 "isTeamPagesActive": true,
                 "isAwardsActive": false,
                 "isChallengePagesActive": false,
-                "localEventEditStatus": 4,
+                "localEventEditStatus": 5,
                 "teamEditStatus": 5,
                 "teamStreamEditStatus": 0,
                 "projectEditStatus": 0,
                 "localEventJudgingStatus": 0,
                 "nominationJudgingStatus": 0,
                 "projectFields": [
-                  {
-                    "title": "Project Name",
-                    "caption": "",
-                    "fieldMapping": "summary",
-                    "fieldType": "TEXT",
-                    "__typename": "ProjectFieldBlock"
-                  },
                   {
                     "title": "Summary",
                     "caption": "",
@@ -6149,20 +5925,13 @@
                 "isTeamPagesActive": true,
                 "isAwardsActive": false,
                 "isChallengePagesActive": false,
-                "localEventEditStatus": 4,
+                "localEventEditStatus": 5,
                 "teamEditStatus": 5,
                 "teamStreamEditStatus": 0,
                 "projectEditStatus": 0,
                 "localEventJudgingStatus": 0,
                 "nominationJudgingStatus": 0,
                 "projectFields": [
-                  {
-                    "title": "Project Name",
-                    "caption": "",
-                    "fieldMapping": "summary",
-                    "fieldType": "TEXT",
-                    "__typename": "ProjectFieldBlock"
-                  },
                   {
                     "title": "Summary",
                     "caption": "",
@@ -6225,13 +5994,195 @@
             "cursor": "b2Zmc2V0OjMz",
             "node": {
               "__typename": "TeamPage",
+              "id": "aWQ6MzM0OTg=",
+              "title": "Trem de IA",
+              "meta": {
+                "type": "TEAM",
+                "slug": "trem-de-ia",
+                "firstPublishedAt": "2025-08-29T19:48:44.901627Z",
+                "lastPublishedAt": "2025-08-29T19:48:44.901627Z",
+                "relativeUrl": "/2025/find-a-team/trem-de-ia/",
+                "live": true,
+                "parent": null,
+                "__typename": "ExpandedPageMeta"
+              },
+              "owner": "aWQ6MzkwOTAw",
+              "ownerDetails": null,
+              "excerpt": null,
+              "project": "aWQ6MzEzMTM=",
+              "projectDetails": {
+                "id": "aWQ6MzEzMTM=",
+                "name": "Project Trem de IA",
+                "summary": "",
+                "demoLink": "",
+                "projectLink": "",
+                "details": "",
+                "solution": "",
+                "aiReferences": "",
+                "dataReferences": "",
+                "projectReferences": "",
+                "isSubmitted": false,
+                "savedAt": null,
+                "submittedAt": null,
+                "__typename": "Project"
+              },
+              "projectSubmitted": false,
+              "featuredImage": {
+                "id": "aWQ6Mjg2MjA4",
+                "meta": {
+                  "type": "images.CustomImage",
+                  "downloadUrl": "https://assets.spaceappschallenge.org/media/original_images/tremdeIA.png",
+                  "__typename": "ImageMeta"
+                },
+                "title": "team_image.19:42:44.381016",
+                "alt": "team_image.19:42:44.381016",
+                "caption": "team_image.19:42:44.381016",
+                "displaySize": "og",
+                "rendition": {
+                  "url": "https://assets.spaceappschallenge.org/media/images/tremdeIA.2e16d0ba.fill-300x250.png",
+                  "fullUrl": "https://assets.spaceappschallenge.org/media/images/tremdeIA.2e16d0ba.fill-300x250.png",
+                  "height": 250,
+                  "width": 300,
+                  "__typename": "BaseImage"
+                },
+                "__typename": "DefaultImage"
+              },
+              "description": null,
+              "desiredSkills": [],
+              "languages": [],
+              "challenge": "aWQ6MzEzMjg=",
+              "challengeDetails": {
+                "id": "aWQ6MzEzMjg=",
+                "title": "Will It Rain On My Parade?",
+                "meta": {
+                  "type": "CHALLENGE",
+                  "slug": "will-it-rain-on-my-parade",
+                  "firstPublishedAt": "2025-08-18T19:28:40.295442Z",
+                  "lastPublishedAt": "2025-08-19T21:17:28.593390Z",
+                  "relativeUrl": "/2025/challenges/will-it-rain-on-my-parade/",
+                  "live": true,
+                  "parent": null,
+                  "__typename": "ExpandedPageMeta"
+                },
+                "excerpt": "If you’re planning an outdoor event—like a vacation, or a hike on a trail, or fishing on a lake—it would be good to know the chances of adverse weather for the time and location you are considering. There are many types of Earth observation data that can provide information on weather conditions for a particular location and day of the year. Your challenge is to construct an app with a personalized interface that enables users to conduct a customized query to tell them the likelihood of “very hot,” “very cold,” “very windy,” “very wet,” or “very uncomfortable” conditions for the location and time they specify.",
+                "__typename": "ChallengePage"
+              },
+              "location": "aWQ6MzA2NjM=",
+              "locationDetails": {
+                "id": "aWQ6MzA2NjM=",
+                "title": "Uberlandia",
+                "displayName": "Uberlândia",
+                "meta": {
+                  "type": "LOCATION",
+                  "slug": "uberlandia",
+                  "firstPublishedAt": "2025-07-18T21:43:56.560298Z",
+                  "lastPublishedAt": "2025-08-22T19:13:44.047613Z",
+                  "relativeUrl": "/2025/local-events/uberlandia/",
+                  "live": true,
+                  "parent": null,
+                  "__typename": "ExpandedPageMeta"
+                },
+                "country": "Brazil",
+                "__typename": "LocationPage"
+              },
+              "event": "aWQ6Mw==",
+              "eventDetails": {
+                "__typename": "GlobalEvent",
+                "id": "aWQ6Mw==",
+                "name": "2025 NASA Space Apps Challenge",
+                "displayName": "2025 NASA Space Apps Challenge",
+                "slug": "2025",
+                "status": 2,
+                "startDate": "2025-10-04T13:00:00",
+                "endDate": "2025-10-05T09:00:00",
+                "certificate": null,
+                "createRegistrationForm": "aWQ6MQ==",
+                "editRegistrationForm": "aWQ6MQ==",
+                "createTeamForm": "aWQ6Ng==",
+                "timezone": "GMT",
+                "teamMemberLimit": 6,
+                "eventRegistrationStatus": 2,
+                "localEventRegistrationStatus": 6,
+                "teamRegistrationStatus": 6,
+                "isTeamPagesActive": true,
+                "isAwardsActive": false,
+                "isChallengePagesActive": false,
+                "localEventEditStatus": 5,
+                "teamEditStatus": 5,
+                "teamStreamEditStatus": 0,
+                "projectEditStatus": 0,
+                "localEventJudgingStatus": 0,
+                "nominationJudgingStatus": 0,
+                "projectFields": [
+                  {
+                    "title": "Summary",
+                    "caption": "",
+                    "fieldMapping": "summary",
+                    "fieldType": "TEXT",
+                    "__typename": "ProjectFieldBlock"
+                  },
+                  {
+                    "title": "Project Demonstration",
+                    "caption": "",
+                    "fieldMapping": "demoLink",
+                    "fieldType": "URL",
+                    "__typename": "ProjectFieldBlock"
+                  },
+                  {
+                    "title": "Project",
+                    "caption": "",
+                    "fieldMapping": "projectLink",
+                    "fieldType": "URL",
+                    "__typename": "ProjectFieldBlock"
+                  },
+                  {
+                    "title": "Project Details",
+                    "caption": "",
+                    "fieldMapping": "details",
+                    "fieldType": "RICHFULL",
+                    "__typename": "ProjectFieldBlock"
+                  },
+                  {
+                    "title": "Use of Artificial Intelligence (AI)",
+                    "caption": "",
+                    "fieldMapping": "aiReferences",
+                    "fieldType": "LINKS",
+                    "__typename": "ProjectFieldBlock"
+                  },
+                  {
+                    "title": "NASA Data",
+                    "caption": "",
+                    "fieldMapping": "dataReferences",
+                    "fieldType": "LINKS",
+                    "__typename": "ProjectFieldBlock"
+                  },
+                  {
+                    "title": "Space Agency Partner & Other Data",
+                    "caption": "",
+                    "fieldMapping": "projectReferences",
+                    "fieldType": "LINKS",
+                    "__typename": "ProjectFieldBlock"
+                  }
+                ]
+              },
+              "joinEnabled": true,
+              "memberships": null,
+              "nominationBadges": [],
+              "awardBadges": null
+            }
+          },
+          {
+            "__typename": "TeamPageEdge",
+            "cursor": "b2Zmc2V0OjM0",
+            "node": {
+              "__typename": "TeamPage",
               "id": "aWQ6MzMwNjA=",
               "title": "Turatteam",
               "meta": {
                 "type": "TEAM",
                 "slug": "turatteam",
                 "firstPublishedAt": "2025-08-28T13:58:31.275335Z",
-                "lastPublishedAt": "2025-08-28T14:41:58.521152Z",
+                "lastPublishedAt": "2025-08-29T17:59:39.942563Z",
                 "relativeUrl": "/2025/find-a-team/turatteam/",
                 "live": true,
                 "parent": null,
@@ -6338,20 +6289,13 @@
                 "isTeamPagesActive": true,
                 "isAwardsActive": false,
                 "isChallengePagesActive": false,
-                "localEventEditStatus": 4,
+                "localEventEditStatus": 5,
                 "teamEditStatus": 5,
                 "teamStreamEditStatus": 0,
                 "projectEditStatus": 0,
                 "localEventJudgingStatus": 0,
                 "nominationJudgingStatus": 0,
                 "projectFields": [
-                  {
-                    "title": "Project Name",
-                    "caption": "",
-                    "fieldMapping": "summary",
-                    "fieldType": "TEXT",
-                    "__typename": "ProjectFieldBlock"
-                  },
                   {
                     "title": "Summary",
                     "caption": "",
@@ -6411,7 +6355,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjM0",
+            "cursor": "b2Zmc2V0OjM1",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6MzMyNDM=",
@@ -6541,20 +6485,13 @@
                 "isTeamPagesActive": true,
                 "isAwardsActive": false,
                 "isChallengePagesActive": false,
-                "localEventEditStatus": 4,
+                "localEventEditStatus": 5,
                 "teamEditStatus": 5,
                 "teamStreamEditStatus": 0,
                 "projectEditStatus": 0,
                 "localEventJudgingStatus": 0,
                 "nominationJudgingStatus": 0,
                 "projectFields": [
-                  {
-                    "title": "Project Name",
-                    "caption": "",
-                    "fieldMapping": "summary",
-                    "fieldType": "TEXT",
-                    "__typename": "ProjectFieldBlock"
-                  },
                   {
                     "title": "Summary",
                     "caption": "",
