@@ -211,7 +211,7 @@
                 "type": "TEAM",
                 "slug": "agamotto",
                 "firstPublishedAt": "2025-08-27T20:00:13.604754Z",
-                "lastPublishedAt": "2025-08-28T13:22:25.415329Z",
+                "lastPublishedAt": "2025-08-28T21:42:22.967615Z",
                 "relativeUrl": "/2025/find-a-team/agamotto/",
                 "live": true,
                 "parent": null,
@@ -967,7 +967,7 @@
                 "type": "TEAM",
                 "slug": "binary-bits",
                 "firstPublishedAt": "2025-08-21T18:26:19.735395Z",
-                "lastPublishedAt": "2025-08-28T00:17:20.159482Z",
+                "lastPublishedAt": "2025-08-29T02:07:49.857374Z",
                 "relativeUrl": "/2025/find-a-team/binary-bits/",
                 "live": true,
                 "parent": null,
@@ -975,7 +975,7 @@
               },
               "owner": "aWQ6Mzc2MjY1",
               "ownerDetails": null,
-              "excerpt": null,
+              "excerpt": "Um time de iniciante e estudantes da UFU, participando do primeiro hackthon, visando conhecimento, network e crescimento pessoal, Aprendizado de Máquina (ML), Python, Deep Learning (DL), ...",
               "project": "aWQ6MjkzMTg=",
               "projectDetails": {
                 "id": "aWQ6MjkzMTg=",
@@ -1015,8 +1015,17 @@
                 "__typename": "DefaultImage"
               },
               "description": null,
-              "desiredSkills": [],
-              "languages": [],
+              "desiredSkills": [
+                "Hardware",
+                "Coding",
+                "Data Analysis",
+                "Data Visualization",
+                "Artificial Intelligence & Machine Learning"
+              ],
+              "languages": [
+                "Portuguese",
+                "English"
+              ],
               "challenge": "aWQ6MzEzMTI=",
               "challengeDetails": {
                 "id": "aWQ6MzEzMTI=",
@@ -2881,7 +2890,7 @@
                 "type": "TEAM",
                 "slug": "extraplant",
                 "firstPublishedAt": "2025-08-28T14:39:52.528291Z",
-                "lastPublishedAt": "2025-08-28T16:54:26.444761Z",
+                "lastPublishedAt": "2025-08-28T22:04:19.416672Z",
                 "relativeUrl": "/2025/find-a-team/extraplant/",
                 "live": true,
                 "parent": null,
@@ -3095,7 +3104,7 @@
                 "type": "TEAM",
                 "slug": "finstream",
                 "firstPublishedAt": "2025-08-22T01:56:21.769413Z",
-                "lastPublishedAt": "2025-08-26T19:45:29.141435Z",
+                "lastPublishedAt": "2025-08-29T02:03:58.795537Z",
                 "relativeUrl": "/2025/find-a-team/finstream/",
                 "live": true,
                 "parent": null,
@@ -3662,7 +3671,7 @@
                 "type": "TEAM",
                 "slug": "guinea-pigs",
                 "firstPublishedAt": "2025-08-28T18:37:20.154624Z",
-                "lastPublishedAt": "2025-08-28T18:52:31.939329Z",
+                "lastPublishedAt": "2025-08-29T00:22:14.961913Z",
                 "relativeUrl": "/2025/find-a-team/guinea-pigs/",
                 "live": true,
                 "parent": null,
@@ -4021,7 +4030,7 @@
                 "type": "TEAM",
                 "slug": "kultive-2025",
                 "firstPublishedAt": "2025-08-22T02:45:58.637777Z",
-                "lastPublishedAt": "2025-08-28T12:52:06.510310Z",
+                "lastPublishedAt": "2025-08-29T11:36:53.212266Z",
                 "relativeUrl": "/2025/find-a-team/kultive-2025/",
                 "live": true,
                 "parent": null,
@@ -6222,7 +6231,7 @@
                 "type": "TEAM",
                 "slug": "zyra-vida-dados-e-inovacao-urbana",
                 "firstPublishedAt": "2025-08-28T17:56:12.364275Z",
-                "lastPublishedAt": "2025-08-28T21:19:06.653381Z",
+                "lastPublishedAt": "2025-08-28T21:35:57.745738Z",
                 "relativeUrl": "/2025/find-a-team/zyra-vida-dados-e-inovacao-urbana/",
                 "live": true,
                 "parent": null,
@@ -6230,7 +6239,7 @@
               },
               "owner": "aWQ6Mzg3NjAx",
               "ownerDetails": null,
-              "excerpt": "🚀Junte-se à Zyra! Formamos um time com uma desenvolvedora  (graduanda em SI – Uniube), uma engenheira ambiental (mestrado em Engenharia Urbana – UFU) e um participante de vários hackthons (Adm - Uniube). Transformamos dados em decisões que promove...",
+              "excerpt": "🚀Junte-se à Zyra! Formamos um time com uma desenvolvedora (graduanda em SI – Uniube), uma engenheira ambiental (mestrado em Engenharia Urbana – UFU) e um participante de 3 hackthons (Adm - Uniube). Transformamos dados em decisões que promovem cida...",
               "project": "aWQ6MzEwNTg=",
               "projectDetails": {
                 "id": "aWQ6MzEwNTg=",
@@ -6250,19 +6259,19 @@
               },
               "projectSubmitted": false,
               "featuredImage": {
-                "id": "aWQ6Mjg1Mzgz",
+                "id": "aWQ6Mjg1Mzkx",
                 "meta": {
                   "type": "images.CustomImage",
-                  "downloadUrl": "https://assets.spaceappschallenge.org/media/original_images/OIP_90Ho09t.webp",
+                  "downloadUrl": "https://assets.spaceappschallenge.org/media/original_images/OIP_8m9kvl7.webp",
                   "__typename": "ImageMeta"
                 },
-                "title": "team_image.21:19:05.674825",
-                "alt": "team_image.21:19:05.674825",
-                "caption": "team_image.21:19:05.674825",
+                "title": "team_image.21:35:56.768435",
+                "alt": "team_image.21:35:56.768435",
+                "caption": "team_image.21:35:56.768435",
                 "displaySize": "og",
                 "rendition": {
-                  "url": "https://assets.spaceappschallenge.org/media/images/OIP_90Ho09t.2e16d0ba.fill-300x250.png",
-                  "fullUrl": "https://assets.spaceappschallenge.org/media/images/OIP_90Ho09t.2e16d0ba.fill-300x250.png",
+                  "url": "https://assets.spaceappschallenge.org/media/images/OIP_8m9kvl7.2e16d0ba.fill-300x250.png",
+                  "fullUrl": "https://assets.spaceappschallenge.org/media/images/OIP_8m9kvl7.2e16d0ba.fill-300x250.png",
                   "height": 250,
                   "width": 300,
                   "__typename": "BaseImage"
@@ -6283,7 +6292,9 @@
                 "Design",
                 "Business & Economics"
               ],
-              "languages": [],
+              "languages": [
+                "Portuguese"
+              ],
               "challenge": "aWQ6MzEzMTc=",
               "challengeDetails": {
                 "id": "aWQ6MzEzMTc=",
