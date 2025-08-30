@@ -1,5 +1,9 @@
 @import "../../../../styles/variables";
 
+
+a {
+  text-wrap: nowrap;
+}
 .header {
   background: rgba(0, 0, 0, 0.95);
   backdrop-filter: blur(15px);

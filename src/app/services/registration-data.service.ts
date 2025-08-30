@@ -163,9 +163,25 @@ export class RegistrationDataService {
     this.registrationData.forEach(reg => {
       if (reg.interests) {
         try {
-          const birthTimestamp = parseFloat(reg.interests);
-          if (birthTimestamp > 0) {
-            const birthDate = new Date(birthTimestamp);
+          // reg.interests agora contém a data de nascimento como string
+          let birthDate: Date;
+          
+          // Tenta diferentes formatos de data
+          const birthDateStr = reg.interests.trim();
+          
+          // Formato brasileiro: DD/MM/YYYY
+          const brazilianDatePattern = /^(\d{2})\/(\d{2})\/(\d{4})$/;
+          const match = birthDateStr.match(brazilianDatePattern);
+          
+          if (match) {
+            const [, day, month, year] = match;
+            birthDate = new Date(parseInt(year), parseInt(month) - 1, parseInt(day));
+          } else {
+            // Tenta parsing direto
+            birthDate = new Date(birthDateStr);
+          }
+          
+          if (!isNaN(birthDate.getTime())) {
             const today = new Date();
             let age = today.getFullYear() - birthDate.getFullYear();
             const monthDiff = today.getMonth() - birthDate.getMonth();
@@ -173,17 +189,24 @@ export class RegistrationDataService {
               age--;
             }
 
-            let ageGroup: string;
-            if (age < 20) ageGroup = '< 20 anos';
-            else if (age < 25) ageGroup = '20-24 anos';
-            else if (age < 30) ageGroup = '25-29 anos';
-            else if (age < 35) ageGroup = '30-34 anos';
-            else ageGroup = '35+ anos';
+            // Validação de idade razoável (entre 10 e 100 anos)
+            if (age >= 10 && age <= 100) {
+              let ageGroup: string;
+              if (age < 20) ageGroup = '< 20 anos';
+              else if (age < 25) ageGroup = '20-24 anos';
+              else if (age < 30) ageGroup = '25-29 anos';
+              else if (age < 35) ageGroup = '30-34 anos';
+              else ageGroup = '35+ anos';
 
-            ageGroups.set(ageGroup, (ageGroups.get(ageGroup) || 0) + 1);
+              ageGroups.set(ageGroup, (ageGroups.get(ageGroup) || 0) + 1);
+            } else {
+              console.warn('Idade inválida calculada:', age, 'para data:', birthDateStr);
+            }
+          } else {
+            console.warn('Data de nascimento inválida:', birthDateStr);
           }
         } catch (error) {
-          console.warn('Erro ao calcular idade:', error);
+          console.warn('Erro ao calcular idade:', error, 'para:', reg.interests);
         }
       }
     });
