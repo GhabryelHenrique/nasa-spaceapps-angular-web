@@ -72,6 +72,10 @@ export class HeaderComponent {
     window.open('https://chat.whatsapp.com/LXwUUZaJPXtBOeKr7N4axg', '_blank');
   }
 
+  openInstagram(): void {
+    window.open('https://www.instagram.com/nasaspaceappsuberlandia', '_blank');
+  }
+
   goToLandingPage(): void {
     window.location.href = '/';
   }
