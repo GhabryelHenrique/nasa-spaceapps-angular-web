@@ -249,7 +249,13 @@ export class RegistrationDataService {
 
     this.registrationData.forEach(reg => {
       if (reg.phone) {
-        const phoneStr = String(reg.phone).replace(/\D/g, '');
+        let phoneStr = String(reg.phone).replace(/\D/g, '');
+        
+        // Remove o código do país 55 se presente
+        if (phoneStr.length >= 12 && phoneStr.startsWith('55')) {
+          phoneStr = phoneStr.substring(2);
+        }
+        
         if (phoneStr.length >= 10) {
           const area = phoneStr.substring(0, 2);
           const areaName = this.getAreaName(area);

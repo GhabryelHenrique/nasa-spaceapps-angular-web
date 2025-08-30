@@ -1,6 +1,6 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import * as localEvents  from '../shared/data/localEvents.json';
+import * as localEvents  from '../../assets/data/localEvents.json';
 import { CityParticipation } from '../shared/interfaces/local-event.interface';
 import { RegistrationChartsComponent } from './components/registration-charts/registration-charts.component';
 import { RegistrationMapComponent } from './components/registration-map/registration-map.component';
