@@ -1865,7 +1865,7 @@
                 "type": "TEAM",
                 "slug": "code-rats",
                 "firstPublishedAt": "2025-08-24T19:29:23.660660Z",
-                "lastPublishedAt": "2025-08-27T14:58:18.022507Z",
+                "lastPublishedAt": "2025-08-30T03:01:36.960064Z",
                 "relativeUrl": "/2025/find-a-team/code-rats/",
                 "live": true,
                 "parent": null,
@@ -1915,21 +1915,21 @@
               "description": null,
               "desiredSkills": [],
               "languages": [],
-              "challenge": "aWQ6MzEzMTE=",
+              "challenge": "aWQ6MzEzMjg=",
               "challengeDetails": {
-                "id": "aWQ6MzEzMTE=",
-                "title": "Meteor Madness",
+                "id": "aWQ6MzEzMjg=",
+                "title": "Will It Rain On My Parade?",
                 "meta": {
                   "type": "CHALLENGE",
-                  "slug": "meteor-madness",
-                  "firstPublishedAt": "2025-08-18T19:28:38.722785Z",
-                  "lastPublishedAt": "2025-08-19T21:29:24.234606Z",
-                  "relativeUrl": "/2025/challenges/meteor-madness/",
+                  "slug": "will-it-rain-on-my-parade",
+                  "firstPublishedAt": "2025-08-18T19:28:40.295442Z",
+                  "lastPublishedAt": "2025-08-19T21:17:28.593390Z",
+                  "relativeUrl": "/2025/challenges/will-it-rain-on-my-parade/",
                   "live": true,
                   "parent": null,
                   "__typename": "ExpandedPageMeta"
                 },
-                "excerpt": "A newly identified near-Earth asteroid, \"Impactor-2025,\" poses a potential threat to Earth, but do we have the tools to enable the public and decision makers to understand and mitigate its risks? NASA datasets include information about known asteroids and the United States Geological Survey provides critical information that could enable modeling the effects of asteroid impacts, but these data need to be integrated to enable effective visualization and decision making. Your challenge is to develop an interactive visualization and simulation tool that uses real data to help users model asteroid impact scenarios, predict consequences, and evaluate potential mitigation strategies.",
+                "excerpt": "If you’re planning an outdoor event—like a vacation, or a hike on a trail, or fishing on a lake—it would be good to know the chances of adverse weather for the time and location you are considering. There are many types of Earth observation data that can provide information on weather conditions for a particular location and day of the year. Your challenge is to construct an app with a personalized interface that enables users to conduct a customized query to tell them the likelihood of “very hot,” “very cold,” “very windy,” “very wet,” or “very uncomfortable” conditions for the location and time they specify.",
                 "__typename": "ChallengePage"
               },
               "location": "aWQ6MzA2NjM=",
@@ -2030,7 +2030,7 @@
                   }
                 ]
               },
-              "joinEnabled": true,
+              "joinEnabled": false,
               "memberships": null,
               "nominationBadges": [],
               "awardBadges": null
