@@ -78,6 +78,7 @@ export interface NasaApiResponse {
 export class NasaTeamsService {
   private readonly apiUrl = '/api/nasa/graphql'; // Proxy endpoint
   private readonly fallbackApiUrl = 'https://api.spaceappschallenge.org/graphql';
+  private readonly isProduction = !window.location.hostname.includes('localhost');
 
   // BehaviorSubjects para dados em tempo real
   private teamsSubject = new BehaviorSubject<TeamData[]>([]);
@@ -253,7 +254,7 @@ export class NasaTeamsService {
   }
 
   fetchTeams(useProxy: boolean = true): Observable<TeamData[]> {
-    const url = useProxy ? this.apiUrl : this.fallbackApiUrl;
+    const url = (useProxy && !this.isProduction) ? this.apiUrl : this.fallbackApiUrl;
     const payload = this.getTeamsQuery();
 
     this.loadingSubject.next(true);
@@ -297,7 +298,7 @@ export class NasaTeamsService {
   }
 
   fetchLocalEvents(useProxy: boolean = true): Observable<LocalEventData[]> {
-    const url = useProxy ? this.apiUrl : this.fallbackApiUrl;
+    const url = (useProxy && !this.isProduction) ? this.apiUrl : this.fallbackApiUrl;
     const payload = this.getLocalEventsQuery();
 
     return this.http.post<any[]>(url, payload, {
