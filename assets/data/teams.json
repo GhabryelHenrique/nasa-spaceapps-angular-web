@@ -6,10 +6,10 @@
           "hasPreviousPage": false,
           "hasNextPage": false,
           "startCursor": "b2Zmc2V0OjA=",
-          "endCursor": "b2Zmc2V0OjM3",
+          "endCursor": "b2Zmc2V0OjQz",
           "__typename": "PageInfo"
         },
-        "totalCount": 38,
+        "totalCount": 44,
         "edges": [
           {
             "__typename": "TeamPageEdge",
@@ -198,6 +198,188 @@
             "cursor": "b2Zmc2V0OjE=",
             "node": {
               "__typename": "TeamPage",
+              "id": "aWQ6MzM3MjI=",
+              "title": "3° Dimensão",
+              "meta": {
+                "type": "TEAM",
+                "slug": "3deg-dimensao",
+                "firstPublishedAt": "2025-08-31T02:59:55.669785Z",
+                "lastPublishedAt": "2025-08-31T03:00:08.612072Z",
+                "relativeUrl": "/2025/find-a-team/3deg-dimensao/",
+                "live": true,
+                "parent": null,
+                "__typename": "ExpandedPageMeta"
+              },
+              "owner": "aWQ6MzkyMjU0",
+              "ownerDetails": null,
+              "excerpt": null,
+              "project": "aWQ6MzE1Mzc=",
+              "projectDetails": {
+                "id": "aWQ6MzE1Mzc=",
+                "name": "Project 3° Dimensão",
+                "summary": "",
+                "demoLink": "",
+                "projectLink": "",
+                "details": "",
+                "solution": "",
+                "aiReferences": "",
+                "dataReferences": "",
+                "projectReferences": "",
+                "isSubmitted": false,
+                "savedAt": null,
+                "submittedAt": null,
+                "__typename": "Project"
+              },
+              "projectSubmitted": false,
+              "featuredImage": {
+                "id": "aWQ6Mjg3MjY3",
+                "meta": {
+                  "type": "images.CustomImage",
+                  "downloadUrl": "https://assets.spaceappschallenge.org/media/original_images/1000097795.jpg",
+                  "__typename": "ImageMeta"
+                },
+                "title": "team_image.02:57:23.849203",
+                "alt": "team_image.02:57:23.849203",
+                "caption": "team_image.02:57:23.849203",
+                "displaySize": "og",
+                "rendition": {
+                  "url": "https://assets.spaceappschallenge.org/media/images/1000097795.2e16d0ba.fill-300x250.jpg",
+                  "fullUrl": "https://assets.spaceappschallenge.org/media/images/1000097795.2e16d0ba.fill-300x250.jpg",
+                  "height": 250,
+                  "width": 300,
+                  "__typename": "BaseImage"
+                },
+                "__typename": "DefaultImage"
+              },
+              "description": null,
+              "desiredSkills": [],
+              "languages": [],
+              "challenge": "aWQ6MzEzMjI=",
+              "challengeDetails": {
+                "id": "aWQ6MzEzMjI=",
+                "title": "Sharks from Space",
+                "meta": {
+                  "type": "CHALLENGE",
+                  "slug": "sharks-from-space",
+                  "firstPublishedAt": "2025-08-18T19:28:39.744986Z",
+                  "lastPublishedAt": "2025-08-19T21:13:51.388742Z",
+                  "relativeUrl": "/2025/challenges/sharks-from-space/",
+                  "live": true,
+                  "parent": null,
+                  "__typename": "ExpandedPageMeta"
+                },
+                "excerpt": "Earth’s ocean is one of the most powerful habitats in our universe, supporting a range of life that sustains ecosystems and habitability across the globe. It is common to measure photosynthetic activity in the ocean from space, but far more challenging to track top predators. Your challenge is to create a mathematical framework for identifying sharks and predicting their foraging habitats using NASA satellite data, and also to suggest a new conceptual model of a tag (a small electronic device that can be attached to an animal to track and study its movement) that could measure not only where sharks are, but what they are eating, and in real time transmit that data back to users to enable development of predictive models.",
+                "__typename": "ChallengePage"
+              },
+              "location": "aWQ6MzA2NjM=",
+              "locationDetails": {
+                "id": "aWQ6MzA2NjM=",
+                "title": "Uberlandia",
+                "displayName": "Uberlândia",
+                "meta": {
+                  "type": "LOCATION",
+                  "slug": "uberlandia",
+                  "firstPublishedAt": "2025-07-18T21:43:56.560298Z",
+                  "lastPublishedAt": "2025-08-22T19:13:44.047613Z",
+                  "relativeUrl": "/2025/local-events/uberlandia/",
+                  "live": true,
+                  "parent": null,
+                  "__typename": "ExpandedPageMeta"
+                },
+                "country": "Brazil",
+                "__typename": "LocationPage"
+              },
+              "event": "aWQ6Mw==",
+              "eventDetails": {
+                "__typename": "GlobalEvent",
+                "id": "aWQ6Mw==",
+                "name": "2025 NASA Space Apps Challenge",
+                "displayName": "2025 NASA Space Apps Challenge",
+                "slug": "2025",
+                "status": 2,
+                "startDate": "2025-10-04T13:00:00",
+                "endDate": "2025-10-05T09:00:00",
+                "certificate": null,
+                "createRegistrationForm": "aWQ6MQ==",
+                "editRegistrationForm": "aWQ6MQ==",
+                "createTeamForm": "aWQ6Ng==",
+                "timezone": "GMT",
+                "teamMemberLimit": 6,
+                "eventRegistrationStatus": 2,
+                "localEventRegistrationStatus": 6,
+                "teamRegistrationStatus": 6,
+                "isTeamPagesActive": true,
+                "isAwardsActive": false,
+                "isChallengePagesActive": false,
+                "localEventEditStatus": 5,
+                "teamEditStatus": 5,
+                "teamStreamEditStatus": 0,
+                "projectEditStatus": 0,
+                "localEventJudgingStatus": 0,
+                "nominationJudgingStatus": 0,
+                "projectFields": [
+                  {
+                    "title": "Summary",
+                    "caption": "",
+                    "fieldMapping": "summary",
+                    "fieldType": "TEXT",
+                    "__typename": "ProjectFieldBlock"
+                  },
+                  {
+                    "title": "Project Demonstration",
+                    "caption": "",
+                    "fieldMapping": "demoLink",
+                    "fieldType": "URL",
+                    "__typename": "ProjectFieldBlock"
+                  },
+                  {
+                    "title": "Project",
+                    "caption": "",
+                    "fieldMapping": "projectLink",
+                    "fieldType": "URL",
+                    "__typename": "ProjectFieldBlock"
+                  },
+                  {
+                    "title": "Project Details",
+                    "caption": "",
+                    "fieldMapping": "details",
+                    "fieldType": "RICHFULL",
+                    "__typename": "ProjectFieldBlock"
+                  },
+                  {
+                    "title": "Use of Artificial Intelligence (AI)",
+                    "caption": "",
+                    "fieldMapping": "aiReferences",
+                    "fieldType": "LINKS",
+                    "__typename": "ProjectFieldBlock"
+                  },
+                  {
+                    "title": "NASA Data",
+                    "caption": "",
+                    "fieldMapping": "dataReferences",
+                    "fieldType": "LINKS",
+                    "__typename": "ProjectFieldBlock"
+                  },
+                  {
+                    "title": "Space Agency Partner & Other Data",
+                    "caption": "",
+                    "fieldMapping": "projectReferences",
+                    "fieldType": "LINKS",
+                    "__typename": "ProjectFieldBlock"
+                  }
+                ]
+              },
+              "joinEnabled": true,
+              "memberships": null,
+              "nominationBadges": [],
+              "awardBadges": null
+            }
+          },
+          {
+            "__typename": "TeamPageEdge",
+            "cursor": "b2Zmc2V0OjI=",
+            "node": {
+              "__typename": "TeamPage",
               "id": "aWQ6MzMwOTY=",
               "title": "Agamotto",
               "meta": {
@@ -377,7 +559,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjI=",
+            "cursor": "b2Zmc2V0OjM=",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6MzIyMjU=",
@@ -559,7 +741,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjM=",
+            "cursor": "b2Zmc2V0OjQ=",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6MzMxNDA=",
@@ -741,7 +923,352 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjQ=",
+            "cursor": "b2Zmc2V0OjU=",
+            "node": {
+              "__typename": "TeamPage",
+              "id": "aWQ6MzM3MTU=",
+              "title": "AstroMars-Uberlândia",
+              "meta": {
+                "type": "TEAM",
+                "slug": "astromars-uberlandia",
+                "firstPublishedAt": null,
+                "lastPublishedAt": null,
+                "relativeUrl": "/2025/find-a-team/astromars-uberlandia/",
+                "live": true,
+                "parent": null,
+                "__typename": "ExpandedPageMeta"
+              },
+              "owner": "aWQ6Mzc1MDg4",
+              "ownerDetails": null,
+              "excerpt": "Uma equipe de pessoas unidas pelo sonho de chegar a Marte. Elas exploram formas de viver fora da Terra, aprendendo a produzir água, oxigênio e energia em outro planeta, além de cultivar alimentos e entender como o corpo humano pode enfrentar viage...",
+              "project": "aWQ6MzE1MzA=",
+              "projectDetails": {
+                "id": "aWQ6MzE1MzA=",
+                "name": "Project AstroMars-Uberlândia",
+                "summary": "",
+                "demoLink": "",
+                "projectLink": "",
+                "details": "",
+                "solution": "",
+                "aiReferences": "",
+                "dataReferences": "",
+                "projectReferences": "",
+                "isSubmitted": false,
+                "savedAt": null,
+                "submittedAt": null,
+                "__typename": "Project"
+              },
+              "projectSubmitted": false,
+              "featuredImage": {
+                "id": "aWQ6Mjg3MjQx",
+                "meta": {
+                  "type": "images.CustomImage",
+                  "downloadUrl": "https://assets.spaceappschallenge.org/media/original_images/Captura_de_tela_2025-08-30_162718.png",
+                  "__typename": "ImageMeta"
+                },
+                "title": "team_image.00:55:49.035859",
+                "alt": "team_image.00:55:49.035859",
+                "caption": "team_image.00:55:49.035859",
+                "displaySize": "og",
+                "rendition": {
+                  "url": "https://assets.spaceappschallenge.org/media/images/Captura_de_tela_2025-08-30_162718.2e16d0ba.fill-300x250.png",
+                  "fullUrl": "https://assets.spaceappschallenge.org/media/images/Captura_de_tela_2025-08-30_162718.2e16d0ba.fill-300x250.png",
+                  "height": 250,
+                  "width": 300,
+                  "__typename": "BaseImage"
+                },
+                "__typename": "DefaultImage"
+              },
+              "description": null,
+              "desiredSkills": [],
+              "languages": [],
+              "challenge": "aWQ6MzEzMTk=",
+              "challengeDetails": {
+                "id": "aWQ6MzEzMTk=",
+                "title": "Animation Celebration of Terra Data!",
+                "meta": {
+                  "type": "CHALLENGE",
+                  "slug": "animation-celebration-of-terra-data",
+                  "firstPublishedAt": "2025-08-18T19:28:39.453909Z",
+                  "lastPublishedAt": "2025-08-19T21:20:35.724855Z",
+                  "relativeUrl": "/2025/challenges/animation-celebration-of-terra-data/",
+                  "live": true,
+                  "parent": null,
+                  "__typename": "ExpandedPageMeta"
+                },
+                "excerpt": "NASA’s oldest daily Earth-viewing satellite – Terra – just turned 25 years old, and with five continuously operating instruments onboard (most taking imagery at the same time), Terra has piled up a LOT of data over the years (over 9,000 days and counting!). This data has the potential to shed light on everything from scientific processes to unique events, all while helping solve problems that affect humans. Your challenge is to use data from any or all of Terra’s five instruments to create an animated product showcasing an Earth science story and emphasizing the impacts to you, your community, and/or the environment.",
+                "__typename": "ChallengePage"
+              },
+              "location": "aWQ6MzA2NjM=",
+              "locationDetails": {
+                "id": "aWQ6MzA2NjM=",
+                "title": "Uberlandia",
+                "displayName": "Uberlândia",
+                "meta": {
+                  "type": "LOCATION",
+                  "slug": "uberlandia",
+                  "firstPublishedAt": "2025-07-18T21:43:56.560298Z",
+                  "lastPublishedAt": "2025-08-22T19:13:44.047613Z",
+                  "relativeUrl": "/2025/local-events/uberlandia/",
+                  "live": true,
+                  "parent": null,
+                  "__typename": "ExpandedPageMeta"
+                },
+                "country": "Brazil",
+                "__typename": "LocationPage"
+              },
+              "event": "aWQ6Mw==",
+              "eventDetails": {
+                "__typename": "GlobalEvent",
+                "id": "aWQ6Mw==",
+                "name": "2025 NASA Space Apps Challenge",
+                "displayName": "2025 NASA Space Apps Challenge",
+                "slug": "2025",
+                "status": 2,
+                "startDate": "2025-10-04T13:00:00",
+                "endDate": "2025-10-05T09:00:00",
+                "certificate": null,
+                "createRegistrationForm": "aWQ6MQ==",
+                "editRegistrationForm": "aWQ6MQ==",
+                "createTeamForm": "aWQ6Ng==",
+                "timezone": "GMT",
+                "teamMemberLimit": 6,
+                "eventRegistrationStatus": 2,
+                "localEventRegistrationStatus": 6,
+                "teamRegistrationStatus": 6,
+                "isTeamPagesActive": true,
+                "isAwardsActive": false,
+                "isChallengePagesActive": false,
+                "localEventEditStatus": 5,
+                "teamEditStatus": 5,
+                "teamStreamEditStatus": 0,
+                "projectEditStatus": 0,
+                "localEventJudgingStatus": 0,
+                "nominationJudgingStatus": 0,
+                "projectFields": [
+                  {
+                    "title": "Summary",
+                    "caption": "",
+                    "fieldMapping": "summary",
+                    "fieldType": "TEXT",
+                    "__typename": "ProjectFieldBlock"
+                  },
+                  {
+                    "title": "Project Demonstration",
+                    "caption": "",
+                    "fieldMapping": "demoLink",
+                    "fieldType": "URL",
+                    "__typename": "ProjectFieldBlock"
+                  },
+                  {
+                    "title": "Project",
+                    "caption": "",
+                    "fieldMapping": "projectLink",
+                    "fieldType": "URL",
+                    "__typename": "ProjectFieldBlock"
+                  },
+                  {
+                    "title": "Project Details",
+                    "caption": "",
+                    "fieldMapping": "details",
+                    "fieldType": "RICHFULL",
+                    "__typename": "ProjectFieldBlock"
+                  },
+                  {
+                    "title": "Use of Artificial Intelligence (AI)",
+                    "caption": "",
+                    "fieldMapping": "aiReferences",
+                    "fieldType": "LINKS",
+                    "__typename": "ProjectFieldBlock"
+                  },
+                  {
+                    "title": "NASA Data",
+                    "caption": "",
+                    "fieldMapping": "dataReferences",
+                    "fieldType": "LINKS",
+                    "__typename": "ProjectFieldBlock"
+                  },
+                  {
+                    "title": "Space Agency Partner & Other Data",
+                    "caption": "",
+                    "fieldMapping": "projectReferences",
+                    "fieldType": "LINKS",
+                    "__typename": "ProjectFieldBlock"
+                  }
+                ]
+              },
+              "joinEnabled": true,
+              "memberships": null,
+              "nominationBadges": [],
+              "awardBadges": null
+            }
+          },
+          {
+            "__typename": "TeamPageEdge",
+            "cursor": "b2Zmc2V0OjY=",
+            "node": {
+              "__typename": "TeamPage",
+              "id": "aWQ6MzM2NzU=",
+              "title": "AstroSeekers",
+              "meta": {
+                "type": "TEAM",
+                "slug": "astroseekers",
+                "firstPublishedAt": "2025-08-30T17:26:11.463598Z",
+                "lastPublishedAt": "2025-08-30T19:51:12.054204Z",
+                "relativeUrl": "/2025/find-a-team/astroseekers/",
+                "live": true,
+                "parent": null,
+                "__typename": "ExpandedPageMeta"
+              },
+              "owner": "aWQ6MzgxNTc2",
+              "ownerDetails": null,
+              "excerpt": "The AstroSeekers is formed team from Uberlândia MG. Our skills are: Programming languagens in Python, Java, JavaScritpt, with concepts such as POO and Front/Back end. Design skills with Canva, Figma and Adobe Pack.",
+              "project": "aWQ6MzE0OTA=",
+              "projectDetails": {
+                "id": "aWQ6MzE0OTA=",
+                "name": "Project AstroSeekers",
+                "summary": "",
+                "demoLink": "",
+                "projectLink": "",
+                "details": "",
+                "solution": "",
+                "aiReferences": "",
+                "dataReferences": "",
+                "projectReferences": "",
+                "isSubmitted": false,
+                "savedAt": null,
+                "submittedAt": null,
+                "__typename": "Project"
+              },
+              "projectSubmitted": false,
+              "featuredImage": null,
+              "description": null,
+              "desiredSkills": [],
+              "languages": [],
+              "challenge": "aWQ6MzEzMTI=",
+              "challengeDetails": {
+                "id": "aWQ6MzEzMTI=",
+                "title": "A World Away: Hunting for Exoplanets with AI",
+                "meta": {
+                  "type": "CHALLENGE",
+                  "slug": "a-world-away-hunting-for-exoplanets-with-ai",
+                  "firstPublishedAt": "2025-08-18T19:28:38.822862Z",
+                  "lastPublishedAt": "2025-08-19T21:21:47.806041Z",
+                  "relativeUrl": "/2025/challenges/a-world-away-hunting-for-exoplanets-with-ai/",
+                  "live": true,
+                  "parent": null,
+                  "__typename": "ExpandedPageMeta"
+                },
+                "excerpt": "Data from several different space-based exoplanet surveying missions have enabled discovery of thousands of new planets outside our solar system, but most of these exoplanets were identified manually. With advances in artificial intelligence and machine learning (AI/ML), it is possible to automatically analyze large sets of data collected by these missions to identify exoplanets. Your challenge is to create an AI/ML model that is trained on one or more of the open-source exoplanet datasets offered by NASA and that can analyze new data to accurately identify exoplanets.",
+                "__typename": "ChallengePage"
+              },
+              "location": "aWQ6MzA2NjM=",
+              "locationDetails": {
+                "id": "aWQ6MzA2NjM=",
+                "title": "Uberlandia",
+                "displayName": "Uberlândia",
+                "meta": {
+                  "type": "LOCATION",
+                  "slug": "uberlandia",
+                  "firstPublishedAt": "2025-07-18T21:43:56.560298Z",
+                  "lastPublishedAt": "2025-08-22T19:13:44.047613Z",
+                  "relativeUrl": "/2025/local-events/uberlandia/",
+                  "live": true,
+                  "parent": null,
+                  "__typename": "ExpandedPageMeta"
+                },
+                "country": "Brazil",
+                "__typename": "LocationPage"
+              },
+              "event": "aWQ6Mw==",
+              "eventDetails": {
+                "__typename": "GlobalEvent",
+                "id": "aWQ6Mw==",
+                "name": "2025 NASA Space Apps Challenge",
+                "displayName": "2025 NASA Space Apps Challenge",
+                "slug": "2025",
+                "status": 2,
+                "startDate": "2025-10-04T13:00:00",
+                "endDate": "2025-10-05T09:00:00",
+                "certificate": null,
+                "createRegistrationForm": "aWQ6MQ==",
+                "editRegistrationForm": "aWQ6MQ==",
+                "createTeamForm": "aWQ6Ng==",
+                "timezone": "GMT",
+                "teamMemberLimit": 6,
+                "eventRegistrationStatus": 2,
+                "localEventRegistrationStatus": 6,
+                "teamRegistrationStatus": 6,
+                "isTeamPagesActive": true,
+                "isAwardsActive": false,
+                "isChallengePagesActive": false,
+                "localEventEditStatus": 5,
+                "teamEditStatus": 5,
+                "teamStreamEditStatus": 0,
+                "projectEditStatus": 0,
+                "localEventJudgingStatus": 0,
+                "nominationJudgingStatus": 0,
+                "projectFields": [
+                  {
+                    "title": "Summary",
+                    "caption": "",
+                    "fieldMapping": "summary",
+                    "fieldType": "TEXT",
+                    "__typename": "ProjectFieldBlock"
+                  },
+                  {
+                    "title": "Project Demonstration",
+                    "caption": "",
+                    "fieldMapping": "demoLink",
+                    "fieldType": "URL",
+                    "__typename": "ProjectFieldBlock"
+                  },
+                  {
+                    "title": "Project",
+                    "caption": "",
+                    "fieldMapping": "projectLink",
+                    "fieldType": "URL",
+                    "__typename": "ProjectFieldBlock"
+                  },
+                  {
+                    "title": "Project Details",
+                    "caption": "",
+                    "fieldMapping": "details",
+                    "fieldType": "RICHFULL",
+                    "__typename": "ProjectFieldBlock"
+                  },
+                  {
+                    "title": "Use of Artificial Intelligence (AI)",
+                    "caption": "",
+                    "fieldMapping": "aiReferences",
+                    "fieldType": "LINKS",
+                    "__typename": "ProjectFieldBlock"
+                  },
+                  {
+                    "title": "NASA Data",
+                    "caption": "",
+                    "fieldMapping": "dataReferences",
+                    "fieldType": "LINKS",
+                    "__typename": "ProjectFieldBlock"
+                  },
+                  {
+                    "title": "Space Agency Partner & Other Data",
+                    "caption": "",
+                    "fieldMapping": "projectReferences",
+                    "fieldType": "LINKS",
+                    "__typename": "ProjectFieldBlock"
+                  }
+                ]
+              },
+              "joinEnabled": true,
+              "memberships": null,
+              "nominationBadges": [],
+              "awardBadges": null
+            }
+          },
+          {
+            "__typename": "TeamPageEdge",
+            "cursor": "b2Zmc2V0Ojc=",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6MzE0ODA=",
@@ -923,7 +1450,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjU=",
+            "cursor": "b2Zmc2V0Ojg=",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6MzE1MDM=",
@@ -1114,7 +1641,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjY=",
+            "cursor": "b2Zmc2V0Ojk=",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6MzM1MjY=",
@@ -1122,8 +1649,8 @@
               "meta": {
                 "type": "TEAM",
                 "slug": "brazuca",
-                "firstPublishedAt": null,
-                "lastPublishedAt": null,
+                "firstPublishedAt": "2025-08-30T21:00:09.285062Z",
+                "lastPublishedAt": "2025-08-30T21:00:09.285062Z",
                 "relativeUrl": "/2025/find-a-team/brazuca/",
                 "live": true,
                 "parent": null,
@@ -1296,7 +1823,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0Ojc=",
+            "cursor": "b2Zmc2V0OjEw",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6MzMwNjQ=",
@@ -1489,7 +2016,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0Ojg=",
+            "cursor": "b2Zmc2V0OjEx",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6MzI3MTY=",
@@ -1674,7 +2201,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0Ojk=",
+            "cursor": "b2Zmc2V0OjEy",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6MzMyNDA=",
@@ -1683,7 +2210,7 @@
                 "type": "TEAM",
                 "slug": "candy_monkeys",
                 "firstPublishedAt": "2025-08-28T14:46:27.884096Z",
-                "lastPublishedAt": "2025-08-28T15:22:50.692476Z",
+                "lastPublishedAt": "2025-08-31T06:14:55.147382Z",
                 "relativeUrl": "/2025/find-a-team/candy_monkeys/",
                 "live": true,
                 "parent": null,
@@ -1856,7 +2383,189 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjEw",
+            "cursor": "b2Zmc2V0OjEz",
+            "node": {
+              "__typename": "TeamPage",
+              "id": "aWQ6MzM2ODQ=",
+              "title": "Celestium",
+              "meta": {
+                "type": "TEAM",
+                "slug": "celestium1",
+                "firstPublishedAt": "2025-08-30T18:17:52.812677Z",
+                "lastPublishedAt": "2025-08-30T18:17:52.812677Z",
+                "relativeUrl": "/2025/find-a-team/celestium1/",
+                "live": true,
+                "parent": null,
+                "__typename": "ExpandedPageMeta"
+              },
+              "owner": "aWQ6NDk3Mzc=",
+              "ownerDetails": null,
+              "excerpt": "Nossa equipe tem como objetivo desenvolver soluções inovadoras que unam ciência de dados, inteligência artificial e criatividade para enfrentar os desafios do NASA Space Apps. Buscamos participantes multidisciplinares com habilidades em programaçã...",
+              "project": "aWQ6MzE0OTk=",
+              "projectDetails": {
+                "id": "aWQ6MzE0OTk=",
+                "name": "Project Celestium",
+                "summary": "",
+                "demoLink": "",
+                "projectLink": "",
+                "details": "",
+                "solution": "",
+                "aiReferences": "",
+                "dataReferences": "",
+                "projectReferences": "",
+                "isSubmitted": false,
+                "savedAt": null,
+                "submittedAt": null,
+                "__typename": "Project"
+              },
+              "projectSubmitted": false,
+              "featuredImage": {
+                "id": "aWQ6Mjg3MDY0",
+                "meta": {
+                  "type": "images.CustomImage",
+                  "downloadUrl": "https://assets.spaceappschallenge.org/media/original_images/1000213749_G8LOyYJ.png",
+                  "__typename": "ImageMeta"
+                },
+                "title": "team_image.18:14:08.620698",
+                "alt": "team_image.18:14:08.620698",
+                "caption": "team_image.18:14:08.620698",
+                "displaySize": "og",
+                "rendition": {
+                  "url": "https://assets.spaceappschallenge.org/media/images/1000213749_G8LOyYJ.2e16d0ba.fill-300x250.png",
+                  "fullUrl": "https://assets.spaceappschallenge.org/media/images/1000213749_G8LOyYJ.2e16d0ba.fill-300x250.png",
+                  "height": 250,
+                  "width": 300,
+                  "__typename": "BaseImage"
+                },
+                "__typename": "DefaultImage"
+              },
+              "description": null,
+              "desiredSkills": [],
+              "languages": [],
+              "challenge": "aWQ6MzEzMTI=",
+              "challengeDetails": {
+                "id": "aWQ6MzEzMTI=",
+                "title": "A World Away: Hunting for Exoplanets with AI",
+                "meta": {
+                  "type": "CHALLENGE",
+                  "slug": "a-world-away-hunting-for-exoplanets-with-ai",
+                  "firstPublishedAt": "2025-08-18T19:28:38.822862Z",
+                  "lastPublishedAt": "2025-08-19T21:21:47.806041Z",
+                  "relativeUrl": "/2025/challenges/a-world-away-hunting-for-exoplanets-with-ai/",
+                  "live": true,
+                  "parent": null,
+                  "__typename": "ExpandedPageMeta"
+                },
+                "excerpt": "Data from several different space-based exoplanet surveying missions have enabled discovery of thousands of new planets outside our solar system, but most of these exoplanets were identified manually. With advances in artificial intelligence and machine learning (AI/ML), it is possible to automatically analyze large sets of data collected by these missions to identify exoplanets. Your challenge is to create an AI/ML model that is trained on one or more of the open-source exoplanet datasets offered by NASA and that can analyze new data to accurately identify exoplanets.",
+                "__typename": "ChallengePage"
+              },
+              "location": "aWQ6MzA2NjM=",
+              "locationDetails": {
+                "id": "aWQ6MzA2NjM=",
+                "title": "Uberlandia",
+                "displayName": "Uberlândia",
+                "meta": {
+                  "type": "LOCATION",
+                  "slug": "uberlandia",
+                  "firstPublishedAt": "2025-07-18T21:43:56.560298Z",
+                  "lastPublishedAt": "2025-08-22T19:13:44.047613Z",
+                  "relativeUrl": "/2025/local-events/uberlandia/",
+                  "live": true,
+                  "parent": null,
+                  "__typename": "ExpandedPageMeta"
+                },
+                "country": "Brazil",
+                "__typename": "LocationPage"
+              },
+              "event": "aWQ6Mw==",
+              "eventDetails": {
+                "__typename": "GlobalEvent",
+                "id": "aWQ6Mw==",
+                "name": "2025 NASA Space Apps Challenge",
+                "displayName": "2025 NASA Space Apps Challenge",
+                "slug": "2025",
+                "status": 2,
+                "startDate": "2025-10-04T13:00:00",
+                "endDate": "2025-10-05T09:00:00",
+                "certificate": null,
+                "createRegistrationForm": "aWQ6MQ==",
+                "editRegistrationForm": "aWQ6MQ==",
+                "createTeamForm": "aWQ6Ng==",
+                "timezone": "GMT",
+                "teamMemberLimit": 6,
+                "eventRegistrationStatus": 2,
+                "localEventRegistrationStatus": 6,
+                "teamRegistrationStatus": 6,
+                "isTeamPagesActive": true,
+                "isAwardsActive": false,
+                "isChallengePagesActive": false,
+                "localEventEditStatus": 5,
+                "teamEditStatus": 5,
+                "teamStreamEditStatus": 0,
+                "projectEditStatus": 0,
+                "localEventJudgingStatus": 0,
+                "nominationJudgingStatus": 0,
+                "projectFields": [
+                  {
+                    "title": "Summary",
+                    "caption": "",
+                    "fieldMapping": "summary",
+                    "fieldType": "TEXT",
+                    "__typename": "ProjectFieldBlock"
+                  },
+                  {
+                    "title": "Project Demonstration",
+                    "caption": "",
+                    "fieldMapping": "demoLink",
+                    "fieldType": "URL",
+                    "__typename": "ProjectFieldBlock"
+                  },
+                  {
+                    "title": "Project",
+                    "caption": "",
+                    "fieldMapping": "projectLink",
+                    "fieldType": "URL",
+                    "__typename": "ProjectFieldBlock"
+                  },
+                  {
+                    "title": "Project Details",
+                    "caption": "",
+                    "fieldMapping": "details",
+                    "fieldType": "RICHFULL",
+                    "__typename": "ProjectFieldBlock"
+                  },
+                  {
+                    "title": "Use of Artificial Intelligence (AI)",
+                    "caption": "",
+                    "fieldMapping": "aiReferences",
+                    "fieldType": "LINKS",
+                    "__typename": "ProjectFieldBlock"
+                  },
+                  {
+                    "title": "NASA Data",
+                    "caption": "",
+                    "fieldMapping": "dataReferences",
+                    "fieldType": "LINKS",
+                    "__typename": "ProjectFieldBlock"
+                  },
+                  {
+                    "title": "Space Agency Partner & Other Data",
+                    "caption": "",
+                    "fieldMapping": "projectReferences",
+                    "fieldType": "LINKS",
+                    "__typename": "ProjectFieldBlock"
+                  }
+                ]
+              },
+              "joinEnabled": true,
+              "memberships": null,
+              "nominationBadges": [],
+              "awardBadges": null
+            }
+          },
+          {
+            "__typename": "TeamPageEdge",
+            "cursor": "b2Zmc2V0OjE0",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6MzI0NTQ=",
@@ -2038,7 +2747,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjEx",
+            "cursor": "b2Zmc2V0OjE1",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6MzI0OTk=",
@@ -2220,7 +2929,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjEy",
+            "cursor": "b2Zmc2V0OjE2",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6MzI2OTM=",
@@ -2412,7 +3121,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjEz",
+            "cursor": "b2Zmc2V0OjE3",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6MzIwMjk=",
@@ -2594,7 +3303,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjE0",
+            "cursor": "b2Zmc2V0OjE4",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6MzIwMjE=",
@@ -2776,7 +3485,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjE1",
+            "cursor": "b2Zmc2V0OjE5",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6MzI1OTY=",
@@ -2958,7 +3667,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjE2",
+            "cursor": "b2Zmc2V0OjIw",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6MzMwMTk=",
@@ -3165,7 +3874,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjE3",
+            "cursor": "b2Zmc2V0OjIx",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6MzE2NzI=",
@@ -3347,7 +4056,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjE4",
+            "cursor": "b2Zmc2V0OjIy",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6MzI1ODQ=",
@@ -3529,7 +4238,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjE5",
+            "cursor": "b2Zmc2V0OjIz",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6MzIwMzc=",
@@ -3711,7 +4420,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjIw",
+            "cursor": "b2Zmc2V0OjI0",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6MzMyOTM=",
@@ -3874,7 +4583,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjIx",
+            "cursor": "b2Zmc2V0OjI1",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6MzIyNjI=",
@@ -4056,7 +4765,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjIy",
+            "cursor": "b2Zmc2V0OjI2",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6MzE2ODA=",
@@ -4252,7 +4961,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjIz",
+            "cursor": "b2Zmc2V0OjI3",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6MzI4ODQ=",
@@ -4415,7 +5124,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjI0",
+            "cursor": "b2Zmc2V0OjI4",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6MzMwNDQ=",
@@ -4578,7 +5287,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjI1",
+            "cursor": "b2Zmc2V0OjI5",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6MzE1MjA=",
@@ -4741,7 +5450,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjI2",
+            "cursor": "b2Zmc2V0OjMw",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6MzI2NDg=",
@@ -4923,7 +5632,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjI3",
+            "cursor": "b2Zmc2V0OjMx",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6MzM0MDY=",
@@ -5105,7 +5814,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjI4",
+            "cursor": "b2Zmc2V0OjMy",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6MzE1NzI=",
@@ -5268,7 +5977,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjI5",
+            "cursor": "b2Zmc2V0OjMz",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6MzM1MjA=",
@@ -5466,7 +6175,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjMw",
+            "cursor": "b2Zmc2V0OjM0",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6MzE1MDU=",
@@ -5651,7 +6360,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjMx",
+            "cursor": "b2Zmc2V0OjM1",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6MzI3MjA=",
@@ -5833,7 +6542,333 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjMy",
+            "cursor": "b2Zmc2V0OjM2",
+            "node": {
+              "__typename": "TeamPage",
+              "id": "aWQ6MzM2Mzg=",
+              "title": "Space Eagles",
+              "meta": {
+                "type": "TEAM",
+                "slug": "space-eagles1",
+                "firstPublishedAt": "2025-08-30T14:51:52.130622Z",
+                "lastPublishedAt": "2025-08-30T14:59:37.733891Z",
+                "relativeUrl": "/2025/find-a-team/space-eagles1/",
+                "live": true,
+                "parent": null,
+                "__typename": "ExpandedPageMeta"
+              },
+              "owner": "aWQ6MzkxODI1",
+              "ownerDetails": null,
+              "excerpt": "description",
+              "project": "aWQ6MzE0NTM=",
+              "projectDetails": {
+                "id": "aWQ6MzE0NTM=",
+                "name": "Project Space Eagles",
+                "summary": "",
+                "demoLink": "",
+                "projectLink": "",
+                "details": "",
+                "solution": "",
+                "aiReferences": "",
+                "dataReferences": "",
+                "projectReferences": "",
+                "isSubmitted": false,
+                "savedAt": null,
+                "submittedAt": null,
+                "__typename": "Project"
+              },
+              "projectSubmitted": false,
+              "featuredImage": null,
+              "description": null,
+              "desiredSkills": [],
+              "languages": [],
+              "challenge": "aWQ6MzEzMjg=",
+              "challengeDetails": {
+                "id": "aWQ6MzEzMjg=",
+                "title": "Will It Rain On My Parade?",
+                "meta": {
+                  "type": "CHALLENGE",
+                  "slug": "will-it-rain-on-my-parade",
+                  "firstPublishedAt": "2025-08-18T19:28:40.295442Z",
+                  "lastPublishedAt": "2025-08-19T21:17:28.593390Z",
+                  "relativeUrl": "/2025/challenges/will-it-rain-on-my-parade/",
+                  "live": true,
+                  "parent": null,
+                  "__typename": "ExpandedPageMeta"
+                },
+                "excerpt": "If you’re planning an outdoor event—like a vacation, or a hike on a trail, or fishing on a lake—it would be good to know the chances of adverse weather for the time and location you are considering. There are many types of Earth observation data that can provide information on weather conditions for a particular location and day of the year. Your challenge is to construct an app with a personalized interface that enables users to conduct a customized query to tell them the likelihood of “very hot,” “very cold,” “very windy,” “very wet,” or “very uncomfortable” conditions for the location and time they specify.",
+                "__typename": "ChallengePage"
+              },
+              "location": "aWQ6MzA2NjM=",
+              "locationDetails": {
+                "id": "aWQ6MzA2NjM=",
+                "title": "Uberlandia",
+                "displayName": "Uberlândia",
+                "meta": {
+                  "type": "LOCATION",
+                  "slug": "uberlandia",
+                  "firstPublishedAt": "2025-07-18T21:43:56.560298Z",
+                  "lastPublishedAt": "2025-08-22T19:13:44.047613Z",
+                  "relativeUrl": "/2025/local-events/uberlandia/",
+                  "live": true,
+                  "parent": null,
+                  "__typename": "ExpandedPageMeta"
+                },
+                "country": "Brazil",
+                "__typename": "LocationPage"
+              },
+              "event": "aWQ6Mw==",
+              "eventDetails": {
+                "__typename": "GlobalEvent",
+                "id": "aWQ6Mw==",
+                "name": "2025 NASA Space Apps Challenge",
+                "displayName": "2025 NASA Space Apps Challenge",
+                "slug": "2025",
+                "status": 2,
+                "startDate": "2025-10-04T13:00:00",
+                "endDate": "2025-10-05T09:00:00",
+                "certificate": null,
+                "createRegistrationForm": "aWQ6MQ==",
+                "editRegistrationForm": "aWQ6MQ==",
+                "createTeamForm": "aWQ6Ng==",
+                "timezone": "GMT",
+                "teamMemberLimit": 6,
+                "eventRegistrationStatus": 2,
+                "localEventRegistrationStatus": 6,
+                "teamRegistrationStatus": 6,
+                "isTeamPagesActive": true,
+                "isAwardsActive": false,
+                "isChallengePagesActive": false,
+                "localEventEditStatus": 5,
+                "teamEditStatus": 5,
+                "teamStreamEditStatus": 0,
+                "projectEditStatus": 0,
+                "localEventJudgingStatus": 0,
+                "nominationJudgingStatus": 0,
+                "projectFields": [
+                  {
+                    "title": "Summary",
+                    "caption": "",
+                    "fieldMapping": "summary",
+                    "fieldType": "TEXT",
+                    "__typename": "ProjectFieldBlock"
+                  },
+                  {
+                    "title": "Project Demonstration",
+                    "caption": "",
+                    "fieldMapping": "demoLink",
+                    "fieldType": "URL",
+                    "__typename": "ProjectFieldBlock"
+                  },
+                  {
+                    "title": "Project",
+                    "caption": "",
+                    "fieldMapping": "projectLink",
+                    "fieldType": "URL",
+                    "__typename": "ProjectFieldBlock"
+                  },
+                  {
+                    "title": "Project Details",
+                    "caption": "",
+                    "fieldMapping": "details",
+                    "fieldType": "RICHFULL",
+                    "__typename": "ProjectFieldBlock"
+                  },
+                  {
+                    "title": "Use of Artificial Intelligence (AI)",
+                    "caption": "",
+                    "fieldMapping": "aiReferences",
+                    "fieldType": "LINKS",
+                    "__typename": "ProjectFieldBlock"
+                  },
+                  {
+                    "title": "NASA Data",
+                    "caption": "",
+                    "fieldMapping": "dataReferences",
+                    "fieldType": "LINKS",
+                    "__typename": "ProjectFieldBlock"
+                  },
+                  {
+                    "title": "Space Agency Partner & Other Data",
+                    "caption": "",
+                    "fieldMapping": "projectReferences",
+                    "fieldType": "LINKS",
+                    "__typename": "ProjectFieldBlock"
+                  }
+                ]
+              },
+              "joinEnabled": true,
+              "memberships": null,
+              "nominationBadges": [],
+              "awardBadges": null
+            }
+          },
+          {
+            "__typename": "TeamPageEdge",
+            "cursor": "b2Zmc2V0OjM3",
+            "node": {
+              "__typename": "TeamPage",
+              "id": "aWQ6MzM2MzM=",
+              "title": "space-team",
+              "meta": {
+                "type": "TEAM",
+                "slug": "space-team5",
+                "firstPublishedAt": "2025-08-30T14:38:11.824778Z",
+                "lastPublishedAt": "2025-08-30T14:40:22.117038Z",
+                "relativeUrl": "/2025/find-a-team/space-team5/",
+                "live": true,
+                "parent": null,
+                "__typename": "ExpandedPageMeta"
+              },
+              "owner": "aWQ6MzkxODc3",
+              "ownerDetails": null,
+              "excerpt": "description",
+              "project": "aWQ6MzE0NDg=",
+              "projectDetails": {
+                "id": "aWQ6MzE0NDg=",
+                "name": "Project space-team",
+                "summary": "",
+                "demoLink": "",
+                "projectLink": "",
+                "details": "",
+                "solution": "",
+                "aiReferences": "",
+                "dataReferences": "",
+                "projectReferences": "",
+                "isSubmitted": false,
+                "savedAt": null,
+                "submittedAt": null,
+                "__typename": "Project"
+              },
+              "projectSubmitted": false,
+              "featuredImage": null,
+              "description": null,
+              "desiredSkills": [],
+              "languages": [],
+              "challenge": "aWQ6MzEzMjY=",
+              "challengeDetails": {
+                "id": "aWQ6MzEzMjY=",
+                "title": "BloomWatch: An Earth Observation Application for Global Flowering Phenology",
+                "meta": {
+                  "type": "CHALLENGE",
+                  "slug": "bloomwatch-an-earth-observation-application-for-global-flowering-phenology",
+                  "firstPublishedAt": "2025-08-18T19:28:40.108550Z",
+                  "lastPublishedAt": "2025-08-19T21:22:32.295792Z",
+                  "relativeUrl": "/2025/challenges/bloomwatch-an-earth-observation-application-for-global-flowering-phenology/",
+                  "live": true,
+                  "parent": null,
+                  "__typename": "ExpandedPageMeta"
+                },
+                "excerpt": "Witness the pulse of life across our planet! From season to season and year to year, Earth’s vegetation is constantly changing, providing critical information on plant species, crops, seasonal effects, pollen sources, and changes in plant phenology (the relationship between seasonal changes and climate and biological phenomena in plants). Your challenge is to harness the power of NASA Earth observations to create a dynamic visual tool that displays and/or detects plant blooming events around the globe—just like pollinators do–and that advances solutions for monitoring, predicting, or managing vegetation.",
+                "__typename": "ChallengePage"
+              },
+              "location": "aWQ6MzA2NjM=",
+              "locationDetails": {
+                "id": "aWQ6MzA2NjM=",
+                "title": "Uberlandia",
+                "displayName": "Uberlândia",
+                "meta": {
+                  "type": "LOCATION",
+                  "slug": "uberlandia",
+                  "firstPublishedAt": "2025-07-18T21:43:56.560298Z",
+                  "lastPublishedAt": "2025-08-22T19:13:44.047613Z",
+                  "relativeUrl": "/2025/local-events/uberlandia/",
+                  "live": true,
+                  "parent": null,
+                  "__typename": "ExpandedPageMeta"
+                },
+                "country": "Brazil",
+                "__typename": "LocationPage"
+              },
+              "event": "aWQ6Mw==",
+              "eventDetails": {
+                "__typename": "GlobalEvent",
+                "id": "aWQ6Mw==",
+                "name": "2025 NASA Space Apps Challenge",
+                "displayName": "2025 NASA Space Apps Challenge",
+                "slug": "2025",
+                "status": 2,
+                "startDate": "2025-10-04T13:00:00",
+                "endDate": "2025-10-05T09:00:00",
+                "certificate": null,
+                "createRegistrationForm": "aWQ6MQ==",
+                "editRegistrationForm": "aWQ6MQ==",
+                "createTeamForm": "aWQ6Ng==",
+                "timezone": "GMT",
+                "teamMemberLimit": 6,
+                "eventRegistrationStatus": 2,
+                "localEventRegistrationStatus": 6,
+                "teamRegistrationStatus": 6,
+                "isTeamPagesActive": true,
+                "isAwardsActive": false,
+                "isChallengePagesActive": false,
+                "localEventEditStatus": 5,
+                "teamEditStatus": 5,
+                "teamStreamEditStatus": 0,
+                "projectEditStatus": 0,
+                "localEventJudgingStatus": 0,
+                "nominationJudgingStatus": 0,
+                "projectFields": [
+                  {
+                    "title": "Summary",
+                    "caption": "",
+                    "fieldMapping": "summary",
+                    "fieldType": "TEXT",
+                    "__typename": "ProjectFieldBlock"
+                  },
+                  {
+                    "title": "Project Demonstration",
+                    "caption": "",
+                    "fieldMapping": "demoLink",
+                    "fieldType": "URL",
+                    "__typename": "ProjectFieldBlock"
+                  },
+                  {
+                    "title": "Project",
+                    "caption": "",
+                    "fieldMapping": "projectLink",
+                    "fieldType": "URL",
+                    "__typename": "ProjectFieldBlock"
+                  },
+                  {
+                    "title": "Project Details",
+                    "caption": "",
+                    "fieldMapping": "details",
+                    "fieldType": "RICHFULL",
+                    "__typename": "ProjectFieldBlock"
+                  },
+                  {
+                    "title": "Use of Artificial Intelligence (AI)",
+                    "caption": "",
+                    "fieldMapping": "aiReferences",
+                    "fieldType": "LINKS",
+                    "__typename": "ProjectFieldBlock"
+                  },
+                  {
+                    "title": "NASA Data",
+                    "caption": "",
+                    "fieldMapping": "dataReferences",
+                    "fieldType": "LINKS",
+                    "__typename": "ProjectFieldBlock"
+                  },
+                  {
+                    "title": "Space Agency Partner & Other Data",
+                    "caption": "",
+                    "fieldMapping": "projectReferences",
+                    "fieldType": "LINKS",
+                    "__typename": "ProjectFieldBlock"
+                  }
+                ]
+              },
+              "joinEnabled": true,
+              "memberships": null,
+              "nominationBadges": [],
+              "awardBadges": null
+            }
+          },
+          {
+            "__typename": "TeamPageEdge",
+            "cursor": "b2Zmc2V0OjM4",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6MzIwMTc=",
@@ -5996,7 +7031,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjMz",
+            "cursor": "b2Zmc2V0OjM5",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6MzI2MDc=",
@@ -6178,7 +7213,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjM0",
+            "cursor": "b2Zmc2V0OjQw",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6MzI2MzE=",
@@ -6371,7 +7406,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjM1",
+            "cursor": "b2Zmc2V0OjQx",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6MzM0OTg=",
@@ -6553,7 +7588,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjM2",
+            "cursor": "b2Zmc2V0OjQy",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6MzMwNjA=",
@@ -6735,7 +7770,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjM3",
+            "cursor": "b2Zmc2V0OjQz",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6MzMyNDM=",

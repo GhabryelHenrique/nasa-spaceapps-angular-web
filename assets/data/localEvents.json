@@ -86,7 +86,7 @@
           },
           "country": "Switzerland",
           "displayName": "Zurich",
-          "cachedRegistrations": 51,
+          "cachedRegistrations": 53,
           "eventType": "Virtual & In-Person",
           "registrationEnabled": true,
           "isHostEvent": false,
@@ -406,7 +406,7 @@
           },
           "country": "Canada",
           "displayName": "Waterloo",
-          "cachedRegistrations": 149,
+          "cachedRegistrations": 150,
           "eventType": "In-Person",
           "registrationEnabled": true,
           "isHostEvent": false,
@@ -502,7 +502,7 @@
           },
           "country": "India",
           "displayName": "Visakhapatnam",
-          "cachedRegistrations": 125,
+          "cachedRegistrations": 130,
           "eventType": "In-Person",
           "registrationEnabled": true,
           "isHostEvent": false,
@@ -534,7 +534,7 @@
           },
           "country": "India",
           "displayName": "Virudhunagar",
-          "cachedRegistrations": 72,
+          "cachedRegistrations": 73,
           "eventType": "Virtual",
           "registrationEnabled": true,
           "isHostEvent": false,
@@ -694,7 +694,7 @@
           },
           "country": "Holy See",
           "displayName": "Vatican City",
-          "cachedRegistrations": 23,
+          "cachedRegistrations": 25,
           "eventType": "Virtual & In-Person",
           "registrationEnabled": true,
           "isHostEvent": false,
@@ -726,7 +726,7 @@
           },
           "country": "Canada",
           "displayName": "Vancouver",
-          "cachedRegistrations": 41,
+          "cachedRegistrations": 42,
           "eventType": "In-Person",
           "registrationEnabled": true,
           "isHostEvent": false,
@@ -758,7 +758,7 @@
           },
           "country": "Turkey",
           "displayName": "Van",
-          "cachedRegistrations": 65,
+          "cachedRegistrations": 66,
           "eventType": "Virtual & In-Person",
           "registrationEnabled": true,
           "isHostEvent": false,
@@ -950,7 +950,7 @@
           },
           "country": "India",
           "displayName": "Udaipur",
-          "cachedRegistrations": 108,
+          "cachedRegistrations": 112,
           "eventType": "In-Person",
           "registrationEnabled": true,
           "isHostEvent": false,
@@ -982,7 +982,7 @@
           },
           "country": "Brazil",
           "displayName": "Uberlândia",
-          "cachedRegistrations": 569,
+          "cachedRegistrations": 582,
           "eventType": "Virtual & In-Person",
           "registrationEnabled": true,
           "isHostEvent": false,
@@ -1078,7 +1078,7 @@
           },
           "country": "Peru",
           "displayName": "Trujillo",
-          "cachedRegistrations": 21,
+          "cachedRegistrations": 23,
           "eventType": "Virtual & In-Person",
           "registrationEnabled": true,
           "isHostEvent": false,
@@ -1206,7 +1206,7 @@
           },
           "country": "France",
           "displayName": "Toulouse",
-          "cachedRegistrations": 47,
+          "cachedRegistrations": 46,
           "eventType": "In-Person",
           "registrationEnabled": true,
           "isHostEvent": false,
@@ -1238,7 +1238,7 @@
           },
           "country": "Canada",
           "displayName": "Toronto",
-          "cachedRegistrations": 87,
+          "cachedRegistrations": 90,
           "eventType": "In-Person",
           "registrationEnabled": true,
           "isHostEvent": false,
@@ -1398,7 +1398,7 @@
           },
           "country": "India",
           "displayName": "Thrissur",
-          "cachedRegistrations": 100,
+          "cachedRegistrations": 101,
           "eventType": "Virtual & In-Person",
           "registrationEnabled": true,
           "isHostEvent": false,
@@ -1622,7 +1622,7 @@
           },
           "country": "Uzbekistan",
           "displayName": "Tashkent",
-          "cachedRegistrations": 130,
+          "cachedRegistrations": 138,
           "eventType": "In-Person",
           "registrationEnabled": true,
           "isHostEvent": false,
@@ -1910,7 +1910,7 @@
           },
           "country": "Taiwan",
           "displayName": "Taichung City",
-          "cachedRegistrations": 12,
+          "cachedRegistrations": 11,
           "eventType": "Virtual",
           "registrationEnabled": true,
           "isHostEvent": false,
@@ -1942,7 +1942,7 @@
           },
           "country": "Brazil",
           "displayName": "São Paulo",
-          "cachedRegistrations": 78,
+          "cachedRegistrations": 82,
           "eventType": "In-Person",
           "registrationEnabled": true,
           "isHostEvent": false,
@@ -2038,7 +2038,7 @@
           },
           "country": "Brazil",
           "displayName": "São José dos Campos",
-          "cachedRegistrations": 17,
+          "cachedRegistrations": 18,
           "eventType": "Virtual",
           "registrationEnabled": true,
           "isHostEvent": false,
@@ -2102,7 +2102,7 @@
           },
           "country": "Brazil",
           "displayName": "São Gonçalo",
-          "cachedRegistrations": 84,
+          "cachedRegistrations": 83,
           "eventType": "Virtual",
           "registrationEnabled": true,
           "isHostEvent": false,
@@ -2166,7 +2166,7 @@
           },
           "country": "Bangladesh",
           "displayName": "Sylhet",
-          "cachedRegistrations": 90,
+          "cachedRegistrations": 104,
           "eventType": "Virtual",
           "registrationEnabled": true,
           "isHostEvent": false,
@@ -2198,7 +2198,7 @@
           },
           "country": "Australia",
           "displayName": "Sydney",
-          "cachedRegistrations": 17,
+          "cachedRegistrations": 18,
           "eventType": "Virtual & In-Person",
           "registrationEnabled": true,
           "isHostEvent": false,
@@ -2230,7 +2230,7 @@
           },
           "country": "India",
           "displayName": "Surat",
-          "cachedRegistrations": 199,
+          "cachedRegistrations": 206,
           "eventType": "Virtual",
           "registrationEnabled": true,
           "isHostEvent": false,
@@ -2262,7 +2262,7 @@
           },
           "country": "Indonesia",
           "displayName": "Surabaya",
-          "cachedRegistrations": 15,
+          "cachedRegistrations": 16,
           "eventType": "Virtual & In-Person",
           "registrationEnabled": true,
           "isHostEvent": false,
@@ -2390,7 +2390,7 @@
           },
           "country": "Poland",
           "displayName": "Stalowa Wola",
-          "cachedRegistrations": 65,
+          "cachedRegistrations": 69,
           "eventType": "In-Person",
           "registrationEnabled": true,
           "isHostEvent": false,
@@ -2454,7 +2454,7 @@
           },
           "country": "Tunisia",
           "displayName": "Sousse",
-          "cachedRegistrations": 9,
+          "cachedRegistrations": 10,
           "eventType": "Virtual & In-Person",
           "registrationEnabled": true,
           "isHostEvent": false,
@@ -2550,7 +2550,7 @@
           },
           "country": "Egypt",
           "displayName": "Sohag",
-          "cachedRegistrations": 158,
+          "cachedRegistrations": 162,
           "eventType": "Virtual & In-Person",
           "registrationEnabled": true,
           "isHostEvent": false,
@@ -2582,7 +2582,7 @@
           },
           "country": "Colombia",
           "displayName": "Sogamoso",
-          "cachedRegistrations": 94,
+          "cachedRegistrations": 95,
           "eventType": "Virtual & In-Person",
           "registrationEnabled": true,
           "isHostEvent": false,
@@ -2710,7 +2710,7 @@
           },
           "country": "Kazakhstan",
           "displayName": "Shymkent",
-          "cachedRegistrations": 17,
+          "cachedRegistrations": 19,
           "eventType": "In-Person",
           "registrationEnabled": true,
           "isHostEvent": false,
@@ -2838,7 +2838,7 @@
           },
           "country": "Egypt",
           "displayName": "Shebeen El-Kom",
-          "cachedRegistrations": 236,
+          "cachedRegistrations": 241,
           "eventType": "In-Person",
           "registrationEnabled": true,
           "isHostEvent": false,
@@ -3030,7 +3030,7 @@
           },
           "country": "South Korea",
           "displayName": "Seoul",
-          "cachedRegistrations": 162,
+          "cachedRegistrations": 166,
           "eventType": "Virtual",
           "registrationEnabled": true,
           "isHostEvent": false,
@@ -3062,7 +3062,7 @@
           },
           "country": "United States",
           "displayName": "Seattle, WA",
-          "cachedRegistrations": 54,
+          "cachedRegistrations": 57,
           "eventType": "In-Person",
           "registrationEnabled": true,
           "isHostEvent": false,
@@ -3158,7 +3158,7 @@
           },
           "country": "Brazil",
           "displayName": "Santo André",
-          "cachedRegistrations": 11,
+          "cachedRegistrations": 12,
           "eventType": "Virtual & In-Person",
           "registrationEnabled": true,
           "isHostEvent": false,
@@ -3190,7 +3190,7 @@
           },
           "country": "Dominican Republic",
           "displayName": "Santiago, Dominican Republic",
-          "cachedRegistrations": 87,
+          "cachedRegistrations": 88,
           "eventType": "In-Person",
           "registrationEnabled": true,
           "isHostEvent": false,
@@ -3222,7 +3222,7 @@
           },
           "country": "Chile",
           "displayName": "Santiago, Chile",
-          "cachedRegistrations": 203,
+          "cachedRegistrations": 211,
           "eventType": "In-Person",
           "registrationEnabled": true,
           "isHostEvent": false,
@@ -3286,7 +3286,7 @@
           },
           "country": "Bolivia",
           "displayName": "Santa Cruz de la Sierra",
-          "cachedRegistrations": 11,
+          "cachedRegistrations": 12,
           "eventType": "In-Person",
           "registrationEnabled": true,
           "isHostEvent": false,
@@ -3478,7 +3478,7 @@
           },
           "country": "Costa Rica",
           "displayName": "San José",
-          "cachedRegistrations": 118,
+          "cachedRegistrations": 119,
           "eventType": "In-Person",
           "registrationEnabled": true,
           "isHostEvent": false,
@@ -3574,7 +3574,7 @@
           },
           "country": "Turkey",
           "displayName": "Samsun",
-          "cachedRegistrations": 0,
+          "cachedRegistrations": 1,
           "eventType": "In-Person",
           "registrationEnabled": true,
           "isHostEvent": false,
@@ -3606,7 +3606,7 @@
           },
           "country": "Brazil",
           "displayName": "Salvador",
-          "cachedRegistrations": 65,
+          "cachedRegistrations": 66,
           "eventType": "In-Person",
           "registrationEnabled": true,
           "isHostEvent": false,
@@ -3766,7 +3766,7 @@
           },
           "country": "Poland",
           "displayName": "Rzeszów",
-          "cachedRegistrations": 14,
+          "cachedRegistrations": 15,
           "eventType": "Virtual & In-Person",
           "registrationEnabled": true,
           "isHostEvent": false,
@@ -4022,7 +4022,7 @@
           },
           "country": "United Arab Emirates",
           "displayName": "Ras Al Khaimah",
-          "cachedRegistrations": 28,
+          "cachedRegistrations": 30,
           "eventType": "Virtual & In-Person",
           "registrationEnabled": true,
           "isHostEvent": false,
@@ -4054,7 +4054,7 @@
           },
           "country": "Bangladesh",
           "displayName": "Rangpur",
-          "cachedRegistrations": 92,
+          "cachedRegistrations": 102,
           "eventType": "Virtual",
           "registrationEnabled": true,
           "isHostEvent": false,
@@ -4086,7 +4086,7 @@
           },
           "country": "India",
           "displayName": "Ranchi",
-          "cachedRegistrations": 12,
+          "cachedRegistrations": 13,
           "eventType": "Virtual",
           "registrationEnabled": true,
           "isHostEvent": false,
@@ -4150,7 +4150,7 @@
           },
           "country": "Bangladesh",
           "displayName": "Rajshahi",
-          "cachedRegistrations": 150,
+          "cachedRegistrations": 152,
           "eventType": "Virtual",
           "registrationEnabled": true,
           "isHostEvent": false,
@@ -4214,7 +4214,7 @@
           },
           "country": "India",
           "displayName": "Raipur",
-          "cachedRegistrations": 213,
+          "cachedRegistrations": 214,
           "eventType": "Virtual & In-Person",
           "registrationEnabled": true,
           "isHostEvent": false,
@@ -4470,7 +4470,7 @@
           },
           "country": "India",
           "displayName": "Pune",
-          "cachedRegistrations": 132,
+          "cachedRegistrations": 133,
           "eventType": "Virtual",
           "registrationEnabled": true,
           "isHostEvent": false,
@@ -4566,7 +4566,7 @@
           },
           "country": "Mexico",
           "displayName": "Puebla",
-          "cachedRegistrations": 22,
+          "cachedRegistrations": 23,
           "eventType": "In-Person",
           "registrationEnabled": true,
           "isHostEvent": false,
@@ -4630,7 +4630,7 @@
           },
           "country": "South Africa",
           "displayName": "Pretoria",
-          "cachedRegistrations": 16,
+          "cachedRegistrations": 17,
           "eventType": "Virtual & In-Person",
           "registrationEnabled": true,
           "isHostEvent": false,
@@ -4662,7 +4662,7 @@
           },
           "country": "India",
           "displayName": "Prayagraj",
-          "cachedRegistrations": 3,
+          "cachedRegistrations": 4,
           "eventType": "Virtual & In-Person",
           "registrationEnabled": true,
           "isHostEvent": false,
@@ -4758,7 +4758,7 @@
           },
           "country": "Egypt",
           "displayName": "Port Said",
-          "cachedRegistrations": 53,
+          "cachedRegistrations": 58,
           "eventType": "In-Person",
           "registrationEnabled": true,
           "isHostEvent": false,
@@ -4918,7 +4918,7 @@
           },
           "country": "Peru",
           "displayName": "Piura",
-          "cachedRegistrations": 22,
+          "cachedRegistrations": 23,
           "eventType": "Virtual & In-Person",
           "registrationEnabled": true,
           "isHostEvent": false,
@@ -5142,7 +5142,7 @@
           },
           "country": "India",
           "displayName": "Panaji",
-          "cachedRegistrations": 83,
+          "cachedRegistrations": 84,
           "eventType": "In-Person",
           "registrationEnabled": true,
           "isHostEvent": false,
@@ -5302,7 +5302,7 @@
           },
           "country": "Canada",
           "displayName": "Ottawa",
-          "cachedRegistrations": 19,
+          "cachedRegistrations": 20,
           "eventType": "Virtual & In-Person",
           "registrationEnabled": true,
           "isHostEvent": false,
@@ -5430,7 +5430,7 @@
           },
           "country": "Canada",
           "displayName": "Oshawa",
-          "cachedRegistrations": 9,
+          "cachedRegistrations": 10,
           "eventType": "Virtual & In-Person",
           "registrationEnabled": true,
           "isHostEvent": false,
@@ -5526,7 +5526,7 @@
           },
           "country": "Kazakhstan",
           "displayName": "Oral",
-          "cachedRegistrations": 14,
+          "cachedRegistrations": 15,
           "eventType": "In-Person",
           "registrationEnabled": true,
           "isHostEvent": false,
@@ -5654,7 +5654,7 @@
           },
           "country": "Germany",
           "displayName": "Nuremberg",
-          "cachedRegistrations": 16,
+          "cachedRegistrations": 15,
           "eventType": "In-Person",
           "registrationEnabled": true,
           "isHostEvent": false,
@@ -5846,7 +5846,7 @@
           },
           "country": "United States",
           "displayName": "New York City, NY",
-          "cachedRegistrations": 107,
+          "cachedRegistrations": 111,
           "eventType": "Virtual & In-Person",
           "registrationEnabled": true,
           "isHostEvent": false,
@@ -5878,7 +5878,7 @@
           },
           "country": "Colombia",
           "displayName": "Neiva",
-          "cachedRegistrations": 24,
+          "cachedRegistrations": 26,
           "eventType": "In-Person",
           "registrationEnabled": true,
           "isHostEvent": false,
@@ -5974,7 +5974,7 @@
           },
           "country": "India",
           "displayName": "Nashik",
-          "cachedRegistrations": 93,
+          "cachedRegistrations": 94,
           "eventType": "In-Person",
           "registrationEnabled": true,
           "isHostEvent": false,
@@ -6006,7 +6006,7 @@
           },
           "country": "Vietnam",
           "displayName": "Ninh Binh City",
-          "cachedRegistrations": 10,
+          "cachedRegistrations": 12,
           "eventType": "Virtual & In-Person",
           "registrationEnabled": true,
           "isHostEvent": false,
@@ -6102,7 +6102,7 @@
           },
           "country": "India",
           "displayName": "Nagpur",
-          "cachedRegistrations": 18,
+          "cachedRegistrations": 19,
           "eventType": "Virtual & In-Person",
           "registrationEnabled": true,
           "isHostEvent": false,
@@ -6166,7 +6166,7 @@
           },
           "country": "Tunisia",
           "displayName": "Nabeul",
-          "cachedRegistrations": 6,
+          "cachedRegistrations": 7,
           "eventType": "Virtual & In-Person",
           "registrationEnabled": true,
           "isHostEvent": false,
@@ -6262,7 +6262,7 @@
           },
           "country": "India",
           "displayName": "Mysore",
-          "cachedRegistrations": 40,
+          "cachedRegistrations": 39,
           "eventType": "Virtual & In-Person",
           "registrationEnabled": true,
           "isHostEvent": false,
@@ -6390,7 +6390,7 @@
           },
           "country": "India",
           "displayName": "Mussoorie",
-          "cachedRegistrations": 46,
+          "cachedRegistrations": 50,
           "eventType": "Virtual & In-Person",
           "registrationEnabled": true,
           "isHostEvent": false,
@@ -6518,7 +6518,7 @@
           },
           "country": "India",
           "displayName": "Mumbai",
-          "cachedRegistrations": 118,
+          "cachedRegistrations": 119,
           "eventType": "Virtual & In-Person",
           "registrationEnabled": true,
           "isHostEvent": false,
@@ -6614,7 +6614,7 @@
           },
           "country": "United States",
           "displayName": "Mountain View, CA",
-          "cachedRegistrations": 49,
+          "cachedRegistrations": 52,
           "eventType": "Virtual & In-Person",
           "registrationEnabled": true,
           "isHostEvent": false,
@@ -6678,7 +6678,7 @@
           },
           "country": "Peru",
           "displayName": "Moquegua",
-          "cachedRegistrations": 12,
+          "cachedRegistrations": 15,
           "eventType": "Virtual",
           "registrationEnabled": true,
           "isHostEvent": false,
@@ -6742,7 +6742,7 @@
           },
           "country": "Canada",
           "displayName": "Montréal",
-          "cachedRegistrations": 54,
+          "cachedRegistrations": 55,
           "eventType": "Virtual & In-Person",
           "registrationEnabled": true,
           "isHostEvent": false,
@@ -6806,7 +6806,7 @@
           },
           "country": "Mexico",
           "displayName": "Monterrey",
-          "cachedRegistrations": 304,
+          "cachedRegistrations": 317,
           "eventType": "In-Person",
           "registrationEnabled": true,
           "isHostEvent": false,
@@ -6838,7 +6838,7 @@
           },
           "country": "India",
           "displayName": "Mohali",
-          "cachedRegistrations": 47,
+          "cachedRegistrations": 48,
           "eventType": "Virtual & In-Person",
           "registrationEnabled": true,
           "isHostEvent": false,
@@ -6902,7 +6902,7 @@
           },
           "country": "Malaysia",
           "displayName": "Miri",
-          "cachedRegistrations": 43,
+          "cachedRegistrations": 54,
           "eventType": "Virtual & In-Person",
           "registrationEnabled": true,
           "isHostEvent": false,
@@ -6998,7 +6998,7 @@
           },
           "country": "Mexico",
           "displayName": "Mexico City",
-          "cachedRegistrations": 97,
+          "cachedRegistrations": 99,
           "eventType": "In-Person",
           "registrationEnabled": true,
           "isHostEvent": false,
@@ -7094,7 +7094,7 @@
           },
           "country": "United States",
           "displayName": "Merced, CA",
-          "cachedRegistrations": 16,
+          "cachedRegistrations": 17,
           "eventType": "In-Person",
           "registrationEnabled": true,
           "isHostEvent": false,
@@ -7254,7 +7254,7 @@
           },
           "country": "India",
           "displayName": "Medchal",
-          "cachedRegistrations": 286,
+          "cachedRegistrations": 289,
           "eventType": "Virtual",
           "registrationEnabled": true,
           "isHostEvent": false,
@@ -7670,7 +7670,7 @@
           },
           "country": "Spain",
           "displayName": "Madrid",
-          "cachedRegistrations": 125,
+          "cachedRegistrations": 126,
           "eventType": "In-Person",
           "registrationEnabled": true,
           "isHostEvent": false,
@@ -7702,7 +7702,7 @@
           },
           "country": "Brazil",
           "displayName": "Maceió",
-          "cachedRegistrations": 8,
+          "cachedRegistrations": 9,
           "eventType": "In-Person",
           "registrationEnabled": true,
           "isHostEvent": false,
@@ -7766,7 +7766,7 @@
           },
           "country": "India",
           "displayName": "Lucknow",
-          "cachedRegistrations": 255,
+          "cachedRegistrations": 264,
           "eventType": "Virtual & In-Person",
           "registrationEnabled": true,
           "isHostEvent": false,
@@ -7830,7 +7830,7 @@
           },
           "country": "Democratic Republic of the Congo",
           "displayName": "Lubumbashi",
-          "cachedRegistrations": 4,
+          "cachedRegistrations": 6,
           "eventType": "Virtual & In-Person",
           "registrationEnabled": true,
           "isHostEvent": false,
@@ -7862,7 +7862,7 @@
           },
           "country": "Angola",
           "displayName": "Luanda",
-          "cachedRegistrations": 42,
+          "cachedRegistrations": 45,
           "eventType": "Virtual & In-Person",
           "registrationEnabled": true,
           "isHostEvent": false,
@@ -7990,7 +7990,7 @@
           },
           "country": "United Kingdom",
           "displayName": "London",
-          "cachedRegistrations": 132,
+          "cachedRegistrations": 135,
           "eventType": "Virtual & In-Person",
           "registrationEnabled": true,
           "isHostEvent": false,
@@ -8054,7 +8054,7 @@
           },
           "country": "Portugal",
           "displayName": "Lisbon",
-          "cachedRegistrations": 24,
+          "cachedRegistrations": 26,
           "eventType": "Virtual & In-Person",
           "registrationEnabled": true,
           "isHostEvent": false,
@@ -8150,7 +8150,7 @@
           },
           "country": "Peru",
           "displayName": "Lima",
-          "cachedRegistrations": 307,
+          "cachedRegistrations": 314,
           "eventType": "Virtual & In-Person",
           "registrationEnabled": true,
           "isHostEvent": false,
@@ -8342,7 +8342,7 @@
           },
           "country": "Pakistan",
           "displayName": "Lahore",
-          "cachedRegistrations": 54,
+          "cachedRegistrations": 53,
           "eventType": "In-Person",
           "registrationEnabled": true,
           "isHostEvent": false,
@@ -8406,7 +8406,7 @@
           },
           "country": "Argentina",
           "displayName": "San Luis",
-          "cachedRegistrations": 183,
+          "cachedRegistrations": 184,
           "eventType": "In-Person",
           "registrationEnabled": true,
           "isHostEvent": false,
@@ -8438,7 +8438,7 @@
           },
           "country": "Bolivia",
           "displayName": "La Paz",
-          "cachedRegistrations": 1,
+          "cachedRegistrations": 2,
           "eventType": "In-Person",
           "registrationEnabled": true,
           "isHostEvent": false,
@@ -8502,7 +8502,7 @@
           },
           "country": "Ukraine",
           "displayName": "Kyiv",
-          "cachedRegistrations": 69,
+          "cachedRegistrations": 70,
           "eventType": "Virtual & In-Person",
           "registrationEnabled": true,
           "isHostEvent": false,
@@ -8534,7 +8534,7 @@
           },
           "country": "Kuwait",
           "displayName": "Kuwait",
-          "cachedRegistrations": 43,
+          "cachedRegistrations": 45,
           "eventType": "In-Person",
           "registrationEnabled": true,
           "isHostEvent": false,
@@ -8566,7 +8566,7 @@
           },
           "country": "Ghana",
           "displayName": "Kumasi",
-          "cachedRegistrations": 41,
+          "cachedRegistrations": 40,
           "eventType": "In-Person",
           "registrationEnabled": true,
           "isHostEvent": false,
@@ -8598,7 +8598,7 @@
           },
           "country": "Malaysia",
           "displayName": "Kuching",
-          "cachedRegistrations": 34,
+          "cachedRegistrations": 36,
           "eventType": "Virtual & In-Person",
           "registrationEnabled": true,
           "isHostEvent": false,
@@ -8630,7 +8630,7 @@
           },
           "country": "Malaysia",
           "displayName": "Kuala Lumpur",
-          "cachedRegistrations": 73,
+          "cachedRegistrations": 77,
           "eventType": "Virtual & In-Person",
           "registrationEnabled": true,
           "isHostEvent": false,
@@ -8662,7 +8662,7 @@
           },
           "country": "India",
           "displayName": "Kothamangalam",
-          "cachedRegistrations": 78,
+          "cachedRegistrations": 85,
           "eventType": "Virtual & In-Person",
           "registrationEnabled": true,
           "isHostEvent": false,
@@ -8822,7 +8822,7 @@
           },
           "country": "India",
           "displayName": "Kochi",
-          "cachedRegistrations": 109,
+          "cachedRegistrations": 110,
           "eventType": "Virtual & In-Person",
           "registrationEnabled": true,
           "isHostEvent": false,
@@ -8918,7 +8918,7 @@
           },
           "country": "Bangladesh",
           "displayName": "Khulna",
-          "cachedRegistrations": 108,
+          "cachedRegistrations": 112,
           "eventType": "Virtual",
           "registrationEnabled": true,
           "isHostEvent": false,
@@ -9046,7 +9046,7 @@
           },
           "country": "Pakistan",
           "displayName": "Karachi",
-          "cachedRegistrations": 239,
+          "cachedRegistrations": 248,
           "eventType": "In-Person",
           "registrationEnabled": true,
           "isHostEvent": false,
@@ -9078,7 +9078,7 @@
           },
           "country": "Taiwan",
           "displayName": "Kaohsiung City",
-          "cachedRegistrations": 3,
+          "cachedRegistrations": 5,
           "eventType": "Virtual",
           "registrationEnabled": true,
           "isHostEvent": false,
@@ -9174,7 +9174,7 @@
           },
           "country": "India",
           "displayName": "Kanjirappally",
-          "cachedRegistrations": 170,
+          "cachedRegistrations": 172,
           "eventType": "Virtual & In-Person",
           "registrationEnabled": true,
           "isHostEvent": false,
@@ -9462,7 +9462,7 @@
           },
           "country": "India",
           "displayName": "Jamshedpur",
-          "cachedRegistrations": 11,
+          "cachedRegistrations": 10,
           "eventType": "Virtual & In-Person",
           "registrationEnabled": true,
           "isHostEvent": false,
@@ -9590,7 +9590,7 @@
           },
           "country": "India",
           "displayName": "Jaipur",
-          "cachedRegistrations": 219,
+          "cachedRegistrations": 223,
           "eventType": "Virtual & In-Person",
           "registrationEnabled": true,
           "isHostEvent": false,
@@ -9622,7 +9622,7 @@
           },
           "country": "Brazil",
           "displayName": "Jaguariúna",
-          "cachedRegistrations": 42,
+          "cachedRegistrations": 43,
           "eventType": "Virtual",
           "registrationEnabled": true,
           "isHostEvent": false,
@@ -9654,7 +9654,7 @@
           },
           "country": "India",
           "displayName": "Jabalpur",
-          "cachedRegistrations": 27,
+          "cachedRegistrations": 28,
           "eventType": "Virtual & In-Person",
           "registrationEnabled": true,
           "isHostEvent": false,
@@ -9686,7 +9686,7 @@
           },
           "country": "Turkey",
           "displayName": "İzmir",
-          "cachedRegistrations": 22,
+          "cachedRegistrations": 24,
           "eventType": "In-Person",
           "registrationEnabled": true,
           "isHostEvent": false,
@@ -9718,7 +9718,7 @@
           },
           "country": "Turkey",
           "displayName": "İstanbul",
-          "cachedRegistrations": 95,
+          "cachedRegistrations": 99,
           "eventType": "In-Person",
           "registrationEnabled": true,
           "isHostEvent": false,
@@ -9750,7 +9750,7 @@
           },
           "country": "Turkey",
           "displayName": "Izmit",
-          "cachedRegistrations": 11,
+          "cachedRegistrations": 13,
           "eventType": "In-Person",
           "registrationEnabled": true,
           "isHostEvent": false,
@@ -9815,7 +9815,7 @@
           "country": "Nepal",
           "displayName": "Itahari",
           "cachedRegistrations": 9,
-          "eventType": "In-Person",
+          "eventType": "Virtual",
           "registrationEnabled": true,
           "isHostEvent": false,
           "__typename": "LocationPage"
@@ -9878,7 +9878,7 @@
           },
           "country": "Egypt",
           "displayName": "Ismailia",
-          "cachedRegistrations": 0,
+          "cachedRegistrations": 2,
           "eventType": "In-Person",
           "registrationEnabled": true,
           "isHostEvent": false,
@@ -9910,7 +9910,7 @@
           },
           "country": "Pakistan",
           "displayName": "Islamabad",
-          "cachedRegistrations": 87,
+          "cachedRegistrations": 89,
           "eventType": "Virtual & In-Person",
           "registrationEnabled": true,
           "isHostEvent": false,
@@ -9974,7 +9974,7 @@
           },
           "country": "Jordan",
           "displayName": "Irbid",
-          "cachedRegistrations": 7,
+          "cachedRegistrations": 9,
           "eventType": "In-Person",
           "registrationEnabled": true,
           "isHostEvent": false,
@@ -10006,7 +10006,7 @@
           },
           "country": "India",
           "displayName": "Indore",
-          "cachedRegistrations": 53,
+          "cachedRegistrations": 55,
           "eventType": "In-Person",
           "registrationEnabled": true,
           "isHostEvent": false,
@@ -10166,7 +10166,7 @@
           },
           "country": "Oman",
           "displayName": "Ibra",
-          "cachedRegistrations": 187,
+          "cachedRegistrations": 189,
           "eventType": "Virtual & In-Person",
           "registrationEnabled": true,
           "isHostEvent": false,
@@ -10198,7 +10198,7 @@
           },
           "country": "Pakistan",
           "displayName": "Hyderabad, Pakistan",
-          "cachedRegistrations": 1,
+          "cachedRegistrations": 2,
           "eventType": "In-Person",
           "registrationEnabled": true,
           "isHostEvent": false,
@@ -10230,7 +10230,7 @@
           },
           "country": "India",
           "displayName": "Hyderabad, India",
-          "cachedRegistrations": 164,
+          "cachedRegistrations": 171,
           "eventType": "Virtual",
           "registrationEnabled": true,
           "isHostEvent": false,
@@ -10262,7 +10262,7 @@
           },
           "country": "Peru",
           "displayName": "Huánuco",
-          "cachedRegistrations": 13,
+          "cachedRegistrations": 14,
           "eventType": "In-Person",
           "registrationEnabled": true,
           "isHostEvent": false,
@@ -10326,7 +10326,7 @@
           },
           "country": "Peru",
           "displayName": "Huancayo",
-          "cachedRegistrations": 61,
+          "cachedRegistrations": 63,
           "eventType": "In-Person",
           "registrationEnabled": true,
           "isHostEvent": false,
@@ -10358,7 +10358,7 @@
           },
           "country": "United States",
           "displayName": "Houston, TX",
-          "cachedRegistrations": 55,
+          "cachedRegistrations": 57,
           "eventType": "In-Person",
           "registrationEnabled": true,
           "isHostEvent": false,
@@ -10422,7 +10422,7 @@
           },
           "country": "Vietnam",
           "displayName": "Ho Chi Minh City",
-          "cachedRegistrations": 94,
+          "cachedRegistrations": 96,
           "eventType": "In-Person",
           "registrationEnabled": true,
           "isHostEvent": false,
@@ -10646,7 +10646,7 @@
           },
           "country": "India",
           "displayName": "Haldwani",
-          "cachedRegistrations": 32,
+          "cachedRegistrations": 33,
           "eventType": "In-Person",
           "registrationEnabled": true,
           "isHostEvent": false,
@@ -10806,7 +10806,7 @@
           },
           "country": "Guatemala",
           "displayName": "Guatemala",
-          "cachedRegistrations": 62,
+          "cachedRegistrations": 65,
           "eventType": "Virtual & In-Person",
           "registrationEnabled": true,
           "isHostEvent": false,
@@ -10838,7 +10838,7 @@
           },
           "country": "Brazil",
           "displayName": "Guarulhos",
-          "cachedRegistrations": 44,
+          "cachedRegistrations": 45,
           "eventType": "Virtual",
           "registrationEnabled": true,
           "isHostEvent": false,
@@ -10998,7 +10998,7 @@
           },
           "country": "Egypt",
           "displayName": "Giza",
-          "cachedRegistrations": 498,
+          "cachedRegistrations": 499,
           "eventType": "Virtual & In-Person",
           "registrationEnabled": true,
           "isHostEvent": false,
@@ -11158,7 +11158,7 @@
           },
           "country": "Botswana",
           "displayName": "Gaborone",
-          "cachedRegistrations": 7,
+          "cachedRegistrations": 8,
           "eventType": "In-Person",
           "registrationEnabled": true,
           "isHostEvent": false,
@@ -11286,7 +11286,7 @@
           },
           "country": "Brazil",
           "displayName": "Fortaleza",
-          "cachedRegistrations": 41,
+          "cachedRegistrations": 42,
           "eventType": "Virtual & In-Person",
           "registrationEnabled": true,
           "isHostEvent": false,
@@ -11350,7 +11350,7 @@
           },
           "country": "United Kingdom",
           "displayName": "Exeter",
-          "cachedRegistrations": 15,
+          "cachedRegistrations": 16,
           "eventType": "In-Person",
           "registrationEnabled": true,
           "isHostEvent": false,
@@ -11606,7 +11606,7 @@
           },
           "country": "Canada",
           "displayName": "Edmonton",
-          "cachedRegistrations": 27,
+          "cachedRegistrations": 28,
           "eventType": "In-Person",
           "registrationEnabled": true,
           "isHostEvent": false,
@@ -11734,7 +11734,7 @@
           },
           "country": "Ireland",
           "displayName": "Dublin",
-          "cachedRegistrations": 54,
+          "cachedRegistrations": 55,
           "eventType": "In-Person",
           "registrationEnabled": true,
           "isHostEvent": false,
@@ -11894,7 +11894,7 @@
           },
           "country": "Bangladesh",
           "displayName": "Dinajpur",
-          "cachedRegistrations": 50,
+          "cachedRegistrations": 55,
           "eventType": "Virtual & In-Person",
           "registrationEnabled": true,
           "isHostEvent": false,
@@ -11975,6 +11975,38 @@
         "geometry": {
           "type": "Point",
           "coordinates": [
+            -80.6506,
+            28.5858193
+          ],
+          "__typename": "Geometry"
+        },
+        "properties": {
+          "id": "aWQ6MzEwOTk=",
+          "title": "Dhangadhi",
+          "meta": {
+            "type": "LOCATION",
+            "htmlUrl": "https://www.spaceappschallenge.org/2025/local-events/dhangadhi/",
+            "__typename": "ExpandedPageMeta"
+          },
+          "country": "Nepal",
+          "displayName": "Dhangadhi",
+          "cachedRegistrations": 0,
+          "eventType": "Virtual",
+          "registrationEnabled": true,
+          "isHostEvent": false,
+          "__typename": "LocationPage"
+        },
+        "__typename": "LocationFeature"
+      },
+      "__typename": "LocationFeatureEdge"
+    },
+    {
+      "cursor": "b2Zmc2V0OjM3NQ==",
+      "node": {
+        "type": "Feature",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
             90.4212057,
             23.8205161
           ],
@@ -11990,7 +12022,7 @@
           },
           "country": "Bangladesh",
           "displayName": "Dhaka",
-          "cachedRegistrations": 570,
+          "cachedRegistrations": 605,
           "eventType": "Virtual",
           "registrationEnabled": true,
           "isHostEvent": false,
@@ -12001,7 +12033,7 @@
       "__typename": "LocationFeatureEdge"
     },
     {
-      "cursor": "b2Zmc2V0OjM3NQ==",
+      "cursor": "b2Zmc2V0OjM3Ng==",
       "node": {
         "type": "Feature",
         "geometry": {
@@ -12022,7 +12054,7 @@
           },
           "country": "India",
           "displayName": "Delhi",
-          "cachedRegistrations": 328,
+          "cachedRegistrations": 330,
           "eventType": "Virtual & In-Person",
           "registrationEnabled": true,
           "isHostEvent": false,
@@ -12033,7 +12065,7 @@
       "__typename": "LocationFeatureEdge"
     },
     {
-      "cursor": "b2Zmc2V0OjM3Ng==",
+      "cursor": "b2Zmc2V0OjM3Nw==",
       "node": {
         "type": "Feature",
         "geometry": {
@@ -12065,7 +12097,7 @@
       "__typename": "LocationFeatureEdge"
     },
     {
-      "cursor": "b2Zmc2V0OjM3Nw==",
+      "cursor": "b2Zmc2V0OjM3OA==",
       "node": {
         "type": "Feature",
         "geometry": {
@@ -12097,7 +12129,7 @@
       "__typename": "LocationFeatureEdge"
     },
     {
-      "cursor": "b2Zmc2V0OjM3OA==",
+      "cursor": "b2Zmc2V0OjM3OQ==",
       "node": {
         "type": "Feature",
         "geometry": {
@@ -12118,7 +12150,7 @@
           },
           "country": "Tanzania",
           "displayName": "Dar es Salaam",
-          "cachedRegistrations": 17,
+          "cachedRegistrations": 18,
           "eventType": "Virtual & In-Person",
           "registrationEnabled": true,
           "isHostEvent": false,
@@ -12129,7 +12161,7 @@
       "__typename": "LocationFeatureEdge"
     },
     {
-      "cursor": "b2Zmc2V0OjM3OQ==",
+      "cursor": "b2Zmc2V0OjM4MA==",
       "node": {
         "type": "Feature",
         "geometry": {
@@ -12150,7 +12182,7 @@
           },
           "country": "Egypt",
           "displayName": "Damietta",
-          "cachedRegistrations": 51,
+          "cachedRegistrations": 54,
           "eventType": "Virtual & In-Person",
           "registrationEnabled": true,
           "isHostEvent": false,
@@ -12161,7 +12193,7 @@
       "__typename": "LocationFeatureEdge"
     },
     {
-      "cursor": "b2Zmc2V0OjM4MA==",
+      "cursor": "b2Zmc2V0OjM4MQ==",
       "node": {
         "type": "Feature",
         "geometry": {
@@ -12182,7 +12214,7 @@
           },
           "country": "United States",
           "displayName": "Dallas, TX",
-          "cachedRegistrations": 41,
+          "cachedRegistrations": 42,
           "eventType": "Virtual",
           "registrationEnabled": true,
           "isHostEvent": false,
@@ -12193,7 +12225,7 @@
       "__typename": "LocationFeatureEdge"
     },
     {
-      "cursor": "b2Zmc2V0OjM4MQ==",
+      "cursor": "b2Zmc2V0OjM4Mg==",
       "node": {
         "type": "Feature",
         "geometry": {
@@ -12225,7 +12257,7 @@
       "__typename": "LocationFeatureEdge"
     },
     {
-      "cursor": "b2Zmc2V0OjM4Mg==",
+      "cursor": "b2Zmc2V0OjM4Mw==",
       "node": {
         "type": "Feature",
         "geometry": {
@@ -12257,7 +12289,7 @@
       "__typename": "LocationFeatureEdge"
     },
     {
-      "cursor": "b2Zmc2V0OjM4Mw==",
+      "cursor": "b2Zmc2V0OjM4NA==",
       "node": {
         "type": "Feature",
         "geometry": {
@@ -12278,7 +12310,7 @@
           },
           "country": "Argentina",
           "displayName": "Córdoba",
-          "cachedRegistrations": 41,
+          "cachedRegistrations": 42,
           "eventType": "Virtual & In-Person",
           "registrationEnabled": true,
           "isHostEvent": false,
@@ -12289,7 +12321,7 @@
       "__typename": "LocationFeatureEdge"
     },
     {
-      "cursor": "b2Zmc2V0OjM4NA==",
+      "cursor": "b2Zmc2V0OjM4NQ==",
       "node": {
         "type": "Feature",
         "geometry": {
@@ -12310,7 +12342,7 @@
           },
           "country": "Peru",
           "displayName": "Cusco",
-          "cachedRegistrations": 56,
+          "cachedRegistrations": 57,
           "eventType": "In-Person",
           "registrationEnabled": true,
           "isHostEvent": false,
@@ -12321,7 +12353,7 @@
       "__typename": "LocationFeatureEdge"
     },
     {
-      "cursor": "b2Zmc2V0OjM4NQ==",
+      "cursor": "b2Zmc2V0OjM4Ng==",
       "node": {
         "type": "Feature",
         "geometry": {
@@ -12342,7 +12374,7 @@
           },
           "country": "Bangladesh",
           "displayName": "Cumilla",
-          "cachedRegistrations": 113,
+          "cachedRegistrations": 118,
           "eventType": "Virtual",
           "registrationEnabled": true,
           "isHostEvent": false,
@@ -12353,7 +12385,7 @@
       "__typename": "LocationFeatureEdge"
     },
     {
-      "cursor": "b2Zmc2V0OjM4Ng==",
+      "cursor": "b2Zmc2V0OjM4Nw==",
       "node": {
         "type": "Feature",
         "geometry": {
@@ -12385,7 +12417,7 @@
       "__typename": "LocationFeatureEdge"
     },
     {
-      "cursor": "b2Zmc2V0OjM4Nw==",
+      "cursor": "b2Zmc2V0OjM4OA==",
       "node": {
         "type": "Feature",
         "geometry": {
@@ -12417,7 +12449,7 @@
       "__typename": "LocationFeatureEdge"
     },
     {
-      "cursor": "b2Zmc2V0OjM4OA==",
+      "cursor": "b2Zmc2V0OjM4OQ==",
       "node": {
         "type": "Feature",
         "geometry": {
@@ -12449,7 +12481,7 @@
       "__typename": "LocationFeatureEdge"
     },
     {
-      "cursor": "b2Zmc2V0OjM4OQ==",
+      "cursor": "b2Zmc2V0OjM5MA==",
       "node": {
         "type": "Feature",
         "geometry": {
@@ -12470,7 +12502,7 @@
           },
           "country": "Chile",
           "displayName": "Concepción",
-          "cachedRegistrations": 27,
+          "cachedRegistrations": 28,
           "eventType": "In-Person",
           "registrationEnabled": true,
           "isHostEvent": false,
@@ -12481,7 +12513,7 @@
       "__typename": "LocationFeatureEdge"
     },
     {
-      "cursor": "b2Zmc2V0OjM5MA==",
+      "cursor": "b2Zmc2V0OjM5MQ==",
       "node": {
         "type": "Feature",
         "geometry": {
@@ -12513,7 +12545,7 @@
       "__typename": "LocationFeatureEdge"
     },
     {
-      "cursor": "b2Zmc2V0OjM5MQ==",
+      "cursor": "b2Zmc2V0OjM5Mg==",
       "node": {
         "type": "Feature",
         "geometry": {
@@ -12534,7 +12566,7 @@
           },
           "country": "Argentina",
           "displayName": "Comodoro Rivadavia",
-          "cachedRegistrations": 303,
+          "cachedRegistrations": 306,
           "eventType": "Virtual & In-Person",
           "registrationEnabled": true,
           "isHostEvent": false,
@@ -12545,7 +12577,7 @@
       "__typename": "LocationFeatureEdge"
     },
     {
-      "cursor": "b2Zmc2V0OjM5Mg==",
+      "cursor": "b2Zmc2V0OjM5Mw==",
       "node": {
         "type": "Feature",
         "geometry": {
@@ -12566,7 +12598,7 @@
           },
           "country": "Mexico",
           "displayName": "Colón",
-          "cachedRegistrations": 150,
+          "cachedRegistrations": 159,
           "eventType": "In-Person",
           "registrationEnabled": true,
           "isHostEvent": false,
@@ -12577,7 +12609,7 @@
       "__typename": "LocationFeatureEdge"
     },
     {
-      "cursor": "b2Zmc2V0OjM5Mw==",
+      "cursor": "b2Zmc2V0OjM5NA==",
       "node": {
         "type": "Feature",
         "geometry": {
@@ -12598,7 +12630,7 @@
           },
           "country": "Sri Lanka",
           "displayName": "Colombo",
-          "cachedRegistrations": 136,
+          "cachedRegistrations": 137,
           "eventType": "Virtual & In-Person",
           "registrationEnabled": true,
           "isHostEvent": false,
@@ -12609,7 +12641,7 @@
       "__typename": "LocationFeatureEdge"
     },
     {
-      "cursor": "b2Zmc2V0OjM5NA==",
+      "cursor": "b2Zmc2V0OjM5NQ==",
       "node": {
         "type": "Feature",
         "geometry": {
@@ -12641,7 +12673,7 @@
       "__typename": "LocationFeatureEdge"
     },
     {
-      "cursor": "b2Zmc2V0OjM5NQ==",
+      "cursor": "b2Zmc2V0OjM5Ng==",
       "node": {
         "type": "Feature",
         "geometry": {
@@ -12673,7 +12705,7 @@
       "__typename": "LocationFeatureEdge"
     },
     {
-      "cursor": "b2Zmc2V0OjM5Ng==",
+      "cursor": "b2Zmc2V0OjM5Nw==",
       "node": {
         "type": "Feature",
         "geometry": {
@@ -12705,7 +12737,7 @@
       "__typename": "LocationFeatureEdge"
     },
     {
-      "cursor": "b2Zmc2V0OjM5Nw==",
+      "cursor": "b2Zmc2V0OjM5OA==",
       "node": {
         "type": "Feature",
         "geometry": {
@@ -12737,7 +12769,7 @@
       "__typename": "LocationFeatureEdge"
     },
     {
-      "cursor": "b2Zmc2V0OjM5OA==",
+      "cursor": "b2Zmc2V0OjM5OQ==",
       "node": {
         "type": "Feature",
         "geometry": {
@@ -12758,7 +12790,7 @@
           },
           "country": "United States",
           "displayName": "Clemson, SC",
-          "cachedRegistrations": 17,
+          "cachedRegistrations": 18,
           "eventType": "In-Person",
           "registrationEnabled": true,
           "isHostEvent": false,
@@ -12769,7 +12801,7 @@
       "__typename": "LocationFeatureEdge"
     },
     {
-      "cursor": "b2Zmc2V0OjM5OQ==",
+      "cursor": "b2Zmc2V0OjQwMA==",
       "node": {
         "type": "Feature",
         "geometry": {
@@ -12801,7 +12833,7 @@
       "__typename": "LocationFeatureEdge"
     },
     {
-      "cursor": "b2Zmc2V0OjQwMA==",
+      "cursor": "b2Zmc2V0OjQwMQ==",
       "node": {
         "type": "Feature",
         "geometry": {
@@ -12833,7 +12865,7 @@
       "__typename": "LocationFeatureEdge"
     },
     {
-      "cursor": "b2Zmc2V0OjQwMQ==",
+      "cursor": "b2Zmc2V0OjQwMg==",
       "node": {
         "type": "Feature",
         "geometry": {
@@ -12865,7 +12897,7 @@
       "__typename": "LocationFeatureEdge"
     },
     {
-      "cursor": "b2Zmc2V0OjQwMg==",
+      "cursor": "b2Zmc2V0OjQwMw==",
       "node": {
         "type": "Feature",
         "geometry": {
@@ -12897,7 +12929,7 @@
       "__typename": "LocationFeatureEdge"
     },
     {
-      "cursor": "b2Zmc2V0OjQwMw==",
+      "cursor": "b2Zmc2V0OjQwNA==",
       "node": {
         "type": "Feature",
         "geometry": {
@@ -12929,7 +12961,7 @@
       "__typename": "LocationFeatureEdge"
     },
     {
-      "cursor": "b2Zmc2V0OjQwNA==",
+      "cursor": "b2Zmc2V0OjQwNQ==",
       "node": {
         "type": "Feature",
         "geometry": {
@@ -12961,7 +12993,7 @@
       "__typename": "LocationFeatureEdge"
     },
     {
-      "cursor": "b2Zmc2V0OjQwNQ==",
+      "cursor": "b2Zmc2V0OjQwNg==",
       "node": {
         "type": "Feature",
         "geometry": {
@@ -12982,7 +13014,7 @@
           },
           "country": "United States",
           "displayName": "Chino Hills, CA",
-          "cachedRegistrations": 15,
+          "cachedRegistrations": 16,
           "eventType": "Virtual & In-Person",
           "registrationEnabled": true,
           "isHostEvent": false,
@@ -12993,7 +13025,7 @@
       "__typename": "LocationFeatureEdge"
     },
     {
-      "cursor": "b2Zmc2V0OjQwNg==",
+      "cursor": "b2Zmc2V0OjQwNw==",
       "node": {
         "type": "Feature",
         "geometry": {
@@ -13014,7 +13046,7 @@
           },
           "country": "India",
           "displayName": "Chikkamagaluru",
-          "cachedRegistrations": 740,
+          "cachedRegistrations": 741,
           "eventType": "Virtual & In-Person",
           "registrationEnabled": true,
           "isHostEvent": false,
@@ -13025,7 +13057,7 @@
       "__typename": "LocationFeatureEdge"
     },
     {
-      "cursor": "b2Zmc2V0OjQwNw==",
+      "cursor": "b2Zmc2V0OjQwOA==",
       "node": {
         "type": "Feature",
         "geometry": {
@@ -13057,7 +13089,7 @@
       "__typename": "LocationFeatureEdge"
     },
     {
-      "cursor": "b2Zmc2V0OjQwOA==",
+      "cursor": "b2Zmc2V0OjQwOQ==",
       "node": {
         "type": "Feature",
         "geometry": {
@@ -13089,7 +13121,7 @@
       "__typename": "LocationFeatureEdge"
     },
     {
-      "cursor": "b2Zmc2V0OjQwOQ==",
+      "cursor": "b2Zmc2V0OjQxMA==",
       "node": {
         "type": "Feature",
         "geometry": {
@@ -13121,7 +13153,7 @@
       "__typename": "LocationFeatureEdge"
     },
     {
-      "cursor": "b2Zmc2V0OjQxMA==",
+      "cursor": "b2Zmc2V0OjQxMQ==",
       "node": {
         "type": "Feature",
         "geometry": {
@@ -13142,7 +13174,7 @@
           },
           "country": "Colombia",
           "displayName": "Chia",
-          "cachedRegistrations": 27,
+          "cachedRegistrations": 31,
           "eventType": "Virtual",
           "registrationEnabled": true,
           "isHostEvent": false,
@@ -13153,7 +13185,7 @@
       "__typename": "LocationFeatureEdge"
     },
     {
-      "cursor": "b2Zmc2V0OjQxMQ==",
+      "cursor": "b2Zmc2V0OjQxMg==",
       "node": {
         "type": "Feature",
         "geometry": {
@@ -13185,7 +13217,7 @@
       "__typename": "LocationFeatureEdge"
     },
     {
-      "cursor": "b2Zmc2V0OjQxMg==",
+      "cursor": "b2Zmc2V0OjQxMw==",
       "node": {
         "type": "Feature",
         "geometry": {
@@ -13206,7 +13238,7 @@
           },
           "country": "India",
           "displayName": "Chennai",
-          "cachedRegistrations": 301,
+          "cachedRegistrations": 310,
           "eventType": "Virtual & In-Person",
           "registrationEnabled": true,
           "isHostEvent": false,
@@ -13217,7 +13249,7 @@
       "__typename": "LocationFeatureEdge"
     },
     {
-      "cursor": "b2Zmc2V0OjQxMw==",
+      "cursor": "b2Zmc2V0OjQxNA==",
       "node": {
         "type": "Feature",
         "geometry": {
@@ -13238,7 +13270,7 @@
           },
           "country": "Bangladesh",
           "displayName": "Chattogram",
-          "cachedRegistrations": 179,
+          "cachedRegistrations": 182,
           "eventType": "Virtual",
           "registrationEnabled": true,
           "isHostEvent": false,
@@ -13249,7 +13281,7 @@
       "__typename": "LocationFeatureEdge"
     },
     {
-      "cursor": "b2Zmc2V0OjQxNA==",
+      "cursor": "b2Zmc2V0OjQxNQ==",
       "node": {
         "type": "Feature",
         "geometry": {
@@ -13270,7 +13302,7 @@
           },
           "country": "United States",
           "displayName": "Charlotte, NC",
-          "cachedRegistrations": 18,
+          "cachedRegistrations": 19,
           "eventType": "In-Person",
           "registrationEnabled": true,
           "isHostEvent": false,
@@ -13281,7 +13313,7 @@
       "__typename": "LocationFeatureEdge"
     },
     {
-      "cursor": "b2Zmc2V0OjQxNQ==",
+      "cursor": "b2Zmc2V0OjQxNg==",
       "node": {
         "type": "Feature",
         "geometry": {
@@ -13302,7 +13334,7 @@
           },
           "country": "India",
           "displayName": "Chandrapur",
-          "cachedRegistrations": 9,
+          "cachedRegistrations": 16,
           "eventType": "Virtual",
           "registrationEnabled": true,
           "isHostEvent": false,
@@ -13313,7 +13345,7 @@
       "__typename": "LocationFeatureEdge"
     },
     {
-      "cursor": "b2Zmc2V0OjQxNg==",
+      "cursor": "b2Zmc2V0OjQxNw==",
       "node": {
         "type": "Feature",
         "geometry": {
@@ -13345,7 +13377,7 @@
       "__typename": "LocationFeatureEdge"
     },
     {
-      "cursor": "b2Zmc2V0OjQxNw==",
+      "cursor": "b2Zmc2V0OjQxOA==",
       "node": {
         "type": "Feature",
         "geometry": {
@@ -13366,7 +13398,7 @@
           },
           "country": "Morocco",
           "displayName": "Casablanca",
-          "cachedRegistrations": 52,
+          "cachedRegistrations": 53,
           "eventType": "Virtual & In-Person",
           "registrationEnabled": true,
           "isHostEvent": false,
@@ -13377,7 +13409,7 @@
       "__typename": "LocationFeatureEdge"
     },
     {
-      "cursor": "b2Zmc2V0OjQxOA==",
+      "cursor": "b2Zmc2V0OjQxOQ==",
       "node": {
         "type": "Feature",
         "geometry": {
@@ -13398,7 +13430,7 @@
           },
           "country": "Mexico",
           "displayName": "Carmen City",
-          "cachedRegistrations": 60,
+          "cachedRegistrations": 61,
           "eventType": "Virtual & In-Person",
           "registrationEnabled": true,
           "isHostEvent": false,
@@ -13409,7 +13441,7 @@
       "__typename": "LocationFeatureEdge"
     },
     {
-      "cursor": "b2Zmc2V0OjQxOQ==",
+      "cursor": "b2Zmc2V0OjQyMA==",
       "node": {
         "type": "Feature",
         "geometry": {
@@ -13441,7 +13473,7 @@
       "__typename": "LocationFeatureEdge"
     },
     {
-      "cursor": "b2Zmc2V0OjQyMA==",
+      "cursor": "b2Zmc2V0OjQyMQ==",
       "node": {
         "type": "Feature",
         "geometry": {
@@ -13473,7 +13505,7 @@
       "__typename": "LocationFeatureEdge"
     },
     {
-      "cursor": "b2Zmc2V0OjQyMQ==",
+      "cursor": "b2Zmc2V0OjQyMg==",
       "node": {
         "type": "Feature",
         "geometry": {
@@ -13505,7 +13537,7 @@
       "__typename": "LocationFeatureEdge"
     },
     {
-      "cursor": "b2Zmc2V0OjQyMg==",
+      "cursor": "b2Zmc2V0OjQyMw==",
       "node": {
         "type": "Feature",
         "geometry": {
@@ -13537,7 +13569,7 @@
       "__typename": "LocationFeatureEdge"
     },
     {
-      "cursor": "b2Zmc2V0OjQyMw==",
+      "cursor": "b2Zmc2V0OjQyNA==",
       "node": {
         "type": "Feature",
         "geometry": {
@@ -13558,7 +13590,7 @@
           },
           "country": "Brazil",
           "displayName": "Campinas",
-          "cachedRegistrations": 85,
+          "cachedRegistrations": 87,
           "eventType": "Virtual & In-Person",
           "registrationEnabled": true,
           "isHostEvent": false,
@@ -13569,7 +13601,7 @@
       "__typename": "LocationFeatureEdge"
     },
     {
-      "cursor": "b2Zmc2V0OjQyNA==",
+      "cursor": "b2Zmc2V0OjQyNQ==",
       "node": {
         "type": "Feature",
         "geometry": {
@@ -13601,7 +13633,7 @@
       "__typename": "LocationFeatureEdge"
     },
     {
-      "cursor": "b2Zmc2V0OjQyNQ==",
+      "cursor": "b2Zmc2V0OjQyNg==",
       "node": {
         "type": "Feature",
         "geometry": {
@@ -13633,7 +13665,7 @@
       "__typename": "LocationFeatureEdge"
     },
     {
-      "cursor": "b2Zmc2V0OjQyNg==",
+      "cursor": "b2Zmc2V0OjQyNw==",
       "node": {
         "type": "Feature",
         "geometry": {
@@ -13654,7 +13686,7 @@
           },
           "country": "India",
           "displayName": "Calicut",
-          "cachedRegistrations": 12,
+          "cachedRegistrations": 13,
           "eventType": "In-Person",
           "registrationEnabled": true,
           "isHostEvent": false,
@@ -13665,7 +13697,7 @@
       "__typename": "LocationFeatureEdge"
     },
     {
-      "cursor": "b2Zmc2V0OjQyNw==",
+      "cursor": "b2Zmc2V0OjQyOA==",
       "node": {
         "type": "Feature",
         "geometry": {
@@ -13697,7 +13729,7 @@
       "__typename": "LocationFeatureEdge"
     },
     {
-      "cursor": "b2Zmc2V0OjQyOA==",
+      "cursor": "b2Zmc2V0OjQyOQ==",
       "node": {
         "type": "Feature",
         "geometry": {
@@ -13718,7 +13750,7 @@
           },
           "country": "Peru",
           "displayName": "Cajamarca",
-          "cachedRegistrations": 47,
+          "cachedRegistrations": 48,
           "eventType": "In-Person",
           "registrationEnabled": true,
           "isHostEvent": false,
@@ -13729,7 +13761,7 @@
       "__typename": "LocationFeatureEdge"
     },
     {
-      "cursor": "b2Zmc2V0OjQyOQ==",
+      "cursor": "b2Zmc2V0OjQzMA==",
       "node": {
         "type": "Feature",
         "geometry": {
@@ -13750,7 +13782,7 @@
           },
           "country": "Egypt",
           "displayName": "Cairo",
-          "cachedRegistrations": 1478,
+          "cachedRegistrations": 1502,
           "eventType": "Virtual & In-Person",
           "registrationEnabled": true,
           "isHostEvent": false,
@@ -13761,7 +13793,7 @@
       "__typename": "LocationFeatureEdge"
     },
     {
-      "cursor": "b2Zmc2V0OjQzMA==",
+      "cursor": "b2Zmc2V0OjQzMQ==",
       "node": {
         "type": "Feature",
         "geometry": {
@@ -13793,7 +13825,7 @@
       "__typename": "LocationFeatureEdge"
     },
     {
-      "cursor": "b2Zmc2V0OjQzMQ==",
+      "cursor": "b2Zmc2V0OjQzMg==",
       "node": {
         "type": "Feature",
         "geometry": {
@@ -13825,7 +13857,7 @@
       "__typename": "LocationFeatureEdge"
     },
     {
-      "cursor": "b2Zmc2V0OjQzMg==",
+      "cursor": "b2Zmc2V0OjQzMw==",
       "node": {
         "type": "Feature",
         "geometry": {
@@ -13857,7 +13889,7 @@
       "__typename": "LocationFeatureEdge"
     },
     {
-      "cursor": "b2Zmc2V0OjQzMw==",
+      "cursor": "b2Zmc2V0OjQzNA==",
       "node": {
         "type": "Feature",
         "geometry": {
@@ -13889,7 +13921,7 @@
       "__typename": "LocationFeatureEdge"
     },
     {
-      "cursor": "b2Zmc2V0OjQzNA==",
+      "cursor": "b2Zmc2V0OjQzNQ==",
       "node": {
         "type": "Feature",
         "geometry": {
@@ -13921,7 +13953,7 @@
       "__typename": "LocationFeatureEdge"
     },
     {
-      "cursor": "b2Zmc2V0OjQzNQ==",
+      "cursor": "b2Zmc2V0OjQzNg==",
       "node": {
         "type": "Feature",
         "geometry": {
@@ -13953,7 +13985,7 @@
       "__typename": "LocationFeatureEdge"
     },
     {
-      "cursor": "b2Zmc2V0OjQzNg==",
+      "cursor": "b2Zmc2V0OjQzNw==",
       "node": {
         "type": "Feature",
         "geometry": {
@@ -13985,7 +14017,7 @@
       "__typename": "LocationFeatureEdge"
     },
     {
-      "cursor": "b2Zmc2V0OjQzNw==",
+      "cursor": "b2Zmc2V0OjQzOA==",
       "node": {
         "type": "Feature",
         "geometry": {
@@ -14017,7 +14049,7 @@
       "__typename": "LocationFeatureEdge"
     },
     {
-      "cursor": "b2Zmc2V0OjQzOA==",
+      "cursor": "b2Zmc2V0OjQzOQ==",
       "node": {
         "type": "Feature",
         "geometry": {
@@ -14038,7 +14070,7 @@
           },
           "country": "United States",
           "displayName": "Bozeman, MT",
-          "cachedRegistrations": 2,
+          "cachedRegistrations": 3,
           "eventType": "Virtual & In-Person",
           "registrationEnabled": true,
           "isHostEvent": false,
@@ -14049,7 +14081,7 @@
       "__typename": "LocationFeatureEdge"
     },
     {
-      "cursor": "b2Zmc2V0OjQzOQ==",
+      "cursor": "b2Zmc2V0OjQ0MA==",
       "node": {
         "type": "Feature",
         "geometry": {
@@ -14081,7 +14113,7 @@
       "__typename": "LocationFeatureEdge"
     },
     {
-      "cursor": "b2Zmc2V0OjQ0MA==",
+      "cursor": "b2Zmc2V0OjQ0MQ==",
       "node": {
         "type": "Feature",
         "geometry": {
@@ -14113,7 +14145,7 @@
       "__typename": "LocationFeatureEdge"
     },
     {
-      "cursor": "b2Zmc2V0OjQ0MQ==",
+      "cursor": "b2Zmc2V0OjQ0Mg==",
       "node": {
         "type": "Feature",
         "geometry": {
@@ -14145,7 +14177,7 @@
       "__typename": "LocationFeatureEdge"
     },
     {
-      "cursor": "b2Zmc2V0OjQ0Mg==",
+      "cursor": "b2Zmc2V0OjQ0Mw==",
       "node": {
         "type": "Feature",
         "geometry": {
@@ -14177,7 +14209,7 @@
       "__typename": "LocationFeatureEdge"
     },
     {
-      "cursor": "b2Zmc2V0OjQ0Mw==",
+      "cursor": "b2Zmc2V0OjQ0NA==",
       "node": {
         "type": "Feature",
         "geometry": {
@@ -14209,7 +14241,7 @@
       "__typename": "LocationFeatureEdge"
     },
     {
-      "cursor": "b2Zmc2V0OjQ0NA==",
+      "cursor": "b2Zmc2V0OjQ0NQ==",
       "node": {
         "type": "Feature",
         "geometry": {
@@ -14230,7 +14262,7 @@
           },
           "country": "Mexico",
           "displayName": "Boca del Rio",
-          "cachedRegistrations": 11,
+          "cachedRegistrations": 13,
           "eventType": "In-Person",
           "registrationEnabled": true,
           "isHostEvent": false,
@@ -14241,7 +14273,7 @@
       "__typename": "LocationFeatureEdge"
     },
     {
-      "cursor": "b2Zmc2V0OjQ0NQ==",
+      "cursor": "b2Zmc2V0OjQ0Ng==",
       "node": {
         "type": "Feature",
         "geometry": {
@@ -14273,7 +14305,7 @@
       "__typename": "LocationFeatureEdge"
     },
     {
-      "cursor": "b2Zmc2V0OjQ0Ng==",
+      "cursor": "b2Zmc2V0OjQ0Nw==",
       "node": {
         "type": "Feature",
         "geometry": {
@@ -14305,7 +14337,7 @@
       "__typename": "LocationFeatureEdge"
     },
     {
-      "cursor": "b2Zmc2V0OjQ0Nw==",
+      "cursor": "b2Zmc2V0OjQ0OA==",
       "node": {
         "type": "Feature",
         "geometry": {
@@ -14326,7 +14358,7 @@
           },
           "country": "Kyrgyzstan",
           "displayName": "Bishkek",
-          "cachedRegistrations": 237,
+          "cachedRegistrations": 239,
           "eventType": "Virtual & In-Person",
           "registrationEnabled": true,
           "isHostEvent": false,
@@ -14337,7 +14369,7 @@
       "__typename": "LocationFeatureEdge"
     },
     {
-      "cursor": "b2Zmc2V0OjQ0OA==",
+      "cursor": "b2Zmc2V0OjQ0OQ==",
       "node": {
         "type": "Feature",
         "geometry": {
@@ -14369,7 +14401,7 @@
       "__typename": "LocationFeatureEdge"
     },
     {
-      "cursor": "b2Zmc2V0OjQ0OQ==",
+      "cursor": "b2Zmc2V0OjQ1MA==",
       "node": {
         "type": "Feature",
         "geometry": {
@@ -14401,7 +14433,7 @@
       "__typename": "LocationFeatureEdge"
     },
     {
-      "cursor": "b2Zmc2V0OjQ1MA==",
+      "cursor": "b2Zmc2V0OjQ1MQ==",
       "node": {
         "type": "Feature",
         "geometry": {
@@ -14433,7 +14465,7 @@
       "__typename": "LocationFeatureEdge"
     },
     {
-      "cursor": "b2Zmc2V0OjQ1MQ==",
+      "cursor": "b2Zmc2V0OjQ1Mg==",
       "node": {
         "type": "Feature",
         "geometry": {
@@ -14465,7 +14497,7 @@
       "__typename": "LocationFeatureEdge"
     },
     {
-      "cursor": "b2Zmc2V0OjQ1Mg==",
+      "cursor": "b2Zmc2V0OjQ1Mw==",
       "node": {
         "type": "Feature",
         "geometry": {
@@ -14497,7 +14529,7 @@
       "__typename": "LocationFeatureEdge"
     },
     {
-      "cursor": "b2Zmc2V0OjQ1Mw==",
+      "cursor": "b2Zmc2V0OjQ1NA==",
       "node": {
         "type": "Feature",
         "geometry": {
@@ -14518,7 +14550,7 @@
           },
           "country": "India",
           "displayName": "Bhopal",
-          "cachedRegistrations": 54,
+          "cachedRegistrations": 56,
           "eventType": "Virtual & In-Person",
           "registrationEnabled": true,
           "isHostEvent": false,
@@ -14529,7 +14561,7 @@
       "__typename": "LocationFeatureEdge"
     },
     {
-      "cursor": "b2Zmc2V0OjQ1NA==",
+      "cursor": "b2Zmc2V0OjQ1NQ==",
       "node": {
         "type": "Feature",
         "geometry": {
@@ -14561,7 +14593,7 @@
       "__typename": "LocationFeatureEdge"
     },
     {
-      "cursor": "b2Zmc2V0OjQ1NQ==",
+      "cursor": "b2Zmc2V0OjQ1Ng==",
       "node": {
         "type": "Feature",
         "geometry": {
@@ -14593,7 +14625,7 @@
       "__typename": "LocationFeatureEdge"
     },
     {
-      "cursor": "b2Zmc2V0OjQ1Ng==",
+      "cursor": "b2Zmc2V0OjQ1Nw==",
       "node": {
         "type": "Feature",
         "geometry": {
@@ -14625,7 +14657,7 @@
       "__typename": "LocationFeatureEdge"
     },
     {
-      "cursor": "b2Zmc2V0OjQ1Nw==",
+      "cursor": "b2Zmc2V0OjQ1OA==",
       "node": {
         "type": "Feature",
         "geometry": {
@@ -14646,7 +14678,7 @@
           },
           "country": "Germany",
           "displayName": "Berlin",
-          "cachedRegistrations": 25,
+          "cachedRegistrations": 31,
           "eventType": "Virtual & In-Person",
           "registrationEnabled": true,
           "isHostEvent": false,
@@ -14657,7 +14689,7 @@
       "__typename": "LocationFeatureEdge"
     },
     {
-      "cursor": "b2Zmc2V0OjQ1OA==",
+      "cursor": "b2Zmc2V0OjQ1OQ==",
       "node": {
         "type": "Feature",
         "geometry": {
@@ -14689,7 +14721,7 @@
       "__typename": "LocationFeatureEdge"
     },
     {
-      "cursor": "b2Zmc2V0OjQ1OQ==",
+      "cursor": "b2Zmc2V0OjQ2MA==",
       "node": {
         "type": "Feature",
         "geometry": {
@@ -14721,7 +14753,7 @@
       "__typename": "LocationFeatureEdge"
     },
     {
-      "cursor": "b2Zmc2V0OjQ2MA==",
+      "cursor": "b2Zmc2V0OjQ2MQ==",
       "node": {
         "type": "Feature",
         "geometry": {
@@ -14742,7 +14774,7 @@
           },
           "country": "Egypt",
           "displayName": "Benha",
-          "cachedRegistrations": 97,
+          "cachedRegistrations": 98,
           "eventType": "Virtual & In-Person",
           "registrationEnabled": true,
           "isHostEvent": false,
@@ -14753,7 +14785,7 @@
       "__typename": "LocationFeatureEdge"
     },
     {
-      "cursor": "b2Zmc2V0OjQ2MQ==",
+      "cursor": "b2Zmc2V0OjQ2Mg==",
       "node": {
         "type": "Feature",
         "geometry": {
@@ -14785,7 +14817,7 @@
       "__typename": "LocationFeatureEdge"
     },
     {
-      "cursor": "b2Zmc2V0OjQ2Mg==",
+      "cursor": "b2Zmc2V0OjQ2Mw==",
       "node": {
         "type": "Feature",
         "geometry": {
@@ -14817,7 +14849,7 @@
       "__typename": "LocationFeatureEdge"
     },
     {
-      "cursor": "b2Zmc2V0OjQ2Mw==",
+      "cursor": "b2Zmc2V0OjQ2NA==",
       "node": {
         "type": "Feature",
         "geometry": {
@@ -14849,7 +14881,7 @@
       "__typename": "LocationFeatureEdge"
     },
     {
-      "cursor": "b2Zmc2V0OjQ2NA==",
+      "cursor": "b2Zmc2V0OjQ2NQ==",
       "node": {
         "type": "Feature",
         "geometry": {
@@ -14870,7 +14902,7 @@
           },
           "country": "India",
           "displayName": "Belagavi",
-          "cachedRegistrations": 53,
+          "cachedRegistrations": 54,
           "eventType": "Virtual",
           "registrationEnabled": true,
           "isHostEvent": false,
@@ -14881,7 +14913,7 @@
       "__typename": "LocationFeatureEdge"
     },
     {
-      "cursor": "b2Zmc2V0OjQ2NQ==",
+      "cursor": "b2Zmc2V0OjQ2Ng==",
       "node": {
         "type": "Feature",
         "geometry": {
@@ -14902,7 +14934,7 @@
           },
           "country": "Lebanon",
           "displayName": "Beirut",
-          "cachedRegistrations": 207,
+          "cachedRegistrations": 208,
           "eventType": "Virtual & In-Person",
           "registrationEnabled": true,
           "isHostEvent": false,
@@ -14913,7 +14945,7 @@
       "__typename": "LocationFeatureEdge"
     },
     {
-      "cursor": "b2Zmc2V0OjQ2Ng==",
+      "cursor": "b2Zmc2V0OjQ2Nw==",
       "node": {
         "type": "Feature",
         "geometry": {
@@ -14945,7 +14977,7 @@
       "__typename": "LocationFeatureEdge"
     },
     {
-      "cursor": "b2Zmc2V0OjQ2Nw==",
+      "cursor": "b2Zmc2V0OjQ2OA==",
       "node": {
         "type": "Feature",
         "geometry": {
@@ -14977,7 +15009,7 @@
       "__typename": "LocationFeatureEdge"
     },
     {
-      "cursor": "b2Zmc2V0OjQ2OA==",
+      "cursor": "b2Zmc2V0OjQ2OQ==",
       "node": {
         "type": "Feature",
         "geometry": {
@@ -14998,7 +15030,7 @@
           },
           "country": "Colombia",
           "displayName": "Barranquilla",
-          "cachedRegistrations": 23,
+          "cachedRegistrations": 27,
           "eventType": "Virtual & In-Person",
           "registrationEnabled": true,
           "isHostEvent": false,
@@ -15009,7 +15041,7 @@
       "__typename": "LocationFeatureEdge"
     },
     {
-      "cursor": "b2Zmc2V0OjQ2OQ==",
+      "cursor": "b2Zmc2V0OjQ3MA==",
       "node": {
         "type": "Feature",
         "geometry": {
@@ -15030,7 +15062,7 @@
           },
           "country": "Bangladesh",
           "displayName": "Barisal",
-          "cachedRegistrations": 90,
+          "cachedRegistrations": 96,
           "eventType": "Virtual",
           "registrationEnabled": true,
           "isHostEvent": false,
@@ -15041,7 +15073,7 @@
       "__typename": "LocationFeatureEdge"
     },
     {
-      "cursor": "b2Zmc2V0OjQ3MA==",
+      "cursor": "b2Zmc2V0OjQ3MQ==",
       "node": {
         "type": "Feature",
         "geometry": {
@@ -15062,7 +15094,7 @@
           },
           "country": "Spain",
           "displayName": "Barcelona",
-          "cachedRegistrations": 122,
+          "cachedRegistrations": 123,
           "eventType": "In-Person",
           "registrationEnabled": true,
           "isHostEvent": false,
@@ -15073,7 +15105,7 @@
       "__typename": "LocationFeatureEdge"
     },
     {
-      "cursor": "b2Zmc2V0OjQ3MQ==",
+      "cursor": "b2Zmc2V0OjQ3Mg==",
       "node": {
         "type": "Feature",
         "geometry": {
@@ -15094,7 +15126,7 @@
           },
           "country": "The Gambia",
           "displayName": "Banjul",
-          "cachedRegistrations": 0,
+          "cachedRegistrations": 1,
           "eventType": "Virtual & In-Person",
           "registrationEnabled": true,
           "isHostEvent": false,
@@ -15105,7 +15137,7 @@
       "__typename": "LocationFeatureEdge"
     },
     {
-      "cursor": "b2Zmc2V0OjQ3Mg==",
+      "cursor": "b2Zmc2V0OjQ3Mw==",
       "node": {
         "type": "Feature",
         "geometry": {
@@ -15137,7 +15169,7 @@
       "__typename": "LocationFeatureEdge"
     },
     {
-      "cursor": "b2Zmc2V0OjQ3Mw==",
+      "cursor": "b2Zmc2V0OjQ3NA==",
       "node": {
         "type": "Feature",
         "geometry": {
@@ -15158,7 +15190,7 @@
           },
           "country": "India",
           "displayName": "Bangalore",
-          "cachedRegistrations": 335,
+          "cachedRegistrations": 341,
           "eventType": "In-Person",
           "registrationEnabled": true,
           "isHostEvent": false,
@@ -15169,7 +15201,7 @@
       "__typename": "LocationFeatureEdge"
     },
     {
-      "cursor": "b2Zmc2V0OjQ3NA==",
+      "cursor": "b2Zmc2V0OjQ3NQ==",
       "node": {
         "type": "Feature",
         "geometry": {
@@ -15201,7 +15233,7 @@
       "__typename": "LocationFeatureEdge"
     },
     {
-      "cursor": "b2Zmc2V0OjQ3NQ==",
+      "cursor": "b2Zmc2V0OjQ3Ng==",
       "node": {
         "type": "Feature",
         "geometry": {
@@ -15233,7 +15265,7 @@
       "__typename": "LocationFeatureEdge"
     },
     {
-      "cursor": "b2Zmc2V0OjQ3Ng==",
+      "cursor": "b2Zmc2V0OjQ3Nw==",
       "node": {
         "type": "Feature",
         "geometry": {
@@ -15265,7 +15297,7 @@
       "__typename": "LocationFeatureEdge"
     },
     {
-      "cursor": "b2Zmc2V0OjQ3Nw==",
+      "cursor": "b2Zmc2V0OjQ3OA==",
       "node": {
         "type": "Feature",
         "geometry": {
@@ -15297,7 +15329,7 @@
       "__typename": "LocationFeatureEdge"
     },
     {
-      "cursor": "b2Zmc2V0OjQ3OA==",
+      "cursor": "b2Zmc2V0OjQ3OQ==",
       "node": {
         "type": "Feature",
         "geometry": {
@@ -15329,7 +15361,7 @@
       "__typename": "LocationFeatureEdge"
     },
     {
-      "cursor": "b2Zmc2V0OjQ3OQ==",
+      "cursor": "b2Zmc2V0OjQ4MA==",
       "node": {
         "type": "Feature",
         "geometry": {
@@ -15350,7 +15382,7 @@
           },
           "country": "Iraq",
           "displayName": "Baghdad",
-          "cachedRegistrations": 50,
+          "cachedRegistrations": 51,
           "eventType": "Virtual & In-Person",
           "registrationEnabled": true,
           "isHostEvent": false,
@@ -15361,7 +15393,7 @@
       "__typename": "LocationFeatureEdge"
     },
     {
-      "cursor": "b2Zmc2V0OjQ4MA==",
+      "cursor": "b2Zmc2V0OjQ4MQ==",
       "node": {
         "type": "Feature",
         "geometry": {
@@ -15393,7 +15425,7 @@
       "__typename": "LocationFeatureEdge"
     },
     {
-      "cursor": "b2Zmc2V0OjQ4MQ==",
+      "cursor": "b2Zmc2V0OjQ4Mg==",
       "node": {
         "type": "Feature",
         "geometry": {
@@ -15414,7 +15446,7 @@
           },
           "country": "India",
           "displayName": "Ayodhya",
-          "cachedRegistrations": 19,
+          "cachedRegistrations": 18,
           "eventType": "Virtual & In-Person",
           "registrationEnabled": true,
           "isHostEvent": false,
@@ -15425,7 +15457,7 @@
       "__typename": "LocationFeatureEdge"
     },
     {
-      "cursor": "b2Zmc2V0OjQ4Mg==",
+      "cursor": "b2Zmc2V0OjQ4Mw==",
       "node": {
         "type": "Feature",
         "geometry": {
@@ -15446,7 +15478,7 @@
           },
           "country": "Peru",
           "displayName": "Ayacucho",
-          "cachedRegistrations": 17,
+          "cachedRegistrations": 18,
           "eventType": "In-Person",
           "registrationEnabled": true,
           "isHostEvent": false,
@@ -15457,7 +15489,7 @@
       "__typename": "LocationFeatureEdge"
     },
     {
-      "cursor": "b2Zmc2V0OjQ4Mw==",
+      "cursor": "b2Zmc2V0OjQ4NA==",
       "node": {
         "type": "Feature",
         "geometry": {
@@ -15478,7 +15510,7 @@
           },
           "country": "Portugal",
           "displayName": "Aveiro",
-          "cachedRegistrations": 5,
+          "cachedRegistrations": 6,
           "eventType": "In-Person",
           "registrationEnabled": true,
           "isHostEvent": false,
@@ -15489,7 +15521,7 @@
       "__typename": "LocationFeatureEdge"
     },
     {
-      "cursor": "b2Zmc2V0OjQ4NA==",
+      "cursor": "b2Zmc2V0OjQ4NQ==",
       "node": {
         "type": "Feature",
         "geometry": {
@@ -15521,7 +15553,7 @@
       "__typename": "LocationFeatureEdge"
     },
     {
-      "cursor": "b2Zmc2V0OjQ4NQ==",
+      "cursor": "b2Zmc2V0OjQ4Ng==",
       "node": {
         "type": "Feature",
         "geometry": {
@@ -15553,7 +15585,7 @@
       "__typename": "LocationFeatureEdge"
     },
     {
-      "cursor": "b2Zmc2V0OjQ4Ng==",
+      "cursor": "b2Zmc2V0OjQ4Nw==",
       "node": {
         "type": "Feature",
         "geometry": {
@@ -15585,7 +15617,7 @@
       "__typename": "LocationFeatureEdge"
     },
     {
-      "cursor": "b2Zmc2V0OjQ4Nw==",
+      "cursor": "b2Zmc2V0OjQ4OA==",
       "node": {
         "type": "Feature",
         "geometry": {
@@ -15617,7 +15649,7 @@
       "__typename": "LocationFeatureEdge"
     },
     {
-      "cursor": "b2Zmc2V0OjQ4OA==",
+      "cursor": "b2Zmc2V0OjQ4OQ==",
       "node": {
         "type": "Feature",
         "geometry": {
@@ -15638,7 +15670,7 @@
           },
           "country": "United States",
           "displayName": "Atlanta, GA",
-          "cachedRegistrations": 22,
+          "cachedRegistrations": 23,
           "eventType": "Virtual",
           "registrationEnabled": true,
           "isHostEvent": false,
@@ -15649,7 +15681,7 @@
       "__typename": "LocationFeatureEdge"
     },
     {
-      "cursor": "b2Zmc2V0OjQ4OQ==",
+      "cursor": "b2Zmc2V0OjQ5MA==",
       "node": {
         "type": "Feature",
         "geometry": {
@@ -15681,7 +15713,7 @@
       "__typename": "LocationFeatureEdge"
     },
     {
-      "cursor": "b2Zmc2V0OjQ5MA==",
+      "cursor": "b2Zmc2V0OjQ5MQ==",
       "node": {
         "type": "Feature",
         "geometry": {
@@ -15713,7 +15745,7 @@
       "__typename": "LocationFeatureEdge"
     },
     {
-      "cursor": "b2Zmc2V0OjQ5MQ==",
+      "cursor": "b2Zmc2V0OjQ5Mg==",
       "node": {
         "type": "Feature",
         "geometry": {
@@ -15745,7 +15777,7 @@
       "__typename": "LocationFeatureEdge"
     },
     {
-      "cursor": "b2Zmc2V0OjQ5Mg==",
+      "cursor": "b2Zmc2V0OjQ5Mw==",
       "node": {
         "type": "Feature",
         "geometry": {
@@ -15766,7 +15798,7 @@
           },
           "country": "Kazakhstan",
           "displayName": "Astana",
-          "cachedRegistrations": 59,
+          "cachedRegistrations": 61,
           "eventType": "In-Person",
           "registrationEnabled": true,
           "isHostEvent": false,
@@ -15777,7 +15809,7 @@
       "__typename": "LocationFeatureEdge"
     },
     {
-      "cursor": "b2Zmc2V0OjQ5Mw==",
+      "cursor": "b2Zmc2V0OjQ5NA==",
       "node": {
         "type": "Feature",
         "geometry": {
@@ -15798,7 +15830,7 @@
           },
           "country": "Egypt",
           "displayName": "Assiut",
-          "cachedRegistrations": 122,
+          "cachedRegistrations": 125,
           "eventType": "Virtual & In-Person",
           "registrationEnabled": true,
           "isHostEvent": false,
@@ -15809,7 +15841,7 @@
       "__typename": "LocationFeatureEdge"
     },
     {
-      "cursor": "b2Zmc2V0OjQ5NA==",
+      "cursor": "b2Zmc2V0OjQ5NQ==",
       "node": {
         "type": "Feature",
         "geometry": {
@@ -15830,7 +15862,7 @@
           },
           "country": "Turkmenistan",
           "displayName": "Ashgabat",
-          "cachedRegistrations": 27,
+          "cachedRegistrations": 28,
           "eventType": "In-Person",
           "registrationEnabled": true,
           "isHostEvent": false,
@@ -15841,7 +15873,7 @@
       "__typename": "LocationFeatureEdge"
     },
     {
-      "cursor": "b2Zmc2V0OjQ5NQ==",
+      "cursor": "b2Zmc2V0OjQ5Ng==",
       "node": {
         "type": "Feature",
         "geometry": {
@@ -15873,7 +15905,7 @@
       "__typename": "LocationFeatureEdge"
     },
     {
-      "cursor": "b2Zmc2V0OjQ5Ng==",
+      "cursor": "b2Zmc2V0OjQ5Nw==",
       "node": {
         "type": "Feature",
         "geometry": {
@@ -15894,7 +15926,7 @@
           },
           "country": "Peru",
           "displayName": "Arequipa",
-          "cachedRegistrations": 145,
+          "cachedRegistrations": 153,
           "eventType": "In-Person",
           "registrationEnabled": true,
           "isHostEvent": false,
@@ -15905,7 +15937,7 @@
       "__typename": "LocationFeatureEdge"
     },
     {
-      "cursor": "b2Zmc2V0OjQ5Nw==",
+      "cursor": "b2Zmc2V0OjQ5OA==",
       "node": {
         "type": "Feature",
         "geometry": {
@@ -15937,7 +15969,7 @@
       "__typename": "LocationFeatureEdge"
     },
     {
-      "cursor": "b2Zmc2V0OjQ5OA==",
+      "cursor": "b2Zmc2V0OjQ5OQ==",
       "node": {
         "type": "Feature",
         "geometry": {
@@ -15958,40 +15990,8 @@
           },
           "country": "Jordan",
           "displayName": "Ar-Ramtha",
-          "cachedRegistrations": 111,
+          "cachedRegistrations": 112,
           "eventType": "In-Person",
-          "registrationEnabled": true,
-          "isHostEvent": false,
-          "__typename": "LocationPage"
-        },
-        "__typename": "LocationFeature"
-      },
-      "__typename": "LocationFeatureEdge"
-    },
-    {
-      "cursor": "b2Zmc2V0OjQ5OQ==",
-      "node": {
-        "type": "Feature",
-        "geometry": {
-          "type": "Point",
-          "coordinates": [
-            35.0063209,
-            29.5320522
-          ],
-          "__typename": "Geometry"
-        },
-        "properties": {
-          "id": "aWQ6MzEyNDM=",
-          "title": "Aqaba",
-          "meta": {
-            "type": "LOCATION",
-            "htmlUrl": "https://www.spaceappschallenge.org/2025/local-events/aqaba/",
-            "__typename": "ExpandedPageMeta"
-          },
-          "country": "Jordan",
-          "displayName": "Aqaba",
-          "cachedRegistrations": 4,
-          "eventType": "Virtual & In-Person",
           "registrationEnabled": true,
           "isHostEvent": false,
           "__typename": "LocationPage"
