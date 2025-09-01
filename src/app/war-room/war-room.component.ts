@@ -158,6 +158,7 @@ export class WarRoomComponent implements OnInit, OnDestroy {
             interests: row.birthDate || '',
             availability: row.participationMode || '',
             expectations: row.interestAreas || '',
+            gender: row.gender || '', // Dados de gênero para análise
           }));
 
           console.log('Dados transformados:', registrationData.length, 'registros');

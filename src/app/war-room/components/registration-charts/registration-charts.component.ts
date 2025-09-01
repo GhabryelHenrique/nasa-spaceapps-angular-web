@@ -53,6 +53,7 @@ export class RegistrationChartsComponent implements OnInit, OnChanges, OnDestroy
   @ViewChild('ageChart', { static: false }) ageChart!: ElementRef<HTMLCanvasElement>;
   @ViewChild('participationChart', { static: false }) participationChart!: ElementRef<HTMLCanvasElement>;
   @ViewChild('phoneAreaChart', { static: false }) phoneAreaChart!: ElementRef<HTMLCanvasElement>;
+  @ViewChild('genderChart', { static: false }) genderChart!: ElementRef<HTMLCanvasElement>;
 
   motivationStats: { motivation: string; count: number }[] | any = [];
   private charts: Chart[] = [];
@@ -85,6 +86,7 @@ export class RegistrationChartsComponent implements OnInit, OnChanges, OnDestroy
     this.createAgeChart();
     this.createParticipationChart();
     this.createPhoneAreaChart();
+    this.createGenderChart();
   }
 
   private createDailyRegistrationsChart() {
@@ -374,6 +376,70 @@ getMotivationStats() {
             display: true,
             text: 'Participantes por Região (DDD)',
             color: '#ffffff'
+          }
+        }
+      }
+    };
+
+    const chart = new Chart(ctx, config);
+    this.charts.push(chart);
+  }
+
+  private createGenderChart() {
+    if (!this.genderChart || !this.registrationStats) return;
+
+    const ctx = this.genderChart.nativeElement.getContext('2d');
+    if (!ctx) return;
+
+    const config: ChartConfiguration = {
+      type: 'doughnut' as ChartType,
+      data: {
+        labels: this.registrationStats.genderStats.map(g => g.gender),
+        datasets: [{
+          data: this.registrationStats.genderStats.map(g => g.count),
+          backgroundColor: [
+            '#4ecdc4',  // Masculino
+            '#ff6b9d',  // Feminino  
+            '#a8e6cf',  // Não-binário
+            '#ffb347',  // Outro
+            '#c7a8ff'   // Prefiro não informar
+          ],
+          borderWidth: 2,
+          borderColor: '#ffffff'
+        }]
+      },
+      options: {
+        responsive: true,
+        maintainAspectRatio: false,
+        plugins: {
+          legend: {
+            position: 'bottom',
+            labels: { 
+              color: '#ffffff', 
+              padding: 20,
+              usePointStyle: true,
+              pointStyle: 'circle'
+            }
+          },
+          title: {
+            display: true,
+            text: 'Distribuição por Gênero',
+            color: '#ffffff',
+            font: {
+              size: 14,
+              weight: 'bold'
+            }
+          },
+          tooltip: {
+            callbacks: {
+              label: function(context: any) {
+                const label = context.label || '';
+                const value = context.parsed || 0;
+                const total = context.dataset.data.reduce((a: number, b: number) => a + b, 0);
+                const percentage = Math.round((value / total) * 100);
+                return `${label}: ${value} (${percentage}%)`;
+              }
+            }
           }
         }
       }

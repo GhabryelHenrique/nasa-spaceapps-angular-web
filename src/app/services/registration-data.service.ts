@@ -12,6 +12,7 @@ export interface RegistrationData {
   interests: string;
   availability: string;
   expectations: string;
+  gender: string;
 }
 
 export interface RegistrationStats {
@@ -25,6 +26,7 @@ export interface RegistrationStats {
   ageStats: { ageGroup: string; count: number }[];
   participationModeStats: { mode: string; count: number }[];
   phoneAreaStats: { area: string; count: number }[];
+  genderStats: { gender: string; count: number }[];
 }
 
 @Injectable({
@@ -135,6 +137,9 @@ export class RegistrationDataService {
     // Estatísticas de código de área (DDD)
     const phoneAreaStats = this.calculatePhoneAreaStats();
 
+    // Estatísticas de gênero
+    const genderStats = this.calculateGenderStats();
+
     return {
       totalRegistrations,
       uberlandiaRegistrations,
@@ -145,7 +150,8 @@ export class RegistrationDataService {
       averagePerDay: Math.round(averagePerDay * 100) / 100,
       ageStats,
       participationModeStats,
-      phoneAreaStats
+      phoneAreaStats,
+      genderStats
     };
   }
 
@@ -856,7 +862,8 @@ export class RegistrationDataService {
           experience: this.parseValue(row[6]) || '',
           interests: this.parseValue(row[7]) || '',
           availability: this.parseValue(row[8]) || '',
-          expectations: this.parseValue(row[9]) || ''
+          expectations: this.parseValue(row[9]) || '',
+          gender: this.parseValue(row[10]) || ''
         };
 
         // Log detalhado para debug
@@ -877,7 +884,8 @@ export class RegistrationDataService {
           experience: '',
           interests: '',
           availability: '',
-          expectations: ''
+          expectations: '',
+          gender: ''
         };
       }
     });
@@ -1013,5 +1021,50 @@ export class RegistrationDataService {
     }
 
     throw new Error('Não foi possível identificar um padrão de dados válido no arquivo.');
+  }
+
+  private calculateGenderStats(): { gender: string; count: number }[] {
+    const genderMap = new Map<string, number>();
+
+    this.registrationData.forEach(reg => {
+      if (reg.gender) {
+        let normalizedGender = this.normalizeGender(reg.gender);
+        genderMap.set(normalizedGender, (genderMap.get(normalizedGender) || 0) + 1);
+      }
+    });
+
+    return Array.from(genderMap.entries())
+      .map(([gender, count]) => ({ gender, count }))
+      .sort((a, b) => b.count - a.count);
+  }
+
+  private normalizeGender(gender: string): string {
+    const normalizedGender = gender.toLowerCase().trim();
+    
+    // Mapeamento de gêneros
+    const genderMappings: { [key: string]: string } = {
+      'masculino': '♂️ Masculino',
+      'feminino': '♀️ Feminino',
+      'masc': '♂️ Masculino',
+      'fem': '♀️ Feminino',
+      'm': '♂️ Masculino',
+      'f': '♀️ Feminino',
+      'homem': '♂️ Masculino',
+      'mulher': '♀️ Feminino',
+      'male': '♂️ Masculino',
+      'female': '♀️ Feminino',
+      'não-binário': '⚧️ Não-binário',
+      'nao-binario': '⚧️ Não-binário',
+      'não binário': '⚧️ Não-binário',
+      'nao binario': '⚧️ Não-binário',
+      'non-binary': '⚧️ Não-binário',
+      'outro': '🌈 Outro',
+      'other': '🌈 Outro',
+      'prefiro não informar': '❓ Prefiro não informar',
+      'prefiro nao informar': '❓ Prefiro não informar',
+      'prefer not to say': '❓ Prefiro não informar'
+    };
+
+    return genderMappings[normalizedGender] || `❓ ${gender}`;
   }
 }

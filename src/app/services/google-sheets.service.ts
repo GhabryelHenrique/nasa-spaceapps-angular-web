@@ -17,6 +17,7 @@ export interface RegistrationRow {
   interestAreas: string;
   howHeard: string;
   ddd: string;
+  gender: string;
 }
 
 @Injectable({
@@ -55,18 +56,19 @@ export class GoogleSheetsService {
       const columns = this.parseCSVLine(line);
       return {
         timestamp: columns[0] || '',           // Carimbo de data/hora
-        name: '',               // Nome e Sobrenome
-        email: '',              // Seu melhor email
+        name: '',                             // Nome e Sobrenome (dados sensíveis - não armazenado)
+        email: '',                            // Seu melhor email (dados sensíveis - não armazenado)
         phone: columns[3] || '',              // Telefone de Contato
-        cpf: '',                // CPF
+        cpf: '',                              // CPF (dados sensíveis - não armazenado)
         city: columns[5] || '',               // Cidade onde reside
         education: columns[6] || '',          // Escolaridade
         birthDate: columns[7] || '',          // Data de Nascimento
         participationMode: columns[8] || '',  // Gostaria de fazer o hackathon Presencialmente ou Remotamente?
-        emailAddress: columns[9] || '',       // Endereço de e-mail
+        emailAddress: '',                     // Endereço de e-mail (dados sensíveis - não armazenado)
         interestAreas: columns[10] || '',     // Áreas de interesse
         howHeard: columns[11] || '',          // Como você ficou sabendo do Hackathon?
-        ddd: this.extractDDD(columns[3] || '') // Extrai DDD do telefone
+        ddd: this.extractDDD(columns[3] || ''), // Extrai DDD do telefone
+        gender: columns[12] || ''             // Gênero
       };
     });
     return processedData;
