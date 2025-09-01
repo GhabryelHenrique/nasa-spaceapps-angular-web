@@ -13,7 +13,7 @@ export class SponsorsSectionComponent {
       { name: 'NASA', logo: 'assets/nasa-spaceapps-logo-removebg-preview.png', url: 'https://spaceappschallenge.org' },
     ],
     gold: [
-      // { name: 'Prefeitura de Uberlândia', logo: 'https://www.uberlandia.mg.gov.br/wp-content/uploads/2019/05/Logo-PMU_2025-Com-voce_Por-Todos.png', url: 'https://www.uberlandia.mg.gov.br' },
+      { name: 'Prefeitura de Uberlândia', logo: 'https://www.uberlandia.mg.gov.br/wp-content/uploads/2019/05/Logo-PMU_2025-Com-voce_Por-Todos.png', url: 'https://www.uberlandia.mg.gov.br' },
       { name: 'UFU', logo: 'https://images.seeklogo.com/logo-png/23/1/ufu-logo-png_seeklogo-238178.png', url: 'https://www.instagram.com/ufu_oficial/?hl=pt-br' },
       { name: 'Uberhub', logo: 'assets/sponsors/Logo UberHub Site NASA (2).png', url: 'https://uberhub.com.br' },
       { name: 'MTI', logo: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR0Kn1y5qhpsISjLd_QmdpK3bjzdJSA7iIorA&s', url: 'https://www.mti.work' },
