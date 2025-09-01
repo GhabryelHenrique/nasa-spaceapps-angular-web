@@ -14,7 +14,9 @@
       "Bash(python:*)",
       "Bash(node:*)",
       "Bash(npm uninstall:*)",
-      "Bash(curl:*)"
+      "Bash(curl:*)",
+      "Bash(ng add:*)",
+      "Bash(ng extract-i18n:*)"
     ],
     "deny": [],
     "defaultMode": "acceptEdits"

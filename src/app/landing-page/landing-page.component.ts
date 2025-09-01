@@ -42,7 +42,7 @@ export class LandingPageComponent implements OnInit {
         if (response.data && response.data[0] && response.data[0].teams) {
           const teamsData = response.data[0].teams;
           this.totalTeams = teamsData.totalCount;
-          
+
           let memberCount = 0;
           teamsData.edges.forEach(edge => {
             if (edge.node.memberships) {
@@ -65,7 +65,7 @@ export class LandingPageComponent implements OnInit {
       name: 'Gabriel Chayb',
       role: 'Líder Local do Evento',
       description: 'Responsável pela liderança local e parcerias internacionais do evento.',
-      photo: 'https://media.licdn.com/dms/image/v2/D4D03AQEIZpOqoRO-Hg/profile-displayphoto-shrink_800_800/B4DZRtR4NXHcAc-/0/1737000191487?e=1758153600&v=beta&t=8hqwYUptzEOZ8l14cuiMZ3mjOx41C1ZiVzoxclvwNGY',
+      photo: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRa7icwJZ8DbVnWhDizOLtf2HWhMdR1V0LI5g&s',
       url: 'https://www.instagram.com/gabrielchayb'
     },
     {
