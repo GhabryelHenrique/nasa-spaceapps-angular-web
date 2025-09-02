@@ -13,7 +13,7 @@ export class SponsorsSectionComponent {
       { name: 'NASA', logo: 'assets/nasa-spaceapps-logo-removebg-preview.png', url: 'https://spaceappschallenge.org' },
     ],
     gold: [
-      // { name: 'Prefeitura de Uberlândia', logo: 'https://www.uberlandia.mg.gov.br/wp-content/uploads/2019/05/Logo-PMU_2025-Com-voce_Por-Todos.png', url: 'https://www.uberlandia.mg.gov.br' },
+      { name: 'Prefeitura de Uberlândia', logo: 'https://www.uberlandia.mg.gov.br/wp-content/uploads/2019/05/Logo-PMU_2025-Com-voce_Por-Todos.png', url: 'https://www.uberlandia.mg.gov.br' },
       { name: 'UFU', logo: 'https://images.seeklogo.com/logo-png/23/1/ufu-logo-png_seeklogo-238178.png', url: 'https://www.instagram.com/ufu_oficial/?hl=pt-br' },
       { name: 'Uberhub', logo: 'assets/sponsors/Logo UberHub Site NASA (2).png', url: 'https://uberhub.com.br' },
       { name: 'MTI', logo: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR0Kn1y5qhpsISjLd_QmdpK3bjzdJSA7iIorA&s', url: 'https://www.mti.work' },
@@ -23,7 +23,7 @@ export class SponsorsSectionComponent {
       { name: 'Unitri', logo: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQZsCrwIQwv_WcH_4yRpg5j5FQfPoickMMirw&s', url: 'https://www.unitri.edu.br' },
       { name: 'Colégio Nacional', logo: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSb3M1nAsCBCfXybnCaHbRNy_xyncy35dDAiw&s', url: 'https://www.nacionalnet.com.br' },
       { name: 'Gabarito', logo: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSwGgksxpwDoLa0Omi11PVWdvOCZxrireXLBS26GdhHY0THxb5OvuAXwijoUU7nT4reQKs&usqp=CAU', url: 'https://gabaritoeducacao.com' },
-      // { name: 'Portão 3', logo: 'https://media.licdn.com/dms/image/v2/C4D0BAQGXXDRmGbF-jQ/company-logo_200_200/company-logo_200_200/0/1630547611880/portao_3_logo?e=2147483647&v=beta&t=f_I13yGu1nwBMN-b-1oZDRmpNqhWxZAFAH9B8U3Z7Qw', url: 'https://portao3.com.br' },
+      { name: 'Portão 3', logo: 'https://media.licdn.com/dms/image/v2/C4D0BAQGXXDRmGbF-jQ/company-logo_200_200/company-logo_200_200/0/1630547611880/portao_3_logo?e=2147483647&v=beta&t=f_I13yGu1nwBMN-b-1oZDRmpNqhWxZAFAH9B8U3Z7Qw', url: 'https://portao3.com.br' },
       { name: 'Asa Coworking', logo: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR1-vLv961Oyxnxn4HzlDrF52q2-RPxfa1KJg&s', url: 'https://www.asacoworking.com' },
       { name: 'CyberGênios', logo: 'https://media.licdn.com/dms/image/v2/C4D0BAQHnUHvaBmKirA/company-logo_200_200/company-logo_200_200/0/1630577378260/cybergenio_logo?e=2147483647&v=beta&t=ATGlQTB3WPRqJnBqVgcUi11X0YJttNRosSdtsl7BRqY', url: 'https://cybergenios.com.br' },
       { name: 'Global Shapers Community', logo: 'assets/sponsors/Global Shapers Community.jpg', url: 'https://www.instagram.com/globalshapersuberlandia' },

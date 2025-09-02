@@ -1789,7 +1789,7 @@ fragment OfferFields on Offer {
             "operationName": "Teams",
             "variables": {
                 "first": 100,
-                "after": "",
+                "after": after_cursor,
                 "q": "",
                 "filtering": [
                     {
@@ -2195,7 +2195,7 @@ def update_teams_file(teams_data: Dict[str, Any]) -> None:
     """
     Atualiza o arquivo teams.json com os novos dados
     """
-    teams_file_path = r"src\app\shared\data\teams.json"
+    teams_file_path = r"src\assets\data\teams.json"
 
     try:
         # Cria o objeto de dados no formato esperado
@@ -2224,7 +2224,7 @@ def update_local_events_file(events_data: Dict[str, Any]) -> None:
     """
     Atualiza o arquivo localEvents.json com os novos dados
     """
-    events_file_path = r"src\app\shared\data\localEvents.json"
+    events_file_path = r"src\assets\data\localEvents.json"
 
     try:
         # Cria o objeto de dados no formato esperado

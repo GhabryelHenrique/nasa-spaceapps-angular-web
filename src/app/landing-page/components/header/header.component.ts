@@ -1,10 +1,11 @@
-import { Component, HostListener } from '@angular/core';
-import { RouterLink, Router } from '@angular/router';
 import { CommonModule } from '@angular/common';
-import { CHALLENGES_DATA, Challenge } from '../../../shared/data/challenges.data';
-import { MatchmakingService } from '../../../shared/services/matchmaking.service';
-import { EmailVerificationModalComponent } from '../../../shared/components/email-verification-modal/email-verification-modal.component';
+import { Component, HostListener } from '@angular/core';
+import { Router, RouterLink } from '@angular/router';
 import { CodeVerificationModalComponent } from '../../../shared/components/code-verification-modal/code-verification-modal.component';
+import { EmailVerificationModalComponent } from '../../../shared/components/email-verification-modal/email-verification-modal.component';
+import { CHALLENGES_DATA } from '../../../shared/data/challenges.data';
+import { LanguageSwitcherComponent } from '../../../shared/language-switcher/language-switcher.component';
+import { MatchmakingService } from '../../../shared/services/matchmaking.service';
 
 interface ChallengeCategory {
   id: number;
@@ -17,7 +18,7 @@ interface ChallengeCategory {
 
 @Component({
   selector: 'app-header',
-  imports: [RouterLink, CommonModule, EmailVerificationModalComponent, CodeVerificationModalComponent],
+  imports: [RouterLink, CommonModule, EmailVerificationModalComponent, CodeVerificationModalComponent, LanguageSwitcherComponent],
   templateUrl: './header.component.html',
   styleUrl: './header.component.scss',
 })
@@ -86,6 +87,10 @@ export class HeaderComponent {
 
   openWhatsApp(): void {
     window.open('https://chat.whatsapp.com/LXwUUZaJPXtBOeKr7N4axg', '_blank');
+  }
+
+  openInstagram(): void {
+    window.open('https://www.instagram.com/nasaspaceappsuberlandia', '_blank');
   }
 
   goToLandingPage(): void {

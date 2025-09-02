@@ -1,0 +1,123 @@
+.language-switcher {
+  position: relative;
+  display: inline-block;
+}
+
+.language-btn {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 0.75rem;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 0.5rem;
+  color: white;
+  font-size: 0.875rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  backdrop-filter: blur(10px);
+
+  &:hover {
+    background: rgba(255, 255, 255, 0.15);
+    border-color: rgba(255, 255, 255, 0.3);
+  }
+
+  .current-lang {
+    font-weight: 600;
+    letter-spacing: 0.5px;
+  }
+
+  .fas {
+    font-size: 0.75rem;
+    transition: transform 0.2s ease;
+
+    &.rotated {
+      transform: rotate(180deg);
+    }
+  }
+}
+
+.language-dropdown {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  margin-top: 0.5rem;
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 0.75rem;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-10px);
+  transition: all 0.2s ease;
+  z-index: 1000;
+  min-width: 150px;
+
+  &.show {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+  }
+}
+
+.language-option {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.75rem 1rem;
+  color: #2c3e50;
+  text-decoration: none;
+  transition: background-color 0.2s ease;
+  cursor: pointer;
+
+  &:hover {
+    background: rgba(116, 185, 255, 0.1);
+  }
+
+  &.active {
+    background: rgba(116, 185, 255, 0.2);
+    color: #1a73e8;
+    font-weight: 600;
+  }
+
+  .flag {
+    font-size: 1.25rem;
+  }
+
+  .lang-name {
+    font-size: 0.875rem;
+    font-weight: 500;
+  }
+}
+
+// Mobile responsive
+@media (max-width: 768px) {
+  .language-btn {
+    padding: 0.4rem 0.6rem;
+    font-size: 0.8rem;
+    
+    .current-lang {
+      display: none;
+    }
+  }
+
+  .language-dropdown {
+    right: -0.5rem;
+    min-width: 130px;
+  }
+
+  .language-option {
+    padding: 0.6rem 0.8rem;
+
+    .flag {
+      font-size: 1.1rem;
+    }
+
+    .lang-name {
+      font-size: 0.8rem;
+    }
+  }
+}

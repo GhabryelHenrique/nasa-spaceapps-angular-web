@@ -12,9 +12,14 @@
         <i class="fa-brands fa-discord"></i>
         Discord
       </button>
+      <button class="social-btn instagram-btn" (click)="openInstagram()">
+        <i class="fa-brands fa-instagram"></i>
+        Instagram
+      </button>
+      <!-- <app-language-switcher></app-language-switcher> -->
       <a routerLink="/times" class="register-btn">
         <i class="fa-solid fa-users"></i>
-        Times
+        <span i18n="@@nav.teams">Times</span>
       </a>
       <button class="matchmaking-btn" (click)="openMatchmaking()">
         <i class="fa-solid fa-handshake"></i>
@@ -22,7 +27,7 @@
       </button>
       <a href="https://docs.google.com/forms/d/e/1FAIpQLSfXZyu0PCuyIGgC_33jCLaOk-dmB1SugvrIt2eUK7EaWvq6mg/viewform" class="login-btn" target="_blank" rel="noopener noreferrer">
         <i class="fa-solid fa-user-plus"></i>
-        Inscreva-se Agora
+        <span i18n="@@nav.register">Inscreva-se Agora</span>
       </a>
     </div>
   </nav>

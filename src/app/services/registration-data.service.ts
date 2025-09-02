@@ -12,6 +12,7 @@ export interface RegistrationData {
   interests: string;
   availability: string;
   expectations: string;
+  gender: string;
 }
 
 export interface RegistrationStats {
@@ -25,6 +26,7 @@ export interface RegistrationStats {
   ageStats: { ageGroup: string; count: number }[];
   participationModeStats: { mode: string; count: number }[];
   phoneAreaStats: { area: string; count: number }[];
+  genderStats: { gender: string; count: number }[];
 }
 
 @Injectable({
@@ -135,6 +137,9 @@ export class RegistrationDataService {
     // Estatísticas de código de área (DDD)
     const phoneAreaStats = this.calculatePhoneAreaStats();
 
+    // Estatísticas de gênero
+    const genderStats = this.calculateGenderStats();
+
     return {
       totalRegistrations,
       uberlandiaRegistrations,
@@ -145,7 +150,8 @@ export class RegistrationDataService {
       averagePerDay: Math.round(averagePerDay * 100) / 100,
       ageStats,
       participationModeStats,
-      phoneAreaStats
+      phoneAreaStats,
+      genderStats
     };
   }
 
@@ -163,9 +169,25 @@ export class RegistrationDataService {
     this.registrationData.forEach(reg => {
       if (reg.interests) {
         try {
-          const birthTimestamp = parseFloat(reg.interests);
-          if (birthTimestamp > 0) {
-            const birthDate = new Date(birthTimestamp);
+          // reg.interests agora contém a data de nascimento como string
+          let birthDate: Date;
+
+          // Tenta diferentes formatos de data
+          const birthDateStr = reg.interests.trim();
+
+          // Formato brasileiro: DD/MM/YYYY
+          const brazilianDatePattern = /^(\d{2})\/(\d{2})\/(\d{4})$/;
+          const match = birthDateStr.match(brazilianDatePattern);
+
+          if (match) {
+            const [, day, month, year] = match;
+            birthDate = new Date(parseInt(year), parseInt(month) - 1, parseInt(day));
+          } else {
+            // Tenta parsing direto
+            birthDate = new Date(birthDateStr);
+          }
+
+          if (!isNaN(birthDate.getTime())) {
             const today = new Date();
             let age = today.getFullYear() - birthDate.getFullYear();
             const monthDiff = today.getMonth() - birthDate.getMonth();
@@ -173,17 +195,24 @@ export class RegistrationDataService {
               age--;
             }
 
-            let ageGroup: string;
-            if (age < 20) ageGroup = '< 20 anos';
-            else if (age < 25) ageGroup = '20-24 anos';
-            else if (age < 30) ageGroup = '25-29 anos';
-            else if (age < 35) ageGroup = '30-34 anos';
-            else ageGroup = '35+ anos';
+            // Validação de idade razoável (entre 10 e 100 anos)
+            if (age >= 10 && age <= 100) {
+              let ageGroup: string;
+              if (age < 20) ageGroup = '< 20 anos';
+              else if (age < 25) ageGroup = '20-24 anos';
+              else if (age < 30) ageGroup = '25-29 anos';
+              else if (age < 35) ageGroup = '30-34 anos';
+              else ageGroup = '35+ anos';
 
-            ageGroups.set(ageGroup, (ageGroups.get(ageGroup) || 0) + 1);
+              ageGroups.set(ageGroup, (ageGroups.get(ageGroup) || 0) + 1);
+            } else {
+              console.warn('Idade inválida calculada:', age, 'para data:', birthDateStr);
+            }
+          } else {
+            console.warn('Data de nascimento inválida:', birthDateStr);
           }
         } catch (error) {
-          console.warn('Erro ao calcular idade:', error);
+          console.warn('Erro ao calcular idade:', error, 'para:', reg.interests);
         }
       }
     });
@@ -226,7 +255,13 @@ export class RegistrationDataService {
 
     this.registrationData.forEach(reg => {
       if (reg.phone) {
-        const phoneStr = String(reg.phone).replace(/\D/g, '');
+        let phoneStr = String(reg.phone).replace(/\D/g, '');
+
+        // Remove o código do país 55 se presente
+        if (phoneStr.length >= 12 && phoneStr.startsWith('55')) {
+          phoneStr = phoneStr.substring(2);
+        }
+
         if (phoneStr.length >= 10) {
           const area = phoneStr.substring(0, 2);
           const areaName = this.getAreaName(area);
@@ -263,15 +298,21 @@ export class RegistrationDataService {
     const motivationMap = new Map<string, number>();
 
     this.registrationData.forEach(reg => {
+      // Analisa apenas o campo motivations (Como você ficou sabendo do Hackathon?)
       if (reg.motivations) {
-        const normalizedMotivation = this.normalizeMotivation(reg.motivations);
-        const groupedMotivation = this.findSimilarMotivation(normalizedMotivation, motivationMap);
+        // Extrai palavras-chave mais relevantes do texto
+        const words = this.extractHowHeardKeywords(reg.motivations);
 
-        if (groupedMotivation) {
-          motivationMap.set(groupedMotivation, (motivationMap.get(groupedMotivation) || 0) + 1);
-        } else {
-          motivationMap.set(normalizedMotivation, (motivationMap.get(normalizedMotivation) || 0) + 1);
-        }
+        words.forEach(word => {
+          const normalizedWord = this.normalizeMotivation(word);
+          const groupedWord = this.findSimilarMotivation(normalizedWord, motivationMap);
+
+          if (groupedWord) {
+            motivationMap.set(groupedWord, (motivationMap.get(groupedWord) || 0) + 1);
+          } else {
+            motivationMap.set(normalizedWord, (motivationMap.get(normalizedWord) || 0) + 1);
+          }
+        });
       }
     });
 
@@ -330,13 +371,91 @@ export class RegistrationDataService {
     return false;
   }
 
+  private extractHowHeardKeywords(text: string): string[] {
+    // Normaliza o texto primeiro
+    const normalizedText = text
+      .toLowerCase()
+      .normalize('NFD')
+      .replace(/[\u0300-\u036f]/g, '') // Remove acentos
+      .replace(/[^\w\s]/g, ' ') // Remove pontuação
+      .replace(/\s+/g, ' ') // Normaliza espaços
+      .trim();
+
+    // Palavras-chave específicas para "Como ficou sabendo"
+    const keywordPatterns = [
+      { pattern: /\b(Uberhub|uber hub|uberhub|hub|ferdihub)\b/, keyword: 'Uberhub' },
+      // Redes sociais
+      { pattern: /\b(instagram|insta|ig|storys)\b/, keyword: 'Instagram' },
+      { pattern: /\b(facebook|face|fb)\b/, keyword: 'Facebook' },
+      { pattern: /\b(twitter|x\.com)\b/, keyword: 'Twitter' },
+      { pattern: /\b(linkedin|linked in)\b/, keyword: 'LinkedIn' },
+      { pattern: /\b(tiktok|tik tok)\b/, keyword: 'TikTok' },
+      { pattern: /\b(youtube|yt)\b/, keyword: 'YouTube' },
+      { pattern: /\b(whatsapp|whats|wpp|zap|grupo|wtm|whtasap|gdg)\b/, keyword: 'WhatsApp' },
+      { pattern: /\b(telegram)\b/, keyword: 'Telegram' },
+      { pattern: /\bredes sociais?\b/, keyword: 'Redes Sociais' },
+
+
+      // Pessoas e relacionamentos
+      { pattern: /\b(amigo|amiga|amigos|amigas|colega|colegas|parceiro|parceira)\b/, keyword: 'Amigos' },
+      { pattern: /\b(professor|professora|docente|prof)\b/, keyword: 'Professor' },
+      { pattern: /\b(familia|familiar|parente|pai|mae|irmao|irma)\b/, keyword: 'Família' },
+      { pattern: /\b(indicacao|indiquei|recomendou|recomendacao)\b/, keyword: 'Indicação' },
+
+      // Instituições
+      { pattern: /\b(faculdade|universidade|ufu|ufmg|unitri|usp|ueg|unb|curso)\b/, keyword: 'Universidade' },
+      { pattern: /\b(escola|colegio|ensino)\b/, keyword: 'Escola' },
+      { pattern: /\b(trabalho|empresa|emprego|job)\b/, keyword: 'Trabalho' },
+      { pattern: /\b(nasa|space apps|spaceapps)\b/, keyword: 'NASA Space Apps' },
+
+      // Meios de comunicação
+      { pattern: /\b(google|pesquisa|busca|search)\b/, keyword: 'Google' },
+      { pattern: /\b(site|website|internet|web|online)\b/, keyword: 'Internet/Site' },
+      { pattern: /\b(email|e-mail|mail)\b/, keyword: 'Email' },
+      { pattern: /\b(noticia|noticias|jornal|radio|tv|site)\b/, keyword: 'Mídia' },
+      { pattern: /\b(evento|eventos|palestra|conferencia)\b/, keyword: 'Eventos' },
+      { pattern: /\b(cartaz|poster|outdoor|propaganda)\b/, keyword: 'Publicidade' },
+
+      // Comunidades técnicas
+      { pattern: /\b(github|git)\b/, keyword: 'GitHub' },
+      { pattern: /\b(discord|slack)\b/, keyword: 'Discord/Slack' },
+      { pattern: /\b(dev|developer|programming|programacao)\b/, keyword: 'Comunidade Dev' },
+
+      // Outros
+      { pattern: /\b(ja participei|anterior|antes|edicao passada)\b/, keyword: 'Edição Anterior' },
+      { pattern: /\b(hackathon|hack|competicao)\b/, keyword: 'Outros Hackathons' }
+    ];
+
+    const foundKeywords = new Set<string>();
+
+    // Busca por padrões específicos
+    keywordPatterns.forEach(({ pattern, keyword }) => {
+      if (pattern.test(normalizedText)) {
+        foundKeywords.add(keyword);
+      }
+    });
+
+    // Se não encontrou nenhuma palavra-chave específica, extrai palavras relevantes
+    if (foundKeywords.size === 0) {
+      const words = this.extractKeywords(normalizedText);
+      words.forEach(word => {
+        if (word.length > 3) { // Só palavras com mais de 3 caracteres
+          foundKeywords.add(word);
+        }
+      });
+    }
+
+    return Array.from(foundKeywords);
+  }
+
   private extractKeywords(text: string): string[] {
     const stopWords = ['o', 'a', 'os', 'as', 'de', 'da', 'do', 'das', 'dos', 'em', 'no', 'na', 'nos', 'nas',
                        'por', 'para', 'com', 'sem', 'sobre', 'ate', 'desde', 'entre', 'pela', 'pelo', 'pelas', 'pelos',
                        'e', 'ou', 'mas', 'que', 'se', 'como', 'quando', 'onde', 'porque', 'pois', 'assim',
                        'muito', 'mais', 'menos', 'bem', 'mal', 'melhor', 'pior', 'maior', 'menor',
                        'um', 'uma', 'uns', 'umas', 'este', 'esta', 'estes', 'estas', 'esse', 'essa', 'esses', 'essas',
-                       'aquele', 'aquela', 'aqueles', 'aquelas', 'meu', 'minha', 'meus', 'minhas', 'seu', 'sua', 'seus', 'suas'];
+                       'aquele', 'aquela', 'aqueles', 'aquelas', 'meu', 'minha', 'meus', 'minhas', 'seu', 'sua', 'seus', 'suas',
+                       'voce', 'você', 'seu', 'sua', 'foi', 'era', 'ser', 'estar', 'tem', 'ter', 'fazer', 'fez', 'ficou', 'sabendo'];
 
     return text
       .split(' ')
@@ -376,7 +495,7 @@ export class RegistrationDataService {
       if (reg.city) {
         const normalizedCity = this.normalizeCityName(reg.city);
         const groupedCity = this.findSimilarCity(normalizedCity, cityMap);
-        
+
         if (groupedCity) {
           cityMap.set(groupedCity, (cityMap.get(groupedCity) || 0) + 1);
         } else {
@@ -453,7 +572,7 @@ export class RegistrationDataService {
       'uber': 'Uberlândia',
       'uberl': 'Uberlândia',
       'ubêrlandia': 'Uberlândia',
-      
+
       // Outras cidades principais
       'brasilia': 'Brasília',
       'brasília': 'Brasília',
@@ -533,7 +652,7 @@ export class RegistrationDataService {
     };
 
     const lowerNormalized = normalized.toLowerCase().trim();
-    
+
     // Aplica correções
     if (corrections[lowerNormalized]) {
       return corrections[lowerNormalized];
@@ -727,7 +846,7 @@ export class RegistrationDataService {
     const rows = jsonData.slice(1).filter(row =>
       row && row.some(cell => cell !== null && cell !== undefined && cell !== '')
     );
-
+    console.log(rows, 'linhas de dados processadas');
     console.log(`Processando ${rows.length} linhas de dados`);
 
     this.registrationData = rows.map((row, index) => {
@@ -743,7 +862,8 @@ export class RegistrationDataService {
           experience: this.parseValue(row[6]) || '',
           interests: this.parseValue(row[7]) || '',
           availability: this.parseValue(row[8]) || '',
-          expectations: this.parseValue(row[9]) || ''
+          expectations: this.parseValue(row[9]) || '',
+          gender: this.parseValue(row[10]) || ''
         };
 
         // Log detalhado para debug
@@ -764,7 +884,8 @@ export class RegistrationDataService {
           experience: '',
           interests: '',
           availability: '',
-          expectations: ''
+          expectations: '',
+          gender: ''
         };
       }
     });
@@ -900,5 +1021,50 @@ export class RegistrationDataService {
     }
 
     throw new Error('Não foi possível identificar um padrão de dados válido no arquivo.');
+  }
+
+  private calculateGenderStats(): { gender: string; count: number }[] {
+    const genderMap = new Map<string, number>();
+
+    this.registrationData.forEach(reg => {
+      if (reg.gender) {
+        let normalizedGender = this.normalizeGender(reg.gender);
+        genderMap.set(normalizedGender, (genderMap.get(normalizedGender) || 0) + 1);
+      }
+    });
+
+    return Array.from(genderMap.entries())
+      .map(([gender, count]) => ({ gender, count }))
+      .sort((a, b) => b.count - a.count);
+  }
+
+  private normalizeGender(gender: string): string {
+    const normalizedGender = gender.toLowerCase().trim();
+    
+    // Mapeamento de gêneros
+    const genderMappings: { [key: string]: string } = {
+      'masculino': '♂️ Masculino',
+      'feminino': '♀️ Feminino',
+      'masc': '♂️ Masculino',
+      'fem': '♀️ Feminino',
+      'm': '♂️ Masculino',
+      'f': '♀️ Feminino',
+      'homem': '♂️ Masculino',
+      'mulher': '♀️ Feminino',
+      'male': '♂️ Masculino',
+      'female': '♀️ Feminino',
+      'não-binário': '⚧️ Não-binário',
+      'nao-binario': '⚧️ Não-binário',
+      'não binário': '⚧️ Não-binário',
+      'nao binario': '⚧️ Não-binário',
+      'non-binary': '⚧️ Não-binário',
+      'outro': '🌈 Outro',
+      'other': '🌈 Outro',
+      'prefiro não informar': '❓ Prefiro não informar',
+      'prefiro nao informar': '❓ Prefiro não informar',
+      'prefer not to say': '❓ Prefiro não informar'
+    };
+
+    return genderMappings[normalizedGender] || `❓ ${gender}`;
   }
 }

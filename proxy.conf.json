@@ -1,4 +1,20 @@
 {
+  "/api/nasa/*": {
+    "target": "https://api.spaceappschallenge.org",
+    "secure": true,
+    "changeOrigin": true,
+    "logLevel": "debug",
+    "pathRewrite": {
+      "^/api/nasa": ""
+    },
+    "headers": {
+      "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36",
+      "Accept": "application/json",
+      "Accept-Language": "pt-BR,pt;q=0.9,en;q=0.8",
+      "Origin": "https://www.spaceappschallenge.org",
+      "Referer": "https://www.spaceappschallenge.org/2025/local-events/uberlandia/"
+    }
+  },
   "/api/*": {
     "target": "https://api.spaceappschallenge.org",
     "secure": true,

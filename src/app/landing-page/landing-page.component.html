@@ -22,15 +22,15 @@
   <section class="teams-section-wrapper">
     <div class="container">
       <div class="teams-section-content">
-        <h2>Times Participantes</h2>
-        <p class="section-description">
+        <h2 i18n="@@teams.title">Times Participantes</h2>
+        <p class="section-description" i18n="@@teams.description">
           Conheça os times já inscritos no NASA Space Apps Challenge Uberlândia 2025.
           Veja os projetos em desenvolvimento, habilidades desejadas e encontre sua equipe ideal!
         </p>
         <div class="teams-stats">
           <div class="stat-item">
             <div class="stat-number">{{ totalTeams }}</div>
-            <div class="stat-label">Times Inscritos</div>
+            <div class="stat-label" i18n="@@teams.stat.registered">Times Inscritos</div>
           </div>
           <!-- <div class="stat-item">
             <div class="stat-number">{{ totalMembers }}</div>
@@ -45,8 +45,8 @@
               </svg>
             </div>
             <div class="btn-content">
-              <span class="btn-title">Ver Todos os Times</span>
-              <span class="btn-subtitle">Encontre sua equipe ou conheça os participantes</span>
+              <span class="btn-title" i18n="@@teams.button.title">Ver Todos os Times</span>
+              <span class="btn-subtitle" i18n="@@teams.button.subtitle">Encontre sua equipe ou conheça os participantes</span>
             </div>
           </a>
         </div>
@@ -58,8 +58,8 @@
   <section class="community-wrapper">
     <div class="container">
       <div class="community-content">
-        <h2>Junte-se à Nossa Comunidade</h2>
-        <p class="section-description">
+        <h2 i18n="@@community.title">Junte-se à Nossa Comunidade</h2>
+        <p class="section-description" i18n="@@community.description">
           Conecte-se com outros participantes, tire dúvidas, compartilhe ideias e fique por dentro das últimas novidades do evento.
           Nossa comunidade está sempre pronta para ajudar e colaborar!
         </p>
@@ -68,14 +68,14 @@
             <i class="fab fa-discord" aria-hidden="true"></i>
             <div class="btn-content">
               <span class="btn-title">Discord</span>
-              <span class="btn-subtitle">Converse em tempo real</span>
+              <span class="btn-subtitle" i18n="@@community.discord.subtitle">Converse em tempo real</span>
             </div>
           </a>
           <a href="https://chat.whatsapp.com/LXwUUZaJPXtBOeKr7N4axg" target="_blank" rel="noopener noreferrer" class="community-btn whatsapp-btn" aria-label="Entre no grupo WhatsApp">
             <i class="fab fa-whatsapp" aria-hidden="true"></i>
             <div class="btn-content">
               <span class="btn-title">WhatsApp</span>
-              <span class="btn-subtitle">Grupo oficial do evento</span>
+              <span class="btn-subtitle" i18n="@@community.whatsapp.subtitle">Grupo oficial do evento</span>
             </div>
           </a>
         </div>
@@ -90,21 +90,21 @@
   <section class="mentors-volunteers-wrapper">
     <div class="container">
       <div class="mentors-volunteers-content">
-        <h2>Seja Parte da Nossa Missão</h2>
-        <p class="section-description">
+        <h2 i18n="@@mentors.title">Seja Parte da Nossa Missão</h2>
+        <p class="section-description" i18n="@@mentors.description">
           Junte-se a nós como mentor ou voluntário e ajude a transformar ideias em soluções inovadoras que podem mudar o mundo.
           Sua experiência e dedicação são fundamentais para o sucesso do NASA Space Apps Challenge Uberlândia.
         </p>
         <div class="roles-grid">
           <div class="role-card">
             <div class="role-icon">🧑‍🏫</div>
-            <h3>Mentores</h3>
-            <p>Compartilhe sua expertise técnica e oriente equipes a desenvolver soluções inovadoras para os desafios da NASA.</p>
+            <h3 i18n="@@mentors.role.mentor.title">Mentores</h3>
+            <p i18n="@@mentors.role.mentor.description">Compartilhe sua expertise técnica e oriente equipes a desenvolver soluções inovadoras para os desafios da NASA.</p>
           </div>
           <div class="role-card">
             <div class="role-icon">🤝</div>
-            <h3>Voluntários</h3>
-            <p>Ajude na organização do evento e garanta que tudo funcione perfeitamente durante os dois dias de hackathon.</p>
+            <h3 i18n="@@mentors.role.volunteer.title">Voluntários</h3>
+            <p i18n="@@mentors.role.volunteer.description">Ajude na organização do evento e garanta que tudo funcione perfeitamente durante os dois dias de hackathon.</p>
           </div>
         </div>
         <div class="cta-section">
@@ -113,7 +113,7 @@
              rel="noopener noreferrer"
              class="volunteer-btn"
              aria-label="Formulário para se inscrever como mentor ou voluntário">
-            Quero Participar
+            <span i18n="@@mentors.button">Quero Participar</span>
           </a>
         </div>
       </div>
@@ -131,8 +131,8 @@
   <section class="organizers-wrapper">
     <div class="container">
       <div class="organizers-content">
-        <h2>Nossa Equipe Organizadora</h2>
-        <p class="section-description">
+        <h2 i18n="@@organizers.title">Nossa Equipe Organizadora</h2>
+        <p class="section-description" i18n="@@organizers.description">
           Conheça as pessoas que tornam o NASA Space Apps Challenge Uberlândia uma realidade.
           Uma equipe dedicada e apaixonada por inovação e tecnologia espacial.
         </p>
@@ -166,16 +166,16 @@
           <p>NASA Space Apps Challenge<br>Uberlândia 2025</p>
         </div>
         <nav class="footer-links" aria-label="Links úteis">
-          <h4>Links Úteis</h4>
+          <h4 i18n="@@footer.links.title">Links Úteis</h4>
           <ul>
             <li><a href="https://spaceappschallenge.org" target="_blank" rel="noopener noreferrer" aria-label="Site oficial global do Space Apps Challenge">Space Apps Global</a></li>
             <li><a href="https://nasa.gov" target="_blank" rel="noopener noreferrer" aria-label="Site oficial da NASA">NASA.gov</a></li>
-            <li><a routerLink="/politica-privacidade">Política de Privacidade</a></li>
+            <li><a routerLink="/politica-privacidade" i18n="@@footer.privacy">Política de Privacidade</a></li>
             <li><a href="https://www.instagram.com/nasaspaceappsuberlandia" target="_blank" rel="noopener noreferrer" aria-label="Contato via Instagram">Contato</a></li>
           </ul>
         </nav>
         <div class="footer-social">
-          <h4>Siga-nos</h4>
+          <h4 i18n="@@footer.social.title">Siga-nos</h4>
           <div class="social-links">
             <a href="https://discord.gg/FT4Jsvj5vy" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Junte-se ao nosso Discord">Discord</a>
             <a href="https://chat.whatsapp.com/LXwUUZaJPXtBOeKr7N4axg" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Entre no grupo WhatsApp">WhatsApp</a>
@@ -184,7 +184,7 @@
         </div>
       </div>
       <div class="footer-bottom">
-        <p>&copy; 2025 NASA Space Apps Uberlândia. Todos os direitos reservados.</p>
+        <p i18n="@@footer.copyright">&copy; 2025 NASA Space Apps Uberlândia. Todos os direitos reservados.</p>
       </div>
     </div>
   </footer>

@@ -1,5 +1,9 @@
 @import "../../../../styles/variables";
 
+
+a {
+  text-wrap: nowrap;
+}
 .header {
   background: rgba(0, 0, 0, 0.95);
   backdrop-filter: blur(15px);
@@ -129,6 +133,16 @@
             background: #5865F2;
             transform: translateY(-2px);
             box-shadow: 0 4px 15px rgba(88, 101, 242, 0.4);
+          }
+        }
+
+        &.instagram-btn {
+          border-color: #E4405F;
+
+          &:hover {
+            background: #E4405F;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 15px rgba(228, 64, 95, 0.4);
           }
         }
       }

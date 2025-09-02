@@ -17,15 +17,58 @@
         </div>
         <div class="stat-card" *ngIf="registrationStats">
           <div class="stat-number">{{ registrationStats.totalRegistrations }}</div>
-          <div class="stat-label">Inscrições UDI</div>
+          <div class="stat-label">Inscrições Formulário</div>
         </div>
-        <div class="stat-card" *ngIf="registrationStats">
-          <div class="stat-number">{{ registrationStats.averagePerDay }}</div>
-          <div class="stat-label">Média/Dia</div>
+        <div class="stat-card live-data" [class.loading]="isLoadingTeams">
+          <div class="stat-number">{{ totalTeams }}</div>
+          <div class="stat-label">Times NASA 🔴</div>
+          <div class="live-indicator">LIVE</div>
         </div>
+        <!-- <div class="stat-card live-data">
+          <div class="stat-number">{{ teamMembersTotal }}</div>
+          <div class="stat-label">Membros</div>
+        </div> -->
       </div>
     </div>
   </header>
+
+  <!-- Live Data Controls -->
+  <!-- <div class="live-controls">
+    <div class="controls-section">
+      <h3>🔄 Controles de Dados em Tempo Real</h3>
+      <div class="control-buttons">
+        <button class="refresh-btn" (click)="refreshAllNasaData()" [disabled]="isLoadingTeams">
+          <span class="btn-icon">🔄</span>
+          Atualizar Tudo
+        </button>
+        <button class="refresh-btn secondary" (click)="refreshNasaTeams()" [disabled]="isLoadingTeams">
+          🚀 Times
+        </button>
+        <button class="refresh-btn secondary" (click)="refreshLocalEvents()" [disabled]="isLoadingTeams">
+          🌍 Eventos
+        </button>
+      </div>
+    </div>
+
+    <div class="status-section">
+      <div class="status-item" [class.error]="teamsError">
+        <span class="status-label">Status NASA API:</span>
+        <span class="status-value" *ngIf="!teamsError && !isLoadingTeams">✅ Conectado</span>
+        <span class="status-value loading" *ngIf="isLoadingTeams">🔄 Carregando...</span>
+        <span class="status-value error" *ngIf="teamsError">❌ Erro</span>
+      </div>
+
+      <div class="status-item">
+        <span class="status-label">Última atualização:</span>
+        <span class="status-value">{{ formatLastUpdate(lastTeamsUpdate) }}</span>
+      </div>
+
+      <div class="status-item" *ngIf="teamsError">
+        <span class="status-label">Erro:</span>
+        <span class="status-value error">{{ teamsError }}</span>
+      </div>
+    </div>
+  </div> -->
 
   <!-- Dashboard Insights -->
   <div class="insights-dashboard" *ngIf="registrationStats">

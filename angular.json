@@ -13,6 +13,15 @@
       "root": "",
       "sourceRoot": "src",
       "prefix": "app",
+      "i18n": {
+        "sourceLocale": "pt-BR",
+        "locales": {
+          "en-US": {
+            "translation": "src/locale/messages.en.xlf",
+            "baseHref": "/en/"
+          }
+        }
+      },
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-angular:application",
@@ -35,7 +44,8 @@
               "src/assets"
             ],
             "styles": ["src/styles.scss"],
-            "scripts": []
+            "scripts": [],
+            "i18nMissingTranslation": "warning"
           },
           "configurations": {
             "production": {
@@ -57,6 +67,12 @@
               "optimization": false,
               "extractLicenses": false,
               "sourceMap": true
+            },
+            "pt": {
+              "localize": ["pt-BR"]
+            },
+            "en": {
+              "localize": ["en-US"]
             }
           },
           "defaultConfiguration": "production"
@@ -69,6 +85,12 @@
             },
             "development": {
               "buildTarget": "nasa-spaceapps-angular-web:build:development"
+            },
+            "pt": {
+              "buildTarget": "nasa-spaceapps-angular-web:build:pt"
+            },
+            "en": {
+              "buildTarget": "nasa-spaceapps-angular-web:build:en"
             }
           },
           "defaultConfiguration": "development"
