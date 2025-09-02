@@ -143,7 +143,7 @@ export class HeaderComponent {
 
   openMatchmaking(): void {
     if (this.isLoggedIn) {
-      this.router.navigate(['/matchmaking']);
+      this.router.navigate(['/dashboard']);
     } else {
       this.showEmailModal = true;
     }
@@ -159,6 +159,7 @@ export class HeaderComponent {
 
   onCodeVerified(): void {
     this.showCodeModal = false;
-    this.router.navigate(['/matchmaking']);
+    this.isLoggedIn = true;
+    this.router.navigate(['/dashboard']);
   }
 }

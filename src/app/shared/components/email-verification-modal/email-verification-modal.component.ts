@@ -1,7 +1,7 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
-import { MatchmakingService, EmailVerificationResponse } from '../../services/matchmaking.service';
+import { AuthService } from '../../../services/api/auth.service';
 
 @Component({
   selector: 'app-email-verification-modal',
@@ -19,7 +19,7 @@ export class EmailVerificationModalComponent {
   errorMessage = '';
   successMessage = '';
 
-  constructor(private matchmakingService: MatchmakingService) {}
+  constructor(private authService: AuthService) {}
 
   onSubmit(): void {
     if (!this.email || !this.isValidEmail(this.email)) {
@@ -31,21 +31,17 @@ export class EmailVerificationModalComponent {
     this.errorMessage = '';
     this.successMessage = '';
 
-    this.matchmakingService.verifyEmail(this.email).subscribe({
-      next: (response: EmailVerificationResponse) => {
+    this.authService.checkEmail(this.email).subscribe({
+      next: (response) => {
         this.isLoading = false;
-        if (response.success) {
-          if (response.isRegistered) {
-            this.successMessage = 'Email encontrado! Verificando código de 6 dígitos enviado para seu email.';
-            setTimeout(() => {
-              this.emailVerified.emit({ email: this.email, isRegistered: true });
-              this.closeModal();
-            }, 1500);
-          } else {
-            this.errorMessage = 'Email não encontrado. Por favor, inscreva-se primeiro no formulário Google e na NASA Space Apps.';
-          }
+        if (response.isRegistered) {
+          this.successMessage = 'Email encontrado! Código de 6 dígitos enviado para seu email.';
+          setTimeout(() => {
+            this.emailVerified.emit({ email: this.email, isRegistered: true });
+            this.closeModal();
+          }, 1500);
         } else {
-          this.errorMessage = response.message || 'Erro ao verificar email. Tente novamente.';
+          this.errorMessage = response.message || 'Email não encontrado. Por favor, inscreva-se primeiro no formulário Google e na NASA Space Apps.';
         }
       },
       error: (error) => {

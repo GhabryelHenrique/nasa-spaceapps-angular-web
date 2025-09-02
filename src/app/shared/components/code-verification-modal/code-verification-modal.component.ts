@@ -1,7 +1,7 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
-import { MatchmakingService, CodeVerificationResponse } from '../../services/matchmaking.service';
+import { AuthService } from '../../../services/api/auth.service';
 
 @Component({
   selector: 'app-code-verification-modal',
@@ -20,7 +20,7 @@ export class CodeVerificationModalComponent {
   errorMessage = '';
   successMessage = '';
 
-  constructor(private matchmakingService: MatchmakingService) {}
+  constructor(private authService: AuthService) {}
 
   onSubmit(): void {
     if (!this.code || this.code.length !== 6) {
@@ -37,10 +37,10 @@ export class CodeVerificationModalComponent {
     this.errorMessage = '';
     this.successMessage = '';
 
-    this.matchmakingService.verifyCode(this.email, this.code).subscribe({
-      next: (response: CodeVerificationResponse) => {
+    this.authService.verifyCode(this.email, this.code).subscribe({
+      next: (response) => {
         this.isLoading = false;
-        if (response.success) {
+        if (response.authenticated) {
           this.successMessage = 'Login realizado com sucesso! Redirecionando...';
           setTimeout(() => {
             this.codeVerified.emit();
@@ -65,9 +65,9 @@ export class CodeVerificationModalComponent {
   }
 
   resendCode(): void {
-    this.matchmakingService.verifyEmail(this.email).subscribe({
+    this.authService.checkEmail(this.email).subscribe({
       next: (response) => {
-        if (response.success) {
+        if (response.isRegistered) {
           this.successMessage = 'Código reenviado para seu email!';
           setTimeout(() => this.successMessage = '', 3000);
         } else {
