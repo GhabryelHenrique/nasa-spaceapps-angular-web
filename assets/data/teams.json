@@ -6,10 +6,10 @@
           "hasPreviousPage": false,
           "hasNextPage": false,
           "startCursor": "b2Zmc2V0OjA=",
-          "endCursor": "b2Zmc2V0OjUz",
+          "endCursor": "b2Zmc2V0OjU0",
           "__typename": "PageInfo"
         },
-        "totalCount": 54,
+        "totalCount": 55,
         "edges": [
           {
             "__typename": "TeamPageEdge",
@@ -8846,6 +8846,201 @@
             "cursor": "b2Zmc2V0OjQ5",
             "node": {
               "__typename": "TeamPage",
+              "id": "aWQ6MzQ1MTc=",
+              "title": "Titan",
+              "meta": {
+                "type": "TEAM",
+                "slug": "titan46",
+                "firstPublishedAt": "2025-09-03T18:38:27.284536Z",
+                "lastPublishedAt": "2025-09-03T18:51:58.774474Z",
+                "relativeUrl": "/2025/find-a-team/titan46/",
+                "live": true,
+                "parent": null,
+                "__typename": "ExpandedPageMeta"
+              },
+              "owner": "aWQ6Mzc5MDI1",
+              "ownerDetails": null,
+              "excerpt": null,
+              "project": "aWQ6MzIzMzI=",
+              "projectDetails": {
+                "id": "aWQ6MzIzMzI=",
+                "name": "Project Titan",
+                "summary": "",
+                "demoLink": "",
+                "projectLink": "",
+                "details": "",
+                "solution": "",
+                "aiReferences": "",
+                "dataReferences": "",
+                "projectReferences": "",
+                "isSubmitted": false,
+                "savedAt": null,
+                "submittedAt": null,
+                "__typename": "Project"
+              },
+              "projectSubmitted": false,
+              "featuredImage": {
+                "id": "aWQ6MjkxMjA0",
+                "meta": {
+                  "type": "images.CustomImage",
+                  "downloadUrl": "https://assets.spaceappschallenge.org/media/original_images/Titan-team.jpg",
+                  "__typename": "ImageMeta"
+                },
+                "title": "team_image.18:47:12.202076",
+                "alt": "team_image.18:47:12.202076",
+                "caption": "team_image.18:47:12.202076",
+                "displaySize": "og",
+                "rendition": {
+                  "url": "https://assets.spaceappschallenge.org/media/images/Titan-team.2e16d0ba.fill-300x250.jpg",
+                  "fullUrl": "https://assets.spaceappschallenge.org/media/images/Titan-team.2e16d0ba.fill-300x250.jpg",
+                  "height": 250,
+                  "width": 300,
+                  "__typename": "BaseImage"
+                },
+                "__typename": "DefaultImage"
+              },
+              "description": null,
+              "desiredSkills": [
+                "Games",
+                "Software",
+                "Coding",
+                "Graphic Design",
+                "Data Visualization",
+                "Design",
+                "Storytelling",
+                "Virtual Reality"
+              ],
+              "languages": [
+                "Portuguese",
+                "English",
+                "Spanish"
+              ],
+              "challenge": "aWQ6MzEzMjU=",
+              "challengeDetails": {
+                "id": "aWQ6MzEzMjU=",
+                "title": "Deep Dive: Immersive Data Stories from Ocean to Sky",
+                "meta": {
+                  "type": "CHALLENGE",
+                  "slug": "deep-dive-immersive-data-stories-from-ocean-to-sky",
+                  "firstPublishedAt": "2025-08-18T19:28:40.018990Z",
+                  "lastPublishedAt": "2025-08-19T21:26:22.617986Z",
+                  "relativeUrl": "/2025/challenges/deep-dive-immersive-data-stories-from-ocean-to-sky/",
+                  "live": true,
+                  "parent": null,
+                  "__typename": "ExpandedPageMeta"
+                },
+                "excerpt": "Satellite observations reveal insights about our dynamic home planet to scientists, but people without a remote sensing background often find the stories within these datasets difficult to access. NASA’s open data policy makes these observations available to everyone—scientists and non-scientists alike. Your challenge is to build a short, immersive, virtual reality (VR) experience that leverages NASA’s Earth observation datasets and visualizations to bring stories about our planet’s oceans to life, connecting a broad audience to this data, its beauty, and its impact. Using visuals, spatial audio, and even interactive elements, your VR experience can enable users to dive deeper into Earth’s unfolding ocean story.",
+                "__typename": "ChallengePage"
+              },
+              "location": "aWQ6MzA2NjM=",
+              "locationDetails": {
+                "id": "aWQ6MzA2NjM=",
+                "title": "Uberlandia",
+                "displayName": "Uberlândia",
+                "meta": {
+                  "type": "LOCATION",
+                  "slug": "uberlandia",
+                  "firstPublishedAt": "2025-07-18T21:43:56.560298Z",
+                  "lastPublishedAt": "2025-08-22T19:13:44.047613Z",
+                  "relativeUrl": "/2025/local-events/uberlandia/",
+                  "live": true,
+                  "parent": null,
+                  "__typename": "ExpandedPageMeta"
+                },
+                "country": "Brazil",
+                "__typename": "LocationPage"
+              },
+              "event": "aWQ6Mw==",
+              "eventDetails": {
+                "__typename": "GlobalEvent",
+                "id": "aWQ6Mw==",
+                "name": "2025 NASA Space Apps Challenge",
+                "displayName": "2025 NASA Space Apps Challenge",
+                "slug": "2025",
+                "status": 2,
+                "startDate": "2025-10-04T13:00:00",
+                "endDate": "2025-10-05T09:00:00",
+                "certificate": null,
+                "createRegistrationForm": "aWQ6MQ==",
+                "editRegistrationForm": "aWQ6MQ==",
+                "createTeamForm": "aWQ6Ng==",
+                "timezone": "GMT",
+                "teamMemberLimit": 6,
+                "eventRegistrationStatus": 2,
+                "localEventRegistrationStatus": 6,
+                "teamRegistrationStatus": 6,
+                "isTeamPagesActive": true,
+                "isAwardsActive": false,
+                "isChallengePagesActive": false,
+                "localEventEditStatus": 5,
+                "teamEditStatus": 5,
+                "teamStreamEditStatus": 0,
+                "projectEditStatus": 0,
+                "localEventJudgingStatus": 0,
+                "nominationJudgingStatus": 0,
+                "projectFields": [
+                  {
+                    "title": "Summary",
+                    "caption": "",
+                    "fieldMapping": "summary",
+                    "fieldType": "TEXT",
+                    "__typename": "ProjectFieldBlock"
+                  },
+                  {
+                    "title": "Project Demonstration",
+                    "caption": "",
+                    "fieldMapping": "demoLink",
+                    "fieldType": "URL",
+                    "__typename": "ProjectFieldBlock"
+                  },
+                  {
+                    "title": "Project",
+                    "caption": "",
+                    "fieldMapping": "projectLink",
+                    "fieldType": "URL",
+                    "__typename": "ProjectFieldBlock"
+                  },
+                  {
+                    "title": "Project Details",
+                    "caption": "",
+                    "fieldMapping": "details",
+                    "fieldType": "RICHFULL",
+                    "__typename": "ProjectFieldBlock"
+                  },
+                  {
+                    "title": "Use of Artificial Intelligence (AI)",
+                    "caption": "",
+                    "fieldMapping": "aiReferences",
+                    "fieldType": "LINKS",
+                    "__typename": "ProjectFieldBlock"
+                  },
+                  {
+                    "title": "NASA Data",
+                    "caption": "",
+                    "fieldMapping": "dataReferences",
+                    "fieldType": "LINKS",
+                    "__typename": "ProjectFieldBlock"
+                  },
+                  {
+                    "title": "Space Agency Partner & Other Data",
+                    "caption": "",
+                    "fieldMapping": "projectReferences",
+                    "fieldType": "LINKS",
+                    "__typename": "ProjectFieldBlock"
+                  }
+                ]
+              },
+              "joinEnabled": true,
+              "memberships": null,
+              "nominationBadges": [],
+              "awardBadges": null
+            }
+          },
+          {
+            "__typename": "TeamPageEdge",
+            "cursor": "b2Zmc2V0OjUw",
+            "node": {
+              "__typename": "TeamPage",
               "id": "aWQ6MzM0OTg=",
               "title": "Trem de IA",
               "meta": {
@@ -9025,7 +9220,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjUw",
+            "cursor": "b2Zmc2V0OjUx",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6MzMwNjA=",
@@ -9207,7 +9402,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjUx",
+            "cursor": "b2Zmc2V0OjUy",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6MzM4MTM=",
@@ -9389,7 +9584,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjUy",
+            "cursor": "b2Zmc2V0OjUz",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6MzQyNTk=",
@@ -9589,7 +9784,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjUz",
+            "cursor": "b2Zmc2V0OjU0",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6MzMyNDM=",
