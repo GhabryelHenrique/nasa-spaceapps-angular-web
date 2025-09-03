@@ -2574,7 +2574,7 @@
                 "type": "TEAM",
                 "slug": "candy_monkeys",
                 "firstPublishedAt": "2025-08-28T14:46:27.884096Z",
-                "lastPublishedAt": "2025-08-31T06:14:55.147382Z",
+                "lastPublishedAt": "2025-09-03T21:38:42.584506Z",
                 "relativeUrl": "/2025/find-a-team/candy_monkeys/",
                 "live": true,
                 "parent": null,
@@ -8852,7 +8852,7 @@
                 "type": "TEAM",
                 "slug": "titan46",
                 "firstPublishedAt": "2025-09-03T18:38:27.284536Z",
-                "lastPublishedAt": "2025-09-03T18:51:58.774474Z",
+                "lastPublishedAt": "2025-09-03T21:04:07.420572Z",
                 "relativeUrl": "/2025/find-a-team/titan46/",
                 "live": true,
                 "parent": null,
@@ -8880,19 +8880,19 @@
               },
               "projectSubmitted": false,
               "featuredImage": {
-                "id": "aWQ6MjkxMjA0",
+                "id": "aWQ6MjkxMzQ3",
                 "meta": {
                   "type": "images.CustomImage",
-                  "downloadUrl": "https://assets.spaceappschallenge.org/media/original_images/Titan-team.jpg",
+                  "downloadUrl": "https://assets.spaceappschallenge.org/media/original_images/titan-logo-affinit.jpg",
                   "__typename": "ImageMeta"
                 },
-                "title": "team_image.18:47:12.202076",
-                "alt": "team_image.18:47:12.202076",
-                "caption": "team_image.18:47:12.202076",
+                "title": "team_image.21:04:06.343167",
+                "alt": "team_image.21:04:06.343167",
+                "caption": "team_image.21:04:06.343167",
                 "displaySize": "og",
                 "rendition": {
-                  "url": "https://assets.spaceappschallenge.org/media/images/Titan-team.2e16d0ba.fill-300x250.jpg",
-                  "fullUrl": "https://assets.spaceappschallenge.org/media/images/Titan-team.2e16d0ba.fill-300x250.jpg",
+                  "url": "https://assets.spaceappschallenge.org/media/images/titan-logo-affinit.2e16d0ba.fill-300x250.jpg",
+                  "fullUrl": "https://assets.spaceappschallenge.org/media/images/titan-logo-affinit.2e16d0ba.fill-300x250.jpg",
                   "height": 250,
                   "width": 300,
                   "__typename": "BaseImage"
@@ -8908,7 +8908,9 @@
                 "Data Visualization",
                 "Design",
                 "Storytelling",
-                "Virtual Reality"
+                "Virtual Reality",
+                "Artificial Intelligence & Machine Learning",
+                "Statistics"
               ],
               "languages": [
                 "Portuguese",
