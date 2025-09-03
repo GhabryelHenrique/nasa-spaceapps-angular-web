@@ -8893,6 +8893,19 @@
                 "rendition": {
                   "url": "https://assets.spaceappschallenge.org/media/images/titan-logo-affinit.2e16d0ba.fill-300x250.jpg",
                   "fullUrl": "https://assets.spaceappschallenge.org/media/images/titan-logo-affinit.2e16d0ba.fill-300x250.jpg",
+                "id": "aWQ6MjkxMjA0",
+                "meta": {
+                  "type": "images.CustomImage",
+                  "downloadUrl": "https://assets.spaceappschallenge.org/media/original_images/Titan-team.jpg",
+                  "__typename": "ImageMeta"
+                },
+                "title": "team_image.18:47:12.202076",
+                "alt": "team_image.18:47:12.202076",
+                "caption": "team_image.18:47:12.202076",
+                "displaySize": "og",
+                "rendition": {
+                  "url": "https://assets.spaceappschallenge.org/media/images/Titan-team.2e16d0ba.fill-300x250.jpg",
+                  "fullUrl": "https://assets.spaceappschallenge.org/media/images/Titan-team.2e16d0ba.fill-300x250.jpg",
                   "height": 250,
                   "width": 300,
                   "__typename": "BaseImage"
