@@ -198,8 +198,8 @@ export class RegistrationDataService {
             // Validação de idade razoável (entre 10 e 100 anos)
             if (age >= 10 && age <= 100) {
               let ageGroup: string;
-              if (age < 20) ageGroup = '< 20 anos';
-              else if (age < 25) ageGroup = '20-24 anos';
+              if (age < 18) ageGroup = '< 18 anos';
+              else if (age < 25) ageGroup = '18-24 anos';
               else if (age < 30) ageGroup = '25-29 anos';
               else if (age < 35) ageGroup = '30-34 anos';
               else ageGroup = '35+ anos';
@@ -220,7 +220,7 @@ export class RegistrationDataService {
     return Array.from(ageGroups.entries())
       .map(([ageGroup, count]) => ({ ageGroup, count }))
       .sort((a, b) => {
-        const order = ['< 20 anos', '20-24 anos', '25-29 anos', '30-34 anos', '35+ anos'];
+        const order = ['< 18 anos', '20-24 anos', '25-29 anos', '30-34 anos', '35+ anos'];
         return order.indexOf(a.ageGroup) - order.indexOf(b.ageGroup);
       });
   }
@@ -1040,7 +1040,7 @@ export class RegistrationDataService {
 
   private normalizeGender(gender: string): string {
     const normalizedGender = gender.toLowerCase().trim();
-    
+
     // Mapeamento de gêneros
     const genderMappings: { [key: string]: string } = {
       'masculino': '♂️ Masculino',
