@@ -33,7 +33,7 @@ import { UserRegistration } from '../../models/auth.models';
       <main class="profile-main">
         <div class="container">
           <form [formGroup]="profileForm" (ngSubmit)="onSubmit()" class="profile-form">
-            
+
             <!-- Progress Indicator -->
             <div class="progress-section">
               <div class="progress-bar">
@@ -48,12 +48,12 @@ import { UserRegistration } from '../../models/auth.models';
                 <i class="fas fa-user"></i>
                 Informações Básicas
               </h2>
-              
+
               <div class="form-grid">
                 <div class="form-group">
                   <label for="fullName">Nome Completo *</label>
-                  <input 
-                    type="text" 
+                  <input
+                    type="text"
                     id="fullName"
                     formControlName="fullName"
                     placeholder="Seu nome completo"
@@ -65,8 +65,8 @@ import { UserRegistration } from '../../models/auth.models';
 
                 <div class="form-group">
                   <label for="education">Formação Acadêmica *</label>
-                  <input 
-                    type="text" 
+                  <input
+                    type="text"
                     id="education"
                     formControlName="education"
                     placeholder="Ex: Engenharia de Software, Universidade Federal"
@@ -78,7 +78,7 @@ import { UserRegistration } from '../../models/auth.models';
 
                 <div class="form-group">
                   <label for="expertiseLevel">Nível de Experiência *</label>
-                  <select 
+                  <select
                     id="expertiseLevel"
                     formControlName="expertiseLevel"
                     [class.error]="profileForm.get('expertiseLevel')?.invalid && profileForm.get('expertiseLevel')?.touched">
@@ -96,7 +96,7 @@ import { UserRegistration } from '../../models/auth.models';
 
               <div class="form-group full-width">
                 <label for="bio">Biografia</label>
-                <textarea 
+                <textarea
                   id="bio"
                   formControlName="bio"
                   rows="4"
@@ -114,8 +114,8 @@ import { UserRegistration } from '../../models/auth.models';
               <div class="form-group">
                 <label>Habilidades Técnicas *</label>
                 <div class="skills-input">
-                  <input 
-                    type="text" 
+                  <input
+                    type="text"
                     [(ngModel)]="newSkill"
                     [ngModelOptions]="{standalone: true}"
                     (keyup.enter)="addSkill()"
@@ -125,7 +125,7 @@ import { UserRegistration } from '../../models/auth.models';
                   </button>
                 </div>
                 <div class="tags-container">
-                  <span 
+                  <span
                     *ngFor="let skill of skills; let i = index"
                     class="tag">
                     {{ skill }}
@@ -142,8 +142,8 @@ import { UserRegistration } from '../../models/auth.models';
               <div class="form-group">
                 <label>Idiomas *</label>
                 <div class="skills-input">
-                  <input 
-                    type="text" 
+                  <input
+                    type="text"
                     [(ngModel)]="newLanguage"
                     [ngModelOptions]="{standalone: true}"
                     (keyup.enter)="addLanguage()"
@@ -153,7 +153,7 @@ import { UserRegistration } from '../../models/auth.models';
                   </button>
                 </div>
                 <div class="tags-container">
-                  <span 
+                  <span
                     *ngFor="let language of languages; let i = index"
                     class="tag">
                     {{ language }}
@@ -180,11 +180,11 @@ import { UserRegistration } from '../../models/auth.models';
               </h2>
 
               <div formArrayName="workExperience">
-                <div 
+                <div
                   *ngFor="let exp of workExperienceArray.controls; let i = index"
                   [formGroupName]="i"
                   class="experience-item">
-                  
+
                   <div class="experience-header">
                     <h3>Experiência {{ i + 1 }}</h3>
                     <button type="button" class="btn-remove" (click)="removeWorkExperience(i)">
@@ -237,11 +237,11 @@ import { UserRegistration } from '../../models/auth.models';
               <div formGroupName="availability" class="form-grid">
                 <div class="form-group">
                   <label for="hoursPerWeek">Horas por Semana *</label>
-                  <input 
-                    type="number" 
+                  <input
+                    type="number"
                     id="hoursPerWeek"
                     formControlName="hoursPerWeek"
-                    min="1" 
+                    min="1"
                     max="168"
                     placeholder="Ex: 20">
                   <small>Durante o período do hackathon</small>
@@ -259,8 +259,8 @@ import { UserRegistration } from '../../models/auth.models';
 
                 <div class="form-group full-width">
                   <label for="preferredWorkingHours">Horário Preferido de Trabalho *</label>
-                  <input 
-                    type="text" 
+                  <input
+                    type="text"
                     id="preferredWorkingHours"
                     formControlName="preferredWorkingHours"
                     placeholder="Ex: 9:00-17:00, ou Flexível">
@@ -321,8 +321,8 @@ import { UserRegistration } from '../../models/auth.models';
               <div class="form-grid">
                 <div class="form-group">
                   <label for="githubProfile">GitHub</label>
-                  <input 
-                    type="url" 
+                  <input
+                    type="url"
                     id="githubProfile"
                     formControlName="githubProfile"
                     placeholder="https://github.com/seuperfil">
@@ -330,8 +330,8 @@ import { UserRegistration } from '../../models/auth.models';
 
                 <div class="form-group">
                   <label for="linkedinProfile">LinkedIn</label>
-                  <input 
-                    type="url" 
+                  <input
+                    type="url"
                     id="linkedinProfile"
                     formControlName="linkedinProfile"
                     placeholder="https://linkedin.com/in/seuperfil">
@@ -339,8 +339,8 @@ import { UserRegistration } from '../../models/auth.models';
 
                 <div class="form-group">
                   <label for="portfolioUrl">Portfólio</label>
-                  <input 
-                    type="url" 
+                  <input
+                    type="url"
                     id="portfolioUrl"
                     formControlName="portfolioUrl"
                     placeholder="https://seuportfolio.com">
@@ -353,8 +353,8 @@ import { UserRegistration } from '../../models/auth.models';
               <button type="button" class="btn btn-secondary" (click)="goBack()">
                 Cancelar
               </button>
-              <button 
-                type="submit" 
+              <button
+                type="submit"
                 class="btn btn-primary"
                 [disabled]="isLoading || !isFormValid()">
                 <i *ngIf="isLoading" class="fas fa-spinner fa-spin"></i>
@@ -378,7 +378,7 @@ import { UserRegistration } from '../../models/auth.models';
     .profile-header {
       background: linear-gradient(135deg, #1a1d35 0%, #2c3555 50%, #0f3460 100%);
       border-bottom: 2px solid #ff4444;
-      padding: 2rem 0;
+      padding: 6rem 0 2rem;
       position: relative;
     }
 
@@ -782,7 +782,7 @@ export class ProfileCreateComponent implements OnInit {
   currentUser: UserRegistration | null = null;
   isLoading = false;
   isEditing = false;
-  
+
   // Arrays for dynamic fields
   skills: string[] = [];
   languages: string[] = [];
@@ -935,8 +935,8 @@ export class ProfileCreateComponent implements OnInit {
   }
 
   isFormValid(): boolean {
-    return this.profileForm.valid && 
-           this.skills.length > 0 && 
+    return this.profileForm.valid &&
+           this.skills.length > 0 &&
            this.languages.length > 0;
   }
 
@@ -968,7 +968,7 @@ export class ProfileCreateComponent implements OnInit {
       challengesInterests: [] // Can be added in future version
     };
 
-    const request = this.isEditing ? 
+    const request = this.isEditing ?
       this.matchmakingService.updateProfile(this.currentUser.email, profileData) :
       this.matchmakingService.createProfile(profileData);
 
