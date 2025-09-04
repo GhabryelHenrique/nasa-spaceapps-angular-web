@@ -1,0 +1,96 @@
+<div class="challenge-chart-container">
+  <!-- Header Section -->
+  <div class="chart-header">
+    <div class="header-content">
+      <h2 class="chart-title">
+        <span class="title-icon">🎯</span>
+        Desafios Mais Escolhidos
+      </h2>
+      <p class="chart-subtitle">Distribuição dos times por desafio NASA Space Apps</p>
+    </div>
+
+    <!-- Quick Stats -->
+    <div class="quick-stats" *ngIf="!isLoading && challengeData.length > 0">
+      <div class="stat-item">
+        <div class="stat-number">{{ getTotalChallenges() }}</div>
+        <div class="stat-label">Desafios Únicos</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-number">{{ getTotalTeamsWithChallenges() }}</div>
+        <div class="stat-label">Times Cadastrados</div>
+      </div>
+      <div class="stat-item highlight" *ngIf="getMostPopularChallenge()">
+        <div class="stat-number">{{ getMostPopularChallenge()?.count }}</div>
+        <div class="stat-label">Mais Popular</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Loading State -->
+  <div class="loading-state" *ngIf="isLoading">
+    <div class="loading-spinner"></div>
+    <p>Processando dados dos desafios...</p>
+  </div>
+
+  <!-- Chart Section -->
+  <div class="chart-section" *ngIf="!isLoading && challengeData.length > 0">
+    <!-- Most Popular Challenge Highlight -->
+    <div class="popular-challenge" *ngIf="getMostPopularChallenge()">
+      <div class="popular-badge">🏆 Mais Popular</div>
+      <div class="popular-content">
+        <h3 class="popular-title">{{ getMostPopularChallenge()?.challengeTitle }}</h3>
+        <div class="popular-stats">
+          <span class="popular-count">{{ getMostPopularChallenge()?.count }} times</span>
+          <span class="popular-percentage">
+            ({{ ((getMostPopularChallenge()!.count / getTotalTeamsWithChallenges()) * 100).toFixed(1) }}% do total)
+          </span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Chart Container -->
+    <div class="chart-wrapper">
+      <canvas 
+        baseChart
+        [data]="chartData"
+        [options]="chartOptions"
+        type="doughnut">
+      </canvas>
+    </div>
+  </div>
+
+  <!-- Empty State -->
+  <div class="empty-state" *ngIf="!isLoading && challengeData.length === 0">
+    <div class="empty-icon">📊</div>
+    <h3>Nenhum desafio encontrado</h3>
+    <p>Não há dados de desafios disponíveis para exibição no gráfico.</p>
+  </div>
+
+  <!-- Challenge List -->
+  <div class="challenge-list" *ngIf="!isLoading && challengeData.length > 0">
+    <h3 class="list-title">
+      <span class="list-icon">📋</span>
+      Ranking dos Desafios
+    </h3>
+    <div class="challenge-items">
+      <div class="challenge-item" *ngFor="let challenge of challengeData; let i = index">
+        <div class="challenge-rank">
+          <span class="rank-number">{{ i + 1 }}</span>
+          <span class="rank-medal" *ngIf="i === 0">🥇</span>
+          <span class="rank-medal" *ngIf="i === 1">🥈</span>
+          <span class="rank-medal" *ngIf="i === 2">🥉</span>
+        </div>
+        <div class="challenge-color" [style.background-color]="challenge.color"></div>
+        <div class="challenge-info">
+          <div class="challenge-name">{{ challenge.challengeTitle }}</div>
+          <div class="challenge-stats">
+            <span class="challenge-count">{{ challenge.count }} times</span>
+            <span class="challenge-percentage">
+              ({{ ((challenge.count / getTotalTeamsWithChallenges()) * 100).toFixed(1) }}%)
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
