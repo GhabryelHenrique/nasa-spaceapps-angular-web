@@ -33,11 +33,11 @@ export class EventsMapComponent implements OnInit {
       title: 'MTI',
       info: 'Polo de capacitação dos mentores do NASA Space Apps Challenge'
     },
-    {
-      position: { lat: -18.956634, lng: -48.271558 },
-      title: 'Unitri',
-      info: 'Local de apoio para networking e atividades complementares do NASA Space Apps Challenge'
-    },
+    // {
+    //   position: { lat: -18.956634, lng: -48.271558 },
+    //   title: 'Unitri',
+    //   info: 'Local de apoio para networking e atividades complementares do NASA Space Apps Challenge'
+    // },
     {
       position: { lat: -18.879712, lng: -48.246336 },
       title: 'Brain',
