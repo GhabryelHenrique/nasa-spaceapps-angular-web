@@ -22,7 +22,7 @@ export class SponsorsSectionComponent {
       { name: 'Brain', logo: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQOTTjjaMnLdAln0y6CoY2YSCqr3nYeQVzPPQ&s', url: 'https://inovacaobrain.com.br' },
       { name: 'Observatório Nacional', logo: 'https://media.licdn.com/dms/image/v2/C4E0BAQFVZtnLQKrmNg/company-logo_200_200/company-logo_200_200/0/1631356595002?e=2147483647&v=beta&t=ONLM2nZjv3fbTw7420qtgQhwiC1ef13bkhIMRscBlaE', url: 'https://www.gov.br/observatorio/pt-br' },
       { name: 'Una', logo: 'https://media.licdn.com/dms/image/v2/C4E0BAQEKypVakNC3YQ/company-logo_200_200/company-logo_200_200/0/1630586019799/udifaculdadeuna_logo?e=2147483647&v=beta&t=14grTYkW0BjVLMwoGWOcDNfNLm4RLwa3u1Im7FXXzio', url: 'https://www.una.br/' },
-      { name: 'Colégio Ann Makenzie', logo: 'https://img.imageboss.me/me/cover:contain/80x80/format:auto/20210305202506314.jpg', url: 'https://colegioannmackenzie.com.br' },
+      { name: 'Colégio Ann Mackenzie', logo: 'https://img.imageboss.me/me/cover:contain/80x80/format:auto/20210305202506314.jpg', url: 'https://colegioannmackenzie.com.br' },
       { name: 'Colégio Nacional', logo: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSb3M1nAsCBCfXybnCaHbRNy_xyncy35dDAiw&s', url: 'https://www.nacionalnet.com.br' },
       { name: 'Gabarito', logo: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSwGgksxpwDoLa0Omi11PVWdvOCZxrireXLBS26GdhHY0THxb5OvuAXwijoUU7nT4reQKs&usqp=CAU', url: 'https://gabaritoeducacao.com' },
       { name: 'Portão 3', logo: 'https://media.licdn.com/dms/image/v2/C4D0BAQGXXDRmGbF-jQ/company-logo_200_200/company-logo_200_200/0/1630547611880/portao_3_logo?e=2147483647&v=beta&t=f_I13yGu1nwBMN-b-1oZDRmpNqhWxZAFAH9B8U3Z7Qw', url: 'https://portao3.com.br' },
