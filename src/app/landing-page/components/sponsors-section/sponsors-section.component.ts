@@ -43,6 +43,12 @@ export class SponsorsSectionComponent {
         //   { name: 'Empresa 3', logo: 'assets/sponsors/empresa3-logo.png', url: '#' },
         //   { name: 'Empresa 4', logo: 'assets/sponsors/empresa4-logo.png', url: '#' },
         // ],
+    // bronze: [
+    //   { name: 'Empresa 1', logo: 'assets/sponsors/empresa1-logo.png', url: '#' },
+    //   { name: 'Empresa 2', logo: 'assets/sponsors/empresa2-logo.png', url: '#' },
+    //   { name: 'Empresa 3', logo: 'assets/sponsors/empresa3-logo.png', url: '#' },
+    //   { name: 'Empresa 4', logo: 'assets/sponsors/empresa4-logo.png', url: '#' },
+    // ],
     supporters: [
       { name: 'MIT', logo: 'https://m.media-amazon.com/images/I/41VZYP49LiL._UF894,1000_QL80_.jpg', url: 'https://web.mit.edu' },
       { name: 'Goddard Space Flight Center', logo: 'assets/sponsors/channels4_profile.jpg', url: 'https://www.nasa.gov/goddard/' },
@@ -54,6 +60,7 @@ export class SponsorsSectionComponent {
       { name: 'UFMG', logo: 'https://images.seeklogo.com/logo-png/19/1/ufmg-logo-png_seeklogo-193610.png', url: 'https://www.instagram.com/ufmg' },
       { name: 'UEMG', logo: 'https://ed.uemg.br/wp-content/uploads/2018/12/favicon.png', url: 'https://www.iftm.edu.br' },
       { name: 'IFTM', logo: 'https://iftm.edu.br/bdt/img/logo_iftm.png', url: 'https://www.uemg.br' },
+      { name: 'Unitri', logo: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQZsCrwIQwv_WcH_4yRpg5j5FQfPoickMMirw&s', url: 'https://www.unitri.edu.br' },
       { name: 'UNIFACS', logo: 'https://strixeducacao.com.br/wp-content/uploads/2024/08/LOGO_UNIFACS_SITE.jpg', url: 'https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=&cad=rja&uact=8&ved=2ahUKEwjrnPGMzauPAxXTILkGHbC4KIYQFnoECA0QAQ&url=https%3A%2F%2Fwww.unifacs.br%2F&usg=AOvVaw3i19KB3mL9ROKIm_QW9MfQ&opi=89978449' },
       { name: 'LASSU-USP', logo: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQjNVo_AtDnOJfedx3gNg-Qh0giyuP3dNrMAA&s', url: 'https://www.lassu.usp.br/?doing_wp_cron=1756318949.9659340381622314453125' },
       { name: 'Unitri', logo: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQZsCrwIQwv_WcH_4yRpg5j5FQfPoickMMirw&s', url: 'https://www.unitri.edu.br' },
