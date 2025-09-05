@@ -4,15 +4,18 @@ import * as localEvents  from '../../assets/data/localEvents.json';
 import { CityParticipation } from '../shared/interfaces/local-event.interface';
 import { RegistrationChartsComponent } from './components/registration-charts/registration-charts.component';
 import { RegistrationMapComponent } from './components/registration-map/registration-map.component';
+import { ChallengeChartComponent } from './components/challenge-chart/challenge-chart.component';
 import { RegistrationDataService, RegistrationStats } from '../services/registration-data.service';
 import { GoogleSheetsService, RegistrationRow } from '../services/google-sheets.service';
 import { NasaTeamsService, TeamData, LocalEventData } from '../services/nasa-teams.service';
+import { TeamsService } from '../services/teams.service';
+import { Team } from '../shared/data/teams.data';
 import { Subject } from 'rxjs';
 import { takeUntil } from 'rxjs/operators';
 
 @Component({
   selector: 'app-war-room',
-  imports: [CommonModule, RegistrationChartsComponent, RegistrationMapComponent],
+  imports: [CommonModule, RegistrationChartsComponent, RegistrationMapComponent, ChallengeChartComponent],
   templateUrl: './war-room.component.html',
   styleUrl: './war-room.component.scss'
 })
@@ -33,18 +36,23 @@ export class WarRoomComponent implements OnInit, OnDestroy {
   teamsError: string | null = null;
   lastTeamsUpdate: Date | null = null;
 
+  // Teams data for challenge chart
+  teamsForChart: Team[] = [];
+
   private destroy$ = new Subject<void>();
 
   constructor(
     private registrationDataService: RegistrationDataService,
     private googleSheetsService: GoogleSheetsService,
-    private nasaTeamsService: NasaTeamsService
+    private nasaTeamsService: NasaTeamsService,
+    private teamsService: TeamsService
   ) {}
 
   ngOnInit() {
     this.loadCities();
     this.loadGoogleSheetsData();
     this.subscribeToNasaData();
+    this.loadTeamsData();
   }
 
   ngOnDestroy() {
@@ -402,5 +410,20 @@ export class WarRoomComponent implements OnInit, OnDestroy {
 
     const days = Math.floor(hours / 24);
     return `${days}d atrás`;
+  }
+
+  // Method to load teams data for challenge chart
+  private loadTeamsData() {
+    this.teamsService.getTeams(100, '', '').subscribe({
+      next: (response) => {
+        if (response.data && response.data[0] && response.data[0].teams) {
+          this.teamsForChart = response.data[0].teams.edges.map(edge => edge.node);
+          console.log(`📊 Teams carregados para gráfico de desafios: ${this.teamsForChart.length} times`);
+        }
+      },
+      error: (error) => {
+        console.error('Erro ao carregar times para gráfico:', error);
+      }
+    });
   }
 }

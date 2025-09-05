@@ -5,7 +5,6 @@ import { HeaderComponent } from './components/header/header.component';
 import { HeroSectionComponent } from './components/hero-section/hero-section.component';
 import { UberlandiaHighlightsComponent } from './components/uberlandia-highlights/uberlandia-highlights.component';
 import { EventInfoTabsComponent } from './components/event-info-tabs/event-info-tabs.component';
-import { ChallengesSectionComponent } from './components/challenges-section/challenges-section.component';
 import { EventsMapComponent } from './components/events-map/events-map.component';
 import { SponsorsSectionComponent } from './components/sponsors-section/sponsors-section.component';
 import { TeamsService } from '../services/teams.service';
@@ -19,7 +18,6 @@ import { TeamsService } from '../services/teams.service';
     HeroSectionComponent,
     UberlandiaHighlightsComponent,
     EventInfoTabsComponent,
-    ChallengesSectionComponent,
     EventsMapComponent,
     SponsorsSectionComponent
   ],

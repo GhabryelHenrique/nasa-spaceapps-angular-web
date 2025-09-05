@@ -9,6 +9,7 @@ import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { ProfileCreateComponent } from './components/profile-create/profile-create.component';
 import { MatchesComponent } from './components/matches/matches.component';
 import { AuthGuard } from './guards/auth.guard';
+import { ChallengesComponent } from './challenges/challenges.component';
 
 export const routes: Routes = [
   { path: '', component: LandingPageComponent },
@@ -16,6 +17,7 @@ export const routes: Routes = [
   { path: 'dashboard', component: DashboardComponent, canActivate: [AuthGuard] },
   { path: 'profile/create', component: ProfileCreateComponent, canActivate: [AuthGuard] },
   { path: 'matches', component: MatchesComponent, canActivate: [AuthGuard] },
+  { path: 'desafios', component: ChallengesComponent },
   { path: 'times', component: TeamsComponent },
   { path: 'sala-de-guerra', component: WarRoomComponent },
   { path: 'matchmaking', component: MatchmakingDashboardComponent },

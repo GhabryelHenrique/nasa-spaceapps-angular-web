@@ -1,8 +1,8 @@
 <header class="header">
   <nav class="navbar" role="navigation" aria-label="Navegação principal">
-    <div class="nav-brand" (click)="goToLandingPage()">
+    <a class="nav-brand" routerLink="/">
       <img src="assets/nasa-spaceapps-logo-removebg-preview.png" alt="Logo do NASA Space Apps Challenge - Hackathon espacial internacional" width="10%"  loading="lazy" style="cursor: pointer;">
-    </div>
+    </a>
     <div class="nav-actions">
       <button class="social-btn whatsapp-btn" (click)="openWhatsApp()">
         <i class="fa-brands fa-whatsapp"></i>
@@ -17,6 +17,10 @@
         Instagram
       </button>
       <!-- <app-language-switcher></app-language-switcher> -->
+      <a routerLink="/desafios" class="register-btn">
+        <i class="fa-solid fa-trophy"></i>
+        <span i18n="@@nav.challenges">Desafios</span>
+      </a>
       <a routerLink="/times" class="register-btn">
         <i class="fa-solid fa-users"></i>
         <span i18n="@@nav.teams">Times</span>

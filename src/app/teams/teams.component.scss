@@ -40,8 +40,21 @@
 
 // Search Section
 .search-section {
-  max-width: 500px;
+  max-width: 800px;
   margin: 0 auto;
+
+  .search-controls {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+    
+    @media (min-width: 768px) {
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+    }
+  }
 
   .search-bar {
     display: flex;
@@ -50,6 +63,8 @@
     overflow: hidden;
     backdrop-filter: blur(10px);
     border: 1px solid rgba(255, 255, 255, 0.2);
+    flex: 1;
+    max-width: 350px;
 
     .search-input {
       flex: 1;
@@ -84,11 +99,93 @@
     }
   }
 
+  .filter-section {
+    display: flex;
+    align-items: center;
+    
+    .challenge-filter {
+      min-width: 280px;
+      padding: 1rem 1.5rem;
+      background: rgba(255, 255, 255, 0.1);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      border-radius: 50px;
+      color: white;
+      font-size: 1rem;
+      outline: none;
+      cursor: pointer;
+      backdrop-filter: blur(10px);
+      appearance: none;
+      background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6,9 12,15 18,9'%3e%3c/polyline%3e%3c/svg%3e");
+      background-repeat: no-repeat;
+      background-position: right 1rem center;
+      background-size: 1rem;
+      padding-right: 3rem;
+      
+      &:focus {
+        border-color: rgba(255, 255, 255, 0.4);
+        background-color: rgba(255, 255, 255, 0.15);
+      }
+      
+      &:disabled {
+        opacity: 0.5;
+        cursor: not-allowed;
+      }
+      
+      option {
+        background: #1a1a3e;
+        color: white;
+        padding: 0.5rem;
+      }
+    }
+  }
+
+  .clear-filters-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    padding: 1rem 1.5rem;
+    background: rgba(255, 107, 107, 0.1);
+    border: 1px solid rgba(255, 107, 107, 0.3);
+    border-radius: 50px;
+    color: #ff6b6b;
+    font-size: 0.9rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    white-space: nowrap;
+    backdrop-filter: blur(10px);
+    
+    &:hover:not(:disabled) {
+      background: rgba(255, 107, 107, 0.2);
+      border-color: rgba(255, 107, 107, 0.5);
+      transform: translateY(-1px);
+    }
+    
+    &:disabled {
+      opacity: 0.4;
+      cursor: not-allowed;
+    }
+    
+    svg {
+      width: 16px;
+      height: 16px;
+    }
+  }
+
   .teams-count {
     text-align: center;
     margin-top: 1rem;
     opacity: 0.9;
     font-size: 0.95rem;
+    
+    .filter-info {
+      color: #4ecdc4;
+      
+      strong {
+        color: white;
+      }
+    }
   }
 }
 
