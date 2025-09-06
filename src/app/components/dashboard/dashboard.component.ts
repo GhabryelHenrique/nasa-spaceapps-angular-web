@@ -1,9 +1,9 @@
-import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { Component, OnInit } from '@angular/core';
 import { Router, RouterModule } from '@angular/router';
-import { AuthService } from '../../services/api/auth.service';
-import { MatchmakingService } from '../../services/api/matchmaking.service';
 import { UserRegistration } from '../../models/auth.models';
+import { AuthService } from '../../services/api/auth.service';
+import { MatchmakingAuthService } from '../../services/api/matchmaking.service';
 
 @Component({
   selector: 'app-dashboard',
@@ -695,7 +695,7 @@ export class DashboardComponent implements OnInit {
 
   constructor(
     private authService: AuthService,
-    private matchmakingService: MatchmakingService,
+    private matchmakingService: MatchmakingAuthService,
     private router: Router
   ) {}
 

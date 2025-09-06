@@ -1,276 +1,120 @@
-import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { FormsModule } from '@angular/forms';
-import { MatchmakingService } from '../../services/api/matchmaking.service';
+import { Component, OnInit } from '@angular/core';
+import { Router, RouterModule } from '@angular/router';
+import { BestMatchesResponse, IndividualMatch, TeamMatchResult } from '../../models/matchmaking.models';
 import { AuthService } from '../../services/api/auth.service';
-import { TeamMatch } from '../../models/matchmaking.models';
+import { MatchmakingAuthService } from '../../services/api/matchmaking.service';
+import { UserRegistration } from '../../models/auth.models';
 
 @Component({
   selector: 'app-matches',
   standalone: true,
-  imports: [CommonModule, FormsModule],
-  template: `
-    <div class="container mt-4">
-      <h2>🤝 Seus Matches</h2>
-
-      <!-- Filtros -->
-      <div class="card mb-4">
-        <div class="card-body">
-          <div class="row">
-            <div class="col-md-4">
-              <button class="btn btn-primary" (click)="findMatches()" [disabled]="loading">
-                <span *ngIf="loading" class="spinner-border spinner-border-sm me-2"></span>
-                🔍 Encontrar Novos Matches
-              </button>
-            </div>
-            <div class="col-md-4">
-              <select class="form-control" [(ngModel)]="statusFilter" (change)="filterMatches()">
-                <option value="">Todos os Status</option>
-                <option value="suggested">Sugeridos</option>
-                <option value="accepted">Aceitos</option>
-                <option value="rejected">Rejeitados</option>
-              </select>
-            </div>
-            <div class="col-md-4">
-              <input type="range" class="form-range" min="0.5" max="1" step="0.1" 
-                     [(ngModel)]="minScoreFilter" (change)="filterMatches()">
-              <label>Score mínimo: {{ minScoreFilter }}</label>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Lista de Matches -->
-      <div class="row">
-        <div *ngFor="let match of filteredMatches" class="col-md-6 mb-4">
-          <div class="card" [class.border-success]="match.metadata.isHighQuality">
-            <div class="card-header d-flex justify-content-between">
-              <h6>🎯 Match Score: {{ (match.matchScore.overall * 100) | number:'1.0-0' }}%</h6>
-              <span class="badge" [class]="getStatusBadgeClass(match.status)">
-                {{ getStatusLabel(match.status) }}
-              </span>
-            </div>
-            <div class="card-body">
-              <!-- Participantes -->
-              <h6>👥 Equipe ({{ match.metadata.teamSize }} pessoas):</h6>
-              <ul class="list-unstyled mb-3">
-                <li *ngFor="let email of match.participantEmails" class="mb-1">
-                  <span class="badge bg-info me-2">{{ getRecommendedRole(match, email) }}</span>
-                  {{ email }}
-                </li>
-              </ul>
-
-              <!-- Scores Detalhados -->
-              <div class="mb-3">
-                <h6>📊 Compatibilidade Detalhada:</h6>
-                <div class="progress mb-2" style="height: 15px;">
-                  <div class="progress-bar bg-primary" role="progressbar" 
-                       [style.width.%]="match.matchScore.skillsCompatibility * 100">
-                    <small>Skills: {{ (match.matchScore.skillsCompatibility * 100) | number:'1.0-0' }}%</small>
-                  </div>
-                </div>
-                <div class="progress mb-2" style="height: 15px;">
-                  <div class="progress-bar bg-success" role="progressbar" 
-                       [style.width.%]="match.matchScore.experienceBalance * 100">
-                    <small>Exp: {{ (match.matchScore.experienceBalance * 100) | number:'1.0-0' }}%</small>
-                  </div>
-                </div>
-                <div class="progress mb-2" style="height: 15px;">
-                  <div class="progress-bar bg-warning" role="progressbar" 
-                       [style.width.%]="match.matchScore.availabilityMatch * 100">
-                    <small>Disp: {{ (match.matchScore.availabilityMatch * 100) | number:'1.0-0' }}%</small>
-                  </div>
-                </div>
-              </div>
-
-              <!-- Pontos Fortes -->
-              <div *ngIf="match.reasoning.strengths.length > 0" class="mb-3">
-                <h6>✅ Pontos Fortes:</h6>
-                <ul class="list-unstyled">
-                  <li *ngFor="let strength of match.reasoning.strengths" class="text-success">
-                    • {{ strength }}
-                  </li>
-                </ul>
-              </div>
-
-              <!-- Preocupações -->
-              <div *ngIf="match.reasoning.concerns.length > 0" class="mb-3">
-                <h6>⚠️ Pontos de Atenção:</h6>
-                <ul class="list-unstyled">
-                  <li *ngFor="let concern of match.reasoning.concerns" class="text-warning">
-                    • {{ concern }}
-                  </li>
-                </ul>
-              </div>
-
-              <!-- Ações -->
-              <div class="d-flex gap-2" *ngIf="match.status === 'suggested'">
-                <button class="btn btn-success btn-sm" (click)="acceptMatch(match.id)">
-                  ✅ Aceitar
-                </button>
-                <button class="btn btn-danger btn-sm" (click)="rejectMatch(match.id)">
-                  ❌ Rejeitar
-                </button>
-                <button class="btn btn-info btn-sm" (click)="viewDetails(match.id)">
-                  👁️ Detalhes
-                </button>
-              </div>
-            </div>
-            <div class="card-footer text-muted small">
-              Criado em: {{ match.createdAt | date:'short' }}
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Estado vazio -->
-      <div *ngIf="filteredMatches.length === 0 && !loading" class="text-center py-5">
-        <h4>🔍 Nenhum match encontrado</h4>
-        <p class="text-muted">Tente ajustar os filtros ou encontrar novos matches.</p>
-      </div>
-    </div>
-  `,
-  styles: [`
-    .card {
-      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-      transition: transform 0.2s ease-in-out;
-    }
-    .card:hover {
-      transform: translateY(-2px);
-    }
-    .border-success {
-      box-shadow: 0 0 15px rgba(40, 167, 69, 0.3);
-    }
-    .progress {
-      background-color: #e9ecef;
-    }
-    .progress-bar small {
-      color: white;
-      font-weight: 500;
-    }
-    .btn-primary {
-      background: linear-gradient(135deg, #4ecdc4 0%, #45b7d1 100%);
-      border: none;
-    }
-  `]
+  imports: [CommonModule, RouterModule],
+  templateUrl: './matches.component.html',
+  styleUrl: './matches.component.scss'
 })
 export class MatchesComponent implements OnInit {
-  matches: TeamMatch[] = [];
-  filteredMatches: TeamMatch[] = [];
-  loading = false;
-  currentUserEmail = '';
-  statusFilter = '';
-  minScoreFilter = 0.6;
+  currentUser: UserRegistration | null = null;
+  bestMatches: BestMatchesResponse | null = null;
+  isLoading = false;
+  error: string | null = null;
+  showTeamMatches = false;
+  selectedTab: 'individual' | 'team' = 'individual';
 
   constructor(
-    private matchmakingService: MatchmakingService,
-    private authService: AuthService
+    private authService: AuthService,
+    private matchmakingService: MatchmakingAuthService,
+    private router: Router
   ) {}
 
   ngOnInit(): void {
-    const currentUser = this.authService.getCurrentUser();
-    if (currentUser) {
-      this.currentUserEmail = currentUser.email;
-      this.loadMatches();
+    this.loadCurrentUser();
+  }
+
+  private loadCurrentUser(): void {
+    this.currentUser = this.authService.getCurrentUser();
+    if (this.currentUser?.email) {
+      this.loadBestMatches();
+    } else {
+      this.router.navigate(['/login']);
     }
   }
 
-  loadMatches(): void {
-    this.loading = true;
-    this.matchmakingService.getMatches(this.currentUserEmail).subscribe({
+  loadBestMatches(): void {
+    if (!this.currentUser?.email) return;
+
+    this.isLoading = true;
+    this.error = null;
+
+    this.matchmakingService.getBestMatches(
+      this.currentUser.email,
+      20,
+      this.showTeamMatches
+    ).subscribe({
       next: (response) => {
-        this.loading = false;
-        this.matches = response.matches || [];
-        this.filterMatches();
+        this.bestMatches = response;
+        this.isLoading = false;
       },
-      error: (error) => {
-        this.loading = false;
-        console.error('Erro ao carregar matches:', error);
+      error: (err) => {
+        this.error = 'Erro ao carregar matches. Tente novamente.';
+        this.isLoading = false;
+        console.error('Error loading best matches:', err);
       }
     });
   }
 
-  findMatches(): void {
-    this.loading = true;
-    const request = {
-      email: this.currentUserEmail,
-      teamSize: 4,
-      minMatchScore: 0.6
+  selectTab(tab: 'individual' | 'team'): void {
+    this.selectedTab = tab;
+    if (tab === 'team' && !this.showTeamMatches) {
+      this.showTeamMatches = true;
+      this.loadBestMatches();
+    }
+  }
+
+  getScoreColor(score: number): string {
+    if (score >= 0.8) return '#4CAF50'; // Verde
+    if (score >= 0.6) return '#FF9800'; // Laranja
+    return '#F44336'; // Vermelho
+  }
+
+  getScorePercentage(score: number): number {
+    return Math.round(score * 100);
+  }
+
+  getExpertiseLevelLabel(level: string): string {
+    const labels: Record<string, string> = {
+      'beginner': 'Iniciante',
+      'intermediate': 'Intermediário',
+      'advanced': 'Avançado',
+      'expert': 'Especialista'
     };
-
-    this.matchmakingService.findMatches(request).subscribe({
-      next: (response) => {
-        this.loading = false;
-        this.matches = response.matches || [];
-        this.filterMatches();
-      },
-      error: (error) => {
-        this.loading = false;
-        console.error('Erro ao encontrar matches:', error);
-      }
-    });
+    return labels[level] || level;
   }
 
-  filterMatches(): void {
-    this.filteredMatches = this.matches.filter(match => {
-      const statusMatch = !this.statusFilter || match.status === this.statusFilter;
-      const scoreMatch = match.matchScore.overall >= this.minScoreFilter;
-      return statusMatch && scoreMatch;
-    });
+  goToProfile(email: string): void {
+    // TODO: Implementar navegação para perfil do usuário
+    console.log('Navigate to profile:', email);
   }
 
-  acceptMatch(matchId: string): void {
-    this.matchmakingService.acceptMatch(matchId, this.currentUserEmail).subscribe({
-      next: () => {
-        this.loadMatches();
-        alert('Match aceito com sucesso!');
-      },
-      error: (error) => {
-        console.error('Erro ao aceitar match:', error);
-        alert('Erro ao aceitar match.');
-      }
-    });
+  goBack(): void {
+    this.router.navigate(['/dashboard']);
   }
 
-  rejectMatch(matchId: string): void {
-    this.matchmakingService.rejectMatch(matchId, this.currentUserEmail).subscribe({
-      next: () => {
-        this.loadMatches();
-        alert('Match rejeitado.');
-      },
-      error: (error) => {
-        console.error('Erro ao rejeitar match:', error);
-        alert('Erro ao rejeitar match.');
-      }
-    });
+  sendMessage(email: string): void {
+    // TODO: Implementar sistema de mensagens
+    console.log('Send message to:', email);
   }
 
-  viewDetails(matchId: string): void {
-    // Navegar para página de detalhes do match
-    console.log('Visualizar detalhes do match:', matchId);
+  viewTeamDetails(teamId: string): void {
+    // TODO: Implementar visualização de detalhes do time
+    console.log('View team details:', teamId);
   }
 
-  getStatusBadgeClass(status: string): string {
-    switch (status) {
-      case 'suggested': return 'bg-primary';
-      case 'accepted': return 'bg-success';
-      case 'rejected': return 'bg-danger';
-      case 'expired': return 'bg-secondary';
-      default: return 'bg-light';
-    }
+  trackByEmail(index: number, match: IndividualMatch): string {
+    return match.participant.email;
   }
 
-  getStatusLabel(status: string): string {
-    switch (status) {
-      case 'suggested': return 'Sugerido';
-      case 'accepted': return 'Aceito';
-      case 'rejected': return 'Rejeitado';
-      case 'expired': return 'Expirado';
-      default: return status;
-    }
-  }
-
-  getRecommendedRole(match: TeamMatch, email: string): string {
-    return match.recommendedRoles?.[email] || 'Membro';
+  trackByTeamId(index: number, team: TeamMatchResult): string {
+    return team.teamId;
   }
 }

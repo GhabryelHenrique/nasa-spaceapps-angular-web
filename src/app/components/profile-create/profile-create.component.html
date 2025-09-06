@@ -1,1 +1,398 @@
-<p>profile-create works!</p>
+
+    <div class="profile-create">
+      <!-- Header -->
+      <header class="profile-header">
+        <div class="container">
+          <div class="header-content">
+            <button class="btn-back" (click)="goBack()">
+              <i class="fas fa-arrow-left"></i>
+              Voltar ao Dashboard
+            </button>
+            <div class="header-info">
+              <h1>{{ isEditing ? 'Editar Perfil' : 'Criar Perfil de Matchmaking' }}</h1>
+              <p>Complete seu perfil para encontrar parceiros ideais para o NASA Space Apps</p>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <!-- Main Content -->
+      <main class="profile-main">
+        <div class="container">
+          <form [formGroup]="profileForm" (ngSubmit)="onSubmit()" class="profile-form">
+
+            <!-- Progress Indicator -->
+            <div class="progress-section">
+              <div class="progress-bar">
+                <div class="progress-fill" [style.width.%]="getProgress()"></div>
+              </div>
+              <span class="progress-text">{{ getProgress() }}% Completo</span>
+            </div>
+
+            <!-- Section 1: Basic Information -->
+            <div class="form-section">
+              <h2 class="section-title">
+                <i class="fas fa-user"></i>
+                Informações Básicas
+              </h2>
+
+              <div class="form-grid">
+                <div class="form-group">
+                  <label for="fullName">Nome Completo *</label>
+                  <input
+                    type="text"
+                    id="fullName"
+                    formControlName="fullName"
+                    placeholder="Seu nome completo"
+                    [class.error]="profileForm.get('fullName')?.invalid && profileForm.get('fullName')?.touched">
+                  <div class="error-message" *ngIf="profileForm.get('fullName')?.invalid && profileForm.get('fullName')?.touched">
+                    Nome completo é obrigatório
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <label for="education">Formação Acadêmica *</label>
+                  <input
+                    type="text"
+                    id="education"
+                    formControlName="education"
+                    placeholder="Ex: Engenharia de Software, Universidade Federal"
+                    [class.error]="profileForm.get('education')?.invalid && profileForm.get('education')?.touched">
+                  <div class="error-message" *ngIf="profileForm.get('education')?.invalid && profileForm.get('education')?.touched">
+                    Formação é obrigatória
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <label for="expertiseLevel">Nível de Experiência *</label>
+                  <select
+                    id="expertiseLevel"
+                    formControlName="expertiseLevel"
+                    [class.error]="profileForm.get('expertiseLevel')?.invalid && profileForm.get('expertiseLevel')?.touched">
+                    <option value="">Selecione seu nível</option>
+                    <option value="beginner">Iniciante</option>
+                    <option value="intermediate">Intermediário</option>
+                    <option value="advanced">Avançado</option>
+                    <option value="expert">Especialista</option>
+                  </select>
+                  <div class="error-message" *ngIf="profileForm.get('expertiseLevel')?.invalid && profileForm.get('expertiseLevel')?.touched">
+                    Selecione seu nível de experiência
+                  </div>
+                </div>
+              </div>
+
+              <div class="form-group full-width">
+                <label for="bio">Biografia</label>
+                <textarea
+                  id="bio"
+                  formControlName="bio"
+                  rows="4"
+                  placeholder="Conte um pouco sobre você, suas paixões e objetivos..."></textarea>
+              </div>
+            </div>
+
+            <!-- Section 2: Skills & Languages -->
+            <div class="form-section">
+              <h2 class="section-title">
+                <i class="fas fa-code"></i>
+                Habilidades e Idiomas
+              </h2>
+
+              <div class="form-group">
+                <label>Habilidades Técnicas *</label>
+                <div class="skills-input">
+                  <input
+                    type="text"
+                    [(ngModel)]="newSkill"
+                    [ngModelOptions]="{standalone: true}"
+                    (keyup.enter)="addSkill()"
+                    placeholder="Digite uma habilidade e pressione Enter">
+                  <button type="button" class="btn-add" (click)="addSkill()">
+                    <i class="fas fa-plus"></i>
+                  </button>
+                </div>
+                <div class="tags-container">
+                  <span
+                    *ngFor="let skill of skills; let i = index"
+                    class="tag">
+                    {{ skill }}
+                    <button type="button" (click)="removeSkill(i)">
+                      <i class="fas fa-times"></i>
+                    </button>
+                  </span>
+                </div>
+                <div class="error-message" *ngIf="skills.length === 0 && profileForm.touched">
+                  Adicione pelo menos uma habilidade
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label>Idiomas *</label>
+                <div class="skills-input">
+                  <input
+                    type="text"
+                    [(ngModel)]="newLanguage"
+                    [ngModelOptions]="{standalone: true}"
+                    (keyup.enter)="addLanguage()"
+                    placeholder="Ex: Português (Nativo), Inglês (Fluente)">
+                  <button type="button" class="btn-add" (click)="addLanguage()">
+                    <i class="fas fa-plus"></i>
+                  </button>
+                </div>
+                <div class="tags-container">
+                  <span
+                    *ngFor="let language of languages; let i = index"
+                    class="tag">
+                    {{ language }}
+                    <button type="button" (click)="removeLanguage(i)">
+                      <i class="fas fa-times"></i>
+                    </button>
+                  </span>
+                </div>
+                <div class="error-message" *ngIf="languages.length === 0 && profileForm.touched">
+                  Adicione pelo menos um idioma
+                </div>
+              </div>
+            </div>
+
+            <!-- Section 3: Work Experience -->
+            <div class="form-section">
+              <h2 class="section-title">
+                <i class="fas fa-briefcase"></i>
+                Experiência Profissional
+                <button type="button" class="btn-add-section" (click)="addWorkExperience()">
+                  <i class="fas fa-plus"></i>
+                  Adicionar
+                </button>
+              </h2>
+
+              <div formArrayName="workExperience">
+                <div
+                  *ngFor="let exp of workExperienceArray.controls; let i = index"
+                  [formGroupName]="i"
+                  class="experience-item">
+
+                  <div class="experience-header">
+                    <h3>Experiência {{ i + 1 }}</h3>
+                    <button type="button" class="btn-remove" (click)="removeWorkExperience(i)">
+                      <i class="fas fa-trash"></i>
+                    </button>
+                  </div>
+
+                  <div class="form-grid">
+                    <div class="form-group">
+                      <label>Empresa *</label>
+                      <input type="text" formControlName="company" placeholder="Nome da empresa">
+                    </div>
+                    <div class="form-group">
+                      <label>Cargo *</label>
+                      <input type="text" formControlName="position" placeholder="Seu cargo">
+                    </div>
+                    <div class="form-group">
+                      <label>Setor *</label>
+                      <input type="text" formControlName="sector" placeholder="Ex: Tecnologia, Educação">
+                    </div>
+                    <div class="form-group">
+                      <label>Anos de Experiência *</label>
+                      <input type="number" formControlName="yearsOfExperience" min="0" max="50">
+                    </div>
+                  </div>
+
+                  <div class="form-group full-width">
+                    <label>Descrição</label>
+                    <textarea formControlName="description" rows="3" placeholder="Descreva suas responsabilidades e conquistas..."></textarea>
+                  </div>
+                </div>
+
+                <div *ngIf="workExperienceArray.length === 0" class="empty-state">
+                  <i class="fas fa-briefcase"></i>
+                  <p>Nenhuma experiência adicionada ainda</p>
+                  <button type="button" class="btn btn-primary" (click)="addWorkExperience()">
+                    Adicionar Primeira Experiência
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <!-- Section 4: Project Interests -->
+            <div class="form-section">
+              <h2 class="section-title">
+                <i class="fas fa-rocket"></i>
+                Projetos e Áreas de Interesse
+              </h2>
+
+              <div class="form-group">
+                <label>Desafios de Interesse *</label>
+                <div class="checkbox-group">
+                  <div class="checkbox-item" *ngFor="let challenge of availableChallenges">
+                    <input
+                      type="checkbox"
+                      [id]="'challenge-' + challenge.slug"
+                      [value]="challenge.slug"
+                      (change)="onChallengeChange($event)"
+                      [checked]="selectedChallenges.includes(challenge.slug)">
+                    <label [for]="'challenge-' + challenge.slug">
+                      <strong>{{ challenge.title }}</strong>
+                      <small>{{ challenge.excerpt | slice:0:100 }}...</small>
+                    </label>
+                  </div>
+                </div>
+                <div class="error-message" *ngIf="selectedChallenges.length === 0 && profileForm.touched">
+                  Selecione pelo menos um desafio de interesse
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label>Áreas de Atuação de Interesse *</label>
+                <div class="checkbox-group">
+                  <div class="checkbox-item" *ngFor="let area of interestAreas">
+                    <input
+                      type="checkbox"
+                      [id]="'area-' + area.value"
+                      [value]="area.value"
+                      (change)="onInterestAreaChange($event)"
+                      [checked]="selectedInterestAreas.includes(area.value)">
+                    <label [for]="'area-' + area.value">{{ area.label }}</label>
+                  </div>
+                </div>
+                <div class="error-message" *ngIf="selectedInterestAreas.length === 0 && profileForm.touched">
+                  Selecione pelo menos uma área de interesse
+                </div>
+              </div>
+
+
+            </div>
+
+            <!-- Section 5: Gender and Team Preferences -->
+            <div class="form-section">
+              <h2 class="section-title">
+                <i class="fas fa-users"></i>
+                Informações Pessoais e Preferências de Equipe
+              </h2>
+
+              <div class="form-grid">
+                <div class="form-group">
+                  <label for="gender">Gênero *</label>
+                  <select id="gender" formControlName="gender">
+                    <option value="">Selecione</option>
+                    <option value="masculine">Masculino</option>
+                    <option value="feminine">Feminino</option>
+                    <option value="non-binary">Não-binário</option>
+                    <option value="other">Outro</option>
+                    <option value="prefer-not-to-say">Prefiro não informar</option>
+                  </select>
+                </div>
+
+                <div class="form-group full-width" *ngIf="showFemaleTeamOption()">
+                  <div class="checkbox-item">
+                    <input
+                      type="checkbox"
+                      id="preferFemaleTeam"
+                      formControlName="preferFemaleTeam">
+                    <label for="preferFemaleTeam">
+                      <strong>Gostaria de participar de uma equipe totalmente diversa</strong>
+                      <small>Esta opção visa promover diversidade e inclusão no hackathon</small>
+                    </label>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Section 6: Team Preferences -->
+            <div class="form-section">
+              <h2 class="section-title">
+                <i class="fas fa-heart"></i>
+                Preferências de Trabalho em Equipe
+              </h2>
+
+              <div formGroupName="preferences" class="form-grid">
+                <div class="form-group">
+                  <label for="teamSize">Tamanho de Equipe Preferido *</label>
+                  <select id="teamSize" formControlName="teamSize">
+                    <option value="">Selecione</option>
+                    <option value="small">Pequena (2-3 pessoas)</option>
+                    <option value="medium">Média (4-5 pessoas)</option>
+                    <option value="large">Grande (6+ pessoas)</option>
+                    <option value="any">Qualquer tamanho</option>
+                  </select>
+                </div>
+
+                <div class="form-group">
+                  <label for="communicationStyle">Estilo de Comunicação *</label>
+                  <select id="communicationStyle" formControlName="communicationStyle">
+                    <option value="">Selecione</option>
+                    <option value="direct">Direto</option>
+                    <option value="collaborative">Colaborativo</option>
+                    <option value="supportive">Apoiador</option>
+                    <option value="analytical">Analítico</option>
+                  </select>
+                </div>
+
+                <div class="form-group">
+                  <label for="workStyle">Estilo de Trabalho *</label>
+                  <select id="workStyle" formControlName="workStyle">
+                    <option value="">Selecione</option>
+                    <option value="leader">Líder</option>
+                    <option value="contributor">Contribuidor</option>
+                    <option value="specialist">Especialista</option>
+                    <option value="facilitator">Facilitador</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+
+            <!-- Section 7: Links -->
+            <div class="form-section">
+              <h2 class="section-title">
+                <i class="fas fa-link"></i>
+                Links Profissionais (Opcional)
+              </h2>
+
+              <div class="form-grid">
+                <div class="form-group">
+                  <label for="githubProfile">GitHub</label>
+                  <input
+                    type="url"
+                    id="githubProfile"
+                    formControlName="githubProfile"
+                    placeholder="https://github.com/seuperfil">
+                </div>
+
+                <div class="form-group">
+                  <label for="linkedinProfile">LinkedIn</label>
+                  <input
+                    type="url"
+                    id="linkedinProfile"
+                    formControlName="linkedinProfile"
+                    placeholder="https://linkedin.com/in/seuperfil">
+                </div>
+
+                <div class="form-group">
+                  <label for="portfolioUrl">Portfólio</label>
+                  <input
+                    type="url"
+                    id="portfolioUrl"
+                    formControlName="portfolioUrl"
+                    placeholder="https://seuportfolio.com">
+                </div>
+              </div>
+            </div>
+
+            <!-- Form Actions -->
+            <div class="form-actions">
+              <button type="button" class="btn btn-secondary" (click)="goBack()">
+                Cancelar
+              </button>
+              <button
+                type="submit"
+                class="btn btn-primary"
+                [disabled]="isLoading || !isFormValid()">
+                <i *ngIf="isLoading" class="fas fa-spinner fa-spin"></i>
+                {{ isLoading ? 'Salvando...' : (isEditing ? 'Atualizar Perfil' : 'Criar Perfil') }}
+              </button>
+            </div>
+
+          </form>
+        </div>
+      </main>
+    </div>

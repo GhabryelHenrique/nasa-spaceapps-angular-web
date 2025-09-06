@@ -17,10 +17,10 @@ export interface Project {
 }
 
 export interface Availability {
-  hoursPerWeek: number;
+  hoursPerWeek: string;
   timezone: string;
   preferredWorkingHours: string;
-  availableDates: string[];
+  availableDates?: string[];
 }
 
 export interface Preferences {
@@ -38,6 +38,10 @@ export interface ParticipantProfile {
   expertiseLevel: 'beginner' | 'intermediate' | 'advanced' | 'expert';
   workExperience: WorkExperience[];
   education: string;
+  gender?: string;
+  preferFemaleTeam?: boolean;
+  challengesOfInterest?: string[];
+  interestAreas?: string[];
   projects: Project[];
   availability: Availability;
   preferences: Preferences;
@@ -47,7 +51,6 @@ export interface ParticipantProfile {
   portfolioUrl?: string;
   bio?: string;
   participationGoals?: string[];
-  challengesInterests?: string[];
 }
 
 export interface MatchScore {
@@ -84,4 +87,49 @@ export interface FindMatchesRequest {
   teamSize?: number;
   challengeCategories?: string[];
   minMatchScore?: number;
+}
+
+export interface IndividualMatch {
+  participant: ParticipantProfile;
+  matchScore: MatchScore;
+  reasoning: {
+    strengths: string[];
+    concerns: string[];
+    suggestions: string[];
+  };
+}
+
+export interface TeamMatchResult {
+  teamId: string;
+  participants: string[];
+  matchScore: MatchScore;
+  reasoning: {
+    strengths: string[];
+    concerns: string[];
+    suggestions: string[];
+  };
+  recommendedRoles: Record<string, string>;
+}
+
+export interface BestMatchesResponse {
+  success: boolean;
+  targetParticipant: {
+    email: string;
+    fullName: string;
+    skills: string[];
+    expertiseLevel: string;
+  };
+  individualMatches: {
+    count: number;
+    matches: IndividualMatch[];
+  };
+  teamMatches?: {
+    count: number;
+    matches: TeamMatchResult[];
+  };
+  summary: {
+    totalIndividualMatches: number;
+    averageMatchScore: number;
+    topMatchScore: number;
+  };
 }

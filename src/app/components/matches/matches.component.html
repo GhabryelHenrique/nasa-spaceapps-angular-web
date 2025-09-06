@@ -1,0 +1,328 @@
+<div class="matches-container">
+  <!-- Header -->
+  <header class="matches-header">
+    <div class="container">
+      <div class="header-content">
+        <button class="btn-back" (click)="goBack()">
+          <i class="fas fa-arrow-left"></i>
+          Voltar ao Dashboard
+        </button>
+        <div class="header-info">
+          <h1>🤝 Seus Melhores Matches</h1>
+          <p>Encontre os parceiros ideais para o NASA Space Apps Challenge</p>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main class="matches-main">
+    <div class="container">
+
+      <!-- Loading State -->
+      <div *ngIf="isLoading" class="loading-container">
+        <div class="loading-spinner">
+          <i class="fas fa-spinner fa-spin"></i>
+          <p>Analisando compatibilidades...</p>
+        </div>
+      </div>
+
+      <!-- Error State -->
+      <div *ngIf="error" class="error-container">
+        <div class="error-message">
+          <i class="fas fa-exclamation-triangle"></i>
+          <h3>Ops! Algo deu errado</h3>
+          <p>{{ error }}</p>
+          <button class="btn btn-primary" (click)="loadBestMatches()">
+            <i class="fas fa-redo"></i>
+            Tentar Novamente
+          </button>
+        </div>
+      </div>
+
+      <!-- Content -->
+      <div *ngIf="!isLoading && !error && bestMatches" class="matches-content">
+        
+        <!-- Summary Stats -->
+        <div class="summary-stats">
+          <div class="stats-grid">
+            <div class="stat-card">
+              <div class="stat-icon">
+                <i class="fas fa-users"></i>
+              </div>
+              <div class="stat-info">
+                <h3>{{ bestMatches.summary.totalIndividualMatches }}</h3>
+                <p>Matches Disponíveis</p>
+              </div>
+            </div>
+            <div class="stat-card">
+              <div class="stat-icon">
+                <i class="fas fa-star"></i>
+              </div>
+              <div class="stat-info">
+                <h3>{{ getScorePercentage(bestMatches.summary.topMatchScore) }}%</h3>
+                <p>Melhor Compatibilidade</p>
+              </div>
+            </div>
+            <div class="stat-card">
+              <div class="stat-icon">
+                <i class="fas fa-chart-line"></i>
+              </div>
+              <div class="stat-info">
+                <h3>{{ getScorePercentage(bestMatches.summary.averageMatchScore) }}%</h3>
+                <p>Compatibilidade Média</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Tabs -->
+        <div class="tabs-container">
+          <div class="tabs">
+            <button 
+              class="tab-button" 
+              [class.active]="selectedTab === 'individual'"
+              (click)="selectTab('individual')">
+              <i class="fas fa-user"></i>
+              Matches Individuais ({{ bestMatches.individualMatches.count }})
+            </button>
+            <button 
+              class="tab-button" 
+              [class.active]="selectedTab === 'team'"
+              (click)="selectTab('team')"
+              *ngIf="bestMatches.teamMatches">
+              <i class="fas fa-users"></i>
+              Times Sugeridos ({{ bestMatches.teamMatches.count }})
+            </button>
+          </div>
+        </div>
+
+        <!-- Individual Matches -->
+        <div *ngIf="selectedTab === 'individual'" class="matches-grid">
+          <div 
+            *ngFor="let match of bestMatches.individualMatches.matches; trackBy: trackByEmail" 
+            class="match-card">
+            
+            <!-- Match Header -->
+            <div class="match-header">
+              <div class="match-score">
+                <div class="score-circle" [style.color]="getScoreColor(match.matchScore.overall)">
+                  <span class="score-value">{{ getScorePercentage(match.matchScore.overall) }}%</span>
+                  <span class="score-label">Match</span>
+                </div>
+              </div>
+              <div class="match-info">
+                <h3>{{ match.participant.fullName }}</h3>
+                <p class="expertise-level">
+                  <i class="fas fa-trophy"></i>
+                  {{ getExpertiseLevelLabel(match.participant.expertiseLevel) }}
+                </p>
+              </div>
+            </div>
+
+            <!-- Skills -->
+            <div class="match-section">
+              <h4><i class="fas fa-code"></i> Habilidades</h4>
+              <div class="skills-tags">
+                <span 
+                  *ngFor="let skill of match.participant.skills.slice(0, 6)" 
+                  class="skill-tag">
+                  {{ skill }}
+                </span>
+                <span 
+                  *ngIf="match.participant.skills.length > 6" 
+                  class="skill-tag more">
+                  +{{ match.participant.skills.length - 6 }} mais
+                </span>
+              </div>
+            </div>
+
+            <!-- Languages -->
+            <div class="match-section" *ngIf="match.participant.languages?.length">
+              <h4><i class="fas fa-globe"></i> Idiomas</h4>
+              <div class="languages-list">
+                <span *ngFor="let language of match.participant.languages" class="language-tag">
+                  {{ language }}
+                </span>
+              </div>
+            </div>
+
+            <!-- Compatibility Scores -->
+            <div class="match-section">
+              <h4><i class="fas fa-chart-bar"></i> Compatibilidade</h4>
+              <div class="compatibility-bars">
+                <div class="compatibility-item">
+                  <label>Habilidades</label>
+                  <div class="progress-bar">
+                    <div class="progress-fill" 
+                         [style.width.%]="getScorePercentage(match.matchScore.skillsCompatibility)"
+                         [style.background-color]="getScoreColor(match.matchScore.skillsCompatibility)">
+                    </div>
+                    <span class="progress-text">{{ getScorePercentage(match.matchScore.skillsCompatibility) }}%</span>
+                  </div>
+                </div>
+                <div class="compatibility-item">
+                  <label>Experiência</label>
+                  <div class="progress-bar">
+                    <div class="progress-fill" 
+                         [style.width.%]="getScorePercentage(match.matchScore.experienceBalance)"
+                         [style.background-color]="getScoreColor(match.matchScore.experienceBalance)">
+                    </div>
+                    <span class="progress-text">{{ getScorePercentage(match.matchScore.experienceBalance) }}%</span>
+                  </div>
+                </div>
+                <div class="compatibility-item">
+                  <label>Preferências</label>
+                  <div class="progress-bar">
+                    <div class="progress-fill" 
+                         [style.width.%]="getScorePercentage(match.matchScore.preferencesAlignment)"
+                         [style.background-color]="getScoreColor(match.matchScore.preferencesAlignment)">
+                    </div>
+                    <span class="progress-text">{{ getScorePercentage(match.matchScore.preferencesAlignment) }}%</span>
+                  </div>
+                </div>
+                <div class="compatibility-item">
+                  <label>Comunicação</label>
+                  <div class="progress-bar">
+                    <div class="progress-fill" 
+                         [style.width.%]="getScorePercentage(match.matchScore.communicationFit)"
+                         [style.background-color]="getScoreColor(match.matchScore.communicationFit)">
+                    </div>
+                    <span class="progress-text">{{ getScorePercentage(match.matchScore.communicationFit) }}%</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Strengths -->
+            <div class="match-section" *ngIf="match.reasoning.strengths.length > 0">
+              <h4><i class="fas fa-check-circle"></i> Pontos Fortes</h4>
+              <ul class="strengths-list">
+                <li *ngFor="let strength of match.reasoning.strengths">{{ strength }}</li>
+              </ul>
+            </div>
+
+            <!-- Suggestions -->
+            <div class="match-section" *ngIf="match.reasoning.suggestions.length > 0">
+              <h4><i class="fas fa-lightbulb"></i> Sugestões</h4>
+              <ul class="suggestions-list">
+                <li *ngFor="let suggestion of match.reasoning.suggestions">{{ suggestion }}</li>
+              </ul>
+            </div>
+
+            <!-- Actions -->
+            <div class="match-actions">
+              <button class="btn btn-primary" (click)="goToProfile(match.participant.email)">
+                <i class="fas fa-user"></i>
+                Ver Perfil
+              </button>
+              <button class="btn btn-secondary" (click)="sendMessage(match.participant.email)">
+                <i class="fas fa-envelope"></i>
+                Mensagem
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Team Matches -->
+        <div *ngIf="selectedTab === 'team' && bestMatches.teamMatches" class="teams-grid">
+          <div 
+            *ngFor="let team of bestMatches.teamMatches.matches; trackBy: trackByTeamId" 
+            class="team-card">
+            
+            <!-- Team Header -->
+            <div class="team-header">
+              <div class="team-score">
+                <div class="score-circle" [style.color]="getScoreColor(team.matchScore.overall)">
+                  <span class="score-value">{{ getScorePercentage(team.matchScore.overall) }}%</span>
+                  <span class="score-label">Team</span>
+                </div>
+              </div>
+              <div class="team-info">
+                <h3>Time Sugerido</h3>
+                <p class="team-size">{{ team.participants.length }} membros</p>
+              </div>
+            </div>
+
+            <!-- Team Members -->
+            <div class="team-section">
+              <h4><i class="fas fa-users"></i> Membros & Funções</h4>
+              <div class="team-members">
+                <div *ngFor="let email of team.participants" class="team-member">
+                  <div class="member-info">
+                    <span class="member-email">{{ email }}</span>
+                    <span class="member-role">{{ team.recommendedRoles[email] || 'Membro' }}</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Team Compatibility -->
+            <div class="team-section">
+              <h4><i class="fas fa-chart-bar"></i> Compatibilidade da Equipe</h4>
+              <div class="compatibility-bars">
+                <div class="compatibility-item">
+                  <label>Habilidades</label>
+                  <div class="progress-bar">
+                    <div class="progress-fill" 
+                         [style.width.%]="getScorePercentage(team.matchScore.skillsCompatibility)"
+                         [style.background-color]="getScoreColor(team.matchScore.skillsCompatibility)">
+                    </div>
+                    <span class="progress-text">{{ getScorePercentage(team.matchScore.skillsCompatibility) }}%</span>
+                  </div>
+                </div>
+                <div class="compatibility-item">
+                  <label>Experiência</label>
+                  <div class="progress-bar">
+                    <div class="progress-fill" 
+                         [style.width.%]="getScorePercentage(team.matchScore.experienceBalance)"
+                         [style.background-color]="getScoreColor(team.matchScore.experienceBalance)">
+                    </div>
+                    <span class="progress-text">{{ getScorePercentage(team.matchScore.experienceBalance) }}%</span>
+                  </div>
+                </div>
+                <div class="compatibility-item">
+                  <label>Comunicação</label>
+                  <div class="progress-bar">
+                    <div class="progress-fill" 
+                         [style.width.%]="getScorePercentage(team.matchScore.communicationFit)"
+                         [style.background-color]="getScoreColor(team.matchScore.communicationFit)">
+                    </div>
+                    <span class="progress-text">{{ getScorePercentage(team.matchScore.communicationFit) }}%</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Team Strengths -->
+            <div class="team-section" *ngIf="team.reasoning.strengths.length > 0">
+              <h4><i class="fas fa-check-circle"></i> Pontos Fortes da Equipe</h4>
+              <ul class="strengths-list">
+                <li *ngFor="let strength of team.reasoning.strengths">{{ strength }}</li>
+              </ul>
+            </div>
+
+            <!-- Team Actions -->
+            <div class="team-actions">
+              <button class="btn btn-primary" (click)="viewTeamDetails(team.teamId)">
+                <i class="fas fa-eye"></i>
+                Ver Detalhes
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Empty State -->
+        <div *ngIf="bestMatches.individualMatches.count === 0" class="empty-state">
+          <i class="fas fa-search"></i>
+          <h3>Nenhum match encontrado</h3>
+          <p>Complete seu perfil para encontrar melhores matches!</p>
+          <button class="btn btn-primary" routerLink="/profile">
+            Completar Perfil
+          </button>
+        </div>
+
+      </div>
+    </div>
+  </main>
+</div>

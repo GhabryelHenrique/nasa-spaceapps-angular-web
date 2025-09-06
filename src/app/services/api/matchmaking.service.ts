@@ -1,17 +1,18 @@
 import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpParams } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { environment } from '../../../environments/environment';
-import { 
-  ParticipantProfile, 
-  TeamMatch, 
-  FindMatchesRequest 
+import {
+  ParticipantProfile,
+  TeamMatch,
+  FindMatchesRequest,
+  BestMatchesResponse
 } from '../../models/matchmaking.models';
 
 @Injectable({
   providedIn: 'root'
 })
-export class MatchmakingService {
+export class MatchmakingAuthService {
   private apiUrl = environment.apiUrl;
 
   constructor(private http: HttpClient) {}
@@ -93,5 +94,18 @@ export class MatchmakingService {
       params['limit'] = limit.toString();
     }
     return this.http.get(`${this.apiUrl}/matchmaking/similar-profiles/${encodeURIComponent(email)}`, { params });
+  }
+
+  // Best Matches API from API_BEST_MATCHES.md
+  getBestMatches(email: string, limit?: number, includeTeams?: boolean): Observable<BestMatchesResponse> {
+    let params = new HttpParams();
+    if (limit) {
+      params = params.set('limit', limit.toString());
+    }
+    if (includeTeams) {
+      params = params.set('includeTeams', includeTeams.toString());
+    }
+    
+    return this.http.get<BestMatchesResponse>(`${this.apiUrl}/matchmaking/best-matches/${encodeURIComponent(email)}`, { params });
   }
 }
