@@ -20,16 +20,16 @@ export class SponsorsSectionComponent {
       { name: 'Brain', logo: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQOTTjjaMnLdAln0y6CoY2YSCqr3nYeQVzPPQ&s', url: 'https://inovacaobrain.com.br' },
       { name: 'Nuvoli', logo: 'https://media.licdn.com/dms/image/v2/D4D0BAQE_v_9leRUqiw/company-logo_200_200/company-logo_200_200/0/1707572094506/nuvoli_logo?e=2147483647&v=beta&t=-lL3ZzzmsPp74mBGfOt5WYYbgcat4eQguM88Lkh_KQI', url: 'https://www.nuvoli.cloud' },
       { name: 'Una', logo: 'https://media.licdn.com/dms/image/v2/C4E0BAQEKypVakNC3YQ/company-logo_200_200/company-logo_200_200/0/1630586019799/udifaculdadeuna_logo?e=2147483647&v=beta&t=14grTYkW0BjVLMwoGWOcDNfNLm4RLwa3u1Im7FXXzio', url: 'https://www.una.br/' },
-      { name: 'CyberGênios', logo: 'https://media.licdn.com/dms/image/v2/C4D0BAQHnUHvaBmKirA/company-logo_200_200/company-logo_200_200/0/1630577378260/cybergenio_logo?e=2147483647&v=beta&t=ATGlQTB3WPRqJnBqVgcUi11X0YJttNRosSdtsl7BRqY', url: 'https://cybergenios.com.br' },
-      { name: 'Instituto Projeto de Vida', logo: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQgoUx2wUbksg5R3ro6o_29riVp6REWXxzIFA&s', url: 'https://institutoprojetodevida.org/' },
-      { name: 'Global Shapers Community', logo: 'assets/sponsors/Global Shapers Community.jpg', url: 'https://www.instagram.com/globalshapersuberlandia' },
-      { name: '+ Meninas Tech', logo: 'assets/sponsors/maisMeninasTech.png', url: 'https://www.instagram.com/maismeninastech' },
       { name: 'Colégio Ann Mackenzie', logo: 'https://img.imageboss.me/me/cover:contain/80x80/format:auto/20210305202506314.jpg', url: 'https://colegioannmackenzie.com.br' },
       { name: 'Colégio Nacional', logo: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSb3M1nAsCBCfXybnCaHbRNy_xyncy35dDAiw&s', url: 'https://www.nacionalnet.com.br' },
       { name: 'Gabarito', logo: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSwGgksxpwDoLa0Omi11PVWdvOCZxrireXLBS26GdhHY0THxb5OvuAXwijoUU7nT4reQKs&usqp=CAU', url: 'https://gabaritoeducacao.com' },
       { name: 'Portão 3', logo: 'https://media.licdn.com/dms/image/v2/C4D0BAQGXXDRmGbF-jQ/company-logo_200_200/company-logo_200_200/0/1630547611880/portao_3_logo?e=2147483647&v=beta&t=f_I13yGu1nwBMN-b-1oZDRmpNqhWxZAFAH9B8U3Z7Qw', url: 'https://portao3.com.br' },
       { name: 'Asa Coworking', logo: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR1-vLv961Oyxnxn4HzlDrF52q2-RPxfa1KJg&s', url: 'https://www.asacoworking.com' },
       { name: 'MFlab', logo: 'assets/sponsors/mf-lab.jpg', url: 'https://www.femec.ufu.br/unidades/laboratorio/laboratorio-de-mecanica-dos-fluidos' },
+      { name: 'CyberGênios', logo: 'https://media.licdn.com/dms/image/v2/C4D0BAQHnUHvaBmKirA/company-logo_200_200/company-logo_200_200/0/1630577378260/cybergenio_logo?e=2147483647&v=beta&t=ATGlQTB3WPRqJnBqVgcUi11X0YJttNRosSdtsl7BRqY', url: 'https://cybergenios.com.br' },
+      { name: 'Instituto Projeto de Vida', logo: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQgoUx2wUbksg5R3ro6o_29riVp6REWXxzIFA&s', url: 'https://institutoprojetodevida.org/' },
+      { name: 'Global Shapers Community', logo: 'assets/sponsors/Global Shapers Community.jpg', url: 'https://www.instagram.com/globalshapersuberlandia' },
+      { name: '+ Meninas Tech', logo: 'assets/sponsors/maisMeninasTech.png', url: 'https://www.instagram.com/maismeninastech' },
     ],
     silver: [
       { name: 'Oracle', logo: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQnOVjTWaheo4E99cgYZ6y14tpsgHlm0VN8Hw&s', url: 'https://www.oracle.com/br' },
@@ -71,7 +71,6 @@ export class SponsorsSectionComponent {
       { name: 'Aimirim', logo: 'https://media.licdn.com/dms/image/v2/C4D0BAQE5wUH84mceMA/company-logo_200_200/company-logo_200_200/0/1630707182957/aimirim_solues_tecnolgicas_integradas_ltda__logo?e=1759968000&v=beta&t=TMUV2BK2zUCvHnkgl1l6KMp4ILlf3w7JHkYXseWJyXU', url: 'https://www.aimirimsti.com.br' },
       { name: 'Agro Smart', logo: 'https://media.licdn.com/dms/image/v2/C4D0BAQH44jdcui91xA/company-logo_200_200/company-logo_200_200/0/1657037642094/agrosmart_logo?e=2147483647&v=beta&t=uKD3P6woxuauHHnSu2Ir-xijngQMkZJHJZf6ULgxSWo', url: 'https://agrosmart.com.br/' },
       { name: 'LayerX', logo: 'https://media.licdn.com/dms/image/v2/D4D0BAQHZQ8yCJxxisQ/company-logo_200_200/company-logo_200_200/0/1734982286382/layerxsolucoes_logo?e=1759968000&v=beta&t=F756UStC-NSvBRmcEbT2vRK8QKv0xXKl8go0_ylSw8U', url: 'https://layerx.com.br' },
-      { name: 'Quatro Terre Consultoria Ambiental', logo: 'https://instagram.fudi1-1.fna.fbcdn.net/v/t51.2885-19/470039981_1642213220056202_3154209266216169030_n.jpg?stp=dst-jpg_s150x150_tt6&efg=eyJ2ZW5jb2RlX3RhZyI6InByb2ZpbGVfcGljLmRqYW5nby4zMzAuYzIifQ&_nc_ht=instagram.fudi1-1.fna.fbcdn.net&_nc_cat=102&_nc_oc=Q6cZ2QFqTy8Y2vhRDWrJIIFnURMosqHxNz4cLeL5g5AdbvbtvWRgkzVsB4U0PIR95jFVcVI&_nc_ohc=YbKRX4ts1FsQ7kNvwFkMu3X&_nc_gid=EZUlE-tc1579fQ2OXw1B6w&edm=AP4sbd4BAAAA&ccb=7-5&oh=00_AfZBfZ6Isld_3kPzHgfurYeQYkXF80k8K9jpXqQn6h22cQ&oe=68C50DED&_nc_sid=7a9f4b', url: 'https://www.instagram.com/quatroterre' },
       { name: 'Rede de Ensino e Pesquisa', logo: 'https://media.licdn.com/dms/image/v2/D4D0BAQFbfp7mW4TEkA/company-logo_200_200/company-logo_200_200/0/1662129972806/redernp_logo?e=2147483647&v=beta&t=s2uVsmm_0aq1DaFp_aTtl0sdOEsbRRoJZMJVZFazYyA', url: 'https://www.rnp.br' },
     ]
   };
