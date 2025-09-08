@@ -750,7 +750,7 @@
                 "type": "TEAM",
                 "slug": "ao-infinito-e-alem",
                 "firstPublishedAt": "2025-09-08T12:22:38.650925Z",
-                "lastPublishedAt": "2025-09-08T12:36:04.264045Z",
+                "lastPublishedAt": "2025-09-08T13:11:03.222242Z",
                 "relativeUrl": "/2025/find-a-team/ao-infinito-e-alem/",
                 "live": true,
                 "parent": null,
@@ -4567,7 +4567,7 @@
                 "type": "TEAM",
                 "slug": "datalab",
                 "firstPublishedAt": "2025-09-07T16:05:04.061985Z",
-                "lastPublishedAt": "2025-09-07T16:05:57.686304Z",
+                "lastPublishedAt": "2025-09-08T16:48:19.899734Z",
                 "relativeUrl": "/2025/find-a-team/datalab/",
                 "live": true,
                 "parent": null,
@@ -4930,8 +4930,8 @@
               "meta": {
                 "type": "TEAM",
                 "slug": "extranautas",
-                "firstPublishedAt": null,
-                "lastPublishedAt": null,
+                "firstPublishedAt": "2025-09-08T17:47:28.600039Z",
+                "lastPublishedAt": "2025-09-08T18:00:19.957388Z",
                 "relativeUrl": "/2025/find-a-team/extranautas/",
                 "live": true,
                 "parent": null,
@@ -4958,7 +4958,26 @@
                 "__typename": "Project"
               },
               "projectSubmitted": false,
-              "featuredImage": null,
+              "featuredImage": {
+                "id": "aWQ6Mjk2MjYy",
+                "meta": {
+                  "type": "images.CustomImage",
+                  "downloadUrl": "https://assets.spaceappschallenge.org/media/original_images/ChatGPT_Image_8_de_set._de_2025_14_59_54.png",
+                  "__typename": "ImageMeta"
+                },
+                "title": "team_image.18:00:19.018192",
+                "alt": "team_image.18:00:19.018192",
+                "caption": "team_image.18:00:19.018192",
+                "displaySize": "og",
+                "rendition": {
+                  "url": "https://assets.spaceappschallenge.org/media/images/ChatGPT_Image_8_de_set._de_2025_14.2e16d0ba.fill-300x250_8RlRrob.png",
+                  "fullUrl": "https://assets.spaceappschallenge.org/media/images/ChatGPT_Image_8_de_set._de_2025_14.2e16d0ba.fill-300x250_8RlRrob.png",
+                  "height": 250,
+                  "width": 300,
+                  "__typename": "BaseImage"
+                },
+                "__typename": "DefaultImage"
+              },
               "description": null,
               "desiredSkills": [],
               "languages": [],

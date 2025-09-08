@@ -20,6 +20,8 @@ export class SponsorsSectionComponent {
       { name: 'Oracle', logo: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQnOVjTWaheo4E99cgYZ6y14tpsgHlm0VN8Hw&s', url: 'https://www.oracle.com/br' },
       { name: 'Zup Innovation', logo: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRotJvZVHcO3WhugTZAEvPvrm0eJDfo7J8iOQ&s', url: 'https://zup.com.br/' },
       { name: 'Brain', logo: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQOTTjjaMnLdAln0y6CoY2YSCqr3nYeQVzPPQ&s', url: 'https://inovacaobrain.com.br' },
+      { name: 'Nuvoli', logo: 'https://media.licdn.com/dms/image/v2/D4D0BAQE_v_9leRUqiw/company-logo_200_200/company-logo_200_200/0/1707572094506/nuvoli_logo?e=2147483647&v=beta&t=-lL3ZzzmsPp74mBGfOt5WYYbgcat4eQguM88Lkh_KQI', url: 'https://www.nuvoli.cloud' },
+      { name: 'MFlab', logo: 'assets/sponsors/mf-lab.jpg', url: 'https://www.femec.ufu.br/unidades/laboratorio/laboratorio-de-mecanica-dos-fluidos' },
       { name: 'Observatório Nacional', logo: 'https://media.licdn.com/dms/image/v2/C4E0BAQFVZtnLQKrmNg/company-logo_200_200/company-logo_200_200/0/1631356595002?e=2147483647&v=beta&t=ONLM2nZjv3fbTw7420qtgQhwiC1ef13bkhIMRscBlaE', url: 'https://www.gov.br/observatorio/pt-br' },
       { name: 'Una', logo: 'https://media.licdn.com/dms/image/v2/C4E0BAQEKypVakNC3YQ/company-logo_200_200/company-logo_200_200/0/1630586019799/udifaculdadeuna_logo?e=2147483647&v=beta&t=14grTYkW0BjVLMwoGWOcDNfNLm4RLwa3u1Im7FXXzio', url: 'https://www.una.br/' },
       { name: 'Colégio Ann Mackenzie', logo: 'https://img.imageboss.me/me/cover:contain/80x80/format:auto/20210305202506314.jpg', url: 'https://colegioannmackenzie.com.br' },
@@ -74,7 +76,7 @@ export class SponsorsSectionComponent {
       { name: 'GRVA', logo: 'https://media.licdn.com/dms/image/v2/C4E0BAQH5NIuzpkwyJw/company-logo_200_200/company-logo_200_200/0/1630576065144?e=2147483647&v=beta&t=og3l0xiFg4m_h1ZtJcQO2CcIkVK6ucDcXhZuAYfg_-Q', url: 'https://grva.com.br/' },
       { name: 'Ntropy', logo: 'https://media.licdn.com/dms/image/v2/D4E0BAQFOOJ88vk2SUg/company-logo_200_200/company-logo_200_200/0/1685457284078/ntropy_logo?e=1758758400&v=beta&t=g13Dudn03gQHjxsFvpizJzTMYjYvg03mWGtXKewzkzg', url: 'https://www.ntropy.com/' },
       { name: 'Agro Smart', logo: 'https://media.licdn.com/dms/image/v2/C4D0BAQH44jdcui91xA/company-logo_200_200/company-logo_200_200/0/1657037642094/agrosmart_logo?e=2147483647&v=beta&t=uKD3P6woxuauHHnSu2Ir-xijngQMkZJHJZf6ULgxSWo', url: 'https://agrosmart.com.br/' },
-      { name: 'LayerX', logo: 'https://images.crunchbase.com/image/upload/c_pad,h_256,w_256,f_auto,q_auto:eco,dpr_1/3ac3080a6c3f415ba2f312d857fec937', url: 'https://layerxsecurity.com/pt/' },
+      { name: 'LayerX', logo: 'https://media.licdn.com/dms/image/v2/D4D0BAQHZQ8yCJxxisQ/company-logo_200_200/company-logo_200_200/0/1734982286382/layerxsolucoes_logo?e=1759968000&v=beta&t=F756UStC-NSvBRmcEbT2vRK8QKv0xXKl8go0_ylSw8U', url: 'https://layerx.com.br' },
       { name: 'Rede de Ensino e Pesquisa', logo: 'https://media.licdn.com/dms/image/v2/D4D0BAQFbfp7mW4TEkA/company-logo_200_200/company-logo_200_200/0/1662129972806/redernp_logo?e=2147483647&v=beta&t=s2uVsmm_0aq1DaFp_aTtl0sdOEsbRRoJZMJVZFazYyA', url: 'https://www.rnp.br' },
     ]
   };
