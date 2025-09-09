@@ -6,10 +6,10 @@
           "hasPreviousPage": false,
           "hasNextPage": false,
           "startCursor": "b2Zmc2V0OjA=",
-          "endCursor": "b2Zmc2V0OjYy",
+          "endCursor": "b2Zmc2V0OjY0",
           "__typename": "PageInfo"
         },
-        "totalCount": 63,
+        "totalCount": 65,
         "edges": [
           {
             "__typename": "TeamPageEdge",
@@ -744,6 +744,188 @@
             "cursor": "b2Zmc2V0OjQ=",
             "node": {
               "__typename": "TeamPage",
+              "id": "aWQ6MzU2NTM=",
+              "title": "Angelus Novus",
+              "meta": {
+                "type": "TEAM",
+                "slug": "angelus-novus",
+                "firstPublishedAt": "2025-09-09T17:49:42.201861Z",
+                "lastPublishedAt": "2025-09-09T17:49:42.201861Z",
+                "relativeUrl": "/2025/find-a-team/angelus-novus/",
+                "live": true,
+                "parent": null,
+                "__typename": "ExpandedPageMeta"
+              },
+              "owner": "aWQ6Mzc2NzU5",
+              "ownerDetails": null,
+              "excerpt": "I’m Ferdinand Rafols, Computer Engineering student at UFU with global experience as Program Manager at YouTube and Google TV. My skills combine AI, data science, project management, and interdisciplinary research. I’m passionate about building inn...",
+              "project": "aWQ6MzM0Njg=",
+              "projectDetails": {
+                "id": "aWQ6MzM0Njg=",
+                "name": "Project Angelus Novus",
+                "summary": "",
+                "demoLink": "",
+                "projectLink": "",
+                "details": "",
+                "solution": "",
+                "aiReferences": "",
+                "dataReferences": "",
+                "projectReferences": "",
+                "isSubmitted": false,
+                "savedAt": null,
+                "submittedAt": null,
+                "__typename": "Project"
+              },
+              "projectSubmitted": false,
+              "featuredImage": {
+                "id": "aWQ6Mjk3NDAw",
+                "meta": {
+                  "type": "images.CustomImage",
+                  "downloadUrl": "https://assets.spaceappschallenge.org/media/original_images/1e3e95bf-27aa-45d4-8031-76309233776c.jpg",
+                  "__typename": "ImageMeta"
+                },
+                "title": "team_image.14:26:03.436729",
+                "alt": "team_image.14:26:03.436729",
+                "caption": "team_image.14:26:03.436729",
+                "displaySize": "og",
+                "rendition": {
+                  "url": "https://assets.spaceappschallenge.org/media/images/1e3e95bf-27aa-45d4-8031-7630923377.2e16d0ba.fill-300x250.jpg",
+                  "fullUrl": "https://assets.spaceappschallenge.org/media/images/1e3e95bf-27aa-45d4-8031-7630923377.2e16d0ba.fill-300x250.jpg",
+                  "height": 250,
+                  "width": 300,
+                  "__typename": "BaseImage"
+                },
+                "__typename": "DefaultImage"
+              },
+              "description": null,
+              "desiredSkills": [],
+              "languages": [],
+              "challenge": "aWQ6MzEzMjU=",
+              "challengeDetails": {
+                "id": "aWQ6MzEzMjU=",
+                "title": "Deep Dive: Immersive Data Stories from Ocean to Sky",
+                "meta": {
+                  "type": "CHALLENGE",
+                  "slug": "deep-dive-immersive-data-stories-from-ocean-to-sky",
+                  "firstPublishedAt": "2025-08-18T19:28:40.018990Z",
+                  "lastPublishedAt": "2025-08-19T21:26:22.617986Z",
+                  "relativeUrl": "/2025/challenges/deep-dive-immersive-data-stories-from-ocean-to-sky/",
+                  "live": true,
+                  "parent": null,
+                  "__typename": "ExpandedPageMeta"
+                },
+                "excerpt": "Satellite observations reveal insights about our dynamic home planet to scientists, but people without a remote sensing background often find the stories within these datasets difficult to access. NASA’s open data policy makes these observations available to everyone—scientists and non-scientists alike. Your challenge is to build a short, immersive, virtual reality (VR) experience that leverages NASA’s Earth observation datasets and visualizations to bring stories about our planet’s oceans to life, connecting a broad audience to this data, its beauty, and its impact. Using visuals, spatial audio, and even interactive elements, your VR experience can enable users to dive deeper into Earth’s unfolding ocean story.",
+                "__typename": "ChallengePage"
+              },
+              "location": "aWQ6MzA2NjM=",
+              "locationDetails": {
+                "id": "aWQ6MzA2NjM=",
+                "title": "Uberlandia",
+                "displayName": "Uberlândia",
+                "meta": {
+                  "type": "LOCATION",
+                  "slug": "uberlandia",
+                  "firstPublishedAt": "2025-07-18T21:43:56.560298Z",
+                  "lastPublishedAt": "2025-08-22T19:13:44.047613Z",
+                  "relativeUrl": "/2025/local-events/uberlandia/",
+                  "live": true,
+                  "parent": null,
+                  "__typename": "ExpandedPageMeta"
+                },
+                "country": "Brazil",
+                "__typename": "LocationPage"
+              },
+              "event": "aWQ6Mw==",
+              "eventDetails": {
+                "__typename": "GlobalEvent",
+                "id": "aWQ6Mw==",
+                "name": "2025 NASA Space Apps Challenge",
+                "displayName": "2025 NASA Space Apps Challenge",
+                "slug": "2025",
+                "status": 2,
+                "startDate": "2025-10-04T13:00:00",
+                "endDate": "2025-10-05T09:00:00",
+                "certificate": null,
+                "createRegistrationForm": "aWQ6MQ==",
+                "editRegistrationForm": "aWQ6MQ==",
+                "createTeamForm": "aWQ6Ng==",
+                "timezone": "GMT",
+                "teamMemberLimit": 6,
+                "eventRegistrationStatus": 2,
+                "localEventRegistrationStatus": 6,
+                "teamRegistrationStatus": 6,
+                "isTeamPagesActive": true,
+                "isAwardsActive": false,
+                "isChallengePagesActive": false,
+                "localEventEditStatus": 5,
+                "teamEditStatus": 5,
+                "teamStreamEditStatus": 0,
+                "projectEditStatus": 0,
+                "localEventJudgingStatus": 0,
+                "nominationJudgingStatus": 0,
+                "projectFields": [
+                  {
+                    "title": "Summary",
+                    "caption": "",
+                    "fieldMapping": "summary",
+                    "fieldType": "TEXT",
+                    "__typename": "ProjectFieldBlock"
+                  },
+                  {
+                    "title": "Project Demonstration",
+                    "caption": "",
+                    "fieldMapping": "demoLink",
+                    "fieldType": "URL",
+                    "__typename": "ProjectFieldBlock"
+                  },
+                  {
+                    "title": "Project",
+                    "caption": "",
+                    "fieldMapping": "projectLink",
+                    "fieldType": "URL",
+                    "__typename": "ProjectFieldBlock"
+                  },
+                  {
+                    "title": "Project Details",
+                    "caption": "",
+                    "fieldMapping": "details",
+                    "fieldType": "RICHFULL",
+                    "__typename": "ProjectFieldBlock"
+                  },
+                  {
+                    "title": "Use of Artificial Intelligence (AI)",
+                    "caption": "",
+                    "fieldMapping": "aiReferences",
+                    "fieldType": "LINKS",
+                    "__typename": "ProjectFieldBlock"
+                  },
+                  {
+                    "title": "NASA Data",
+                    "caption": "",
+                    "fieldMapping": "dataReferences",
+                    "fieldType": "LINKS",
+                    "__typename": "ProjectFieldBlock"
+                  },
+                  {
+                    "title": "Space Agency Partner & Other Data",
+                    "caption": "",
+                    "fieldMapping": "projectReferences",
+                    "fieldType": "LINKS",
+                    "__typename": "ProjectFieldBlock"
+                  }
+                ]
+              },
+              "joinEnabled": true,
+              "memberships": null,
+              "nominationBadges": [],
+              "awardBadges": null
+            }
+          },
+          {
+            "__typename": "TeamPageEdge",
+            "cursor": "b2Zmc2V0OjU=",
+            "node": {
+              "__typename": "TeamPage",
               "id": "aWQ6MzUzNjA=",
               "title": "Ao infinito e além!",
               "meta": {
@@ -904,7 +1086,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjU=",
+            "cursor": "b2Zmc2V0OjY=",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6MzMxNDA=",
@@ -1086,7 +1268,170 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjY=",
+            "cursor": "b2Zmc2V0Ojc=",
+            "node": {
+              "__typename": "TeamPage",
+              "id": "aWQ6MzU0ODQ=",
+              "title": "Asteroid Watchers",
+              "meta": {
+                "type": "TEAM",
+                "slug": "asteroid-watchers",
+                "firstPublishedAt": "2025-09-08T23:09:08.170733Z",
+                "lastPublishedAt": "2025-09-08T23:28:45.939795Z",
+                "relativeUrl": "/2025/find-a-team/asteroid-watchers/",
+                "live": true,
+                "parent": null,
+                "__typename": "ExpandedPageMeta"
+              },
+              "owner": "aWQ6MzkzOTg5",
+              "ownerDetails": null,
+              "excerpt": "We are the Asteroid Watchers, united by a shared passion for space, science, and the protection of our planet. Brought together by the NASA Space Apps challenge, we thrive on creativity, collaboration, and curiosity. Together we transform data and...",
+              "project": "aWQ6MzMyOTk=",
+              "projectDetails": {
+                "id": "aWQ6MzMyOTk=",
+                "name": "Project Asteroid Watchers",
+                "summary": "",
+                "demoLink": "",
+                "projectLink": "",
+                "details": "",
+                "solution": "",
+                "aiReferences": "",
+                "dataReferences": "",
+                "projectReferences": "",
+                "isSubmitted": false,
+                "savedAt": null,
+                "submittedAt": null,
+                "__typename": "Project"
+              },
+              "projectSubmitted": false,
+              "featuredImage": null,
+              "description": null,
+              "desiredSkills": [],
+              "languages": [],
+              "challenge": "aWQ6MzEzMTE=",
+              "challengeDetails": {
+                "id": "aWQ6MzEzMTE=",
+                "title": "Meteor Madness",
+                "meta": {
+                  "type": "CHALLENGE",
+                  "slug": "meteor-madness",
+                  "firstPublishedAt": "2025-08-18T19:28:38.722785Z",
+                  "lastPublishedAt": "2025-08-19T21:29:24.234606Z",
+                  "relativeUrl": "/2025/challenges/meteor-madness/",
+                  "live": true,
+                  "parent": null,
+                  "__typename": "ExpandedPageMeta"
+                },
+                "excerpt": "A newly identified near-Earth asteroid, \"Impactor-2025,\" poses a potential threat to Earth, but do we have the tools to enable the public and decision makers to understand and mitigate its risks? NASA datasets include information about known asteroids and the United States Geological Survey provides critical information that could enable modeling the effects of asteroid impacts, but these data need to be integrated to enable effective visualization and decision making. Your challenge is to develop an interactive visualization and simulation tool that uses real data to help users model asteroid impact scenarios, predict consequences, and evaluate potential mitigation strategies.",
+                "__typename": "ChallengePage"
+              },
+              "location": "aWQ6MzA2NjM=",
+              "locationDetails": {
+                "id": "aWQ6MzA2NjM=",
+                "title": "Uberlandia",
+                "displayName": "Uberlândia",
+                "meta": {
+                  "type": "LOCATION",
+                  "slug": "uberlandia",
+                  "firstPublishedAt": "2025-07-18T21:43:56.560298Z",
+                  "lastPublishedAt": "2025-08-22T19:13:44.047613Z",
+                  "relativeUrl": "/2025/local-events/uberlandia/",
+                  "live": true,
+                  "parent": null,
+                  "__typename": "ExpandedPageMeta"
+                },
+                "country": "Brazil",
+                "__typename": "LocationPage"
+              },
+              "event": "aWQ6Mw==",
+              "eventDetails": {
+                "__typename": "GlobalEvent",
+                "id": "aWQ6Mw==",
+                "name": "2025 NASA Space Apps Challenge",
+                "displayName": "2025 NASA Space Apps Challenge",
+                "slug": "2025",
+                "status": 2,
+                "startDate": "2025-10-04T13:00:00",
+                "endDate": "2025-10-05T09:00:00",
+                "certificate": null,
+                "createRegistrationForm": "aWQ6MQ==",
+                "editRegistrationForm": "aWQ6MQ==",
+                "createTeamForm": "aWQ6Ng==",
+                "timezone": "GMT",
+                "teamMemberLimit": 6,
+                "eventRegistrationStatus": 2,
+                "localEventRegistrationStatus": 6,
+                "teamRegistrationStatus": 6,
+                "isTeamPagesActive": true,
+                "isAwardsActive": false,
+                "isChallengePagesActive": false,
+                "localEventEditStatus": 5,
+                "teamEditStatus": 5,
+                "teamStreamEditStatus": 0,
+                "projectEditStatus": 0,
+                "localEventJudgingStatus": 0,
+                "nominationJudgingStatus": 0,
+                "projectFields": [
+                  {
+                    "title": "Summary",
+                    "caption": "",
+                    "fieldMapping": "summary",
+                    "fieldType": "TEXT",
+                    "__typename": "ProjectFieldBlock"
+                  },
+                  {
+                    "title": "Project Demonstration",
+                    "caption": "",
+                    "fieldMapping": "demoLink",
+                    "fieldType": "URL",
+                    "__typename": "ProjectFieldBlock"
+                  },
+                  {
+                    "title": "Project",
+                    "caption": "",
+                    "fieldMapping": "projectLink",
+                    "fieldType": "URL",
+                    "__typename": "ProjectFieldBlock"
+                  },
+                  {
+                    "title": "Project Details",
+                    "caption": "",
+                    "fieldMapping": "details",
+                    "fieldType": "RICHFULL",
+                    "__typename": "ProjectFieldBlock"
+                  },
+                  {
+                    "title": "Use of Artificial Intelligence (AI)",
+                    "caption": "",
+                    "fieldMapping": "aiReferences",
+                    "fieldType": "LINKS",
+                    "__typename": "ProjectFieldBlock"
+                  },
+                  {
+                    "title": "NASA Data",
+                    "caption": "",
+                    "fieldMapping": "dataReferences",
+                    "fieldType": "LINKS",
+                    "__typename": "ProjectFieldBlock"
+                  },
+                  {
+                    "title": "Space Agency Partner & Other Data",
+                    "caption": "",
+                    "fieldMapping": "projectReferences",
+                    "fieldType": "LINKS",
+                    "__typename": "ProjectFieldBlock"
+                  }
+                ]
+              },
+              "joinEnabled": true,
+              "memberships": null,
+              "nominationBadges": [],
+              "awardBadges": null
+            }
+          },
+          {
+            "__typename": "TeamPageEdge",
+            "cursor": "b2Zmc2V0Ojg=",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6MzQyNTA=",
@@ -1268,7 +1613,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0Ojc=",
+            "cursor": "b2Zmc2V0Ojk=",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6MzM3MTU=",
@@ -1450,7 +1795,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0Ojg=",
+            "cursor": "b2Zmc2V0OjEw",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6MzM2NzU=",
@@ -1613,7 +1958,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0Ojk=",
+            "cursor": "b2Zmc2V0OjEx",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6MzE0ODA=",
@@ -1795,7 +2140,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjEw",
+            "cursor": "b2Zmc2V0OjEy",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6MzE1MDM=",
@@ -1986,7 +2331,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjEx",
+            "cursor": "b2Zmc2V0OjEz",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6MzM1MjY=",
@@ -2168,7 +2513,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjEy",
+            "cursor": "b2Zmc2V0OjE0",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6MzQxMzY=",
@@ -2350,7 +2695,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjEz",
+            "cursor": "b2Zmc2V0OjE1",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6MzMwNjQ=",
@@ -2543,7 +2888,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjE0",
+            "cursor": "b2Zmc2V0OjE2",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6MzI3MTY=",
@@ -2728,7 +3073,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjE1",
+            "cursor": "b2Zmc2V0OjE3",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6MzMyNDA=",
@@ -2910,7 +3255,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjE2",
+            "cursor": "b2Zmc2V0OjE4",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6MzM2ODQ=",
@@ -3092,7 +3437,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjE3",
+            "cursor": "b2Zmc2V0OjE5",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6MzQ3NTE=",
@@ -3274,7 +3619,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjE4",
+            "cursor": "b2Zmc2V0OjIw",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6MzQxMjM=",
@@ -3456,7 +3801,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjE5",
+            "cursor": "b2Zmc2V0OjIx",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6MzI0NTQ=",
@@ -3638,7 +3983,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjIw",
+            "cursor": "b2Zmc2V0OjIy",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6MzI0OTk=",
@@ -3820,7 +4165,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjIx",
+            "cursor": "b2Zmc2V0OjIz",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6MzQzNTc=",
@@ -4002,7 +4347,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjIy",
+            "cursor": "b2Zmc2V0OjI0",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6MzI2OTM=",
@@ -4194,7 +4539,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjIz",
+            "cursor": "b2Zmc2V0OjI1",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6MzQzNDg=",
@@ -4376,7 +4721,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjI0",
+            "cursor": "b2Zmc2V0OjI2",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6MzIwMjk=",
@@ -4558,7 +4903,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjI1",
+            "cursor": "b2Zmc2V0OjI3",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6MzUxOTM=",
@@ -4740,7 +5085,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjI2",
+            "cursor": "b2Zmc2V0OjI4",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6MzIwMjE=",
@@ -4922,7 +5267,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjI3",
+            "cursor": "b2Zmc2V0OjI5",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6MzUyNTg=",
@@ -4931,7 +5276,7 @@
                 "type": "TEAM",
                 "slug": "extranautas",
                 "firstPublishedAt": "2025-09-08T17:47:28.600039Z",
-                "lastPublishedAt": "2025-09-08T18:00:19.957388Z",
+                "lastPublishedAt": "2025-09-09T01:49:02.856113Z",
                 "relativeUrl": "/2025/find-a-team/extranautas/",
                 "live": true,
                 "parent": null,
@@ -4980,7 +5325,10 @@
               },
               "description": null,
               "desiredSkills": [],
-              "languages": [],
+              "languages": [
+                "Portuguese",
+                "English"
+              ],
               "challenge": "aWQ6MzEzMjI=",
               "challengeDetails": {
                 "id": "aWQ6MzEzMjI=",
@@ -5096,7 +5444,7 @@
                   }
                 ]
               },
-              "joinEnabled": false,
+              "joinEnabled": true,
               "memberships": null,
               "nominationBadges": [],
               "awardBadges": null
@@ -5104,7 +5452,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjI4",
+            "cursor": "b2Zmc2V0OjMw",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6MzMwMTk=",
@@ -5311,7 +5659,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjI5",
+            "cursor": "b2Zmc2V0OjMx",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6MzE2NzI=",
@@ -5493,7 +5841,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjMw",
+            "cursor": "b2Zmc2V0OjMy",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6MzI1ODQ=",
@@ -5675,7 +6023,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjMx",
+            "cursor": "b2Zmc2V0OjMz",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6MzQzNDE=",
@@ -5857,7 +6205,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjMy",
+            "cursor": "b2Zmc2V0OjM0",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6MzIwMzc=",
@@ -6039,7 +6387,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjMz",
+            "cursor": "b2Zmc2V0OjM1",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6MzMyOTM=",
@@ -6202,7 +6550,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjM0",
+            "cursor": "b2Zmc2V0OjM2",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6MzQ3MDI=",
@@ -6384,7 +6732,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjM1",
+            "cursor": "b2Zmc2V0OjM3",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6MzIyNjI=",
@@ -6566,7 +6914,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjM2",
+            "cursor": "b2Zmc2V0OjM4",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6MzE2ODA=",
@@ -6762,7 +7110,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjM3",
+            "cursor": "b2Zmc2V0OjM5",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6MzQ5MDk=",
@@ -6944,7 +7292,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjM4",
+            "cursor": "b2Zmc2V0OjQw",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6MzI4ODQ=",
@@ -7107,7 +7455,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjM5",
+            "cursor": "b2Zmc2V0OjQx",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6MzM4ODg=",
@@ -7270,7 +7618,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjQw",
+            "cursor": "b2Zmc2V0OjQy",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6MzMwNDQ=",
@@ -7433,7 +7781,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjQx",
+            "cursor": "b2Zmc2V0OjQz",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6MzE1MjA=",
@@ -7596,7 +7944,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjQy",
+            "cursor": "b2Zmc2V0OjQ0",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6MzI2NDg=",
@@ -7778,7 +8126,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjQz",
+            "cursor": "b2Zmc2V0OjQ1",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6MzM0MDY=",
@@ -7960,7 +8308,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjQ0",
+            "cursor": "b2Zmc2V0OjQ2",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6MzE1NzI=",
@@ -8123,7 +8471,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjQ1",
+            "cursor": "b2Zmc2V0OjQ3",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6MzUyMjU=",
@@ -8286,7 +8634,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjQ2",
+            "cursor": "b2Zmc2V0OjQ4",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6MzM1MjA=",
@@ -8484,7 +8832,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjQ3",
+            "cursor": "b2Zmc2V0OjQ5",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6MzE1MDU=",
@@ -8669,7 +9017,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjQ4",
+            "cursor": "b2Zmc2V0OjUw",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6MzQ3Mzc=",
@@ -8851,7 +9199,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjQ5",
+            "cursor": "b2Zmc2V0OjUx",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6MzQwMzE=",
@@ -9033,7 +9381,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjUw",
+            "cursor": "b2Zmc2V0OjUy",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6MzQ4NTU=",
@@ -9042,7 +9390,7 @@
                 "type": "TEAM",
                 "slug": "space-cats4",
                 "firstPublishedAt": "2025-09-05T17:12:07.530681Z",
-                "lastPublishedAt": "2025-09-08T12:35:54.503896Z",
+                "lastPublishedAt": "2025-09-09T19:02:43.165478Z",
                 "relativeUrl": "/2025/find-a-team/space-cats4/",
                 "live": true,
                 "parent": null,
@@ -9199,7 +9547,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjUx",
+            "cursor": "b2Zmc2V0OjUz",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6MzI3MjA=",
@@ -9381,7 +9729,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjUy",
+            "cursor": "b2Zmc2V0OjU0",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6MzM2Mzg=",
@@ -9544,7 +9892,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjUz",
+            "cursor": "b2Zmc2V0OjU1",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6MzM2MzM=",
@@ -9707,7 +10055,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjU0",
+            "cursor": "b2Zmc2V0OjU2",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6MzIwMTc=",
@@ -9870,7 +10218,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjU1",
+            "cursor": "b2Zmc2V0OjU3",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6MzI2MDc=",
@@ -10052,7 +10400,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjU2",
+            "cursor": "b2Zmc2V0OjU4",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6MzI2MzE=",
@@ -10245,7 +10593,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjU3",
+            "cursor": "b2Zmc2V0OjU5",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6MzQ1MTc=",
@@ -10442,7 +10790,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjU4",
+            "cursor": "b2Zmc2V0OjYw",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6MzM0OTg=",
@@ -10624,7 +10972,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjU5",
+            "cursor": "b2Zmc2V0OjYx",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6MzMwNjA=",
@@ -10806,7 +11154,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjYw",
+            "cursor": "b2Zmc2V0OjYy",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6MzM4MTM=",
@@ -10988,7 +11336,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjYx",
+            "cursor": "b2Zmc2V0OjYz",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6MzQyNTk=",
@@ -11188,7 +11536,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjYy",
+            "cursor": "b2Zmc2V0OjY0",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6MzMyNDM=",
