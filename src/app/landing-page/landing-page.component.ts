@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, OnDestroy } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
 import { HeaderComponent } from './components/header/header.component';
@@ -24,14 +24,26 @@ import { TeamsService } from '../services/teams.service';
   templateUrl: './landing-page.component.html',
   styleUrl: './landing-page.component.scss'
 })
-export class LandingPageComponent implements OnInit {
+export class LandingPageComponent implements OnInit, OnDestroy {
   totalTeams = 0;
   totalMembers = 0;
+  
+  // Countdown properties
+  eventDate = new Date('2025-10-04T00:00:00-03:00'); // October 4th, 2025 in Brazil timezone
+  countdown = { days: 0, hours: 0, minutes: 0, seconds: 0 };
+  countdownInterval: any;
 
   constructor(private teamsService: TeamsService) {}
 
   ngOnInit(): void {
     this.loadTeamsStats();
+    this.startCountdown();
+  }
+  
+  ngOnDestroy(): void {
+    if (this.countdownInterval) {
+      clearInterval(this.countdownInterval);
+    }
   }
 
   private loadTeamsStats(): void {
@@ -145,5 +157,27 @@ export class LandingPageComponent implements OnInit {
 
   registerNow(): void {
     window.open('https://discord.gg/FT4Jsvj5vy', '_blank');
+  }
+  
+  private startCountdown(): void {
+    this.updateCountdown();
+    this.countdownInterval = setInterval(() => {
+      this.updateCountdown();
+    }, 1000);
+  }
+  
+  private updateCountdown(): void {
+    const now = new Date().getTime();
+    const eventTime = this.eventDate.getTime();
+    const difference = eventTime - now;
+    
+    if (difference > 0) {
+      this.countdown.days = Math.floor(difference / (1000 * 60 * 60 * 24));
+      this.countdown.hours = Math.floor((difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      this.countdown.minutes = Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60));
+      this.countdown.seconds = Math.floor((difference % (1000 * 60)) / 1000);
+    } else {
+      this.countdown = { days: 0, hours: 0, minutes: 0, seconds: 0 };
+    }
   }
 }
