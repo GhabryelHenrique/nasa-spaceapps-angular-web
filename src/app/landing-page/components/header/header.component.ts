@@ -1,8 +1,7 @@
+import { CommonModule } from '@angular/common';
 import { Component, HostListener } from '@angular/core';
 import { RouterLink } from '@angular/router';
-import { CommonModule } from '@angular/common';
-import { CHALLENGES_DATA, Challenge } from '../../../shared/data/challenges.data';
-import { LanguageSwitcherComponent } from '../../../shared/language-switcher/language-switcher.component';
+import { CHALLENGES_DATA } from '../../../shared/data/challenges.data';
 
 interface ChallengeCategory {
   id: number;
@@ -15,7 +14,7 @@ interface ChallengeCategory {
 
 @Component({
   selector: 'app-header',
-  imports: [RouterLink, CommonModule, LanguageSwitcherComponent],
+  imports: [RouterLink, CommonModule],
   templateUrl: './header.component.html',
   styleUrl: './header.component.scss',
 })
