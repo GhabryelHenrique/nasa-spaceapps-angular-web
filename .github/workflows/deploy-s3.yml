@@ -38,4 +38,4 @@ jobs:
 
       - name: Deploy to S3
         run: |
-          aws s3 sync dist/nasa-spaceapps-angular-web/ s3://${{ secrets.S3_BUCKET_NAME }} --delete
+          aws s3 sync dist/nasa-spaceapps-angular-web/browser s3://${{ secrets.S3_BUCKET_NAME }} --delete
