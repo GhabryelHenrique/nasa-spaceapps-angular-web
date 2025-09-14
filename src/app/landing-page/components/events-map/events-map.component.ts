@@ -49,8 +49,8 @@ export class EventsMapComponent implements OnInit {
       info: 'Local de apoio para networking e atividades complementares do NASA Space Apps Challenge'
     },
     {
-      position: { lat: -18.924682961805495, lng: -48.271471290864355 },
-      title: 'UDI Tech',
+      position: { lat: -18.904775,  lng: -48.277169 },
+      title: 'Colégio Batista Mineiro',
       info: 'Local de apoio para networking e atividades complementares do NASA Space Apps Challenge'
     },
     {
