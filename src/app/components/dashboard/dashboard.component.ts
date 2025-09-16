@@ -43,7 +43,7 @@ import { MatchmakingAuthService } from '../../services/api/matchmaking.service';
     align-items: center;     padding: 0 3rem;"
         >
           <!-- Quick Stats -->
-          <section class="stats-section">
+          <!-- <section class="stats-section">
             <div class="stats-grid">
               <div class="stat-card">
                 <div class="stat-icon">
@@ -82,7 +82,7 @@ import { MatchmakingAuthService } from '../../services/api/matchmaking.service';
                 </div>
               </div>
             </div>
-          </section>
+          </section> -->
 
           <!-- Main Actions -->
           <section class="actions-section">
@@ -120,36 +120,27 @@ import { MatchmakingAuthService } from '../../services/api/matchmaking.service';
               </div>
 
               <div class="col-md-4">
-                <div class="action-card" (click)="navigateToMatches()">
-                  <div class="action-icon bg-success">
+                <div class="action-card disabled">
+                  <div class="action-icon bg-secondary">
                     <i class="fas fa-handshake"></i>
                   </div>
                   <h4>Ver Matches</h4>
-                  <p>Explore suas sugestões de equipe</p>
+                  <p>Funcionalidade temporariamente desabilitada</p>
                   <div class="action-footer">
-                    <span class="badge badge-info"
-                      >{{ matchCount }} disponíveis</span
-                    >
+                    <span class="badge badge-secondary">Em Breve</span>
                   </div>
                 </div>
               </div>
 
               <div class="col-md-4">
-                <div class="action-card" (click)="findMatches()">
-                  <div class="action-icon bg-info">
+                <div class="action-card disabled">
+                  <div class="action-icon bg-secondary">
                     <i class="fas fa-search"></i>
                   </div>
                   <h4>Buscar Matches</h4>
-                  <p>Encontre novos parceiros</p>
+                  <p>Funcionalidade temporariamente desabilitada</p>
                   <div class="action-footer">
-                    <span
-                      class="badge"
-                      [class]="
-                        isSearching ? 'badge-warning' : 'badge-secondary'
-                      "
-                    >
-                      {{ isSearching ? 'Buscando...' : 'Descobrir' }}
-                    </span>
+                    <span class="badge badge-secondary">Indisponível</span>
                   </div>
                 </div>
               </div>
@@ -468,6 +459,22 @@ import { MatchmakingAuthService } from '../../services/api/matchmaking.service';
         transform: translateY(-6px);
         box-shadow: 0 16px 48px rgba(255, 68, 68, 0.15);
         border-color: #ff4444;
+      }
+
+      .action-card.disabled {
+        opacity: 0.6;
+        cursor: not-allowed;
+        pointer-events: none;
+      }
+
+      .action-card.disabled:hover {
+        transform: none;
+        box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+        border-color: #3a4370;
+      }
+
+      .bg-secondary {
+        background: linear-gradient(135deg, #6c757d 0%, #5a6169 100%);
       }
 
       .action-icon {
