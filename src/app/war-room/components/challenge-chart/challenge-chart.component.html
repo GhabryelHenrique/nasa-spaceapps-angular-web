@@ -16,7 +16,7 @@
         <div class="stat-label">Desafios Únicos</div>
       </div>
       <div class="stat-item">
-        <div class="stat-number">{{ getTotalTeamsWithChallenges() }}</div>
+        <div class="stat-number">{{ teams.length }}</div>
         <div class="stat-label">Times Cadastrados</div>
       </div>
       <div class="stat-item highlight" *ngIf="getMostPopularChallenge()">
@@ -50,7 +50,7 @@
 
     <!-- Chart Container -->
     <div class="chart-wrapper">
-      <canvas 
+      <canvas
         baseChart
         [data]="chartData"
         [options]="chartOptions"

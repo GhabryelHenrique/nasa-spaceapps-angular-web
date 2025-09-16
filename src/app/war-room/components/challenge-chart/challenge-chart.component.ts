@@ -25,14 +25,14 @@ export class ChallengeChartComponent implements OnInit, OnChanges {
 
   // Chart.js configuration
   public chartType: ChartType = 'doughnut' as const;
-  
+
   public chartData: ChartData<'doughnut'> = {
     labels: [],
     datasets: [{
       data: [],
       backgroundColor: [
         '#4ecdc4',
-        '#45b7d1', 
+        '#45b7d1',
         '#5865F2',
         '#ff6b6b',
         '#4ecdc4',
@@ -104,6 +104,7 @@ export class ChallengeChartComponent implements OnInit, OnChanges {
   }
 
   ngOnChanges(changes: SimpleChanges): void {
+    console.log(this.teams)
     if (changes['teams']) {
       this.processTeamData();
     }
@@ -122,7 +123,6 @@ export class ChallengeChartComponent implements OnInit, OnChanges {
     const challengeMap = new Map<string, ChallengeCount>();
 
     this.teams.forEach(team => {
-      if (team.challengeDetails && team.challengeDetails.title) {
         const challengeId = team.challengeDetails.id || team.challenge;
         const challengeTitle = team.challengeDetails.title;
 
@@ -135,7 +135,6 @@ export class ChallengeChartComponent implements OnInit, OnChanges {
             count: 1,
             color: this.getColorForChallenge(challengeMap.size)
           });
-        }
       }
     });
 
@@ -167,7 +166,7 @@ export class ChallengeChartComponent implements OnInit, OnChanges {
   private getColorForChallenge(index: number): string {
     const colors = [
       '#4ecdc4',
-      '#45b7d1', 
+      '#45b7d1',
       '#5865F2',
       '#ff6b6b',
       '#4ecdc4',

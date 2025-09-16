@@ -5,6 +5,38 @@
     <app-hero-section></app-hero-section>
   </section>
 
+  <!-- Countdown Section -->
+  <section class="countdown-wrapper">
+    <div class="container">
+      <div class="countdown-content">
+        <h2 class="countdown-title">Contagem Regressiva para o Evento</h2>
+        <p class="countdown-subtitle">O NASA Space Apps Challenge Uberlândia 2025 começa em:</p>
+        <div class="countdown-timer">
+          <div class="countdown-item">
+            <div class="countdown-number">{{ countdown.days }}</div>
+            <div class="countdown-label">Dias</div>
+          </div>
+          <div class="countdown-separator">:</div>
+          <div class="countdown-item">
+            <div class="countdown-number">{{ countdown.hours }}</div>
+            <div class="countdown-label">Horas</div>
+          </div>
+          <div class="countdown-separator">:</div>
+          <div class="countdown-item">
+            <div class="countdown-number">{{ countdown.minutes }}</div>
+            <div class="countdown-label">Minutos</div>
+          </div>
+          <div class="countdown-separator">:</div>
+          <div class="countdown-item">
+            <div class="countdown-number">{{ countdown.seconds }}</div>
+            <div class="countdown-label">Segundos</div>
+          </div>
+        </div>
+        <p class="event-date">4 de Outubro de 2025</p>
+      </div>
+    </div>
+  </section>
+
   <!-- Uberlandia Highlights Component -->
   <app-uberlandia-highlights></app-uberlandia-highlights>
 
