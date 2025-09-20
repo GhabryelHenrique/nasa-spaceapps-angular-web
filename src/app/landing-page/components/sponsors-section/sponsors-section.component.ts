@@ -33,10 +33,10 @@ export class SponsorsSectionComponent {
     ],
     silver: [
       { name: 'Oracle', logo: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQnOVjTWaheo4E99cgYZ6y14tpsgHlm0VN8Hw&s', url: 'https://www.oracle.com/br' },
-      { name: 'Zup Innovation', logo: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRotJvZVHcO3WhugTZAEvPvrm0eJDfo7J8iOQ&s', url: 'https://zup.com.br/' },
       { name: 'Observatório Nacional', logo: 'https://media.licdn.com/dms/image/v2/C4E0BAQFVZtnLQKrmNg/company-logo_200_200/company-logo_200_200/0/1631356595002?e=2147483647&v=beta&t=ONLM2nZjv3fbTw7420qtgQhwiC1ef13bkhIMRscBlaE', url: 'https://www.gov.br/observatorio/pt-br' },
     ],
     supporters: [
+      { name: 'Prefeitura de Uberlândia', logo: 'https://www.uberlandia.mg.gov.br/wp-content/uploads/2019/05/Logo-PMU_2025-Com-voce_Por-Todos.png', url: 'https://www.uberlandia.mg.gov.br' },
       { name: 'MIT', logo: 'https://m.media-amazon.com/images/I/41VZYP49LiL._UF894,1000_QL80_.jpg', url: 'https://web.mit.edu' },
       { name: 'Goddard Space Flight Center', logo: 'assets/sponsors/channels4_profile.jpg', url: 'https://www.nasa.gov/goddard/' },
       { name: 'IBM', logo: 'https://media.licdn.com/dms/image/v2/D560BAQGiz5ecgpCtkA/company-logo_200_200/company-logo_200_200/0/1688684715866/ibm_logo?e=1758758400&v=beta&t=HsAybzR97WqPtVfmo0GwYLU0WZpYdbQyGMFe1EG0E2s', url: 'https://www.nasa.gov/goddard/' },
@@ -57,6 +57,7 @@ export class SponsorsSectionComponent {
       { name: 'Unitri', logo: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQZsCrwIQwv_WcH_4yRpg5j5FQfPoickMMirw&s', url: 'https://www.unitri.edu.br' },
       { name: 'Ifood', logo: 'https://static.ifood.com.br/webapp/images/logo-smile-512x512.png', url: 'https://www.ifood.com.br' },
       { name: 'Itaú', logo: 'https://play-lh.googleusercontent.com/gRcutACE4XkEHmxcbUdOehxpTbp_LjmwJ6qIEbqfD34oh9feTNhTnlDgf97HEZ9eGKY=s256-rw', url: 'https://www.itau.com.br' },
+      { name: 'Zup Innovation', logo: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRotJvZVHcO3WhugTZAEvPvrm0eJDfo7J8iOQ&s', url: 'https://zup.com.br/' },
       { name: 'Santander', logo: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQyldeRZdWVUtcV4pSSeJzQfKezzu1Q1qGt8w&s', url: 'https://www.santander.com.br' },
       { name: 'Bradesco', logo: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRDNVTc3mhbojIWSX9gonGIPaDetl3AhP66kA&s', url: 'https://banco.bradesco/marca/' },
       { name: 'Sest Senat', logo: 'https://yt3.googleusercontent.com/ttSDv6723Ku305iljYWHDRXekiPtDDBZt61686psLLmQLoPv-7VI2feQWAlyeOTOvL2NBNDHwQ=s900-c-k-c0x00ffffff-no-rj', url: 'https://www.sestsenat.org.br/home' },
