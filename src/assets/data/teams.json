@@ -6,10 +6,10 @@
           "hasPreviousPage": false,
           "hasNextPage": false,
           "startCursor": "b2Zmc2V0OjA=",
-          "endCursor": "b2Zmc2V0Ojgy",
+          "endCursor": "b2Zmc2V0Ojgz",
           "__typename": "PageInfo"
         },
-        "totalCount": 83,
+        "totalCount": 84,
         "edges": [
           {
             "__typename": "TeamPageEdge",
@@ -125,8 +125,8 @@
               "meta": {
                 "type": "TEAM",
                 "slug": "314neapple",
-                "firstPublishedAt": "2025-08-21T22:57:53.604218Z",
-                "lastPublishedAt": "2025-08-25T13:24:02.793918Z",
+                "firstPublishedAt": "2025-08-21T22:57:53.604000Z",
+                "lastPublishedAt": "2025-09-22T19:36:16.716711Z",
                 "relativeUrl": "/2025/find-a-team/314neapple/",
                 "live": true,
                 "parent": null,
@@ -4459,8 +4459,8 @@
               "meta": {
                 "type": "TEAM",
                 "slug": "habitar",
-                "firstPublishedAt": "2025-09-04T19:22:13.189836Z",
-                "lastPublishedAt": "2025-09-04T19:22:13.189836Z",
+                "firstPublishedAt": "2025-09-04T19:22:13.189000Z",
+                "lastPublishedAt": "2025-09-22T17:41:49.478976Z",
                 "relativeUrl": "/2025/find-a-team/habitar/",
                 "live": true,
                 "parent": null,
@@ -5972,6 +5972,91 @@
             "cursor": "b2Zmc2V0OjU5",
             "node": {
               "__typename": "TeamPage",
+              "id": "aWQ6NDAwMzA=",
+              "title": "Os guri do vasco",
+              "meta": {
+                "type": "TEAM",
+                "slug": "os-guri-do-vasco",
+                "firstPublishedAt": null,
+                "lastPublishedAt": null,
+                "relativeUrl": "/2025/find-a-team/os-guri-do-vasco/",
+                "live": true,
+                "parent": null,
+                "__typename": "ExpandedPageMeta"
+              },
+              "owner": "aWQ6NDI4NTE3",
+              "ownerDetails": null,
+              "excerpt": "É os guri do vasco aqui é só ''29'' gabs ruim de mais kkkkkkk",
+              "project": "aWQ6Mzc4Mzg=",
+              "projectDetails": {
+                "id": "aWQ6Mzc4Mzg=",
+                "name": "Project Os guri do vasco",
+                "summary": "",
+                "demoLink": "",
+                "projectLink": "",
+                "details": "",
+                "solution": "",
+                "aiReferences": "",
+                "dataReferences": "",
+                "projectReferences": "",
+                "isSubmitted": false,
+                "savedAt": null,
+                "submittedAt": null,
+                "__typename": "Project"
+              },
+              "projectSubmitted": false,
+              "featuredImage": null,
+              "description": null,
+              "desiredSkills": null,
+              "languages": null,
+              "challenge": "aWQ6MzEzMjU=",
+              "challengeDetails": {
+                "id": "aWQ6MzEzMjU=",
+                "title": "Deep Dive: Immersive Data Stories from Ocean to Sky",
+                "meta": {
+                  "type": "CHALLENGE",
+                  "slug": "deep-dive-immersive-data-stories-from-ocean-to-sky",
+                  "firstPublishedAt": "2025-08-18T19:28:40.018990Z",
+                  "lastPublishedAt": "2025-09-16T15:24:43.004486Z",
+                  "relativeUrl": "/2025/challenges/deep-dive-immersive-data-stories-from-ocean-to-sky/",
+                  "live": true,
+                  "parent": null,
+                  "__typename": "ExpandedPageMeta"
+                },
+                "excerpt": "Satellite observations reveal insights about our dynamic home planet to scientists, but people without a remote sensing background often find the stories within these datasets difficult to access. NASA’s open data policy makes these observations available to everyone—scientists and non-scientists alike. Your challenge is to build a short, immersive, virtual reality (VR) experience that leverages NASA’s Earth observation datasets and visualizations to bring stories about our planet’s oceans to life, connecting a broad audience to this data, its beauty, and its impact. Using visuals, spatial audio, and even interactive elements, your VR experience can enable users to dive deeper into Earth’s unfolding ocean story. (Earth Science Division)",
+                "__typename": "ChallengePage"
+              },
+              "location": "aWQ6MzA2NjM=",
+              "locationDetails": {
+                "id": "aWQ6MzA2NjM=",
+                "title": "Uberlandia",
+                "displayName": "Uberlândia",
+                "meta": {
+                  "type": "LOCATION",
+                  "slug": "uberlandia",
+                  "firstPublishedAt": "2025-07-18T21:43:56.560298Z",
+                  "lastPublishedAt": "2025-08-22T19:13:44.047613Z",
+                  "relativeUrl": "/2025/local-events/uberlandia/",
+                  "live": true,
+                  "parent": null,
+                  "__typename": "ExpandedPageMeta"
+                },
+                "country": "Brazil",
+                "__typename": "LocationPage"
+              },
+              "event": "aWQ6Mw==",
+              "eventDetails": null,
+              "joinEnabled": true,
+              "memberships": null,
+              "nominationBadges": null,
+              "awardBadges": null
+            }
+          },
+          {
+            "__typename": "TeamPageEdge",
+            "cursor": "b2Zmc2V0OjYw",
+            "node": {
+              "__typename": "TeamPage",
               "id": "aWQ6MzYxODA=",
               "title": "Os guris da catequese",
               "meta": {
@@ -6073,7 +6158,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjYw",
+            "cursor": "b2Zmc2V0OjYx",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6MzcxNTI=",
@@ -6158,7 +6243,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjYx",
+            "cursor": "b2Zmc2V0OjYy",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6MzM1MjA=",
@@ -6279,7 +6364,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjYy",
+            "cursor": "b2Zmc2V0OjYz",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6MzU5MzY=",
@@ -6383,7 +6468,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjYz",
+            "cursor": "b2Zmc2V0OjY0",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6MzE1MDU=",
@@ -6490,7 +6575,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjY0",
+            "cursor": "b2Zmc2V0OjY1",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6MzQ3Mzc=",
@@ -6594,7 +6679,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjY1",
+            "cursor": "b2Zmc2V0OjY2",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6MzU3NzA=",
@@ -6602,8 +6687,8 @@
               "meta": {
                 "type": "TEAM",
                 "slug": "society-education",
-                "firstPublishedAt": "2025-09-10T00:23:52.961324Z",
-                "lastPublishedAt": "2025-09-13T00:04:41.165256Z",
+                "firstPublishedAt": "2025-09-10T00:23:52.961000Z",
+                "lastPublishedAt": "2025-09-22T17:22:23.601025Z",
                 "relativeUrl": "/2025/find-a-team/society-education/",
                 "live": true,
                 "parent": null,
@@ -6698,7 +6783,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjY2",
+            "cursor": "b2Zmc2V0OjY3",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6MzQ4NTU=",
@@ -6786,7 +6871,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjY3",
+            "cursor": "b2Zmc2V0OjY4",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6MzI3MjA=",
@@ -6890,7 +6975,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjY4",
+            "cursor": "b2Zmc2V0OjY5",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6MzM2Mzg=",
@@ -6975,7 +7060,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjY5",
+            "cursor": "b2Zmc2V0Ojcw",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6MzM2MzM=",
@@ -7060,7 +7145,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0Ojcw",
+            "cursor": "b2Zmc2V0Ojcx",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6Mzg0ODQ=",
@@ -7145,7 +7230,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0Ojcx",
+            "cursor": "b2Zmc2V0Ojcy",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6MzIwMTc=",
@@ -7230,7 +7315,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0Ojcy",
+            "cursor": "b2Zmc2V0Ojcz",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6MzI2MDc=",
@@ -7334,7 +7419,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0Ojcz",
+            "cursor": "b2Zmc2V0Ojc0",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6MzgyNzg=",
@@ -7419,7 +7504,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0Ojc0",
+            "cursor": "b2Zmc2V0Ojc1",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6MzkwMzM=",
@@ -7523,7 +7608,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0Ojc1",
+            "cursor": "b2Zmc2V0Ojc2",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6MzI2MzE=",
@@ -7638,7 +7723,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0Ojc2",
+            "cursor": "b2Zmc2V0Ojc3",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6MzQ1MTc=",
@@ -7757,7 +7842,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0Ojc3",
+            "cursor": "b2Zmc2V0Ojc4",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6MzM0OTg=",
@@ -7861,7 +7946,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0Ojc4",
+            "cursor": "b2Zmc2V0Ojc5",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6MzMwNjA=",
@@ -7965,7 +8050,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0Ojc5",
+            "cursor": "b2Zmc2V0Ojgw",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6MzM4MTM=",
@@ -8069,7 +8154,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0Ojgw",
+            "cursor": "b2Zmc2V0Ojgx",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6MzkwNDE=",
@@ -8173,7 +8258,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0Ojgx",
+            "cursor": "b2Zmc2V0Ojgy",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6MzQyNTk=",
@@ -8295,16 +8380,16 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0Ojgy",
+            "cursor": "b2Zmc2V0Ojgz",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6MzMyNDM=",
-              "title": "Zyra - Vida, dados e inovação urbana",
+              "title": "Zyra - Inovação Urbana",
               "meta": {
                 "type": "TEAM",
                 "slug": "zyra-vida-dados-e-inovacao-urbana",
-                "firstPublishedAt": "2025-08-28T17:56:12.364275Z",
-                "lastPublishedAt": "2025-09-11T20:02:32.453670Z",
+                "firstPublishedAt": "2025-08-28T17:56:12.364000Z",
+                "lastPublishedAt": "2025-09-22T14:35:54.353765Z",
                 "relativeUrl": "/2025/find-a-team/zyra-vida-dados-e-inovacao-urbana/",
                 "live": true,
                 "parent": null,
@@ -8312,7 +8397,7 @@
               },
               "owner": "aWQ6Mzg3NjAx",
               "ownerDetails": null,
-              "excerpt": "🚀Junte-se à Zyra! Formamos um time com dois desenvolvedores UFU e Uniube, analista de dados pleno , uma engenheira ambiental (mestrado em Engenharia Urbana – UFU) e um ganhador de 2 hackthons (Adm - Uniube). Transformamos dados em decisões que pro...",
+              "excerpt": "Zyra - Inovação Urbana",
               "project": "aWQ6MzEwNTg=",
               "projectDetails": {
                 "id": "aWQ6MzEwNTg=",
@@ -8353,17 +8438,17 @@
               },
               "description": null,
               "desiredSkills": [
-                "Software",
-                "Web Development",
-                "Earth Science",
-                "Data Visualization",
+                "Business & Economics",
                 "Data Analysis",
                 "Data Management",
-                "Waste & Resources",
-                "Pollution",
-                "Ergonomics & Human Factors",
+                "Data Visualization",
                 "Design",
-                "Business & Economics"
+                "Earth Science",
+                "Ergonomics & Human Factors",
+                "Pollution",
+                "Software",
+                "Waste & Resources",
+                "Web Development"
               ],
               "languages": [
                 "Portuguese"
