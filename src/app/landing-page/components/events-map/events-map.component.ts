@@ -22,63 +22,79 @@ export class EventsMapComponent implements OnInit {
   zoom = 12;
   isGoogleMapsLoaded = false;
 
-  eventLocations: EventLocation[] = [
-    {
-      position: { lat: -18.917750, lng: -48.257514 },
-      title: 'Universidade Federal de Uberlândia - UFU',
-      info: 'Polo principal NASA Space Apps Challenge Uberlândia'
-    },
-    {
-      position: { lat: -18.909529, lng: -48.248573 },
-      title: 'MTI',
-      info: 'Polo de capacitação dos mentores do NASA Space Apps Challenge'
-    },
-    {
-      position: { lat: -18.956634, lng: -48.271558 },
-      title: 'Una',
-      info: 'Local de apoio para networking e atividades complementares do NASA Space Apps Challenge'
-    },
-    {
-      position: { lat: -18.879712, lng: -48.246336 },
-      title: 'Brain',
-      info: 'Local de apoio para networking e atividades complementares do NASA Space Apps Challenge'
-    },
-    {
-      position: { lat: -18.931272, lng: -48.290163 },
-      title: 'Colegio Nacional',
-      info: 'Local de apoio para networking e atividades complementares do NASA Space Apps Challenge'
-    },
-    {
-      position: { lat: -18.904775,  lng: -48.277169 },
-      title: 'Colégio Batista Mineiro',
-      info: 'Local de apoio para networking e atividades complementares do NASA Space Apps Challenge'
-    },
-    {
-      position: { lat: -18.95224632870345, lng: -48.270526751599455 },
-      title: 'Cyber Gênios',
-      info: 'Local de apoio para networking e atividades complementares do NASA Space Apps Challenge'
-    },
-    {
-      position: { lat: -18.950453, lng: -48.257845 },
-      title: 'Colégio Ann Mackenzie',
-      info: 'Local de apoio para networking e atividades complementares do NASA Space Apps Challenge'
-    },
-    {
-      position: { lat: -18.951666, lng: -48.232789 },
-      title: 'Portão 3',
-      info: 'Local de apoio para networking e atividades complementares do NASA Space Apps Challenge'
-    },
-    {
-      position: { lat: -18.924301, lng: -48.232747 },
-      title: 'Asa Coworking',
-      info: 'Local de apoio para networking e atividades complementares do NASA Space Apps Challenge'
-    },
-    {
-      position: { lat: -18.9329, lng: -48.279937 },
-      title: 'IFTM - Campus Centro',
-      info: 'Local de apoio para networking e atividades complementares do NASA Space Apps Challenge'
-    }
-  ];
+eventLocations: EventLocation[] = [
+  {
+    position: { lat: -18.917750, lng: -48.257514 },
+    title: 'Universidade Federal de Uberlândia - UFU (Santa Mônica)',
+    info: 'Polo principal do NASA Space Apps Challenge Uberlândia. Capacidade para 300 pessoas + Vila Digital. Estrutura dedicada para trilhas, hackathon e apresentações finais.'
+  },
+  {
+    position: { lat: -18.912912, lng: -48.273870 },
+    title: 'Uniube - Centro',
+    info: 'Espaço de apoio com capacidade para 150 participantes presenciais. Destinado a equipes de desenvolvimento e networking.'
+  },
+  {
+    position: { lat: -18.910473, lng: -48.270074 },
+    title: 'Sankhya - Afonso Pena',
+    info: 'Local preparado para receber 118 pessoas de fora da cidade, com operação full 48h. Estrutura de hospedagem + coworking temporário.'
+  },
+  {
+    position: { lat: -18.951666, lng: -48.232789 },
+    title: 'Portão 3 - Zona Sul',
+    info: 'Espaço dedicado para 100 pessoas presencialmente. Suporte a trilhas específicas de inovação e desenvolvimento local.'
+  },
+  {
+    position: { lat: -18.929200, lng: -48.268100 },
+    title: 'CREA / Secretaria da Juventude',
+    info: 'Ambiente com capacidade para 48 participantes. Gerido por Thaynan. Apoio a workshops e mentorias técnicas.'
+  },
+  {
+    position: { lat: -18.924301, lng: -48.232747 },
+    title: 'Asa Coworking',
+    info: 'Espaço colaborativo preparado para até 48 pessoas durante 48h. Voltado para imersão em projetos e networking entre equipes.'
+  },
+  {
+    position: { lat: -18.879712, lng: -48.246336 },
+    title: 'Brain',
+    info: 'Espaço de apoio para 48 pessoas. Foco em criatividade, design e inovação aplicada aos desafios do hackathon.'
+  },
+  {
+    position: { lat: -18.909529, lng: -48.248573 },
+    title: 'MTI',
+    info: 'Polo de capacitação de mentores do NASA Space Apps Challenge Uberlândia. Estrutura para até 48 pessoas em atividades de preparação e apoio.'
+  },
+  {
+    position: { lat: -18.931272, lng: -48.290163 },
+    title: 'Colégio Nacional',
+    info: 'Espaço voltado para os alunos do Colégio Nacional. Atividades internas relacionadas ao hackathon e desafios.'
+  },
+  {
+    position: { lat: -18.904775, lng: -48.277169 },
+    title: 'Colégio Batista Mineiro',
+    info: 'Espaço de apoio voltado para alunos do Batista. Atividades complementares ao evento principal.'
+  },
+  {
+    position: { lat: -18.950453, lng: -48.257845 },
+    title: 'Colégio Ann Mackenzie',
+    info: 'Espaço de apoio voltado para alunos do Mackenzie. Atividades internas relacionadas ao hackathon.'
+  },
+  {
+    position: { lat: -18.940000, lng: -48.260000 },
+    title: 'Colégio Gabarito',
+    info: 'Espaço reservado para alunos do Gabarito. Atividades de aprendizado e oficinas conectadas ao Space Apps.'
+  },
+
+  // {
+  //   position: { lat: -18.932000, lng: -48.278500 },
+  //   title: 'UNA - Uberlândia',
+  //   info: 'Espaço reserva com capacidade para até 200 pessoas. Atividades de apoio e expansão da participação no hackathon.'
+  // },
+  // {
+  //   position: { lat: -18.935000, lng: -48.250000 },
+  //   title: 'Gomes & Pires',
+  //   info: 'Espaço reserva com capacidade para 48 pessoas. Suporte logístico e acadêmico em caso de demanda extra.'
+  // }
+];
 
   mapOptions: any = {
     zoomControl: true,
