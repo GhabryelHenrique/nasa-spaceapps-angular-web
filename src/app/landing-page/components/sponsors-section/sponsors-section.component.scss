@@ -282,3 +282,25 @@
     }
   }
 }
+.easter-egg-btn {
+  margin-top: 8px;
+  background: #002776; /* Azul Red Bull */
+  color: #fff;
+  border: 2px solid #fcd116; /* Amarelo Red Bull */
+  border-radius: 20px;
+  padding: 8px 16px;
+  cursor: pointer;
+  font-weight: bold;
+  font-family: 'Arial Black', sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+  transition: all 0.3s ease-in-out;
+}
+
+.easter-egg-btn:hover {
+  background: #db0a40; /* Vermelho Red Bull */
+  border-color: #db0a40;
+  transform: scale(1.1) rotate(-1deg);
+  box-shadow: 0 6px 10px rgba(0,0,0,0.3);
+}

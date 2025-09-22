@@ -17,6 +17,7 @@ export class SponsorsSectionComponent {
       { name: 'Uberhub', logo: 'assets/sponsors/Logo UberHub Site NASA (2).png', url: 'https://uberhub.com.br' },
       { name: 'MTI', logo: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR0Kn1y5qhpsISjLd_QmdpK3bjzdJSA7iIorA&s', url: 'https://www.mti.work' },
       { name: 'Una', logo: 'https://media.licdn.com/dms/image/v2/C4E0BAQEKypVakNC3YQ/company-logo_200_200/company-logo_200_200/0/1630586019799/udifaculdadeuna_logo?e=2147483647&v=beta&t=14grTYkW0BjVLMwoGWOcDNfNLm4RLwa3u1Im7FXXzio', url: 'https://www.una.br/' },
+      { name: 'Uniube', logo: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQbtsF1sr5Ux8i3o-lcTy3mMkx8M2yrIAi-hg&s', url: 'https://uniube.br/' },
       { name: 'Colégio Ann Mackenzie', logo: 'https://img.imageboss.me/me/cover:contain/80x80/format:auto/20210305202506314.jpg', url: 'https://colegioannmackenzie.com.br' },
       { name: 'Colégio Nacional', logo: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSb3M1nAsCBCfXybnCaHbRNy_xyncy35dDAiw&s', url: 'https://www.nacionalnet.com.br' },
       { name: 'Gabarito', logo: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSwGgksxpwDoLa0Omi11PVWdvOCZxrireXLBS26GdhHY0THxb5OvuAXwijoUU7nT4reQKs&usqp=CAU', url: 'https://gabaritoeducacao.com' },
@@ -77,4 +78,28 @@ export class SponsorsSectionComponent {
       { name: 'Rede de Ensino e Pesquisa', logo: 'https://media.licdn.com/dms/image/v2/D4D0BAQFbfp7mW4TEkA/company-logo_200_200/company-logo_200_200/0/1662129972806/redernp_logo?e=2147483647&v=beta&t=s2uVsmm_0aq1DaFp_aTtl0sdOEsbRRoJZMJVZFazYyA', url: 'https://www.rnp.br' },
     ]
   };
+
+private hoverTimeout: any;
+  showEasterEgg = false;
+
+  startHover(sponsorName: string) {
+    this.hoverTimeout = setTimeout(() => {
+      if (sponsorName.toLowerCase() === 'redbull') {
+        this.showEasterEgg = true; // mostra botão escondido
+      }
+    }, 10000); // 1 min e 4s
+  }
+
+  stopHover() {
+    if (this.hoverTimeout) {
+      clearTimeout(this.hoverTimeout);
+      this.hoverTimeout = null;
+    }
+    this.showEasterEgg = false;
+  }
+
+  playMusic() {
+    const audio = new Audio('assets/33-max.mp3');
+    audio.play();
+  }
 }
