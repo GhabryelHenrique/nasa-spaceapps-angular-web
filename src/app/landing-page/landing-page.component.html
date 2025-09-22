@@ -10,7 +10,9 @@
     <div class="container">
       <div class="countdown-content">
         <h2 class="countdown-title">Contagem Regressiva para o Evento</h2>
-        <p class="countdown-subtitle">O NASA Space Apps Challenge Uberlândia 2025 começa em:</p>
+        <p class="countdown-subtitle">
+          O NASA Space Apps Challenge Uberlândia 2025 começa em:
+        </p>
         <div class="countdown-timer">
           <div class="countdown-item">
             <div class="countdown-number">{{ countdown.days }}</div>
@@ -48,33 +50,55 @@
   <!-- Events Map Component -->
   <app-events-map></app-events-map>
 
-    <!-- Mentors and Volunteers Section -->
+  <!-- Mentors and Volunteers Section -->
   <section class="mentors-volunteers-wrapper">
     <div class="container">
       <div class="mentors-volunteers-content">
         <h2 i18n="@@mentors.title">Seja Parte da Nossa Missão</h2>
         <p class="section-description" i18n="@@mentors.description">
-          Junte-se a nós como mentor ou voluntário e ajude a transformar ideias em soluções inovadoras que podem mudar o mundo.
-          Sua experiência e dedicação são fundamentais para o sucesso do NASA Space Apps Challenge Uberlândia.
+          Junte-se a nós como mentor ou voluntário e ajude a transformar ideias
+          em soluções inovadoras que podem mudar o mundo. Sua experiência e
+          dedicação são fundamentais para o sucesso do NASA Space Apps Challenge
+          Uberlândia.
         </p>
         <div class="roles-grid">
-          <div class="role-card">
+          <a
+            href="https://forms.gle/qhyKBQB9HVxqqrX59"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Formulário para se inscrever como mentor ou voluntário"
+            class="role-card"
+          >
             <div class="role-icon">🧑‍🏫</div>
             <h3 i18n="@@mentors.role.mentor.title">Mentores</h3>
-            <p i18n="@@mentors.role.mentor.description">Compartilhe sua expertise técnica e oriente equipes a desenvolver soluções inovadoras para os desafios da NASA.</p>
-          </div>
-          <div class="role-card">
+            <p i18n="@@mentors.role.mentor.description">
+              Compartilhe sua expertise técnica e oriente equipes a desenvolver
+              soluções inovadoras para os desafios da NASA.
+            </p>
+          </a>
+                    <a
+            href="https://forms.gle/sPo19ggpncGDSefN9"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Formulário para se inscrever como mentor ou voluntário"
+            class="role-card"
+          >
             <div class="role-icon">🤝</div>
             <h3 i18n="@@mentors.role.volunteer.title">Voluntários</h3>
-            <p i18n="@@mentors.role.volunteer.description">Ajude na organização do evento e garanta que tudo funcione perfeitamente durante os dois dias de hackathon.</p>
-          </div>
+            <p i18n="@@mentors.role.volunteer.description">
+              Ajude na organização do evento e garanta que tudo funcione
+              perfeitamente durante os dois dias de hackathon.
+            </p>
+          </a>
         </div>
         <div class="cta-section">
-          <a href="https://docs.google.com/forms/d/e/1FAIpQLScymeJJNAjNw5cHH_swG0kxsaagx2EC__n4wXW7lyJWs1TTZQ/viewform"
-             target="_blank"
-             rel="noopener noreferrer"
-             class="volunteer-btn"
-             aria-label="Formulário para se inscrever como mentor ou voluntário">
+          <a
+            href="https://forms.gle/qhyKBQB9HVxqqrX59"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="volunteer-btn"
+            aria-label="Formulário para se inscrever como mentor ou voluntário"
+          >
             <span i18n="@@mentors.button">Quero Participar</span>
           </a>
         </div>
@@ -87,25 +111,30 @@
     <app-sponsors-section></app-sponsors-section>
   </section>
 
-
-
   <!-- Organizers Section -->
   <section class="organizers-wrapper">
     <div class="container">
       <div class="organizers-content">
         <h2 i18n="@@organizers.title">Nossa Equipe Organizadora</h2>
         <p class="section-description" i18n="@@organizers.description">
-          Conheça as pessoas que tornam o NASA Space Apps Challenge Uberlândia uma realidade.
-          Uma equipe dedicada e apaixonada por inovação e tecnologia espacial.
+          Conheça as pessoas que tornam o NASA Space Apps Challenge Uberlândia
+          uma realidade. Uma equipe dedicada e apaixonada por inovação e
+          tecnologia espacial.
         </p>
         <div class="organizers-grid">
-          <a class="organizer-card" *ngFor="let organizer of organizers; trackBy: trackByName" href="{{organizer.url}}" target="_blank" >
+          <a
+            class="organizer-card"
+            *ngFor="let organizer of organizers; trackBy: trackByName"
+            href="{{ organizer.url }}"
+            target="_blank"
+          >
             <div class="organizer-photo">
               <img
                 [src]="organizer.photo"
                 [alt]="'Foto de ' + organizer.name"
                 loading="lazy"
-                onerror="this.src='assets/organizers/placeholder.svg'">
+                onerror="this.src='assets/organizers/placeholder.svg'"
+              />
             </div>
             <div class="organizer-info">
               <h3>{{ organizer.name }}</h3>
@@ -117,7 +146,6 @@
       </div>
     </div>
   </section>
-
 
   <!-- Footer -->
 </div>
