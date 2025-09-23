@@ -20,7 +20,8 @@ export class SponsorsSectionComponent {
       { name: 'Uniube', logo: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQbtsF1sr5Ux8i3o-lcTy3mMkx8M2yrIAi-hg&s', url: 'https://uniube.br/' },
       { name: 'Colégio Ann Mackenzie', logo: 'https://img.imageboss.me/me/cover:contain/80x80/format:auto/20210305202506314.jpg', url: 'https://colegioannmackenzie.com.br' },
       { name: 'Colégio Nacional', logo: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSb3M1nAsCBCfXybnCaHbRNy_xyncy35dDAiw&s', url: 'https://www.nacionalnet.com.br' },
-      { name: 'Gabarito', logo: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSwGgksxpwDoLa0Omi11PVWdvOCZxrireXLBS26GdhHY0THxb5OvuAXwijoUU7nT4reQKs&usqp=CAU', url: 'https://gabaritoeducacao.com' },
+      { name: 'Colégio Olimpo', logo: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQvUksnGl5DlLM5CxhGus7vt7OEn0bwIf544Q&s', url: 'https://olimpomg.com.br/' },
+      { name: 'Colégio Gabarito', logo: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSwGgksxpwDoLa0Omi11PVWdvOCZxrireXLBS26GdhHY0THxb5OvuAXwijoUU7nT4reQKs&usqp=CAU', url: 'https://gabaritoeducacao.com' },
       { name: 'Portão 3', logo: 'https://media.licdn.com/dms/image/v2/C4D0BAQGXXDRmGbF-jQ/company-logo_200_200/company-logo_200_200/0/1630547611880/portao_3_logo?e=2147483647&v=beta&t=f_I13yGu1nwBMN-b-1oZDRmpNqhWxZAFAH9B8U3Z7Qw', url: 'https://portao3.com.br' },
       { name: 'Asa Coworking', logo: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR1-vLv961Oyxnxn4HzlDrF52q2-RPxfa1KJg&s', url: 'https://www.asacoworking.com' },
       { name: 'MFlab', logo: 'assets/sponsors/mf-lab.jpg', url: 'https://www.femec.ufu.br/unidades/laboratorio/laboratorio-de-mecanica-dos-fluidos' },
@@ -46,7 +47,6 @@ export class SponsorsSectionComponent {
       { name: 'Tata Consultancy Services', logo: 'https://media.licdn.com/dms/image/v2/D4D0BAQGsGR9p4ikS5w/company-logo_200_200/company-logo_200_200/0/1708946550425/tata_consultancy_services_logo?e=1759968000&v=beta&t=dUdTwgFYAKekff6cZ3FzP95KV88kETq1l8GCZRTd02A', url: 'https://www.tcs.com' },
       { name: 'Logbit - Inteligência Comercial', logo: 'https://media.licdn.com/dms/image/v2/D4D0BAQGoKgrGKgrSIQ/company-logo_200_200/company-logo_200_200/0/1734106214792/logbit_logo?e=1759968000&v=beta&t=4IiOCSJZ-z3VP16k6pD8WHFszo0Mz-1sz7faNblnf-U', url: 'https://logbit.com.br/areacolab.html' },
       { name: 'Neppo', logo: 'https://media.licdn.com/dms/image/v2/D4D0BAQHi_a5oi7IigQ/company-logo_200_200/company-logo_200_200/0/1710872636958/neppo_tecnologia_logo?e=1759968000&v=beta&t=IvrqZ5VMwjYj7PX_GwQCddPNmTLHqKf3YzJ3GqxFDzg', url: 'https://neppo.com.br' },
-      { name: 'CMCC Foundation', logo: 'https://media.licdn.com/dms/image/v2/C560BAQGVE_6icH6sTg/company-logo_200_200/company-logo_200_200/0/1673359113519/cmccfoundation_logo?e=1759968000&v=beta&t=U9JcKHUFyqqHOWhhzTy5emTpx1-_qoTEW7-zgfUuxu0', url: 'https://www.cmcc.it' },
       { name: 'Harvard', logo: 'https://images.seeklogo.com/logo-png/28/1/harvard-university-logo-png_seeklogo-284458.png', url: 'https://www.harvard.edu' },
       { name: 'USP', logo: 'https://media.licdn.com/dms/image/v2/D4E0BAQEEty1xF9jFog/company-logo_200_200/B4EZVMm.k3HMAU-/0/1740747041633/uspoficial_logo?e=2147483647&v=beta&t=2wo2exdbRWHbHUYlK9pzchZ4liW6Hf-zoiNxz_Sh_58', url: 'https://www5.usp.br' },
       { name: 'UFMG', logo: 'https://images.seeklogo.com/logo-png/19/1/ufmg-logo-png_seeklogo-193610.png', url: 'https://www.instagram.com/ufmg' },
@@ -59,6 +59,7 @@ export class SponsorsSectionComponent {
       { name: 'Ifood', logo: 'https://static.ifood.com.br/webapp/images/logo-smile-512x512.png', url: 'https://www.ifood.com.br' },
       { name: 'Itaú', logo: 'https://play-lh.googleusercontent.com/gRcutACE4XkEHmxcbUdOehxpTbp_LjmwJ6qIEbqfD34oh9feTNhTnlDgf97HEZ9eGKY=s256-rw', url: 'https://www.itau.com.br' },
       { name: 'Zup Innovation', logo: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRotJvZVHcO3WhugTZAEvPvrm0eJDfo7J8iOQ&s', url: 'https://zup.com.br/' },
+      { name: 'Neppo', logo: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSRSXytbvom-2xUIcP9vNNPfpGKOTgunVRo1A&s', url: 'https://neppo.com.br/' },
       { name: 'Brain', logo: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQOTTjjaMnLdAln0y6CoY2YSCqr3nYeQVzPPQ&s', url: 'https://inovacaobrain.com.br' },
       { name: 'Santander', logo: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQyldeRZdWVUtcV4pSSeJzQfKezzu1Q1qGt8w&s', url: 'https://www.santander.com.br' },
       { name: 'Bradesco', logo: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRDNVTc3mhbojIWSX9gonGIPaDetl3AhP66kA&s', url: 'https://banco.bradesco/marca/' },
@@ -75,7 +76,9 @@ export class SponsorsSectionComponent {
       { name: 'Aimirim', logo: 'https://media.licdn.com/dms/image/v2/C4D0BAQE5wUH84mceMA/company-logo_200_200/company-logo_200_200/0/1630707182957/aimirim_solues_tecnolgicas_integradas_ltda__logo?e=1759968000&v=beta&t=TMUV2BK2zUCvHnkgl1l6KMp4ILlf3w7JHkYXseWJyXU', url: 'https://www.aimirimsti.com.br' },
       { name: 'Agro Smart', logo: 'https://media.licdn.com/dms/image/v2/C4D0BAQH44jdcui91xA/company-logo_200_200/company-logo_200_200/0/1657037642094/agrosmart_logo?e=2147483647&v=beta&t=uKD3P6woxuauHHnSu2Ir-xijngQMkZJHJZf6ULgxSWo', url: 'https://agrosmart.com.br/' },
       { name: 'LayerX', logo: 'https://media.licdn.com/dms/image/v2/D4D0BAQHZQ8yCJxxisQ/company-logo_200_200/company-logo_200_200/0/1734982286382/layerxsolucoes_logo?e=1759968000&v=beta&t=F756UStC-NSvBRmcEbT2vRK8QKv0xXKl8go0_ylSw8U', url: 'https://layerx.com.br' },
+      { name: 'CMCC Foundation', logo: 'https://media.licdn.com/dms/image/v2/C560BAQGVE_6icH6sTg/company-logo_200_200/company-logo_200_200/0/1673359113519/cmccfoundation_logo?e=1759968000&v=beta&t=U9JcKHUFyqqHOWhhzTy5emTpx1-_qoTEW7-zgfUuxu0', url: 'https://www.cmcc.it' },
       { name: 'Rede de Ensino e Pesquisa', logo: 'https://media.licdn.com/dms/image/v2/D4D0BAQFbfp7mW4TEkA/company-logo_200_200/company-logo_200_200/0/1662129972806/redernp_logo?e=2147483647&v=beta&t=s2uVsmm_0aq1DaFp_aTtl0sdOEsbRRoJZMJVZFazYyA', url: 'https://www.rnp.br' },
+      { name: 'Empreendedorismo Ambiental', logo: 'assets/sponsors/emprendendorismo.jpg', url: 'https://www.rnp.br' },
     ]
   };
 
