@@ -26,17 +26,17 @@ eventLocations: EventLocation[] = [
   {
     position: { lat: -18.917750, lng: -48.257514 },
     title: 'Universidade Federal de Uberlândia - UFU (Santa Mônica)',
-    info: 'Polo principal do NASA Space Apps Challenge Uberlândia. Capacidade para 300 pessoas + Vila Digital. Estrutura dedicada para trilhas, hackathon e apresentações finais.'
+    info: 'Polo principal do NASA Space Apps Challenge Uberlândia. Estrutura dedicada para trilhas, hackathon e apresentações finais.'
   },
   {
     position: { lat: -18.912912, lng: -48.273870 },
     title: 'Uniube - Centro',
-    info: 'Espaço de apoio com capacidade para 150 participantes presenciais. Destinado a equipes de desenvolvimento e networking.'
+    info: 'Espaço de apoio com espaço presenciais. Destinado a equipes de desenvolvimento e networking.'
   },
   {
     position: { lat: -18.910473, lng: -48.270074 },
     title: 'Sankhya - Afonso Pena',
-    info: 'Local preparado para receber 118 pessoas de fora da cidade, com operação full 48h. Estrutura de hospedagem + coworking temporário.'
+    info: 'Local preparado para receber pessoas.'
   },
   {
     position: { lat: -18.951666, lng: -48.232789 },
@@ -46,22 +46,22 @@ eventLocations: EventLocation[] = [
   {
     position: { lat: -18.929200, lng: -48.268100 },
     title: 'CREA / Secretaria da Juventude',
-    info: 'Ambiente com capacidade para 48 participantes. Gerido por Thaynan. Apoio a workshops e mentorias técnicas.'
+    info: 'Apoio a workshops e mentorias técnicas.'
   },
   {
     position: { lat: -18.924301, lng: -48.232747 },
     title: 'Asa Coworking',
-    info: 'Espaço colaborativo preparado para até 48 pessoas durante 48h. Voltado para imersão em projetos e networking entre equipes.'
+    info: 'Espaço colaborativo voltado para imersão em projetos e networking entre equipes.'
   },
   {
     position: { lat: -18.879712, lng: -48.246336 },
     title: 'Brain',
-    info: 'Espaço de apoio para 48 pessoas. Foco em criatividade, design e inovação aplicada aos desafios do hackathon.'
+    info: 'Espaço de apoio foco em criatividade, design e inovação aplicada aos desafios do hackathon.'
   },
   {
     position: { lat: -18.909529, lng: -48.248573 },
     title: 'MTI',
-    info: 'Polo de capacitação de mentores do NASA Space Apps Challenge Uberlândia. Estrutura para até 48 pessoas em atividades de preparação e apoio.'
+    info: 'Polo de capacitação de mentores do NASA Space Apps Challenge Uberlândia. Atividades de preparação e apoio.'
   },
   {
     position: { lat: -18.931272, lng: -48.290163 },
