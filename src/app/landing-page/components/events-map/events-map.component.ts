@@ -84,11 +84,11 @@ eventLocations: EventLocation[] = [
     info: 'Espaço reservado para alunos do Gabarito. Atividades de aprendizado e oficinas conectadas ao Space Apps.'
   },
 
-  // {
-  //   position: { lat: -18.932000, lng: -48.278500 },
-  //   title: 'UNA - Uberlândia',
-  //   info: 'Espaço reserva com capacidade para até 200 pessoas. Atividades de apoio e expansão da participação no hackathon.'
-  // },
+  {
+    position: { lat: -18.932000, lng: -48.278500 },
+    title: 'Olimpo',
+    info: 'Espaço reservado para alunos do Olimpo. Atividades de aprendizado e oficinas conectadas ao Space Apps'
+  },
   // {
   //   position: { lat: -18.935000, lng: -48.250000 },
   //   title: 'Gomes & Pires',
