@@ -4668,7 +4668,7 @@
                 "type": "TEAM",
                 "slug": "heart-of-gold",
                 "firstPublishedAt": "2025-09-24T16:28:36.121000Z",
-                "lastPublishedAt": "2025-09-24T16:36:03.214120Z",
+                "lastPublishedAt": "2025-09-24T16:42:10.878984Z",
                 "relativeUrl": "/2025/find-a-team/heart-of-gold/",
                 "live": true,
                 "parent": null,
@@ -4696,19 +4696,19 @@
               },
               "projectSubmitted": false,
               "featuredImage": {
-                "id": "aWQ6MzI5MTUy",
+                "id": "aWQ6MzI5MTgz",
                 "meta": {
                   "type": "images.CustomImage",
-                  "downloadUrl": "https://assets.spaceappschallenge.org/media/original_images/ChatGPT_Image_24_de_set._de_2025_13_32_38.png",
+                  "downloadUrl": "https://assets.spaceappschallenge.org/media/original_images/ChatGPT_Image_24_de_set._de_2025_13_41_50.png",
                   "__typename": "ImageMeta"
                 },
-                "title": "team_image.16:32:48.365099",
-                "alt": "team_image.16:32:48.365099",
-                "caption": "team_image.16:32:48.365099",
+                "title": "team_image.16:42:09.477854",
+                "alt": "team_image.16:42:09.477854",
+                "caption": "team_image.16:42:09.477854",
                 "displaySize": "og",
                 "rendition": {
-                  "url": "https://assets.spaceappschallenge.org/media/images/ChatGPT_Image_24_de_set._de_2025_1.2e16d0ba.fill-300x250_0Lf3aag.png",
-                  "fullUrl": "https://assets.spaceappschallenge.org/media/images/ChatGPT_Image_24_de_set._de_2025_1.2e16d0ba.fill-300x250_0Lf3aag.png",
+                  "url": "https://assets.spaceappschallenge.org/media/images/ChatGPT_Image_24_de_set._de_2025_1.2e16d0ba.fill-300x250_Slnztdp.png",
+                  "fullUrl": "https://assets.spaceappschallenge.org/media/images/ChatGPT_Image_24_de_set._de_2025_1.2e16d0ba.fill-300x250_Slnztdp.png",
                   "height": 250,
                   "width": 300,
                   "__typename": "BaseImage"
@@ -4717,13 +4717,13 @@
               },
               "description": null,
               "desiredSkills": [
+                "Astrophysics",
                 "Coding",
-                "Earth Science",
                 "Data Analysis",
                 "Data Visualization",
-                "Statistics",
-                "Astrophysics",
-                "Extrasolar Objects"
+                "Earth Science",
+                "Extrasolar Objects",
+                "Statistics"
               ],
               "languages": null,
               "challenge": "aWQ6MzEzMTI=",
