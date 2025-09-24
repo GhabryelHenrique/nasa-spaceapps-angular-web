@@ -74,7 +74,7 @@ eventLocations: EventLocation[] = [
     info: 'Espaço de apoio voltado para alunos do Batista. Atividades complementares ao evento principal.'
   },
   {
-    position: { lat: -18.950453, lng: -48.257845 },
+    position: { lat: -18.880390063328278, lng: -48.24725858916541 },
     title: 'Colégio Ann Mackenzie',
     info: 'Espaço de apoio voltado para alunos do Mackenzie. Atividades internas relacionadas ao hackathon.'
   },
@@ -89,11 +89,11 @@ eventLocations: EventLocation[] = [
     title: 'Olimpo',
     info: 'Espaço reservado para alunos do Olimpo. Atividades de aprendizado e oficinas conectadas ao Space Apps'
   },
-  // {
-  //   position: { lat: -18.935000, lng: -48.250000 },
-  //   title: 'Gomes & Pires',
-  //   info: 'Espaço reserva com capacidade para 48 pessoas. Suporte logístico e acadêmico em caso de demanda extra.'
-  // }
+  {
+    position: { lat: -18.932000, lng: -48.278500 },
+    title: 'UNA - Uberlândia',
+    info: 'Atividades de apoio e expansão da participação no hackathon.'
+  },
 ];
 
   mapOptions: any = {
