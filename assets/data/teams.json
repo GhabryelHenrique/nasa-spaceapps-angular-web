@@ -6,10 +6,10 @@
           "hasPreviousPage": false,
           "hasNextPage": false,
           "startCursor": "b2Zmc2V0OjA=",
-          "endCursor": "b2Zmc2V0Ojkw",
+          "endCursor": "b2Zmc2V0Ojkz",
           "__typename": "PageInfo"
         },
-        "totalCount": 91,
+        "totalCount": 94,
         "edges": [
           {
             "__typename": "TeamPageEdge",
@@ -80,7 +80,7 @@
                   "type": "CHALLENGE",
                   "slug": "from-earthdata-to-action-cloud-computing-with-earth-observation-data-for-predicting-cleaner-safer-skies",
                   "firstPublishedAt": "2025-08-18T19:28:39.929072Z",
-                  "lastPublishedAt": "2025-09-16T15:28:51.317403Z",
+                  "lastPublishedAt": "2025-09-25T21:00:47.141150Z",
                   "relativeUrl": "/2025/challenges/from-earthdata-to-action-cloud-computing-with-earth-observation-data-for-predicting-cleaner-safer-skies/",
                   "live": true,
                   "parent": null,
@@ -496,7 +496,7 @@
                   "type": "CHALLENGE",
                   "slug": "from-earthdata-to-action-cloud-computing-with-earth-observation-data-for-predicting-cleaner-safer-skies",
                   "firstPublishedAt": "2025-08-18T19:28:39.929072Z",
-                  "lastPublishedAt": "2025-09-16T15:28:51.317403Z",
+                  "lastPublishedAt": "2025-09-25T21:00:47.141150Z",
                   "relativeUrl": "/2025/challenges/from-earthdata-to-action-cloud-computing-with-earth-observation-data-for-predicting-cleaner-safer-skies/",
                   "live": true,
                   "parent": null,
@@ -789,7 +789,7 @@
                   "type": "CHALLENGE",
                   "slug": "from-earthdata-to-action-cloud-computing-with-earth-observation-data-for-predicting-cleaner-safer-skies",
                   "firstPublishedAt": "2025-08-18T19:28:39.929072Z",
-                  "lastPublishedAt": "2025-09-16T15:28:51.317403Z",
+                  "lastPublishedAt": "2025-09-25T21:00:47.141150Z",
                   "relativeUrl": "/2025/challenges/from-earthdata-to-action-cloud-computing-with-earth-observation-data-for-predicting-cleaner-safer-skies/",
                   "live": true,
                   "parent": null,
@@ -1538,6 +1538,91 @@
             "cursor": "b2Zmc2V0OjE1",
             "node": {
               "__typename": "TeamPage",
+              "id": "aWQ6NDE5NDA=",
+              "title": "Blue Astornauts",
+              "meta": {
+                "type": "TEAM",
+                "slug": "blue-astornauts",
+                "firstPublishedAt": null,
+                "lastPublishedAt": null,
+                "relativeUrl": "/2025/find-a-team/blue-astornauts/",
+                "live": true,
+                "parent": null,
+                "__typename": "ExpandedPageMeta"
+              },
+              "owner": "aWQ6NDMzMTc2",
+              "ownerDetails": null,
+              "excerpt": "I am Ezekiel, im 13yo and i am an astronomy lover. Im searching for highly inteligent and creative individuals",
+              "project": "aWQ6Mzk3NDg=",
+              "projectDetails": {
+                "id": "aWQ6Mzk3NDg=",
+                "name": "Project Blue Astornauts",
+                "summary": "",
+                "demoLink": "",
+                "projectLink": "",
+                "details": "",
+                "solution": "",
+                "aiReferences": "",
+                "dataReferences": "",
+                "projectReferences": "",
+                "isSubmitted": false,
+                "savedAt": null,
+                "submittedAt": null,
+                "__typename": "Project"
+              },
+              "projectSubmitted": false,
+              "featuredImage": null,
+              "description": null,
+              "desiredSkills": null,
+              "languages": null,
+              "challenge": "aWQ6MzEzMTI=",
+              "challengeDetails": {
+                "id": "aWQ6MzEzMTI=",
+                "title": "A World Away: Hunting for Exoplanets with AI",
+                "meta": {
+                  "type": "CHALLENGE",
+                  "slug": "a-world-away-hunting-for-exoplanets-with-ai",
+                  "firstPublishedAt": "2025-08-18T19:28:38.822862Z",
+                  "lastPublishedAt": "2025-09-16T14:38:20.228286Z",
+                  "relativeUrl": "/2025/challenges/a-world-away-hunting-for-exoplanets-with-ai/",
+                  "live": true,
+                  "parent": null,
+                  "__typename": "ExpandedPageMeta"
+                },
+                "excerpt": "Data from several different space-based exoplanet surveying missions have enabled discovery of thousands of new planets outside our solar system, but most of these exoplanets were identified manually. With advances in artificial intelligence and machine learning (AI/ML), it is possible to automatically analyze large sets of data collected by these missions to identify exoplanets. Your challenge is to create an AI/ML model that is trained on one or more of the open-source exoplanet datasets offered by NASA and that can analyze new data to accurately identify exoplanets. (Astrophysics Division)",
+                "__typename": "ChallengePage"
+              },
+              "location": "aWQ6MzA2NjM=",
+              "locationDetails": {
+                "id": "aWQ6MzA2NjM=",
+                "title": "Uberlandia",
+                "displayName": "Uberlândia",
+                "meta": {
+                  "type": "LOCATION",
+                  "slug": "uberlandia",
+                  "firstPublishedAt": "2025-07-18T21:43:56.560298Z",
+                  "lastPublishedAt": "2025-08-22T19:13:44.047613Z",
+                  "relativeUrl": "/2025/local-events/uberlandia/",
+                  "live": true,
+                  "parent": null,
+                  "__typename": "ExpandedPageMeta"
+                },
+                "country": "Brazil",
+                "__typename": "LocationPage"
+              },
+              "event": "aWQ6Mw==",
+              "eventDetails": null,
+              "joinEnabled": true,
+              "memberships": null,
+              "nominationBadges": null,
+              "awardBadges": null
+            }
+          },
+          {
+            "__typename": "TeamPageEdge",
+            "cursor": "b2Zmc2V0OjE2",
+            "node": {
+              "__typename": "TeamPage",
               "id": "aWQ6MzM1MjY=",
               "title": "Brazuca",
               "meta": {
@@ -1639,7 +1724,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjE2",
+            "cursor": "b2Zmc2V0OjE3",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6MzQxMzY=",
@@ -1743,7 +1828,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjE3",
+            "cursor": "b2Zmc2V0OjE4",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6MzMwNjQ=",
@@ -1858,7 +1943,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjE4",
+            "cursor": "b2Zmc2V0OjE5",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6MzI3MTY=",
@@ -1965,7 +2050,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjE5",
+            "cursor": "b2Zmc2V0OjIw",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6MzMyNDA=",
@@ -2069,7 +2154,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjIw",
+            "cursor": "b2Zmc2V0OjIx",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6MzM2ODQ=",
@@ -2173,7 +2258,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjIx",
+            "cursor": "b2Zmc2V0OjIy",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6MzQ3NTE=",
@@ -2277,7 +2362,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjIy",
+            "cursor": "b2Zmc2V0OjIz",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6MzQxMjM=",
@@ -2381,7 +2466,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjIz",
+            "cursor": "b2Zmc2V0OjI0",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6MzI0NTQ=",
@@ -2485,7 +2570,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjI0",
+            "cursor": "b2Zmc2V0OjI1",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6MzI0OTk=",
@@ -2589,7 +2674,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjI1",
+            "cursor": "b2Zmc2V0OjI2",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6MzQzNTc=",
@@ -2693,7 +2778,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjI2",
+            "cursor": "b2Zmc2V0OjI3",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6MzI2OTM=",
@@ -2807,7 +2892,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjI3",
+            "cursor": "b2Zmc2V0OjI4",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6MzQzNDg=",
@@ -2911,7 +2996,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjI4",
+            "cursor": "b2Zmc2V0OjI5",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6MzIwMjk=",
@@ -3015,7 +3100,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjI5",
+            "cursor": "b2Zmc2V0OjMw",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6Mzc1Njc=",
@@ -3082,7 +3167,7 @@
                   "type": "CHALLENGE",
                   "slug": "from-earthdata-to-action-cloud-computing-with-earth-observation-data-for-predicting-cleaner-safer-skies",
                   "firstPublishedAt": "2025-08-18T19:28:39.929072Z",
-                  "lastPublishedAt": "2025-09-16T15:28:51.317403Z",
+                  "lastPublishedAt": "2025-09-25T21:00:47.141150Z",
                   "relativeUrl": "/2025/challenges/from-earthdata-to-action-cloud-computing-with-earth-observation-data-for-predicting-cleaner-safer-skies/",
                   "live": true,
                   "parent": null,
@@ -3119,7 +3204,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjMw",
+            "cursor": "b2Zmc2V0OjMx",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6MzUxOTM=",
@@ -3223,7 +3308,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjMx",
+            "cursor": "b2Zmc2V0OjMy",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6MzU4ODk=",
@@ -3327,7 +3412,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjMy",
+            "cursor": "b2Zmc2V0OjMz",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6MzIwMjE=",
@@ -3431,7 +3516,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjMz",
+            "cursor": "b2Zmc2V0OjM0",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6NDAyNDg=",
@@ -3535,7 +3620,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjM0",
+            "cursor": "b2Zmc2V0OjM1",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6MzUyNTg=",
@@ -3642,7 +3727,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjM1",
+            "cursor": "b2Zmc2V0OjM2",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6MzMwMTk=",
@@ -3771,7 +3856,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjM2",
+            "cursor": "b2Zmc2V0OjM3",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6MzE2NzI=",
@@ -3875,7 +3960,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjM3",
+            "cursor": "b2Zmc2V0OjM4",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6MzI1ODQ=",
@@ -3979,7 +4064,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjM4",
+            "cursor": "b2Zmc2V0OjM5",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6MzU3Njk=",
@@ -4083,7 +4168,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjM5",
+            "cursor": "b2Zmc2V0OjQw",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6MzY0MDE=",
@@ -4168,7 +4253,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjQw",
+            "cursor": "b2Zmc2V0OjQx",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6MzY0MzU=",
@@ -4272,7 +4357,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjQx",
+            "cursor": "b2Zmc2V0OjQy",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6MzIwMzc=",
@@ -4376,7 +4461,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjQy",
+            "cursor": "b2Zmc2V0OjQz",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6MzMyOTM=",
@@ -4461,7 +4546,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjQz",
+            "cursor": "b2Zmc2V0OjQ0",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6MzgxMTc=",
@@ -4565,7 +4650,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjQ0",
+            "cursor": "b2Zmc2V0OjQ1",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6MzQ3MDI=",
@@ -4669,7 +4754,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjQ1",
+            "cursor": "b2Zmc2V0OjQ2",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6MzIyNjI=",
@@ -4736,7 +4821,7 @@
                   "type": "CHALLENGE",
                   "slug": "from-earthdata-to-action-cloud-computing-with-earth-observation-data-for-predicting-cleaner-safer-skies",
                   "firstPublishedAt": "2025-08-18T19:28:39.929072Z",
-                  "lastPublishedAt": "2025-09-16T15:28:51.317403Z",
+                  "lastPublishedAt": "2025-09-25T21:00:47.141150Z",
                   "relativeUrl": "/2025/challenges/from-earthdata-to-action-cloud-computing-with-earth-observation-data-for-predicting-cleaner-safer-skies/",
                   "live": true,
                   "parent": null,
@@ -4773,7 +4858,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjQ2",
+            "cursor": "b2Zmc2V0OjQ3",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6NDExOTA=",
@@ -4885,7 +4970,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjQ3",
+            "cursor": "b2Zmc2V0OjQ4",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6MzgwNzY=",
@@ -4970,7 +5055,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjQ4",
+            "cursor": "b2Zmc2V0OjQ5",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6NDA0NTY=",
@@ -5074,7 +5159,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjQ5",
+            "cursor": "b2Zmc2V0OjUw",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6MzE2ODA=",
@@ -5192,7 +5277,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjUw",
+            "cursor": "b2Zmc2V0OjUx",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6MzQ5MDk=",
@@ -5296,7 +5381,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjUx",
+            "cursor": "b2Zmc2V0OjUy",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6MzI4ODQ=",
@@ -5381,7 +5466,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjUy",
+            "cursor": "b2Zmc2V0OjUz",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6MzM4ODg=",
@@ -5466,7 +5551,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjUz",
+            "cursor": "b2Zmc2V0OjU0",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6MzYyMzQ=",
@@ -5581,7 +5666,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjU0",
+            "cursor": "b2Zmc2V0OjU1",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6MzMwNDQ=",
@@ -5666,7 +5751,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjU1",
+            "cursor": "b2Zmc2V0OjU2",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6MzE1MjA=",
@@ -5751,7 +5836,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjU2",
+            "cursor": "b2Zmc2V0OjU3",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6MzI2NDg=",
@@ -5855,7 +5940,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjU3",
+            "cursor": "b2Zmc2V0OjU4",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6MzYzMjQ=",
@@ -5940,7 +6025,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjU4",
+            "cursor": "b2Zmc2V0OjU5",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6NDEyMzE=",
@@ -6044,7 +6129,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjU5",
+            "cursor": "b2Zmc2V0OjYw",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6Mzg4ODg=",
@@ -6129,7 +6214,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjYw",
+            "cursor": "b2Zmc2V0OjYx",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6MzYwMTU=",
@@ -6233,7 +6318,111 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjYx",
+            "cursor": "b2Zmc2V0OjYy",
+            "node": {
+              "__typename": "TeamPage",
+              "id": "aWQ6NDE4NTc=",
+              "title": "Nimbus UNIUBE",
+              "meta": {
+                "type": "TEAM",
+                "slug": "nimbus-uniube",
+                "firstPublishedAt": "2025-09-25T17:37:33.496000Z",
+                "lastPublishedAt": "2025-09-25T18:13:56.944410Z",
+                "relativeUrl": "/2025/find-a-team/nimbus-uniube/",
+                "live": true,
+                "parent": null,
+                "__typename": "ExpandedPageMeta"
+              },
+              "owner": "aWQ6NDQwMjEw",
+              "ownerDetails": null,
+              "excerpt": "A team from the University of Uberaba (UNIUBE) seeking to leverage cloud computing to transform Earth observation data into actionable predictions for cleaner and safer skies.",
+              "project": "aWQ6Mzk2NjU=",
+              "projectDetails": {
+                "id": "aWQ6Mzk2NjU=",
+                "name": "Project Nimbus UNIUBE",
+                "summary": "",
+                "demoLink": "",
+                "projectLink": "",
+                "details": "",
+                "solution": "",
+                "aiReferences": "",
+                "dataReferences": "",
+                "projectReferences": "",
+                "isSubmitted": false,
+                "savedAt": null,
+                "submittedAt": null,
+                "__typename": "Project"
+              },
+              "projectSubmitted": false,
+              "featuredImage": {
+                "id": "aWQ6MzMyNjAz",
+                "meta": {
+                  "type": "images.CustomImage",
+                  "downloadUrl": "https://assets.spaceappschallenge.org/media/original_images/nimbuslogo_gj1Ntie.jpg",
+                  "__typename": "ImageMeta"
+                },
+                "title": "team_image.17:33:16.147351",
+                "alt": "team_image.17:33:16.147351",
+                "caption": "team_image.17:33:16.147351",
+                "displaySize": "og",
+                "rendition": {
+                  "url": "https://assets.spaceappschallenge.org/media/images/nimbuslogo_gj1Ntie.2e16d0ba.fill-300x250.jpg",
+                  "fullUrl": "https://assets.spaceappschallenge.org/media/images/nimbuslogo_gj1Ntie.2e16d0ba.fill-300x250.jpg",
+                  "height": 250,
+                  "width": 300,
+                  "__typename": "BaseImage"
+                },
+                "__typename": "DefaultImage"
+              },
+              "description": null,
+              "desiredSkills": null,
+              "languages": null,
+              "challenge": "aWQ6MzEzMjQ=",
+              "challengeDetails": {
+                "id": "aWQ6MzEzMjQ=",
+                "title": "From EarthData to Action: Cloud Computing with Earth Observation Data for Predicting Cleaner, Safer Skies",
+                "meta": {
+                  "type": "CHALLENGE",
+                  "slug": "from-earthdata-to-action-cloud-computing-with-earth-observation-data-for-predicting-cleaner-safer-skies",
+                  "firstPublishedAt": "2025-08-18T19:28:39.929072Z",
+                  "lastPublishedAt": "2025-09-25T21:00:47.141150Z",
+                  "relativeUrl": "/2025/challenges/from-earthdata-to-action-cloud-computing-with-earth-observation-data-for-predicting-cleaner-safer-skies/",
+                  "live": true,
+                  "parent": null,
+                  "__typename": "ExpandedPageMeta"
+                },
+                "excerpt": "NASA’s Tropospheric Emissions: Monitoring of Pollution (TEMPO) mission is revolutionizing air quality monitoring across North America by enabling better forecasts and reducing pollutant exposure. Your challenge is to develop a web-based app that forecasts air quality by integrating real-time TEMPO data with ground-based air quality measurements and weather data, notifying users of poor air quality, and helping to improve public health decisions. Teams are encouraged to utilize new technologies that allow seamless scaling of computing from local devices to cloud systems, enhancing collaboration and streamlining work efficiency. (Earth Science Division)",
+                "__typename": "ChallengePage"
+              },
+              "location": "aWQ6MzA2NjM=",
+              "locationDetails": {
+                "id": "aWQ6MzA2NjM=",
+                "title": "Uberlandia",
+                "displayName": "Uberlândia",
+                "meta": {
+                  "type": "LOCATION",
+                  "slug": "uberlandia",
+                  "firstPublishedAt": "2025-07-18T21:43:56.560298Z",
+                  "lastPublishedAt": "2025-08-22T19:13:44.047613Z",
+                  "relativeUrl": "/2025/local-events/uberlandia/",
+                  "live": true,
+                  "parent": null,
+                  "__typename": "ExpandedPageMeta"
+                },
+                "country": "Brazil",
+                "__typename": "LocationPage"
+              },
+              "event": "aWQ6Mw==",
+              "eventDetails": null,
+              "joinEnabled": false,
+              "memberships": null,
+              "nominationBadges": null,
+              "awardBadges": null
+            }
+          },
+          {
+            "__typename": "TeamPageEdge",
+            "cursor": "b2Zmc2V0OjYz",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6MzE1NzI=",
@@ -6281,7 +6470,7 @@
                   "type": "CHALLENGE",
                   "slug": "from-earthdata-to-action-cloud-computing-with-earth-observation-data-for-predicting-cleaner-safer-skies",
                   "firstPublishedAt": "2025-08-18T19:28:39.929072Z",
-                  "lastPublishedAt": "2025-09-16T15:28:51.317403Z",
+                  "lastPublishedAt": "2025-09-25T21:00:47.141150Z",
                   "relativeUrl": "/2025/challenges/from-earthdata-to-action-cloud-computing-with-earth-observation-data-for-predicting-cleaner-safer-skies/",
                   "live": true,
                   "parent": null,
@@ -6318,7 +6507,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjYy",
+            "cursor": "b2Zmc2V0OjY0",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6MzUyMjU=",
@@ -6403,7 +6592,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjYz",
+            "cursor": "b2Zmc2V0OjY1",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6NDAwMzA=",
@@ -6488,7 +6677,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjY0",
+            "cursor": "b2Zmc2V0OjY2",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6MzYxODA=",
@@ -6592,7 +6781,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjY1",
+            "cursor": "b2Zmc2V0OjY3",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6MzcxNTI=",
@@ -6677,7 +6866,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjY2",
+            "cursor": "b2Zmc2V0OjY4",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6MzM1MjA=",
@@ -6800,7 +6989,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjY3",
+            "cursor": "b2Zmc2V0OjY5",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6MzU5MzY=",
@@ -6904,7 +7093,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjY4",
+            "cursor": "b2Zmc2V0Ojcw",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6MzE1MDU=",
@@ -7011,7 +7200,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjY5",
+            "cursor": "b2Zmc2V0Ojcx",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6MzQ3Mzc=",
@@ -7115,7 +7304,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0Ojcw",
+            "cursor": "b2Zmc2V0Ojcy",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6MzU3NzA=",
@@ -7219,7 +7408,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0Ojcx",
+            "cursor": "b2Zmc2V0Ojcz",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6MzQ4NTU=",
@@ -7307,7 +7496,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0Ojcy",
+            "cursor": "b2Zmc2V0Ojc0",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6MzI3MjA=",
@@ -7411,7 +7600,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0Ojcz",
+            "cursor": "b2Zmc2V0Ojc1",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6MzM2Mzg=",
@@ -7496,7 +7685,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0Ojc0",
+            "cursor": "b2Zmc2V0Ojc2",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6MzM2MzM=",
@@ -7581,7 +7770,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0Ojc1",
+            "cursor": "b2Zmc2V0Ojc3",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6Mzg0ODQ=",
@@ -7666,7 +7855,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0Ojc2",
+            "cursor": "b2Zmc2V0Ojc4",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6NDA3MjI=",
@@ -7770,7 +7959,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0Ojc3",
+            "cursor": "b2Zmc2V0Ojc5",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6MzIwMTc=",
@@ -7855,7 +8044,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0Ojc4",
+            "cursor": "b2Zmc2V0Ojgw",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6MzI2MDc=",
@@ -7959,7 +8148,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0Ojc5",
+            "cursor": "b2Zmc2V0Ojgx",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6MzgyNzg=",
@@ -8044,7 +8233,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0Ojgw",
+            "cursor": "b2Zmc2V0Ojgy",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6MzkwMzM=",
@@ -8148,7 +8337,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0Ojgx",
+            "cursor": "b2Zmc2V0Ojgz",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6MzI2MzE=",
@@ -8263,7 +8452,111 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0Ojgy",
+            "cursor": "b2Zmc2V0Ojg0",
+            "node": {
+              "__typename": "TeamPage",
+              "id": "aWQ6NDE4NTY=",
+              "title": "The Last of Bugs",
+              "meta": {
+                "type": "TEAM",
+                "slug": "the-last-of-bugs",
+                "firstPublishedAt": "2025-09-25T17:30:48.331000Z",
+                "lastPublishedAt": "2025-09-25T21:52:36.255898Z",
+                "relativeUrl": "/2025/find-a-team/the-last-of-bugs/",
+                "live": true,
+                "parent": null,
+                "__typename": "ExpandedPageMeta"
+              },
+              "owner": "aWQ6NDIyNzI2",
+              "ownerDetails": null,
+              "excerpt": "We are the last of bugs",
+              "project": "aWQ6Mzk2NjQ=",
+              "projectDetails": {
+                "id": "aWQ6Mzk2NjQ=",
+                "name": "Project The Last of Bugs",
+                "summary": "",
+                "demoLink": "",
+                "projectLink": "",
+                "details": "",
+                "solution": "",
+                "aiReferences": "",
+                "dataReferences": "",
+                "projectReferences": "",
+                "isSubmitted": false,
+                "savedAt": null,
+                "submittedAt": null,
+                "__typename": "Project"
+              },
+              "projectSubmitted": false,
+              "featuredImage": {
+                "id": "aWQ6MzMyNzYz",
+                "meta": {
+                  "type": "images.CustomImage",
+                  "downloadUrl": "https://assets.spaceappschallenge.org/media/original_images/last_xdZcZRQ.jpg",
+                  "__typename": "ImageMeta"
+                },
+                "title": "team_image.18:26:26.356393",
+                "alt": "team_image.18:26:26.356393",
+                "caption": "team_image.18:26:26.356393",
+                "displaySize": "og",
+                "rendition": {
+                  "url": "https://assets.spaceappschallenge.org/media/images/last_xdZcZRQ.2e16d0ba.fill-300x250.jpg",
+                  "fullUrl": "https://assets.spaceappschallenge.org/media/images/last_xdZcZRQ.2e16d0ba.fill-300x250.jpg",
+                  "height": 250,
+                  "width": 300,
+                  "__typename": "BaseImage"
+                },
+                "__typename": "DefaultImage"
+              },
+              "description": null,
+              "desiredSkills": null,
+              "languages": null,
+              "challenge": "aWQ6MzEzMjQ=",
+              "challengeDetails": {
+                "id": "aWQ6MzEzMjQ=",
+                "title": "From EarthData to Action: Cloud Computing with Earth Observation Data for Predicting Cleaner, Safer Skies",
+                "meta": {
+                  "type": "CHALLENGE",
+                  "slug": "from-earthdata-to-action-cloud-computing-with-earth-observation-data-for-predicting-cleaner-safer-skies",
+                  "firstPublishedAt": "2025-08-18T19:28:39.929072Z",
+                  "lastPublishedAt": "2025-09-25T21:00:47.141150Z",
+                  "relativeUrl": "/2025/challenges/from-earthdata-to-action-cloud-computing-with-earth-observation-data-for-predicting-cleaner-safer-skies/",
+                  "live": true,
+                  "parent": null,
+                  "__typename": "ExpandedPageMeta"
+                },
+                "excerpt": "NASA’s Tropospheric Emissions: Monitoring of Pollution (TEMPO) mission is revolutionizing air quality monitoring across North America by enabling better forecasts and reducing pollutant exposure. Your challenge is to develop a web-based app that forecasts air quality by integrating real-time TEMPO data with ground-based air quality measurements and weather data, notifying users of poor air quality, and helping to improve public health decisions. Teams are encouraged to utilize new technologies that allow seamless scaling of computing from local devices to cloud systems, enhancing collaboration and streamlining work efficiency. (Earth Science Division)",
+                "__typename": "ChallengePage"
+              },
+              "location": "aWQ6MzA2NjM=",
+              "locationDetails": {
+                "id": "aWQ6MzA2NjM=",
+                "title": "Uberlandia",
+                "displayName": "Uberlândia",
+                "meta": {
+                  "type": "LOCATION",
+                  "slug": "uberlandia",
+                  "firstPublishedAt": "2025-07-18T21:43:56.560298Z",
+                  "lastPublishedAt": "2025-08-22T19:13:44.047613Z",
+                  "relativeUrl": "/2025/local-events/uberlandia/",
+                  "live": true,
+                  "parent": null,
+                  "__typename": "ExpandedPageMeta"
+                },
+                "country": "Brazil",
+                "__typename": "LocationPage"
+              },
+              "event": "aWQ6Mw==",
+              "eventDetails": null,
+              "joinEnabled": true,
+              "memberships": null,
+              "nominationBadges": null,
+              "awardBadges": null
+            }
+          },
+          {
+            "__typename": "TeamPageEdge",
+            "cursor": "b2Zmc2V0Ojg1",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6NDE1OTQ=",
@@ -8367,7 +8660,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0Ojgz",
+            "cursor": "b2Zmc2V0Ojg2",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6MzQ1MTc=",
@@ -8486,7 +8779,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0Ojg0",
+            "cursor": "b2Zmc2V0Ojg3",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6MzM0OTg=",
@@ -8590,7 +8883,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0Ojg1",
+            "cursor": "b2Zmc2V0Ojg4",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6MzMwNjA=",
@@ -8694,7 +8987,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0Ojg2",
+            "cursor": "b2Zmc2V0Ojg5",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6MzM4MTM=",
@@ -8798,7 +9091,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0Ojg3",
+            "cursor": "b2Zmc2V0Ojkw",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6MzkwNDE=",
@@ -8902,7 +9195,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0Ojg4",
+            "cursor": "b2Zmc2V0Ojkx",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6NDA2ODg=",
@@ -8969,7 +9262,7 @@
                   "type": "CHALLENGE",
                   "slug": "from-earthdata-to-action-cloud-computing-with-earth-observation-data-for-predicting-cleaner-safer-skies",
                   "firstPublishedAt": "2025-08-18T19:28:39.929072Z",
-                  "lastPublishedAt": "2025-09-16T15:28:51.317403Z",
+                  "lastPublishedAt": "2025-09-25T21:00:47.141150Z",
                   "relativeUrl": "/2025/challenges/from-earthdata-to-action-cloud-computing-with-earth-observation-data-for-predicting-cleaner-safer-skies/",
                   "live": true,
                   "parent": null,
@@ -9006,7 +9299,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0Ojg5",
+            "cursor": "b2Zmc2V0Ojky",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6MzQyNTk=",
@@ -9128,7 +9421,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0Ojkw",
+            "cursor": "b2Zmc2V0Ojkz",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6MzMyNDM=",
