@@ -82,7 +82,7 @@ export class LandingPageComponent implements OnInit, OnDestroy {
       name: 'Mariana Milena',
       role: 'Divulgação Científica',
       description: 'Divulgadora aeroespacial, palestrantes, mentores e principal rosto do evento.',
-      photo: 'assets/organizers/mari.jpg',
+      photo: 'assets/organizers/mari.jpeg',
       url: 'https://www.instagram.com/marimilenastudies'
     },
     {
@@ -125,7 +125,7 @@ export class LandingPageComponent implements OnInit, OnDestroy {
       name: 'Cris Izawa',
       role: 'Parceria MTI & Organização',
       description: 'Responsável pela parceria com o MTI e organização macro do evento.',
-      photo: 'cris-izawa.jpg',
+      photo: 'assets/organizers/cris.png',
       url: 'https://www.instagram.com/mti.oficial'
     },
     {
