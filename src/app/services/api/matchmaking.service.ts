@@ -34,6 +34,10 @@ export class MatchmakingAuthService {
     return this.http.delete(`${this.apiUrl}/matchmaking/profile/${encodeURIComponent(email)}`);
   }
 
+  sendMatchNotification(senderEmail: string, recipientEmail: string): Observable<any> {
+    return this.http.post(`${this.apiUrl}/matchmaking/send-notification`, { senderEmail, recipientEmail });
+  }
+
   getAllProfiles(skills?: string[]): Observable<any> {
     const params: Record<string, string> = {};
     if (skills && skills.length > 0) {
@@ -105,7 +109,7 @@ export class MatchmakingAuthService {
     if (includeTeams) {
       params = params.set('includeTeams', includeTeams.toString());
     }
-    
+
     return this.http.get<BestMatchesResponse>(`${this.apiUrl}/matchmaking/best-matches/${encodeURIComponent(email)}`, { params });
   }
 }

@@ -42,7 +42,7 @@
 
       <!-- Content -->
       <div *ngIf="!isLoading && !error && bestMatches" class="matches-content">
-        
+
         <!-- Summary Stats -->
         <div class="summary-stats">
           <div class="stats-grid">
@@ -79,30 +79,30 @@
         <!-- Tabs -->
         <div class="tabs-container">
           <div class="tabs">
-            <button 
-              class="tab-button" 
+            <button
+              class="tab-button"
               [class.active]="selectedTab === 'individual'"
               (click)="selectTab('individual')">
               <i class="fas fa-user"></i>
               Matches Individuais ({{ bestMatches.individualMatches.count }})
             </button>
-            <button 
-              class="tab-button" 
+            <!-- <button
+              class="tab-button"
               [class.active]="selectedTab === 'team'"
               (click)="selectTab('team')"
               *ngIf="bestMatches.teamMatches">
               <i class="fas fa-users"></i>
               Times Sugeridos ({{ bestMatches.teamMatches.count }})
-            </button>
+            </button> -->
           </div>
         </div>
 
         <!-- Individual Matches -->
         <div *ngIf="selectedTab === 'individual'" class="matches-grid">
-          <div 
-            *ngFor="let match of bestMatches.individualMatches.matches; trackBy: trackByEmail" 
+          <div
+            *ngFor="let match of bestMatches.individualMatches.matches; trackBy: trackByEmail"
             class="match-card">
-            
+
             <!-- Match Header -->
             <div class="match-header">
               <div class="match-score">
@@ -124,13 +124,13 @@
             <div class="match-section">
               <h4><i class="fas fa-code"></i> Habilidades</h4>
               <div class="skills-tags">
-                <span 
-                  *ngFor="let skill of match.participant.skills.slice(0, 6)" 
+                <span
+                  *ngFor="let skill of match.participant.skills.slice(0, 6)"
                   class="skill-tag">
                   {{ skill }}
                 </span>
-                <span 
-                  *ngIf="match.participant.skills.length > 6" 
+                <span
+                  *ngIf="match.participant.skills.length > 6"
                   class="skill-tag more">
                   +{{ match.participant.skills.length - 6 }} mais
                 </span>
@@ -154,7 +154,7 @@
                 <div class="compatibility-item">
                   <label>Habilidades</label>
                   <div class="progress-bar">
-                    <div class="progress-fill" 
+                    <div class="progress-fill"
                          [style.width.%]="getScorePercentage(match.matchScore.skillsCompatibility)"
                          [style.background-color]="getScoreColor(match.matchScore.skillsCompatibility)">
                     </div>
@@ -164,7 +164,7 @@
                 <div class="compatibility-item">
                   <label>Experiência</label>
                   <div class="progress-bar">
-                    <div class="progress-fill" 
+                    <div class="progress-fill"
                          [style.width.%]="getScorePercentage(match.matchScore.experienceBalance)"
                          [style.background-color]="getScoreColor(match.matchScore.experienceBalance)">
                     </div>
@@ -174,7 +174,7 @@
                 <div class="compatibility-item">
                   <label>Preferências</label>
                   <div class="progress-bar">
-                    <div class="progress-fill" 
+                    <div class="progress-fill"
                          [style.width.%]="getScorePercentage(match.matchScore.preferencesAlignment)"
                          [style.background-color]="getScoreColor(match.matchScore.preferencesAlignment)">
                     </div>
@@ -184,7 +184,7 @@
                 <div class="compatibility-item">
                   <label>Comunicação</label>
                   <div class="progress-bar">
-                    <div class="progress-fill" 
+                    <div class="progress-fill"
                          [style.width.%]="getScorePercentage(match.matchScore.communicationFit)"
                          [style.background-color]="getScoreColor(match.matchScore.communicationFit)">
                     </div>
@@ -212,10 +212,10 @@
 
             <!-- Actions -->
             <div class="match-actions">
-              <button class="btn btn-primary" (click)="goToProfile(match.participant.email)">
+              <!-- <button class="btn btn-primary" (click)="goToProfile(match.participant.email)">
                 <i class="fas fa-user"></i>
                 Ver Perfil
-              </button>
+              </button> -->
               <button class="btn btn-secondary" (click)="sendMessage(match.participant.email)">
                 <i class="fas fa-envelope"></i>
                 Mensagem
@@ -226,10 +226,10 @@
 
         <!-- Team Matches -->
         <div *ngIf="selectedTab === 'team' && bestMatches.teamMatches" class="teams-grid">
-          <div 
-            *ngFor="let team of bestMatches.teamMatches.matches; trackBy: trackByTeamId" 
+          <div
+            *ngFor="let team of bestMatches.teamMatches.matches; trackBy: trackByTeamId"
             class="team-card">
-            
+
             <!-- Team Header -->
             <div class="team-header">
               <div class="team-score">
@@ -264,7 +264,7 @@
                 <div class="compatibility-item">
                   <label>Habilidades</label>
                   <div class="progress-bar">
-                    <div class="progress-fill" 
+                    <div class="progress-fill"
                          [style.width.%]="getScorePercentage(team.matchScore.skillsCompatibility)"
                          [style.background-color]="getScoreColor(team.matchScore.skillsCompatibility)">
                     </div>
@@ -274,7 +274,7 @@
                 <div class="compatibility-item">
                   <label>Experiência</label>
                   <div class="progress-bar">
-                    <div class="progress-fill" 
+                    <div class="progress-fill"
                          [style.width.%]="getScorePercentage(team.matchScore.experienceBalance)"
                          [style.background-color]="getScoreColor(team.matchScore.experienceBalance)">
                     </div>
@@ -284,7 +284,7 @@
                 <div class="compatibility-item">
                   <label>Comunicação</label>
                   <div class="progress-bar">
-                    <div class="progress-fill" 
+                    <div class="progress-fill"
                          [style.width.%]="getScorePercentage(team.matchScore.communicationFit)"
                          [style.background-color]="getScoreColor(team.matchScore.communicationFit)">
                     </div>

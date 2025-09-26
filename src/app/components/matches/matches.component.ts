@@ -5,6 +5,7 @@ import { BestMatchesResponse, IndividualMatch, TeamMatchResult } from '../../mod
 import { AuthService } from '../../services/api/auth.service';
 import { MatchmakingAuthService } from '../../services/api/matchmaking.service';
 import { UserRegistration } from '../../models/auth.models';
+import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-matches',
@@ -101,8 +102,27 @@ export class MatchesComponent implements OnInit {
   }
 
   sendMessage(email: string): void {
-    // TODO: Implementar sistema de mensagens
-    console.log('Send message to:', email);
+    if (!this.currentUser?.email) return;
+    const sender = this.currentUser.email;
+    this.matchmakingService.sendMatchNotification(sender, email).subscribe({
+      next: () => {
+        Swal.fire({
+          title: 'Sucesso!',
+          text: 'Mensagem enviada com sucesso!',
+          icon: 'success',
+          confirmButtonText: 'Ok'
+        });
+      },
+      error: (err) => {
+        console.error('Error sending message to:', email, err);
+        Swal.fire({
+          title: 'Erro!',
+          text: 'Erro ao enviar mensagem. Tente novamente.',
+          icon: 'error',
+          confirmButtonText: 'Ok'
+        });
+      }
+    });
   }
 
   viewTeamDetails(teamId: string): void {

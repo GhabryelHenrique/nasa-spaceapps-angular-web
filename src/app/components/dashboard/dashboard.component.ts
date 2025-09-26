@@ -120,27 +120,27 @@ import { MatchmakingAuthService } from '../../services/api/matchmaking.service';
               </div>
 
               <div class="col-md-4">
-                <div class="action-card disabled">
+                <div class="action-card" (click)="navigateToMatches()">
                   <div class="action-icon bg-secondary">
                     <i class="fas fa-handshake"></i>
                   </div>
                   <h4>Ver Matches</h4>
-                  <p>Funcionalidade temporariamente desabilitada</p>
+                  <p>Verificar seus matches</p>
                   <div class="action-footer">
-                    <span class="badge badge-secondary">Em Breve</span>
+                    <span class="badge badge-secondary">Verificar</span>
                   </div>
                 </div>
               </div>
 
               <div class="col-md-4">
-                <div class="action-card disabled">
+                <div class="action-card" (click)="findMatches()" [class.disabled]="isSearching || !hasProfile">
                   <div class="action-icon bg-secondary">
                     <i class="fas fa-search"></i>
                   </div>
                   <h4>Buscar Matches</h4>
-                  <p>Funcionalidade temporariamente desabilitada</p>
+                  <p>Buscar novos matches</p>
                   <div class="action-footer">
-                    <span class="badge badge-secondary">Indisponível</span>
+                    <span class="badge badge-secondary">Buscar</span>
                   </div>
                 </div>
               </div>
