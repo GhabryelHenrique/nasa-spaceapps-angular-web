@@ -35,7 +35,7 @@ export class MatchmakingAuthService {
   }
 
   sendMatchNotification(senderEmail: string, recipientEmail: string): Observable<any> {
-    return this.http.post(`${this.apiUrl}/matchmaking/send-notification`, { senderEmail, recipientEmail });
+    return this.http.post(`${this.apiUrl}/matchmaking/send-match-notification`, { senderEmail, recipientEmail });
   }
 
   getAllProfiles(skills?: string[]): Observable<any> {
