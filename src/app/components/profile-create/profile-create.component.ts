@@ -56,6 +56,7 @@ export class ProfileCreateComponent implements OnInit {
   ) {
     this.profileForm = this.fb.group({
       fullName: ['', [Validators.required]],
+      phoneNumber: ['', [Validators.required]],
       education: ['', [Validators.required]],
       expertiseLevel: ['', [Validators.required]],
       bio: [''],
@@ -107,6 +108,7 @@ export class ProfileCreateComponent implements OnInit {
   populateForm(profile: ParticipantProfile): void {
     this.profileForm.patchValue({
       fullName: profile.fullName,
+      phoneNumber: profile.phoneNumber,
       education: profile.education,
       expertiseLevel: profile.expertiseLevel,
       bio: profile.bio,
@@ -213,6 +215,7 @@ export class ProfileCreateComponent implements OnInit {
     const profileData: ParticipantProfile = {
       email: this.currentUser.email,
       fullName: this.profileForm.get('fullName')?.value,
+      phoneNumber: this.profileForm.get('phoneNumber')?.value,
       skills: this.skills,
       expertiseLevel: this.profileForm.get('expertiseLevel')?.value,
       workExperience: this.workExperienceArray.value,

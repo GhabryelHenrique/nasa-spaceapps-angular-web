@@ -51,6 +51,19 @@
                 </div>
 
                 <div class="form-group">
+                  <label for="phoneNumber">Telefone *</label>
+                  <input
+                    type="tel"
+                    id="phoneNumber"
+                    formControlName="phoneNumber"
+                    placeholder="(00) 00000-0000"
+                    [class.error]="profileForm.get('phoneNumber')?.invalid && profileForm.get('phoneNumber')?.touched">
+                  <div class="error-message" *ngIf="profileForm.get('phoneNumber')?.invalid && profileForm.get('phoneNumber')?.touched">
+                    Telefone é obrigatório
+                  </div>
+                </div>
+
+                <div class="form-group">
                   <label for="education">Formação Acadêmica *</label>
                   <input
                     type="text"

@@ -34,6 +34,7 @@ export interface Preferences {
 export interface ParticipantProfile {
   email: string;
   fullName: string;
+  phoneNumber: string;
   skills: string[];
   expertiseLevel: 'beginner' | 'intermediate' | 'advanced' | 'expert';
   workExperience: WorkExperience[];
