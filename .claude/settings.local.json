@@ -18,7 +18,8 @@
       "Bash(npm uninstall:*)",
       "Bash(curl:*)",
       "Bash(ng add:*)",
-      "Bash(ng extract-i18n:*)"
+      "Bash(ng extract-i18n:*)",
+      "Bash(npm test)"
     ],
     "deny": [],
     "defaultMode": "acceptEdits"

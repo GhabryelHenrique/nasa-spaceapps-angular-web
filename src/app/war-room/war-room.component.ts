@@ -5,6 +5,7 @@ import { CityParticipation } from '../shared/interfaces/local-event.interface';
 import { RegistrationChartsComponent } from './components/registration-charts/registration-charts.component';
 import { RegistrationMapComponent } from './components/registration-map/registration-map.component';
 import { ChallengeChartComponent } from './components/challenge-chart/challenge-chart.component';
+import { ParticipantsByCountryChartComponent } from './components/participants-by-country-chart/participants-by-country-chart.component';
 import { RegistrationDataService, RegistrationStats } from '../services/registration-data.service';
 import { GoogleSheetsService, RegistrationRow } from '../services/google-sheets.service';
 import { NasaTeamsService, TeamData, LocalEventData } from '../services/nasa-teams.service';
@@ -15,7 +16,7 @@ import { takeUntil } from 'rxjs/operators';
 
 @Component({
   selector: 'app-war-room',
-  imports: [CommonModule, RegistrationChartsComponent, RegistrationMapComponent, ChallengeChartComponent],
+  imports: [CommonModule, RegistrationChartsComponent, RegistrationMapComponent, ChallengeChartComponent, ParticipantsByCountryChartComponent],
   templateUrl: './war-room.component.html',
   styleUrl: './war-room.component.scss'
 })

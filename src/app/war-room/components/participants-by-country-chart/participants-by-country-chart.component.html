@@ -1,0 +1,38 @@
+<div class="country-table-container">
+  <!-- Header -->
+  <div class="table-header">
+    <h3>Top 5 Países por Participantes</h3>
+  </div>
+
+  <!-- Countries table -->
+  <div class="countries-table" *ngIf="getTopCountries().length > 0">
+    <table>
+      <thead>
+        <tr>
+          <th>Posição</th>
+          <th>País</th>
+          <th>Participantes</th>
+          <th>Percentual</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let country of getTopCountries(); let i = index; trackBy: trackByCountry">
+          <td class="position">{{ i + 1 }}º</td>
+          <td class="country-info">
+            <span class="country-flag">{{ country.flag }}</span>
+            <span class="country-name">{{ country.country }}</span>
+          </td>
+          <td class="count">{{ country.count }}</td>
+          <td class="percentage">{{ ((country.count / getTotalParticipants()) * 100).toFixed(1) }}%</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- No data message -->
+  <div class="no-data-message" *ngIf="countryStats.length === 0">
+    <i class="fas fa-globe-americas"></i>
+    <h4>Nenhum dado disponível</h4>
+    <p>Aguardando dados de participantes por país...</p>
+  </div>
+</div>
