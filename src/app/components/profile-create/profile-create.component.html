@@ -46,7 +46,7 @@
                     placeholder="Seu nome completo"
                     [class.error]="profileForm.get('fullName')?.invalid && profileForm.get('fullName')?.touched">
                   <div class="error-message" *ngIf="profileForm.get('fullName')?.invalid && profileForm.get('fullName')?.touched">
-                    Nome completo é obrigatório
+                    Nome completo é obrigatório (mínimo 2 caracteres)
                   </div>
                 </div>
 
@@ -59,7 +59,8 @@
                     placeholder="(00) 00000-0000"
                     [class.error]="profileForm.get('phoneNumber')?.invalid && profileForm.get('phoneNumber')?.touched">
                   <div class="error-message" *ngIf="profileForm.get('phoneNumber')?.invalid && profileForm.get('phoneNumber')?.touched">
-                    Telefone é obrigatório
+                    <span *ngIf="profileForm.get('phoneNumber')?.errors?.['required']">Telefone é obrigatório</span>
+                    <span *ngIf="profileForm.get('phoneNumber')?.errors?.['pattern']">Formato de telefone inválido</span>
                   </div>
                 </div>
 
@@ -72,7 +73,7 @@
                     placeholder="Ex: Engenharia de Software, Universidade Federal"
                     [class.error]="profileForm.get('education')?.invalid && profileForm.get('education')?.touched">
                   <div class="error-message" *ngIf="profileForm.get('education')?.invalid && profileForm.get('education')?.touched">
-                    Formação é obrigatória
+                    Formação acadêmica é obrigatória
                   </div>
                 </div>
 
@@ -89,7 +90,23 @@
                     <option value="expert">Especialista</option>
                   </select>
                   <div class="error-message" *ngIf="profileForm.get('expertiseLevel')?.invalid && profileForm.get('expertiseLevel')?.touched">
-                    Selecione seu nível de experiência
+                    Nível de experiência é obrigatório
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <label for="age">Idade *</label>
+                  <input
+                    type="number"
+                    id="age"
+                    formControlName="age"
+                    placeholder="Sua idade"
+                    min="16"
+                    max="100"
+                    [class.error]="profileForm.get('age')?.invalid && profileForm.get('age')?.touched">
+                  <div class="error-message" *ngIf="profileForm.get('age')?.invalid && profileForm.get('age')?.touched">
+                    <span *ngIf="profileForm.get('age')?.errors?.['required']">Idade é obrigatória</span>
+                    <span *ngIf="profileForm.get('age')?.errors?.['min'] || profileForm.get('age')?.errors?.['max']">Idade deve estar entre 16 e 100 anos</span>
                   </div>
                 </div>
               </div>
@@ -134,13 +151,13 @@
                     </button>
                   </span>
                 </div>
-                <div class="error-message" *ngIf="skills.length === 0 && profileForm.touched">
-                  Adicione pelo menos uma habilidade
+                <div class="error-message" *ngIf="skills.length === 0">
+                  Pelo menos uma habilidade é obrigatória
                 </div>
               </div>
 
               <div class="form-group">
-                <label>Idiomas *</label>
+                <label>Idiomas</label>
                 <div class="skills-input">
                   <input
                     type="text"
@@ -161,9 +178,6 @@
                       <i class="fas fa-times"></i>
                     </button>
                   </span>
-                </div>
-                <div class="error-message" *ngIf="languages.length === 0 && profileForm.touched">
-                  Adicione pelo menos um idioma
                 </div>
               </div>
             </div>
@@ -235,7 +249,7 @@
               </h2>
 
               <div class="form-group">
-                <label>Desafios de Interesse *</label>
+                <label>Desafios de Interesse</label>
                 <div class="checkbox-group">
                   <div class="checkbox-item" *ngFor="let challenge of availableChallenges">
                     <input
@@ -250,13 +264,10 @@
                     </label>
                   </div>
                 </div>
-                <div class="error-message" *ngIf="selectedChallenges.length === 0 && profileForm.touched">
-                  Selecione pelo menos um desafio de interesse
-                </div>
               </div>
 
               <div class="form-group">
-                <label>Áreas de Atuação de Interesse *</label>
+                <label>Áreas de Atuação de Interesse</label>
                 <div class="checkbox-group">
                   <div class="checkbox-item" *ngFor="let area of interestAreas">
                     <input
@@ -267,9 +278,6 @@
                       [checked]="selectedInterestAreas.includes(area.value)">
                     <label [for]="'area-' + area.value">{{ area.label }}</label>
                   </div>
-                </div>
-                <div class="error-message" *ngIf="selectedInterestAreas.length === 0 && profileForm.touched">
-                  Selecione pelo menos uma área de interesse
                 </div>
               </div>
 
@@ -285,7 +293,7 @@
 
               <div class="form-grid">
                 <div class="form-group">
-                  <label for="gender">Gênero *</label>
+                  <label for="gender">Gênero</label>
                   <select id="gender" formControlName="gender">
                     <option value="">Selecione</option>
                     <option value="masculine">Masculino</option>
@@ -321,35 +329,44 @@
               <div formGroupName="preferences" class="form-grid">
                 <div class="form-group">
                   <label for="teamSize">Tamanho de Equipe Preferido *</label>
-                  <select id="teamSize" formControlName="teamSize">
+                  <select id="teamSize" formControlName="teamSize" [class.error]="profileForm.get('preferences.teamSize')?.invalid && profileForm.get('preferences.teamSize')?.touched">
                     <option value="">Selecione</option>
                     <option value="small">Pequena (2-3 pessoas)</option>
                     <option value="medium">Média (4-5 pessoas)</option>
                     <option value="large">Grande (6+ pessoas)</option>
                     <option value="any">Qualquer tamanho</option>
                   </select>
+                  <div class="error-message" *ngIf="profileForm.get('preferences.teamSize')?.invalid && profileForm.get('preferences.teamSize')?.touched">
+                    Tamanho de equipe preferido é obrigatório
+                  </div>
                 </div>
 
                 <div class="form-group">
                   <label for="communicationStyle">Estilo de Comunicação *</label>
-                  <select id="communicationStyle" formControlName="communicationStyle">
+                  <select id="communicationStyle" formControlName="communicationStyle" [class.error]="profileForm.get('preferences.communicationStyle')?.invalid && profileForm.get('preferences.communicationStyle')?.touched">
                     <option value="">Selecione</option>
                     <option value="direct">Direto</option>
                     <option value="collaborative">Colaborativo</option>
                     <option value="supportive">Apoiador</option>
                     <option value="analytical">Analítico</option>
                   </select>
+                  <div class="error-message" *ngIf="profileForm.get('preferences.communicationStyle')?.invalid && profileForm.get('preferences.communicationStyle')?.touched">
+                    Estilo de comunicação é obrigatório
+                  </div>
                 </div>
 
                 <div class="form-group">
                   <label for="workStyle">Estilo de Trabalho *</label>
-                  <select id="workStyle" formControlName="workStyle">
+                  <select id="workStyle" formControlName="workStyle" [class.error]="profileForm.get('preferences.workStyle')?.invalid && profileForm.get('preferences.workStyle')?.touched">
                     <option value="">Selecione</option>
                     <option value="leader">Líder</option>
                     <option value="contributor">Contribuidor</option>
                     <option value="specialist">Especialista</option>
                     <option value="facilitator">Facilitador</option>
                   </select>
+                  <div class="error-message" *ngIf="profileForm.get('preferences.workStyle')?.invalid && profileForm.get('preferences.workStyle')?.touched">
+                    Estilo de trabalho é obrigatório
+                  </div>
                 </div>
               </div>
             </div>

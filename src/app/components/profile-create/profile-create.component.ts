@@ -2,6 +2,7 @@ import { CommonModule } from '@angular/common';
 import { ChangeDetectorRef, Component, OnInit } from '@angular/core';
 import { FormArray, FormBuilder, FormGroup, FormsModule, ReactiveFormsModule, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
+import Swal from 'sweetalert2';
 import { UserRegistration } from '../../models/auth.models';
 import { ParticipantProfile, WorkExperience } from '../../models/matchmaking.models';
 import { AuthService } from '../../services/api/auth.service';
@@ -55,14 +56,15 @@ export class ProfileCreateComponent implements OnInit {
     private cdr: ChangeDetectorRef
   ) {
     this.profileForm = this.fb.group({
-      fullName: ['', [Validators.required]],
-      phoneNumber: ['', [Validators.required]],
+      fullName: ['', [Validators.required, Validators.minLength(2)]],
+      phoneNumber: ['', [Validators.required, Validators.pattern(/^[\d\s\+\-\(\)]+$/)]],
       education: ['', [Validators.required]],
       expertiseLevel: ['', [Validators.required]],
       bio: [''],
       workExperience: this.fb.array([]),
-      gender: ['', [Validators.required]],
+      gender: [''],
       preferFemaleTeam: [false],
+      age: ['', [Validators.required, Validators.min(16), Validators.max(100)]],
       preferences: this.fb.group({
         teamSize: ['', [Validators.required]],
         communicationStyle: ['', [Validators.required]],
@@ -114,7 +116,7 @@ export class ProfileCreateComponent implements OnInit {
       bio: profile.bio,
       gender: profile.gender || '',
       preferFemaleTeam: profile.preferFemaleTeam || false,
-      availability: profile.availability,
+      age: profile.age || '',
       preferences: profile.preferences,
       githubProfile: profile.githubProfile,
       linkedinProfile: profile.linkedinProfile,
@@ -180,35 +182,114 @@ export class ProfileCreateComponent implements OnInit {
   getProgress(): number {
     const fields = [
       this.profileForm.get('fullName')?.value,
+      this.profileForm.get('phoneNumber')?.value, // Telefone obrigatório
       this.profileForm.get('education')?.value,
       this.profileForm.get('expertiseLevel')?.value,
       this.profileForm.get('gender')?.value,
+      this.profileForm.get('bio')?.value,
       this.skills.length > 0,
       this.languages.length > 0,
       this.selectedChallenges.length > 0,
       this.selectedInterestAreas.length > 0,
-      this.profileForm.get('availability.hoursPerWeek')?.value,
-      this.profileForm.get('availability.timezone')?.value,
-      this.profileForm.get('availability.preferredWorkingHours')?.value,
+      this.workExperienceArray.length > 0,
       this.profileForm.get('preferences.teamSize')?.value,
       this.profileForm.get('preferences.communicationStyle')?.value,
-      this.profileForm.get('preferences.workStyle')?.value
+      this.profileForm.get('preferences.workStyle')?.value,
+      this.profileForm.get('githubProfile')?.value,
+      this.profileForm.get('linkedinProfile')?.value,
+      this.profileForm.get('portfolioUrl')?.value
     ];
 
     const completed = fields.filter(field => !!field).length;
     return Math.round((completed / fields.length) * 100);
   }
 
+  validateRequiredFields(): string[] {
+    const errors: string[] = [];
+
+    // Required basic fields
+    if (!this.profileForm.get('fullName')?.valid) {
+      errors.push('Nome completo é obrigatório');
+    }
+
+    if (!this.profileForm.get('phoneNumber')?.valid) {
+      const phoneValue = this.profileForm.get('phoneNumber')?.value;
+      if (!phoneValue || !phoneValue.trim()) {
+        errors.push('Telefone é obrigatório');
+      } else {
+        errors.push('Telefone deve conter apenas números, espaços e símbolos (+, -, (), )');
+      }
+    }
+
+    if (!this.profileForm.get('education')?.valid) {
+      errors.push('Educação é obrigatória');
+    }
+
+    if (!this.profileForm.get('expertiseLevel')?.valid) {
+      errors.push('Nível de experiência é obrigatório');
+    }
+
+    if (!this.profileForm.get('age')?.valid) {
+      const ageValue = this.profileForm.get('age')?.value;
+      if (!ageValue) {
+        errors.push('Idade é obrigatória');
+      } else if (ageValue < 16 || ageValue > 100) {
+        errors.push('Idade deve estar entre 16 e 100 anos');
+      }
+    }
+
+    // Skills validation
+    if (this.skills.length === 0) {
+      errors.push('Pelo menos uma habilidade é obrigatória');
+    }
+
+    // Preferences validation
+    const preferences = this.profileForm.get('preferences');
+    if (!preferences?.get('teamSize')?.valid) {
+      errors.push('Tamanho de equipe preferido é obrigatório');
+    }
+
+    if (!preferences?.get('communicationStyle')?.valid) {
+      errors.push('Estilo de comunicação é obrigatório');
+    }
+
+    if (!preferences?.get('workStyle')?.valid) {
+      errors.push('Estilo de trabalho é obrigatório');
+    }
+
+    return errors;
+  }
+
   isFormValid(): boolean {
-    return this.profileForm.valid &&
-           this.skills.length > 0 &&
-           this.languages.length > 0 &&
-           this.selectedChallenges.length > 0 &&
-           this.selectedInterestAreas.length > 0;
+    return this.validateRequiredFields().length === 0 && this.profileForm.valid;
+  }
+
+  isProfileComplete(): boolean {
+    return this.isFormValid();
   }
 
   onSubmit(): void {
-    if (!this.isFormValid() || !this.currentUser) return;
+    if (!this.currentUser) {
+      Swal.fire({
+        icon: 'error',
+        title: 'Erro de Autenticação',
+        text: 'Usuário não encontrado. Por favor, faça login novamente.',
+        confirmButtonColor: '#ff4444'
+      });
+      return;
+    }
+
+    const validationErrors = this.validateRequiredFields();
+    if (validationErrors.length > 0) {
+      Swal.fire({
+        icon: 'warning',
+        title: 'Campos Obrigatórios',
+        html: `<div style="text-align: left;"><ul style="margin: 0; padding-left: 20px;">${validationErrors.map(error => `<li>${error}</li>`).join('')}</ul></div>`,
+        confirmButtonColor: '#ff4444',
+        confirmButtonText: 'Entendi'
+      });
+      return;
+    }
 
     this.isLoading = true;
 
@@ -220,12 +301,12 @@ export class ProfileCreateComponent implements OnInit {
       expertiseLevel: this.profileForm.get('expertiseLevel')?.value,
       workExperience: this.workExperienceArray.value,
       education: this.profileForm.get('education')?.value,
+      age: parseInt(this.profileForm.get('age')?.value) || 18,
       gender: this.profileForm.get('gender')?.value,
       preferFemaleTeam: this.profileForm.get('preferFemaleTeam')?.value,
       challengesOfInterest: this.selectedChallenges,
       interestAreas: this.selectedInterestAreas,
       projects: [], // Can be added in future version
-      availability: this.profileForm.get('availability')?.value,
       preferences: {
         ...this.profileForm.get('preferences')?.value,
         projectType: this.selectedChallenges,
@@ -246,13 +327,26 @@ export class ProfileCreateComponent implements OnInit {
     request.subscribe({
       next: (response) => {
         this.isLoading = false;
-        alert(`Perfil ${this.isEditing ? 'atualizado' : 'criado'} com sucesso!`);
-        this.router.navigate(['/dashboard']);
+        Swal.fire({
+          icon: 'success',
+          title: 'Sucesso!',
+          text: `Perfil ${this.isEditing ? 'atualizado' : 'criado'} com sucesso!`,
+          confirmButtonColor: '#4ecdc4',
+          timer: 2000,
+          showConfirmButton: false
+        }).then(() => {
+          this.router.navigate(['/dashboard']);
+        });
       },
       error: (error) => {
         this.isLoading = false;
         console.error('Error saving profile:', error);
-        alert(`Erro ao ${this.isEditing ? 'atualizar' : 'criar'} perfil. Tente novamente.`);
+        Swal.fire({
+          icon: 'error',
+          title: 'Erro ao Salvar',
+          text: `Erro ao ${this.isEditing ? 'atualizar' : 'criar'} perfil. Tente novamente.`,
+          confirmButtonColor: '#ff4444'
+        });
       }
     });
   }

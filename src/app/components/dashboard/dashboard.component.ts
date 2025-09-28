@@ -1,6 +1,7 @@
 import { CommonModule } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
 import { Router, RouterModule } from '@angular/router';
+import Swal from 'sweetalert2';
 import { UserRegistration } from '../../models/auth.models';
 import { AuthService } from '../../services/api/auth.service';
 import { MatchmakingAuthService } from '../../services/api/matchmaking.service';
@@ -133,14 +134,16 @@ import { MatchmakingAuthService } from '../../services/api/matchmaking.service';
               </div>
 
               <div class="col-md-4">
-                <div class="action-card" (click)="findMatches()" [class.disabled]="isSearching || !hasProfile">
+                <div class="action-card" (click)="findMatches()" [class.disabled]="isSearching || !isProfileComplete">
                   <div class="action-icon bg-secondary">
                     <i class="fas fa-search"></i>
                   </div>
                   <h4>Buscar Matches</h4>
-                  <p>Buscar novos matches</p>
+                  <p>{{ isProfileComplete ? 'Buscar novos matches' : 'Complete seu perfil para buscar matches' }}</p>
                   <div class="action-footer">
-                    <span class="badge badge-secondary">Buscar</span>
+                    <span class="badge" [class]="isProfileComplete ? 'badge-secondary' : 'badge-warning'">
+                      {{ isProfileComplete ? 'Buscar' : 'Perfil Incompleto' }}
+                    </span>
                   </div>
                 </div>
               </div>
@@ -695,6 +698,7 @@ import { MatchmakingAuthService } from '../../services/api/matchmaking.service';
 export class DashboardComponent implements OnInit {
   currentUser: UserRegistration | null = null;
   hasProfile = false;
+  isProfileComplete = false;
   matchCount = 0;
   profileProgress = 0;
   totalUsers = 0;
@@ -723,10 +727,12 @@ export class DashboardComponent implements OnInit {
       this.matchmakingService.getProfile(this.currentUser.email).subscribe({
         next: (profile) => {
           this.hasProfile = !!profile;
-          this.calculateProfileProgress(profile);
+          this.isProfileComplete = this.checkProfileComplete(profile?.profile);
+          this.calculateProfileProgress(profile?.profile);
         },
         error: () => {
           this.hasProfile = false;
+          this.isProfileComplete = false;
           this.profileProgress = 0;
         },
       });
@@ -755,6 +761,25 @@ export class DashboardComponent implements OnInit {
     }
   }
 
+  checkProfileComplete(profile: any): boolean {
+    if (!profile) return false;
+
+    // All required fields according to the schema
+    const requiredFields = [
+      profile.fullName && profile.fullName.trim().length >= 2,
+      profile.phoneNumber && profile.phoneNumber.trim(),
+      profile.education && profile.education.trim(),
+      profile.expertiseLevel && profile.expertiseLevel.trim(),
+      profile.age && profile.age >= 16 && profile.age <= 100,
+      profile.skills && profile.skills.length > 0,
+      profile.preferences && profile.preferences.teamSize && profile.preferences.teamSize.trim(),
+      profile.preferences && profile.preferences.communicationStyle && profile.preferences.communicationStyle.trim(),
+      profile.preferences && profile.preferences.workStyle && profile.preferences.workStyle.trim()
+    ];
+
+    return requiredFields.every(field => !!field);
+  }
+
   calculateProfileProgress(profile: any): void {
     if (!profile) {
       this.profileProgress = 0;
@@ -764,6 +789,7 @@ export class DashboardComponent implements OnInit {
     let completed = 0;
     const fields = [
       profile.fullName,
+      profile.phoneNumber, // Telefone obrigatório
       profile.skills?.length > 0,
       profile.expertiseLevel,
       profile.education,
@@ -772,6 +798,11 @@ export class DashboardComponent implements OnInit {
       profile.preferences,
       profile.languages?.length > 0,
       profile.bio,
+      profile.challengesOfInterest?.length > 0,
+      profile.interestAreas?.length > 0,
+      profile.githubProfile,
+      profile.linkedinProfile,
+      profile.portfolioUrl
     ];
 
     completed = fields.filter((field) => !!field).length;
@@ -791,8 +822,43 @@ export class DashboardComponent implements OnInit {
   }
 
   findMatches(): void {
-    if (!this.currentUser || !this.hasProfile) {
-      alert('Complete seu perfil primeiro para buscar matches!');
+    if (!this.currentUser) {
+      Swal.fire({
+        icon: 'error',
+        title: 'Usuário não encontrado!',
+        text: 'Por favor, faça login novamente.',
+        confirmButtonColor: '#ff4444'
+      });
+      return;
+    }
+
+    if (!this.isProfileComplete) {
+      Swal.fire({
+        icon: 'warning',
+        title: 'Perfil Incompleto',
+        html: `
+          <div style="text-align: left;">
+            <p><strong>Para buscar matches, você precisa:</strong></p>
+            <ul style="margin: 10px 0; padding-left: 20px;">
+              <li>Nome completo</li>
+              <li>Telefone (obrigatório para contato)</li>
+              <li>Educação</li>
+              <li>Nível de experiência</li>
+              <li>Idade</li>
+              <li>Pelo menos uma habilidade</li>
+              <li>Preferências de equipe</li>
+            </ul>
+          </div>
+        `,
+        confirmButtonColor: '#ff4444',
+        confirmButtonText: 'Completar Perfil',
+        showCancelButton: true,
+        cancelButtonText: 'Voltar'
+      }).then((result) => {
+        if (result.isConfirmed) {
+          this.router.navigate(['/profile/create']);
+        }
+      });
       return;
     }
 
@@ -811,15 +877,32 @@ export class DashboardComponent implements OnInit {
 
         if (newMatches > 0) {
           this.matchCount = newMatches;
-          alert(`🎉 Encontramos ${newMatches} novos matches para você!`);
-          this.router.navigate(['/matches']);
+          Swal.fire({
+            icon: 'success',
+            title: 'Matches Encontrados!',
+            text: `🎉 Encontramos ${newMatches} novos matches para você!`,
+            confirmButtonColor: '#4ecdc4',
+            confirmButtonText: 'Ver Matches'
+          }).then(() => {
+            this.router.navigate(['/matches']);
+          });
         } else {
-          alert('Nenhum novo match encontrado no momento.');
+          Swal.fire({
+            icon: 'info',
+            title: 'Nenhum Match Novo',
+            text: 'Nenhum novo match encontrado no momento. Tente novamente mais tarde.',
+            confirmButtonColor: '#45b7d1'
+          });
         }
       },
       error: () => {
         this.isSearching = false;
-        alert('Erro ao buscar matches. Tente novamente.');
+        Swal.fire({
+          icon: 'error',
+          title: 'Erro na Busca',
+          text: 'Erro ao buscar matches. Tente novamente.',
+          confirmButtonColor: '#ff4444'
+        });
       },
     });
   }

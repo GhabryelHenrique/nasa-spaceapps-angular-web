@@ -39,12 +39,13 @@ export interface ParticipantProfile {
   expertiseLevel: 'beginner' | 'intermediate' | 'advanced' | 'expert';
   workExperience: WorkExperience[];
   education: string;
+  age: number;
   gender?: string;
   preferFemaleTeam?: boolean;
   challengesOfInterest?: string[];
   interestAreas?: string[];
   projects: Project[];
-  availability: Availability;
+  availability?: Availability;
   preferences: Preferences;
   languages: string[];
   githubProfile?: string;

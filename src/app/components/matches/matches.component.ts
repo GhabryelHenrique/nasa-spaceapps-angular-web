@@ -21,6 +21,8 @@ export class MatchesComponent implements OnInit {
   error: string | null = null;
   showTeamMatches = false;
   selectedTab: 'individual' | 'team' = 'individual';
+  showProfileModal = false;
+  selectedProfile: any = null;
 
   constructor(
     private authService: AuthService,
@@ -92,9 +94,49 @@ export class MatchesComponent implements OnInit {
     return labels[level] || level;
   }
 
+  getGenderLabel(gender: string): string {
+    const labels: Record<string, string> = {
+      'masculine': 'Masculino',
+      'feminine': 'Feminino',
+      'non-binary': 'Não-binário',
+      'other': 'Outro',
+      'prefer-not-to-say': 'Prefere não informar'
+    };
+    return labels[gender] || gender;
+  }
+
   goToProfile(email: string): void {
-    // TODO: Implementar navegação para perfil do usuário
-    console.log('Navigate to profile:', email);
+    if (!email) return;
+
+    this.matchmakingService.getProfile(email).subscribe({
+      next: (profileResponse) => {
+        if (profileResponse?.profile) {
+          this.selectedProfile = profileResponse.profile;
+          this.showProfileModal = true;
+        } else {
+          Swal.fire({
+            title: 'Perfil não encontrado',
+            text: 'Não foi possível carregar o perfil deste usuário.',
+            icon: 'warning',
+            confirmButtonText: 'Ok'
+          });
+        }
+      },
+      error: (err) => {
+        console.error('Error loading profile:', err);
+        Swal.fire({
+          title: 'Erro!',
+          text: 'Erro ao carregar perfil. Tente novamente.',
+          icon: 'error',
+          confirmButtonText: 'Ok'
+        });
+      }
+    });
+  }
+
+  closeProfileModal(): void {
+    this.showProfileModal = false;
+    this.selectedProfile = null;
   }
 
   goBack(): void {
@@ -126,8 +168,13 @@ export class MatchesComponent implements OnInit {
   }
 
   viewTeamDetails(teamId: string): void {
-    // TODO: Implementar visualização de detalhes do time
-    console.log('View team details:', teamId);
+    // Implementar visualização de detalhes do time
+    Swal.fire({
+      title: 'Detalhes do Time',
+      text: `Funcionalidade em desenvolvimento para o time: ${teamId}`,
+      icon: 'info',
+      confirmButtonText: 'Ok'
+    });
   }
 
   trackByEmail(index: number, match: IndividualMatch): string {
