@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnDestroy } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 @Component({
@@ -7,7 +7,7 @@ import { CommonModule } from '@angular/common';
   templateUrl: './sponsors-section.component.html',
   styleUrl: './sponsors-section.component.scss'
 })
-export class SponsorsSectionComponent {
+export class SponsorsSectionComponent implements OnDestroy {
   sponsors = {
     diamond: [
       { name: 'NASA', logo: 'assets/nasa-spaceapps-logo-removebg-preview.png', url: 'https://spaceappschallenge.org' },
@@ -82,7 +82,10 @@ export class SponsorsSectionComponent {
   };
 
 private hoverTimeout: any;
+  private audio: HTMLAudioElement | null = null;
+  private animationInterval: any;
   showEasterEgg = false;
+  isPartyMode = false;
 
   startHover(sponsorName: string) {
     this.hoverTimeout = setTimeout(() => {
@@ -101,7 +104,101 @@ private hoverTimeout: any;
   }
 
   playMusic() {
-    const audio = new Audio('assets/33-max.mp3');
-    audio.play();
+    if (this.isPartyMode) {
+      this.stopPartyMode();
+      return;
+    }
+
+    this.isPartyMode = true;
+    this.audio = new Audio('assets/33-max.mp3');
+    this.audio.loop = true;
+    this.audio.volume = 0.7;
+
+    // Adiciona classes para animação global
+    document.body.classList.add('red-bull-party-mode');
+
+    // Inicia as animações rítmicas
+    this.startRhythmicAnimations();
+
+    this.audio.play().catch(console.error);
+
+    // Para automaticamente após 30 segundos
+    setTimeout(() => {
+      if (this.isPartyMode) {
+        this.stopPartyMode();
+      }
+    }, 30000);
+  }
+
+  private startRhythmicAnimations() {
+    let beatCount = 0;
+
+    // Simula batidas da música (BPM ~128, então ~469ms por batida)
+    this.animationInterval = setInterval(() => {
+      beatCount++;
+
+      // Adiciona pulse nas batidas principais
+      if (beatCount % 4 === 0) {
+        document.body.classList.add('mega-beat');
+        setTimeout(() => document.body.classList.remove('mega-beat'), 200);
+      } else {
+        document.body.classList.add('beat-pulse');
+        setTimeout(() => document.body.classList.remove('beat-pulse'), 150);
+      }
+
+      // Efeitos especiais a cada 8 batidas
+      if (beatCount % 8 === 0) {
+        this.createSparkleEffect();
+      }
+
+      // Mudança de cor do background a cada 16 batidas
+      if (beatCount % 16 === 0) {
+        document.body.classList.add('color-shift');
+        setTimeout(() => document.body.classList.remove('color-shift'), 500);
+      }
+
+    }, 469); // ~128 BPM
+  }
+
+  private createSparkleEffect() {
+    const sparkles = document.createElement('div');
+    sparkles.className = 'red-bull-sparkles';
+    sparkles.innerHTML = '⚡✨🏎️⚡✨🏎️⚡✨';
+    document.body.appendChild(sparkles);
+
+    setTimeout(() => {
+      if (sparkles.parentNode) {
+        sparkles.parentNode.removeChild(sparkles);
+      }
+    }, 2000);
+  }
+
+  private stopPartyMode() {
+    this.isPartyMode = false;
+
+    if (this.audio) {
+      this.audio.pause();
+      this.audio.currentTime = 0;
+      this.audio = null;
+    }
+
+    if (this.animationInterval) {
+      clearInterval(this.animationInterval);
+      this.animationInterval = null;
+    }
+
+    // Remove todas as classes de animação
+    document.body.classList.remove('red-bull-party-mode', 'beat-pulse', 'mega-beat', 'color-shift');
+
+    // Remove qualquer sparkle restante
+    const sparkles = document.querySelectorAll('.red-bull-sparkles');
+    sparkles.forEach(sparkle => sparkle.remove());
+  }
+
+  ngOnDestroy() {
+    this.stopPartyMode();
+    if (this.hoverTimeout) {
+      clearTimeout(this.hoverTimeout);
+    }
   }
 }

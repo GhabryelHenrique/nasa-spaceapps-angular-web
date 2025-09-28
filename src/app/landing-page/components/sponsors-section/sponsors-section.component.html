@@ -100,8 +100,9 @@
             *ngIf="showEasterEgg && sponsor.name.toLowerCase() === 'redbull'"
             (click)="playMusic()"
             class="easter-egg-btn"
+            [class.party-active]="isPartyMode"
           >
-            ⚡ Energia extra?
+            {{ isPartyMode ? '🏎️ PARAR FESTA!' : '⚡ SUPER MAX!' }}
           </button>
         </article>
       </div>
