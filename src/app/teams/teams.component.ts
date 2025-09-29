@@ -18,7 +18,7 @@ export class TeamsComponent implements OnInit {
   totalCount = 0;
   hasNextPage = false;
   endCursor = '';
-  
+
   // Filter properties
   selectedChallenge = '';
   availableChallenges: { id: string, title: string }[] = [];
@@ -39,15 +39,15 @@ export class TeamsComponent implements OnInit {
         if (response.data && response.data[0] && response.data[0].teams) {
           const teamsData = response.data[0].teams;
           let teams = teamsData.edges.map(edge => edge.node);
-          
+
           // Apply challenge filter
           if (this.selectedChallenge) {
-            teams = teams.filter(team => 
+            teams = teams.filter(team =>
               team.challengeDetails?.id === this.selectedChallenge ||
               team.challengeDetails?.title === this.selectedChallenge
             );
           }
-          
+
           if (after) {
             this.teams.push(...teams);
           } else {
@@ -91,7 +91,7 @@ export class TeamsComponent implements OnInit {
         if (response.data && response.data[0] && response.data[0].teams) {
           const teams = response.data[0].teams.edges.map(edge => edge.node);
           const challengeMap = new Map<string, string>();
-          
+
           teams.forEach(team => {
             if (team.challengeDetails && team.challengeDetails.title) {
               challengeMap.set(team.challengeDetails.id || team.challenge, team.challengeDetails.title);
@@ -101,6 +101,8 @@ export class TeamsComponent implements OnInit {
           this.availableChallenges = Array.from(challengeMap.entries())
             .map(([id, title]) => ({ id, title }))
             .sort((a, b) => a.title.localeCompare(b.title));
+
+            console.log('Available Challenges:', this.availableChallenges);
         }
       },
       error: (error) => {
