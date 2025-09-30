@@ -83,12 +83,11 @@ eventLocations: EventLocation[] = [
     title: 'Colégio Gabarito',
     info: 'Espaço reservado para alunos do Gabarito. Atividades de aprendizado e oficinas conectadas ao Space Apps.'
   },
-
-  {
-    position: { lat: -18.932000, lng: -48.278500 },
-    title: 'Olimpo',
-    info: 'Espaço reservado para alunos do Olimpo. Atividades de aprendizado e oficinas conectadas ao Space Apps'
-  },
+  // {
+  //   position: { lat: -18.932000, lng: -48.278500 },
+  //   title: 'Olimpo',
+  //   info: 'Espaço reservado para alunos do Olimpo. Atividades de aprendizado e oficinas conectadas ao Space Apps'
+  // },
   {
     position: { lat: -18.932000, lng: -48.278500 },
     title: 'UNA - Uberlândia',
