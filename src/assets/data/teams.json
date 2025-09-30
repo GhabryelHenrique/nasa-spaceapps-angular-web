@@ -3547,6 +3547,110 @@
             "cursor": "b2Zmc2V0OjM1",
             "node": {
               "__typename": "TeamPage",
+              "id": "aWQ6NDQ2MDQ=",
+              "title": "Cosmos Explorers",
+              "meta": {
+                "type": "TEAM",
+                "slug": "cosmos-explorers",
+                "firstPublishedAt": "2025-09-29T20:35:44.964000Z",
+                "lastPublishedAt": "2025-09-29T22:22:53.021508Z",
+                "relativeUrl": "/2025/find-a-team/cosmos-explorers/",
+                "live": true,
+                "parent": null,
+                "__typename": "ExpandedPageMeta"
+              },
+              "owner": "aWQ6MzYyODM4",
+              "ownerDetails": null,
+              "excerpt": "Exploring the cosmos with knowledge, insight and the will to win",
+              "project": "aWQ6NDI0MTI=",
+              "projectDetails": {
+                "id": "aWQ6NDI0MTI=",
+                "name": "Project Cosmos Explorers",
+                "summary": "",
+                "demoLink": "",
+                "projectLink": "",
+                "details": "",
+                "solution": "",
+                "aiReferences": "",
+                "dataReferences": "",
+                "projectReferences": "",
+                "isSubmitted": false,
+                "savedAt": null,
+                "submittedAt": null,
+                "__typename": "Project"
+              },
+              "projectSubmitted": false,
+              "featuredImage": {
+                "id": "aWQ6MzQ1MDQ0",
+                "meta": {
+                  "type": "images.CustomImage",
+                  "downloadUrl": "https://assets.spaceappschallenge.org/media/original_images/banner_nasa_PWnUBTI.jpg",
+                  "__typename": "ImageMeta"
+                },
+                "title": "team_image.19:22:47.569858",
+                "alt": "team_image.19:22:47.569858",
+                "caption": "team_image.19:22:47.569858",
+                "displaySize": "og",
+                "rendition": {
+                  "url": "https://assets.spaceappschallenge.org/media/images/banner_nasa_PWnUBTI.2e16d0ba.fill-300x250.jpg",
+                  "fullUrl": "https://assets.spaceappschallenge.org/media/images/banner_nasa_PWnUBTI.2e16d0ba.fill-300x250.jpg",
+                  "height": 250,
+                  "width": 300,
+                  "__typename": "BaseImage"
+                },
+                "__typename": "DefaultImage"
+              },
+              "description": null,
+              "desiredSkills": null,
+              "languages": null,
+              "challenge": "aWQ6MzEzMTM=",
+              "challengeDetails": {
+                "id": "aWQ6MzEzMTM=",
+                "title": "Build a Space Biology Knowledge Engine",
+                "meta": {
+                  "type": "CHALLENGE",
+                  "slug": "build-a-space-biology-knowledge-engine",
+                  "firstPublishedAt": "2025-08-18T19:28:38.910194Z",
+                  "lastPublishedAt": "2025-09-16T14:03:26.245981Z",
+                  "relativeUrl": "/2025/challenges/build-a-space-biology-knowledge-engine/",
+                  "live": true,
+                  "parent": null,
+                  "__typename": "ExpandedPageMeta"
+                },
+                "excerpt": "Enable a new era of human space exploration! NASA has been performing biology experiments in space for decades, generating a tremendous amount of information that will need to be considered as humans prepare to revisit the Moon and explore Mars. Although this knowledge is publicly available, it can be difficult for potential users to find information that pertains to their specific interests. Your challenge is to build a dynamic dashboard that leverages artificial intelligence (AI), knowledge graphs, and/or other tools to summarize a set of NASA bioscience publications and enables users to explore the impacts and results of the experiments these publications describe. (Earth Science Division)",
+                "__typename": "ChallengePage"
+              },
+              "location": "aWQ6MzA2NjM=",
+              "locationDetails": {
+                "id": "aWQ6MzA2NjM=",
+                "title": "Uberlandia",
+                "displayName": "Uberlândia",
+                "meta": {
+                  "type": "LOCATION",
+                  "slug": "uberlandia",
+                  "firstPublishedAt": "2025-07-18T21:43:56.560298Z",
+                  "lastPublishedAt": "2025-08-22T19:13:44.047613Z",
+                  "relativeUrl": "/2025/local-events/uberlandia/",
+                  "live": true,
+                  "parent": null,
+                  "__typename": "ExpandedPageMeta"
+                },
+                "country": "Brazil",
+                "__typename": "LocationPage"
+              },
+              "event": "aWQ6Mw==",
+              "eventDetails": null,
+              "joinEnabled": true,
+              "memberships": null,
+              "nominationBadges": null,
+              "awardBadges": null
+            }
+          },
+          {
+            "__typename": "TeamPageEdge",
+            "cursor": "b2Zmc2V0OjMy",
+            "node": {
+              "__typename": "TeamPage",
               "id": "aWQ6MzQzNDg=",
               "title": "Crashou mas rodou",
               "meta": {
