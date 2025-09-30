@@ -6,10 +6,10 @@
           "hasPreviousPage": false,
           "hasNextPage": false,
           "startCursor": "b2Zmc2V0OjA=",
-          "endCursor": "b2Zmc2V0OjExMg==",
+          "endCursor": "b2Zmc2V0OjEyMA==",
           "__typename": "PageInfo"
         },
-        "totalCount": 113,
+        "totalCount": 121,
         "edges": [
           {
             "__typename": "TeamPageEdge",
@@ -536,6 +536,91 @@
             "cursor": "b2Zmc2V0OjU=",
             "node": {
               "__typename": "TeamPage",
+              "id": "aWQ6NDQ3NzY=",
+              "title": "Alpha Mackenzie",
+              "meta": {
+                "type": "TEAM",
+                "slug": "alpha-mackenzie",
+                "firstPublishedAt": "2025-09-30T01:27:05.522085Z",
+                "lastPublishedAt": "2025-09-30T01:27:05.522085Z",
+                "relativeUrl": "/2025/find-a-team/alpha-mackenzie/",
+                "live": true,
+                "parent": null,
+                "__typename": "ExpandedPageMeta"
+              },
+              "owner": "aWQ6NDU1MzU5",
+              "ownerDetails": null,
+              "excerpt": "Somos a equipe Alpha Mackenzie, equipe de robótica que tem como objetivo esse ano, solucionar problemas quanto a pobreza nos biomas brasileiros, além de levar conscientização quanto à sustentabilidade. Logo, nossa equipe deseja integrar elementos ...",
+              "project": "aWQ6NDI1ODQ=",
+              "projectDetails": {
+                "id": "aWQ6NDI1ODQ=",
+                "name": "Project Alpha Mackenzie",
+                "summary": "",
+                "demoLink": "",
+                "projectLink": "",
+                "details": "",
+                "solution": "",
+                "aiReferences": "",
+                "dataReferences": "",
+                "projectReferences": "",
+                "isSubmitted": false,
+                "savedAt": null,
+                "submittedAt": null,
+                "__typename": "Project"
+              },
+              "projectSubmitted": false,
+              "featuredImage": null,
+              "description": null,
+              "desiredSkills": null,
+              "languages": null,
+              "challenge": "aWQ6MzEzMjc=",
+              "challengeDetails": {
+                "id": "aWQ6MzEzMjc=",
+                "title": "NASA Farm Navigators: Using NASA Data Exploration in Agriculture",
+                "meta": {
+                  "type": "CHALLENGE",
+                  "slug": "nasa-farm-navigators-using-nasa-data-exploration-in-agriculture",
+                  "firstPublishedAt": "2025-08-18T19:28:40.206949Z",
+                  "lastPublishedAt": "2025-09-16T15:30:20.113869Z",
+                  "relativeUrl": "/2025/challenges/nasa-farm-navigators-using-nasa-data-exploration-in-agriculture/",
+                  "live": true,
+                  "parent": null,
+                  "__typename": "ExpandedPageMeta"
+                },
+                "excerpt": "The agriculture community faces the challenge of integrating technology and data to enhance sustainable farming practices. Simulating key farming activities like fertilizing, irrigating, and livestock management using real-world NASA satellite imagery and climate data can enable better understanding of the impacts of these variables on crop production. Your challenge is to create an engaging educational game that effectively utilizes NASA’s open data sets to simulate farming scenarios and enables players to learn how this data can inform innovative, sustainable, agricultural methods. (Earth Science Division)",
+                "__typename": "ChallengePage"
+              },
+              "location": "aWQ6MzA2NjM=",
+              "locationDetails": {
+                "id": "aWQ6MzA2NjM=",
+                "title": "Uberlandia",
+                "displayName": "Uberlândia",
+                "meta": {
+                  "type": "LOCATION",
+                  "slug": "uberlandia",
+                  "firstPublishedAt": "2025-07-18T21:43:56.560298Z",
+                  "lastPublishedAt": "2025-08-22T19:13:44.047613Z",
+                  "relativeUrl": "/2025/local-events/uberlandia/",
+                  "live": true,
+                  "parent": null,
+                  "__typename": "ExpandedPageMeta"
+                },
+                "country": "Brazil",
+                "__typename": "LocationPage"
+              },
+              "event": "aWQ6Mw==",
+              "eventDetails": null,
+              "joinEnabled": true,
+              "memberships": null,
+              "nominationBadges": null,
+              "awardBadges": null
+            }
+          },
+          {
+            "__typename": "TeamPageEdge",
+            "cursor": "b2Zmc2V0OjY=",
+            "node": {
+              "__typename": "TeamPage",
               "id": "aWQ6MzU2NTM=",
               "title": "Angelus Novus",
               "meta": {
@@ -637,7 +722,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjY=",
+            "cursor": "b2Zmc2V0Ojc=",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6MzUzNjA=",
@@ -722,7 +807,111 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0Ojc=",
+            "cursor": "b2Zmc2V0Ojg=",
+            "node": {
+              "__typename": "TeamPage",
+              "id": "aWQ6NDQ3NzI=",
+              "title": "Apex Solutions",
+              "meta": {
+                "type": "TEAM",
+                "slug": "apex-solutions",
+                "firstPublishedAt": "2025-09-30T01:29:26.866000Z",
+                "lastPublishedAt": "2025-09-30T01:33:15.814090Z",
+                "relativeUrl": "/2025/find-a-team/apex-solutions/",
+                "live": true,
+                "parent": null,
+                "__typename": "ExpandedPageMeta"
+              },
+              "owner": "aWQ6NDI2MjM2",
+              "ownerDetails": null,
+              "excerpt": "close",
+              "project": "aWQ6NDI1ODA=",
+              "projectDetails": {
+                "id": "aWQ6NDI1ODA=",
+                "name": "Project Apex Solutions",
+                "summary": "",
+                "demoLink": "",
+                "projectLink": "",
+                "details": "",
+                "solution": "",
+                "aiReferences": "",
+                "dataReferences": "",
+                "projectReferences": "",
+                "isSubmitted": false,
+                "savedAt": null,
+                "submittedAt": null,
+                "__typename": "Project"
+              },
+              "projectSubmitted": false,
+              "featuredImage": {
+                "id": "aWQ6MzQ1NjMz",
+                "meta": {
+                  "type": "images.CustomImage",
+                  "downloadUrl": "https://assets.spaceappschallenge.org/media/original_images/apex_solutions.jpg",
+                  "__typename": "ImageMeta"
+                },
+                "title": "team_image.01:22:04.671125",
+                "alt": "team_image.01:22:04.671125",
+                "caption": "team_image.01:22:04.671125",
+                "displaySize": "og",
+                "rendition": {
+                  "url": "https://assets.spaceappschallenge.org/media/images/apex_solutions.2e16d0ba.fill-300x250.jpg",
+                  "fullUrl": "https://assets.spaceappschallenge.org/media/images/apex_solutions.2e16d0ba.fill-300x250.jpg",
+                  "height": 250,
+                  "width": 300,
+                  "__typename": "BaseImage"
+                },
+                "__typename": "DefaultImage"
+              },
+              "description": null,
+              "desiredSkills": null,
+              "languages": null,
+              "challenge": "aWQ6MzEzMTc=",
+              "challengeDetails": {
+                "id": "aWQ6MzEzMTc=",
+                "title": "Data Pathways to Healthy Cities and Human Settlements",
+                "meta": {
+                  "type": "CHALLENGE",
+                  "slug": "data-pathways-to-healthy-cities-and-human-settlements",
+                  "firstPublishedAt": "2025-08-18T19:28:39.255477Z",
+                  "lastPublishedAt": "2025-09-16T14:03:26.860012Z",
+                  "relativeUrl": "/2025/challenges/data-pathways-to-healthy-cities-and-human-settlements/",
+                  "live": true,
+                  "parent": null,
+                  "__typename": "ExpandedPageMeta"
+                },
+                "excerpt": "Climate change brings about new complexities to consider for maintaining the wellbeing of society and the environment in cities. Natural resources, ecosystems, and existing infrastructure all must be monitored to ensure human quality of life remains high. Your challenge is to demonstrate how an urban planner can use NASA Earth observation data to develop smart strategies for city growth that maintain both the wellbeing of people and the environment. (Earth Science Division)",
+                "__typename": "ChallengePage"
+              },
+              "location": "aWQ6MzA2NjM=",
+              "locationDetails": {
+                "id": "aWQ6MzA2NjM=",
+                "title": "Uberlandia",
+                "displayName": "Uberlândia",
+                "meta": {
+                  "type": "LOCATION",
+                  "slug": "uberlandia",
+                  "firstPublishedAt": "2025-07-18T21:43:56.560298Z",
+                  "lastPublishedAt": "2025-08-22T19:13:44.047613Z",
+                  "relativeUrl": "/2025/local-events/uberlandia/",
+                  "live": true,
+                  "parent": null,
+                  "__typename": "ExpandedPageMeta"
+                },
+                "country": "Brazil",
+                "__typename": "LocationPage"
+              },
+              "event": "aWQ6Mw==",
+              "eventDetails": null,
+              "joinEnabled": false,
+              "memberships": null,
+              "nominationBadges": null,
+              "awardBadges": null
+            }
+          },
+          {
+            "__typename": "TeamPageEdge",
+            "cursor": "b2Zmc2V0Ojk=",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6MzMxNDA=",
@@ -826,7 +1015,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0Ojg=",
+            "cursor": "b2Zmc2V0OjEw",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6MzU0ODQ=",
@@ -911,7 +1100,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0Ojk=",
+            "cursor": "b2Zmc2V0OjEx",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6NDI2OTU=",
@@ -996,7 +1185,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjEw",
+            "cursor": "b2Zmc2V0OjEy",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6NDE5OTk=",
@@ -1081,7 +1270,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjEx",
+            "cursor": "b2Zmc2V0OjEz",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6NDMyODU=",
@@ -1185,7 +1374,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjEy",
+            "cursor": "b2Zmc2V0OjE0",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6MzQyNTA=",
@@ -1289,7 +1478,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjEz",
+            "cursor": "b2Zmc2V0OjE1",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6MzM3MTU=",
@@ -1393,7 +1582,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjE0",
+            "cursor": "b2Zmc2V0OjE2",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6MzM2NzU=",
@@ -1478,7 +1667,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjE1",
+            "cursor": "b2Zmc2V0OjE3",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6MzE0ODA=",
@@ -1582,7 +1771,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjE2",
+            "cursor": "b2Zmc2V0OjE4",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6NDEyMDY=",
@@ -1696,7 +1885,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjE3",
+            "cursor": "b2Zmc2V0OjE5",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6MzE1MDM=",
@@ -1809,7 +1998,92 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjE4",
+            "cursor": "b2Zmc2V0OjIw",
+            "node": {
+              "__typename": "TeamPage",
+              "id": "aWQ6NDQ3NTY=",
+              "title": "BitGirls",
+              "meta": {
+                "type": "TEAM",
+                "slug": "bitgirls",
+                "firstPublishedAt": null,
+                "lastPublishedAt": null,
+                "relativeUrl": "/2025/find-a-team/bitgirls/",
+                "live": true,
+                "parent": null,
+                "__typename": "ExpandedPageMeta"
+              },
+              "owner": "aWQ6NDQ0ODY1",
+              "ownerDetails": null,
+              "excerpt": "Rafaella: possui interesse em programação e desenvolvimento de sistemas. E sua habilidade principal é a escrita;\nAnna Laura:  sua habilidade principal é a escrita e a comunicação;\nRebeca: sua habilidade principal é jogar e se comunicar;\nSarah: sua...",
+              "project": "aWQ6NDI1NjQ=",
+              "projectDetails": {
+                "id": "aWQ6NDI1NjQ=",
+                "name": "Project BitGirls",
+                "summary": "",
+                "demoLink": "",
+                "projectLink": "",
+                "details": "",
+                "solution": "",
+                "aiReferences": "",
+                "dataReferences": "",
+                "projectReferences": "",
+                "isSubmitted": false,
+                "savedAt": null,
+                "submittedAt": null,
+                "__typename": "Project"
+              },
+              "projectSubmitted": false,
+              "featuredImage": null,
+              "description": null,
+              "desiredSkills": null,
+              "languages": null,
+              "challenge": "aWQ6MzEzMTQ=",
+              "challengeDetails": {
+                "id": "aWQ6MzEzMTQ=",
+                "title": "Embiggen Your Eyes!",
+                "meta": {
+                  "type": "CHALLENGE",
+                  "slug": "embiggen-your-eyes",
+                  "firstPublishedAt": "2025-08-18T19:28:38.984141Z",
+                  "lastPublishedAt": "2025-09-16T14:03:26.409163Z",
+                  "relativeUrl": "/2025/challenges/embiggen-your-eyes/",
+                  "live": true,
+                  "parent": null,
+                  "__typename": "ExpandedPageMeta"
+                },
+                "excerpt": "While your cell phone screen can display about three million pixels of information and your eye can receive more than ten million pixels, NASA images from space are even bigger! NASA’s space missions continue to push the boundaries of what is technologically possible, providing high-resolution images and videos of Earth, other planets, and space with billions or even trillions of pixels. Your challenge is to create a platform that allows users to zoom in and out on these massive image datasets, label known features, and discover new patterns. (Astrophysics Division)",
+                "__typename": "ChallengePage"
+              },
+              "location": "aWQ6MzA2NjM=",
+              "locationDetails": {
+                "id": "aWQ6MzA2NjM=",
+                "title": "Uberlandia",
+                "displayName": "Uberlândia",
+                "meta": {
+                  "type": "LOCATION",
+                  "slug": "uberlandia",
+                  "firstPublishedAt": "2025-07-18T21:43:56.560298Z",
+                  "lastPublishedAt": "2025-08-22T19:13:44.047613Z",
+                  "relativeUrl": "/2025/local-events/uberlandia/",
+                  "live": true,
+                  "parent": null,
+                  "__typename": "ExpandedPageMeta"
+                },
+                "country": "Brazil",
+                "__typename": "LocationPage"
+              },
+              "event": "aWQ6Mw==",
+              "eventDetails": null,
+              "joinEnabled": false,
+              "memberships": null,
+              "nominationBadges": null,
+              "awardBadges": null
+            }
+          },
+          {
+            "__typename": "TeamPageEdge",
+            "cursor": "b2Zmc2V0OjIx",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6NDE5NDA=",
@@ -1894,7 +2168,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjE5",
+            "cursor": "b2Zmc2V0OjIy",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6MzM1MjY=",
@@ -1998,7 +2272,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjIw",
+            "cursor": "b2Zmc2V0OjIz",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6MzQxMzY=",
@@ -2102,7 +2376,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjIx",
+            "cursor": "b2Zmc2V0OjI0",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6MzMwNjQ=",
@@ -2217,7 +2491,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjIy",
+            "cursor": "b2Zmc2V0OjI1",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6MzI3MTY=",
@@ -2324,7 +2598,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjIz",
+            "cursor": "b2Zmc2V0OjI2",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6MzMyNDA=",
@@ -2428,7 +2702,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjI0",
+            "cursor": "b2Zmc2V0OjI3",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6MzM2ODQ=",
@@ -2532,7 +2806,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjI1",
+            "cursor": "b2Zmc2V0OjI4",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6MzQ3NTE=",
@@ -2636,7 +2910,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjI2",
+            "cursor": "b2Zmc2V0OjI5",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6MzQxMjM=",
@@ -2740,7 +3014,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjI3",
+            "cursor": "b2Zmc2V0OjMw",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6MzI0NTQ=",
@@ -2844,7 +3118,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjI4",
+            "cursor": "b2Zmc2V0OjMx",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6MzI0OTk=",
@@ -2948,7 +3222,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjI5",
+            "cursor": "b2Zmc2V0OjMy",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6MzQzNTc=",
@@ -3052,7 +3326,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjMw",
+            "cursor": "b2Zmc2V0OjMz",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6MzI2OTM=",
@@ -3166,7 +3440,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjMx",
+            "cursor": "b2Zmc2V0OjM0",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6NDQ2MDQ=",
@@ -3270,7 +3544,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjMy",
+            "cursor": "b2Zmc2V0OjM1",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6MzQzNDg=",
@@ -3374,7 +3648,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjMz",
+            "cursor": "b2Zmc2V0OjM2",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6MzIwMjk=",
@@ -3478,7 +3752,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjM0",
+            "cursor": "b2Zmc2V0OjM3",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6Mzc1Njc=",
@@ -3582,7 +3856,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjM1",
+            "cursor": "b2Zmc2V0OjM4",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6MzUxOTM=",
@@ -3686,7 +3960,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjM2",
+            "cursor": "b2Zmc2V0OjM5",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6MzU4ODk=",
@@ -3790,7 +4064,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjM3",
+            "cursor": "b2Zmc2V0OjQw",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6NDM4NTI=",
@@ -3799,7 +4073,7 @@
                 "type": "TEAM",
                 "slug": "death-star",
                 "firstPublishedAt": "2025-09-28T23:22:59.131000Z",
-                "lastPublishedAt": "2025-09-29T00:36:59.667539Z",
+                "lastPublishedAt": "2025-09-30T00:24:48.265876Z",
                 "relativeUrl": "/2025/find-a-team/death-star/",
                 "live": true,
                 "parent": null,
@@ -3894,7 +4168,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjM4",
+            "cursor": "b2Zmc2V0OjQx",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6NDI2OTk=",
@@ -3979,7 +4253,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjM5",
+            "cursor": "b2Zmc2V0OjQy",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6NDMyMjk=",
@@ -4083,7 +4357,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjQw",
+            "cursor": "b2Zmc2V0OjQz",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6MzIwMjE=",
@@ -4187,7 +4461,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjQx",
+            "cursor": "b2Zmc2V0OjQ0",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6NDAyNDg=",
@@ -4291,7 +4565,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjQy",
+            "cursor": "b2Zmc2V0OjQ1",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6MzUyNTg=",
@@ -4299,8 +4573,8 @@
               "meta": {
                 "type": "TEAM",
                 "slug": "extranautas",
-                "firstPublishedAt": "2025-09-08T17:47:28.600039Z",
-                "lastPublishedAt": "2025-09-10T20:19:21.580770Z",
+                "firstPublishedAt": "2025-09-08T17:47:28.600000Z",
+                "lastPublishedAt": "2025-09-30T17:02:35.066457Z",
                 "relativeUrl": "/2025/find-a-team/extranautas/",
                 "live": true,
                 "parent": null,
@@ -4398,7 +4672,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjQz",
+            "cursor": "b2Zmc2V0OjQ2",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6MzMwMTk=",
@@ -4527,7 +4801,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjQ0",
+            "cursor": "b2Zmc2V0OjQ3",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6MzE2NzI=",
@@ -4631,7 +4905,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjQ1",
+            "cursor": "b2Zmc2V0OjQ4",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6NDM1NDg=",
@@ -4640,7 +4914,7 @@
                 "type": "TEAM",
                 "slug": "foguete-nao-tem-rollback",
                 "firstPublishedAt": "2025-09-28T17:37:55.605000Z",
-                "lastPublishedAt": "2025-09-29T00:35:05.335424Z",
+                "lastPublishedAt": "2025-09-30T13:16:40.765261Z",
                 "relativeUrl": "/2025/find-a-team/foguete-nao-tem-rollback/",
                 "live": true,
                 "parent": null,
@@ -4716,7 +4990,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjQ2",
+            "cursor": "b2Zmc2V0OjQ5",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6MzI1ODQ=",
@@ -4820,7 +5094,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjQ3",
+            "cursor": "b2Zmc2V0OjUw",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6NDM3OTQ=",
@@ -4924,7 +5198,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjQ4",
+            "cursor": "b2Zmc2V0OjUx",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6MzU3Njk=",
@@ -5028,7 +5302,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjQ5",
+            "cursor": "b2Zmc2V0OjUy",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6MzY0MDE=",
@@ -5113,7 +5387,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjUw",
+            "cursor": "b2Zmc2V0OjUz",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6NDM2Nzc=",
@@ -5217,7 +5491,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjUx",
+            "cursor": "b2Zmc2V0OjU0",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6MzY0MzU=",
@@ -5321,7 +5595,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjUy",
+            "cursor": "b2Zmc2V0OjU1",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6MzIwMzc=",
@@ -5425,7 +5699,111 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjUz",
+            "cursor": "b2Zmc2V0OjU2",
+            "node": {
+              "__typename": "TeamPage",
+              "id": "aWQ6NDU0MzI=",
+              "title": "Guardians of the city",
+              "meta": {
+                "type": "TEAM",
+                "slug": "guardians-of-the-city",
+                "firstPublishedAt": "2025-09-30T18:09:30.333000Z",
+                "lastPublishedAt": "2025-09-30T18:23:00.901694Z",
+                "relativeUrl": "/2025/find-a-team/guardians-of-the-city/",
+                "live": true,
+                "parent": null,
+                "__typename": "ExpandedPageMeta"
+              },
+              "owner": "aWQ6MzY5MzQ5",
+              "ownerDetails": null,
+              "excerpt": "We are Information Systems students from UFU, joining our first Hackathon with excitement! With skills in coding, education, sustainability, design, and storytelling, we aim to tackle challenges in pollution, waste, and resource use, creating inno...",
+              "project": "aWQ6NDMyNDA=",
+              "projectDetails": {
+                "id": "aWQ6NDMyNDA=",
+                "name": "Project Guardians of the city",
+                "summary": "",
+                "demoLink": "",
+                "projectLink": "",
+                "details": "",
+                "solution": "",
+                "aiReferences": "",
+                "dataReferences": "",
+                "projectReferences": "",
+                "isSubmitted": false,
+                "savedAt": null,
+                "submittedAt": null,
+                "__typename": "Project"
+              },
+              "projectSubmitted": false,
+              "featuredImage": {
+                "id": "aWQ6MzQ4MTg5",
+                "meta": {
+                  "type": "images.CustomImage",
+                  "downloadUrl": "https://assets.spaceappschallenge.org/media/original_images/FotoTime.png",
+                  "__typename": "ImageMeta"
+                },
+                "title": "team_image.16:53:10.106782",
+                "alt": "team_image.16:53:10.106782",
+                "caption": "team_image.16:53:10.106782",
+                "displaySize": "og",
+                "rendition": {
+                  "url": "https://assets.spaceappschallenge.org/media/images/FotoTime.2e16d0ba.fill-300x250.png",
+                  "fullUrl": "https://assets.spaceappschallenge.org/media/images/FotoTime.2e16d0ba.fill-300x250.png",
+                  "height": 250,
+                  "width": 300,
+                  "__typename": "BaseImage"
+                },
+                "__typename": "DefaultImage"
+              },
+              "description": null,
+              "desiredSkills": null,
+              "languages": null,
+              "challenge": "aWQ6MzEzMTc=",
+              "challengeDetails": {
+                "id": "aWQ6MzEzMTc=",
+                "title": "Data Pathways to Healthy Cities and Human Settlements",
+                "meta": {
+                  "type": "CHALLENGE",
+                  "slug": "data-pathways-to-healthy-cities-and-human-settlements",
+                  "firstPublishedAt": "2025-08-18T19:28:39.255477Z",
+                  "lastPublishedAt": "2025-09-16T14:03:26.860012Z",
+                  "relativeUrl": "/2025/challenges/data-pathways-to-healthy-cities-and-human-settlements/",
+                  "live": true,
+                  "parent": null,
+                  "__typename": "ExpandedPageMeta"
+                },
+                "excerpt": "Climate change brings about new complexities to consider for maintaining the wellbeing of society and the environment in cities. Natural resources, ecosystems, and existing infrastructure all must be monitored to ensure human quality of life remains high. Your challenge is to demonstrate how an urban planner can use NASA Earth observation data to develop smart strategies for city growth that maintain both the wellbeing of people and the environment. (Earth Science Division)",
+                "__typename": "ChallengePage"
+              },
+              "location": "aWQ6MzA2NjM=",
+              "locationDetails": {
+                "id": "aWQ6MzA2NjM=",
+                "title": "Uberlandia",
+                "displayName": "Uberlândia",
+                "meta": {
+                  "type": "LOCATION",
+                  "slug": "uberlandia",
+                  "firstPublishedAt": "2025-07-18T21:43:56.560298Z",
+                  "lastPublishedAt": "2025-08-22T19:13:44.047613Z",
+                  "relativeUrl": "/2025/local-events/uberlandia/",
+                  "live": true,
+                  "parent": null,
+                  "__typename": "ExpandedPageMeta"
+                },
+                "country": "Brazil",
+                "__typename": "LocationPage"
+              },
+              "event": "aWQ6Mw==",
+              "eventDetails": null,
+              "joinEnabled": true,
+              "memberships": null,
+              "nominationBadges": null,
+              "awardBadges": null
+            }
+          },
+          {
+            "__typename": "TeamPageEdge",
+            "cursor": "b2Zmc2V0OjU3",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6MzMyOTM=",
@@ -5433,8 +5811,8 @@
               "meta": {
                 "type": "TEAM",
                 "slug": "guinea-pigs",
-                "firstPublishedAt": "2025-08-28T18:37:20.154624Z",
-                "lastPublishedAt": "2025-08-29T17:37:15.031889Z",
+                "firstPublishedAt": "2025-08-28T18:37:20.154000Z",
+                "lastPublishedAt": "2025-09-29T23:12:37.147602Z",
                 "relativeUrl": "/2025/find-a-team/guinea-pigs/",
                 "live": true,
                 "parent": null,
@@ -5510,7 +5888,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjU0",
+            "cursor": "b2Zmc2V0OjU4",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6MzgxMTc=",
@@ -5614,7 +5992,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjU1",
+            "cursor": "b2Zmc2V0OjU5",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6MzQ3MDI=",
@@ -5718,7 +6096,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjU2",
+            "cursor": "b2Zmc2V0OjYw",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6MzIyNjI=",
@@ -5822,7 +6200,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjU3",
+            "cursor": "b2Zmc2V0OjYx",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6NDExOTA=",
@@ -5934,7 +6312,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjU4",
+            "cursor": "b2Zmc2V0OjYy",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6MzgwNzY=",
@@ -6019,7 +6397,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjU5",
+            "cursor": "b2Zmc2V0OjYz",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6NDQ3MTU=",
@@ -6028,7 +6406,7 @@
                 "type": "TEAM",
                 "slug": "ifteam",
                 "firstPublishedAt": "2025-09-29T22:38:21.795000Z",
-                "lastPublishedAt": "2025-09-29T22:50:07.729067Z",
+                "lastPublishedAt": "2025-09-29T23:59:13.561824Z",
                 "relativeUrl": "/2025/find-a-team/ifteam/",
                 "live": true,
                 "parent": null,
@@ -6134,7 +6512,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjYw",
+            "cursor": "b2Zmc2V0OjY0",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6NDA0NTY=",
@@ -6238,7 +6616,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjYx",
+            "cursor": "b2Zmc2V0OjY1",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6MzE2ODA=",
@@ -6246,8 +6624,8 @@
               "meta": {
                 "type": "TEAM",
                 "slug": "kultive-2025",
-                "firstPublishedAt": "2025-08-22T02:45:58.637777Z",
-                "lastPublishedAt": "2025-09-15T18:03:14.263158Z",
+                "firstPublishedAt": "2025-08-22T02:45:58.637000Z",
+                "lastPublishedAt": "2025-09-30T05:26:05.112643Z",
                 "relativeUrl": "/2025/find-a-team/kultive-2025/",
                 "live": true,
                 "parent": null,
@@ -6356,7 +6734,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjYy",
+            "cursor": "b2Zmc2V0OjY2",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6MzQ5MDk=",
@@ -6460,7 +6838,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjYz",
+            "cursor": "b2Zmc2V0OjY3",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6MzI4ODQ=",
@@ -6545,7 +6923,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjY0",
+            "cursor": "b2Zmc2V0OjY4",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6MzM4ODg=",
@@ -6630,7 +7008,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjY1",
+            "cursor": "b2Zmc2V0OjY5",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6MzYyMzQ=",
@@ -6745,7 +7123,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjY2",
+            "cursor": "b2Zmc2V0Ojcw",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6MzMwNDQ=",
@@ -6830,7 +7208,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjY3",
+            "cursor": "b2Zmc2V0Ojcx",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6MzE1MjA=",
@@ -6915,7 +7293,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjY4",
+            "cursor": "b2Zmc2V0Ojcy",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6MzI2NDg=",
@@ -7019,7 +7397,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjY5",
+            "cursor": "b2Zmc2V0Ojcz",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6MzYzMjQ=",
@@ -7104,7 +7482,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0Ojcw",
+            "cursor": "b2Zmc2V0Ojc0",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6NDEyMzE=",
@@ -7208,7 +7586,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0Ojcx",
+            "cursor": "b2Zmc2V0Ojc1",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6Mzg4ODg=",
@@ -7293,7 +7671,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0Ojcy",
+            "cursor": "b2Zmc2V0Ojc2",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6MzYwMTU=",
@@ -7397,7 +7775,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0Ojcz",
+            "cursor": "b2Zmc2V0Ojc3",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6NDE4NTc=",
@@ -7501,7 +7879,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0Ojc0",
+            "cursor": "b2Zmc2V0Ojc4",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6MzE1NzI=",
@@ -7586,7 +7964,111 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0Ojc1",
+            "cursor": "b2Zmc2V0Ojc5",
+            "node": {
+              "__typename": "TeamPage",
+              "id": "aWQ6NDU1OTM=",
+              "title": "Ô Lucas Hesse",
+              "meta": {
+                "type": "TEAM",
+                "slug": "o-lucas-hesse",
+                "firstPublishedAt": "2025-09-30T19:46:53.840000Z",
+                "lastPublishedAt": "2025-09-30T19:48:02.634472Z",
+                "relativeUrl": "/2025/find-a-team/o-lucas-hesse/",
+                "live": true,
+                "parent": null,
+                "__typename": "ExpandedPageMeta"
+              },
+              "owner": "aWQ6Mzg4MDUx",
+              "ownerDetails": null,
+              "excerpt": "Desde de mais novos somos apaixonados pelo espaço e astronomia em geral (e pelo Hesse), estamos aqui pela experiência e pelo conhecimento, sinta-se a vontade para entrar nesse time.Abraços e beijos do Lucas Hesse.",
+              "project": "aWQ6NDM0MDE=",
+              "projectDetails": {
+                "id": "aWQ6NDM0MDE=",
+                "name": "Project Ô Lucas Hesse",
+                "summary": "",
+                "demoLink": "",
+                "projectLink": "",
+                "details": "",
+                "solution": "",
+                "aiReferences": "",
+                "dataReferences": "",
+                "projectReferences": "",
+                "isSubmitted": false,
+                "savedAt": null,
+                "submittedAt": null,
+                "__typename": "Project"
+              },
+              "projectSubmitted": false,
+              "featuredImage": {
+                "id": "aWQ6MzQ4NzQ0",
+                "meta": {
+                  "type": "images.CustomImage",
+                  "downloadUrl": "https://assets.spaceappschallenge.org/media/original_images/hesse.jpg",
+                  "__typename": "ImageMeta"
+                },
+                "title": "team_image.19:30:19.264011",
+                "alt": "team_image.19:30:19.264011",
+                "caption": "team_image.19:30:19.264011",
+                "displaySize": "og",
+                "rendition": {
+                  "url": "https://assets.spaceappschallenge.org/media/images/hesse.2e16d0ba.fill-300x250.jpg",
+                  "fullUrl": "https://assets.spaceappschallenge.org/media/images/hesse.2e16d0ba.fill-300x250.jpg",
+                  "height": 250,
+                  "width": 300,
+                  "__typename": "BaseImage"
+                },
+                "__typename": "DefaultImage"
+              },
+              "description": null,
+              "desiredSkills": null,
+              "languages": null,
+              "challenge": "aWQ6MzEzMjM=",
+              "challengeDetails": {
+                "id": "aWQ6MzEzMjM=",
+                "title": "Stellar Stories: Space Weather Through the Eyes of Earthlings",
+                "meta": {
+                  "type": "CHALLENGE",
+                  "slug": "stellar-stories-space-weather-through-the-eyes-of-earthlings",
+                  "firstPublishedAt": "2025-08-18T19:28:39.841345Z",
+                  "lastPublishedAt": "2025-09-16T14:03:27.795474Z",
+                  "relativeUrl": "/2025/challenges/stellar-stories-space-weather-through-the-eyes-of-earthlings/",
+                  "live": true,
+                  "parent": null,
+                  "__typename": "ExpandedPageMeta"
+                },
+                "excerpt": "Although the Sun is 93 million miles away from our planet, solar activity can significantly impact our daily lives. “Space weather”—the variations that occur in the space environment between the Sun and Earth—can impact technologies in space and on Earth. Your challenge is to write and illustrate a digital children’s story that explains what space weather is and the varying impacts it has on different people such as farmers, pilots, astronauts, power grid operators, and the general public. You can tell the story from the perspective of a person impacted by space weather or from the point of view of a solar flare or coronal mass ejection (CME) as it approaches Earth. (Heliophysics Division)",
+                "__typename": "ChallengePage"
+              },
+              "location": "aWQ6MzA2NjM=",
+              "locationDetails": {
+                "id": "aWQ6MzA2NjM=",
+                "title": "Uberlandia",
+                "displayName": "Uberlândia",
+                "meta": {
+                  "type": "LOCATION",
+                  "slug": "uberlandia",
+                  "firstPublishedAt": "2025-07-18T21:43:56.560298Z",
+                  "lastPublishedAt": "2025-08-22T19:13:44.047613Z",
+                  "relativeUrl": "/2025/local-events/uberlandia/",
+                  "live": true,
+                  "parent": null,
+                  "__typename": "ExpandedPageMeta"
+                },
+                "country": "Brazil",
+                "__typename": "LocationPage"
+              },
+              "event": "aWQ6Mw==",
+              "eventDetails": null,
+              "joinEnabled": true,
+              "memberships": null,
+              "nominationBadges": null,
+              "awardBadges": null
+            }
+          },
+          {
+            "__typename": "TeamPageEdge",
+            "cursor": "b2Zmc2V0Ojgw",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6MzUyMjU=",
@@ -7671,7 +8153,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0Ojc2",
+            "cursor": "b2Zmc2V0Ojgx",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6NDAwMzA=",
@@ -7756,7 +8238,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0Ojc3",
+            "cursor": "b2Zmc2V0Ojgy",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6MzYxODA=",
@@ -7860,7 +8342,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0Ojc4",
+            "cursor": "b2Zmc2V0Ojgz",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6NDI3MTI=",
@@ -7945,7 +8427,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0Ojc5",
+            "cursor": "b2Zmc2V0Ojg0",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6MzcxNTI=",
@@ -8030,7 +8512,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0Ojgw",
+            "cursor": "b2Zmc2V0Ojg1",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6MzM1MjA=",
@@ -8039,7 +8521,7 @@
                 "type": "TEAM",
                 "slug": "plastic-busters",
                 "firstPublishedAt": "2025-08-29T23:11:48.968000Z",
-                "lastPublishedAt": "2025-09-24T19:37:56.858297Z",
+                "lastPublishedAt": "2025-09-30T19:05:23.770658Z",
                 "relativeUrl": "/2025/find-a-team/plastic-busters/",
                 "live": true,
                 "parent": null,
@@ -8153,7 +8635,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0Ojgx",
+            "cursor": "b2Zmc2V0Ojg2",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6NDI2NjI=",
@@ -8257,7 +8739,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0Ojgy",
+            "cursor": "b2Zmc2V0Ojg3",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6MzU5MzY=",
@@ -8361,7 +8843,111 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0Ojgz",
+            "cursor": "b2Zmc2V0Ojg4",
+            "node": {
+              "__typename": "TeamPage",
+              "id": "aWQ6NDQ3Njc=",
+              "title": "S.A.T : Sharks Analysis Team",
+              "meta": {
+                "type": "TEAM",
+                "slug": "sat-sharks-analysis-team",
+                "firstPublishedAt": "2025-09-30T01:07:08.229000Z",
+                "lastPublishedAt": "2025-09-30T01:07:21.395075Z",
+                "relativeUrl": "/2025/find-a-team/sat-sharks-analysis-team/",
+                "live": true,
+                "parent": null,
+                "__typename": "ExpandedPageMeta"
+              },
+              "owner": "aWQ6MzkwMzYx",
+              "ownerDetails": null,
+              "excerpt": "Equipe do IFTM - Campus Uberlândia Centro - Desafio Sharks from Space",
+              "project": "aWQ6NDI1NzU=",
+              "projectDetails": {
+                "id": "aWQ6NDI1NzU=",
+                "name": "Project S.A.T : Sharks Analysis Team",
+                "summary": "",
+                "demoLink": "",
+                "projectLink": "",
+                "details": "",
+                "solution": "",
+                "aiReferences": "",
+                "dataReferences": "",
+                "projectReferences": "",
+                "isSubmitted": false,
+                "savedAt": null,
+                "submittedAt": null,
+                "__typename": "Project"
+              },
+              "projectSubmitted": false,
+              "featuredImage": {
+                "id": "aWQ6MzQ1NjA5",
+                "meta": {
+                  "type": "images.CustomImage",
+                  "downloadUrl": "https://assets.spaceappschallenge.org/media/original_images/1000562449_kAfoHGH.jpg",
+                  "__typename": "ImageMeta"
+                },
+                "title": "team_image.01:07:07.497506",
+                "alt": "team_image.01:07:07.497506",
+                "caption": "team_image.01:07:07.497506",
+                "displaySize": "og",
+                "rendition": {
+                  "url": "https://assets.spaceappschallenge.org/media/images/1000562449_kAfoHGH.2e16d0ba.fill-300x250.jpg",
+                  "fullUrl": "https://assets.spaceappschallenge.org/media/images/1000562449_kAfoHGH.2e16d0ba.fill-300x250.jpg",
+                  "height": 250,
+                  "width": 300,
+                  "__typename": "BaseImage"
+                },
+                "__typename": "DefaultImage"
+              },
+              "description": null,
+              "desiredSkills": null,
+              "languages": null,
+              "challenge": "aWQ6MzEzMjI=",
+              "challengeDetails": {
+                "id": "aWQ6MzEzMjI=",
+                "title": "Sharks from Space",
+                "meta": {
+                  "type": "CHALLENGE",
+                  "slug": "sharks-from-space",
+                  "firstPublishedAt": "2025-08-18T19:28:39.744986Z",
+                  "lastPublishedAt": "2025-09-16T14:03:27.636764Z",
+                  "relativeUrl": "/2025/challenges/sharks-from-space/",
+                  "live": true,
+                  "parent": null,
+                  "__typename": "ExpandedPageMeta"
+                },
+                "excerpt": "Earth’s ocean is one of the most powerful habitats in our universe, supporting a range of life that sustains ecosystems and habitability across the globe. It is common to measure photosynthetic activity in the ocean from space, but far more challenging to track top predators. Your challenge is to create a mathematical framework for identifying sharks and predicting their foraging habitats using NASA satellite data, and also to suggest a new conceptual model of a tag (a small electronic device that can be attached to an animal to track and study its movement) that could measure not only where sharks are, but also what they are eating, and in real time transmit that data back to users to enable development of predictive models. (Earth Science Division)",
+                "__typename": "ChallengePage"
+              },
+              "location": "aWQ6MzA2NjM=",
+              "locationDetails": {
+                "id": "aWQ6MzA2NjM=",
+                "title": "Uberlandia",
+                "displayName": "Uberlândia",
+                "meta": {
+                  "type": "LOCATION",
+                  "slug": "uberlandia",
+                  "firstPublishedAt": "2025-07-18T21:43:56.560298Z",
+                  "lastPublishedAt": "2025-08-22T19:13:44.047613Z",
+                  "relativeUrl": "/2025/local-events/uberlandia/",
+                  "live": true,
+                  "parent": null,
+                  "__typename": "ExpandedPageMeta"
+                },
+                "country": "Brazil",
+                "__typename": "LocationPage"
+              },
+              "event": "aWQ6Mw==",
+              "eventDetails": null,
+              "joinEnabled": true,
+              "memberships": null,
+              "nominationBadges": null,
+              "awardBadges": null
+            }
+          },
+          {
+            "__typename": "TeamPageEdge",
+            "cursor": "b2Zmc2V0Ojg5",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6MzE1MDU=",
@@ -8468,7 +9054,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0Ojg0",
+            "cursor": "b2Zmc2V0Ojkw",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6MzQ3Mzc=",
@@ -8572,7 +9158,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0Ojg1",
+            "cursor": "b2Zmc2V0Ojkx",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6MzU3NzA=",
@@ -8676,7 +9262,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0Ojg2",
+            "cursor": "b2Zmc2V0Ojky",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6MzQ4NTU=",
@@ -8764,7 +9350,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0Ojg3",
+            "cursor": "b2Zmc2V0Ojkz",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6MzI3MjA=",
@@ -8868,7 +9454,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0Ojg4",
+            "cursor": "b2Zmc2V0Ojk0",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6MzM2Mzg=",
@@ -8953,7 +9539,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0Ojg5",
+            "cursor": "b2Zmc2V0Ojk1",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6NDI0ODE=",
@@ -8962,7 +9548,7 @@
                 "type": "TEAM",
                 "slug": "spaceguard",
                 "firstPublishedAt": "2025-09-26T19:53:29.129000Z",
-                "lastPublishedAt": "2025-09-27T18:01:02.652781Z",
+                "lastPublishedAt": "2025-09-30T16:51:53.511735Z",
                 "relativeUrl": "/2025/find-a-team/spaceguard/",
                 "live": true,
                 "parent": null,
@@ -9057,7 +9643,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0Ojkw",
+            "cursor": "b2Zmc2V0Ojk2",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6NDQ3MDM=",
@@ -9161,7 +9747,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0Ojkx",
+            "cursor": "b2Zmc2V0Ojk3",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6MzM2MzM=",
@@ -9246,7 +9832,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0Ojky",
+            "cursor": "b2Zmc2V0Ojk4",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6Mzg0ODQ=",
@@ -9331,7 +9917,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0Ojkz",
+            "cursor": "b2Zmc2V0Ojk5",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6NDI3MjU=",
@@ -9446,7 +10032,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0Ojk0",
+            "cursor": "b2Zmc2V0OjEwMA==",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6NDIwMDY=",
@@ -9550,7 +10136,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0Ojk1",
+            "cursor": "b2Zmc2V0OjEwMQ==",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6NDA3MjI=",
@@ -9654,7 +10240,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0Ojk2",
+            "cursor": "b2Zmc2V0OjEwMg==",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6MzIwMTc=",
@@ -9739,7 +10325,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0Ojk3",
+            "cursor": "b2Zmc2V0OjEwMw==",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6MzI2MDc=",
@@ -9843,7 +10429,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0Ojk4",
+            "cursor": "b2Zmc2V0OjEwNA==",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6MzgyNzg=",
@@ -9928,7 +10514,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0Ojk5",
+            "cursor": "b2Zmc2V0OjEwNQ==",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6MzkwMzM=",
@@ -10032,7 +10618,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjEwMA==",
+            "cursor": "b2Zmc2V0OjEwNg==",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6MzI2MzE=",
@@ -10147,7 +10733,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjEwMQ==",
+            "cursor": "b2Zmc2V0OjEwNw==",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6NDE4NTY=",
@@ -10251,7 +10837,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjEwMg==",
+            "cursor": "b2Zmc2V0OjEwOA==",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6NDE1OTQ=",
@@ -10259,8 +10845,8 @@
               "meta": {
                 "type": "TEAM",
                 "slug": "the-of-blacks",
-                "firstPublishedAt": "2025-09-26T12:10:52.909175Z",
-                "lastPublishedAt": "2025-09-26T12:10:52.909175Z",
+                "firstPublishedAt": "2025-09-26T12:10:52.909000Z",
+                "lastPublishedAt": "2025-09-30T16:19:59.611760Z",
                 "relativeUrl": "/2025/find-a-team/the-of-blacks/",
                 "live": true,
                 "parent": null,
@@ -10268,7 +10854,7 @@
               },
               "owner": "aWQ6NDM4OTI0",
               "ownerDetails": null,
-              "excerpt": "NOS SOMOS UMA EQUIPE QUE ESTAMOS PRONTOS PARA O NOSSO DESAFIO ESTAMOS PRONTOS PARA RECEBER E RESOLVER OS DESAFIOS",
+              "excerpt": "NOS SOMOS UM GRUPO DE COLEGAS PRONTOS PARA O NOSSO DESAFIO ESTAMOS PRONTOS PARA RECEBER E RESOLVER os problemas propostos pela a nasa com clareza dedicação e foco tambem estamos prontos para fazer a melhor solução dos melhores jeitos possiveis que...",
               "project": "aWQ6Mzk0MDI=",
               "projectDetails": {
                 "id": "aWQ6Mzk0MDI=",
@@ -10355,7 +10941,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjEwMw==",
+            "cursor": "b2Zmc2V0OjEwOQ==",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6NDM3MDg=",
@@ -10440,7 +11026,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjEwNA==",
+            "cursor": "b2Zmc2V0OjExMA==",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6MzQ1MTc=",
@@ -10559,7 +11145,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjEwNQ==",
+            "cursor": "b2Zmc2V0OjExMQ==",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6MzM0OTg=",
@@ -10663,7 +11249,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjEwNg==",
+            "cursor": "b2Zmc2V0OjExMg==",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6MzMwNjA=",
@@ -10767,7 +11353,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjEwNw==",
+            "cursor": "b2Zmc2V0OjExMw==",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6MzM4MTM=",
@@ -10871,7 +11457,127 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjEwOA==",
+            "cursor": "b2Zmc2V0OjExNA==",
+            "node": {
+              "__typename": "TeamPage",
+              "id": "aWQ6NDQ4MTI=",
+              "title": "Urbmind",
+              "meta": {
+                "type": "TEAM",
+                "slug": "urbmind",
+                "firstPublishedAt": "2025-09-30T03:02:39.686000Z",
+                "lastPublishedAt": "2025-09-30T14:10:42.809808Z",
+                "relativeUrl": "/2025/find-a-team/urbmind/",
+                "live": true,
+                "parent": null,
+                "__typename": "ExpandedPageMeta"
+              },
+              "owner": "aWQ6MzgwMjg4",
+              "ownerDetails": null,
+              "excerpt": "Our diverse team brings together three passionate developers, a legal professional, a UI/UX designer, and a data analyst all united as technology enthusiasts and lifelong learners. As professionals and students, we're committed to making a meaning...",
+              "project": "aWQ6NDI2MjA=",
+              "projectDetails": {
+                "id": "aWQ6NDI2MjA=",
+                "name": "Project Urbmind",
+                "summary": "",
+                "demoLink": "",
+                "projectLink": "",
+                "details": "",
+                "solution": "",
+                "aiReferences": "",
+                "dataReferences": "",
+                "projectReferences": "",
+                "isSubmitted": false,
+                "savedAt": null,
+                "submittedAt": null,
+                "__typename": "Project"
+              },
+              "projectSubmitted": false,
+              "featuredImage": {
+                "id": "aWQ6MzQ1Nzky",
+                "meta": {
+                  "type": "images.CustomImage",
+                  "downloadUrl": "https://assets.spaceappschallenge.org/media/original_images/Frame_4_1.jpg",
+                  "__typename": "ImageMeta"
+                },
+                "title": "team_image.03:06:25.639277",
+                "alt": "team_image.03:06:25.639277",
+                "caption": "team_image.03:06:25.639277",
+                "displaySize": "og",
+                "rendition": {
+                  "url": "https://assets.spaceappschallenge.org/media/images/Frame_4_1.2e16d0ba.fill-300x250.jpg",
+                  "fullUrl": "https://assets.spaceappschallenge.org/media/images/Frame_4_1.2e16d0ba.fill-300x250.jpg",
+                  "height": 250,
+                  "width": 300,
+                  "__typename": "BaseImage"
+                },
+                "__typename": "DefaultImage"
+              },
+              "description": null,
+              "desiredSkills": [
+                "Software",
+                "Coding",
+                "Web Development",
+                "Earth Science",
+                "Data Analysis",
+                "Data Visualization",
+                "Statistics",
+                "Design",
+                "Education",
+                "Disaster Response",
+                "Satellites",
+                "Weather"
+              ],
+              "languages": [
+                "Portuguese",
+                "English"
+              ],
+              "challenge": "aWQ6MzEzMTc=",
+              "challengeDetails": {
+                "id": "aWQ6MzEzMTc=",
+                "title": "Data Pathways to Healthy Cities and Human Settlements",
+                "meta": {
+                  "type": "CHALLENGE",
+                  "slug": "data-pathways-to-healthy-cities-and-human-settlements",
+                  "firstPublishedAt": "2025-08-18T19:28:39.255477Z",
+                  "lastPublishedAt": "2025-09-16T14:03:26.860012Z",
+                  "relativeUrl": "/2025/challenges/data-pathways-to-healthy-cities-and-human-settlements/",
+                  "live": true,
+                  "parent": null,
+                  "__typename": "ExpandedPageMeta"
+                },
+                "excerpt": "Climate change brings about new complexities to consider for maintaining the wellbeing of society and the environment in cities. Natural resources, ecosystems, and existing infrastructure all must be monitored to ensure human quality of life remains high. Your challenge is to demonstrate how an urban planner can use NASA Earth observation data to develop smart strategies for city growth that maintain both the wellbeing of people and the environment. (Earth Science Division)",
+                "__typename": "ChallengePage"
+              },
+              "location": "aWQ6MzA2NjM=",
+              "locationDetails": {
+                "id": "aWQ6MzA2NjM=",
+                "title": "Uberlandia",
+                "displayName": "Uberlândia",
+                "meta": {
+                  "type": "LOCATION",
+                  "slug": "uberlandia",
+                  "firstPublishedAt": "2025-07-18T21:43:56.560298Z",
+                  "lastPublishedAt": "2025-08-22T19:13:44.047613Z",
+                  "relativeUrl": "/2025/local-events/uberlandia/",
+                  "live": true,
+                  "parent": null,
+                  "__typename": "ExpandedPageMeta"
+                },
+                "country": "Brazil",
+                "__typename": "LocationPage"
+              },
+              "event": "aWQ6Mw==",
+              "eventDetails": null,
+              "joinEnabled": true,
+              "memberships": null,
+              "nominationBadges": null,
+              "awardBadges": null
+            }
+          },
+          {
+            "__typename": "TeamPageEdge",
+            "cursor": "b2Zmc2V0OjExNQ==",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6MzkwNDE=",
@@ -10880,7 +11586,7 @@
                 "type": "TEAM",
                 "slug": "voyiager",
                 "firstPublishedAt": "2025-09-20T01:49:16.861000Z",
-                "lastPublishedAt": "2025-09-29T10:54:13.278881Z",
+                "lastPublishedAt": "2025-09-30T17:22:01.502935Z",
                 "relativeUrl": "/2025/find-a-team/voyiager/",
                 "live": true,
                 "parent": null,
@@ -10888,7 +11594,7 @@
               },
               "owner": "aWQ6NDE5MTIx",
               "ownerDetails": null,
-              "excerpt": "Somos estudantes de Engenharia de Computação da UNIUBE, apaixonados por tecnologia e ciência. Temos experiência em Python, IA/ML, análise de dados, design e desenvolvimento web. No desafio “A World Away: Hunting for Exoplanets with AI”, buscamos a...",
+              "excerpt": "Somos estudantes de Engenharia de Computação, apaixonados por tecnologia e ciência. Temos experiência em Python, IA/ML, análise de dados, design e desenvolvimento web. No desafio “A World Away: Hunting for Exoplanets with AI”, buscamos aplicar apr...",
               "project": "aWQ6MzY4NDk=",
               "projectDetails": {
                 "id": "aWQ6MzY4NDk=",
@@ -10975,7 +11681,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjEwOQ==",
+            "cursor": "b2Zmc2V0OjExNg==",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6NDA2ODg=",
@@ -11079,7 +11785,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjExMA==",
+            "cursor": "b2Zmc2V0OjExNw==",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6MzQyNTk=",
@@ -11201,7 +11907,111 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjExMQ==",
+            "cursor": "b2Zmc2V0OjExOA==",
+            "node": {
+              "__typename": "TeamPage",
+              "id": "aWQ6NDUxNjA=",
+              "title": "X-bacon espacial",
+              "meta": {
+                "type": "TEAM",
+                "slug": "x-bacon-espacial",
+                "firstPublishedAt": "2025-09-30T11:54:59.285000Z",
+                "lastPublishedAt": "2025-09-30T12:50:14.553892Z",
+                "relativeUrl": "/2025/find-a-team/x-bacon-espacial/",
+                "live": true,
+                "parent": null,
+                "__typename": "ExpandedPageMeta"
+              },
+              "owner": "aWQ6Mzc4Mzgx",
+              "ownerDetails": null,
+              "excerpt": "Somos uma equipe participante do NASA Space Apps Challenge e escolhemos o desafio do tubarão.",
+              "project": "aWQ6NDI5Njg=",
+              "projectDetails": {
+                "id": "aWQ6NDI5Njg=",
+                "name": "Project X-bacon espacial",
+                "summary": "",
+                "demoLink": "",
+                "projectLink": "",
+                "details": "",
+                "solution": "",
+                "aiReferences": "",
+                "dataReferences": "",
+                "projectReferences": "",
+                "isSubmitted": false,
+                "savedAt": null,
+                "submittedAt": null,
+                "__typename": "Project"
+              },
+              "projectSubmitted": false,
+              "featuredImage": {
+                "id": "aWQ6MzQ3MDQ3",
+                "meta": {
+                  "type": "images.CustomImage",
+                  "downloadUrl": "https://assets.spaceappschallenge.org/media/original_images/meow.jpg",
+                  "__typename": "ImageMeta"
+                },
+                "title": "team_image.11:54:58.578199",
+                "alt": "team_image.11:54:58.578199",
+                "caption": "team_image.11:54:58.578199",
+                "displaySize": "og",
+                "rendition": {
+                  "url": "https://assets.spaceappschallenge.org/media/images/meow.2e16d0ba.fill-300x250.jpg",
+                  "fullUrl": "https://assets.spaceappschallenge.org/media/images/meow.2e16d0ba.fill-300x250.jpg",
+                  "height": 250,
+                  "width": 300,
+                  "__typename": "BaseImage"
+                },
+                "__typename": "DefaultImage"
+              },
+              "description": null,
+              "desiredSkills": null,
+              "languages": null,
+              "challenge": "aWQ6MzEzMjI=",
+              "challengeDetails": {
+                "id": "aWQ6MzEzMjI=",
+                "title": "Sharks from Space",
+                "meta": {
+                  "type": "CHALLENGE",
+                  "slug": "sharks-from-space",
+                  "firstPublishedAt": "2025-08-18T19:28:39.744986Z",
+                  "lastPublishedAt": "2025-09-16T14:03:27.636764Z",
+                  "relativeUrl": "/2025/challenges/sharks-from-space/",
+                  "live": true,
+                  "parent": null,
+                  "__typename": "ExpandedPageMeta"
+                },
+                "excerpt": "Earth’s ocean is one of the most powerful habitats in our universe, supporting a range of life that sustains ecosystems and habitability across the globe. It is common to measure photosynthetic activity in the ocean from space, but far more challenging to track top predators. Your challenge is to create a mathematical framework for identifying sharks and predicting their foraging habitats using NASA satellite data, and also to suggest a new conceptual model of a tag (a small electronic device that can be attached to an animal to track and study its movement) that could measure not only where sharks are, but also what they are eating, and in real time transmit that data back to users to enable development of predictive models. (Earth Science Division)",
+                "__typename": "ChallengePage"
+              },
+              "location": "aWQ6MzA2NjM=",
+              "locationDetails": {
+                "id": "aWQ6MzA2NjM=",
+                "title": "Uberlandia",
+                "displayName": "Uberlândia",
+                "meta": {
+                  "type": "LOCATION",
+                  "slug": "uberlandia",
+                  "firstPublishedAt": "2025-07-18T21:43:56.560298Z",
+                  "lastPublishedAt": "2025-08-22T19:13:44.047613Z",
+                  "relativeUrl": "/2025/local-events/uberlandia/",
+                  "live": true,
+                  "parent": null,
+                  "__typename": "ExpandedPageMeta"
+                },
+                "country": "Brazil",
+                "__typename": "LocationPage"
+              },
+              "event": "aWQ6Mw==",
+              "eventDetails": null,
+              "joinEnabled": true,
+              "memberships": null,
+              "nominationBadges": null,
+              "awardBadges": null
+            }
+          },
+          {
+            "__typename": "TeamPageEdge",
+            "cursor": "b2Zmc2V0OjExOQ==",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6NDQ3MDk=",
@@ -11210,7 +12020,7 @@
                 "type": "TEAM",
                 "slug": "xbigdevs",
                 "firstPublishedAt": "2025-09-29T22:23:29.404000Z",
-                "lastPublishedAt": "2025-09-29T22:46:32.481027Z",
+                "lastPublishedAt": "2025-09-30T19:25:29.967187Z",
                 "relativeUrl": "/2025/find-a-team/xbigdevs/",
                 "live": true,
                 "parent": null,
@@ -11238,21 +12048,21 @@
               },
               "projectSubmitted": false,
               "featuredImage": {
-                "id": "aWQ6MzQ1NDE3",
+                "id": "aWQ6MzQ4NDIw",
                 "meta": {
                   "type": "images.CustomImage",
-                  "downloadUrl": "https://assets.spaceappschallenge.org/media/original_images/api-v1.1-file-public-files-pim-assets-97-ad-84-62-6284ad972eff292d45ce1a_d4EB3Cv.jpg",
+                  "downloadUrl": "https://assets.spaceappschallenge.org/media/original_images/7dcd36cb2d417616314921a2419fe4b9.jpg",
                   "__typename": "ImageMeta"
                 },
-                "title": "team_image.22:21:00.798999",
-                "alt": "team_image.22:21:00.798999",
-                "caption": "team_image.22:21:00.798999",
+                "title": "team_image.17:55:34.980533",
+                "alt": "team_image.17:55:34.980533",
+                "caption": "team_image.17:55:34.980533",
                 "displaySize": "og",
                 "rendition": {
-                  "url": "https://assets.spaceappschallenge.org/media/images/api-v1.1-file-public-files-pim-ass.2e16d0ba.fill-300x250.jpg",
-                  "fullUrl": "https://assets.spaceappschallenge.org/media/images/api-v1.1-file-public-files-pim-ass.2e16d0ba.fill-300x250.jpg",
-                  "height": 250,
-                  "width": 300,
+                  "url": "https://assets.spaceappschallenge.org/media/images/7dcd36cb2d417616314921a2419fe4b9.2e16d0ba.fill-300x250.jpg",
+                  "fullUrl": "https://assets.spaceappschallenge.org/media/images/7dcd36cb2d417616314921a2419fe4b9.2e16d0ba.fill-300x250.jpg",
+                  "height": 189,
+                  "width": 225,
                   "__typename": "BaseImage"
                 },
                 "__typename": "DefaultImage"
@@ -11305,7 +12115,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjExMg==",
+            "cursor": "b2Zmc2V0OjEyMA==",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6MzMyNDM=",
