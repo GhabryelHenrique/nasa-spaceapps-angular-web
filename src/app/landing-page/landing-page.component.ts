@@ -14,7 +14,6 @@ import { TeamsService } from '../services/teams.service';
   imports: [
     CommonModule,
     RouterModule,
-    HeaderComponent,
     HeroSectionComponent,
     UberlandiaHighlightsComponent,
     EventInfoTabsComponent,
@@ -148,14 +147,7 @@ export class LandingPageComponent implements OnInit, OnDestroy {
       description: 'Infraestrutura, parcerias, geração de oportunidades e apoiadores.',
       photo: 'assets/organizers/image.png',
       url: 'https://www.instagram.com/bia.neves'
-    },
-    {
-      name: 'Eduarda',
-      role: 'Iniciativa Meninas Tech',
-      description: 'Promove a presença feminina no Space Apps em todos os aspectos.',
-      photo: 'https://media.licdn.com/dms/image/v2/D4D03AQE29YklVx-1UQ/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1724866739948?e=1758153600&v=beta&t=CnHmdtE39j6yUGxpVPmABZM_1Raajceo7PjLHcBn1NQ',
-      url: 'https://www.instagram.com/maismeninastech'
-    },
+    }
   ];
 
   trackByName(index: number, organizer: any): string {
