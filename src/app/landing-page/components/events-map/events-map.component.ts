@@ -68,11 +68,11 @@ eventLocations: EventLocation[] = [
     title: 'Colégio Nacional',
     info: 'Espaço voltado para os alunos do Colégio Nacional. Atividades internas relacionadas ao hackathon e desafios.'
   },
-  {
-    position: { lat: -18.904775, lng: -48.277169 },
-    title: 'Colégio Batista Mineiro',
-    info: 'Espaço de apoio voltado para alunos do Batista. Atividades complementares ao evento principal.'
-  },
+  // {
+  //   position: { lat: -18.904775, lng: -48.277169 },
+  //   title: 'Colégio Batista Mineiro',
+  //   info: 'Espaço de apoio voltado para alunos do Batista. Atividades complementares ao evento principal.'
+  // },
   {
     position: { lat: -18.880390063328278, lng: -48.24725858916541 },
     title: 'Colégio Ann Mackenzie',
