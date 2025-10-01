@@ -56,7 +56,7 @@
                     type="tel"
                     id="phoneNumber"
                     formControlName="phoneNumber"
-                    placeholder="(00) 00000-0000"
+                    placeholder="+5500000000000"
                     [class.error]="profileForm.get('phoneNumber')?.invalid && profileForm.get('phoneNumber')?.touched">
                   <div class="error-message" *ngIf="profileForm.get('phoneNumber')?.invalid && profileForm.get('phoneNumber')?.touched">
                     <span *ngIf="profileForm.get('phoneNumber')?.errors?.['required']">Telefone é obrigatório</span>
