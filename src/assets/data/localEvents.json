@@ -13847,7 +13847,7 @@
           "country": "Brazil",
           "displayName": "Campina Grande",
           "cachedRegistrations": 39,
-          "eventType": "Virtual",
+          "eventType": "Virtual & In-Person",
           "registrationEnabled": true,
           "isHostEvent": false,
           "__typename": "LocationPage"
