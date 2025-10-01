@@ -337,7 +337,7 @@ export class TeamsService {
           teams: {
             pageInfo: realApiResponse.data[0].teams.pageInfo,
             totalCount: filteredEdges.length,
-            edges: filteredEdges.slice(0, first) as any,
+            edges: filteredEdges as any,
           },
         },
       ],
