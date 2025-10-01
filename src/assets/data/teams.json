@@ -6,10 +6,10 @@
           "hasPreviousPage": false,
           "hasNextPage": false,
           "startCursor": "b2Zmc2V0OjA=",
-          "endCursor": "b2Zmc2V0OjEyNA==",
+          "endCursor": "b2Zmc2V0OjEyNw==",
           "__typename": "PageInfo"
         },
-        "totalCount": 125,
+        "totalCount": 128,
         "edges": [
           {
             "__typename": "TeamPageEdge",
@@ -229,8 +229,8 @@
               "meta": {
                 "type": "TEAM",
                 "slug": "404-houston-we-have-a-bug",
-                "firstPublishedAt": "2025-10-01T11:05:04.424010Z",
-                "lastPublishedAt": "2025-10-01T11:05:04.424010Z",
+                "firstPublishedAt": "2025-10-01T11:05:04.424000Z",
+                "lastPublishedAt": "2025-10-01T20:38:11.113101Z",
                 "relativeUrl": "/2025/find-a-team/404-houston-we-have-a-bug/",
                 "live": true,
                 "parent": null,
@@ -646,7 +646,7 @@
                 "type": "TEAM",
                 "slug": "alphaearth",
                 "firstPublishedAt": "2025-10-01T12:17:52.616000Z",
-                "lastPublishedAt": "2025-10-01T12:50:01.051276Z",
+                "lastPublishedAt": "2025-10-01T19:02:58.904933Z",
                 "relativeUrl": "/2025/find-a-team/alphaearth/",
                 "live": true,
                 "parent": null,
@@ -654,7 +654,7 @@
               },
               "owner": "aWQ6NDQ0MTYx",
               "ownerDetails": null,
-              "excerpt": "Nos somos um bando de idiota que sabem o básico de programaçao e um objetivo de vencer pelo menos um desafio. Se tu se achar competente é so entrar que vai ser divertido.",
+              "excerpt": "Nós somos um bando de idiota que sabe o básico de programaçao e um objetivo de vencer pelo menos um desafio. Se você achar competente entao é só entrar que vai ser divertido.",
               "project": "aWQ6NDM4ODg=",
               "projectDetails": {
                 "id": "aWQ6NDM4ODg=",
@@ -694,8 +694,16 @@
                 "__typename": "DefaultImage"
               },
               "description": null,
-              "desiredSkills": null,
-              "languages": null,
+              "desiredSkills": [
+                "Design",
+                "Education",
+                "Games",
+                "Graphic Design",
+                "Hardware"
+              ],
+              "languages": [
+                "Portuguese"
+              ],
               "challenge": "aWQ6MzEzMjM=",
               "challengeDetails": {
                 "id": "aWQ6MzEzMjM=",
@@ -749,8 +757,8 @@
               "meta": {
                 "type": "TEAM",
                 "slug": "alpha-mackenzie",
-                "firstPublishedAt": "2025-09-30T01:27:05.522085Z",
-                "lastPublishedAt": "2025-09-30T01:27:05.522085Z",
+                "firstPublishedAt": "2025-09-30T01:27:05.522000Z",
+                "lastPublishedAt": "2025-10-01T22:07:24.275858Z",
                 "relativeUrl": "/2025/find-a-team/alpha-mackenzie/",
                 "live": true,
                 "parent": null,
@@ -1231,8 +1239,8 @@
               "meta": {
                 "type": "TEAM",
                 "slug": "asteroid-watchers",
-                "firstPublishedAt": "2025-09-08T23:09:08.170733Z",
-                "lastPublishedAt": "2025-09-15T18:05:16.649188Z",
+                "firstPublishedAt": "2025-09-08T23:09:08.170000Z",
+                "lastPublishedAt": "2025-10-01T19:46:40.892701Z",
                 "relativeUrl": "/2025/find-a-team/asteroid-watchers/",
                 "live": true,
                 "parent": null,
@@ -2214,8 +2222,8 @@
               "meta": {
                 "type": "TEAM",
                 "slug": "bitgirls",
-                "firstPublishedAt": null,
-                "lastPublishedAt": null,
+                "firstPublishedAt": "2025-10-01T19:09:39.695000Z",
+                "lastPublishedAt": "2025-10-01T19:33:44.672480Z",
                 "relativeUrl": "/2025/find-a-team/bitgirls/",
                 "live": true,
                 "parent": null,
@@ -2244,7 +2252,13 @@
               "projectSubmitted": false,
               "featuredImage": null,
               "description": null,
-              "desiredSkills": null,
+              "desiredSkills": [
+                "Web Development",
+                "Graphic Design",
+                "Writing & Communications",
+                "Design",
+                "Education"
+              ],
               "languages": null,
               "challenge": "aWQ6MzEzMTQ=",
               "challengeDetails": {
@@ -2283,7 +2297,7 @@
               },
               "event": "aWQ6Mw==",
               "eventDetails": null,
-              "joinEnabled": false,
+              "joinEnabled": true,
               "memberships": null,
               "nominationBadges": null,
               "awardBadges": null
@@ -5910,6 +5924,91 @@
             "cursor": "b2Zmc2V0OjU4",
             "node": {
               "__typename": "TeamPage",
+              "id": "aWQ6NDY1OTM=",
+              "title": "GEPITronautas",
+              "meta": {
+                "type": "TEAM",
+                "slug": "gepitronautas",
+                "firstPublishedAt": null,
+                "lastPublishedAt": null,
+                "relativeUrl": "/2025/find-a-team/gepitronautas/",
+                "live": true,
+                "parent": null,
+                "__typename": "ExpandedPageMeta"
+              },
+              "owner": "aWQ6NDAwMTk1",
+              "ownerDetails": null,
+              "excerpt": "Pesquisador de Iniciação Científica na Universidade Federal de Uberlândia, desenvolvimento de projetos sobre Inteligência Artificial, experiência em robótica e programação em C++.",
+              "project": "aWQ6NDQzOTc=",
+              "projectDetails": {
+                "id": "aWQ6NDQzOTc=",
+                "name": "Project GEPITronautas",
+                "summary": "",
+                "demoLink": "",
+                "projectLink": "",
+                "details": "",
+                "solution": "",
+                "aiReferences": "",
+                "dataReferences": "",
+                "projectReferences": "",
+                "isSubmitted": false,
+                "savedAt": null,
+                "submittedAt": null,
+                "__typename": "Project"
+              },
+              "projectSubmitted": false,
+              "featuredImage": null,
+              "description": null,
+              "desiredSkills": null,
+              "languages": null,
+              "challenge": "aWQ6MzEzMTc=",
+              "challengeDetails": {
+                "id": "aWQ6MzEzMTc=",
+                "title": "Data Pathways to Healthy Cities and Human Settlements",
+                "meta": {
+                  "type": "CHALLENGE",
+                  "slug": "data-pathways-to-healthy-cities-and-human-settlements",
+                  "firstPublishedAt": "2025-08-18T19:28:39.255477Z",
+                  "lastPublishedAt": "2025-09-16T14:03:26.860012Z",
+                  "relativeUrl": "/2025/challenges/data-pathways-to-healthy-cities-and-human-settlements/",
+                  "live": true,
+                  "parent": null,
+                  "__typename": "ExpandedPageMeta"
+                },
+                "excerpt": "Climate change brings about new complexities to consider for maintaining the wellbeing of society and the environment in cities. Natural resources, ecosystems, and existing infrastructure all must be monitored to ensure human quality of life remains high. Your challenge is to demonstrate how an urban planner can use NASA Earth observation data to develop smart strategies for city growth that maintain both the wellbeing of people and the environment. (Earth Science Division)",
+                "__typename": "ChallengePage"
+              },
+              "location": "aWQ6MzA2NjM=",
+              "locationDetails": {
+                "id": "aWQ6MzA2NjM=",
+                "title": "Uberlandia",
+                "displayName": "Uberlândia",
+                "meta": {
+                  "type": "LOCATION",
+                  "slug": "uberlandia",
+                  "firstPublishedAt": "2025-07-18T21:43:56.560298Z",
+                  "lastPublishedAt": "2025-08-22T19:13:44.047613Z",
+                  "relativeUrl": "/2025/local-events/uberlandia/",
+                  "live": true,
+                  "parent": null,
+                  "__typename": "ExpandedPageMeta"
+                },
+                "country": "Brazil",
+                "__typename": "LocationPage"
+              },
+              "event": "aWQ6Mw==",
+              "eventDetails": null,
+              "joinEnabled": false,
+              "memberships": null,
+              "nominationBadges": null,
+              "awardBadges": null
+            }
+          },
+          {
+            "__typename": "TeamPageEdge",
+            "cursor": "b2Zmc2V0OjU5",
+            "node": {
+              "__typename": "TeamPage",
               "id": "aWQ6NDU0MzI=",
               "title": "Guardians of the city",
               "meta": {
@@ -6011,7 +6110,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjU5",
+            "cursor": "b2Zmc2V0OjYw",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6MzMyOTM=",
@@ -6096,7 +6195,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjYw",
+            "cursor": "b2Zmc2V0OjYx",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6MzgxMTc=",
@@ -6200,7 +6299,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjYx",
+            "cursor": "b2Zmc2V0OjYy",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6MzQ3MDI=",
@@ -6304,7 +6403,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjYy",
+            "cursor": "b2Zmc2V0OjYz",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6MzIyNjI=",
@@ -6408,7 +6507,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjYz",
+            "cursor": "b2Zmc2V0OjY0",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6NDExOTA=",
@@ -6520,7 +6619,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjY0",
+            "cursor": "b2Zmc2V0OjY1",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6MzgwNzY=",
@@ -6605,7 +6704,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjY1",
+            "cursor": "b2Zmc2V0OjY2",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6NDQ3MTU=",
@@ -6720,7 +6819,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjY2",
+            "cursor": "b2Zmc2V0OjY3",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6NDA0NTY=",
@@ -6824,7 +6923,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjY3",
+            "cursor": "b2Zmc2V0OjY4",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6MzE2ODA=",
@@ -6942,7 +7041,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjY4",
+            "cursor": "b2Zmc2V0OjY5",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6MzQ5MDk=",
@@ -7046,7 +7145,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjY5",
+            "cursor": "b2Zmc2V0Ojcw",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6MzI4ODQ=",
@@ -7131,7 +7230,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0Ojcw",
+            "cursor": "b2Zmc2V0Ojcx",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6MzM4ODg=",
@@ -7216,7 +7315,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0Ojcx",
+            "cursor": "b2Zmc2V0Ojcy",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6MzYyMzQ=",
@@ -7331,7 +7430,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0Ojcy",
+            "cursor": "b2Zmc2V0Ojcz",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6MzMwNDQ=",
@@ -7416,7 +7515,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0Ojcz",
+            "cursor": "b2Zmc2V0Ojc0",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6MzE1MjA=",
@@ -7501,7 +7600,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0Ojc0",
+            "cursor": "b2Zmc2V0Ojc1",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6MzI2NDg=",
@@ -7605,7 +7704,92 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0Ojc1",
+            "cursor": "b2Zmc2V0Ojc2",
+            "node": {
+              "__typename": "TeamPage",
+              "id": "aWQ6NDY3NjY=",
+              "title": "Missão Horizonte",
+              "meta": {
+                "type": "TEAM",
+                "slug": "missao-horizonte",
+                "firstPublishedAt": "2025-10-01T21:42:26.072000Z",
+                "lastPublishedAt": "2025-10-01T21:49:52.984765Z",
+                "relativeUrl": "/2025/find-a-team/missao-horizonte/",
+                "live": true,
+                "parent": null,
+                "__typename": "ExpandedPageMeta"
+              },
+              "owner": "aWQ6NDA1OTIw",
+              "ownerDetails": null,
+              "excerpt": "🤷🏻‍♀️♻️👍🏻",
+              "project": "aWQ6NDQ1NzA=",
+              "projectDetails": {
+                "id": "aWQ6NDQ1NzA=",
+                "name": "Project Missão Horizonte",
+                "summary": "",
+                "demoLink": "",
+                "projectLink": "",
+                "details": "",
+                "solution": "",
+                "aiReferences": "",
+                "dataReferences": "",
+                "projectReferences": "",
+                "isSubmitted": false,
+                "savedAt": null,
+                "submittedAt": null,
+                "__typename": "Project"
+              },
+              "projectSubmitted": false,
+              "featuredImage": null,
+              "description": null,
+              "desiredSkills": null,
+              "languages": null,
+              "challenge": "aWQ6MzEzMTg=",
+              "challengeDetails": {
+                "id": "aWQ6MzEzMTg=",
+                "title": "SpaceTrash Hack: Revolutionizing Recycling on Mars",
+                "meta": {
+                  "type": "CHALLENGE",
+                  "slug": "spacetrash-hack-revolutionizing-recycling-on-mars",
+                  "firstPublishedAt": "2025-08-18T19:28:39.341442Z",
+                  "lastPublishedAt": "2025-09-16T14:37:57.541447Z",
+                  "relativeUrl": "/2025/challenges/spacetrash-hack-revolutionizing-recycling-on-mars/",
+                  "live": true,
+                  "parent": null,
+                  "__typename": "ExpandedPageMeta"
+                },
+                "excerpt": "During a hypothetical three-year mission to Mars and back, an eight-person crew would accumulate 12,600 kg of inorganic waste, or trash, including various packaging materials, textiles, and structural materials. This scenario creates a pressing need to recycle available materials, rather than execute the expensive and inefficient processes of transporting additional resources from Earth and/or sending trash back to Earth. As humans prepare to explore unknown worlds in the future, your challenge is to design sustainable systems that could manage, reuse, or recycle inorganic waste (“trash”) that is brought to and/or accumulated on the surface of Mars. (Space Technology Mission Directorate)",
+                "__typename": "ChallengePage"
+              },
+              "location": "aWQ6MzA2NjM=",
+              "locationDetails": {
+                "id": "aWQ6MzA2NjM=",
+                "title": "Uberlandia",
+                "displayName": "Uberlândia",
+                "meta": {
+                  "type": "LOCATION",
+                  "slug": "uberlandia",
+                  "firstPublishedAt": "2025-07-18T21:43:56.560298Z",
+                  "lastPublishedAt": "2025-08-22T19:13:44.047613Z",
+                  "relativeUrl": "/2025/local-events/uberlandia/",
+                  "live": true,
+                  "parent": null,
+                  "__typename": "ExpandedPageMeta"
+                },
+                "country": "Brazil",
+                "__typename": "LocationPage"
+              },
+              "event": "aWQ6Mw==",
+              "eventDetails": null,
+              "joinEnabled": true,
+              "memberships": null,
+              "nominationBadges": null,
+              "awardBadges": null
+            }
+          },
+          {
+            "__typename": "TeamPageEdge",
+            "cursor": "b2Zmc2V0Ojc3",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6MzYzMjQ=",
@@ -7690,7 +7874,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0Ojc2",
+            "cursor": "b2Zmc2V0Ojc4",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6NDEyMzE=",
@@ -7794,7 +7978,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0Ojc3",
+            "cursor": "b2Zmc2V0Ojc5",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6Mzg4ODg=",
@@ -7879,7 +8063,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0Ojc4",
+            "cursor": "b2Zmc2V0Ojgw",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6MzYwMTU=",
@@ -7983,7 +8167,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0Ojc5",
+            "cursor": "b2Zmc2V0Ojgx",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6NDE4NTc=",
@@ -8087,7 +8271,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0Ojgw",
+            "cursor": "b2Zmc2V0Ojgy",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6MzE1NzI=",
@@ -8172,7 +8356,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0Ojgx",
+            "cursor": "b2Zmc2V0Ojgz",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6NDU1OTM=",
@@ -8276,7 +8460,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0Ojgy",
+            "cursor": "b2Zmc2V0Ojg0",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6MzUyMjU=",
@@ -8361,7 +8545,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0Ojgz",
+            "cursor": "b2Zmc2V0Ojg1",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6NDAwMzA=",
@@ -8446,7 +8630,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0Ojg0",
+            "cursor": "b2Zmc2V0Ojg2",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6MzYxODA=",
@@ -8550,7 +8734,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0Ojg1",
+            "cursor": "b2Zmc2V0Ojg3",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6NDI3MTI=",
@@ -8635,7 +8819,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0Ojg2",
+            "cursor": "b2Zmc2V0Ojg4",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6MzcxNTI=",
@@ -8720,7 +8904,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0Ojg3",
+            "cursor": "b2Zmc2V0Ojg5",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6MzM1MjA=",
@@ -8843,7 +9027,111 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0Ojg4",
+            "cursor": "b2Zmc2V0Ojkw",
+            "node": {
+              "__typename": "TeamPage",
+              "id": "aWQ6NDY4MTA=",
+              "title": "PowerGeeks",
+              "meta": {
+                "type": "TEAM",
+                "slug": "powergeeks",
+                "firstPublishedAt": null,
+                "lastPublishedAt": null,
+                "relativeUrl": "/2025/find-a-team/powergeeks/",
+                "live": true,
+                "parent": null,
+                "__typename": "ExpandedPageMeta"
+              },
+              "owner": "aWQ6NDYzMDY4",
+              "ownerDetails": null,
+              "excerpt": "Estamos determinados a desenvolver uma solução criativa, prática e impactante para o desafio Sustentabilidade Espacial. Aplicaremos metodologias ágeis e ferramentas de ponta, utilizando dados abertos da NASA e de seus parceiros, para criar um apli...",
+              "project": "aWQ6NDQ2MTQ=",
+              "projectDetails": {
+                "id": "aWQ6NDQ2MTQ=",
+                "name": "Project PowerGeeks",
+                "summary": "",
+                "demoLink": "",
+                "projectLink": "",
+                "details": "",
+                "solution": "",
+                "aiReferences": "",
+                "dataReferences": "",
+                "projectReferences": "",
+                "isSubmitted": false,
+                "savedAt": null,
+                "submittedAt": null,
+                "__typename": "Project"
+              },
+              "projectSubmitted": false,
+              "featuredImage": {
+                "id": "aWQ6MzUzMzA5",
+                "meta": {
+                  "type": "images.CustomImage",
+                  "downloadUrl": "https://assets.spaceappschallenge.org/media/original_images/Screenshot_3_Yx7Ohcw.png",
+                  "__typename": "ImageMeta"
+                },
+                "title": "team_image.21:46:00.067117",
+                "alt": "team_image.21:46:00.067117",
+                "caption": "team_image.21:46:00.067117",
+                "displaySize": "og",
+                "rendition": {
+                  "url": "https://assets.spaceappschallenge.org/media/images/Screenshot_3_Yx7Ohcw.2e16d0ba.fill-300x250.png",
+                  "fullUrl": "https://assets.spaceappschallenge.org/media/images/Screenshot_3_Yx7Ohcw.2e16d0ba.fill-300x250.png",
+                  "height": 250,
+                  "width": 300,
+                  "__typename": "BaseImage"
+                },
+                "__typename": "DefaultImage"
+              },
+              "description": null,
+              "desiredSkills": null,
+              "languages": null,
+              "challenge": "aWQ6MzEzMTY=",
+              "challengeDetails": {
+                "id": "aWQ6MzEzMTY=",
+                "title": "International Space Station 25th Anniversary Apps",
+                "meta": {
+                  "type": "CHALLENGE",
+                  "slug": "international-space-station-25th-anniversary-apps",
+                  "firstPublishedAt": "2025-08-18T19:28:39.163794Z",
+                  "lastPublishedAt": "2025-09-16T14:37:51.873469Z",
+                  "relativeUrl": "/2025/challenges/international-space-station-25th-anniversary-apps/",
+                  "live": true,
+                  "parent": null,
+                  "__typename": "ExpandedPageMeta"
+                },
+                "excerpt": "Crews onboard the International Space Station have many unique opportunities! They witness breathtaking Earth views from the station’s cupola—known as “the window to the world.” ​​They also experience weightlessness and go outside the station on spacewalks, for which they must train extensively in the Neutral Buoyancy Laboratory (NBL) at the Sonny Carter Training Facility in Houston, Texas. Your challenge is to create a visual tool that not only helps students and the public understand two of the most prominent sensory experiences on the station (sight and weightlessness) through the lens of the cupola and the NBL, but also informs them how these unique experiences benefit humans on Earth. (Space Operations Mission Directorate)",
+                "__typename": "ChallengePage"
+              },
+              "location": "aWQ6MzA2NjM=",
+              "locationDetails": {
+                "id": "aWQ6MzA2NjM=",
+                "title": "Uberlandia",
+                "displayName": "Uberlândia",
+                "meta": {
+                  "type": "LOCATION",
+                  "slug": "uberlandia",
+                  "firstPublishedAt": "2025-07-18T21:43:56.560298Z",
+                  "lastPublishedAt": "2025-08-22T19:13:44.047613Z",
+                  "relativeUrl": "/2025/local-events/uberlandia/",
+                  "live": true,
+                  "parent": null,
+                  "__typename": "ExpandedPageMeta"
+                },
+                "country": "Brazil",
+                "__typename": "LocationPage"
+              },
+              "event": "aWQ6Mw==",
+              "eventDetails": null,
+              "joinEnabled": true,
+              "memberships": null,
+              "nominationBadges": null,
+              "awardBadges": null
+            }
+          },
+          {
+            "__typename": "TeamPageEdge",
+            "cursor": "b2Zmc2V0Ojkx",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6NDU3NDg=",
@@ -8947,7 +9235,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0Ojg5",
+            "cursor": "b2Zmc2V0Ojky",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6NDI2NjI=",
@@ -9051,7 +9339,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0Ojkw",
+            "cursor": "b2Zmc2V0Ojkz",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6MzU5MzY=",
@@ -9155,7 +9443,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0Ojkx",
+            "cursor": "b2Zmc2V0Ojk0",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6NDQ3Njc=",
@@ -9259,7 +9547,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0Ojky",
+            "cursor": "b2Zmc2V0Ojk1",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6MzE1MDU=",
@@ -9366,7 +9654,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0Ojkz",
+            "cursor": "b2Zmc2V0Ojk2",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6MzQ3Mzc=",
@@ -9470,7 +9758,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0Ojk0",
+            "cursor": "b2Zmc2V0Ojk3",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6MzU3NzA=",
@@ -9574,7 +9862,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0Ojk1",
+            "cursor": "b2Zmc2V0Ojk4",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6MzQ4NTU=",
@@ -9662,7 +9950,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0Ojk2",
+            "cursor": "b2Zmc2V0Ojk5",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6MzI3MjA=",
@@ -9766,7 +10054,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0Ojk3",
+            "cursor": "b2Zmc2V0OjEwMA==",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6MzM2Mzg=",
@@ -9851,7 +10139,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0Ojk4",
+            "cursor": "b2Zmc2V0OjEwMQ==",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6NDI0ODE=",
@@ -9955,7 +10243,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0Ojk5",
+            "cursor": "b2Zmc2V0OjEwMg==",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6NDQ3MDM=",
@@ -10059,7 +10347,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjEwMA==",
+            "cursor": "b2Zmc2V0OjEwMw==",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6MzM2MzM=",
@@ -10144,7 +10432,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjEwMQ==",
+            "cursor": "b2Zmc2V0OjEwNA==",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6Mzg0ODQ=",
@@ -10229,7 +10517,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjEwMg==",
+            "cursor": "b2Zmc2V0OjEwNQ==",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6NDI3MjU=",
@@ -10344,7 +10632,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjEwMw==",
+            "cursor": "b2Zmc2V0OjEwNg==",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6NDIwMDY=",
@@ -10448,7 +10736,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjEwNA==",
+            "cursor": "b2Zmc2V0OjEwNw==",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6NDA3MjI=",
@@ -10552,7 +10840,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjEwNQ==",
+            "cursor": "b2Zmc2V0OjEwOA==",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6MzIwMTc=",
@@ -10637,7 +10925,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjEwNg==",
+            "cursor": "b2Zmc2V0OjEwOQ==",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6NDU3MTc=",
@@ -10741,7 +11029,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjEwNw==",
+            "cursor": "b2Zmc2V0OjExMA==",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6MzI2MDc=",
@@ -10845,7 +11133,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjEwOA==",
+            "cursor": "b2Zmc2V0OjExMQ==",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6MzgyNzg=",
@@ -10930,7 +11218,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjEwOQ==",
+            "cursor": "b2Zmc2V0OjExMg==",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6MzkwMzM=",
@@ -11034,7 +11322,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjExMA==",
+            "cursor": "b2Zmc2V0OjExMw==",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6MzI2MzE=",
@@ -11149,7 +11437,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjExMQ==",
+            "cursor": "b2Zmc2V0OjExNA==",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6NDE4NTY=",
@@ -11253,7 +11541,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjExMg==",
+            "cursor": "b2Zmc2V0OjExNQ==",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6NDE1OTQ=",
@@ -11262,7 +11550,7 @@
                 "type": "TEAM",
                 "slug": "the-of-blacks",
                 "firstPublishedAt": "2025-09-26T12:10:52.909000Z",
-                "lastPublishedAt": "2025-09-30T16:19:59.611760Z",
+                "lastPublishedAt": "2025-10-01T19:32:18.674312Z",
                 "relativeUrl": "/2025/find-a-team/the-of-blacks/",
                 "live": true,
                 "parent": null,
@@ -11357,7 +11645,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjExMw==",
+            "cursor": "b2Zmc2V0OjExNg==",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6NDM3MDg=",
@@ -11442,7 +11730,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjExNA==",
+            "cursor": "b2Zmc2V0OjExNw==",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6MzQ1MTc=",
@@ -11561,7 +11849,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjExNQ==",
+            "cursor": "b2Zmc2V0OjExOA==",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6MzM0OTg=",
@@ -11665,7 +11953,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjExNg==",
+            "cursor": "b2Zmc2V0OjExOQ==",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6MzMwNjA=",
@@ -11769,7 +12057,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjExNw==",
+            "cursor": "b2Zmc2V0OjEyMA==",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6MzM4MTM=",
@@ -11873,7 +12161,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjExOA==",
+            "cursor": "b2Zmc2V0OjEyMQ==",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6NDQ4MTI=",
@@ -11993,7 +12281,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjExOQ==",
+            "cursor": "b2Zmc2V0OjEyMg==",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6MzkwNDE=",
@@ -12097,7 +12385,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjEyMA==",
+            "cursor": "b2Zmc2V0OjEyMw==",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6NDA2ODg=",
@@ -12201,7 +12489,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjEyMQ==",
+            "cursor": "b2Zmc2V0OjEyNA==",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6MzQyNTk=",
@@ -12323,7 +12611,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjEyMg==",
+            "cursor": "b2Zmc2V0OjEyNQ==",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6NDUxNjA=",
@@ -12427,7 +12715,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjEyMw==",
+            "cursor": "b2Zmc2V0OjEyNg==",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6NDQ3MDk=",
@@ -12531,7 +12819,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjEyNA==",
+            "cursor": "b2Zmc2V0OjEyNw==",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6MzMyNDM=",
