@@ -34,8 +34,13 @@ eventLocations: EventLocation[] = [
     info: 'Espaço de apoio com espaço presenciais. Destinado a equipes de desenvolvimento e networking.'
   },
   {
-    position: { lat: -18.910473, lng: -48.270074 },
-    title: 'Sankhya - Afonso Pena',
+    position: { lat: -18.922471, lng: -48.293954 },
+    title: 'Sankhya Predio 1',
+    info: 'Local preparado para receber pessoas.'
+  },
+  {
+    position: { lat: -18.922250, lng: -48.294392 },
+    title: 'Sankhya Prédio 2',
     info: 'Local preparado para receber pessoas.'
   },
   {
