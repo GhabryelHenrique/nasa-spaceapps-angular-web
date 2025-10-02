@@ -2083,9 +2083,9 @@ def fetch_all_teams_data() -> Dict[str, Any]:
         }
     }
 
-def fetch_local_events_data() -> Dict[str, Any]:
+def fetch_local_events_page(after_cursor: str = "") -> Dict[str, Any]:
     """
-    Busca dados dos eventos locais da API
+    Busca uma página de eventos locais da API
     """
     url = "https://api.spaceappschallenge.org/graphql"
 
@@ -2104,7 +2104,8 @@ def fetch_local_events_data() -> Dict[str, Any]:
         {
             "operationName": "OpenLocations",
             "variables": {
-                "first": 500,
+                "first": 100,
+                "after": after_cursor,
                 "filtering": [
                     {
                         "field": "event",
@@ -2162,7 +2163,7 @@ fragment OpenLocationFields on LocationFeature {
     ]
 
     try:
-        print("Fazendo requisição para buscar eventos locais...")
+        print(f"Fazendo requisição para buscar eventos locais (cursor: {after_cursor or 'início'})...")
         response = requests.post(url, headers=headers, json=payload, timeout=30)
         response.raise_for_status()
 
@@ -2190,6 +2191,59 @@ fragment OpenLocationFields on LocationFeature {
     except Exception as e:
         print(f"Erro inesperado ao buscar eventos locais: {e}")
         raise
+
+def fetch_local_events_data() -> Dict[str, Any]:
+    """
+    Busca todos os dados dos eventos locais paginando através de todas as páginas
+    """
+    all_events = []
+    after_cursor = ""
+    page_num = 1
+    total_count = 0
+
+    while True:
+        print(f"\n--- Buscando página {page_num} de eventos locais ---")
+
+        # Busca uma página de dados
+        events_page = fetch_local_events_page(after_cursor)
+
+        # Extrai informações da página
+        page_info = events_page.get('pageInfo', {})
+        edges = events_page.get('edges', [])
+        total_count = events_page.get('totalCount', 0)
+
+        print(f"Eventos locais nesta página: {len(edges)}")
+        print(f"Total de eventos locais: {total_count}")
+
+        # Adiciona os eventos desta página à lista completa
+        all_events.extend(edges)
+
+        # Verifica se há próxima página
+        if not page_info.get('hasNextPage', False):
+            print("Última página de eventos locais alcançada!")
+            break
+
+        # Atualiza o cursor para a próxima página
+        after_cursor = page_info.get('endCursor', '')
+        page_num += 1
+
+        # Adiciona um pequeno delay para ser respeitoso com a API
+        import time
+        time.sleep(0.5)
+
+    # Constrói o objeto final com todos os eventos
+    return {
+        'pageInfo': {
+            'hasPreviousPage': False,
+            'hasNextPage': False,
+            'startCursor': all_events[0]['cursor'] if all_events else '',
+            'endCursor': all_events[-1]['cursor'] if all_events else '',
+            '__typename': 'PageInfo'
+        },
+        'totalCount': total_count,
+        'edges': all_events,
+        '__typename': 'LocationConnection'
+    }
 
 def update_teams_file(teams_data: Dict[str, Any]) -> None:
     """
