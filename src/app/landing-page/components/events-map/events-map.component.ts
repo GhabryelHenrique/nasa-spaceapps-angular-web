@@ -44,11 +44,6 @@ eventLocations: EventLocation[] = [
     info: 'Local preparado para receber pessoas.'
   },
   {
-    position: { lat: -18.951666, lng: -48.232789 },
-    title: 'Portão 3 - Zona Sul',
-    info: 'Espaço dedicado para 100 pessoas presencialmente. Suporte a trilhas específicas de inovação e desenvolvimento local.'
-  },
-  {
     position: { lat: -18.929200, lng: -48.268100 },
     title: 'CREA / Secretaria da Juventude',
     info: 'Apoio a workshops e mentorias técnicas.'

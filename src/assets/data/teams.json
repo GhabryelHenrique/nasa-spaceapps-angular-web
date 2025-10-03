@@ -6,10 +6,17 @@
           "hasPreviousPage": false,
           "hasNextPage": false,
           "startCursor": "b2Zmc2V0OjA=",
+<<<<<<< HEAD
           "endCursor": "b2Zmc2V0OjE0MQ==",
           "__typename": "PageInfo"
         },
         "totalCount": 142,
+=======
+          "endCursor": "b2Zmc2V0OjEzNQ==",
+          "__typename": "PageInfo"
+        },
+        "totalCount": 136,
+>>>>>>> 9834f49b29c79214e0fcdceb418948b3eff3fbf2
         "edges": [
           {
             "__typename": "TeamPageEdge",
@@ -334,7 +341,11 @@
                 "type": "TEAM",
                 "slug": "agamotto",
                 "firstPublishedAt": "2025-08-27T20:00:13.604000Z",
+<<<<<<< HEAD
                 "lastPublishedAt": "2025-10-03T17:54:02.587754Z",
+=======
+                "lastPublishedAt": "2025-10-02T21:18:39.306565Z",
+>>>>>>> 9834f49b29c79214e0fcdceb418948b3eff3fbf2
                 "relativeUrl": "/2025/find-a-team/agamotto/",
                 "live": true,
                 "parent": null,
@@ -1239,8 +1250,13 @@
               "meta": {
                 "type": "TEAM",
                 "slug": "associacao-mineira-da-diversidade",
+<<<<<<< HEAD
                 "firstPublishedAt": "2025-10-02T22:22:55.737000Z",
                 "lastPublishedAt": "2025-10-03T21:55:49.435122Z",
+=======
+                "firstPublishedAt": "2025-10-02T22:22:55.737266Z",
+                "lastPublishedAt": "2025-10-02T22:22:55.737266Z",
+>>>>>>> 9834f49b29c79214e0fcdceb418948b3eff3fbf2
                 "relativeUrl": "/2025/find-a-team/associacao-mineira-da-diversidade/",
                 "live": true,
                 "parent": null,
@@ -1248,7 +1264,11 @@
               },
               "owner": "aWQ6NDQ1OTM0",
               "ownerDetails": null,
+<<<<<<< HEAD
               "excerpt": "A Plataforma de Justiça Ambiental Comunitária é um app e web que integra monitoramento, denúncia e educação para enfrentar o racismo ambiental. Comunidades tornam-se “Sentinelas Ambientais”, registrando impactos em tempo real e gerando provas conf...",
+=======
+              "excerpt": "Nossa equipe multidisciplinar reúne profissionais de psicologia, educação, tecnologia, diversidade e análise de dados, comprometidos em transformar informação em conhecimento confiável e acessível. Estamos desenvolvendo um aplicativo voltado a est...",
+>>>>>>> 9834f49b29c79214e0fcdceb418948b3eff3fbf2
               "project": "aWQ6NDU4MjA=",
               "projectDetails": {
                 "id": "aWQ6NDU4MjA=",
@@ -1506,6 +1526,94 @@
           {
             "__typename": "TeamPageEdge",
             "cursor": "b2Zmc2V0OjE1",
+<<<<<<< HEAD
+=======
+            "node": {
+              "__typename": "TeamPage",
+              "id": "aWQ6NDE5OTk=",
+              "title": "Astrodevs",
+              "meta": {
+                "type": "TEAM",
+                "slug": "no-mans-sky2",
+                "firstPublishedAt": "2025-09-26T02:03:16.134000Z",
+                "lastPublishedAt": "2025-10-01T16:51:56.096660Z",
+                "relativeUrl": "/2025/find-a-team/no-mans-sky2/",
+                "live": true,
+                "parent": null,
+                "__typename": "ExpandedPageMeta"
+              },
+              "owner": "aWQ6Mzc5NDYy",
+              "ownerDetails": null,
+              "excerpt": "Time interessado em desenvolver aplicações web para fazer tratativa e visualização de dados com ou sem a utilização de IA",
+              "project": "aWQ6Mzk4MDc=",
+              "projectDetails": {
+                "id": "aWQ6Mzk4MDc=",
+                "name": "Project No mans Sky",
+                "summary": "",
+                "demoLink": "",
+                "projectLink": "",
+                "details": "",
+                "solution": "",
+                "aiReferences": "",
+                "dataReferences": "",
+                "projectReferences": "",
+                "isSubmitted": false,
+                "savedAt": null,
+                "submittedAt": null,
+                "__typename": "Project"
+              },
+              "projectSubmitted": false,
+              "featuredImage": null,
+              "description": null,
+              "desiredSkills": null,
+              "languages": null,
+              "challenge": "aWQ6MzEzMjg=",
+              "challengeDetails": {
+                "id": "aWQ6MzEzMjg=",
+                "title": "Will It Rain On My Parade?",
+                "meta": {
+                  "type": "CHALLENGE",
+                  "slug": "will-it-rain-on-my-parade",
+                  "firstPublishedAt": "2025-08-18T19:28:40.295442Z",
+                  "lastPublishedAt": "2025-09-16T14:37:30.518832Z",
+                  "relativeUrl": "/2025/challenges/will-it-rain-on-my-parade/",
+                  "live": true,
+                  "parent": null,
+                  "__typename": "ExpandedPageMeta"
+                },
+                "excerpt": "If you’re planning an outdoor event—like a vacation, a hike on a trail, or fishing on a lake—it would be good to know the chances of adverse weather for the time and location you are considering. There are many types of Earth observation data that can provide information on weather conditions for a particular location and day of the year. Your challenge is to construct an app with a personalized interface that enables users to conduct a customized query to tell them the likelihood of “very hot,” “very cold,” “very windy,” “very wet,” or “very uncomfortable” conditions for the location and time they specify. (Earth Science Division)",
+                "__typename": "ChallengePage"
+              },
+              "location": "aWQ6MzA2NjM=",
+              "locationDetails": {
+                "id": "aWQ6MzA2NjM=",
+                "title": "Uberlandia",
+                "displayName": "Uberlândia",
+                "meta": {
+                  "type": "LOCATION",
+                  "slug": "uberlandia",
+                  "firstPublishedAt": "2025-07-18T21:43:56.560298Z",
+                  "lastPublishedAt": "2025-08-22T19:13:44.047613Z",
+                  "relativeUrl": "/2025/local-events/uberlandia/",
+                  "live": true,
+                  "parent": null,
+                  "__typename": "ExpandedPageMeta"
+                },
+                "country": "Brazil",
+                "__typename": "LocationPage"
+              },
+              "event": "aWQ6Mw==",
+              "eventDetails": null,
+              "joinEnabled": true,
+              "memberships": null,
+              "nominationBadges": null,
+              "awardBadges": null
+            }
+          },
+          {
+            "__typename": "TeamPageEdge",
+            "cursor": "b2Zmc2V0OjE2",
+>>>>>>> 9834f49b29c79214e0fcdceb418948b3eff3fbf2
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6NDMyODU=",
@@ -1609,7 +1717,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjE2",
+            "cursor": "b2Zmc2V0OjE3",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6MzQyNTA=",
@@ -1713,7 +1821,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjE3",
+            "cursor": "b2Zmc2V0OjE4",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6MzM3MTU=",
@@ -1722,7 +1830,11 @@
                 "type": "TEAM",
                 "slug": "astromars-uberlandia",
                 "firstPublishedAt": "2025-09-28T19:30:21.063000Z",
+<<<<<<< HEAD
                 "lastPublishedAt": "2025-10-03T18:33:18.863899Z",
+=======
+                "lastPublishedAt": "2025-10-03T13:09:02.048941Z",
+>>>>>>> 9834f49b29c79214e0fcdceb418948b3eff3fbf2
                 "relativeUrl": "/2025/find-a-team/astromars-uberlandia/",
                 "live": true,
                 "parent": null,
@@ -1817,7 +1929,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjE4",
+            "cursor": "b2Zmc2V0OjE5",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6NDkyOTU=",
@@ -2100,7 +2212,11 @@
                 "type": "TEAM",
                 "slug": "betelgeuse-uemg",
                 "firstPublishedAt": "2025-10-02T19:31:17.653000Z",
+<<<<<<< HEAD
                 "lastPublishedAt": "2025-10-03T14:09:51.715094Z",
+=======
+                "lastPublishedAt": "2025-10-02T21:01:24.789245Z",
+>>>>>>> 9834f49b29c79214e0fcdceb418948b3eff3fbf2
                 "relativeUrl": "/2025/find-a-team/betelgeuse-uemg/",
                 "live": true,
                 "parent": null,
@@ -2436,6 +2552,7 @@
           {
             "__typename": "TeamPageEdge",
             "cursor": "b2Zmc2V0OjI0",
+<<<<<<< HEAD
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6NDkxMDU=",
@@ -2540,6 +2657,8 @@
           {
             "__typename": "TeamPageEdge",
             "cursor": "b2Zmc2V0OjI1",
+=======
+>>>>>>> 9834f49b29c79214e0fcdceb418948b3eff3fbf2
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6NDQ3NTY=",
@@ -2630,7 +2749,11 @@
           },
           {
             "__typename": "TeamPageEdge",
+<<<<<<< HEAD
             "cursor": "b2Zmc2V0OjI2",
+=======
+            "cursor": "b2Zmc2V0OjI1",
+>>>>>>> 9834f49b29c79214e0fcdceb418948b3eff3fbf2
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6NDY4ODE=",
@@ -2715,7 +2838,11 @@
           },
           {
             "__typename": "TeamPageEdge",
+<<<<<<< HEAD
             "cursor": "b2Zmc2V0OjI3",
+=======
+            "cursor": "b2Zmc2V0OjI2",
+>>>>>>> 9834f49b29c79214e0fcdceb418948b3eff3fbf2
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6NDE5NDA=",
@@ -2800,7 +2927,11 @@
           },
           {
             "__typename": "TeamPageEdge",
+<<<<<<< HEAD
             "cursor": "b2Zmc2V0OjI4",
+=======
+            "cursor": "b2Zmc2V0OjI3",
+>>>>>>> 9834f49b29c79214e0fcdceb418948b3eff3fbf2
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6MzM1MjY=",
@@ -2904,7 +3035,11 @@
           },
           {
             "__typename": "TeamPageEdge",
+<<<<<<< HEAD
             "cursor": "b2Zmc2V0OjI5",
+=======
+            "cursor": "b2Zmc2V0OjI4",
+>>>>>>> 9834f49b29c79214e0fcdceb418948b3eff3fbf2
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6MzQxMzY=",
@@ -3008,7 +3143,11 @@
           },
           {
             "__typename": "TeamPageEdge",
+<<<<<<< HEAD
             "cursor": "b2Zmc2V0OjMw",
+=======
+            "cursor": "b2Zmc2V0OjI5",
+>>>>>>> 9834f49b29c79214e0fcdceb418948b3eff3fbf2
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6MzMwNjQ=",
@@ -3123,7 +3262,11 @@
           },
           {
             "__typename": "TeamPageEdge",
+<<<<<<< HEAD
             "cursor": "b2Zmc2V0OjMx",
+=======
+            "cursor": "b2Zmc2V0OjMw",
+>>>>>>> 9834f49b29c79214e0fcdceb418948b3eff3fbf2
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6MzI3MTY=",
@@ -3230,7 +3373,11 @@
           },
           {
             "__typename": "TeamPageEdge",
+<<<<<<< HEAD
             "cursor": "b2Zmc2V0OjMy",
+=======
+            "cursor": "b2Zmc2V0OjMx",
+>>>>>>> 9834f49b29c79214e0fcdceb418948b3eff3fbf2
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6MzMyNDA=",
@@ -3334,7 +3481,11 @@
           },
           {
             "__typename": "TeamPageEdge",
+<<<<<<< HEAD
             "cursor": "b2Zmc2V0OjMz",
+=======
+            "cursor": "b2Zmc2V0OjMy",
+>>>>>>> 9834f49b29c79214e0fcdceb418948b3eff3fbf2
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6MzM2ODQ=",
@@ -3438,7 +3589,11 @@
           },
           {
             "__typename": "TeamPageEdge",
+<<<<<<< HEAD
             "cursor": "b2Zmc2V0OjM0",
+=======
+            "cursor": "b2Zmc2V0OjMz",
+>>>>>>> 9834f49b29c79214e0fcdceb418948b3eff3fbf2
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6NDc4NjY=",
@@ -3549,7 +3704,11 @@
           },
           {
             "__typename": "TeamPageEdge",
+<<<<<<< HEAD
             "cursor": "b2Zmc2V0OjM1",
+=======
+            "cursor": "b2Zmc2V0OjM0",
+>>>>>>> 9834f49b29c79214e0fcdceb418948b3eff3fbf2
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6MzQ3NTE=",
@@ -3653,7 +3812,11 @@
           },
           {
             "__typename": "TeamPageEdge",
+<<<<<<< HEAD
             "cursor": "b2Zmc2V0OjM2",
+=======
+            "cursor": "b2Zmc2V0OjM1",
+>>>>>>> 9834f49b29c79214e0fcdceb418948b3eff3fbf2
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6MzQxMjM=",
@@ -3757,7 +3920,11 @@
           },
           {
             "__typename": "TeamPageEdge",
+<<<<<<< HEAD
             "cursor": "b2Zmc2V0OjM3",
+=======
+            "cursor": "b2Zmc2V0OjM2",
+>>>>>>> 9834f49b29c79214e0fcdceb418948b3eff3fbf2
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6MzI0NTQ=",
@@ -3861,7 +4028,11 @@
           },
           {
             "__typename": "TeamPageEdge",
+<<<<<<< HEAD
             "cursor": "b2Zmc2V0OjM4",
+=======
+            "cursor": "b2Zmc2V0OjM3",
+>>>>>>> 9834f49b29c79214e0fcdceb418948b3eff3fbf2
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6MzI0OTk=",
@@ -3965,7 +4136,11 @@
           },
           {
             "__typename": "TeamPageEdge",
+<<<<<<< HEAD
             "cursor": "b2Zmc2V0OjM5",
+=======
+            "cursor": "b2Zmc2V0OjM4",
+>>>>>>> 9834f49b29c79214e0fcdceb418948b3eff3fbf2
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6MzQzNTc=",
@@ -4069,7 +4244,11 @@
           },
           {
             "__typename": "TeamPageEdge",
+<<<<<<< HEAD
             "cursor": "b2Zmc2V0OjQw",
+=======
+            "cursor": "b2Zmc2V0OjM5",
+>>>>>>> 9834f49b29c79214e0fcdceb418948b3eff3fbf2
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6MzI2OTM=",
@@ -4183,7 +4362,11 @@
           },
           {
             "__typename": "TeamPageEdge",
+<<<<<<< HEAD
             "cursor": "b2Zmc2V0OjQx",
+=======
+            "cursor": "b2Zmc2V0OjQw",
+>>>>>>> 9834f49b29c79214e0fcdceb418948b3eff3fbf2
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6NDg3NzY=",
@@ -4192,7 +4375,11 @@
                 "type": "TEAM",
                 "slug": "cosmos72",
                 "firstPublishedAt": "2025-10-03T13:05:13.777000Z",
+<<<<<<< HEAD
                 "lastPublishedAt": "2025-10-03T15:12:59.602883Z",
+=======
+                "lastPublishedAt": "2025-10-03T13:10:53.184754Z",
+>>>>>>> 9834f49b29c79214e0fcdceb418948b3eff3fbf2
                 "relativeUrl": "/2025/find-a-team/cosmos72/",
                 "live": true,
                 "parent": null,
@@ -4222,26 +4409,44 @@
               "featuredImage": null,
               "description": null,
               "desiredSkills": [
+<<<<<<< HEAD
                 "Artificial Intelligence & Machine Learning",
                 "Data Analysis",
                 "Data Visualization",
                 "Disaster Response",
                 "Earth Science",
+=======
+                "Earth Science",
+                "Data Analysis",
+                "Software",
+                "Space Exploration",
+                "Data Visualization",
+                "Artificial Intelligence & Machine Learning",
+>>>>>>> 9834f49b29c79214e0fcdceb418948b3eff3fbf2
                 "Ergonomics & Human Factors",
                 "Flora & Fauna",
                 "Forecasting",
                 "Pollution",
+<<<<<<< HEAD
                 "Software",
                 "Space Exploration",
                 "Space Weather",
                 "Storytelling",
                 "Waste & Resources",
                 "Weather"
+=======
+                "Storytelling",
+                "Waste & Resources",
+                "Weather",
+                "Disaster Response",
+                "Space Weather"
+>>>>>>> 9834f49b29c79214e0fcdceb418948b3eff3fbf2
               ],
               "languages": [
                 "Portuguese",
                 "Spanish"
               ],
+<<<<<<< HEAD
               "challenge": "aWQ6MzEzMjg=",
               "challengeDetails": {
                 "id": "aWQ6MzEzMjg=",
@@ -4252,11 +4457,27 @@
                   "firstPublishedAt": "2025-08-18T19:28:40.295442Z",
                   "lastPublishedAt": "2025-09-16T14:37:30.518832Z",
                   "relativeUrl": "/2025/challenges/will-it-rain-on-my-parade/",
+=======
+              "challenge": "aWQ6MzEzMjE=",
+              "challengeDetails": {
+                "id": "aWQ6MzEzMjE=",
+                "title": "Through the Radar Looking Glass: Revealing Earth Processes with SAR",
+                "meta": {
+                  "type": "CHALLENGE",
+                  "slug": "through-the-radar-looking-glass-revealing-earth-processes-with-sar",
+                  "firstPublishedAt": "2025-08-18T19:28:39.658429Z",
+                  "lastPublishedAt": "2025-09-16T15:29:50.237898Z",
+                  "relativeUrl": "/2025/challenges/through-the-radar-looking-glass-revealing-earth-processes-with-sar/",
+>>>>>>> 9834f49b29c79214e0fcdceb418948b3eff3fbf2
                   "live": true,
                   "parent": null,
                   "__typename": "ExpandedPageMeta"
                 },
+<<<<<<< HEAD
                 "excerpt": "If you’re planning an outdoor event—like a vacation, a hike on a trail, or fishing on a lake—it would be good to know the chances of adverse weather for the time and location you are considering. There are many types of Earth observation data that can provide information on weather conditions for a particular location and day of the year. Your challenge is to construct an app with a personalized interface that enables users to conduct a customized query to tell them the likelihood of “very hot,” “very cold,” “very windy,” “very wet,” or “very uncomfortable” conditions for the location and time they specify. (Earth Science Division)",
+=======
+                "excerpt": "Like Alice in Wonderland, let’s travel down the rabbit hole to reveal a world that looks like our planet Earth… but not quite! Using synthetic aperture radar (SAR), we can image the world by emitting radar pulses toward Earth and recording the energy that is reflected back after the signals interact with Earth's surface. Your challenge is to download multi-frequency or multi-polarization SAR data for an interesting study area of your choice –e.g., your hometown, a tropical wetland, ice sheet, forest wildfire, flooded neighborhood, volcano eruption, etc.—and use that data to develop hypotheses about the physical drivers operating there. (Earth Science Division)",
+>>>>>>> 9834f49b29c79214e0fcdceb418948b3eff3fbf2
                 "__typename": "ChallengePage"
               },
               "location": "aWQ6MzA2NjM=",
@@ -4287,7 +4508,11 @@
           },
           {
             "__typename": "TeamPageEdge",
+<<<<<<< HEAD
             "cursor": "b2Zmc2V0OjQy",
+=======
+            "cursor": "b2Zmc2V0OjQx",
+>>>>>>> 9834f49b29c79214e0fcdceb418948b3eff3fbf2
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6NDQ2MDQ=",
@@ -4391,6 +4616,7 @@
           },
           {
             "__typename": "TeamPageEdge",
+<<<<<<< HEAD
             "cursor": "b2Zmc2V0OjQz",
             "node": {
               "__typename": "TeamPage",
@@ -4477,6 +4703,9 @@
           {
             "__typename": "TeamPageEdge",
             "cursor": "b2Zmc2V0OjQ0",
+=======
+            "cursor": "b2Zmc2V0OjQy",
+>>>>>>> 9834f49b29c79214e0fcdceb418948b3eff3fbf2
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6MzQzNDg=",
@@ -4580,6 +4809,7 @@
           },
           {
             "__typename": "TeamPageEdge",
+<<<<<<< HEAD
             "cursor": "b2Zmc2V0OjQ1",
             "node": {
               "__typename": "TeamPage",
@@ -4685,6 +4915,9 @@
           {
             "__typename": "TeamPageEdge",
             "cursor": "b2Zmc2V0OjQ2",
+=======
+            "cursor": "b2Zmc2V0OjQz",
+>>>>>>> 9834f49b29c79214e0fcdceb418948b3eff3fbf2
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6MzIwMjk=",
@@ -4788,7 +5021,11 @@
           },
           {
             "__typename": "TeamPageEdge",
+<<<<<<< HEAD
             "cursor": "b2Zmc2V0OjQ3",
+=======
+            "cursor": "b2Zmc2V0OjQ0",
+>>>>>>> 9834f49b29c79214e0fcdceb418948b3eff3fbf2
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6Mzc1Njc=",
@@ -4892,7 +5129,11 @@
           },
           {
             "__typename": "TeamPageEdge",
+<<<<<<< HEAD
             "cursor": "b2Zmc2V0OjQ4",
+=======
+            "cursor": "b2Zmc2V0OjQ1",
+>>>>>>> 9834f49b29c79214e0fcdceb418948b3eff3fbf2
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6MzUxOTM=",
@@ -4996,7 +5237,11 @@
           },
           {
             "__typename": "TeamPageEdge",
+<<<<<<< HEAD
             "cursor": "b2Zmc2V0OjQ5",
+=======
+            "cursor": "b2Zmc2V0OjQ2",
+>>>>>>> 9834f49b29c79214e0fcdceb418948b3eff3fbf2
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6MzU4ODk=",
@@ -5100,7 +5345,11 @@
           },
           {
             "__typename": "TeamPageEdge",
+<<<<<<< HEAD
             "cursor": "b2Zmc2V0OjUw",
+=======
+            "cursor": "b2Zmc2V0OjQ3",
+>>>>>>> 9834f49b29c79214e0fcdceb418948b3eff3fbf2
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6NDM4NTI=",
@@ -5204,7 +5453,11 @@
           },
           {
             "__typename": "TeamPageEdge",
+<<<<<<< HEAD
             "cursor": "b2Zmc2V0OjUx",
+=======
+            "cursor": "b2Zmc2V0OjQ4",
+>>>>>>> 9834f49b29c79214e0fcdceb418948b3eff3fbf2
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6NDI2OTk=",
@@ -5289,7 +5542,11 @@
           },
           {
             "__typename": "TeamPageEdge",
+<<<<<<< HEAD
             "cursor": "b2Zmc2V0OjUy",
+=======
+            "cursor": "b2Zmc2V0OjQ5",
+>>>>>>> 9834f49b29c79214e0fcdceb418948b3eff3fbf2
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6NDMyMjk=",
@@ -5393,7 +5650,11 @@
           },
           {
             "__typename": "TeamPageEdge",
+<<<<<<< HEAD
             "cursor": "b2Zmc2V0OjUz",
+=======
+            "cursor": "b2Zmc2V0OjUw",
+>>>>>>> 9834f49b29c79214e0fcdceb418948b3eff3fbf2
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6MzIwMjE=",
@@ -5497,7 +5758,11 @@
           },
           {
             "__typename": "TeamPageEdge",
+<<<<<<< HEAD
             "cursor": "b2Zmc2V0OjU0",
+=======
+            "cursor": "b2Zmc2V0OjUx",
+>>>>>>> 9834f49b29c79214e0fcdceb418948b3eff3fbf2
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6NDAyNDg=",
@@ -5601,7 +5866,11 @@
           },
           {
             "__typename": "TeamPageEdge",
+<<<<<<< HEAD
             "cursor": "b2Zmc2V0OjU1",
+=======
+            "cursor": "b2Zmc2V0OjUy",
+>>>>>>> 9834f49b29c79214e0fcdceb418948b3eff3fbf2
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6MzUyNTg=",
@@ -5708,7 +5977,11 @@
           },
           {
             "__typename": "TeamPageEdge",
+<<<<<<< HEAD
             "cursor": "b2Zmc2V0OjU2",
+=======
+            "cursor": "b2Zmc2V0OjUz",
+>>>>>>> 9834f49b29c79214e0fcdceb418948b3eff3fbf2
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6MzMwMTk=",
@@ -5837,7 +6110,11 @@
           },
           {
             "__typename": "TeamPageEdge",
+<<<<<<< HEAD
             "cursor": "b2Zmc2V0OjU3",
+=======
+            "cursor": "b2Zmc2V0OjU0",
+>>>>>>> 9834f49b29c79214e0fcdceb418948b3eff3fbf2
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6MzE2NzI=",
@@ -5941,7 +6218,11 @@
           },
           {
             "__typename": "TeamPageEdge",
+<<<<<<< HEAD
             "cursor": "b2Zmc2V0OjU4",
+=======
+            "cursor": "b2Zmc2V0OjU1",
+>>>>>>> 9834f49b29c79214e0fcdceb418948b3eff3fbf2
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6NDM1NDg=",
@@ -6026,7 +6307,11 @@
           },
           {
             "__typename": "TeamPageEdge",
+<<<<<<< HEAD
             "cursor": "b2Zmc2V0OjU5",
+=======
+            "cursor": "b2Zmc2V0OjU2",
+>>>>>>> 9834f49b29c79214e0fcdceb418948b3eff3fbf2
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6NDM3OTQ=",
@@ -6130,7 +6415,11 @@
           },
           {
             "__typename": "TeamPageEdge",
+<<<<<<< HEAD
             "cursor": "b2Zmc2V0OjYw",
+=======
+            "cursor": "b2Zmc2V0OjU3",
+>>>>>>> 9834f49b29c79214e0fcdceb418948b3eff3fbf2
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6MzU3Njk=",
@@ -6234,7 +6523,11 @@
           },
           {
             "__typename": "TeamPageEdge",
+<<<<<<< HEAD
             "cursor": "b2Zmc2V0OjYx",
+=======
+            "cursor": "b2Zmc2V0OjU4",
+>>>>>>> 9834f49b29c79214e0fcdceb418948b3eff3fbf2
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6MzY0MDE=",
@@ -6319,7 +6612,11 @@
           },
           {
             "__typename": "TeamPageEdge",
+<<<<<<< HEAD
             "cursor": "b2Zmc2V0OjYy",
+=======
+            "cursor": "b2Zmc2V0OjU5",
+>>>>>>> 9834f49b29c79214e0fcdceb418948b3eff3fbf2
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6NDM2Nzc=",
@@ -6423,7 +6720,11 @@
           },
           {
             "__typename": "TeamPageEdge",
+<<<<<<< HEAD
             "cursor": "b2Zmc2V0OjYz",
+=======
+            "cursor": "b2Zmc2V0OjYw",
+>>>>>>> 9834f49b29c79214e0fcdceb418948b3eff3fbf2
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6MzQ4NTU=",
@@ -6511,7 +6812,11 @@
           },
           {
             "__typename": "TeamPageEdge",
+<<<<<<< HEAD
             "cursor": "b2Zmc2V0OjY0",
+=======
+            "cursor": "b2Zmc2V0OjYx",
+>>>>>>> 9834f49b29c79214e0fcdceb418948b3eff3fbf2
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6MzY0MzU=",
@@ -6615,7 +6920,11 @@
           },
           {
             "__typename": "TeamPageEdge",
+<<<<<<< HEAD
             "cursor": "b2Zmc2V0OjY1",
+=======
+            "cursor": "b2Zmc2V0OjYy",
+>>>>>>> 9834f49b29c79214e0fcdceb418948b3eff3fbf2
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6MzIwMzc=",
@@ -6719,7 +7028,11 @@
           },
           {
             "__typename": "TeamPageEdge",
+<<<<<<< HEAD
             "cursor": "b2Zmc2V0OjY2",
+=======
+            "cursor": "b2Zmc2V0OjYz",
+>>>>>>> 9834f49b29c79214e0fcdceb418948b3eff3fbf2
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6NDc4NDg=",
@@ -6823,7 +7136,11 @@
           },
           {
             "__typename": "TeamPageEdge",
+<<<<<<< HEAD
             "cursor": "b2Zmc2V0OjY3",
+=======
+            "cursor": "b2Zmc2V0OjY0",
+>>>>>>> 9834f49b29c79214e0fcdceb418948b3eff3fbf2
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6NDU0MzI=",
@@ -6927,7 +7244,11 @@
           },
           {
             "__typename": "TeamPageEdge",
+<<<<<<< HEAD
             "cursor": "b2Zmc2V0OjY4",
+=======
+            "cursor": "b2Zmc2V0OjY1",
+>>>>>>> 9834f49b29c79214e0fcdceb418948b3eff3fbf2
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6MzMyOTM=",
@@ -7012,7 +7333,11 @@
           },
           {
             "__typename": "TeamPageEdge",
+<<<<<<< HEAD
             "cursor": "b2Zmc2V0OjY5",
+=======
+            "cursor": "b2Zmc2V0OjY2",
+>>>>>>> 9834f49b29c79214e0fcdceb418948b3eff3fbf2
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6MzgxMTc=",
@@ -7116,7 +7441,11 @@
           },
           {
             "__typename": "TeamPageEdge",
+<<<<<<< HEAD
             "cursor": "b2Zmc2V0Ojcw",
+=======
+            "cursor": "b2Zmc2V0OjY3",
+>>>>>>> 9834f49b29c79214e0fcdceb418948b3eff3fbf2
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6MzQ3MDI=",
@@ -7220,7 +7549,11 @@
           },
           {
             "__typename": "TeamPageEdge",
+<<<<<<< HEAD
             "cursor": "b2Zmc2V0Ojcx",
+=======
+            "cursor": "b2Zmc2V0OjY4",
+>>>>>>> 9834f49b29c79214e0fcdceb418948b3eff3fbf2
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6MzIyNjI=",
@@ -7324,7 +7657,11 @@
           },
           {
             "__typename": "TeamPageEdge",
+<<<<<<< HEAD
             "cursor": "b2Zmc2V0Ojcy",
+=======
+            "cursor": "b2Zmc2V0OjY5",
+>>>>>>> 9834f49b29c79214e0fcdceb418948b3eff3fbf2
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6NDExOTA=",
@@ -7436,7 +7773,11 @@
           },
           {
             "__typename": "TeamPageEdge",
+<<<<<<< HEAD
             "cursor": "b2Zmc2V0Ojcz",
+=======
+            "cursor": "b2Zmc2V0Ojcw",
+>>>>>>> 9834f49b29c79214e0fcdceb418948b3eff3fbf2
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6MzgwNzY=",
@@ -7521,7 +7862,11 @@
           },
           {
             "__typename": "TeamPageEdge",
+<<<<<<< HEAD
             "cursor": "b2Zmc2V0Ojc0",
+=======
+            "cursor": "b2Zmc2V0Ojcx",
+>>>>>>> 9834f49b29c79214e0fcdceb418948b3eff3fbf2
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6NDQ3MTU=",
@@ -7636,7 +7981,11 @@
           },
           {
             "__typename": "TeamPageEdge",
+<<<<<<< HEAD
             "cursor": "b2Zmc2V0Ojc1",
+=======
+            "cursor": "b2Zmc2V0Ojcy",
+>>>>>>> 9834f49b29c79214e0fcdceb418948b3eff3fbf2
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6NDc1NTQ=",
@@ -7645,7 +7994,11 @@
                 "type": "TEAM",
                 "slug": "ja-chegou-o-disco-voador",
                 "firstPublishedAt": "2025-10-02T15:09:30.695000Z",
+<<<<<<< HEAD
                 "lastPublishedAt": "2025-10-03T21:09:36.717111Z",
+=======
+                "lastPublishedAt": "2025-10-02T15:10:18.004748Z",
+>>>>>>> 9834f49b29c79214e0fcdceb418948b3eff3fbf2
                 "relativeUrl": "/2025/find-a-team/ja-chegou-o-disco-voador/",
                 "live": true,
                 "parent": null,
@@ -7740,7 +8093,11 @@
           },
           {
             "__typename": "TeamPageEdge",
+<<<<<<< HEAD
             "cursor": "b2Zmc2V0Ojc2",
+=======
+            "cursor": "b2Zmc2V0Ojcz",
+>>>>>>> 9834f49b29c79214e0fcdceb418948b3eff3fbf2
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6NDA0NTY=",
@@ -7844,7 +8201,11 @@
           },
           {
             "__typename": "TeamPageEdge",
+<<<<<<< HEAD
             "cursor": "b2Zmc2V0Ojc3",
+=======
+            "cursor": "b2Zmc2V0Ojc0",
+>>>>>>> 9834f49b29c79214e0fcdceb418948b3eff3fbf2
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6NDg3NTI=",
@@ -7852,8 +8213,13 @@
               "meta": {
                 "type": "TEAM",
                 "slug": "koikwa-2",
+<<<<<<< HEAD
                 "firstPublishedAt": "2025-10-03T20:07:48.055000Z",
                 "lastPublishedAt": "2025-10-03T20:08:00.983449Z",
+=======
+                "firstPublishedAt": null,
+                "lastPublishedAt": null,
+>>>>>>> 9834f49b29c79214e0fcdceb418948b3eff3fbf2
                 "relativeUrl": "/2025/find-a-team/koikwa-2/",
                 "live": true,
                 "parent": null,
@@ -7948,7 +8314,11 @@
           },
           {
             "__typename": "TeamPageEdge",
+<<<<<<< HEAD
             "cursor": "b2Zmc2V0Ojc4",
+=======
+            "cursor": "b2Zmc2V0Ojc1",
+>>>>>>> 9834f49b29c79214e0fcdceb418948b3eff3fbf2
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6MzE2ODA=",
@@ -8066,7 +8436,11 @@
           },
           {
             "__typename": "TeamPageEdge",
+<<<<<<< HEAD
             "cursor": "b2Zmc2V0Ojc5",
+=======
+            "cursor": "b2Zmc2V0Ojc2",
+>>>>>>> 9834f49b29c79214e0fcdceb418948b3eff3fbf2
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6MzQ5MDk=",
@@ -8170,7 +8544,11 @@
           },
           {
             "__typename": "TeamPageEdge",
+<<<<<<< HEAD
             "cursor": "b2Zmc2V0Ojgw",
+=======
+            "cursor": "b2Zmc2V0Ojc3",
+>>>>>>> 9834f49b29c79214e0fcdceb418948b3eff3fbf2
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6MzI4ODQ=",
@@ -8255,7 +8633,11 @@
           },
           {
             "__typename": "TeamPageEdge",
+<<<<<<< HEAD
             "cursor": "b2Zmc2V0Ojgx",
+=======
+            "cursor": "b2Zmc2V0Ojc4",
+>>>>>>> 9834f49b29c79214e0fcdceb418948b3eff3fbf2
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6MzM4ODg=",
@@ -8340,7 +8722,11 @@
           },
           {
             "__typename": "TeamPageEdge",
+<<<<<<< HEAD
             "cursor": "b2Zmc2V0Ojgy",
+=======
+            "cursor": "b2Zmc2V0Ojc5",
+>>>>>>> 9834f49b29c79214e0fcdceb418948b3eff3fbf2
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6MzYyMzQ=",
@@ -8455,7 +8841,11 @@
           },
           {
             "__typename": "TeamPageEdge",
+<<<<<<< HEAD
             "cursor": "b2Zmc2V0Ojgz",
+=======
+            "cursor": "b2Zmc2V0Ojgw",
+>>>>>>> 9834f49b29c79214e0fcdceb418948b3eff3fbf2
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6NDY4Nzg=",
@@ -8540,7 +8930,11 @@
           },
           {
             "__typename": "TeamPageEdge",
+<<<<<<< HEAD
             "cursor": "b2Zmc2V0Ojg0",
+=======
+            "cursor": "b2Zmc2V0Ojgx",
+>>>>>>> 9834f49b29c79214e0fcdceb418948b3eff3fbf2
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6MzMwNDQ=",
@@ -8625,7 +9019,11 @@
           },
           {
             "__typename": "TeamPageEdge",
+<<<<<<< HEAD
             "cursor": "b2Zmc2V0Ojg1",
+=======
+            "cursor": "b2Zmc2V0Ojgy",
+>>>>>>> 9834f49b29c79214e0fcdceb418948b3eff3fbf2
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6NDg2ODI=",
@@ -8710,7 +9108,11 @@
           },
           {
             "__typename": "TeamPageEdge",
+<<<<<<< HEAD
             "cursor": "b2Zmc2V0Ojg2",
+=======
+            "cursor": "b2Zmc2V0Ojgz",
+>>>>>>> 9834f49b29c79214e0fcdceb418948b3eff3fbf2
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6MzE1MjA=",
@@ -8795,7 +9197,11 @@
           },
           {
             "__typename": "TeamPageEdge",
+<<<<<<< HEAD
             "cursor": "b2Zmc2V0Ojg3",
+=======
+            "cursor": "b2Zmc2V0Ojg0",
+>>>>>>> 9834f49b29c79214e0fcdceb418948b3eff3fbf2
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6MzI2NDg=",
@@ -8899,7 +9305,11 @@
           },
           {
             "__typename": "TeamPageEdge",
+<<<<<<< HEAD
             "cursor": "b2Zmc2V0Ojg4",
+=======
+            "cursor": "b2Zmc2V0Ojg1",
+>>>>>>> 9834f49b29c79214e0fcdceb418948b3eff3fbf2
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6NDY3NjY=",
@@ -8984,7 +9394,11 @@
           },
           {
             "__typename": "TeamPageEdge",
+<<<<<<< HEAD
             "cursor": "b2Zmc2V0Ojg5",
+=======
+            "cursor": "b2Zmc2V0Ojg2",
+>>>>>>> 9834f49b29c79214e0fcdceb418948b3eff3fbf2
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6MzYzMjQ=",
@@ -9069,7 +9483,11 @@
           },
           {
             "__typename": "TeamPageEdge",
+<<<<<<< HEAD
             "cursor": "b2Zmc2V0Ojkw",
+=======
+            "cursor": "b2Zmc2V0Ojg3",
+>>>>>>> 9834f49b29c79214e0fcdceb418948b3eff3fbf2
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6NDEyMzE=",
@@ -9173,7 +9591,11 @@
           },
           {
             "__typename": "TeamPageEdge",
+<<<<<<< HEAD
             "cursor": "b2Zmc2V0Ojkx",
+=======
+            "cursor": "b2Zmc2V0Ojg4",
+>>>>>>> 9834f49b29c79214e0fcdceb418948b3eff3fbf2
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6Mzg4ODg=",
@@ -9258,7 +9680,11 @@
           },
           {
             "__typename": "TeamPageEdge",
+<<<<<<< HEAD
             "cursor": "b2Zmc2V0Ojky",
+=======
+            "cursor": "b2Zmc2V0Ojg5",
+>>>>>>> 9834f49b29c79214e0fcdceb418948b3eff3fbf2
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6MzYwMTU=",
@@ -9362,6 +9788,7 @@
           },
           {
             "__typename": "TeamPageEdge",
+<<<<<<< HEAD
             "cursor": "b2Zmc2V0Ojkz",
             "node": {
               "__typename": "TeamPage",
@@ -9448,6 +9875,9 @@
           {
             "__typename": "TeamPageEdge",
             "cursor": "b2Zmc2V0Ojk0",
+=======
+            "cursor": "b2Zmc2V0Ojkw",
+>>>>>>> 9834f49b29c79214e0fcdceb418948b3eff3fbf2
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6NDE4NTc=",
@@ -9551,7 +9981,11 @@
           },
           {
             "__typename": "TeamPageEdge",
+<<<<<<< HEAD
             "cursor": "b2Zmc2V0Ojk1",
+=======
+            "cursor": "b2Zmc2V0Ojkx",
+>>>>>>> 9834f49b29c79214e0fcdceb418948b3eff3fbf2
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6MzE1NzI=",
@@ -9636,7 +10070,11 @@
           },
           {
             "__typename": "TeamPageEdge",
+<<<<<<< HEAD
             "cursor": "b2Zmc2V0Ojk2",
+=======
+            "cursor": "b2Zmc2V0Ojky",
+>>>>>>> 9834f49b29c79214e0fcdceb418948b3eff3fbf2
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6NDU1OTM=",
@@ -9740,7 +10178,11 @@
           },
           {
             "__typename": "TeamPageEdge",
+<<<<<<< HEAD
             "cursor": "b2Zmc2V0Ojk3",
+=======
+            "cursor": "b2Zmc2V0Ojkz",
+>>>>>>> 9834f49b29c79214e0fcdceb418948b3eff3fbf2
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6MzUyMjU=",
@@ -9825,7 +10267,11 @@
           },
           {
             "__typename": "TeamPageEdge",
+<<<<<<< HEAD
             "cursor": "b2Zmc2V0Ojk4",
+=======
+            "cursor": "b2Zmc2V0Ojk0",
+>>>>>>> 9834f49b29c79214e0fcdceb418948b3eff3fbf2
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6NDAwMzA=",
@@ -9910,7 +10356,11 @@
           },
           {
             "__typename": "TeamPageEdge",
+<<<<<<< HEAD
             "cursor": "b2Zmc2V0Ojk5",
+=======
+            "cursor": "b2Zmc2V0Ojk1",
+>>>>>>> 9834f49b29c79214e0fcdceb418948b3eff3fbf2
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6MzYxODA=",
@@ -10014,7 +10464,11 @@
           },
           {
             "__typename": "TeamPageEdge",
+<<<<<<< HEAD
             "cursor": "b2Zmc2V0OjEwMA==",
+=======
+            "cursor": "b2Zmc2V0Ojk2",
+>>>>>>> 9834f49b29c79214e0fcdceb418948b3eff3fbf2
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6NDg2MjM=",
@@ -10099,7 +10553,11 @@
           },
           {
             "__typename": "TeamPageEdge",
+<<<<<<< HEAD
             "cursor": "b2Zmc2V0OjEwMQ==",
+=======
+            "cursor": "b2Zmc2V0Ojk3",
+>>>>>>> 9834f49b29c79214e0fcdceb418948b3eff3fbf2
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6NDI3MTI=",
@@ -10184,7 +10642,11 @@
           },
           {
             "__typename": "TeamPageEdge",
+<<<<<<< HEAD
             "cursor": "b2Zmc2V0OjEwMg==",
+=======
+            "cursor": "b2Zmc2V0Ojk4",
+>>>>>>> 9834f49b29c79214e0fcdceb418948b3eff3fbf2
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6MzcxNTI=",
@@ -10269,7 +10731,11 @@
           },
           {
             "__typename": "TeamPageEdge",
+<<<<<<< HEAD
             "cursor": "b2Zmc2V0OjEwMw==",
+=======
+            "cursor": "b2Zmc2V0Ojk5",
+>>>>>>> 9834f49b29c79214e0fcdceb418948b3eff3fbf2
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6MzM1MjA=",
@@ -10392,7 +10858,11 @@
           },
           {
             "__typename": "TeamPageEdge",
+<<<<<<< HEAD
             "cursor": "b2Zmc2V0OjEwNA==",
+=======
+            "cursor": "b2Zmc2V0OjEwMA==",
+>>>>>>> 9834f49b29c79214e0fcdceb418948b3eff3fbf2
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6NDY4MTA=",
@@ -10496,7 +10966,11 @@
           },
           {
             "__typename": "TeamPageEdge",
+<<<<<<< HEAD
             "cursor": "b2Zmc2V0OjEwNQ==",
+=======
+            "cursor": "b2Zmc2V0OjEwMQ==",
+>>>>>>> 9834f49b29c79214e0fcdceb418948b3eff3fbf2
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6NDU3NDg=",
@@ -10600,7 +11074,11 @@
           },
           {
             "__typename": "TeamPageEdge",
+<<<<<<< HEAD
             "cursor": "b2Zmc2V0OjEwNg==",
+=======
+            "cursor": "b2Zmc2V0OjEwMg==",
+>>>>>>> 9834f49b29c79214e0fcdceb418948b3eff3fbf2
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6NDI2NjI=",
@@ -10704,7 +11182,11 @@
           },
           {
             "__typename": "TeamPageEdge",
+<<<<<<< HEAD
             "cursor": "b2Zmc2V0OjEwNw==",
+=======
+            "cursor": "b2Zmc2V0OjEwMw==",
+>>>>>>> 9834f49b29c79214e0fcdceb418948b3eff3fbf2
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6MzU5MzY=",
@@ -10808,7 +11290,115 @@
           },
           {
             "__typename": "TeamPageEdge",
+<<<<<<< HEAD
             "cursor": "b2Zmc2V0OjEwOA==",
+=======
+            "cursor": "b2Zmc2V0OjEwNA==",
+            "node": {
+              "__typename": "TeamPage",
+              "id": "aWQ6NDQ3Njc=",
+              "title": "S.A.T : Sharks Analysis Team",
+              "meta": {
+                "type": "TEAM",
+                "slug": "sat-sharks-analysis-team",
+                "firstPublishedAt": "2025-09-30T01:07:08.229000Z",
+                "lastPublishedAt": "2025-10-03T01:01:25.102511Z",
+                "relativeUrl": "/2025/find-a-team/sat-sharks-analysis-team/",
+                "live": true,
+                "parent": null,
+                "__typename": "ExpandedPageMeta"
+              },
+              "owner": "aWQ6MzkwMzYx",
+              "ownerDetails": null,
+              "excerpt": "Equipe do IFTM - Campus Uberlândia Centro - Desafio Sharks from Space",
+              "project": "aWQ6NDI1NzU=",
+              "projectDetails": {
+                "id": "aWQ6NDI1NzU=",
+                "name": "Project S.A.T : Sharks Analysis Team",
+                "summary": "",
+                "demoLink": "",
+                "projectLink": "",
+                "details": "",
+                "solution": "",
+                "aiReferences": "",
+                "dataReferences": "",
+                "projectReferences": "",
+                "isSubmitted": false,
+                "savedAt": null,
+                "submittedAt": null,
+                "__typename": "Project"
+              },
+              "projectSubmitted": false,
+              "featuredImage": {
+                "id": "aWQ6MzQ1NjA5",
+                "meta": {
+                  "type": "images.CustomImage",
+                  "downloadUrl": "https://assets.spaceappschallenge.org/media/original_images/1000562449_kAfoHGH.jpg",
+                  "__typename": "ImageMeta"
+                },
+                "title": "team_image.01:07:07.497506",
+                "alt": "team_image.01:07:07.497506",
+                "caption": "team_image.01:07:07.497506",
+                "displaySize": "og",
+                "rendition": {
+                  "url": "https://assets.spaceappschallenge.org/media/images/1000562449_kAfoHGH.2e16d0ba.fill-300x250.jpg",
+                  "fullUrl": "https://assets.spaceappschallenge.org/media/images/1000562449_kAfoHGH.2e16d0ba.fill-300x250.jpg",
+                  "height": 250,
+                  "width": 300,
+                  "__typename": "BaseImage"
+                },
+                "__typename": "DefaultImage"
+              },
+              "description": null,
+              "desiredSkills": null,
+              "languages": null,
+              "challenge": "aWQ6MzEzMjI=",
+              "challengeDetails": {
+                "id": "aWQ6MzEzMjI=",
+                "title": "Sharks from Space",
+                "meta": {
+                  "type": "CHALLENGE",
+                  "slug": "sharks-from-space",
+                  "firstPublishedAt": "2025-08-18T19:28:39.744986Z",
+                  "lastPublishedAt": "2025-09-16T14:03:27.636764Z",
+                  "relativeUrl": "/2025/challenges/sharks-from-space/",
+                  "live": true,
+                  "parent": null,
+                  "__typename": "ExpandedPageMeta"
+                },
+                "excerpt": "Earth’s ocean is one of the most powerful habitats in our universe, supporting a range of life that sustains ecosystems and habitability across the globe. It is common to measure photosynthetic activity in the ocean from space, but far more challenging to track top predators. Your challenge is to create a mathematical framework for identifying sharks and predicting their foraging habitats using NASA satellite data, and also to suggest a new conceptual model of a tag (a small electronic device that can be attached to an animal to track and study its movement) that could measure not only where sharks are, but also what they are eating, and in real time transmit that data back to users to enable development of predictive models. (Earth Science Division)",
+                "__typename": "ChallengePage"
+              },
+              "location": "aWQ6MzA2NjM=",
+              "locationDetails": {
+                "id": "aWQ6MzA2NjM=",
+                "title": "Uberlandia",
+                "displayName": "Uberlândia",
+                "meta": {
+                  "type": "LOCATION",
+                  "slug": "uberlandia",
+                  "firstPublishedAt": "2025-07-18T21:43:56.560298Z",
+                  "lastPublishedAt": "2025-08-22T19:13:44.047613Z",
+                  "relativeUrl": "/2025/local-events/uberlandia/",
+                  "live": true,
+                  "parent": null,
+                  "__typename": "ExpandedPageMeta"
+                },
+                "country": "Brazil",
+                "__typename": "LocationPage"
+              },
+              "event": "aWQ6Mw==",
+              "eventDetails": null,
+              "joinEnabled": true,
+              "memberships": null,
+              "nominationBadges": null,
+              "awardBadges": null
+            }
+          },
+          {
+            "__typename": "TeamPageEdge",
+            "cursor": "b2Zmc2V0OjEwNQ==",
+>>>>>>> 9834f49b29c79214e0fcdceb418948b3eff3fbf2
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6MzE1MDU=",
@@ -10915,7 +11505,11 @@
           },
           {
             "__typename": "TeamPageEdge",
+<<<<<<< HEAD
             "cursor": "b2Zmc2V0OjEwOQ==",
+=======
+            "cursor": "b2Zmc2V0OjEwNg==",
+>>>>>>> 9834f49b29c79214e0fcdceb418948b3eff3fbf2
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6MzQ3Mzc=",
@@ -11019,7 +11613,11 @@
           },
           {
             "__typename": "TeamPageEdge",
+<<<<<<< HEAD
             "cursor": "b2Zmc2V0OjExMA==",
+=======
+            "cursor": "b2Zmc2V0OjEwNw==",
+>>>>>>> 9834f49b29c79214e0fcdceb418948b3eff3fbf2
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6MzI3MjA=",
@@ -11123,7 +11721,11 @@
           },
           {
             "__typename": "TeamPageEdge",
+<<<<<<< HEAD
             "cursor": "b2Zmc2V0OjExMQ==",
+=======
+            "cursor": "b2Zmc2V0OjEwOA==",
+>>>>>>> 9834f49b29c79214e0fcdceb418948b3eff3fbf2
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6MzM2Mzg=",
@@ -11208,7 +11810,11 @@
           },
           {
             "__typename": "TeamPageEdge",
+<<<<<<< HEAD
             "cursor": "b2Zmc2V0OjExMg==",
+=======
+            "cursor": "b2Zmc2V0OjEwOQ==",
+>>>>>>> 9834f49b29c79214e0fcdceb418948b3eff3fbf2
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6NDI0ODE=",
@@ -11312,7 +11918,11 @@
           },
           {
             "__typename": "TeamPageEdge",
+<<<<<<< HEAD
             "cursor": "b2Zmc2V0OjExMw==",
+=======
+            "cursor": "b2Zmc2V0OjExMA==",
+>>>>>>> 9834f49b29c79214e0fcdceb418948b3eff3fbf2
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6NDQ3MDM=",
@@ -11416,7 +12026,11 @@
           },
           {
             "__typename": "TeamPageEdge",
+<<<<<<< HEAD
             "cursor": "b2Zmc2V0OjExNA==",
+=======
+            "cursor": "b2Zmc2V0OjExMQ==",
+>>>>>>> 9834f49b29c79214e0fcdceb418948b3eff3fbf2
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6MzM2MzM=",
@@ -11501,7 +12115,11 @@
           },
           {
             "__typename": "TeamPageEdge",
+<<<<<<< HEAD
             "cursor": "b2Zmc2V0OjExNQ==",
+=======
+            "cursor": "b2Zmc2V0OjExMg==",
+>>>>>>> 9834f49b29c79214e0fcdceb418948b3eff3fbf2
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6Mzg0ODQ=",
@@ -11586,7 +12204,11 @@
           },
           {
             "__typename": "TeamPageEdge",
+<<<<<<< HEAD
             "cursor": "b2Zmc2V0OjExNg==",
+=======
+            "cursor": "b2Zmc2V0OjExMw==",
+>>>>>>> 9834f49b29c79214e0fcdceb418948b3eff3fbf2
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6NDI3MjU=",
@@ -11701,7 +12323,11 @@
           },
           {
             "__typename": "TeamPageEdge",
+<<<<<<< HEAD
             "cursor": "b2Zmc2V0OjExNw==",
+=======
+            "cursor": "b2Zmc2V0OjExNA==",
+>>>>>>> 9834f49b29c79214e0fcdceb418948b3eff3fbf2
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6NDIwMDY=",
@@ -11805,6 +12431,7 @@
           },
           {
             "__typename": "TeamPageEdge",
+<<<<<<< HEAD
             "cursor": "b2Zmc2V0OjExOA==",
             "node": {
               "__typename": "TeamPage",
@@ -11910,6 +12537,9 @@
           {
             "__typename": "TeamPageEdge",
             "cursor": "b2Zmc2V0OjExOQ==",
+=======
+            "cursor": "b2Zmc2V0OjExNQ==",
+>>>>>>> 9834f49b29c79214e0fcdceb418948b3eff3fbf2
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6NDA3MjI=",
@@ -12013,7 +12643,11 @@
           },
           {
             "__typename": "TeamPageEdge",
+<<<<<<< HEAD
             "cursor": "b2Zmc2V0OjEyMA==",
+=======
+            "cursor": "b2Zmc2V0OjExNg==",
+>>>>>>> 9834f49b29c79214e0fcdceb418948b3eff3fbf2
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6MzIwMTc=",
@@ -12098,7 +12732,11 @@
           },
           {
             "__typename": "TeamPageEdge",
+<<<<<<< HEAD
             "cursor": "b2Zmc2V0OjEyMQ==",
+=======
+            "cursor": "b2Zmc2V0OjExNw==",
+>>>>>>> 9834f49b29c79214e0fcdceb418948b3eff3fbf2
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6NDU3MTc=",
@@ -12205,7 +12843,11 @@
           },
           {
             "__typename": "TeamPageEdge",
+<<<<<<< HEAD
             "cursor": "b2Zmc2V0OjEyMg==",
+=======
+            "cursor": "b2Zmc2V0OjExOA==",
+>>>>>>> 9834f49b29c79214e0fcdceb418948b3eff3fbf2
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6MzI2MDc=",
@@ -12309,7 +12951,11 @@
           },
           {
             "__typename": "TeamPageEdge",
+<<<<<<< HEAD
             "cursor": "b2Zmc2V0OjEyMw==",
+=======
+            "cursor": "b2Zmc2V0OjExOQ==",
+>>>>>>> 9834f49b29c79214e0fcdceb418948b3eff3fbf2
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6MzgyNzg=",
@@ -12394,7 +13040,11 @@
           },
           {
             "__typename": "TeamPageEdge",
+<<<<<<< HEAD
             "cursor": "b2Zmc2V0OjEyNA==",
+=======
+            "cursor": "b2Zmc2V0OjEyMA==",
+>>>>>>> 9834f49b29c79214e0fcdceb418948b3eff3fbf2
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6MzkwMzM=",
@@ -12498,7 +13148,11 @@
           },
           {
             "__typename": "TeamPageEdge",
+<<<<<<< HEAD
             "cursor": "b2Zmc2V0OjEyNQ==",
+=======
+            "cursor": "b2Zmc2V0OjEyMQ==",
+>>>>>>> 9834f49b29c79214e0fcdceb418948b3eff3fbf2
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6MzI2MzE=",
@@ -12613,7 +13267,11 @@
           },
           {
             "__typename": "TeamPageEdge",
+<<<<<<< HEAD
             "cursor": "b2Zmc2V0OjEyNg==",
+=======
+            "cursor": "b2Zmc2V0OjEyMg==",
+>>>>>>> 9834f49b29c79214e0fcdceb418948b3eff3fbf2
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6NDE4NTY=",
@@ -12717,7 +13375,11 @@
           },
           {
             "__typename": "TeamPageEdge",
+<<<<<<< HEAD
             "cursor": "b2Zmc2V0OjEyNw==",
+=======
+            "cursor": "b2Zmc2V0OjEyMw==",
+>>>>>>> 9834f49b29c79214e0fcdceb418948b3eff3fbf2
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6NDE1OTQ=",
@@ -12821,7 +13483,11 @@
           },
           {
             "__typename": "TeamPageEdge",
+<<<<<<< HEAD
             "cursor": "b2Zmc2V0OjEyOA==",
+=======
+            "cursor": "b2Zmc2V0OjEyNA==",
+>>>>>>> 9834f49b29c79214e0fcdceb418948b3eff3fbf2
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6NDM3MDg=",
@@ -12906,7 +13572,11 @@
           },
           {
             "__typename": "TeamPageEdge",
+<<<<<<< HEAD
             "cursor": "b2Zmc2V0OjEyOQ==",
+=======
+            "cursor": "b2Zmc2V0OjEyNQ==",
+>>>>>>> 9834f49b29c79214e0fcdceb418948b3eff3fbf2
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6MzQ1MTc=",
@@ -13025,7 +13695,11 @@
           },
           {
             "__typename": "TeamPageEdge",
+<<<<<<< HEAD
             "cursor": "b2Zmc2V0OjEzMA==",
+=======
+            "cursor": "b2Zmc2V0OjEyNg==",
+>>>>>>> 9834f49b29c79214e0fcdceb418948b3eff3fbf2
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6MzM0OTg=",
@@ -13129,7 +13803,11 @@
           },
           {
             "__typename": "TeamPageEdge",
+<<<<<<< HEAD
             "cursor": "b2Zmc2V0OjEzMQ==",
+=======
+            "cursor": "b2Zmc2V0OjEyNw==",
+>>>>>>> 9834f49b29c79214e0fcdceb418948b3eff3fbf2
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6MzMwNjA=",
@@ -13233,7 +13911,11 @@
           },
           {
             "__typename": "TeamPageEdge",
+<<<<<<< HEAD
             "cursor": "b2Zmc2V0OjEzMg==",
+=======
+            "cursor": "b2Zmc2V0OjEyOA==",
+>>>>>>> 9834f49b29c79214e0fcdceb418948b3eff3fbf2
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6MzM4MTM=",
@@ -13337,6 +14019,7 @@
           },
           {
             "__typename": "TeamPageEdge",
+<<<<<<< HEAD
             "cursor": "b2Zmc2V0OjEzMw==",
             "node": {
               "__typename": "TeamPage",
@@ -13442,6 +14125,9 @@
           {
             "__typename": "TeamPageEdge",
             "cursor": "b2Zmc2V0OjEzNA==",
+=======
+            "cursor": "b2Zmc2V0OjEyOQ==",
+>>>>>>> 9834f49b29c79214e0fcdceb418948b3eff3fbf2
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6NDQ4MTI=",
@@ -13561,7 +14247,11 @@
           },
           {
             "__typename": "TeamPageEdge",
+<<<<<<< HEAD
             "cursor": "b2Zmc2V0OjEzNQ==",
+=======
+            "cursor": "b2Zmc2V0OjEzMA==",
+>>>>>>> 9834f49b29c79214e0fcdceb418948b3eff3fbf2
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6MzkwNDE=",
@@ -13665,7 +14355,11 @@
           },
           {
             "__typename": "TeamPageEdge",
+<<<<<<< HEAD
             "cursor": "b2Zmc2V0OjEzNg==",
+=======
+            "cursor": "b2Zmc2V0OjEzMQ==",
+>>>>>>> 9834f49b29c79214e0fcdceb418948b3eff3fbf2
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6NDA2ODg=",
@@ -13769,7 +14463,11 @@
           },
           {
             "__typename": "TeamPageEdge",
+<<<<<<< HEAD
             "cursor": "b2Zmc2V0OjEzNw==",
+=======
+            "cursor": "b2Zmc2V0OjEzMg==",
+>>>>>>> 9834f49b29c79214e0fcdceb418948b3eff3fbf2
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6MzQyNTk=",
@@ -13891,25 +14589,41 @@
           },
           {
             "__typename": "TeamPageEdge",
+<<<<<<< HEAD
             "cursor": "b2Zmc2V0OjEzOA==",
+=======
+            "cursor": "b2Zmc2V0OjEzMw==",
+>>>>>>> 9834f49b29c79214e0fcdceb418948b3eff3fbf2
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6NDk1ODA=",
               "title": "Wtg equipe",
               "meta": {
                 "type": "TEAM",
+<<<<<<< HEAD
                 "slug": "wtg-equipe",
                 "firstPublishedAt": null,
                 "lastPublishedAt": null,
                 "relativeUrl": "/2025/find-a-team/wtg-equipe/",
+=======
+                "slug": "x-bacon-espacial",
+                "firstPublishedAt": "2025-09-30T11:54:59.285000Z",
+                "lastPublishedAt": "2025-10-03T10:43:31.408820Z",
+                "relativeUrl": "/2025/find-a-team/x-bacon-espacial/",
+>>>>>>> 9834f49b29c79214e0fcdceb418948b3eff3fbf2
                 "live": true,
                 "parent": null,
                 "__typename": "ExpandedPageMeta"
               },
               "owner": "aWQ6NDM5MTkx",
               "ownerDetails": null,
+<<<<<<< HEAD
               "excerpt": "Hello! I'm a developer with experience in both front-end and back-end programming. My skills include HTML, CSS, JavaScript, Python, Java, C, and SQL Server. I'm interested in building functional, efficient, and creative solutions for this challeng",
               "project": "aWQ6NDczODQ=",
+=======
+              "excerpt": "We are a team participating in the challenge “NASA Farm Navigators: Using NASA Data Exploration in Agriculture.” Our goal is to create an educational game that makes learning about agriculture more fun and accessible, helping people expand their k...",
+              "project": "aWQ6NDI5Njg=",
+>>>>>>> 9834f49b29c79214e0fcdceb418948b3eff3fbf2
               "projectDetails": {
                 "id": "aWQ6NDczODQ=",
                 "name": "Project Wtg equipe",
@@ -13927,6 +14641,7 @@
                 "__typename": "Project"
               },
               "projectSubmitted": false,
+<<<<<<< HEAD
               "featuredImage": null,
               "description": null,
               "desiredSkills": null,
@@ -13941,11 +14656,64 @@
                   "firstPublishedAt": "2025-08-18T19:28:38.822862Z",
                   "lastPublishedAt": "2025-09-16T14:38:20.228286Z",
                   "relativeUrl": "/2025/challenges/a-world-away-hunting-for-exoplanets-with-ai/",
+=======
+              "featuredImage": {
+                "id": "aWQ6MzYwMTAy",
+                "meta": {
+                  "type": "images.CustomImage",
+                  "downloadUrl": "https://assets.spaceappschallenge.org/media/original_images/strawberry_low_poly_shadow.jpg",
+                  "__typename": "ImageMeta"
+                },
+                "title": "team_image.10:42:52.545913",
+                "alt": "team_image.10:42:52.545913",
+                "caption": "team_image.10:42:52.545913",
+                "displaySize": "og",
+                "rendition": {
+                  "url": "https://assets.spaceappschallenge.org/media/images/strawberry_low_poly_shadow.2e16d0ba.fill-300x250.jpg",
+                  "fullUrl": "https://assets.spaceappschallenge.org/media/images/strawberry_low_poly_shadow.2e16d0ba.fill-300x250.jpg",
+                  "height": 250,
+                  "width": 300,
+                  "__typename": "BaseImage"
+                },
+                "__typename": "DefaultImage"
+              },
+              "description": null,
+              "desiredSkills": [
+                "Agriculture",
+                "Animation",
+                "Coding",
+                "Data Analysis",
+                "Data Visualization",
+                "Design",
+                "Earth Science",
+                "Games",
+                "Graphic Design",
+                "Weather"
+              ],
+              "languages": [
+                "English",
+                "Portuguese"
+              ],
+              "challenge": "aWQ6MzEzMjc=",
+              "challengeDetails": {
+                "id": "aWQ6MzEzMjc=",
+                "title": "NASA Farm Navigators: Using NASA Data Exploration in Agriculture",
+                "meta": {
+                  "type": "CHALLENGE",
+                  "slug": "nasa-farm-navigators-using-nasa-data-exploration-in-agriculture",
+                  "firstPublishedAt": "2025-08-18T19:28:40.206949Z",
+                  "lastPublishedAt": "2025-09-16T15:30:20.113869Z",
+                  "relativeUrl": "/2025/challenges/nasa-farm-navigators-using-nasa-data-exploration-in-agriculture/",
+>>>>>>> 9834f49b29c79214e0fcdceb418948b3eff3fbf2
                   "live": true,
                   "parent": null,
                   "__typename": "ExpandedPageMeta"
                 },
+<<<<<<< HEAD
                 "excerpt": "Data from several different space-based exoplanet surveying missions have enabled discovery of thousands of new planets outside our solar system, but most of these exoplanets were identified manually. With advances in artificial intelligence and machine learning (AI/ML), it is possible to automatically analyze large sets of data collected by these missions to identify exoplanets. Your challenge is to create an AI/ML model that is trained on one or more of the open-source exoplanet datasets offered by NASA and that can analyze new data to accurately identify exoplanets. (Astrophysics Division)",
+=======
+                "excerpt": "The agriculture community faces the challenge of integrating technology and data to enhance sustainable farming practices. Simulating key farming activities like fertilizing, irrigating, and livestock management using real-world NASA satellite imagery and climate data can enable better understanding of the impacts of these variables on crop production. Your challenge is to create an engaging educational game that effectively utilizes NASA’s open data sets to simulate farming scenarios and enables players to learn how this data can inform innovative, sustainable, agricultural methods. (Earth Science Division)",
+>>>>>>> 9834f49b29c79214e0fcdceb418948b3eff3fbf2
                 "__typename": "ChallengePage"
               },
               "location": "aWQ6MzA2NjM=",
@@ -13968,7 +14736,7 @@
               },
               "event": "aWQ6Mw==",
               "eventDetails": null,
-              "joinEnabled": true,
+              "joinEnabled": false,
               "memberships": null,
               "nominationBadges": null,
               "awardBadges": null
@@ -13976,6 +14744,7 @@
           },
           {
             "__typename": "TeamPageEdge",
+<<<<<<< HEAD
             "cursor": "b2Zmc2V0OjEzOQ==",
             "node": {
               "__typename": "TeamPage",
@@ -14095,6 +14864,9 @@
           {
             "__typename": "TeamPageEdge",
             "cursor": "b2Zmc2V0OjE0MA==",
+=======
+            "cursor": "b2Zmc2V0OjEzNA==",
+>>>>>>> 9834f49b29c79214e0fcdceb418948b3eff3fbf2
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6NDQ3MDk=",
@@ -14198,7 +14970,11 @@
           },
           {
             "__typename": "TeamPageEdge",
+<<<<<<< HEAD
             "cursor": "b2Zmc2V0OjE0MQ==",
+=======
+            "cursor": "b2Zmc2V0OjEzNQ==",
+>>>>>>> 9834f49b29c79214e0fcdceb418948b3eff3fbf2
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6MzMyNDM=",
