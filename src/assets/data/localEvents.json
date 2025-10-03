@@ -54,11 +54,7 @@
           },
           "country": "Turkey",
           "displayName": "Çorum",
-<<<<<<< HEAD
           "cachedRegistrations": 431,
-=======
-          "cachedRegistrations": 355,
->>>>>>> 9834f49b29c79214e0fcdceb418948b3eff3fbf2
           "eventType": "Virtual",
           "registrationEnabled": true,
           "isHostEvent": false,
@@ -90,11 +86,7 @@
           },
           "country": "Turkey",
           "displayName": "Çanakkale",
-<<<<<<< HEAD
           "cachedRegistrations": 105,
-=======
-          "cachedRegistrations": 93,
->>>>>>> 9834f49b29c79214e0fcdceb418948b3eff3fbf2
           "eventType": "In-Person",
           "registrationEnabled": true,
           "isHostEvent": false,
@@ -126,11 +118,7 @@
           },
           "country": "Switzerland",
           "displayName": "Zurich",
-<<<<<<< HEAD
           "cachedRegistrations": 163,
-=======
-          "cachedRegistrations": 157,
->>>>>>> 9834f49b29c79214e0fcdceb418948b3eff3fbf2
           "eventType": "Virtual & In-Person",
           "registrationEnabled": true,
           "isHostEvent": false,
@@ -226,11 +214,7 @@
           },
           "country": "United States",
           "displayName": "Yonkers, NY",
-<<<<<<< HEAD
           "cachedRegistrations": 271,
-=======
-          "cachedRegistrations": 266,
->>>>>>> 9834f49b29c79214e0fcdceb418948b3eff3fbf2
           "eventType": "Virtual & In-Person",
           "registrationEnabled": true,
           "isHostEvent": false,
@@ -326,11 +310,7 @@
           },
           "country": "Mexico",
           "displayName": "Xalapa",
-<<<<<<< HEAD
           "cachedRegistrations": 46,
-=======
-          "cachedRegistrations": 45,
->>>>>>> 9834f49b29c79214e0fcdceb418948b3eff3fbf2
           "eventType": "Virtual & In-Person",
           "registrationEnabled": true,
           "isHostEvent": false,
@@ -426,11 +406,7 @@
           },
           "country": "Canada",
           "displayName": "Windsor",
-<<<<<<< HEAD
           "cachedRegistrations": 153,
-=======
-          "cachedRegistrations": 154,
->>>>>>> 9834f49b29c79214e0fcdceb418948b3eff3fbf2
           "eventType": "In-Person",
           "registrationEnabled": true,
           "isHostEvent": false,
@@ -558,11 +534,7 @@
           },
           "country": "India",
           "displayName": "Virudhunagar",
-<<<<<<< HEAD
           "cachedRegistrations": 680,
-=======
-          "cachedRegistrations": 653,
->>>>>>> 9834f49b29c79214e0fcdceb418948b3eff3fbf2
           "eventType": "Virtual",
           "registrationEnabled": true,
           "isHostEvent": false,
@@ -594,7 +566,7 @@
           },
           "country": "Lithuania",
           "displayName": "Vilnius",
-          "cachedRegistrations": 75,
+          "cachedRegistrations": 74,
           "eventType": "In-Person",
           "registrationEnabled": true,
           "isHostEvent": false,
@@ -690,11 +662,7 @@
           },
           "country": "Austria",
           "displayName": "Vienna",
-<<<<<<< HEAD
           "cachedRegistrations": 25,
-=======
-          "cachedRegistrations": 22,
->>>>>>> 9834f49b29c79214e0fcdceb418948b3eff3fbf2
           "eventType": "In-Person",
           "registrationEnabled": true,
           "isHostEvent": false,
@@ -726,11 +694,7 @@
           },
           "country": "Canada",
           "displayName": "Victoria",
-<<<<<<< HEAD
           "cachedRegistrations": 115,
-=======
-          "cachedRegistrations": 106,
->>>>>>> 9834f49b29c79214e0fcdceb418948b3eff3fbf2
           "eventType": "In-Person",
           "registrationEnabled": true,
           "isHostEvent": false,
@@ -762,11 +726,7 @@
           },
           "country": "Holy See",
           "displayName": "Vatican City",
-<<<<<<< HEAD
           "cachedRegistrations": 144,
-=======
-          "cachedRegistrations": 141,
->>>>>>> 9834f49b29c79214e0fcdceb418948b3eff3fbf2
           "eventType": "Virtual & In-Person",
           "registrationEnabled": true,
           "isHostEvent": false,
@@ -798,7 +758,7 @@
           },
           "country": "Canada",
           "displayName": "Vancouver",
-          "cachedRegistrations": 86,
+          "cachedRegistrations": 81,
           "eventType": "Virtual & In-Person",
           "registrationEnabled": true,
           "isHostEvent": false,
@@ -830,11 +790,7 @@
           },
           "country": "Turkey",
           "displayName": "Van",
-<<<<<<< HEAD
           "cachedRegistrations": 248,
-=======
-          "cachedRegistrations": 234,
->>>>>>> 9834f49b29c79214e0fcdceb418948b3eff3fbf2
           "eventType": "Virtual & In-Person",
           "registrationEnabled": true,
           "isHostEvent": false,
@@ -866,11 +822,7 @@
           },
           "country": "India",
           "displayName": "Vallabh Vidyanagar",
-<<<<<<< HEAD
           "cachedRegistrations": 25,
-=======
-          "cachedRegistrations": 24,
->>>>>>> 9834f49b29c79214e0fcdceb418948b3eff3fbf2
           "eventType": "Virtual & In-Person",
           "registrationEnabled": true,
           "isHostEvent": false,
@@ -998,11 +950,7 @@
           },
           "country": "United Arab Emirates",
           "displayName": "Umm Al Quwain",
-<<<<<<< HEAD
           "cachedRegistrations": 29,
-=======
-          "cachedRegistrations": 20,
->>>>>>> 9834f49b29c79214e0fcdceb418948b3eff3fbf2
           "eventType": "Virtual",
           "registrationEnabled": true,
           "isHostEvent": false,
@@ -1034,11 +982,7 @@
           },
           "country": "India",
           "displayName": "Udaipur",
-<<<<<<< HEAD
           "cachedRegistrations": 271,
-=======
-          "cachedRegistrations": 266,
->>>>>>> 9834f49b29c79214e0fcdceb418948b3eff3fbf2
           "eventType": "In-Person",
           "registrationEnabled": true,
           "isHostEvent": false,
@@ -1070,11 +1014,7 @@
           },
           "country": "Brazil",
           "displayName": "Uberlândia",
-<<<<<<< HEAD
           "cachedRegistrations": 1390,
-=======
-          "cachedRegistrations": 1373,
->>>>>>> 9834f49b29c79214e0fcdceb418948b3eff3fbf2
           "eventType": "Virtual & In-Person",
           "registrationEnabled": true,
           "isHostEvent": false,
@@ -1138,11 +1078,7 @@
           },
           "country": "India",
           "displayName": "Tumakuru",
-<<<<<<< HEAD
           "cachedRegistrations": 77,
-=======
-          "cachedRegistrations": 66,
->>>>>>> 9834f49b29c79214e0fcdceb418948b3eff3fbf2
           "eventType": "Virtual & In-Person",
           "registrationEnabled": true,
           "isHostEvent": false,
@@ -1206,11 +1142,7 @@
           },
           "country": "India",
           "displayName": "Trivandrum",
-<<<<<<< HEAD
           "cachedRegistrations": 527,
-=======
-          "cachedRegistrations": 511,
->>>>>>> 9834f49b29c79214e0fcdceb418948b3eff3fbf2
           "eventType": "Virtual & In-Person",
           "registrationEnabled": true,
           "isHostEvent": false,
@@ -1274,11 +1206,7 @@
           },
           "country": "Turkey",
           "displayName": "Trabzon",
-<<<<<<< HEAD
           "cachedRegistrations": 284,
-=======
-          "cachedRegistrations": 273,
->>>>>>> 9834f49b29c79214e0fcdceb418948b3eff3fbf2
           "eventType": "Virtual & In-Person",
           "registrationEnabled": true,
           "isHostEvent": false,
@@ -1406,11 +1334,7 @@
           },
           "country": "Mexico",
           "displayName": "Tlaxcala City",
-<<<<<<< HEAD
           "cachedRegistrations": 20,
-=======
-          "cachedRegistrations": 19,
->>>>>>> 9834f49b29c79214e0fcdceb418948b3eff3fbf2
           "eventType": "Virtual & In-Person",
           "registrationEnabled": true,
           "isHostEvent": false,
@@ -1442,11 +1366,7 @@
           },
           "country": "Albania",
           "displayName": "Tirana",
-<<<<<<< HEAD
           "cachedRegistrations": 76,
-=======
-          "cachedRegistrations": 71,
->>>>>>> 9834f49b29c79214e0fcdceb418948b3eff3fbf2
           "eventType": "In-Person",
           "registrationEnabled": true,
           "isHostEvent": false,
@@ -1478,11 +1398,7 @@
           },
           "country": "Mexico",
           "displayName": "Tijuana",
-<<<<<<< HEAD
           "cachedRegistrations": 100,
-=======
-          "cachedRegistrations": 97,
->>>>>>> 9834f49b29c79214e0fcdceb418948b3eff3fbf2
           "eventType": "Virtual & In-Person",
           "registrationEnabled": true,
           "isHostEvent": false,
@@ -1546,11 +1462,7 @@
           },
           "country": "India",
           "displayName": "Thrissur",
-<<<<<<< HEAD
           "cachedRegistrations": 1091,
-=======
-          "cachedRegistrations": 1013,
->>>>>>> 9834f49b29c79214e0fcdceb418948b3eff3fbf2
           "eventType": "Virtual & In-Person",
           "registrationEnabled": true,
           "isHostEvent": false,
@@ -1710,11 +1622,7 @@
           },
           "country": "Brazil",
           "displayName": "Tefé",
-<<<<<<< HEAD
           "cachedRegistrations": 7,
-=======
-          "cachedRegistrations": 6,
->>>>>>> 9834f49b29c79214e0fcdceb418948b3eff3fbf2
           "eventType": "In-Person",
           "registrationEnabled": true,
           "isHostEvent": false,
@@ -1778,11 +1686,7 @@
           },
           "country": "Uzbekistan",
           "displayName": "Tashkent",
-<<<<<<< HEAD
           "cachedRegistrations": 600,
-=======
-          "cachedRegistrations": 599,
->>>>>>> 9834f49b29c79214e0fcdceb418948b3eff3fbf2
           "eventType": "In-Person",
           "registrationEnabled": true,
           "isHostEvent": false,
@@ -1814,11 +1718,7 @@
           },
           "country": "United States",
           "displayName": "Tarzana, CA",
-<<<<<<< HEAD
           "cachedRegistrations": 10,
-=======
-          "cachedRegistrations": 9,
->>>>>>> 9834f49b29c79214e0fcdceb418948b3eff3fbf2
           "eventType": "Virtual",
           "registrationEnabled": true,
           "isHostEvent": false,
@@ -1882,11 +1782,7 @@
           },
           "country": "Egypt",
           "displayName": "Tanta",
-<<<<<<< HEAD
           "cachedRegistrations": 56,
-=======
-          "cachedRegistrations": 53,
->>>>>>> 9834f49b29c79214e0fcdceb418948b3eff3fbf2
           "eventType": "Virtual & In-Person",
           "registrationEnabled": true,
           "isHostEvent": false,
@@ -1918,11 +1814,7 @@
           },
           "country": "Morocco",
           "displayName": "Tangier",
-<<<<<<< HEAD
           "cachedRegistrations": 10,
-=======
-          "cachedRegistrations": 8,
->>>>>>> 9834f49b29c79214e0fcdceb418948b3eff3fbf2
           "eventType": "Virtual",
           "registrationEnabled": true,
           "isHostEvent": false,
@@ -1954,11 +1846,7 @@
           },
           "country": "United States",
           "displayName": "Tampa, FL",
-<<<<<<< HEAD
           "cachedRegistrations": 26,
-=======
-          "cachedRegistrations": 25,
->>>>>>> 9834f49b29c79214e0fcdceb418948b3eff3fbf2
           "eventType": "In-Person",
           "registrationEnabled": true,
           "isHostEvent": false,
@@ -2054,11 +1942,7 @@
           },
           "country": "Taiwan",
           "displayName": "Taipei",
-<<<<<<< HEAD
           "cachedRegistrations": 70,
-=======
-          "cachedRegistrations": 68,
->>>>>>> 9834f49b29c79214e0fcdceb418948b3eff3fbf2
           "eventType": "Virtual",
           "registrationEnabled": true,
           "isHostEvent": false,
@@ -2090,11 +1974,7 @@
           },
           "country": "Taiwan",
           "displayName": "Taichung City",
-<<<<<<< HEAD
           "cachedRegistrations": 46,
-=======
-          "cachedRegistrations": 44,
->>>>>>> 9834f49b29c79214e0fcdceb418948b3eff3fbf2
           "eventType": "Virtual",
           "registrationEnabled": true,
           "isHostEvent": false,
@@ -2126,11 +2006,7 @@
           },
           "country": "Brazil",
           "displayName": "São Paulo",
-<<<<<<< HEAD
           "cachedRegistrations": 142,
-=======
-          "cachedRegistrations": 136,
->>>>>>> 9834f49b29c79214e0fcdceb418948b3eff3fbf2
           "eventType": "Virtual",
           "registrationEnabled": true,
           "isHostEvent": false,
@@ -2226,11 +2102,7 @@
           },
           "country": "Brazil",
           "displayName": "São José dos Campos",
-<<<<<<< HEAD
           "cachedRegistrations": 59,
-=======
-          "cachedRegistrations": 57,
->>>>>>> 9834f49b29c79214e0fcdceb418948b3eff3fbf2
           "eventType": "Virtual",
           "registrationEnabled": true,
           "isHostEvent": false,
@@ -2262,7 +2134,7 @@
           },
           "country": "Brazil",
           "displayName": "São José do Rio Preto",
-          "cachedRegistrations": 101,
+          "cachedRegistrations": 105,
           "eventType": "In-Person",
           "registrationEnabled": true,
           "isHostEvent": false,
@@ -2294,11 +2166,7 @@
           },
           "country": "Brazil",
           "displayName": "São Gonçalo",
-<<<<<<< HEAD
           "cachedRegistrations": 208,
-=======
-          "cachedRegistrations": 197,
->>>>>>> 9834f49b29c79214e0fcdceb418948b3eff3fbf2
           "eventType": "Virtual",
           "registrationEnabled": true,
           "isHostEvent": false,
@@ -2394,11 +2262,7 @@
           },
           "country": "Australia",
           "displayName": "Sydney",
-<<<<<<< HEAD
           "cachedRegistrations": 161,
-=======
-          "cachedRegistrations": 159,
->>>>>>> 9834f49b29c79214e0fcdceb418948b3eff3fbf2
           "eventType": "Virtual & In-Person",
           "registrationEnabled": true,
           "isHostEvent": false,
@@ -2462,11 +2326,7 @@
           },
           "country": "India",
           "displayName": "Surat",
-<<<<<<< HEAD
           "cachedRegistrations": 482,
-=======
-          "cachedRegistrations": 477,
->>>>>>> 9834f49b29c79214e0fcdceb418948b3eff3fbf2
           "eventType": "Virtual",
           "registrationEnabled": true,
           "isHostEvent": false,
@@ -2562,11 +2422,7 @@
           },
           "country": "Bolivia",
           "displayName": "Sucre",
-<<<<<<< HEAD
           "cachedRegistrations": 101,
-=======
-          "cachedRegistrations": 97,
->>>>>>> 9834f49b29c79214e0fcdceb418948b3eff3fbf2
           "eventType": "In-Person",
           "registrationEnabled": true,
           "isHostEvent": false,
@@ -2630,11 +2486,7 @@
           },
           "country": "Poland",
           "displayName": "Stalowa Wola",
-<<<<<<< HEAD
           "cachedRegistrations": 125,
-=======
-          "cachedRegistrations": 128,
->>>>>>> 9834f49b29c79214e0fcdceb418948b3eff3fbf2
           "eventType": "In-Person",
           "registrationEnabled": true,
           "isHostEvent": false,
@@ -2858,11 +2710,7 @@
           },
           "country": "North Macedonia",
           "displayName": "Skopje",
-<<<<<<< HEAD
           "cachedRegistrations": 32,
-=======
-          "cachedRegistrations": 25,
->>>>>>> 9834f49b29c79214e0fcdceb418948b3eff3fbf2
           "eventType": "In-Person",
           "registrationEnabled": true,
           "isHostEvent": false,
@@ -2894,11 +2742,7 @@
           },
           "country": "Malaysia",
           "displayName": "Sibu",
-<<<<<<< HEAD
           "cachedRegistrations": 251,
-=======
-          "cachedRegistrations": 245,
->>>>>>> 9834f49b29c79214e0fcdceb418948b3eff3fbf2
           "eventType": "Virtual & In-Person",
           "registrationEnabled": true,
           "isHostEvent": false,
@@ -3058,7 +2902,7 @@
           },
           "country": "Canada",
           "displayName": "Sherbrooke",
-          "cachedRegistrations": 21,
+          "cachedRegistrations": 20,
           "eventType": "In-Person",
           "registrationEnabled": true,
           "isHostEvent": false,
@@ -3090,11 +2934,7 @@
           },
           "country": "Egypt",
           "displayName": "Shebeen El-Kom",
-<<<<<<< HEAD
           "cachedRegistrations": 741,
-=======
-          "cachedRegistrations": 718,
->>>>>>> 9834f49b29c79214e0fcdceb418948b3eff3fbf2
           "eventType": "In-Person",
           "registrationEnabled": true,
           "isHostEvent": false,
@@ -3126,11 +2966,7 @@
           },
           "country": "United Arab Emirates",
           "displayName": "Sharjah",
-<<<<<<< HEAD
           "cachedRegistrations": 109,
-=======
-          "cachedRegistrations": 107,
->>>>>>> 9834f49b29c79214e0fcdceb418948b3eff3fbf2
           "eventType": "Virtual",
           "registrationEnabled": true,
           "isHostEvent": false,
@@ -3418,11 +3254,7 @@
           },
           "country": "Dominican Republic",
           "displayName": "Santo Domingo",
-<<<<<<< HEAD
           "cachedRegistrations": 157,
-=======
-          "cachedRegistrations": 155,
->>>>>>> 9834f49b29c79214e0fcdceb418948b3eff3fbf2
           "eventType": "Virtual & In-Person",
           "registrationEnabled": true,
           "isHostEvent": false,
@@ -3454,11 +3286,7 @@
           },
           "country": "Brazil",
           "displayName": "Santo André",
-<<<<<<< HEAD
           "cachedRegistrations": 39,
-=======
-          "cachedRegistrations": 34,
->>>>>>> 9834f49b29c79214e0fcdceb418948b3eff3fbf2
           "eventType": "Virtual & In-Person",
           "registrationEnabled": true,
           "isHostEvent": false,
@@ -3490,11 +3318,7 @@
           },
           "country": "Dominican Republic",
           "displayName": "Santiago, Dominican Republic",
-<<<<<<< HEAD
           "cachedRegistrations": 232,
-=======
-          "cachedRegistrations": 233,
->>>>>>> 9834f49b29c79214e0fcdceb418948b3eff3fbf2
           "eventType": "Virtual & In-Person",
           "registrationEnabled": true,
           "isHostEvent": false,
@@ -3590,11 +3414,7 @@
           },
           "country": "Bolivia",
           "displayName": "Santa Cruz de la Sierra",
-<<<<<<< HEAD
           "cachedRegistrations": 124,
-=======
-          "cachedRegistrations": 119,
->>>>>>> 9834f49b29c79214e0fcdceb418948b3eff3fbf2
           "eventType": "In-Person",
           "registrationEnabled": true,
           "isHostEvent": false,
@@ -3658,11 +3478,7 @@
           },
           "country": "Spain",
           "displayName": "San Vicente",
-<<<<<<< HEAD
           "cachedRegistrations": 112,
-=======
-          "cachedRegistrations": 111,
->>>>>>> 9834f49b29c79214e0fcdceb418948b3eff3fbf2
           "eventType": "In-Person",
           "registrationEnabled": true,
           "isHostEvent": false,
@@ -3726,7 +3542,7 @@
           },
           "country": "Puerto Rico",
           "displayName": "San Juan, Puerto Rico",
-          "cachedRegistrations": 8,
+          "cachedRegistrations": 10,
           "eventType": "Virtual",
           "registrationEnabled": true,
           "isHostEvent": false,
@@ -3758,11 +3574,7 @@
           },
           "country": "Argentina",
           "displayName": "San Juan, Argentina",
-<<<<<<< HEAD
           "cachedRegistrations": 45,
-=======
-          "cachedRegistrations": 41,
->>>>>>> 9834f49b29c79214e0fcdceb418948b3eff3fbf2
           "eventType": "Virtual & In-Person",
           "registrationEnabled": true,
           "isHostEvent": false,
@@ -3826,7 +3638,7 @@
           },
           "country": "Mexico",
           "displayName": "San Francisco de Campeche",
-          "cachedRegistrations": 254,
+          "cachedRegistrations": 253,
           "eventType": "In-Person",
           "registrationEnabled": true,
           "isHostEvent": false,
@@ -4018,11 +3830,7 @@
           },
           "country": "Argentina",
           "displayName": "Salta",
-<<<<<<< HEAD
           "cachedRegistrations": 22,
-=======
-          "cachedRegistrations": 19,
->>>>>>> 9834f49b29c79214e0fcdceb418948b3eff3fbf2
           "eventType": "Virtual & In-Person",
           "registrationEnabled": true,
           "isHostEvent": false,
@@ -4054,11 +3862,7 @@
           },
           "country": "Turkey",
           "displayName": "Sakarya",
-<<<<<<< HEAD
           "cachedRegistrations": 145,
-=======
-          "cachedRegistrations": 128,
->>>>>>> 9834f49b29c79214e0fcdceb418948b3eff3fbf2
           "eventType": "In-Person",
           "registrationEnabled": true,
           "isHostEvent": false,
@@ -4090,11 +3894,7 @@
           },
           "country": "Poland",
           "displayName": "Rzeszów",
-<<<<<<< HEAD
           "cachedRegistrations": 67,
-=======
-          "cachedRegistrations": 66,
->>>>>>> 9834f49b29c79214e0fcdceb418948b3eff3fbf2
           "eventType": "Virtual & In-Person",
           "registrationEnabled": true,
           "isHostEvent": false,
@@ -4190,11 +3990,7 @@
           },
           "country": "Argentina",
           "displayName": "Rosario",
-<<<<<<< HEAD
           "cachedRegistrations": 72,
-=======
-          "cachedRegistrations": 71,
->>>>>>> 9834f49b29c79214e0fcdceb418948b3eff3fbf2
           "eventType": "In-Person",
           "registrationEnabled": true,
           "isHostEvent": false,
@@ -4226,11 +4022,7 @@
           },
           "country": "South Africa",
           "displayName": "Roodeport",
-<<<<<<< HEAD
           "cachedRegistrations": 25,
-=======
-          "cachedRegistrations": 24,
->>>>>>> 9834f49b29c79214e0fcdceb418948b3eff3fbf2
           "eventType": "In-Person",
           "registrationEnabled": true,
           "isHostEvent": false,
@@ -4262,11 +4054,7 @@
           },
           "country": "Ecuador",
           "displayName": "Riobamba",
-<<<<<<< HEAD
           "cachedRegistrations": 146,
-=======
-          "cachedRegistrations": 127,
->>>>>>> 9834f49b29c79214e0fcdceb418948b3eff3fbf2
           "eventType": "Virtual & In-Person",
           "registrationEnabled": true,
           "isHostEvent": false,
@@ -4298,11 +4086,7 @@
           },
           "country": "Brazil",
           "displayName": "Rio de Janeiro",
-<<<<<<< HEAD
           "cachedRegistrations": 55,
-=======
-          "cachedRegistrations": 54,
->>>>>>> 9834f49b29c79214e0fcdceb418948b3eff3fbf2
           "eventType": "Virtual & In-Person",
           "registrationEnabled": true,
           "isHostEvent": false,
@@ -4334,11 +4118,7 @@
           },
           "country": "Brazil",
           "displayName": "Ribeirao Preto",
-<<<<<<< HEAD
           "cachedRegistrations": 298,
-=======
-          "cachedRegistrations": 287,
->>>>>>> 9834f49b29c79214e0fcdceb418948b3eff3fbf2
           "eventType": "In-Person",
           "registrationEnabled": true,
           "isHostEvent": false,
@@ -4370,11 +4150,7 @@
           },
           "country": "Brazil",
           "displayName": "Recife",
-<<<<<<< HEAD
           "cachedRegistrations": 190,
-=======
-          "cachedRegistrations": 188,
->>>>>>> 9834f49b29c79214e0fcdceb418948b3eff3fbf2
           "eventType": "Virtual & In-Person",
           "registrationEnabled": true,
           "isHostEvent": false,
@@ -4438,11 +4214,7 @@
           },
           "country": "United Arab Emirates",
           "displayName": "Ras Al Khaimah",
-<<<<<<< HEAD
           "cachedRegistrations": 98,
-=======
-          "cachedRegistrations": 100,
->>>>>>> 9834f49b29c79214e0fcdceb418948b3eff3fbf2
           "eventType": "Virtual",
           "registrationEnabled": true,
           "isHostEvent": false,
@@ -4474,11 +4246,7 @@
           },
           "country": "Bangladesh",
           "displayName": "Rangpur",
-<<<<<<< HEAD
           "cachedRegistrations": 160,
-=======
-          "cachedRegistrations": 161,
->>>>>>> 9834f49b29c79214e0fcdceb418948b3eff3fbf2
           "eventType": "Virtual",
           "registrationEnabled": true,
           "isHostEvent": false,
@@ -4542,11 +4310,7 @@
           },
           "country": "Palestinian Territories",
           "displayName": "Ramallah",
-<<<<<<< HEAD
           "cachedRegistrations": 13,
-=======
-          "cachedRegistrations": 10,
->>>>>>> 9834f49b29c79214e0fcdceb418948b3eff3fbf2
           "eventType": "Virtual & In-Person",
           "registrationEnabled": true,
           "isHostEvent": false,
@@ -4642,11 +4406,7 @@
           },
           "country": "India",
           "displayName": "Raipur",
-<<<<<<< HEAD
           "cachedRegistrations": 413,
-=======
-          "cachedRegistrations": 409,
->>>>>>> 9834f49b29c79214e0fcdceb418948b3eff3fbf2
           "eventType": "Virtual & In-Person",
           "registrationEnabled": true,
           "isHostEvent": false,
@@ -4742,11 +4502,7 @@
           },
           "country": "Kazakhstan",
           "displayName": "Qyzylorda",
-<<<<<<< HEAD
           "cachedRegistrations": 89,
-=======
-          "cachedRegistrations": 76,
->>>>>>> 9834f49b29c79214e0fcdceb418948b3eff3fbf2
           "eventType": "Virtual",
           "registrationEnabled": true,
           "isHostEvent": false,
@@ -4778,11 +4534,7 @@
           },
           "country": "Pakistan",
           "displayName": "Quetta",
-<<<<<<< HEAD
           "cachedRegistrations": 153,
-=======
-          "cachedRegistrations": 135,
->>>>>>> 9834f49b29c79214e0fcdceb418948b3eff3fbf2
           "eventType": "Virtual & In-Person",
           "registrationEnabled": true,
           "isHostEvent": false,
@@ -4846,11 +4598,7 @@
           },
           "country": "Uruguay",
           "displayName": "Punta del Este",
-<<<<<<< HEAD
           "cachedRegistrations": 27,
-=======
-          "cachedRegistrations": 26,
->>>>>>> 9834f49b29c79214e0fcdceb418948b3eff3fbf2
           "eventType": "Virtual & In-Person",
           "registrationEnabled": true,
           "isHostEvent": false,
@@ -4882,11 +4630,7 @@
           },
           "country": "India",
           "displayName": "Pune",
-<<<<<<< HEAD
           "cachedRegistrations": 300,
-=======
-          "cachedRegistrations": 283,
->>>>>>> 9834f49b29c79214e0fcdceb418948b3eff3fbf2
           "eventType": "Virtual",
           "registrationEnabled": true,
           "isHostEvent": false,
@@ -4982,11 +4726,7 @@
           },
           "country": "Mexico",
           "displayName": "Puebla",
-<<<<<<< HEAD
           "cachedRegistrations": 36,
-=======
-          "cachedRegistrations": 31,
->>>>>>> 9834f49b29c79214e0fcdceb418948b3eff3fbf2
           "eventType": "Virtual",
           "registrationEnabled": true,
           "isHostEvent": false,
@@ -5050,11 +4790,7 @@
           },
           "country": "South Africa",
           "displayName": "Pretoria",
-<<<<<<< HEAD
           "cachedRegistrations": 160,
-=======
-          "cachedRegistrations": 156,
->>>>>>> 9834f49b29c79214e0fcdceb418948b3eff3fbf2
           "eventType": "Virtual & In-Person",
           "registrationEnabled": true,
           "isHostEvent": false,
@@ -5086,11 +4822,7 @@
           },
           "country": "India",
           "displayName": "Prayagraj",
-<<<<<<< HEAD
           "cachedRegistrations": 35,
-=======
-          "cachedRegistrations": 32,
->>>>>>> 9834f49b29c79214e0fcdceb418948b3eff3fbf2
           "eventType": "Virtual & In-Person",
           "registrationEnabled": true,
           "isHostEvent": false,
@@ -5186,11 +4918,7 @@
           },
           "country": "Egypt",
           "displayName": "Port Said",
-<<<<<<< HEAD
           "cachedRegistrations": 250,
-=======
-          "cachedRegistrations": 245,
->>>>>>> 9834f49b29c79214e0fcdceb418948b3eff3fbf2
           "eventType": "In-Person",
           "registrationEnabled": true,
           "isHostEvent": false,
@@ -5254,11 +4982,7 @@
           },
           "country": "Nepal",
           "displayName": "Pokhara",
-<<<<<<< HEAD
           "cachedRegistrations": 20,
-=======
-          "cachedRegistrations": 16,
->>>>>>> 9834f49b29c79214e0fcdceb418948b3eff3fbf2
           "eventType": "Virtual",
           "registrationEnabled": true,
           "isHostEvent": false,
@@ -5322,11 +5046,7 @@
           },
           "country": "Montenegro",
           "displayName": "Podgorica",
-<<<<<<< HEAD
           "cachedRegistrations": 30,
-=======
-          "cachedRegistrations": 29,
->>>>>>> 9834f49b29c79214e0fcdceb418948b3eff3fbf2
           "eventType": "Virtual & In-Person",
           "registrationEnabled": true,
           "isHostEvent": false,
@@ -5422,11 +5142,7 @@
           },
           "country": "India",
           "displayName": "Pimpri Chinchwad",
-<<<<<<< HEAD
           "cachedRegistrations": 77,
-=======
-          "cachedRegistrations": 75,
->>>>>>> 9834f49b29c79214e0fcdceb418948b3eff3fbf2
           "eventType": "Virtual",
           "registrationEnabled": true,
           "isHostEvent": false,
@@ -5522,11 +5238,7 @@
           },
           "country": "Kazakhstan",
           "displayName": "Pavlodar",
-<<<<<<< HEAD
           "cachedRegistrations": 54,
-=======
-          "cachedRegistrations": 55,
->>>>>>> 9834f49b29c79214e0fcdceb418948b3eff3fbf2
           "eventType": "In-Person",
           "registrationEnabled": true,
           "isHostEvent": false,
@@ -5622,11 +5334,7 @@
           },
           "country": "India",
           "displayName": "Palghar",
-<<<<<<< HEAD
           "cachedRegistrations": 13,
-=======
-          "cachedRegistrations": 12,
->>>>>>> 9834f49b29c79214e0fcdceb418948b3eff3fbf2
           "eventType": "Virtual & In-Person",
           "registrationEnabled": true,
           "isHostEvent": false,
@@ -5658,11 +5366,7 @@
           },
           "country": "India",
           "displayName": "Pala",
-<<<<<<< HEAD
           "cachedRegistrations": 143,
-=======
-          "cachedRegistrations": 118,
->>>>>>> 9834f49b29c79214e0fcdceb418948b3eff3fbf2
           "eventType": "Virtual",
           "registrationEnabled": true,
           "isHostEvent": false,
@@ -5726,11 +5430,7 @@
           },
           "country": "Canada",
           "displayName": "Ottawa",
-<<<<<<< HEAD
           "cachedRegistrations": 76,
-=======
-          "cachedRegistrations": 69,
->>>>>>> 9834f49b29c79214e0fcdceb418948b3eff3fbf2
           "eventType": "Virtual & In-Person",
           "registrationEnabled": true,
           "isHostEvent": false,
@@ -5890,11 +5590,7 @@
           },
           "country": "Canada",
           "displayName": "Orillia",
-<<<<<<< HEAD
           "cachedRegistrations": 58,
-=======
-          "cachedRegistrations": 52,
->>>>>>> 9834f49b29c79214e0fcdceb418948b3eff3fbf2
           "eventType": "In-Person",
           "registrationEnabled": true,
           "isHostEvent": false,
@@ -6054,11 +5750,7 @@
           },
           "country": "Egypt",
           "displayName": "Obour",
-<<<<<<< HEAD
           "cachedRegistrations": 347,
-=======
-          "cachedRegistrations": 321,
->>>>>>> 9834f49b29c79214e0fcdceb418948b3eff3fbf2
           "eventType": "Virtual & In-Person",
           "registrationEnabled": true,
           "isHostEvent": false,
@@ -6122,7 +5814,7 @@
           },
           "country": "India",
           "displayName": "Noida",
-          "cachedRegistrations": 815,
+          "cachedRegistrations": 818,
           "eventType": "In-Person",
           "registrationEnabled": true,
           "isHostEvent": false,
@@ -6218,11 +5910,7 @@
           },
           "country": "United States",
           "displayName": "New York City, NY",
-<<<<<<< HEAD
           "cachedRegistrations": 269,
-=======
-          "cachedRegistrations": 264,
->>>>>>> 9834f49b29c79214e0fcdceb418948b3eff3fbf2
           "eventType": "Virtual & In-Person",
           "registrationEnabled": true,
           "isHostEvent": false,
@@ -6254,11 +5942,7 @@
           },
           "country": "Colombia",
           "displayName": "Neiva",
-<<<<<<< HEAD
           "cachedRegistrations": 169,
-=======
-          "cachedRegistrations": 159,
->>>>>>> 9834f49b29c79214e0fcdceb418948b3eff3fbf2
           "eventType": "In-Person",
           "registrationEnabled": true,
           "isHostEvent": false,
@@ -6290,11 +5974,7 @@
           },
           "country": "Mexico",
           "displayName": "Navojoa",
-<<<<<<< HEAD
           "cachedRegistrations": 23,
-=======
-          "cachedRegistrations": 24,
->>>>>>> 9834f49b29c79214e0fcdceb418948b3eff3fbf2
           "eventType": "In-Person",
           "registrationEnabled": true,
           "isHostEvent": false,
@@ -6326,11 +6006,7 @@
           },
           "country": "India",
           "displayName": "Navi Mumbai",
-<<<<<<< HEAD
           "cachedRegistrations": 56,
-=======
-          "cachedRegistrations": 55,
->>>>>>> 9834f49b29c79214e0fcdceb418948b3eff3fbf2
           "eventType": "Virtual",
           "registrationEnabled": true,
           "isHostEvent": false,
@@ -6362,11 +6038,7 @@
           },
           "country": "India",
           "displayName": "Nashik",
-<<<<<<< HEAD
           "cachedRegistrations": 850,
-=======
-          "cachedRegistrations": 703,
->>>>>>> 9834f49b29c79214e0fcdceb418948b3eff3fbf2
           "eventType": "In-Person",
           "registrationEnabled": true,
           "isHostEvent": false,
@@ -6398,11 +6070,7 @@
           },
           "country": "Vietnam",
           "displayName": "Ninh Binh City",
-<<<<<<< HEAD
           "cachedRegistrations": 402,
-=======
-          "cachedRegistrations": 400,
->>>>>>> 9834f49b29c79214e0fcdceb418948b3eff3fbf2
           "eventType": "Virtual & In-Person",
           "registrationEnabled": true,
           "isHostEvent": false,
@@ -6434,11 +6102,7 @@
           },
           "country": "Kenya",
           "displayName": "Nairobi",
-<<<<<<< HEAD
           "cachedRegistrations": 181,
-=======
-          "cachedRegistrations": 177,
->>>>>>> 9834f49b29c79214e0fcdceb418948b3eff3fbf2
           "eventType": "In-Person",
           "registrationEnabled": true,
           "isHostEvent": false,
@@ -6502,11 +6166,7 @@
           },
           "country": "India",
           "displayName": "Nagpur",
-<<<<<<< HEAD
           "cachedRegistrations": 30,
-=======
-          "cachedRegistrations": 34,
->>>>>>> 9834f49b29c79214e0fcdceb418948b3eff3fbf2
           "eventType": "Virtual & In-Person",
           "registrationEnabled": true,
           "isHostEvent": false,
@@ -6602,11 +6262,7 @@
           },
           "country": "Mexico",
           "displayName": "Mérida",
-<<<<<<< HEAD
           "cachedRegistrations": 313,
-=======
-          "cachedRegistrations": 314,
->>>>>>> 9834f49b29c79214e0fcdceb418948b3eff3fbf2
           "eventType": "Virtual & In-Person",
           "registrationEnabled": true,
           "isHostEvent": false,
@@ -6734,11 +6390,7 @@
           },
           "country": "Turkey",
           "displayName": "Muğla",
-<<<<<<< HEAD
           "cachedRegistrations": 204,
-=======
-          "cachedRegistrations": 201,
->>>>>>> 9834f49b29c79214e0fcdceb418948b3eff3fbf2
           "eventType": "Virtual & In-Person",
           "registrationEnabled": true,
           "isHostEvent": false,
@@ -6866,11 +6518,7 @@
           },
           "country": "Spain",
           "displayName": "Murcia",
-<<<<<<< HEAD
           "cachedRegistrations": 82,
-=======
-          "cachedRegistrations": 81,
->>>>>>> 9834f49b29c79214e0fcdceb418948b3eff3fbf2
           "eventType": "In-Person",
           "registrationEnabled": true,
           "isHostEvent": false,
@@ -6934,11 +6582,7 @@
           },
           "country": "India",
           "displayName": "Mumbai",
-<<<<<<< HEAD
           "cachedRegistrations": 204,
-=======
-          "cachedRegistrations": 196,
->>>>>>> 9834f49b29c79214e0fcdceb418948b3eff3fbf2
           "eventType": "Virtual",
           "registrationEnabled": true,
           "isHostEvent": false,
@@ -7034,11 +6678,7 @@
           },
           "country": "United States",
           "displayName": "Mountain View, CA",
-<<<<<<< HEAD
           "cachedRegistrations": 382,
-=======
-          "cachedRegistrations": 374,
->>>>>>> 9834f49b29c79214e0fcdceb418948b3eff3fbf2
           "eventType": "Virtual",
           "registrationEnabled": true,
           "isHostEvent": false,
@@ -7102,11 +6742,7 @@
           },
           "country": "Peru",
           "displayName": "Moquegua",
-<<<<<<< HEAD
           "cachedRegistrations": 95,
-=======
-          "cachedRegistrations": 90,
->>>>>>> 9834f49b29c79214e0fcdceb418948b3eff3fbf2
           "eventType": "Virtual",
           "registrationEnabled": true,
           "isHostEvent": false,
@@ -7170,11 +6806,7 @@
           },
           "country": "Canada",
           "displayName": "Montréal",
-<<<<<<< HEAD
           "cachedRegistrations": 142,
-=======
-          "cachedRegistrations": 137,
->>>>>>> 9834f49b29c79214e0fcdceb418948b3eff3fbf2
           "eventType": "Virtual & In-Person",
           "registrationEnabled": true,
           "isHostEvent": false,
@@ -7206,11 +6838,7 @@
           },
           "country": "Uruguay",
           "displayName": "Montevideo",
-<<<<<<< HEAD
           "cachedRegistrations": 201,
-=======
-          "cachedRegistrations": 193,
->>>>>>> 9834f49b29c79214e0fcdceb418948b3eff3fbf2
           "eventType": "Virtual & In-Person",
           "registrationEnabled": true,
           "isHostEvent": false,
@@ -7242,11 +6870,7 @@
           },
           "country": "Mexico",
           "displayName": "Monterrey",
-<<<<<<< HEAD
           "cachedRegistrations": 475,
-=======
-          "cachedRegistrations": 470,
->>>>>>> 9834f49b29c79214e0fcdceb418948b3eff3fbf2
           "eventType": "In-Person",
           "registrationEnabled": true,
           "isHostEvent": false,
@@ -7278,11 +6902,7 @@
           },
           "country": "India",
           "displayName": "Mohali",
-<<<<<<< HEAD
           "cachedRegistrations": 193,
-=======
-          "cachedRegistrations": 189,
->>>>>>> 9834f49b29c79214e0fcdceb418948b3eff3fbf2
           "eventType": "Virtual & In-Person",
           "registrationEnabled": true,
           "isHostEvent": false,
@@ -7314,11 +6934,7 @@
           },
           "country": "Canada",
           "displayName": "Mississauga",
-<<<<<<< HEAD
           "cachedRegistrations": 98,
-=======
-          "cachedRegistrations": 99,
->>>>>>> 9834f49b29c79214e0fcdceb418948b3eff3fbf2
           "eventType": "In-Person",
           "registrationEnabled": true,
           "isHostEvent": false,
@@ -7350,11 +6966,7 @@
           },
           "country": "Malaysia",
           "displayName": "Miri",
-<<<<<<< HEAD
           "cachedRegistrations": 416,
-=======
-          "cachedRegistrations": 413,
->>>>>>> 9834f49b29c79214e0fcdceb418948b3eff3fbf2
           "eventType": "Virtual & In-Person",
           "registrationEnabled": true,
           "isHostEvent": false,
@@ -7386,11 +6998,7 @@
           },
           "country": "Egypt",
           "displayName": "Minya",
-<<<<<<< HEAD
           "cachedRegistrations": 119,
-=======
-          "cachedRegistrations": 117,
->>>>>>> 9834f49b29c79214e0fcdceb418948b3eff3fbf2
           "eventType": "Virtual & In-Person",
           "registrationEnabled": true,
           "isHostEvent": false,
@@ -7454,11 +7062,7 @@
           },
           "country": "Mexico",
           "displayName": "Mexico City",
-<<<<<<< HEAD
           "cachedRegistrations": 300,
-=======
-          "cachedRegistrations": 285,
->>>>>>> 9834f49b29c79214e0fcdceb418948b3eff3fbf2
           "eventType": "In-Person",
           "registrationEnabled": true,
           "isHostEvent": false,
@@ -7490,11 +7094,7 @@
           },
           "country": "Mexico",
           "displayName": "Mexicali",
-<<<<<<< HEAD
           "cachedRegistrations": 95,
-=======
-          "cachedRegistrations": 96,
->>>>>>> 9834f49b29c79214e0fcdceb418948b3eff3fbf2
           "eventType": "In-Person",
           "registrationEnabled": true,
           "isHostEvent": false,
@@ -7590,11 +7190,7 @@
           },
           "country": "Australia",
           "displayName": "Melbourne",
-<<<<<<< HEAD
           "cachedRegistrations": 50,
-=======
-          "cachedRegistrations": 49,
->>>>>>> 9834f49b29c79214e0fcdceb418948b3eff3fbf2
           "eventType": "Virtual & In-Person",
           "registrationEnabled": true,
           "isHostEvent": false,
@@ -7690,11 +7286,7 @@
           },
           "country": "Colombia",
           "displayName": "Medellín",
-<<<<<<< HEAD
           "cachedRegistrations": 293,
-=======
-          "cachedRegistrations": 286,
->>>>>>> 9834f49b29c79214e0fcdceb418948b3eff3fbf2
           "eventType": "Virtual & In-Person",
           "registrationEnabled": true,
           "isHostEvent": false,
@@ -7758,11 +7350,7 @@
           },
           "country": "Democratic Republic of the Congo",
           "displayName": "Mbanza-Ngungu",
-<<<<<<< HEAD
           "cachedRegistrations": 53,
-=======
-          "cachedRegistrations": 52,
->>>>>>> 9834f49b29c79214e0fcdceb418948b3eff3fbf2
           "eventType": "Virtual & In-Person",
           "registrationEnabled": true,
           "isHostEvent": false,
@@ -8018,11 +7606,7 @@
           },
           "country": "Philippines",
           "displayName": "Manila",
-<<<<<<< HEAD
           "cachedRegistrations": 79,
-=======
-          "cachedRegistrations": 72,
->>>>>>> 9834f49b29c79214e0fcdceb418948b3eff3fbf2
           "eventType": "Virtual",
           "registrationEnabled": true,
           "isHostEvent": false,
@@ -8054,11 +7638,7 @@
           },
           "country": "India",
           "displayName": "Mangalore",
-<<<<<<< HEAD
           "cachedRegistrations": 66,
-=======
-          "cachedRegistrations": 68,
->>>>>>> 9834f49b29c79214e0fcdceb418948b3eff3fbf2
           "eventType": "Virtual & In-Person",
           "registrationEnabled": true,
           "isHostEvent": false,
@@ -8090,11 +7670,7 @@
           },
           "country": "Brazil",
           "displayName": "Manaus",
-<<<<<<< HEAD
           "cachedRegistrations": 32,
-=======
-          "cachedRegistrations": 25,
->>>>>>> 9834f49b29c79214e0fcdceb418948b3eff3fbf2
           "eventType": "Virtual & In-Person",
           "registrationEnabled": true,
           "isHostEvent": false,
@@ -8158,11 +7734,7 @@
           },
           "country": "India",
           "displayName": "Malappuram",
-<<<<<<< HEAD
           "cachedRegistrations": 49,
-=======
-          "cachedRegistrations": 43,
->>>>>>> 9834f49b29c79214e0fcdceb418948b3eff3fbf2
           "eventType": "Virtual",
           "registrationEnabled": true,
           "isHostEvent": false,
@@ -8194,11 +7766,7 @@
           },
           "country": "South Africa",
           "displayName": "Mafikeng",
-<<<<<<< HEAD
           "cachedRegistrations": 73,
-=======
-          "cachedRegistrations": 74,
->>>>>>> 9834f49b29c79214e0fcdceb418948b3eff3fbf2
           "eventType": "Virtual & In-Person",
           "registrationEnabled": true,
           "isHostEvent": false,
@@ -8262,11 +7830,7 @@
           },
           "country": "Brazil",
           "displayName": "Maceió",
-<<<<<<< HEAD
           "cachedRegistrations": 164,
-=======
-          "cachedRegistrations": 160,
->>>>>>> 9834f49b29c79214e0fcdceb418948b3eff3fbf2
           "eventType": "In-Person",
           "registrationEnabled": true,
           "isHostEvent": false,
@@ -8330,11 +7894,7 @@
           },
           "country": "India",
           "displayName": "Lucknow",
-<<<<<<< HEAD
           "cachedRegistrations": 474,
-=======
-          "cachedRegistrations": 461,
->>>>>>> 9834f49b29c79214e0fcdceb418948b3eff3fbf2
           "eventType": "Virtual & In-Person",
           "registrationEnabled": true,
           "isHostEvent": false,
@@ -8366,11 +7926,7 @@
           },
           "country": "Switzerland",
           "displayName": "Lucerne",
-<<<<<<< HEAD
           "cachedRegistrations": 39,
-=======
-          "cachedRegistrations": 40,
->>>>>>> 9834f49b29c79214e0fcdceb418948b3eff3fbf2
           "eventType": "In-Person",
           "registrationEnabled": true,
           "isHostEvent": false,
@@ -8402,11 +7958,7 @@
           },
           "country": "Democratic Republic of the Congo",
           "displayName": "Lubumbashi",
-<<<<<<< HEAD
           "cachedRegistrations": 26,
-=======
-          "cachedRegistrations": 25,
->>>>>>> 9834f49b29c79214e0fcdceb418948b3eff3fbf2
           "eventType": "Virtual & In-Person",
           "registrationEnabled": true,
           "isHostEvent": false,
@@ -8438,11 +7990,7 @@
           },
           "country": "Angola",
           "displayName": "Luanda",
-<<<<<<< HEAD
           "cachedRegistrations": 311,
-=======
-          "cachedRegistrations": 310,
->>>>>>> 9834f49b29c79214e0fcdceb418948b3eff3fbf2
           "eventType": "Virtual & In-Person",
           "registrationEnabled": true,
           "isHostEvent": false,
@@ -8506,11 +8054,7 @@
           },
           "country": "Brazil",
           "displayName": "Londrina",
-<<<<<<< HEAD
           "cachedRegistrations": 62,
-=======
-          "cachedRegistrations": 59,
->>>>>>> 9834f49b29c79214e0fcdceb418948b3eff3fbf2
           "eventType": "Virtual",
           "registrationEnabled": true,
           "isHostEvent": false,
@@ -8542,11 +8086,7 @@
           },
           "country": "United Kingdom",
           "displayName": "London",
-<<<<<<< HEAD
           "cachedRegistrations": 322,
-=======
-          "cachedRegistrations": 318,
->>>>>>> 9834f49b29c79214e0fcdceb418948b3eff3fbf2
           "eventType": "Virtual",
           "registrationEnabled": true,
           "isHostEvent": false,
@@ -8610,11 +8150,7 @@
           },
           "country": "Portugal",
           "displayName": "Lisbon",
-<<<<<<< HEAD
           "cachedRegistrations": 86,
-=======
-          "cachedRegistrations": 87,
->>>>>>> 9834f49b29c79214e0fcdceb418948b3eff3fbf2
           "eventType": "Virtual & In-Person",
           "registrationEnabled": true,
           "isHostEvent": false,
@@ -8646,11 +8182,7 @@
           },
           "country": "Uganda",
           "displayName": "Lira",
-<<<<<<< HEAD
           "cachedRegistrations": 33,
-=======
-          "cachedRegistrations": 31,
->>>>>>> 9834f49b29c79214e0fcdceb418948b3eff3fbf2
           "eventType": "Virtual & In-Person",
           "registrationEnabled": true,
           "isHostEvent": false,
@@ -8682,11 +8214,7 @@
           },
           "country": "Brazil",
           "displayName": "Limeira",
-<<<<<<< HEAD
           "cachedRegistrations": 37,
-=======
-          "cachedRegistrations": 33,
->>>>>>> 9834f49b29c79214e0fcdceb418948b3eff3fbf2
           "eventType": "Virtual",
           "registrationEnabled": true,
           "isHostEvent": false,
@@ -8718,11 +8246,7 @@
           },
           "country": "Peru",
           "displayName": "Lima",
-<<<<<<< HEAD
           "cachedRegistrations": 353,
-=======
-          "cachedRegistrations": 357,
->>>>>>> 9834f49b29c79214e0fcdceb418948b3eff3fbf2
           "eventType": "Virtual & In-Person",
           "registrationEnabled": true,
           "isHostEvent": false,
@@ -8754,11 +8278,7 @@
           },
           "country": "Gabon",
           "displayName": "Libreville",
-<<<<<<< HEAD
           "cachedRegistrations": 75,
-=======
-          "cachedRegistrations": 64,
->>>>>>> 9834f49b29c79214e0fcdceb418948b3eff3fbf2
           "eventType": "In-Person",
           "registrationEnabled": true,
           "isHostEvent": false,
@@ -8790,11 +8310,7 @@
           },
           "country": "India",
           "displayName": "Leh",
-<<<<<<< HEAD
           "cachedRegistrations": 14,
-=======
-          "cachedRegistrations": 13,
->>>>>>> 9834f49b29c79214e0fcdceb418948b3eff3fbf2
           "eventType": "Virtual",
           "registrationEnabled": true,
           "isHostEvent": false,
@@ -8922,11 +8438,7 @@
           },
           "country": "Pakistan",
           "displayName": "Lahore",
-<<<<<<< HEAD
           "cachedRegistrations": 627,
-=======
-          "cachedRegistrations": 576,
->>>>>>> 9834f49b29c79214e0fcdceb418948b3eff3fbf2
           "eventType": "In-Person",
           "registrationEnabled": true,
           "isHostEvent": false,
@@ -8990,11 +8502,7 @@
           },
           "country": "Argentina",
           "displayName": "San Luis",
-<<<<<<< HEAD
           "cachedRegistrations": 424,
-=======
-          "cachedRegistrations": 413,
->>>>>>> 9834f49b29c79214e0fcdceb418948b3eff3fbf2
           "eventType": "In-Person",
           "registrationEnabled": true,
           "isHostEvent": false,
@@ -9026,11 +8534,7 @@
           },
           "country": "Bolivia",
           "displayName": "La Paz",
-<<<<<<< HEAD
           "cachedRegistrations": 198,
-=======
-          "cachedRegistrations": 196,
->>>>>>> 9834f49b29c79214e0fcdceb418948b3eff3fbf2
           "eventType": "In-Person",
           "registrationEnabled": true,
           "isHostEvent": false,
@@ -9062,11 +8566,7 @@
           },
           "country": "Turkey",
           "displayName": "Kırıkkale",
-<<<<<<< HEAD
           "cachedRegistrations": 334,
-=======
-          "cachedRegistrations": 274,
->>>>>>> 9834f49b29c79214e0fcdceb418948b3eff3fbf2
           "eventType": "Virtual",
           "registrationEnabled": true,
           "isHostEvent": false,
@@ -9098,11 +8598,7 @@
           },
           "country": "Ukraine",
           "displayName": "Kyiv",
-<<<<<<< HEAD
           "cachedRegistrations": 257,
-=======
-          "cachedRegistrations": 226,
->>>>>>> 9834f49b29c79214e0fcdceb418948b3eff3fbf2
           "eventType": "Virtual & In-Person",
           "registrationEnabled": true,
           "isHostEvent": false,
@@ -9134,11 +8630,7 @@
           },
           "country": "Kuwait",
           "displayName": "Kuwait",
-<<<<<<< HEAD
           "cachedRegistrations": 286,
-=======
-          "cachedRegistrations": 284,
->>>>>>> 9834f49b29c79214e0fcdceb418948b3eff3fbf2
           "eventType": "In-Person",
           "registrationEnabled": true,
           "isHostEvent": false,
@@ -9202,11 +8694,7 @@
           },
           "country": "Malaysia",
           "displayName": "Kuching",
-<<<<<<< HEAD
           "cachedRegistrations": 271,
-=======
-          "cachedRegistrations": 265,
->>>>>>> 9834f49b29c79214e0fcdceb418948b3eff3fbf2
           "eventType": "Virtual & In-Person",
           "registrationEnabled": true,
           "isHostEvent": false,
@@ -9238,7 +8726,7 @@
           },
           "country": "Malaysia",
           "displayName": "Kuala Lumpur",
-          "cachedRegistrations": 257,
+          "cachedRegistrations": 256,
           "eventType": "Virtual & In-Person",
           "registrationEnabled": true,
           "isHostEvent": false,
@@ -9270,11 +8758,7 @@
           },
           "country": "India",
           "displayName": "Kothamangalam",
-<<<<<<< HEAD
           "cachedRegistrations": 440,
-=======
-          "cachedRegistrations": 435,
->>>>>>> 9834f49b29c79214e0fcdceb418948b3eff3fbf2
           "eventType": "Virtual & In-Person",
           "registrationEnabled": true,
           "isHostEvent": false,
@@ -9338,11 +8822,7 @@
           },
           "country": "India",
           "displayName": "Kopargaon",
-<<<<<<< HEAD
           "cachedRegistrations": 188,
-=======
-          "cachedRegistrations": 184,
->>>>>>> 9834f49b29c79214e0fcdceb418948b3eff3fbf2
           "eventType": "Virtual",
           "registrationEnabled": true,
           "isHostEvent": false,
@@ -9374,11 +8854,7 @@
           },
           "country": "Turkey",
           "displayName": "Konya",
-<<<<<<< HEAD
           "cachedRegistrations": 150,
-=======
-          "cachedRegistrations": 148,
->>>>>>> 9834f49b29c79214e0fcdceb418948b3eff3fbf2
           "eventType": "In-Person",
           "registrationEnabled": true,
           "isHostEvent": false,
@@ -9410,11 +8886,7 @@
           },
           "country": "India",
           "displayName": "Kolkata",
-<<<<<<< HEAD
           "cachedRegistrations": 267,
-=======
-          "cachedRegistrations": 261,
->>>>>>> 9834f49b29c79214e0fcdceb418948b3eff3fbf2
           "eventType": "Virtual & In-Person",
           "registrationEnabled": true,
           "isHostEvent": false,
@@ -9446,11 +8918,7 @@
           },
           "country": "India",
           "displayName": "Kochi",
-<<<<<<< HEAD
           "cachedRegistrations": 1137,
-=======
-          "cachedRegistrations": 1126,
->>>>>>> 9834f49b29c79214e0fcdceb418948b3eff3fbf2
           "eventType": "Virtual & In-Person",
           "registrationEnabled": true,
           "isHostEvent": false,
@@ -9482,7 +8950,7 @@
           },
           "country": "Kenya",
           "displayName": "Kisumu",
-          "cachedRegistrations": 75,
+          "cachedRegistrations": 76,
           "eventType": "In-Person",
           "registrationEnabled": true,
           "isHostEvent": false,
@@ -9546,11 +9014,7 @@
           },
           "country": "Bangladesh",
           "displayName": "Khulna",
-<<<<<<< HEAD
           "cachedRegistrations": 162,
-=======
-          "cachedRegistrations": 159,
->>>>>>> 9834f49b29c79214e0fcdceb418948b3eff3fbf2
           "eventType": "Virtual",
           "registrationEnabled": true,
           "isHostEvent": false,
@@ -9646,11 +9110,7 @@
           },
           "country": "Nepal",
           "displayName": "Kathmandu",
-<<<<<<< HEAD
           "cachedRegistrations": 91,
-=======
-          "cachedRegistrations": 88,
->>>>>>> 9834f49b29c79214e0fcdceb418948b3eff3fbf2
           "eventType": "Virtual",
           "registrationEnabled": true,
           "isHostEvent": false,
@@ -9682,11 +9142,7 @@
           },
           "country": "Pakistan",
           "displayName": "Karachi",
-<<<<<<< HEAD
           "cachedRegistrations": 704,
-=======
-          "cachedRegistrations": 707,
->>>>>>> 9834f49b29c79214e0fcdceb418948b3eff3fbf2
           "eventType": "Virtual",
           "registrationEnabled": true,
           "isHostEvent": false,
@@ -9718,11 +9174,7 @@
           },
           "country": "Taiwan",
           "displayName": "Kaohsiung City",
-<<<<<<< HEAD
           "cachedRegistrations": 46,
-=======
-          "cachedRegistrations": 43,
->>>>>>> 9834f49b29c79214e0fcdceb418948b3eff3fbf2
           "eventType": "Virtual",
           "registrationEnabled": true,
           "isHostEvent": false,
@@ -9754,11 +9206,7 @@
           },
           "country": "Nigeria",
           "displayName": "Kano",
-<<<<<<< HEAD
           "cachedRegistrations": 108,
-=======
-          "cachedRegistrations": 105,
->>>>>>> 9834f49b29c79214e0fcdceb418948b3eff3fbf2
           "eventType": "In-Person",
           "registrationEnabled": true,
           "isHostEvent": false,
@@ -9790,11 +9238,7 @@
           },
           "country": "India",
           "displayName": "Kannur",
-<<<<<<< HEAD
           "cachedRegistrations": 244,
-=======
-          "cachedRegistrations": 223,
->>>>>>> 9834f49b29c79214e0fcdceb418948b3eff3fbf2
           "eventType": "Virtual & In-Person",
           "registrationEnabled": true,
           "isHostEvent": false,
@@ -9858,11 +9302,7 @@
           },
           "country": "Uganda",
           "displayName": "Kampala",
-<<<<<<< HEAD
           "cachedRegistrations": 73,
-=======
-          "cachedRegistrations": 72,
->>>>>>> 9834f49b29c79214e0fcdceb418948b3eff3fbf2
           "eventType": "Virtual & In-Person",
           "registrationEnabled": true,
           "isHostEvent": false,
@@ -9926,11 +9366,7 @@
           },
           "country": "Turkey",
           "displayName": "Kahramanmaraş",
-<<<<<<< HEAD
           "cachedRegistrations": 141,
-=======
-          "cachedRegistrations": 137,
->>>>>>> 9834f49b29c79214e0fcdceb418948b3eff3fbf2
           "eventType": "Virtual & In-Person",
           "registrationEnabled": true,
           "isHostEvent": false,
@@ -10090,11 +9526,7 @@
           },
           "country": "Brazil",
           "displayName": "João Pessoa",
-<<<<<<< HEAD
           "cachedRegistrations": 113,
-=======
-          "cachedRegistrations": 102,
->>>>>>> 9834f49b29c79214e0fcdceb418948b3eff3fbf2
           "eventType": "Virtual & In-Person",
           "registrationEnabled": true,
           "isHostEvent": false,
@@ -10158,11 +9590,7 @@
           },
           "country": "India",
           "displayName": "Jamshedpur",
-<<<<<<< HEAD
           "cachedRegistrations": 31,
-=======
-          "cachedRegistrations": 19,
->>>>>>> 9834f49b29c79214e0fcdceb418948b3eff3fbf2
           "eventType": "Virtual & In-Person",
           "registrationEnabled": true,
           "isHostEvent": false,
@@ -10194,11 +9622,7 @@
           },
           "country": "India",
           "displayName": "Jamnagar",
-<<<<<<< HEAD
           "cachedRegistrations": 75,
-=======
-          "cachedRegistrations": 70,
->>>>>>> 9834f49b29c79214e0fcdceb418948b3eff3fbf2
           "eventType": "In-Person",
           "registrationEnabled": true,
           "isHostEvent": false,
@@ -10262,11 +9686,7 @@
           },
           "country": "Indonesia",
           "displayName": "Jakarta",
-<<<<<<< HEAD
           "cachedRegistrations": 163,
-=======
-          "cachedRegistrations": 157,
->>>>>>> 9834f49b29c79214e0fcdceb418948b3eff3fbf2
           "eventType": "Virtual & In-Person",
           "registrationEnabled": true,
           "isHostEvent": false,
@@ -10298,11 +9718,7 @@
           },
           "country": "India",
           "displayName": "Jaipur",
-<<<<<<< HEAD
           "cachedRegistrations": 401,
-=======
-          "cachedRegistrations": 373,
->>>>>>> 9834f49b29c79214e0fcdceb418948b3eff3fbf2
           "eventType": "Virtual & In-Person",
           "registrationEnabled": true,
           "isHostEvent": false,
@@ -10334,11 +9750,7 @@
           },
           "country": "Brazil",
           "displayName": "Jaguariúna",
-<<<<<<< HEAD
           "cachedRegistrations": 152,
-=======
-          "cachedRegistrations": 149,
->>>>>>> 9834f49b29c79214e0fcdceb418948b3eff3fbf2
           "eventType": "Virtual",
           "registrationEnabled": true,
           "isHostEvent": false,
@@ -10370,11 +9782,7 @@
           },
           "country": "India",
           "displayName": "Jabalpur",
-<<<<<<< HEAD
           "cachedRegistrations": 258,
-=======
-          "cachedRegistrations": 257,
->>>>>>> 9834f49b29c79214e0fcdceb418948b3eff3fbf2
           "eventType": "Virtual & In-Person",
           "registrationEnabled": true,
           "isHostEvent": false,
@@ -10406,11 +9814,7 @@
           },
           "country": "Turkey",
           "displayName": "İzmir",
-<<<<<<< HEAD
           "cachedRegistrations": 202,
-=======
-          "cachedRegistrations": 192,
->>>>>>> 9834f49b29c79214e0fcdceb418948b3eff3fbf2
           "eventType": "In-Person",
           "registrationEnabled": true,
           "isHostEvent": false,
@@ -10474,11 +9878,7 @@
           },
           "country": "Turkey",
           "displayName": "Izmit",
-<<<<<<< HEAD
           "cachedRegistrations": 110,
-=======
-          "cachedRegistrations": 99,
->>>>>>> 9834f49b29c79214e0fcdceb418948b3eff3fbf2
           "eventType": "In-Person",
           "registrationEnabled": true,
           "isHostEvent": false,
@@ -10510,11 +9910,7 @@
           },
           "country": "Brazil",
           "displayName": "Itajubá",
-<<<<<<< HEAD
           "cachedRegistrations": 31,
-=======
-          "cachedRegistrations": 28,
->>>>>>> 9834f49b29c79214e0fcdceb418948b3eff3fbf2
           "eventType": "In-Person",
           "registrationEnabled": true,
           "isHostEvent": false,
@@ -10546,11 +9942,7 @@
           },
           "country": "Nepal",
           "displayName": "Itahari",
-<<<<<<< HEAD
           "cachedRegistrations": 36,
-=======
-          "cachedRegistrations": 35,
->>>>>>> 9834f49b29c79214e0fcdceb418948b3eff3fbf2
           "eventType": "Virtual",
           "registrationEnabled": true,
           "isHostEvent": false,
@@ -10582,11 +9974,7 @@
           },
           "country": "Turkey",
           "displayName": "Isparta",
-<<<<<<< HEAD
           "cachedRegistrations": 65,
-=======
-          "cachedRegistrations": 62,
->>>>>>> 9834f49b29c79214e0fcdceb418948b3eff3fbf2
           "eventType": "In-Person",
           "registrationEnabled": true,
           "isHostEvent": false,
@@ -10650,11 +10038,7 @@
           },
           "country": "Pakistan",
           "displayName": "Islamabad",
-<<<<<<< HEAD
           "cachedRegistrations": 196,
-=======
-          "cachedRegistrations": 182,
->>>>>>> 9834f49b29c79214e0fcdceb418948b3eff3fbf2
           "eventType": "Virtual",
           "registrationEnabled": true,
           "isHostEvent": false,
@@ -10686,11 +10070,7 @@
           },
           "country": "United States",
           "displayName": "Irvine, CA",
-<<<<<<< HEAD
           "cachedRegistrations": 42,
-=======
-          "cachedRegistrations": 40,
->>>>>>> 9834f49b29c79214e0fcdceb418948b3eff3fbf2
           "eventType": "Virtual",
           "registrationEnabled": true,
           "isHostEvent": false,
@@ -10754,7 +10134,7 @@
           },
           "country": "India",
           "displayName": "Indore",
-          "cachedRegistrations": 81,
+          "cachedRegistrations": 80,
           "eventType": "Virtual",
           "registrationEnabled": true,
           "isHostEvent": false,
@@ -10882,11 +10262,7 @@
           },
           "country": "Peru",
           "displayName": "Ica",
-<<<<<<< HEAD
           "cachedRegistrations": 59,
-=======
-          "cachedRegistrations": 58,
->>>>>>> 9834f49b29c79214e0fcdceb418948b3eff3fbf2
           "eventType": "In-Person",
           "registrationEnabled": true,
           "isHostEvent": false,
@@ -10918,11 +10294,7 @@
           },
           "country": "Oman",
           "displayName": "Ibra",
-<<<<<<< HEAD
           "cachedRegistrations": 498,
-=======
-          "cachedRegistrations": 497,
->>>>>>> 9834f49b29c79214e0fcdceb418948b3eff3fbf2
           "eventType": "Virtual & In-Person",
           "registrationEnabled": true,
           "isHostEvent": false,
@@ -10954,11 +10326,7 @@
           },
           "country": "Pakistan",
           "displayName": "Hyderabad, Pakistan",
-<<<<<<< HEAD
           "cachedRegistrations": 200,
-=======
-          "cachedRegistrations": 195,
->>>>>>> 9834f49b29c79214e0fcdceb418948b3eff3fbf2
           "eventType": "In-Person",
           "registrationEnabled": true,
           "isHostEvent": false,
@@ -10990,11 +10358,7 @@
           },
           "country": "India",
           "displayName": "Hyderabad, India",
-<<<<<<< HEAD
           "cachedRegistrations": 372,
-=======
-          "cachedRegistrations": 366,
->>>>>>> 9834f49b29c79214e0fcdceb418948b3eff3fbf2
           "eventType": "Virtual",
           "registrationEnabled": true,
           "isHostEvent": false,
@@ -11026,11 +10390,7 @@
           },
           "country": "Peru",
           "displayName": "Huánuco",
-<<<<<<< HEAD
           "cachedRegistrations": 345,
-=======
-          "cachedRegistrations": 307,
->>>>>>> 9834f49b29c79214e0fcdceb418948b3eff3fbf2
           "eventType": "Virtual & In-Person",
           "registrationEnabled": true,
           "isHostEvent": false,
@@ -11062,11 +10422,7 @@
           },
           "country": "Egypt",
           "displayName": "Hurghada",
-<<<<<<< HEAD
           "cachedRegistrations": 77,
-=======
-          "cachedRegistrations": 73,
->>>>>>> 9834f49b29c79214e0fcdceb418948b3eff3fbf2
           "eventType": "In-Person",
           "registrationEnabled": true,
           "isHostEvent": false,
@@ -11194,11 +10550,7 @@
           },
           "country": "Vietnam",
           "displayName": "Ho Chi Minh City",
-<<<<<<< HEAD
           "cachedRegistrations": 184,
-=======
-          "cachedRegistrations": 175,
->>>>>>> 9834f49b29c79214e0fcdceb418948b3eff3fbf2
           "eventType": "In-Person",
           "registrationEnabled": true,
           "isHostEvent": false,
@@ -11262,11 +10614,7 @@
           },
           "country": "Turkey",
           "displayName": "Hatay",
-<<<<<<< HEAD
           "cachedRegistrations": 106,
-=======
-          "cachedRegistrations": 98,
->>>>>>> 9834f49b29c79214e0fcdceb418948b3eff3fbf2
           "eventType": "In-Person",
           "registrationEnabled": true,
           "isHostEvent": false,
@@ -11298,11 +10646,7 @@
           },
           "country": "India",
           "displayName": "Harohalli",
-<<<<<<< HEAD
           "cachedRegistrations": 5488,
-=======
-          "cachedRegistrations": 5463,
->>>>>>> 9834f49b29c79214e0fcdceb418948b3eff3fbf2
           "eventType": "Virtual & In-Person",
           "registrationEnabled": true,
           "isHostEvent": false,
@@ -11366,13 +10710,8 @@
           },
           "country": "Vietnam",
           "displayName": "Hanoi",
-<<<<<<< HEAD
           "cachedRegistrations": 67,
           "eventType": "Virtual",
-=======
-          "cachedRegistrations": 63,
-          "eventType": "In-Person",
->>>>>>> 9834f49b29c79214e0fcdceb418948b3eff3fbf2
           "registrationEnabled": true,
           "isHostEvent": false,
           "__typename": "LocationPage"
@@ -11403,11 +10742,7 @@
           },
           "country": "Canada",
           "displayName": "Halifax",
-<<<<<<< HEAD
           "cachedRegistrations": 29,
-=======
-          "cachedRegistrations": 28,
->>>>>>> 9834f49b29c79214e0fcdceb418948b3eff3fbf2
           "eventType": "Virtual & In-Person",
           "registrationEnabled": true,
           "isHostEvent": false,
@@ -11439,11 +10774,7 @@
           },
           "country": "India",
           "displayName": "Haldwani",
-<<<<<<< HEAD
           "cachedRegistrations": 317,
-=======
-          "cachedRegistrations": 313,
->>>>>>> 9834f49b29c79214e0fcdceb418948b3eff3fbf2
           "eventType": "Virtual & In-Person",
           "registrationEnabled": true,
           "isHostEvent": false,
@@ -11571,11 +10902,7 @@
           },
           "country": "Ecuador",
           "displayName": "Guayaquil",
-<<<<<<< HEAD
           "cachedRegistrations": 198,
-=======
-          "cachedRegistrations": 181,
->>>>>>> 9834f49b29c79214e0fcdceb418948b3eff3fbf2
           "eventType": "In-Person",
           "registrationEnabled": true,
           "isHostEvent": false,
@@ -11607,11 +10934,7 @@
           },
           "country": "Guatemala",
           "displayName": "Guatemala",
-<<<<<<< HEAD
           "cachedRegistrations": 174,
-=======
-          "cachedRegistrations": 173,
->>>>>>> 9834f49b29c79214e0fcdceb418948b3eff3fbf2
           "eventType": "Virtual & In-Person",
           "registrationEnabled": true,
           "isHostEvent": false,
@@ -11643,11 +10966,7 @@
           },
           "country": "Brazil",
           "displayName": "Guarulhos",
-<<<<<<< HEAD
           "cachedRegistrations": 117,
-=======
-          "cachedRegistrations": 118,
->>>>>>> 9834f49b29c79214e0fcdceb418948b3eff3fbf2
           "eventType": "Virtual",
           "registrationEnabled": true,
           "isHostEvent": false,
@@ -11711,11 +11030,7 @@
           },
           "country": "Sweden",
           "displayName": "Gothenburg",
-<<<<<<< HEAD
           "cachedRegistrations": 125,
-=======
-          "cachedRegistrations": 126,
->>>>>>> 9834f49b29c79214e0fcdceb418948b3eff3fbf2
           "eventType": "In-Person",
           "registrationEnabled": true,
           "isHostEvent": false,
@@ -11779,11 +11094,7 @@
           },
           "country": "Brazil",
           "displayName": "Goiânia",
-<<<<<<< HEAD
           "cachedRegistrations": 39,
-=======
-          "cachedRegistrations": 38,
->>>>>>> 9834f49b29c79214e0fcdceb418948b3eff3fbf2
           "eventType": "In-Person",
           "registrationEnabled": true,
           "isHostEvent": false,
@@ -11815,13 +11126,8 @@
           },
           "country": "Egypt",
           "displayName": "Giza",
-<<<<<<< HEAD
           "cachedRegistrations": 707,
           "eventType": "Virtual",
-=======
-          "cachedRegistrations": 714,
-          "eventType": "Virtual & In-Person",
->>>>>>> 9834f49b29c79214e0fcdceb418948b3eff3fbf2
           "registrationEnabled": true,
           "isHostEvent": false,
           "__typename": "LocationPage"
@@ -11884,11 +11190,7 @@
           },
           "country": "United States",
           "displayName": "Gilbertown, AL",
-<<<<<<< HEAD
           "cachedRegistrations": 17,
-=======
-          "cachedRegistrations": 15,
->>>>>>> 9834f49b29c79214e0fcdceb418948b3eff3fbf2
           "eventType": "Virtual",
           "registrationEnabled": true,
           "isHostEvent": false,
@@ -11920,7 +11222,7 @@
           },
           "country": "India",
           "displayName": "Ghaziabad",
-          "cachedRegistrations": 83,
+          "cachedRegistrations": 84,
           "eventType": "Virtual",
           "registrationEnabled": true,
           "isHostEvent": false,
@@ -11952,11 +11254,7 @@
           },
           "country": "Turkey",
           "displayName": "Gaziantep",
-<<<<<<< HEAD
           "cachedRegistrations": 103,
-=======
-          "cachedRegistrations": 97,
->>>>>>> 9834f49b29c79214e0fcdceb418948b3eff3fbf2
           "eventType": "In-Person",
           "registrationEnabled": true,
           "isHostEvent": false,
@@ -12020,11 +11318,7 @@
           },
           "country": "Botswana",
           "displayName": "Gaborone",
-<<<<<<< HEAD
           "cachedRegistrations": 31,
-=======
-          "cachedRegistrations": 25,
->>>>>>> 9834f49b29c79214e0fcdceb418948b3eff3fbf2
           "eventType": "In-Person",
           "registrationEnabled": true,
           "isHostEvent": false,
@@ -12056,11 +11350,7 @@
           },
           "country": "Japan",
           "displayName": "Fukaya",
-<<<<<<< HEAD
           "cachedRegistrations": 35,
-=======
-          "cachedRegistrations": 33,
->>>>>>> 9834f49b29c79214e0fcdceb418948b3eff3fbf2
           "eventType": "Virtual & In-Person",
           "registrationEnabled": true,
           "isHostEvent": false,
@@ -12092,11 +11382,7 @@
           },
           "country": "United Arab Emirates",
           "displayName": "Fujairah",
-<<<<<<< HEAD
           "cachedRegistrations": 29,
-=======
-          "cachedRegistrations": 28,
->>>>>>> 9834f49b29c79214e0fcdceb418948b3eff3fbf2
           "eventType": "Virtual",
           "registrationEnabled": true,
           "isHostEvent": false,
@@ -12160,11 +11446,7 @@
           },
           "country": "Brazil",
           "displayName": "Fortaleza",
-<<<<<<< HEAD
           "cachedRegistrations": 96,
-=======
-          "cachedRegistrations": 94,
->>>>>>> 9834f49b29c79214e0fcdceb418948b3eff3fbf2
           "eventType": "Virtual & In-Person",
           "registrationEnabled": true,
           "isHostEvent": false,
@@ -12228,11 +11510,7 @@
           },
           "country": "United Kingdom",
           "displayName": "Exeter",
-<<<<<<< HEAD
           "cachedRegistrations": 36,
-=======
-          "cachedRegistrations": 37,
->>>>>>> 9834f49b29c79214e0fcdceb418948b3eff3fbf2
           "eventType": "In-Person",
           "registrationEnabled": true,
           "isHostEvent": false,
@@ -12264,11 +11542,7 @@
           },
           "country": "Morocco",
           "displayName": "Essaouira",
-<<<<<<< HEAD
           "cachedRegistrations": 90,
-=======
-          "cachedRegistrations": 87,
->>>>>>> 9834f49b29c79214e0fcdceb418948b3eff3fbf2
           "eventType": "Virtual & In-Person",
           "registrationEnabled": true,
           "isHostEvent": false,
@@ -12300,11 +11574,7 @@
           },
           "country": "Ecuador",
           "displayName": "Esmeraldas",
-<<<<<<< HEAD
           "cachedRegistrations": 56,
-=======
-          "cachedRegistrations": 53,
->>>>>>> 9834f49b29c79214e0fcdceb418948b3eff3fbf2
           "eventType": "Virtual & In-Person",
           "registrationEnabled": true,
           "isHostEvent": false,
@@ -12400,11 +11670,7 @@
           },
           "country": "Paraguay",
           "displayName": "Encarnación",
-<<<<<<< HEAD
           "cachedRegistrations": 65,
-=======
-          "cachedRegistrations": 60,
->>>>>>> 9834f49b29c79214e0fcdceb418948b3eff3fbf2
           "eventType": "In-Person",
           "registrationEnabled": true,
           "isHostEvent": false,
@@ -12500,11 +11766,7 @@
           },
           "country": "Canada",
           "displayName": "Edmonton",
-<<<<<<< HEAD
           "cachedRegistrations": 71,
-=======
-          "cachedRegistrations": 68,
->>>>>>> 9834f49b29c79214e0fcdceb418948b3eff3fbf2
           "eventType": "In-Person",
           "registrationEnabled": true,
           "isHostEvent": false,
@@ -12568,11 +11830,7 @@
           },
           "country": "Tajikistan",
           "displayName": "Dushanbe",
-<<<<<<< HEAD
           "cachedRegistrations": 374,
-=======
-          "cachedRegistrations": 370,
->>>>>>> 9834f49b29c79214e0fcdceb418948b3eff3fbf2
           "eventType": "Virtual",
           "registrationEnabled": true,
           "isHostEvent": false,
@@ -12604,11 +11862,7 @@
           },
           "country": "India",
           "displayName": "Durgapur",
-<<<<<<< HEAD
           "cachedRegistrations": 11,
-=======
-          "cachedRegistrations": 7,
->>>>>>> 9834f49b29c79214e0fcdceb418948b3eff3fbf2
           "eventType": "Virtual",
           "registrationEnabled": true,
           "isHostEvent": false,
@@ -12672,11 +11926,7 @@
           },
           "country": "Ireland",
           "displayName": "Dublin",
-<<<<<<< HEAD
           "cachedRegistrations": 117,
-=======
-          "cachedRegistrations": 118,
->>>>>>> 9834f49b29c79214e0fcdceb418948b3eff3fbf2
           "eventType": "In-Person",
           "registrationEnabled": true,
           "isHostEvent": false,
@@ -12708,11 +11958,7 @@
           },
           "country": "United Arab Emirates",
           "displayName": "Dubai",
-<<<<<<< HEAD
           "cachedRegistrations": 279,
-=======
-          "cachedRegistrations": 282,
->>>>>>> 9834f49b29c79214e0fcdceb418948b3eff3fbf2
           "eventType": "In-Person",
           "registrationEnabled": true,
           "isHostEvent": false,
@@ -12776,11 +12022,7 @@
           },
           "country": "Ukraine",
           "displayName": "Dnipro",
-<<<<<<< HEAD
           "cachedRegistrations": 276,
-=======
-          "cachedRegistrations": 229,
->>>>>>> 9834f49b29c79214e0fcdceb418948b3eff3fbf2
           "eventType": "Virtual & In-Person",
           "registrationEnabled": true,
           "isHostEvent": false,
@@ -12812,11 +12054,7 @@
           },
           "country": "Turkey",
           "displayName": "Diyarbakır",
-<<<<<<< HEAD
           "cachedRegistrations": 82,
-=======
-          "cachedRegistrations": 78,
->>>>>>> 9834f49b29c79214e0fcdceb418948b3eff3fbf2
           "eventType": "In-Person",
           "registrationEnabled": true,
           "isHostEvent": false,
@@ -12976,11 +12214,7 @@
           },
           "country": "Bangladesh",
           "displayName": "Dhaka",
-<<<<<<< HEAD
           "cachedRegistrations": 829,
-=======
-          "cachedRegistrations": 825,
->>>>>>> 9834f49b29c79214e0fcdceb418948b3eff3fbf2
           "eventType": "Virtual",
           "registrationEnabled": true,
           "isHostEvent": false,
@@ -13012,11 +12246,7 @@
           },
           "country": "India",
           "displayName": "Delhi",
-<<<<<<< HEAD
           "cachedRegistrations": 606,
-=======
-          "cachedRegistrations": 586,
->>>>>>> 9834f49b29c79214e0fcdceb418948b3eff3fbf2
           "eventType": "Virtual",
           "registrationEnabled": true,
           "isHostEvent": false,
@@ -13080,11 +12310,7 @@
           },
           "country": "India",
           "displayName": "Darjeeling",
-<<<<<<< HEAD
           "cachedRegistrations": 18,
-=======
-          "cachedRegistrations": 12,
->>>>>>> 9834f49b29c79214e0fcdceb418948b3eff3fbf2
           "eventType": "Virtual",
           "registrationEnabled": true,
           "isHostEvent": false,
@@ -13116,11 +12342,7 @@
           },
           "country": "Tanzania",
           "displayName": "Dar es Salaam",
-<<<<<<< HEAD
           "cachedRegistrations": 63,
-=======
-          "cachedRegistrations": 60,
->>>>>>> 9834f49b29c79214e0fcdceb418948b3eff3fbf2
           "eventType": "Virtual & In-Person",
           "registrationEnabled": true,
           "isHostEvent": false,
@@ -13184,11 +12406,7 @@
           },
           "country": "United States",
           "displayName": "Dallas, TX",
-<<<<<<< HEAD
           "cachedRegistrations": 99,
-=======
-          "cachedRegistrations": 98,
->>>>>>> 9834f49b29c79214e0fcdceb418948b3eff3fbf2
           "eventType": "Virtual",
           "registrationEnabled": true,
           "isHostEvent": false,
@@ -13220,11 +12438,7 @@
           },
           "country": "Senegal",
           "displayName": "Dakar",
-<<<<<<< HEAD
           "cachedRegistrations": 70,
-=======
-          "cachedRegistrations": 66,
->>>>>>> 9834f49b29c79214e0fcdceb418948b3eff3fbf2
           "eventType": "Virtual & In-Person",
           "registrationEnabled": true,
           "isHostEvent": false,
@@ -13288,11 +12502,7 @@
           },
           "country": "Argentina",
           "displayName": "Córdoba",
-<<<<<<< HEAD
           "cachedRegistrations": 118,
-=======
-          "cachedRegistrations": 105,
->>>>>>> 9834f49b29c79214e0fcdceb418948b3eff3fbf2
           "eventType": "Virtual & In-Person",
           "registrationEnabled": true,
           "isHostEvent": false,
@@ -13388,11 +12598,7 @@
           },
           "country": "Brazil",
           "displayName": "Cuiaba",
-<<<<<<< HEAD
           "cachedRegistrations": 87,
-=======
-          "cachedRegistrations": 85,
->>>>>>> 9834f49b29c79214e0fcdceb418948b3eff3fbf2
           "eventType": "Virtual & In-Person",
           "registrationEnabled": true,
           "isHostEvent": false,
@@ -13424,11 +12630,7 @@
           },
           "country": "Romania",
           "displayName": "Craiova",
-<<<<<<< HEAD
           "cachedRegistrations": 43,
-=======
-          "cachedRegistrations": 24,
->>>>>>> 9834f49b29c79214e0fcdceb418948b3eff3fbf2
           "eventType": "In-Person",
           "registrationEnabled": true,
           "isHostEvent": false,
@@ -13460,11 +12662,7 @@
           },
           "country": "Denmark",
           "displayName": "Copenhagen",
-<<<<<<< HEAD
           "cachedRegistrations": 16,
-=======
-          "cachedRegistrations": 14,
->>>>>>> 9834f49b29c79214e0fcdceb418948b3eff3fbf2
           "eventType": "In-Person",
           "registrationEnabled": true,
           "isHostEvent": false,
@@ -13496,11 +12694,7 @@
           },
           "country": "Chile",
           "displayName": "Concepción",
-<<<<<<< HEAD
           "cachedRegistrations": 52,
-=======
-          "cachedRegistrations": 57,
->>>>>>> 9834f49b29c79214e0fcdceb418948b3eff3fbf2
           "eventType": "In-Person",
           "registrationEnabled": true,
           "isHostEvent": false,
@@ -13532,11 +12726,7 @@
           },
           "country": "Guinea",
           "displayName": "Conakry",
-<<<<<<< HEAD
           "cachedRegistrations": 20,
-=======
-          "cachedRegistrations": 18,
->>>>>>> 9834f49b29c79214e0fcdceb418948b3eff3fbf2
           "eventType": "Virtual & In-Person",
           "registrationEnabled": true,
           "isHostEvent": false,
@@ -13600,11 +12790,7 @@
           },
           "country": "Mexico",
           "displayName": "Colón",
-<<<<<<< HEAD
           "cachedRegistrations": 473,
-=======
-          "cachedRegistrations": 464,
->>>>>>> 9834f49b29c79214e0fcdceb418948b3eff3fbf2
           "eventType": "In-Person",
           "registrationEnabled": true,
           "isHostEvent": false,
@@ -13636,11 +12822,7 @@
           },
           "country": "Sri Lanka",
           "displayName": "Colombo",
-<<<<<<< HEAD
           "cachedRegistrations": 292,
-=======
-          "cachedRegistrations": 291,
->>>>>>> 9834f49b29c79214e0fcdceb418948b3eff3fbf2
           "eventType": "Virtual & In-Person",
           "registrationEnabled": true,
           "isHostEvent": false,
@@ -13768,11 +12950,7 @@
           },
           "country": "United States",
           "displayName": "Cleveland, OH",
-<<<<<<< HEAD
           "cachedRegistrations": 22,
-=======
-          "cachedRegistrations": 19,
->>>>>>> 9834f49b29c79214e0fcdceb418948b3eff3fbf2
           "eventType": "Virtual",
           "registrationEnabled": true,
           "isHostEvent": false,
@@ -13868,11 +13046,7 @@
           },
           "country": "Uruguay",
           "displayName": "Ciudad de la Costa",
-<<<<<<< HEAD
           "cachedRegistrations": 124,
-=======
-          "cachedRegistrations": 109,
->>>>>>> 9834f49b29c79214e0fcdceb418948b3eff3fbf2
           "eventType": "Virtual & In-Person",
           "registrationEnabled": true,
           "isHostEvent": false,
@@ -13904,11 +13078,7 @@
           },
           "country": "United States",
           "displayName": "Cincinnati, OH",
-<<<<<<< HEAD
           "cachedRegistrations": 114,
-=======
-          "cachedRegistrations": 112,
->>>>>>> 9834f49b29c79214e0fcdceb418948b3eff3fbf2
           "eventType": "Virtual & In-Person",
           "registrationEnabled": true,
           "isHostEvent": false,
@@ -13940,11 +13110,7 @@
           },
           "country": "Brazil",
           "displayName": "Cianorte",
-<<<<<<< HEAD
           "cachedRegistrations": 121,
-=======
-          "cachedRegistrations": 119,
->>>>>>> 9834f49b29c79214e0fcdceb418948b3eff3fbf2
           "eventType": "In-Person",
           "registrationEnabled": true,
           "isHostEvent": false,
@@ -14040,11 +13206,7 @@
           },
           "country": "United States",
           "displayName": "Chino Hills, CA",
-<<<<<<< HEAD
           "cachedRegistrations": 29,
-=======
-          "cachedRegistrations": 28,
->>>>>>> 9834f49b29c79214e0fcdceb418948b3eff3fbf2
           "eventType": "Virtual",
           "registrationEnabled": true,
           "isHostEvent": false,
@@ -14172,11 +13334,7 @@
           },
           "country": "United States",
           "displayName": "Chicago, IL",
-<<<<<<< HEAD
           "cachedRegistrations": 366,
-=======
-          "cachedRegistrations": 364,
->>>>>>> 9834f49b29c79214e0fcdceb418948b3eff3fbf2
           "eventType": "Virtual & In-Person",
           "registrationEnabled": true,
           "isHostEvent": false,
@@ -14208,11 +13366,7 @@
           },
           "country": "Colombia",
           "displayName": "Chia",
-<<<<<<< HEAD
           "cachedRegistrations": 332,
-=======
-          "cachedRegistrations": 331,
->>>>>>> 9834f49b29c79214e0fcdceb418948b3eff3fbf2
           "eventType": "Virtual",
           "registrationEnabled": true,
           "isHostEvent": false,
@@ -14276,11 +13430,7 @@
           },
           "country": "India",
           "displayName": "Chennai",
-<<<<<<< HEAD
           "cachedRegistrations": 615,
-=======
-          "cachedRegistrations": 591,
->>>>>>> 9834f49b29c79214e0fcdceb418948b3eff3fbf2
           "eventType": "Virtual & In-Person",
           "registrationEnabled": true,
           "isHostEvent": false,
@@ -14344,11 +13494,7 @@
           },
           "country": "United States",
           "displayName": "Charlotte, NC",
-<<<<<<< HEAD
           "cachedRegistrations": 88,
-=======
-          "cachedRegistrations": 86,
->>>>>>> 9834f49b29c79214e0fcdceb418948b3eff3fbf2
           "eventType": "In-Person",
           "registrationEnabled": true,
           "isHostEvent": false,
@@ -14444,13 +13590,8 @@
           },
           "country": "Morocco",
           "displayName": "Casablanca",
-<<<<<<< HEAD
           "cachedRegistrations": 98,
           "eventType": "Virtual",
-=======
-          "cachedRegistrations": 94,
-          "eventType": "Virtual & In-Person",
->>>>>>> 9834f49b29c79214e0fcdceb418948b3eff3fbf2
           "registrationEnabled": true,
           "isHostEvent": false,
           "__typename": "LocationPage"
@@ -14481,11 +13622,7 @@
           },
           "country": "Mexico",
           "displayName": "Carmen City",
-<<<<<<< HEAD
           "cachedRegistrations": 105,
-=======
-          "cachedRegistrations": 104,
->>>>>>> 9834f49b29c79214e0fcdceb418948b3eff3fbf2
           "eventType": "Virtual & In-Person",
           "registrationEnabled": true,
           "isHostEvent": false,
@@ -14517,11 +13654,7 @@
           },
           "country": "South Africa",
           "displayName": "Cape Town",
-<<<<<<< HEAD
           "cachedRegistrations": 92,
-=======
-          "cachedRegistrations": 87,
->>>>>>> 9834f49b29c79214e0fcdceb418948b3eff3fbf2
           "eventType": "Virtual & In-Person",
           "registrationEnabled": true,
           "isHostEvent": false,
@@ -14649,11 +13782,7 @@
           },
           "country": "Brazil",
           "displayName": "Campinas",
-<<<<<<< HEAD
           "cachedRegistrations": 364,
-=======
-          "cachedRegistrations": 333,
->>>>>>> 9834f49b29c79214e0fcdceb418948b3eff3fbf2
           "eventType": "Virtual & In-Person",
           "registrationEnabled": true,
           "isHostEvent": false,
@@ -14717,11 +13846,7 @@
           },
           "country": "United States",
           "displayName": "Cambridge, MA",
-<<<<<<< HEAD
           "cachedRegistrations": 27,
-=======
-          "cachedRegistrations": 26,
->>>>>>> 9834f49b29c79214e0fcdceb418948b3eff3fbf2
           "eventType": "Virtual",
           "registrationEnabled": true,
           "isHostEvent": false,
@@ -14753,11 +13878,7 @@
           },
           "country": "India",
           "displayName": "Calicut",
-<<<<<<< HEAD
           "cachedRegistrations": 63,
-=======
-          "cachedRegistrations": 60,
->>>>>>> 9834f49b29c79214e0fcdceb418948b3eff3fbf2
           "eventType": "Virtual",
           "registrationEnabled": true,
           "isHostEvent": false,
@@ -14821,11 +13942,7 @@
           },
           "country": "Peru",
           "displayName": "Cajamarca",
-<<<<<<< HEAD
           "cachedRegistrations": 268,
-=======
-          "cachedRegistrations": 253,
->>>>>>> 9834f49b29c79214e0fcdceb418948b3eff3fbf2
           "eventType": "In-Person",
           "registrationEnabled": true,
           "isHostEvent": false,
@@ -14857,11 +13974,7 @@
           },
           "country": "Egypt",
           "displayName": "Cairo",
-<<<<<<< HEAD
           "cachedRegistrations": 3020,
-=======
-          "cachedRegistrations": 3015,
->>>>>>> 9834f49b29c79214e0fcdceb418948b3eff3fbf2
           "eventType": "Virtual & In-Person",
           "registrationEnabled": true,
           "isHostEvent": false,
@@ -14925,11 +14038,7 @@
           },
           "country": "Turkey",
           "displayName": "Bursa",
-<<<<<<< HEAD
           "cachedRegistrations": 382,
-=======
-          "cachedRegistrations": 367,
->>>>>>> 9834f49b29c79214e0fcdceb418948b3eff3fbf2
           "eventType": "In-Person",
           "registrationEnabled": true,
           "isHostEvent": false,
@@ -14961,11 +14070,7 @@
           },
           "country": "Bulgaria",
           "displayName": "Burgas",
-<<<<<<< HEAD
           "cachedRegistrations": 18,
-=======
-          "cachedRegistrations": 15,
->>>>>>> 9834f49b29c79214e0fcdceb418948b3eff3fbf2
           "eventType": "In-Person",
           "registrationEnabled": true,
           "isHostEvent": false,
@@ -15125,11 +14230,7 @@
           },
           "country": "United Kingdom",
           "displayName": "Bristol",
-<<<<<<< HEAD
           "cachedRegistrations": 45,
-=======
-          "cachedRegistrations": 40,
->>>>>>> 9834f49b29c79214e0fcdceb418948b3eff3fbf2
           "eventType": "In-Person",
           "registrationEnabled": true,
           "isHostEvent": false,
@@ -15257,11 +14358,7 @@
           },
           "country": "United States",
           "displayName": "Boston, MA",
-<<<<<<< HEAD
           "cachedRegistrations": 99,
-=======
-          "cachedRegistrations": 98,
->>>>>>> 9834f49b29c79214e0fcdceb418948b3eff3fbf2
           "eventType": "Virtual",
           "registrationEnabled": true,
           "isHostEvent": false,
@@ -15389,11 +14486,7 @@
           },
           "country": "Brazil",
           "displayName": "Boa Vista",
-<<<<<<< HEAD
           "cachedRegistrations": 278,
-=======
-          "cachedRegistrations": 273,
->>>>>>> 9834f49b29c79214e0fcdceb418948b3eff3fbf2
           "eventType": "Virtual & In-Person",
           "registrationEnabled": true,
           "isHostEvent": false,
@@ -15457,11 +14550,7 @@
           },
           "country": "Kyrgyzstan",
           "displayName": "Bishkek",
-<<<<<<< HEAD
           "cachedRegistrations": 472,
-=======
-          "cachedRegistrations": 470,
->>>>>>> 9834f49b29c79214e0fcdceb418948b3eff3fbf2
           "eventType": "Virtual & In-Person",
           "registrationEnabled": true,
           "isHostEvent": false,
@@ -15589,11 +14678,7 @@
           },
           "country": "Spain",
           "displayName": "Bilbao",
-<<<<<<< HEAD
           "cachedRegistrations": 78,
-=======
-          "cachedRegistrations": 72,
->>>>>>> 9834f49b29c79214e0fcdceb418948b3eff3fbf2
           "eventType": "In-Person",
           "registrationEnabled": true,
           "isHostEvent": false,
@@ -15657,11 +14742,7 @@
           },
           "country": "India",
           "displayName": "Bhopal",
-<<<<<<< HEAD
           "cachedRegistrations": 196,
-=======
-          "cachedRegistrations": 194,
->>>>>>> 9834f49b29c79214e0fcdceb418948b3eff3fbf2
           "eventType": "Virtual & In-Person",
           "registrationEnabled": true,
           "isHostEvent": false,
@@ -15853,11 +14934,7 @@
           },
           "country": "Nigeria",
           "displayName": "Benin",
-<<<<<<< HEAD
           "cachedRegistrations": 39,
-=======
-          "cachedRegistrations": 38,
->>>>>>> 9834f49b29c79214e0fcdceb418948b3eff3fbf2
           "eventType": "In-Person",
           "registrationEnabled": true,
           "isHostEvent": false,
@@ -15889,11 +14966,7 @@
           },
           "country": "Egypt",
           "displayName": "Benha",
-<<<<<<< HEAD
           "cachedRegistrations": 109,
-=======
-          "cachedRegistrations": 112,
->>>>>>> 9834f49b29c79214e0fcdceb418948b3eff3fbf2
           "eventType": "Virtual & In-Person",
           "registrationEnabled": true,
           "isHostEvent": false,
@@ -15957,11 +15030,7 @@
           },
           "country": "Brazil",
           "displayName": "Belém",
-<<<<<<< HEAD
           "cachedRegistrations": 28,
-=======
-          "cachedRegistrations": 25,
->>>>>>> 9834f49b29c79214e0fcdceb418948b3eff3fbf2
           "eventType": "Virtual",
           "registrationEnabled": true,
           "isHostEvent": false,
@@ -15993,7 +15062,7 @@
           },
           "country": "Serbia",
           "displayName": "Belgrade",
-          "cachedRegistrations": 3,
+          "cachedRegistrations": 2,
           "eventType": "Virtual & In-Person",
           "registrationEnabled": true,
           "isHostEvent": false,
@@ -16025,11 +15094,7 @@
           },
           "country": "India",
           "displayName": "Belagavi",
-<<<<<<< HEAD
           "cachedRegistrations": 335,
-=======
-          "cachedRegistrations": 307,
->>>>>>> 9834f49b29c79214e0fcdceb418948b3eff3fbf2
           "eventType": "Virtual",
           "registrationEnabled": true,
           "isHostEvent": false,
@@ -16125,11 +15190,7 @@
           },
           "country": "Turkey",
           "displayName": "Batman",
-<<<<<<< HEAD
           "cachedRegistrations": 101,
-=======
-          "cachedRegistrations": 100,
->>>>>>> 9834f49b29c79214e0fcdceb418948b3eff3fbf2
           "eventType": "In-Person",
           "registrationEnabled": true,
           "isHostEvent": false,
@@ -16161,11 +15222,7 @@
           },
           "country": "Colombia",
           "displayName": "Barranquilla",
-<<<<<<< HEAD
           "cachedRegistrations": 108,
-=======
-          "cachedRegistrations": 106,
->>>>>>> 9834f49b29c79214e0fcdceb418948b3eff3fbf2
           "eventType": "Virtual & In-Person",
           "registrationEnabled": true,
           "isHostEvent": false,
@@ -16197,11 +15254,7 @@
           },
           "country": "Bangladesh",
           "displayName": "Barisal",
-<<<<<<< HEAD
           "cachedRegistrations": 161,
-=======
-          "cachedRegistrations": 160,
->>>>>>> 9834f49b29c79214e0fcdceb418948b3eff3fbf2
           "eventType": "Virtual",
           "registrationEnabled": true,
           "isHostEvent": false,
@@ -16297,11 +15350,7 @@
           },
           "country": "Thailand",
           "displayName": "Bangkok",
-<<<<<<< HEAD
           "cachedRegistrations": 7,
-=======
-          "cachedRegistrations": 6,
->>>>>>> 9834f49b29c79214e0fcdceb418948b3eff3fbf2
           "eventType": "Virtual",
           "registrationEnabled": true,
           "isHostEvent": false,
@@ -16365,11 +15414,7 @@
           },
           "country": "Indonesia",
           "displayName": "Bandung",
-<<<<<<< HEAD
           "cachedRegistrations": 26,
-=======
-          "cachedRegistrations": 16,
->>>>>>> 9834f49b29c79214e0fcdceb418948b3eff3fbf2
           "eventType": "Virtual & In-Person",
           "registrationEnabled": true,
           "isHostEvent": false,
@@ -16401,11 +15446,7 @@
           },
           "country": "Egypt",
           "displayName": "Baltim",
-<<<<<<< HEAD
           "cachedRegistrations": 126,
-=======
-          "cachedRegistrations": 122,
->>>>>>> 9834f49b29c79214e0fcdceb418948b3eff3fbf2
           "eventType": "Virtual & In-Person",
           "registrationEnabled": true,
           "isHostEvent": false,
@@ -16469,11 +15510,7 @@
           },
           "country": "Azerbaijan",
           "displayName": "Baku",
-<<<<<<< HEAD
           "cachedRegistrations": 58,
-=======
-          "cachedRegistrations": 57,
->>>>>>> 9834f49b29c79214e0fcdceb418948b3eff3fbf2
           "eventType": "Virtual",
           "registrationEnabled": true,
           "isHostEvent": false,
@@ -16537,11 +15574,7 @@
           },
           "country": "Peru",
           "displayName": "Bagua",
-<<<<<<< HEAD
           "cachedRegistrations": 26,
-=======
-          "cachedRegistrations": 20,
->>>>>>> 9834f49b29c79214e0fcdceb418948b3eff3fbf2
           "eventType": "Virtual",
           "registrationEnabled": true,
           "isHostEvent": false,
@@ -16573,11 +15606,7 @@
           },
           "country": "Iraq",
           "displayName": "Baghdad",
-<<<<<<< HEAD
           "cachedRegistrations": 92,
-=======
-          "cachedRegistrations": 91,
->>>>>>> 9834f49b29c79214e0fcdceb418948b3eff3fbf2
           "eventType": "Virtual & In-Person",
           "registrationEnabled": true,
           "isHostEvent": false,
@@ -16833,11 +15862,7 @@
           },
           "country": "Mexico",
           "displayName": "Atoyac de Alvarez",
-<<<<<<< HEAD
           "cachedRegistrations": 95,
-=======
-          "cachedRegistrations": 92,
->>>>>>> 9834f49b29c79214e0fcdceb418948b3eff3fbf2
           "eventType": "Virtual & In-Person",
           "registrationEnabled": true,
           "isHostEvent": false,
@@ -16997,11 +16022,7 @@
           },
           "country": "Kazakhstan",
           "displayName": "Astana",
-<<<<<<< HEAD
           "cachedRegistrations": 196,
-=======
-          "cachedRegistrations": 180,
->>>>>>> 9834f49b29c79214e0fcdceb418948b3eff3fbf2
           "eventType": "In-Person",
           "registrationEnabled": true,
           "isHostEvent": false,
@@ -17033,11 +16054,7 @@
           },
           "country": "Egypt",
           "displayName": "Assiut",
-<<<<<<< HEAD
           "cachedRegistrations": 263,
-=======
-          "cachedRegistrations": 262,
->>>>>>> 9834f49b29c79214e0fcdceb418948b3eff3fbf2
           "eventType": "Virtual & In-Person",
           "registrationEnabled": true,
           "isHostEvent": false,
@@ -17069,11 +16086,7 @@
           },
           "country": "Turkmenistan",
           "displayName": "Ashgabat",
-<<<<<<< HEAD
           "cachedRegistrations": 81,
-=======
-          "cachedRegistrations": 79,
->>>>>>> 9834f49b29c79214e0fcdceb418948b3eff3fbf2
           "eventType": "In-Person",
           "registrationEnabled": true,
           "isHostEvent": false,
@@ -17105,11 +16118,7 @@
           },
           "country": "United States",
           "displayName": "Arlington, VA",
-<<<<<<< HEAD
           "cachedRegistrations": 49,
-=======
-          "cachedRegistrations": 47,
->>>>>>> 9834f49b29c79214e0fcdceb418948b3eff3fbf2
           "eventType": "Virtual",
           "registrationEnabled": true,
           "isHostEvent": false,
@@ -17301,11 +16310,7 @@
           },
           "country": "Turkey",
           "displayName": "Antalya",
-<<<<<<< HEAD
           "cachedRegistrations": 204,
-=======
-          "cachedRegistrations": 179,
->>>>>>> 9834f49b29c79214e0fcdceb418948b3eff3fbf2
           "eventType": "In-Person",
           "registrationEnabled": true,
           "isHostEvent": false,
@@ -17322,41 +16327,6 @@
         "geometry": {
           "type": "Point",
           "coordinates": [
-<<<<<<< HEAD
-=======
-            32.8597419,
-            39.9333635
-          ],
-          "__typename": "Geometry"
-        },
-        "properties": {
-          "id": "aWQ6MzEyNDY=",
-          "title": "Ankara",
-          "meta": {
-            "type": "LOCATION",
-            "htmlUrl": "https://www.spaceappschallenge.org/2025/local-events/ankara/",
-            "__typename": "ExpandedPageMeta"
-          },
-          "country": "Turkey",
-          "displayName": "Ankara",
-          "cachedRegistrations": 384,
-          "eventType": "Virtual & In-Person",
-          "registrationEnabled": true,
-          "isHostEvent": false,
-          "__typename": "LocationPage"
-        },
-        "__typename": "LocationFeature"
-      },
-      "__typename": "LocationFeatureEdge"
-    },
-    {
-      "cursor": "b2Zmc2V0OjUxMQ==",
-      "node": {
-        "type": "Feature",
-        "geometry": {
-          "type": "Point",
-          "coordinates": [
->>>>>>> 9834f49b29c79214e0fcdceb418948b3eff3fbf2
             4.9041389,
             52.3675734
           ],
@@ -17372,11 +16342,7 @@
           },
           "country": "Netherlands",
           "displayName": "Amsterdam",
-<<<<<<< HEAD
           "cachedRegistrations": 36,
-=======
-          "cachedRegistrations": 37,
->>>>>>> 9834f49b29c79214e0fcdceb418948b3eff3fbf2
           "eventType": "Virtual",
           "registrationEnabled": true,
           "isHostEvent": false,
@@ -17408,11 +16374,7 @@
           },
           "country": "India",
           "displayName": "Amritsar",
-<<<<<<< HEAD
           "cachedRegistrations": 111,
-=======
-          "cachedRegistrations": 106,
->>>>>>> 9834f49b29c79214e0fcdceb418948b3eff3fbf2
           "eventType": "Virtual",
           "registrationEnabled": true,
           "isHostEvent": false,
@@ -17444,11 +16406,7 @@
           },
           "country": "Jordan",
           "displayName": "Amman",
-<<<<<<< HEAD
           "cachedRegistrations": 489,
-=======
-          "cachedRegistrations": 488,
->>>>>>> 9834f49b29c79214e0fcdceb418948b3eff3fbf2
           "eventType": "In-Person",
           "registrationEnabled": true,
           "isHostEvent": false,
@@ -17544,11 +16502,7 @@
           },
           "country": "Egypt",
           "displayName": "Alexandria",
-<<<<<<< HEAD
           "cachedRegistrations": 517,
-=======
-          "cachedRegistrations": 519,
->>>>>>> 9834f49b29c79214e0fcdceb418948b3eff3fbf2
           "eventType": "Virtual & In-Person",
           "registrationEnabled": true,
           "isHostEvent": false,
@@ -17580,11 +16534,7 @@
           },
           "country": "United States",
           "displayName": "Albuquerque, NM",
-<<<<<<< HEAD
           "cachedRegistrations": 33,
-=======
-          "cachedRegistrations": 34,
->>>>>>> 9834f49b29c79214e0fcdceb418948b3eff3fbf2
           "eventType": "In-Person",
           "registrationEnabled": true,
           "isHostEvent": false,
@@ -17648,11 +16598,7 @@
           },
           "country": "United Arab Emirates",
           "displayName": "Al Ain",
-<<<<<<< HEAD
           "cachedRegistrations": 21,
-=======
-          "cachedRegistrations": 19,
->>>>>>> 9834f49b29c79214e0fcdceb418948b3eff3fbf2
           "eventType": "Virtual",
           "registrationEnabled": true,
           "isHostEvent": false,
@@ -17684,11 +16630,7 @@
           },
           "country": "Turkey",
           "displayName": "Akşehir",
-<<<<<<< HEAD
           "cachedRegistrations": 103,
-=======
-          "cachedRegistrations": 91,
->>>>>>> 9834f49b29c79214e0fcdceb418948b3eff3fbf2
           "eventType": "In-Person",
           "registrationEnabled": true,
           "isHostEvent": false,
@@ -17752,11 +16694,7 @@
           },
           "country": "Turkey",
           "displayName": "Aksaray",
-<<<<<<< HEAD
           "cachedRegistrations": 84,
-=======
-          "cachedRegistrations": 87,
->>>>>>> 9834f49b29c79214e0fcdceb418948b3eff3fbf2
           "eventType": "Virtual & In-Person",
           "registrationEnabled": true,
           "isHostEvent": false,
@@ -17788,11 +16726,7 @@
           },
           "country": "United Arab Emirates",
           "displayName": "Ajman",
-<<<<<<< HEAD
           "cachedRegistrations": 48,
-=======
-          "cachedRegistrations": 44,
->>>>>>> 9834f49b29c79214e0fcdceb418948b3eff3fbf2
           "eventType": "Virtual",
           "registrationEnabled": true,
           "isHostEvent": false,
@@ -17824,11 +16758,7 @@
           },
           "country": "India",
           "displayName": "Ahmedabad",
-<<<<<<< HEAD
           "cachedRegistrations": 763,
-=======
-          "cachedRegistrations": 727,
->>>>>>> 9834f49b29c79214e0fcdceb418948b3eff3fbf2
           "eventType": "In-Person",
           "registrationEnabled": true,
           "isHostEvent": false,
@@ -17860,11 +16790,7 @@
           },
           "country": "Germany",
           "displayName": "Ahlen",
-<<<<<<< HEAD
           "cachedRegistrations": 43,
-=======
-          "cachedRegistrations": 44,
->>>>>>> 9834f49b29c79214e0fcdceb418948b3eff3fbf2
           "eventType": "Virtual",
           "registrationEnabled": true,
           "isHostEvent": false,
@@ -17896,11 +16822,7 @@
           },
           "country": "India",
           "displayName": "Ahilyanagar",
-<<<<<<< HEAD
           "cachedRegistrations": 58,
-=======
-          "cachedRegistrations": 52,
->>>>>>> 9834f49b29c79214e0fcdceb418948b3eff3fbf2
           "eventType": "Virtual & In-Person",
           "registrationEnabled": true,
           "isHostEvent": false,
@@ -17932,13 +16854,8 @@
           },
           "country": "India",
           "displayName": "Agra",
-<<<<<<< HEAD
           "cachedRegistrations": 24,
           "eventType": "Virtual",
-=======
-          "cachedRegistrations": 27,
-          "eventType": "In-Person",
->>>>>>> 9834f49b29c79214e0fcdceb418948b3eff3fbf2
           "registrationEnabled": true,
           "isHostEvent": false,
           "__typename": "LocationPage"
@@ -18001,11 +16918,7 @@
           },
           "country": "Ethiopia",
           "displayName": "Addis Ababa",
-<<<<<<< HEAD
           "cachedRegistrations": 151,
-=======
-          "cachedRegistrations": 148,
->>>>>>> 9834f49b29c79214e0fcdceb418948b3eff3fbf2
           "eventType": "Virtual & In-Person",
           "registrationEnabled": true,
           "isHostEvent": false,
@@ -18037,11 +16950,7 @@
           },
           "country": "Turkey",
           "displayName": "Adana",
-<<<<<<< HEAD
           "cachedRegistrations": 67,
-=======
-          "cachedRegistrations": 60,
->>>>>>> 9834f49b29c79214e0fcdceb418948b3eff3fbf2
           "eventType": "Virtual",
           "registrationEnabled": true,
           "isHostEvent": false,
@@ -18073,11 +16982,7 @@
           },
           "country": "Ghana",
           "displayName": "Accra",
-<<<<<<< HEAD
           "cachedRegistrations": 103,
-=======
-          "cachedRegistrations": 100,
->>>>>>> 9834f49b29c79214e0fcdceb418948b3eff3fbf2
           "eventType": "Virtual & In-Person",
           "registrationEnabled": true,
           "isHostEvent": false,
@@ -18109,11 +17014,7 @@
           },
           "country": "United Arab Emirates",
           "displayName": "Abu Dhabi",
-<<<<<<< HEAD
           "cachedRegistrations": 1329,
-=======
-          "cachedRegistrations": 1245,
->>>>>>> 9834f49b29c79214e0fcdceb418948b3eff3fbf2
           "eventType": "Virtual & In-Person",
           "registrationEnabled": true,
           "isHostEvent": false,
@@ -18145,11 +17046,7 @@
           },
           "country": "Saudi Arabia",
           "displayName": "Abha",
-<<<<<<< HEAD
           "cachedRegistrations": 117,
-=======
-          "cachedRegistrations": 114,
->>>>>>> 9834f49b29c79214e0fcdceb418948b3eff3fbf2
           "eventType": "Virtual",
           "registrationEnabled": true,
           "isHostEvent": false,
@@ -18181,11 +17078,7 @@
           },
           "country": "Anywhere in the World",
           "displayName": "Universal Event",
-<<<<<<< HEAD
           "cachedRegistrations": 7010,
-=======
-          "cachedRegistrations": 6346,
->>>>>>> 9834f49b29c79214e0fcdceb418948b3eff3fbf2
           "eventType": "Virtual",
           "registrationEnabled": true,
           "isHostEvent": true,
@@ -18249,11 +17142,7 @@
           },
           "country": "United States",
           "displayName": "Urbana, IL",
-<<<<<<< HEAD
           "cachedRegistrations": 21,
-=======
-          "cachedRegistrations": 20,
->>>>>>> 9834f49b29c79214e0fcdceb418948b3eff3fbf2
           "eventType": "Virtual",
           "registrationEnabled": true,
           "isHostEvent": false,
@@ -18264,43 +17153,7 @@
       "__typename": "LocationFeatureEdge"
     },
     {
-<<<<<<< HEAD
       "cursor": "b2Zmc2V0OjUzNg==",
-=======
-      "cursor": "b2Zmc2V0OjUzNw==",
-      "node": {
-        "type": "Feature",
-        "geometry": {
-          "type": "Point",
-          "coordinates": [
-            -74.5594779,
-            39.3943253
-          ],
-          "__typename": "Geometry"
-        },
-        "properties": {
-          "id": "aWQ6MzEyODQ=",
-          "title": "Egg Harbor Township, NJ",
-          "meta": {
-            "type": "LOCATION",
-            "htmlUrl": "https://www.spaceappschallenge.org/2025/local-events/egg-harbor-township/",
-            "__typename": "ExpandedPageMeta"
-          },
-          "country": "United States",
-          "displayName": "Egg Harbor Township, NJ",
-          "cachedRegistrations": 6,
-          "eventType": "In-Person",
-          "registrationEnabled": false,
-          "isHostEvent": false,
-          "__typename": "LocationPage"
-        },
-        "__typename": "LocationFeature"
-      },
-      "__typename": "LocationFeatureEdge"
-    },
-    {
-      "cursor": "b2Zmc2V0OjUzOA==",
->>>>>>> 9834f49b29c79214e0fcdceb418948b3eff3fbf2
       "node": {
         "type": "Feature",
         "geometry": {
@@ -18385,11 +17238,7 @@
           },
           "country": "United States",
           "displayName": "Aberdeen, MD",
-<<<<<<< HEAD
           "cachedRegistrations": 42,
-=======
-          "cachedRegistrations": 39,
->>>>>>> 9834f49b29c79214e0fcdceb418948b3eff3fbf2
           "eventType": "Virtual",
           "registrationEnabled": true,
           "isHostEvent": false,
@@ -18421,11 +17270,7 @@
           },
           "country": "United States",
           "displayName": "Folsom, CA",
-<<<<<<< HEAD
           "cachedRegistrations": 154,
-=======
-          "cachedRegistrations": 156,
->>>>>>> 9834f49b29c79214e0fcdceb418948b3eff3fbf2
           "eventType": "In-Person",
           "registrationEnabled": true,
           "isHostEvent": false,
@@ -18521,11 +17366,7 @@
           },
           "country": "Benin",
           "displayName": "Abomey-Calavi",
-<<<<<<< HEAD
           "cachedRegistrations": 178,
-=======
-          "cachedRegistrations": 150,
->>>>>>> 9834f49b29c79214e0fcdceb418948b3eff3fbf2
           "eventType": "In-Person",
           "registrationEnabled": true,
           "isHostEvent": false,
@@ -18557,11 +17398,7 @@
           },
           "country": "United States",
           "displayName": "Warner Robins, GA",
-<<<<<<< HEAD
           "cachedRegistrations": 52,
-=======
-          "cachedRegistrations": 44,
->>>>>>> 9834f49b29c79214e0fcdceb418948b3eff3fbf2
           "eventType": "Virtual",
           "registrationEnabled": true,
           "isHostEvent": false,
@@ -18593,11 +17430,7 @@
           },
           "country": "Kazakhstan",
           "displayName": "Petropavlovsk",
-<<<<<<< HEAD
           "cachedRegistrations": 34,
-=======
-          "cachedRegistrations": 32,
->>>>>>> 9834f49b29c79214e0fcdceb418948b3eff3fbf2
           "eventType": "In-Person",
           "registrationEnabled": true,
           "isHostEvent": false,
@@ -18629,11 +17462,7 @@
           },
           "country": "France",
           "displayName": "Paris",
-<<<<<<< HEAD
           "cachedRegistrations": 83,
-=======
-          "cachedRegistrations": 77,
->>>>>>> 9834f49b29c79214e0fcdceb418948b3eff3fbf2
           "eventType": "In-Person",
           "registrationEnabled": true,
           "isHostEvent": false,
@@ -18729,11 +17558,7 @@
           },
           "country": "Japan",
           "displayName": "Ube",
-<<<<<<< HEAD
           "cachedRegistrations": 32,
-=======
-          "cachedRegistrations": 30,
->>>>>>> 9834f49b29c79214e0fcdceb418948b3eff3fbf2
           "eventType": "Virtual & In-Person",
           "registrationEnabled": true,
           "isHostEvent": false,
@@ -18861,11 +17686,7 @@
           },
           "country": "United States",
           "displayName": "Miami, FL",
-<<<<<<< HEAD
           "cachedRegistrations": 91,
-=======
-          "cachedRegistrations": 89,
->>>>>>> 9834f49b29c79214e0fcdceb418948b3eff3fbf2
           "eventType": "Virtual & In-Person",
           "registrationEnabled": true,
           "isHostEvent": false,
@@ -18961,11 +17782,7 @@
           },
           "country": "Bahrain",
           "displayName": "Sakhir",
-<<<<<<< HEAD
           "cachedRegistrations": 250,
-=======
-          "cachedRegistrations": 240,
->>>>>>> 9834f49b29c79214e0fcdceb418948b3eff3fbf2
           "eventType": "In-Person",
           "registrationEnabled": true,
           "isHostEvent": false,
