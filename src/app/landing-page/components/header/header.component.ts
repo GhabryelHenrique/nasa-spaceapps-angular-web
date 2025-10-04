@@ -142,11 +142,7 @@ export class HeaderComponent {
   }
 
   openMatchmaking(): void {
-    if (this.isLoggedIn) {
-      this.router.navigate(['/dashboard']);
-    } else {
-      this.showEmailModal = true;
-    }
+    window.open('https://tinder.com', '_blank');
   }
 
   onEmailVerified(data: { email: string; isRegistered: boolean }): void {
