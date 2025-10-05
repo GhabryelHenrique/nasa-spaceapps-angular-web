@@ -6,10 +6,10 @@
           "hasPreviousPage": false,
           "hasNextPage": false,
           "startCursor": "b2Zmc2V0OjA=",
-          "endCursor": "b2Zmc2V0OjE1Nw==",
+          "endCursor": "b2Zmc2V0OjE1OA==",
           "__typename": "PageInfo"
         },
-        "totalCount": 158,
+        "totalCount": 159,
         "edges": [
           {
             "__typename": "TeamPageEdge",
@@ -746,14 +746,14 @@
                 "name": "Project AM",
                 "summary": "",
                 "demoLink": "",
-                "projectLink": "",
+                "projectLink": "https://github.com/matheusf2003/forecasting",
                 "details": "",
                 "solution": "",
                 "aiReferences": "",
                 "dataReferences": "",
                 "projectReferences": "",
                 "isSubmitted": false,
-                "savedAt": "2025-10-04T19:13:41.640017Z",
+                "savedAt": "2025-10-05T02:45:27.364341Z",
                 "submittedAt": null,
                 "__typename": "Project"
               },
@@ -1213,7 +1213,7 @@
                 "type": "TEAM",
                 "slug": "associacao-mineira-da-diversidade",
                 "firstPublishedAt": "2025-10-02T22:22:55.737000Z",
-                "lastPublishedAt": "2025-10-03T21:55:49.435122Z",
+                "lastPublishedAt": "2025-10-05T01:35:39.663589Z",
                 "relativeUrl": "/2025/find-a-team/associacao-mineira-da-diversidade/",
                 "live": true,
                 "parent": null,
@@ -1481,25 +1481,25 @@
             "cursor": "b2Zmc2V0OjE1",
             "node": {
               "__typename": "TeamPage",
-              "id": "aWQ6NDMyODU=",
-              "title": "Astroismorphia",
+              "id": "aWQ6NTI0NTg=",
+              "title": "Astroismorphya",
               "meta": {
                 "type": "TEAM",
-                "slug": "astroismorphia",
-                "firstPublishedAt": "2025-09-27T23:47:41.377711Z",
-                "lastPublishedAt": "2025-09-27T23:47:41.377711Z",
-                "relativeUrl": "/2025/find-a-team/astroismorphia/",
+                "slug": "astroismorphya",
+                "firstPublishedAt": null,
+                "lastPublishedAt": null,
+                "relativeUrl": "/2025/find-a-team/astroismorphya/",
                 "live": true,
                 "parent": null,
                 "__typename": "ExpandedPageMeta"
               },
               "owner": "aWQ6NDQ4MDk4",
               "ownerDetails": null,
-              "excerpt": "We have two artists and a writter :D!! We are planning to join the animation challenge, so if you think you can work with us, feel free to join!!",
-              "project": "aWQ6NDEwOTM=",
+              "excerpt": "We are a group of girls who enjoys art and astronomy :D",
+              "project": "aWQ6NTAyNjI=",
               "projectDetails": {
-                "id": "aWQ6NDEwOTM=",
-                "name": "Project Astroismorphia",
+                "id": "aWQ6NTAyNjI=",
+                "name": "Project Astroismorphya",
                 "summary": "",
                 "demoLink": "",
                 "projectLink": "",
@@ -1515,19 +1515,19 @@
               },
               "projectSubmitted": false,
               "featuredImage": {
-                "id": "aWQ6MzM5NDYw",
+                "id": "aWQ6MzczMzAz",
                 "meta": {
                   "type": "images.CustomImage",
-                  "downloadUrl": "https://assets.spaceappschallenge.org/media/original_images/cavalo..jpg",
+                  "downloadUrl": "https://assets.spaceappschallenge.org/media/original_images/IMG_1144_tlnkDw9.jpeg",
                   "__typename": "ImageMeta"
                 },
-                "title": "team_image.23:37:35.029284",
-                "alt": "team_image.23:37:35.029284",
-                "caption": "team_image.23:37:35.029284",
+                "title": "team_image.00:08:47.302132",
+                "alt": "team_image.00:08:47.302132",
+                "caption": "team_image.00:08:47.302132",
                 "displaySize": "og",
                 "rendition": {
-                  "url": "https://assets.spaceappschallenge.org/media/images/cavalo..2e16d0ba.fill-300x250.jpg",
-                  "fullUrl": "https://assets.spaceappschallenge.org/media/images/cavalo..2e16d0ba.fill-300x250.jpg",
+                  "url": "https://assets.spaceappschallenge.org/media/images/IMG_1144_tlnkDw9.2e16d0ba.fill-300x250.jpg",
+                  "fullUrl": "https://assets.spaceappschallenge.org/media/images/IMG_1144_tlnkDw9.2e16d0ba.fill-300x250.jpg",
                   "height": 250,
                   "width": 300,
                   "__typename": "BaseImage"
@@ -1537,21 +1537,21 @@
               "description": null,
               "desiredSkills": null,
               "languages": null,
-              "challenge": "aWQ6MzEzMTk=",
+              "challenge": "aWQ6MzEzMjM=",
               "challengeDetails": {
-                "id": "aWQ6MzEzMTk=",
-                "title": "Animation Celebration of Terra Data!",
+                "id": "aWQ6MzEzMjM=",
+                "title": "Stellar Stories: Space Weather Through the Eyes of Earthlings",
                 "meta": {
                   "type": "CHALLENGE",
-                  "slug": "animation-celebration-of-terra-data",
-                  "firstPublishedAt": "2025-08-18T19:28:39.453909Z",
-                  "lastPublishedAt": "2025-09-16T14:38:03.167658Z",
-                  "relativeUrl": "/2025/challenges/animation-celebration-of-terra-data/",
+                  "slug": "stellar-stories-space-weather-through-the-eyes-of-earthlings",
+                  "firstPublishedAt": "2025-08-18T19:28:39.841345Z",
+                  "lastPublishedAt": "2025-09-16T14:03:27.795474Z",
+                  "relativeUrl": "/2025/challenges/stellar-stories-space-weather-through-the-eyes-of-earthlings/",
                   "live": true,
                   "parent": null,
                   "__typename": "ExpandedPageMeta"
                 },
-                "excerpt": "NASA’s oldest daily Earth-viewing satellite – Terra – just turned 25 years old, and with five continuously operating instruments onboard (most taking imagery at the same time), Terra has piled up a LOT of data over the years (over 9,000 days and counting!). This data has the potential to shed light on everything from scientific processes to unique events, all while helping solve problems that affect humans. Your challenge is to use data from any or all of Terra’s five instruments to create an animated product showcasing an Earth science story and emphasizing the impacts to you, your community, and/or the environment. (Earth Science Division)",
+                "excerpt": "Although the Sun is 93 million miles away from our planet, solar activity can significantly impact our daily lives. “Space weather”—the variations that occur in the space environment between the Sun and Earth—can impact technologies in space and on Earth. Your challenge is to write and illustrate a digital children’s story that explains what space weather is and the varying impacts it has on different people such as farmers, pilots, astronauts, power grid operators, and the general public. You can tell the story from the perspective of a person impacted by space weather or from the point of view of a solar flare or coronal mass ejection (CME) as it approaches Earth. (Heliophysics Division)",
                 "__typename": "ChallengePage"
               },
               "location": "aWQ6MzA2NjM=",
@@ -2545,7 +2545,7 @@
                 "dataReferences": "",
                 "projectReferences": "",
                 "isSubmitted": false,
-                "savedAt": null,
+                "savedAt": "2025-10-04T22:53:53.904346Z",
                 "submittedAt": null,
                 "__typename": "Project"
               },
@@ -3211,7 +3211,7 @@
                 "type": "TEAM",
                 "slug": "c0ffee",
                 "firstPublishedAt": "2025-10-04T01:02:30.957000Z",
-                "lastPublishedAt": "2025-10-04T02:50:28.503867Z",
+                "lastPublishedAt": "2025-10-05T00:34:30.300408Z",
                 "relativeUrl": "/2025/find-a-team/c0ffee/",
                 "live": true,
                 "parent": null,
@@ -4690,7 +4690,7 @@
                 "dataReferences": "",
                 "projectReferences": "",
                 "isSubmitted": false,
-                "savedAt": "2025-10-04T20:54:44.038515Z",
+                "savedAt": "2025-10-04T21:06:22.627077Z",
                 "submittedAt": null,
                 "__typename": "Project"
               },
@@ -5358,7 +5358,7 @@
                 "type": "TEAM",
                 "slug": "datalab",
                 "firstPublishedAt": "2025-09-07T16:05:04.061000Z",
-                "lastPublishedAt": "2025-09-25T12:29:07.785021Z",
+                "lastPublishedAt": "2025-10-05T02:38:19.411873Z",
                 "relativeUrl": "/2025/find-a-team/datalab/",
                 "live": true,
                 "parent": null,
@@ -6382,6 +6382,103 @@
             "cursor": "b2Zmc2V0OjYz",
             "node": {
               "__typename": "TeamPage",
+              "id": "aWQ6NTI0OTg=",
+              "title": "FarmFlux",
+              "meta": {
+                "type": "TEAM",
+                "slug": "agroalert",
+                "firstPublishedAt": "2025-10-05T02:17:51.931000Z",
+                "lastPublishedAt": "2025-10-05T02:20:16.758571Z",
+                "relativeUrl": "/2025/find-a-team/agroalert/",
+                "live": true,
+                "parent": null,
+                "__typename": "ExpandedPageMeta"
+              },
+              "owner": "aWQ6NDc1NTIz",
+              "ownerDetails": null,
+              "excerpt": "Somos a equipe FarmFlux, desenvolvendo um jogo educacional baseado em dados da NASA para o desafio \"Farm Navigators\".\nNosso projeto é um simulador agrícola onde jogadores tomam decisões em tempo real sobre irrigação, fertilização e manejo de terra...",
+              "project": "aWQ6NTAzMDI=",
+              "projectDetails": {
+                "id": "aWQ6NTAzMDI=",
+                "name": "Project AgroAlert",
+                "summary": "",
+                "demoLink": "",
+                "projectLink": "",
+                "details": "",
+                "solution": "",
+                "aiReferences": "",
+                "dataReferences": "",
+                "projectReferences": "",
+                "isSubmitted": false,
+                "savedAt": "2025-10-05T02:41:12.704892Z",
+                "submittedAt": null,
+                "__typename": "Project"
+              },
+              "projectSubmitted": false,
+              "featuredImage": null,
+              "description": null,
+              "desiredSkills": [
+                "Agriculture",
+                "Artificial Intelligence & Machine Learning",
+                "Business & Economics",
+                "Coding",
+                "Data Analysis",
+                "Data Management",
+                "Statistics",
+                "Web Development"
+              ],
+              "languages": [
+                "English",
+                "Portuguese"
+              ],
+              "challenge": "aWQ6MzEzMjc=",
+              "challengeDetails": {
+                "id": "aWQ6MzEzMjc=",
+                "title": "NASA Farm Navigators: Using NASA Data Exploration in Agriculture",
+                "meta": {
+                  "type": "CHALLENGE",
+                  "slug": "nasa-farm-navigators-using-nasa-data-exploration-in-agriculture",
+                  "firstPublishedAt": "2025-08-18T19:28:40.206949Z",
+                  "lastPublishedAt": "2025-09-16T15:30:20.113869Z",
+                  "relativeUrl": "/2025/challenges/nasa-farm-navigators-using-nasa-data-exploration-in-agriculture/",
+                  "live": true,
+                  "parent": null,
+                  "__typename": "ExpandedPageMeta"
+                },
+                "excerpt": "The agriculture community faces the challenge of integrating technology and data to enhance sustainable farming practices. Simulating key farming activities like fertilizing, irrigating, and livestock management using real-world NASA satellite imagery and climate data can enable better understanding of the impacts of these variables on crop production. Your challenge is to create an engaging educational game that effectively utilizes NASA’s open data sets to simulate farming scenarios and enables players to learn how this data can inform innovative, sustainable, agricultural methods. (Earth Science Division)",
+                "__typename": "ChallengePage"
+              },
+              "location": "aWQ6MzA2NjM=",
+              "locationDetails": {
+                "id": "aWQ6MzA2NjM=",
+                "title": "Uberlandia",
+                "displayName": "Uberlândia",
+                "meta": {
+                  "type": "LOCATION",
+                  "slug": "uberlandia",
+                  "firstPublishedAt": "2025-07-18T21:43:56.560298Z",
+                  "lastPublishedAt": "2025-08-22T19:13:44.047613Z",
+                  "relativeUrl": "/2025/local-events/uberlandia/",
+                  "live": true,
+                  "parent": null,
+                  "__typename": "ExpandedPageMeta"
+                },
+                "country": "Brazil",
+                "__typename": "LocationPage"
+              },
+              "event": "aWQ6Mw==",
+              "eventDetails": null,
+              "joinEnabled": true,
+              "memberships": null,
+              "nominationBadges": null,
+              "awardBadges": null
+            }
+          },
+          {
+            "__typename": "TeamPageEdge",
+            "cursor": "b2Zmc2V0OjY0",
+            "node": {
+              "__typename": "TeamPage",
               "id": "aWQ6MzE2NzI=",
               "title": "Finstream",
               "meta": {
@@ -6483,7 +6580,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjY0",
+            "cursor": "b2Zmc2V0OjY1",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6NDM1NDg=",
@@ -6568,7 +6665,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjY1",
+            "cursor": "b2Zmc2V0OjY2",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6NDk4MDQ=",
@@ -6672,7 +6769,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjY2",
+            "cursor": "b2Zmc2V0OjY3",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6NDM3OTQ=",
@@ -6776,7 +6873,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjY3",
+            "cursor": "b2Zmc2V0OjY4",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6MzU3Njk=",
@@ -6880,7 +6977,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjY4",
+            "cursor": "b2Zmc2V0OjY5",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6MzY0MDE=",
@@ -6965,7 +7062,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjY5",
+            "cursor": "b2Zmc2V0Ojcw",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6NDM2Nzc=",
@@ -7069,7 +7166,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0Ojcw",
+            "cursor": "b2Zmc2V0Ojcx",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6MzQ4NTU=",
@@ -7157,7 +7254,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0Ojcx",
+            "cursor": "b2Zmc2V0Ojcy",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6MzY0MzU=",
@@ -7261,7 +7358,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0Ojcy",
+            "cursor": "b2Zmc2V0Ojcz",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6MzIwMzc=",
@@ -7365,7 +7462,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0Ojcz",
+            "cursor": "b2Zmc2V0Ojc0",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6NDc4NDg=",
@@ -7386,7 +7483,7 @@
               "project": "aWQ6NDU2NTI=",
               "projectDetails": {
                 "id": "aWQ6NDU2NTI=",
-                "name": "Project GEPITronautas",
+                "name": "App FAHRENHurbs",
                 "summary": "",
                 "demoLink": "",
                 "projectLink": "",
@@ -7396,7 +7493,7 @@
                 "dataReferences": "",
                 "projectReferences": "",
                 "isSubmitted": false,
-                "savedAt": null,
+                "savedAt": "2025-10-04T22:51:18.489635Z",
                 "submittedAt": null,
                 "__typename": "Project"
               },
@@ -7469,7 +7566,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0Ojc0",
+            "cursor": "b2Zmc2V0Ojc1",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6NTAwNDg=",
@@ -7554,7 +7651,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0Ojc1",
+            "cursor": "b2Zmc2V0Ojc2",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6NDU0MzI=",
@@ -7658,7 +7755,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0Ojc2",
+            "cursor": "b2Zmc2V0Ojc3",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6MzMyOTM=",
@@ -7743,7 +7840,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0Ojc3",
+            "cursor": "b2Zmc2V0Ojc4",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6MzgxMTc=",
@@ -7847,7 +7944,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0Ojc4",
+            "cursor": "b2Zmc2V0Ojc5",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6MzQ3MDI=",
@@ -7951,7 +8048,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0Ojc5",
+            "cursor": "b2Zmc2V0Ojgw",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6MzIyNjI=",
@@ -8055,7 +8152,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0Ojgw",
+            "cursor": "b2Zmc2V0Ojgx",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6NDExOTA=",
@@ -8167,7 +8264,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0Ojgx",
+            "cursor": "b2Zmc2V0Ojgy",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6MzgwNzY=",
@@ -8252,7 +8349,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0Ojgy",
+            "cursor": "b2Zmc2V0Ojgz",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6NDQ3MTU=",
@@ -8367,7 +8464,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0Ojgz",
+            "cursor": "b2Zmc2V0Ojg0",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6NDc1NTQ=",
@@ -8471,7 +8568,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0Ojg0",
+            "cursor": "b2Zmc2V0Ojg1",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6NDA0NTY=",
@@ -8575,7 +8672,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0Ojg1",
+            "cursor": "b2Zmc2V0Ojg2",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6NDg3NTI=",
@@ -8679,7 +8776,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0Ojg2",
+            "cursor": "b2Zmc2V0Ojg3",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6MzE2ODA=",
@@ -8797,7 +8894,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0Ojg3",
+            "cursor": "b2Zmc2V0Ojg4",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6MzQ5MDk=",
@@ -8901,7 +8998,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0Ojg4",
+            "cursor": "b2Zmc2V0Ojg5",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6MzI4ODQ=",
@@ -8986,7 +9083,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0Ojg5",
+            "cursor": "b2Zmc2V0Ojkw",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6MzM4ODg=",
@@ -9071,7 +9168,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0Ojkw",
+            "cursor": "b2Zmc2V0Ojkx",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6MzYyMzQ=",
@@ -9186,7 +9283,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0Ojkx",
+            "cursor": "b2Zmc2V0Ojky",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6NDY4Nzg=",
@@ -9271,7 +9368,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0Ojky",
+            "cursor": "b2Zmc2V0Ojkz",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6MzMwNDQ=",
@@ -9356,7 +9453,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0Ojkz",
+            "cursor": "b2Zmc2V0Ojk0",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6NDg2ODI=",
@@ -9441,7 +9538,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0Ojk0",
+            "cursor": "b2Zmc2V0Ojk1",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6MzE1MjA=",
@@ -9526,7 +9623,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0Ojk1",
+            "cursor": "b2Zmc2V0Ojk2",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6MzI2NDg=",
@@ -9535,7 +9632,7 @@
                 "type": "TEAM",
                 "slug": "mindorbit",
                 "firstPublishedAt": "2025-08-25T17:56:25.215000Z",
-                "lastPublishedAt": "2025-10-04T02:00:58.964772Z",
+                "lastPublishedAt": "2025-10-05T00:38:32.894073Z",
                 "relativeUrl": "/2025/find-a-team/mindorbit/",
                 "live": true,
                 "parent": null,
@@ -9630,7 +9727,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0Ojk2",
+            "cursor": "b2Zmc2V0Ojk3",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6NDY3NjY=",
@@ -9715,7 +9812,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0Ojk3",
+            "cursor": "b2Zmc2V0Ojk4",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6NDk4MjM=",
@@ -9800,7 +9897,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0Ojk4",
+            "cursor": "b2Zmc2V0Ojk5",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6MzYzMjQ=",
@@ -9885,7 +9982,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0Ojk5",
+            "cursor": "b2Zmc2V0OjEwMA==",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6NDEyMzE=",
@@ -9989,7 +10086,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjEwMA==",
+            "cursor": "b2Zmc2V0OjEwMQ==",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6NDk4OTE=",
@@ -9998,7 +10095,7 @@
                 "type": "TEAM",
                 "slug": "nasalturas",
                 "firstPublishedAt": "2025-10-04T00:08:53.035000Z",
-                "lastPublishedAt": "2025-10-04T00:36:16.388663Z",
+                "lastPublishedAt": "2025-10-04T21:05:32.350734Z",
                 "relativeUrl": "/2025/find-a-team/nasalturas/",
                 "live": true,
                 "parent": null,
@@ -10093,7 +10190,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjEwMQ==",
+            "cursor": "b2Zmc2V0OjEwMg==",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6Mzg4ODg=",
@@ -10178,7 +10275,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjEwMg==",
+            "cursor": "b2Zmc2V0OjEwMw==",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6MzYwMTU=",
@@ -10187,7 +10284,7 @@
                 "type": "TEAM",
                 "slug": "nexonull",
                 "firstPublishedAt": "2025-09-11T00:26:52.449000Z",
-                "lastPublishedAt": "2025-10-04T20:32:05.100726Z",
+                "lastPublishedAt": "2025-10-04T21:38:12.265299Z",
                 "relativeUrl": "/2025/find-a-team/nexonull/",
                 "live": true,
                 "parent": null,
@@ -10199,21 +10296,21 @@
               "project": "aWQ6MzM4Mjk=",
               "projectDetails": {
                 "id": "aWQ6MzM4Mjk=",
-                "name": "Project Nexonull",
-                "summary": "",
-                "demoLink": "",
-                "projectLink": "",
-                "details": "",
+                "name": "The Day the Sun Messed with Everything.",
+                "summary": "Our project, “The Day the Sun Messed with Everything,” is an educational illustrated story designed to explain the effects of solar activity on everyday life in a simple and engaging way. We developed a narrative that follows different characters — a farmer, a pilot, an astronaut, an engineer, and a child — all experiencing the impacts of a solar storm from their unique perspectives.\n\nThe project addresses the challenge of making complex scientific phenomena, like solar flares and geomagnetic storms, accessible to children and the general public. By connecting these events to relatable daily situations, readers can better understand how solar energy influences technology, communication, and life on Earth.\n\nThis is important because increasing awareness of space weather helps people appreciate the Sun’s power and the importance of science in predicting and protecting our planet from its effects.",
+                "demoLink": "https://drive.google.com/drive/folders/1oFOhd3O-0_-7ucbgfFKSdQlNlHrL1TbD?usp=drive_link",
+                "projectLink": "https://drive.google.com/drive/folders/1oFOhd3O-0_-7ucbgfFKSdQlNlHrL1TbD?usp=drive_link",
+                "details": "<p dir=\"ltr\"><span style=\"white-space: pre-wrap;\">Our project, </span><i><em style=\"white-space: pre-wrap;\">“The Day the Sun Messed with Everything,”</em></i><span style=\"white-space: pre-wrap;\"> is an interactive educational story that demonstrates how solar activity can affect life on Earth. It works by combining storytelling, visual illustrations, and science communication to explain complex phenomena — such as solar flares, magnetic storms, and their effects on satellites, communication systems, and power grids — in a way that is accessible to all ages, especially children.</span></p><p dir=\"ltr\"><span style=\"white-space: pre-wrap;\">The main benefit of this project is its ability to transform scientific knowledge into an engaging learning experience. Readers gain awareness of the importance of solar observation and space weather research, while also developing curiosity about science, technology, and environmental awareness.</span></p><p dir=\"ltr\"><span style=\"white-space: pre-wrap;\">The intended impact is to promote scientific literacy and help communities understand how solar energy influences everyday technologies — from airplanes and electricity to GPS and internet systems.</span></p><p dir=\"ltr\"><span style=\"white-space: pre-wrap;\">We developed the project using </span><b><strong style=\"white-space: pre-wrap;\">Canva</strong></b><span style=\"white-space: pre-wrap;\"> for graphic design. The creativity lies in the fusion of storytelling and real-world science — turning a potential global issue into an inspiring, easy-to-understand narrative.</span></p><p dir=\"ltr\"><span style=\"white-space: pre-wrap;\">Our team considered clarity, age-appropriate language, cultural inclusivity, and scientific accuracy to ensure the story educates, entertains, and empowers readers to appreciate the Sun’s vital role in our lives.</span></p>",
                 "solution": "",
-                "aiReferences": "",
-                "dataReferences": "",
+                "aiReferences": "<p dir=\"ltr\"><span style=\"white-space: pre-wrap;\">- Images</span></p><p dir=\"ltr\"><span style=\"white-space: pre-wrap;\">- Story-boarding</span></p>",
+                "dataReferences": "[Space Weather](https://science.nasa.gov/heliophysics/focus-areas/space-weather/)",
                 "projectReferences": "",
-                "isSubmitted": false,
-                "savedAt": null,
-                "submittedAt": null,
+                "isSubmitted": true,
+                "savedAt": "2025-10-04T21:36:20.792238Z",
+                "submittedAt": "2025-10-04T21:36:20.792238Z",
                 "__typename": "Project"
               },
-              "projectSubmitted": false,
+              "projectSubmitted": true,
               "featuredImage": {
                 "id": "aWQ6Mjk5NDU3",
                 "meta": {
@@ -10282,7 +10379,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjEwMw==",
+            "cursor": "b2Zmc2V0OjEwNA==",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6NDkxOTQ=",
@@ -10367,7 +10464,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjEwNA==",
+            "cursor": "b2Zmc2V0OjEwNQ==",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6NDE4NTc=",
@@ -10471,7 +10568,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjEwNQ==",
+            "cursor": "b2Zmc2V0OjEwNg==",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6NDU1OTM=",
@@ -10575,7 +10672,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjEwNg==",
+            "cursor": "b2Zmc2V0OjEwNw==",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6MzUyMjU=",
@@ -10660,7 +10757,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjEwNw==",
+            "cursor": "b2Zmc2V0OjEwOA==",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6NDAwMzA=",
@@ -10745,7 +10842,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjEwOA==",
+            "cursor": "b2Zmc2V0OjEwOQ==",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6MzYxODA=",
@@ -10849,7 +10946,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjEwOQ==",
+            "cursor": "b2Zmc2V0OjExMA==",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6NDI3MTI=",
@@ -10934,7 +11031,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjExMA==",
+            "cursor": "b2Zmc2V0OjExMQ==",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6MzcxNTI=",
@@ -11019,7 +11116,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjExMQ==",
+            "cursor": "b2Zmc2V0OjExMg==",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6MzM1MjA=",
@@ -11142,7 +11239,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjExMg==",
+            "cursor": "b2Zmc2V0OjExMw==",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6NDY4MTA=",
@@ -11246,7 +11343,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjExMw==",
+            "cursor": "b2Zmc2V0OjExNA==",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6NDU3NDg=",
@@ -11350,7 +11447,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjExNA==",
+            "cursor": "b2Zmc2V0OjExNQ==",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6NDI2NjI=",
@@ -11454,7 +11551,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjExNQ==",
+            "cursor": "b2Zmc2V0OjExNg==",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6NTIxNzA=",
@@ -11539,7 +11636,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjExNg==",
+            "cursor": "b2Zmc2V0OjExNw==",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6MzU5MzY=",
@@ -11643,7 +11740,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjExNw==",
+            "cursor": "b2Zmc2V0OjExOA==",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6MzE1MDU=",
@@ -11750,7 +11847,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjExOA==",
+            "cursor": "b2Zmc2V0OjExOQ==",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6MzQ3Mzc=",
@@ -11854,7 +11951,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjExOQ==",
+            "cursor": "b2Zmc2V0OjEyMA==",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6MzI3MjA=",
@@ -11958,7 +12055,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjEyMA==",
+            "cursor": "b2Zmc2V0OjEyMQ==",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6MzM2Mzg=",
@@ -12043,7 +12140,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjEyMQ==",
+            "cursor": "b2Zmc2V0OjEyMg==",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6NDI0ODE=",
@@ -12147,7 +12244,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjEyMg==",
+            "cursor": "b2Zmc2V0OjEyMw==",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6NTEzNTM=",
@@ -12232,7 +12329,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjEyMw==",
+            "cursor": "b2Zmc2V0OjEyNA==",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6NDQ3MDM=",
@@ -12336,7 +12433,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjEyNA==",
+            "cursor": "b2Zmc2V0OjEyNQ==",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6MzM2MzM=",
@@ -12421,7 +12518,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjEyNQ==",
+            "cursor": "b2Zmc2V0OjEyNg==",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6Mzg0ODQ=",
@@ -12506,7 +12603,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjEyNg==",
+            "cursor": "b2Zmc2V0OjEyNw==",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6NDI3MjU=",
@@ -12537,7 +12634,7 @@
                 "dataReferences": "",
                 "projectReferences": "",
                 "isSubmitted": false,
-                "savedAt": null,
+                "savedAt": "2025-10-04T21:04:06.679298Z",
                 "submittedAt": null,
                 "__typename": "Project"
               },
@@ -12621,7 +12718,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjEyNw==",
+            "cursor": "b2Zmc2V0OjEyOA==",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6NDIwMDY=",
@@ -12725,7 +12822,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjEyOA==",
+            "cursor": "b2Zmc2V0OjEyOQ==",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6NTA2OTE=",
@@ -12829,7 +12926,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjEyOQ==",
+            "cursor": "b2Zmc2V0OjEzMA==",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6NDk1OTQ=",
@@ -12933,7 +13030,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjEzMA==",
+            "cursor": "b2Zmc2V0OjEzMQ==",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6NDA3MjI=",
@@ -13037,7 +13134,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjEzMQ==",
+            "cursor": "b2Zmc2V0OjEzMg==",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6MzIwMTc=",
@@ -13122,7 +13219,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjEzMg==",
+            "cursor": "b2Zmc2V0OjEzMw==",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6NDU3MTc=",
@@ -13229,7 +13326,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjEzMw==",
+            "cursor": "b2Zmc2V0OjEzNA==",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6NDk5Njc=",
@@ -13333,7 +13430,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjEzNA==",
+            "cursor": "b2Zmc2V0OjEzNQ==",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6MzI2MDc=",
@@ -13437,7 +13534,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjEzNQ==",
+            "cursor": "b2Zmc2V0OjEzNg==",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6MzgyNzg=",
@@ -13522,7 +13619,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjEzNg==",
+            "cursor": "b2Zmc2V0OjEzNw==",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6MzkwMzM=",
@@ -13626,7 +13723,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjEzNw==",
+            "cursor": "b2Zmc2V0OjEzOA==",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6MzE1NzI=",
@@ -13730,7 +13827,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjEzOA==",
+            "cursor": "b2Zmc2V0OjEzOQ==",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6MzI2MzE=",
@@ -13845,7 +13942,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjEzOQ==",
+            "cursor": "b2Zmc2V0OjE0MA==",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6NDE4NTY=",
@@ -13949,7 +14046,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjE0MA==",
+            "cursor": "b2Zmc2V0OjE0MQ==",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6NDE1OTQ=",
@@ -14053,7 +14150,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjE0MQ==",
+            "cursor": "b2Zmc2V0OjE0Mg==",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6NDM3MDg=",
@@ -14138,7 +14235,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjE0Mg==",
+            "cursor": "b2Zmc2V0OjE0Mw==",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6MzQ1MTc=",
@@ -14257,7 +14354,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjE0Mw==",
+            "cursor": "b2Zmc2V0OjE0NA==",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6MzM0OTg=",
@@ -14361,7 +14458,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjE0NA==",
+            "cursor": "b2Zmc2V0OjE0NQ==",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6MzMwNjA=",
@@ -14465,7 +14562,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjE0NQ==",
+            "cursor": "b2Zmc2V0OjE0Ng==",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6MzM4MTM=",
@@ -14569,7 +14666,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjE0Ng==",
+            "cursor": "b2Zmc2V0OjE0Nw==",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6NDQ3Njc=",
@@ -14590,17 +14687,17 @@
               "project": "aWQ6NDI1NzU=",
               "projectDetails": {
                 "id": "aWQ6NDI1NzU=",
-                "name": "Project Name: UrbanMinds",
+                "name": "UrbanMinds",
                 "summary": "We created a website that recommends the best sustainable urban development methods for the user’s selected location. The platform focuses on enhancing residents’ quality of life while supporting a fast and sustainable city growth. It is important because sustainable urban development is one of the most pressing issues today, since most urban areas worldwide lack an ecologically sound growth, which is vital for improving people's quality of life and other essential aspects.",
                 "demoLink": "",
                 "projectLink": "",
-                "details": "<p dir=\"ltr\"><span style=\"white-space: pre-wrap;\">We created a website that features a map integrating NASA Earth Science data to recommend the best sustainable urban development methods for the user’s selected location (currently limited to a few cities). The platform focuses on enhancing residents’ quality of life while supporting fast and sustainable city growth. We intend to bring benefits in people's quality of life and urbanization, since it can help with usefull information about pollution,  helping the development of cities without destroying nature. We used NASA Worldview, NASA GIBS (Global Imagery Browse Services), OpenStreetMap, Web Map Service (WMS), Canva, Visual Studio Code, Google Docs, Vercel. The coding languages used are JavaScript, HTML, CSS and Python, and Artificial Intelligences were used to assist the coding. </span></p>",
+                "details": "<p><span style=\"white-space: pre-wrap;\">We created a website that features a map integrating NASA Earth Science data to recommend the best sustainable urban development methods for the user’s selected location (currently limited to a few cities). The platform focuses on enhancing residents’ quality of life while supporting fast and sustainable city growth. We intend to bring benefits in people's quality of life and urbanization, since it can help with usefull information about pollution,  helping the development of cities without destroying nature. We used NASA Worldview, NASA GIBS (Global Imagery Browse Services), OpenStreetMap, Web Map Service (WMS), Canva, Visual Studio Code, Google Docs, Vercel. The coding languages used are JavaScript, HTML, CSS and Python, and Artificial Intelligences were used to assist the coding.  Our project is innovative as it provides practical and dynamic solutions, addressing complex issues related to urban infrastructure. This approach enables citizens to actively participate in identifying problems and to request that the appropriate authorities implement effective solutions.</span></p><p><span style=\"white-space: pre-wrap;\">The interactive map, in conjunction with our artificial intelligence, Aurora, facilitates interaction between citizens and the city. This is an interactive website focused on solving social issues, where users can influence local challenges, while solutions are generated by a proprietary artificial intelligence system.</span></p><p><span style=\"white-space: pre-wrap;\">Our team primarily focused on practicality in problem-solving, as well as on the ease of use and integration of user-provided information into the interactive map. Our starting point was the need to establish a connection between governmental action and individual engagement, with the goal of building more structured and sustainable urban spaces.</span><br/><br/><span style=\"white-space: pre-wrap;\">How it works (detailed):</span></p>",
                 "solution": "",
-                "aiReferences": "<p dir=\"ltr\"><span style=\"white-space: pre-wrap;\">We used AIs to various purposes, including research, writing improvement and to assist our AI coding and website coding (Gemini, Grok and ChatGPT).</span></p>",
+                "aiReferences": "<p><span style=\"white-space: pre-wrap;\">We used AIs to various purposes, including research, writing improvement and to assist our AI coding and website coding (Gemini, Grok and ChatGPT).</span></p>",
                 "dataReferences": "[NASA Worldview](https://worldview.earthdata.nasa.gov/)\n[NASA GIBS](https://www.earthdata.nasa.gov/engage/open-data-services-software/earthdata-developer-portal/gibs-api)",
                 "projectReferences": "[WMS (Web Map Service)](https://www.ogc.org/standards/wms/)\n[OpenStreetMap](https://www.openstreetmap.org/)\n[Vercel](https://vercel.com/)\n[Canva](https://canva.com)\n[Grok](https://grok.com/)\n[Wikipedia](https://en.wikipedia.org/wiki/Main_Page)\n[ChatGPT](https://chatgpt.com/)\n[Google Gemini](https://gemini.google.com/)\n[Google Docs](https://docs.google.com/)\n[GitHub](https://github.com/)",
                 "isSubmitted": false,
-                "savedAt": "2025-10-04T21:00:41.744013Z",
+                "savedAt": "2025-10-05T01:21:58.115648Z",
                 "submittedAt": null,
                 "__typename": "Project"
               },
@@ -14673,7 +14770,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjE0Nw==",
+            "cursor": "b2Zmc2V0OjE0OA==",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6NDQ4MTI=",
@@ -14793,7 +14890,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjE0OA==",
+            "cursor": "b2Zmc2V0OjE0OQ==",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6NTAwNTU=",
@@ -14897,7 +14994,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjE0OQ==",
+            "cursor": "b2Zmc2V0OjE1MA==",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6MzkwNDE=",
@@ -15001,7 +15098,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjE1MA==",
+            "cursor": "b2Zmc2V0OjE1MQ==",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6NDA2ODg=",
@@ -15105,7 +15202,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjE1MQ==",
+            "cursor": "b2Zmc2V0OjE1Mg==",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6MzQyNTk=",
@@ -15227,7 +15324,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjE1Mg==",
+            "cursor": "b2Zmc2V0OjE1Mw==",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6NDk4MjU=",
@@ -15331,7 +15428,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjE1Mw==",
+            "cursor": "b2Zmc2V0OjE1NA==",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6NDk1ODA=",
@@ -15416,7 +15513,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjE1NA==",
+            "cursor": "b2Zmc2V0OjE1NQ==",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6NDUxNjA=",
@@ -15534,7 +15631,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjE1NQ==",
+            "cursor": "b2Zmc2V0OjE1Ng==",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6NDk4OTY=",
@@ -15555,17 +15652,17 @@
               "project": "aWQ6NDc3MDA=",
               "projectDetails": {
                 "id": "aWQ6NDc3MDA=",
-                "name": "Project xbesta 67",
+                "name": "Project Solarius",
                 "summary": "",
                 "demoLink": "",
                 "projectLink": "",
                 "details": "",
                 "solution": "",
                 "aiReferences": "",
-                "dataReferences": "",
-                "projectReferences": "",
+                "dataReferences": "[Space Weather](https://science.nasa.gov/heliophysics/focus-areas/space-weather/)\n[Human Activity Impacted Space Weather](https://svs.gsfc.nasa.gov/12593/)\n[How Solar Flares Affect Earth](https://svs.gsfc.nasa.gov/12640/)\n[Space Weather Vocabulary](https://svs.gsfc.nasa.gov/11179/)\n[X-Class: A Guide to Solar Flares](https://www.youtube.com/watch?v=oOXVZo7KikE)\n[NASA | Scientists Answer Top Space Weather Questions, Part I & 2](https://svs.gsfc.nasa.gov/10959/)",
+                "projectReferences": "[Space Weather Canada](https://www.spaceweather.gc.ca/index-en.php)",
                 "isSubmitted": false,
-                "savedAt": null,
+                "savedAt": "2025-10-05T00:13:18.236707Z",
                 "submittedAt": null,
                 "__typename": "Project"
               },
@@ -15638,7 +15735,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjE1Ng==",
+            "cursor": "b2Zmc2V0OjE1Nw==",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6NDQ3MDk=",
@@ -15742,7 +15839,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjE1Nw==",
+            "cursor": "b2Zmc2V0OjE1OA==",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6MzMyNDM=",
