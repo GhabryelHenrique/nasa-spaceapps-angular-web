@@ -143,8 +143,17 @@ export class TeamsComponent implements OnInit {
     if (this.selectedSubmissionStatus === 'submitted') {
       return 'Projeto submetido';
     } else if (this.selectedSubmissionStatus === 'not-submitted') {
-      return 'Em desenvolvimento';
+      return 'Projeto não submetido';
     }
     return '';
+  }
+
+  getTotalCountLabel(): string {
+    if (this.selectedSubmissionStatus === 'submitted') {
+      return this.teams.filter(team => team.projectSubmitted).length.toString();
+    } else if (this.selectedSubmissionStatus === 'not-submitted') {
+      return this.teams.filter(team => !team.projectSubmitted).length.toString();
+    }
+    return this.totalCount.toString();
   }
 }

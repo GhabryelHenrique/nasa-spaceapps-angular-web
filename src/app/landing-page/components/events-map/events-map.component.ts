@@ -35,39 +35,39 @@ eventLocations: EventLocation[] = [
   },
   {
     position: { lat: -18.922471, lng: -48.293954 },
-    title: 'Sankhya Predio 1',
+    title: 'Sankhya',
     info: 'Local preparado para receber pessoas.'
   },
-  {
-    position: { lat: -18.922250, lng: -48.294392 },
-    title: 'Sankhya Prédio 2',
-    info: 'Local preparado para receber pessoas.'
-  },
-  {
-    position: { lat: -18.929200, lng: -48.268100 },
-    title: 'CREA / Secretaria da Juventude',
-    info: 'Apoio a workshops e mentorias técnicas.'
-  },
+  // {
+  //   position: { lat: -18.922250, lng: -48.294392 },
+  //   title: 'Sankhya Prédio 2',
+  //   info: 'Local preparado para receber pessoas.'
+  // },
+  // {
+  //   position: { lat: -18.929200, lng: -48.268100 },
+  //   title: 'CREA / Secretaria da Juventude',
+  //   info: 'Apoio a workshops e mentorias técnicas.'
+  // },
   {
     position: { lat: -18.924301, lng: -48.232747 },
     title: 'Asa Coworking',
     info: 'Espaço colaborativo voltado para imersão em projetos e networking entre equipes.'
   },
-  {
-    position: { lat: -18.879712, lng: -48.246336 },
-    title: 'Brain',
-    info: 'Espaço de apoio foco em criatividade, design e inovação aplicada aos desafios do hackathon.'
-  },
-  {
-    position: { lat: -18.909529, lng: -48.248573 },
-    title: 'MTI',
-    info: 'Polo de capacitação de mentores do NASA Space Apps Challenge Uberlândia. Atividades de preparação e apoio.'
-  },
-  {
-    position: { lat: -18.931272, lng: -48.290163 },
-    title: 'Colégio Nacional',
-    info: 'Espaço voltado para os alunos do Colégio Nacional. Atividades internas relacionadas ao hackathon e desafios.'
-  },
+  // {
+  //   position: { lat: -18.879712, lng: -48.246336 },
+  //   title: 'Brain',
+  //   info: 'Espaço de apoio foco em criatividade, design e inovação aplicada aos desafios do hackathon.'
+  // },
+  // {
+  //   position: { lat: -18.909529, lng: -48.248573 },
+  //   title: 'MTI',
+  //   info: 'Polo de capacitação de mentores do NASA Space Apps Challenge Uberlândia. Atividades de preparação e apoio.'
+  // },
+  // {
+  //   position: { lat: -18.931272, lng: -48.290163 },
+  //   title: 'Colégio Nacional',
+  //   info: 'Espaço voltado para os alunos do Colégio Nacional. Atividades internas relacionadas ao hackathon e desafios.'
+  // },
   // {
   //   position: { lat: -18.904775, lng: -48.277169 },
   //   title: 'Colégio Batista Mineiro',
@@ -78,11 +78,11 @@ eventLocations: EventLocation[] = [
     title: 'Colégio Ann Mackenzie',
     info: 'Espaço de apoio voltado para alunos do Mackenzie. Atividades internas relacionadas ao hackathon.'
   },
-  {
-    position: { lat: -18.940000, lng: -48.260000 },
-    title: 'Colégio Gabarito',
-    info: 'Espaço reservado para alunos do Gabarito. Atividades de aprendizado e oficinas conectadas ao Space Apps.'
-  },
+  // {
+  //   position: { lat: -18.940000, lng: -48.260000 },
+  //   title: 'Colégio Gabarito',
+  //   info: 'Espaço reservado para alunos do Gabarito. Atividades de aprendizado e oficinas conectadas ao Space Apps.'
+  // },
   // {
   //   position: { lat: -18.932000, lng: -48.278500 },
   //   title: 'Olimpo',

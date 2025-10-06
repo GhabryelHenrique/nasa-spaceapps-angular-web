@@ -10,6 +10,7 @@ import { ProfileCreateComponent } from './components/profile-create/profile-crea
 import { MatchesComponent } from './components/matches/matches.component';
 import { AuthGuard } from './guards/auth.guard';
 import { ChallengesComponent } from './challenges/challenges.component';
+import { ParticipantsComponent } from './participants/participants.component';
 
 export const routes: Routes = [
   { path: '', component: LandingPageComponent },
@@ -21,6 +22,7 @@ export const routes: Routes = [
   { path: 'times', component: TeamsComponent },
   { path: 'sala-de-guerra', component: WarRoomComponent },
   { path: 'matchmaking', component: MatchmakingDashboardComponent },
+  { path: 'participantes', component: ParticipantsComponent },
   { path: 'politica-privacidade', component: PrivacyPolicyComponent },
   { path: '**', redirectTo: '' }
 ];

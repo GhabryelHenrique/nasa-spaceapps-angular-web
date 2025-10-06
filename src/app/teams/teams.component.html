@@ -21,7 +21,7 @@
               </svg>
             </button>
           </div>
-          
+
           <!-- Challenge Filter -->
           <div class="filter-section">
             <select
@@ -45,7 +45,7 @@
               [disabled]="loading">
               <option value="">Todos os status</option>
               <option value="submitted">Projeto submetido</option>
-              <option value="not-submitted">Em desenvolvimento</option>
+              <option value="not-submitted">Projeto não submetido</option>
             </select>
           </div>
 
@@ -53,17 +53,17 @@
           <button
             class="clear-filters-btn"
             (click)="clearFilters()"
-            [disabled]="loading || (!selectedChallenge && !selectedSubmissionStatus && !searchQuery)"
-            *ngIf="selectedChallenge || selectedSubmissionStatus || searchQuery">
+            [disabled]="loading || (!selectedChallenge && !searchQuery)"
+            *ngIf="selectedChallenge || searchQuery">
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path d="M18 6L6 18M6 6L18 18" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
             </svg>
             Limpar filtros
           </button>
         </div>
-        
+
         <div class="teams-count" *ngIf="totalCount > 0">
-          {{ totalCount }} time{{ totalCount !== 1 ? 's' : '' }} encontrado{{ totalCount !== 1 ? 's' : '' }}
+          {{ getTotalCountLabel() }} time{{ totalCount !== 1 ? 's' : '' }} encontrado{{ totalCount !== 1 ? 's' : '' }}
           <span class="filter-info" *ngIf="selectedChallenge">
             • Desafio: <strong>{{ getSelectedChallengeTitle() }}</strong>
           </span>
@@ -171,9 +171,9 @@
                   <path d="M9 12L11 14L15 10M21 12C21 16.971 16.971 21 12 21S3 16.971 3 12 7.029 3 12 3 21 7.029 21 12Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                 </svg>
                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" *ngIf="!team.projectSubmitted">
-                  <path d="M12 6V12L16 14M22 12C22 17.523 17.523 22 12 22S2 17.523 2 12 6.477 2 12 2 22 6.477 22 12Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                  <path d="M12 9V13M12 17H12.01M21 12C21 16.971 16.971 21 12 21S3 16.971 3 12 7.029 3 12 3 21 7.029 21 12Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                 </svg>
-                <span>{{ team.projectSubmitted ? 'Projeto submetido' : 'Em desenvolvimento' }}</span>
+                <span>{{ team.projectSubmitted ? 'Projeto submetido' : 'Projeto não submetido' }}</span>
               </div>
             </div>
 

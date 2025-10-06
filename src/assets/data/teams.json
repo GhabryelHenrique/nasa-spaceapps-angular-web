@@ -6,10 +6,10 @@
           "hasPreviousPage": false,
           "hasNextPage": false,
           "startCursor": "b2Zmc2V0OjA=",
-          "endCursor": "b2Zmc2V0OjE2MA==",
+          "endCursor": "b2Zmc2V0OjE1OQ==",
           "__typename": "PageInfo"
         },
-        "totalCount": 161,
+        "totalCount": 160,
         "edges": [
           {
             "__typename": "TeamPageEdge",
@@ -3365,18 +3365,18 @@
               "project": "aWQ6NDc3Mzc=",
               "projectDetails": {
                 "id": "aWQ6NDc3Mzc=",
-                "name": "Project #C0ffee",
-                "summary": "\"This is important because more than 120 shark species are at serious risk of extinction. These species are crucial for maintaining the balance of marine life and the order of the food chain, as sharks help control the populations of animals that feed on phytoplankton, including the whale shark and the megamouth shark, which consume phytoplankton. The project is focused on shark protection and the conservation of these species.\"",
+                "name": "SharkFlow",
+                "summary": "This is important because more than 120 shark species are at serious risk of extinction. These species are crucial for maintaining the balance of marine life and the order of the food chain, as sharks help control the populations of animals that feed on phytoplankton, including the whale shark and the megamouth shark, which consume phytoplankton. The project is focused on shark protection and the conservation of these species.",
                 "demoLink": "https://prezi.com/view/D1rsqdQvMQ5qk1Td4ADQ/?referral_token-X3LXqMlnB3FN",
                 "projectLink": "https://github.com/NickBossz/sharks-flow",
-                "details": "<p><span style=\"white-space: pre-wrap;\">1.\"O modelo utiliza dados de SSH (altura da superfície do mar) e de concentração de clorofila — indicador da presença de fitoplâncton — para prever potenciais áreas de ocorrência de tubarões. A altura da superfície do mar reflete padrões de correntes e topografia oceânica, enquanto a clorofila aponta regiões com maior produtividade biológica, fornecendo alimento para a cadeia trófica que sustenta os tubarões.\"</span></p><p><span style=\"white-space: pre-wrap;\">2.</span></p><p><span style=\"white-space: pre-wrap;\">Preservação ambiental – Saber onde os tubarões estão ajuda a proteger ecossistemas marinhos sensíveis, já que esses animais são predadores-chave.</span></p><p><span style=\"white-space: pre-wrap;\">Gestão sustentável da pesca – Evita que áreas com tubarões sejam sobreexploradas, reduzindo impactos na cadeia alimentar.</span></p><p><span style=\"white-space: pre-wrap;\">Segurança humana – Permite identificar regiões de maior presença de tubarões, ajudando a prevenir acidentes com banhistas ou pescadores.</span></p><p><span style=\"white-space: pre-wrap;\">Monitoramento científico – Facilita estudos sobre padrões migratórios, comportamento e biodiversidade marinha.</span></p><p><span style=\"white-space: pre-wrap;\">Tomada de decisão baseada em dados – Governos e organizações ambientais podem planejar áreas de proteção e políticas de conservação de forma mais precisa.</span></p><p><span style=\"white-space: pre-wrap;\">3.  </span></p><p><span style=\"white-space: pre-wrap;\">O projeto pretende impactar a conservação marinha e a segurança humana, identificando potenciais habitats de tubarões por meio de dados de SSH e clorofila. Isso permite proteger ecossistemas sensíveis, orientar políticas de preservação, apoiar pesquisas sobre comportamento e migração de tubarões, reduzir riscos de acidentes em áreas de grande presença desses animais e combater a ameaça de extinção de várias espécies, identificando seus habitats críticos e permitindo ações de conservação mais eficazes.</span></p><p><span style=\"white-space: pre-wrap;\">4.  Utilizamos python para geração do mapa e tratamento de dados, coletamos dados da GBIF sobre ocorrência de tubarões para utilizar como treinamento do modelo de previsão, e utilizamos os dados dos três satélites da nasa, sendo eles, SWOT, MODIS e PACE</span></p><p><span style=\"white-space: pre-wrap;\">5.  O algoritimo é unico.</span></p><p><span style=\"white-space: pre-wrap;\">6. A temperatura, a concentração de clorofila, a altura da superfície da água, a longitude, a latitude e a data dos dados.</span></p>",
+                "details": "<p><span style=\"white-space: pre-wrap;\">1. The model uses SSH (sea surface height) data and chlorophyll concentration—an indicator of phytoplankton presence—to predict potential shark occurrence areas. Sea surface height reflects current patterns and ocean topography, while chlorophyll indicates regions with higher biological productivity, providing food for the food chain that sustains sharks.</span></p><p dir=\"ltr\"><span style=\"white-space: pre-wrap;\">2. Environmental preservation – Knowing where sharks are located helps protect sensitive marine ecosystems, as these animals are keystone predators.</span></p><p dir=\"ltr\"><span style=\"white-space: pre-wrap;\">Sustainable fisheries management – ​​Prevents shark areas from being overexploited, reducing impacts on the food chain.</span></p><p dir=\"ltr\"><span style=\"white-space: pre-wrap;\">Human safety – Allows for the identification of areas with higher shark presence, helping to prevent accidents with swimmers and fishermen.</span></p><p dir=\"ltr\"><span style=\"white-space: pre-wrap;\">Scientific monitoring – Facilitates studies on migratory patterns, behavior, and marine biodiversity.</span></p><p dir=\"ltr\"><span style=\"white-space: pre-wrap;\">Data-driven decision-making – Governments and environmental organizations can plan protected areas and conservation policies more accurately.</span></p><p dir=\"ltr\"><span style=\"white-space: pre-wrap;\">3. The project aims to impact marine conservation and human safety by identifying potential shark habitats through SSH and chlorophyll data. This allows us to protect sensitive ecosystems, guide conservation policies, support research on shark behavior and migration, reduce the risk of accidents in areas with a high presence of these animals, and combat the threat of extinction of several species by identifying their critical habitats and enabling more effective conservation actions.</span></p><p dir=\"ltr\"><span style=\"white-space: pre-wrap;\">4. We used Python to generate the map and process the data, collected GBIF data on shark occurrence to train the prediction model, and used data from three NASA satellites: SWOT, MODIS, and PACE.</span></p><p dir=\"ltr\"><span style=\"white-space: pre-wrap;\">5. The algorithm is unique.</span></p><p dir=\"ltr\"><span style=\"white-space: pre-wrap;\">6. The temperature, chlorophyll concentration, water surface height, longitude, latitude, and date of the data.</span></p>",
                 "solution": "",
-                "aiReferences": "<p><span style=\"white-space: pre-wrap;\">Utilizamos IA no estudo dos tubarões e na formulação dos códigos.</span></p>",
-                "dataReferences": "[](https://swot.jpl.nasa.gov/)\n[](https://www.gbif.org/dataset/31cc8b55-0455-4faa-aa50-e135d1dcacf0)",
-                "projectReferences": "",
+                "aiReferences": "<p dir=\"ltr\"><span style=\"white-space: pre-wrap;\">We use AI to study sharks and formulate codes.</span></p>",
+                "dataReferences": "[](https://swot.jpl.nasa.gov/)\n[](https://pace.gsfc.nasa.gov/)\n[](https://modis.gsfc.nasa.gov/)",
+                "projectReferences": "[](https://www.gbif.org/dataset/31cc8b55-0455-4faa-aa50-e135d1dcacf0)",
                 "isSubmitted": true,
-                "savedAt": "2025-10-06T03:02:06.953494Z",
-                "submittedAt": "2025-10-06T03:02:06.953494Z",
+                "savedAt": "2025-10-06T03:37:56.182118Z",
+                "submittedAt": "2025-10-06T03:37:56.182118Z",
                 "__typename": "Project"
               },
               "projectSubmitted": true,
@@ -7415,113 +7415,6 @@
             "cursor": "b2Zmc2V0Ojcz",
             "node": {
               "__typename": "TeamPage",
-              "id": "aWQ6MzQ4NTU=",
-              "title": "Gatonautas",
-              "meta": {
-                "type": "TEAM",
-                "slug": "space-cats4",
-                "firstPublishedAt": "2025-09-05T17:12:07.530000Z",
-                "lastPublishedAt": "2025-10-05T23:24:22.461681Z",
-                "relativeUrl": "/2025/find-a-team/space-cats4/",
-                "live": true,
-                "parent": null,
-                "__typename": "ExpandedPageMeta"
-              },
-              "owner": "aWQ6Mzc1MTc5",
-              "ownerDetails": null,
-              "excerpt": "We are a team passionate about science, technology, and space exploration. Our chosen challenge is Hunting for Exoplanets with AI.  And our goal is to create an accurate and accessible solution that can support researchers and contribute to democr...",
-              "project": "aWQ6MzI2NzA=",
-              "projectDetails": {
-                "id": "aWQ6MzI2NzA=",
-                "name": "Gatonautas Project",
-                "summary": "Applying machine learning to astronomical research can be complex for scientists  who are highly skilled in astronomy and astrophysics but may not have advanced programming expertise. Our project aims to make exoplanet discovery accessible through a user-friendly web platform, while still offering advanced features for experienced users. Beyond data analysis, we provide a gamified learning section that supports both theoretical understanding and practical activities. In addition, users can join our citizen science platform in order to learn and also contribute to the improvement of the machine learning model itself. Our goal is to bring science to people and, in turn, people to science.",
-                "demoLink": "https://drive.google.com/file/d/1bMJ-8U_yHGlDJSm_Ngl1MLF1gA0zIM7-/view?usp=drivesdk",
-                "projectLink": "https://github.com/Mykaell-Max/Gatonautas",
-                "details": "<h3><b><strong style=\"white-space: pre-wrap;\">Overview</strong></b></h3><p><span style=\"white-space: pre-wrap;\">Exoplanet research often presents significant obstacles, including the need for advanced programming skills and access to specialized resources, factors that make participation difficult for many talented individuals. Our project addresses this issue by creating a user-friendly web platform that integrates a machine learning (ML) tool for exoplanet data analysis. </span></p><p><span style=\"white-space: pre-wrap;\">The platform enables users to upload datasets, adjust hyperparameters for advanced experimentation, or run a fully automated analysis pipeline for simplified exploration. Whether an experienced researcher or a curious beginner, users can engage with exoplanet data according to their own level of expertise.</span></p><p><span style=\"white-space: pre-wrap;\">To make the experience educational as well as scientific, we developed a gamified learning module with interactive lessons and quizzes introducing core concepts of exoplanet detection. This learning path connects to a citizen science hub, where users can apply their knowledge to real light curve data and contribute to improving our ML model through supervised learning.</span></p><p><span style=\"white-space: pre-wrap;\">By combining research functionality with public engagement, the project aims to make space science more inclusive and inspiring for future generations.</span></p><h3><b><strong style=\"white-space: pre-wrap;\">What Does It Do and How Does It Work?</strong></b></h3><p><span style=\"white-space: pre-wrap;\">Our project processes raw light curves obtained from a CSV file, running them through a custom-built pipeline designed to extract key features (such as orbital period, transit duration, and depth). Using these extracted features, a pre-trained machine learning model trained on NASA’s Kepler mission light curve datasets and processed through our own pipeline, predicts whether each light curve corresponds to a planet candidate, non-candidate, or confirmed planet (if matched with any known catalog entry).</span></p><p><span style=\"white-space: pre-wrap;\">All functionalities are integrated into a single web platform that unites research, learning, and citizen science. It includes:</span></p><ul><li><span style=\"white-space: pre-wrap;\">An educational section introducing exoplanet fundamentals;</span></li><li><span style=\"white-space: pre-wrap;\">A quiz module to reinforce understanding;</span></li><li><span style=\"white-space: pre-wrap;\">An interactive plotting tool that lets users classify light curves with instant feedback; and</span></li><li><span style=\"white-space: pre-wrap;\">A citizen science space where users can analyze real data. In the future, these community-generated classifications will be collected and statistically analyzed to refine the ML model through supervised learning, ensuring continuous improvement.</span></li></ul><h3><b><strong style=\"white-space: pre-wrap;\">What Benefits Does It Have?</strong></b></h3><p><span style=\"white-space: pre-wrap;\">Our project bridges the gap between experts and newcomers in exoplanetary science. It empowers scientists who are highly skilled in theoretical astronomy and astrophysics but may not have advanced programming expertise, allowing them to apply machine learning to large datasets and explore new research directions.</span></p><p><span style=\"white-space: pre-wrap;\">Meanwhile, students and astronomy enthusiasts can work directly with real astronomical data, gaining hands-on experience in data-driven discovery. By incorporating manual classifications into model refinement, the platform creates a collaborative environment where research and education strengthen each other.</span></p><h3><b><strong style=\"white-space: pre-wrap;\">Intended Impact</strong></b></h3><p><span style=\"white-space: pre-wrap;\">We aim to develop a platform that not only improves the detection and classification of exoplanets but also expands public participation in space science. By lowering technical barriers and integrating community contributions into the process, we hope to inspire new generations of scientists and make exoplanet research accessible to all.</span></p><h3><b><strong style=\"white-space: pre-wrap;\">Tools, Coding Languages, and Software</strong></b></h3><p><span style=\"white-space: pre-wrap;\">Our project combines a robust scientific computing stack with a modern web architecture. We used Python and its scientific ecosystem for data processing, feature extraction, and machine learning model training, as well as for the backend implementation of the web application. Specifically, we employed the Lightkurve library to read and process light curves from CSV files. These curves then undergo a preprocessing pipeline that includes data cleaning, outlier removal, and normalization.</span></p><p><span style=\"white-space: pre-wrap;\">After preprocessing, we apply a detrending step to remove long-term variations, followed by the Box-Least Squares (BLS) algorithm to detect potential transit signals. From the resulting detrended and folded light curves, we extract a comprehensive set of astrophysical and statistical features, including transit duration, depth, folded curve metrics, scaled depth, secondary depth, Combined Differential Photometric Precision (CDPP), Single Event Statistic (SES), and Multiple Event Statistic (MES).</span></p><p><span style=\"white-space: pre-wrap;\">The outcome of this pipeline is a structured feature vector representing each light curve, which is then used as input for our stacked machine learning model. This model integrates different classifiers (such as gradient boosting, random forests, and neural networks) to enhance robustness and generalization in the detection of exoplanetary candidates.</span></p><p><span style=\"white-space: pre-wrap;\">For the frontend, we used React and TypeScript to build a dynamic and responsive user interface, supported by HTML and CSS for layout and styling. The UI design and user experience were planned using the software Figma, ensuring an intuitive navigation flow that accommodates both beginners and experts.</span></p><p><span style=\"white-space: pre-wrap;\">We developed and tested the project using Visual Studio Code, while GitHub served as our platform for version control and collaborative workflow management, facilitating seamless teamwork and documentation.</span></p><h3><b><strong style=\"white-space: pre-wrap;\">How Is the Project Creative?</strong></b></h3><p><span style=\"white-space: pre-wrap;\">The project’s creativity lies in its ability to merge scientific analysis with public engagement. By combining an advanced ML-based research tool with an interactive learning platform, it transforms a highly technical field into an accessible, collaborative experience. This dual approach allows users not only to learn about exoplanet detection but also to directly participate in meaningful scientific work.</span></p><h3><b><strong style=\"white-space: pre-wrap;\">Future Goals</strong></b></h3><ul><li><b><strong style=\"white-space: pre-wrap;\">Human-in-the-Loop Classification:</strong></b><span style=\"white-space: pre-wrap;\"> Integrate visual tools that allow users to manually identify transit events (after passing through a learning and training section) collecting statistical data to iteratively improve the ML model.</span></li><li><b><strong style=\"white-space: pre-wrap;\">Pipeline Robustness and Feature Expansion:</strong></b><span style=\"white-space: pre-wrap;\"> Enhance the current pipeline to increase reliability and extract additional features from light curves, improving data quality and model performance.</span></li><li><b><strong style=\"white-space: pre-wrap;\">Expanded and Reliable Datasets:</strong></b><span style=\"white-space: pre-wrap;\"> Incorporate more high-quality, verified datasets to enhance model accuracy and generalization across diverse stellar systems.</span></li><li><b><strong style=\"white-space: pre-wrap;\">Computational Power Limitation:</strong></b><span style=\"white-space: pre-wrap;\"> Incorporate more high-quality, verified datasets to enhance model accuracy and generalization across diverse stellar systems</span></li></ul>",
-                "solution": "",
-                "aiReferences": "<p><span style=\"white-space: pre-wrap;\">We used ChatGPT 5.0 for troubleshooting, topic research, language support (since English is not our first language), and writing improvement. Additionally, Gemini 2.5 Pro helped us create images and design our logo. For coding, we relied on Cursor and GitHub Copilot to assist with generating code blocks and project structure.</span></p>",
-                "dataReferences": "[](https://science.nasa.gov/exoplanets/)\n[Kepler Objects of Interest (KOI)](https://exoplanetarchive.ipac.caltech.edu/cgi-bin/TblView/nph-tblView?app=ExoTbls&config=cumulative)\n[](https://science.nasa.gov/exoplanets/habitable-zone/)\n[Exoplanet Detection Using Machine Learning](https://academic.oup.com/mnras/article/513/4/5505/6472249?login=false)\n[Assessment of Ensemble-Based Machine Learning Algorithms for Exoplanet Identification](https://www.mdpi.com/2079-9292/13/19/3950)\n[Transit Video Demonstration](https://www.youtube.com/watch?v=xNeRqbw18Jk&feature=youtu.be)",
-                "projectReferences": "[](https://commons.wikimedia.org/wiki/File:NASA-Exoplanet-WaterWorlds-20180817.jpg)\n[](https://commons.wikimedia.org/wiki/File:PaleBlueDot.jpg)\n[](https://jenikirbyhistory.getarchive.net/media/trappist-1c-artist-impression-2018-8a80f3)\n[](https://commons.wikimedia.org/wiki/File:Habitable_Zones_Compared_to_the_Size_of_the_Hosting_Star.webm)\n[](https://commons.wikimedia.org/wiki/File:Relative_sizes_of_all_of_the_habitable-zone_planets_discovered_to_date_alongside_Earth.jpg)",
-                "isSubmitted": true,
-                "savedAt": "2025-10-06T03:00:02.030577Z",
-                "submittedAt": "2025-10-06T03:00:02.030577Z",
-                "__typename": "Project"
-              },
-              "projectSubmitted": true,
-              "featuredImage": {
-                "id": "aWQ6MzgxODQy",
-                "meta": {
-                  "type": "images.CustomImage",
-                  "downloadUrl": "https://assets.spaceappschallenge.org/media/original_images/aaaaa_LVHBK9g.png",
-                  "__typename": "ImageMeta"
-                },
-                "title": "team_image.23:24:21.534051",
-                "alt": "team_image.23:24:21.534051",
-                "caption": "team_image.23:24:21.534051",
-                "displaySize": "og",
-                "rendition": {
-                  "url": "https://assets.spaceappschallenge.org/media/images/aaaaa_LVHBK9g.2e16d0ba.fill-300x250.png",
-                  "fullUrl": "https://assets.spaceappschallenge.org/media/images/aaaaa_LVHBK9g.2e16d0ba.fill-300x250.png",
-                  "height": 250,
-                  "width": 300,
-                  "__typename": "BaseImage"
-                },
-                "__typename": "DefaultImage"
-              },
-              "description": null,
-              "desiredSkills": null,
-              "languages": [
-                "English",
-                "Portuguese"
-              ],
-              "challenge": "aWQ6MzEzMTI=",
-              "challengeDetails": {
-                "id": "aWQ6MzEzMTI=",
-                "title": "A World Away: Hunting for Exoplanets with AI",
-                "meta": {
-                  "type": "CHALLENGE",
-                  "slug": "a-world-away-hunting-for-exoplanets-with-ai",
-                  "firstPublishedAt": "2025-08-18T19:28:38.822862Z",
-                  "lastPublishedAt": "2025-09-16T14:38:20.228286Z",
-                  "relativeUrl": "/2025/challenges/a-world-away-hunting-for-exoplanets-with-ai/",
-                  "live": true,
-                  "parent": null,
-                  "__typename": "ExpandedPageMeta"
-                },
-                "excerpt": "Data from several different space-based exoplanet surveying missions have enabled discovery of thousands of new planets outside our solar system, but most of these exoplanets were identified manually. With advances in artificial intelligence and machine learning (AI/ML), it is possible to automatically analyze large sets of data collected by these missions to identify exoplanets. Your challenge is to create an AI/ML model that is trained on one or more of the open-source exoplanet datasets offered by NASA and that can analyze new data to accurately identify exoplanets. (Astrophysics Division)",
-                "__typename": "ChallengePage"
-              },
-              "location": "aWQ6MzA2NjM=",
-              "locationDetails": {
-                "id": "aWQ6MzA2NjM=",
-                "title": "Uberlandia",
-                "displayName": "Uberlândia",
-                "meta": {
-                  "type": "LOCATION",
-                  "slug": "uberlandia",
-                  "firstPublishedAt": "2025-07-18T21:43:56.560298Z",
-                  "lastPublishedAt": "2025-08-22T19:13:44.047613Z",
-                  "relativeUrl": "/2025/local-events/uberlandia/",
-                  "live": true,
-                  "parent": null,
-                  "__typename": "ExpandedPageMeta"
-                },
-                "country": "Brazil",
-                "__typename": "LocationPage"
-              },
-              "event": "aWQ6Mw==",
-              "eventDetails": null,
-              "joinEnabled": true,
-              "memberships": null,
-              "nominationBadges": null,
-              "awardBadges": null
-            }
-          },
-          {
-            "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0Ojc0",
-            "node": {
-              "__typename": "TeamPage",
               "id": "aWQ6MzY0MzU=",
               "title": "Gauss 'n Roses",
               "meta": {
@@ -7623,7 +7516,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0Ojc1",
+            "cursor": "b2Zmc2V0Ojc0",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6MzIwMzc=",
@@ -7727,7 +7620,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0Ojc2",
+            "cursor": "b2Zmc2V0Ojc1",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6NDc4NDg=",
@@ -7831,7 +7724,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0Ojc3",
+            "cursor": "b2Zmc2V0Ojc2",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6NTAwNDg=",
@@ -7935,7 +7828,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0Ojc4",
+            "cursor": "b2Zmc2V0Ojc3",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6NDU0MzI=",
@@ -8039,7 +7932,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0Ojc5",
+            "cursor": "b2Zmc2V0Ojc4",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6MzMyOTM=",
@@ -8124,7 +8017,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0Ojgw",
+            "cursor": "b2Zmc2V0Ojc5",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6MzgxMTc=",
@@ -8228,7 +8121,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0Ojgx",
+            "cursor": "b2Zmc2V0Ojgw",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6MzQ3MDI=",
@@ -8332,7 +8225,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0Ojgy",
+            "cursor": "b2Zmc2V0Ojgx",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6MzIyNjI=",
@@ -8436,7 +8329,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0Ojgz",
+            "cursor": "b2Zmc2V0Ojgy",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6NDExOTA=",
@@ -8548,7 +8441,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0Ojg0",
+            "cursor": "b2Zmc2V0Ojgz",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6MzgwNzY=",
@@ -8633,7 +8526,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0Ojg1",
+            "cursor": "b2Zmc2V0Ojg0",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6NDQ3MTU=",
@@ -8748,7 +8641,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0Ojg2",
+            "cursor": "b2Zmc2V0Ojg1",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6NDc1NTQ=",
@@ -8852,7 +8745,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0Ojg3",
+            "cursor": "b2Zmc2V0Ojg2",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6NDA0NTY=",
@@ -8956,7 +8849,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0Ojg4",
+            "cursor": "b2Zmc2V0Ojg3",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6NDg3NTI=",
@@ -9060,7 +8953,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0Ojg5",
+            "cursor": "b2Zmc2V0Ojg4",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6MzE2ODA=",
@@ -9178,7 +9071,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0Ojkw",
+            "cursor": "b2Zmc2V0Ojg5",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6MzQ5MDk=",
@@ -9282,7 +9175,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0Ojkx",
+            "cursor": "b2Zmc2V0Ojkw",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6MzI4ODQ=",
@@ -9367,7 +9260,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0Ojky",
+            "cursor": "b2Zmc2V0Ojkx",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6MzM4ODg=",
@@ -9452,7 +9345,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0Ojkz",
+            "cursor": "b2Zmc2V0Ojky",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6NDU1OTM=",
@@ -9556,7 +9449,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0Ojk0",
+            "cursor": "b2Zmc2V0Ojkz",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6MzYyMzQ=",
@@ -9671,7 +9564,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0Ojk1",
+            "cursor": "b2Zmc2V0Ojk0",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6NDY4Nzg=",
@@ -9756,7 +9649,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0Ojk2",
+            "cursor": "b2Zmc2V0Ojk1",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6NDg2ODI=",
@@ -9841,7 +9734,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0Ojk3",
+            "cursor": "b2Zmc2V0Ojk2",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6MzE1MjA=",
@@ -9926,7 +9819,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0Ojk4",
+            "cursor": "b2Zmc2V0Ojk3",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6MzMwNDQ=",
@@ -10033,7 +9926,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0Ojk5",
+            "cursor": "b2Zmc2V0Ojk4",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6MzI2NDg=",
@@ -10137,7 +10030,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjEwMA==",
+            "cursor": "b2Zmc2V0Ojk5",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6NDY3NjY=",
@@ -10241,7 +10134,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjEwMQ==",
+            "cursor": "b2Zmc2V0OjEwMA==",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6NDk4MjM=",
@@ -10326,7 +10219,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjEwMg==",
+            "cursor": "b2Zmc2V0OjEwMQ==",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6MzYzMjQ=",
@@ -10411,7 +10304,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjEwMw==",
+            "cursor": "b2Zmc2V0OjEwMg==",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6NDEyMzE=",
@@ -10515,7 +10408,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjEwNA==",
+            "cursor": "b2Zmc2V0OjEwMw==",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6NDk4OTE=",
@@ -10619,7 +10512,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjEwNQ==",
+            "cursor": "b2Zmc2V0OjEwNA==",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6Mzg4ODg=",
@@ -10704,7 +10597,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjEwNg==",
+            "cursor": "b2Zmc2V0OjEwNQ==",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6MzYwMTU=",
@@ -10808,7 +10701,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjEwNw==",
+            "cursor": "b2Zmc2V0OjEwNg==",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6NDkxOTQ=",
@@ -10893,7 +10786,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjEwOA==",
+            "cursor": "b2Zmc2V0OjEwNw==",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6NDE4NTc=",
@@ -10997,7 +10890,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjEwOQ==",
+            "cursor": "b2Zmc2V0OjEwOA==",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6MzUyMjU=",
@@ -11101,7 +10994,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjExMA==",
+            "cursor": "b2Zmc2V0OjEwOQ==",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6NDAwMzA=",
@@ -11186,7 +11079,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjExMQ==",
+            "cursor": "b2Zmc2V0OjExMA==",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6MzYxODA=",
@@ -11290,7 +11183,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjExMg==",
+            "cursor": "b2Zmc2V0OjExMQ==",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6NDI3MTI=",
@@ -11375,7 +11268,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjExMw==",
+            "cursor": "b2Zmc2V0OjExMg==",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6MzcxNTI=",
@@ -11460,7 +11353,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjExNA==",
+            "cursor": "b2Zmc2V0OjExMw==",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6MzM1MjA=",
@@ -11583,7 +11476,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjExNQ==",
+            "cursor": "b2Zmc2V0OjExNA==",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6NDY4MTA=",
@@ -11687,7 +11580,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjExNg==",
+            "cursor": "b2Zmc2V0OjExNQ==",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6NDU3NDg=",
@@ -11791,7 +11684,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjExNw==",
+            "cursor": "b2Zmc2V0OjExNg==",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6NDI2NjI=",
@@ -11909,7 +11802,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjExOA==",
+            "cursor": "b2Zmc2V0OjExNw==",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6NTIxNzA=",
@@ -11994,7 +11887,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjExOQ==",
+            "cursor": "b2Zmc2V0OjExOA==",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6MzU5MzY=",
@@ -12098,7 +11991,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjEyMA==",
+            "cursor": "b2Zmc2V0OjExOQ==",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6MzE1MDU=",
@@ -12205,7 +12098,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjEyMQ==",
+            "cursor": "b2Zmc2V0OjEyMA==",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6MzQ3Mzc=",
@@ -12309,7 +12202,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjEyMg==",
+            "cursor": "b2Zmc2V0OjEyMQ==",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6MzI3MjA=",
@@ -12413,7 +12306,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjEyMw==",
+            "cursor": "b2Zmc2V0OjEyMg==",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6MzM2Mzg=",
@@ -12498,7 +12391,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjEyNA==",
+            "cursor": "b2Zmc2V0OjEyMw==",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6NDI0ODE=",
@@ -12602,7 +12495,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjEyNQ==",
+            "cursor": "b2Zmc2V0OjEyNA==",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6NTEzNTM=",
@@ -12687,7 +12580,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjEyNg==",
+            "cursor": "b2Zmc2V0OjEyNQ==",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6NDQ3MDM=",
@@ -12791,7 +12684,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjEyNw==",
+            "cursor": "b2Zmc2V0OjEyNg==",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6MzM2MzM=",
@@ -12876,7 +12769,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjEyOA==",
+            "cursor": "b2Zmc2V0OjEyNw==",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6Mzg0ODQ=",
@@ -12961,7 +12854,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjEyOQ==",
+            "cursor": "b2Zmc2V0OjEyOA==",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6NDI3MjU=",
@@ -13076,7 +12969,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjEzMA==",
+            "cursor": "b2Zmc2V0OjEyOQ==",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6NDIwMDY=",
@@ -13180,7 +13073,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjEzMQ==",
+            "cursor": "b2Zmc2V0OjEzMA==",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6NTA2OTE=",
@@ -13284,7 +13177,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjEzMg==",
+            "cursor": "b2Zmc2V0OjEzMQ==",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6NDk1OTQ=",
@@ -13388,7 +13281,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjEzMw==",
+            "cursor": "b2Zmc2V0OjEzMg==",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6NDA3MjI=",
@@ -13492,7 +13385,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjEzNA==",
+            "cursor": "b2Zmc2V0OjEzMw==",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6MzIwMTc=",
@@ -13577,7 +13470,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjEzNQ==",
+            "cursor": "b2Zmc2V0OjEzNA==",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6NDU3MTc=",
@@ -13684,7 +13577,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjEzNg==",
+            "cursor": "b2Zmc2V0OjEzNQ==",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6NDk5Njc=",
@@ -13788,7 +13681,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjEzNw==",
+            "cursor": "b2Zmc2V0OjEzNg==",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6MzI2MDc=",
@@ -13892,7 +13785,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjEzOA==",
+            "cursor": "b2Zmc2V0OjEzNw==",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6MzgyNzg=",
@@ -13977,7 +13870,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjEzOQ==",
+            "cursor": "b2Zmc2V0OjEzOA==",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6MzkwMzM=",
@@ -14081,7 +13974,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjE0MA==",
+            "cursor": "b2Zmc2V0OjEzOQ==",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6MzE1NzI=",
@@ -14185,7 +14078,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjE0MQ==",
+            "cursor": "b2Zmc2V0OjE0MA==",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6MzI2MzE=",
@@ -14300,7 +14193,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjE0Mg==",
+            "cursor": "b2Zmc2V0OjE0MQ==",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6NDE4NTY=",
@@ -14404,7 +14297,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjE0Mw==",
+            "cursor": "b2Zmc2V0OjE0Mg==",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6NDE1OTQ=",
@@ -14508,7 +14401,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjE0NA==",
+            "cursor": "b2Zmc2V0OjE0Mw==",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6NDM3MDg=",
@@ -14593,7 +14486,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjE0NQ==",
+            "cursor": "b2Zmc2V0OjE0NA==",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6MzQ1MTc=",
@@ -14712,7 +14605,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjE0Ng==",
+            "cursor": "b2Zmc2V0OjE0NQ==",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6MzM0OTg=",
@@ -14816,7 +14709,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjE0Nw==",
+            "cursor": "b2Zmc2V0OjE0Ng==",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6MzMwNjA=",
@@ -14920,7 +14813,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjE0OA==",
+            "cursor": "b2Zmc2V0OjE0Nw==",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6MzM4MTM=",
@@ -15024,7 +14917,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjE0OQ==",
+            "cursor": "b2Zmc2V0OjE0OA==",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6NDQ3Njc=",
@@ -15146,7 +15039,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjE1MA==",
+            "cursor": "b2Zmc2V0OjE0OQ==",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6NDQ4MTI=",
@@ -15266,7 +15159,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjE1MQ==",
+            "cursor": "b2Zmc2V0OjE1MA==",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6NTAwNTU=",
@@ -15370,7 +15263,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjE1Mg==",
+            "cursor": "b2Zmc2V0OjE1MQ==",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6MzkwNDE=",
@@ -15474,7 +15367,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjE1Mw==",
+            "cursor": "b2Zmc2V0OjE1Mg==",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6NDA2ODg=",
@@ -15578,7 +15471,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjE1NA==",
+            "cursor": "b2Zmc2V0OjE1Mw==",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6MzQyNTk=",
@@ -15700,7 +15593,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjE1NQ==",
+            "cursor": "b2Zmc2V0OjE1NA==",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6NDk4MjU=",
@@ -15804,7 +15697,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjE1Ng==",
+            "cursor": "b2Zmc2V0OjE1NQ==",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6NDk1ODA=",
@@ -15889,7 +15782,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjE1Nw==",
+            "cursor": "b2Zmc2V0OjE1Ng==",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6NDUxNjA=",
@@ -16007,7 +15900,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjE1OA==",
+            "cursor": "b2Zmc2V0OjE1Nw==",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6NDk4OTY=",
@@ -16111,7 +16004,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjE1OQ==",
+            "cursor": "b2Zmc2V0OjE1OA==",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6NDQ3MDk=",
@@ -16215,7 +16108,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjE2MA==",
+            "cursor": "b2Zmc2V0OjE1OQ==",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6MzMyNDM=",
