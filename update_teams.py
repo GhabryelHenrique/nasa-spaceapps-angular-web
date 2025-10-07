@@ -2136,13 +2136,13 @@ def find_location_ids(city_names: List[str]) -> Dict[str, str]:
                     'title': title,
                     'displayName': display_name
                 }
-                print(f"✓ Encontrado: {city_name} -> {title} (ID: {location_id})")
+                print(f"[OK] Encontrado: {city_name} -> {title} (ID: {location_id})")
                 break
 
     # Verifica se todas as cidades foram encontradas
     not_found = [city for city in city_names if city not in location_map]
     if not_found:
-        print(f"\n⚠ Cidades não encontradas: {', '.join(not_found)}")
+        print(f"\n[AVISO] Cidades não encontradas: {', '.join(not_found)}")
 
     return location_map
 
@@ -2436,8 +2436,64 @@ def main():
         # Lista de cidades para buscar times (Uberlândia)
         uberlandia_city = ["Uberlândia"]
 
-        # Lista de outras cidades para comparação na War Room
-        other_cities = [
+        # Lista de TODAS as cidades brasileiras para comparação na War Room
+        # (exceto Uberlândia que já é buscada separadamente)
+        brazilian_cities = [
+            "Aracaju",
+            "Balneário Camboriú",
+            "Belém",
+            "Bento Gonçalves",
+            "Boa Vista",
+            "Botucatu",
+            "Campina Grande",
+            "Campinas",
+            "Campo Mourão",
+            "Campos dos Goytacazes",
+            "Caxias do Sul",
+            "Cianorte",
+            "Contagem",
+            "Cuiaba",
+            "Florianopolis",
+            "Fortaleza",
+            "Goiânia",
+            "Guarulhos",
+            "Itajubá",
+            "Jaguariúna",
+            "João Pessoa",
+            "Juazeiro do Norte",
+            "Juiz de Fora",
+            "Lajeado",
+            "Limeira",
+            "Londrina",
+            "Maceió",
+            "Manaus",
+            "Mariana",
+            "Maringá",
+            "Marília",
+            "Niterói",
+            "Petrolina",
+            "Pouso Alegre",
+            "Poços de Caldas",
+            "Recife",
+            "Ribeirao Preto",
+            "Rio de Janeiro",
+            "Salvador",
+            "Santa Cruz das Palmeiras",
+            "Santo André",
+            "Sorocaba",
+            "São Gonçalo",
+            "São José do Rio Preto",
+            "São José dos Campos",
+            "São João da Boa Vista",
+            "São Luis",
+            "São Paulo",
+            "Tefé",
+            "Vilhena",
+            "Vitória da Conquista"
+        ]
+
+        # Lista de outras cidades internacionais para comparação na War Room
+        international_cities = [
             "Harohalli",
             "Cairo",
             "Kanjirappally",
@@ -2446,18 +2502,11 @@ def main():
             "Chikkamagaluru",
             "Kochi",
             "Thrissur",
-            "Nashik",
-            "Campinas",
-            "Recife",
-            "Ribeirao Preto",
-            "Boa Vista",
-            "Maringá",
-            "São Gonçalo",
-            "Jaguariúna",
-            "Maceió",
-            "São Paulo",
-            "Guarulhos"
+            "Nashik"
         ]
+
+        # Combina todas as cidades para buscar (brasileiras + internacionais)
+        other_cities = brazilian_cities + international_cities
 
         # Busca dados de Uberlândia
         print(f"\n=== BUSCANDO DADOS DOS TIMES DE UBERLÂNDIA ===")
@@ -2468,7 +2517,9 @@ def main():
 
         # Busca dados das outras cidades
         print(f"\n=== BUSCANDO DADOS DOS TIMES DAS OUTRAS CIDADES ===")
-        print(f"Cidades: {', '.join(other_cities)}")
+        print(f"Total de cidades: {len(other_cities)}")
+        print(f"- Cidades brasileiras: {len(brazilian_cities)}")
+        print(f"- Cidades internacionais: {len(international_cities)}")
         other_cities_teams_data = fetch_all_teams_data(other_cities)
 
         # Atualiza o arquivo dos times das outras cidades (para a war room)
