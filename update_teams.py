@@ -2446,7 +2446,17 @@ def main():
             "Chikkamagaluru",
             "Kochi",
             "Thrissur",
-            "Nashik"
+            "Nashik",
+            "Campinas",
+            "Recife",
+            "Ribeirao Preto",
+            "Boa Vista",
+            "Maringá",
+            "São Gonçalo",
+            "Jaguariúna",
+            "Maceió",
+            "São Paulo",
+            "Guarulhos"
         ]
 
         # Busca dados de Uberlândia
