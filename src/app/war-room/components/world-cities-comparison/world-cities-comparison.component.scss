@@ -1,0 +1,570 @@
+.world-cities-comparison-section {
+  margin: 2rem 0;
+  padding: 2rem;
+  background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+  border-radius: 16px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+
+  .section-header {
+    text-align: center;
+    margin-bottom: 2rem;
+
+    .section-title {
+      font-size: 2rem;
+      font-weight: 700;
+      color: #ffffff;
+      margin-bottom: 0.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
+
+      .title-icon {
+        font-size: 2.5rem;
+      }
+    }
+
+    .section-description {
+      color: #a0aec0;
+      font-size: 1rem;
+    }
+  }
+
+  // Loading State
+  .loading-state {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 3rem;
+    gap: 1rem;
+
+    .spinner {
+      width: 50px;
+      height: 50px;
+      border: 4px solid rgba(255, 255, 255, 0.1);
+      border-top-color: #4ecdc4;
+      border-radius: 50%;
+      animation: spin 1s linear infinite;
+    }
+
+    p {
+      color: #a0aec0;
+      font-size: 1rem;
+    }
+  }
+
+  // Uberlândia Highlights
+  .uberlandia-highlights {
+    margin-bottom: 2rem;
+
+    .highlights-title {
+      font-size: 1.5rem;
+      font-weight: 600;
+      color: #ffffff;
+      margin-bottom: 1.5rem;
+    }
+
+    .highlights-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.5rem;
+
+      .highlight-card {
+        background: rgba(255, 255, 255, 0.05);
+        border-radius: 12px;
+        padding: 1.5rem;
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        transition: all 0.3s ease;
+
+        &:hover {
+          transform: translateY(-4px);
+          box-shadow: 0 8px 24px rgba(78, 205, 196, 0.2);
+          border-color: rgba(78, 205, 196, 0.5);
+        }
+
+        .highlight-icon {
+          font-size: 2rem;
+          margin-bottom: 0.5rem;
+        }
+
+        .highlight-content {
+          h4 {
+            font-size: 0.9rem;
+            color: #a0aec0;
+            margin-bottom: 1rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+          }
+        }
+
+        // Rank Card Styles
+        &.rank-card {
+          .rank-display {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+
+            .rank-emoji {
+              font-size: 2rem;
+            }
+
+            .rank-position {
+              font-size: 2rem;
+              font-weight: 700;
+              color: #4ecdc4;
+            }
+
+            .rank-total {
+              font-size: 1rem;
+              color: #a0aec0;
+            }
+          }
+        }
+
+        // Stats Card Styles
+        &.stats-card {
+          .stats-display {
+            display: flex;
+            align-items: baseline;
+            gap: 0.5rem;
+            margin-bottom: 0.5rem;
+
+            .stats-value {
+              font-size: 2.5rem;
+              font-weight: 700;
+              color: #4ecdc4;
+            }
+
+            .stats-label {
+              font-size: 1rem;
+              color: #a0aec0;
+            }
+          }
+
+          .percentage-bar {
+            width: 100%;
+            height: 8px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 4px;
+            overflow: hidden;
+            margin-bottom: 0.5rem;
+
+            .percentage-fill {
+              height: 100%;
+              background: linear-gradient(90deg, #4ecdc4, #45b7d1);
+              border-radius: 4px;
+              transition: width 0.5s ease;
+            }
+          }
+
+          .percentage-text {
+            font-size: 0.9rem;
+            color: #a0aec0;
+          }
+        }
+
+        // Comparison Card Styles
+        &.comparison-card {
+          .comparison-display {
+            .comparison-values {
+              display: flex;
+              align-items: center;
+              gap: 0.75rem;
+              margin-bottom: 0.5rem;
+
+              .city-value {
+                font-size: 2rem;
+                font-weight: 700;
+                color: #4ecdc4;
+              }
+
+              .vs-text {
+                font-size: 1rem;
+                color: #a0aec0;
+              }
+
+              .avg-value {
+                font-size: 1.5rem;
+                font-weight: 600;
+                color: #718096;
+              }
+            }
+
+            .comparison-label {
+              font-size: 0.85rem;
+              color: #a0aec0;
+            }
+          }
+
+          &.above-average {
+            border-color: rgba(72, 187, 120, 0.5);
+            background: rgba(72, 187, 120, 0.1);
+
+            .city-value {
+              color: #48bb78;
+            }
+          }
+
+          &.below-average {
+            border-color: rgba(245, 158, 11, 0.5);
+            background: rgba(245, 158, 11, 0.1);
+
+            .city-value {
+              color: #f59e0b;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  // World Summary
+  .world-summary {
+    margin-bottom: 2rem;
+
+    .summary-title {
+      font-size: 1.5rem;
+      font-weight: 600;
+      color: #ffffff;
+      margin-bottom: 1.5rem;
+    }
+
+    .summary-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 1rem;
+
+      .summary-card {
+        background: rgba(255, 255, 255, 0.05);
+        border-radius: 12px;
+        padding: 1.5rem;
+        text-align: center;
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        transition: all 0.3s ease;
+
+        &:hover {
+          transform: translateY(-2px);
+          border-color: rgba(78, 205, 196, 0.3);
+        }
+
+        .summary-icon {
+          font-size: 2rem;
+          margin-bottom: 0.5rem;
+        }
+
+        .summary-value {
+          font-size: 2rem;
+          font-weight: 700;
+          color: #4ecdc4;
+          display: block;
+          margin-bottom: 0.25rem;
+        }
+
+        .summary-label {
+          font-size: 0.9rem;
+          color: #a0aec0;
+        }
+      }
+    }
+  }
+
+  // Comparison Table
+  .comparison-table-container {
+    margin-bottom: 2rem;
+
+    .table-title {
+      font-size: 1.5rem;
+      font-weight: 600;
+      color: #ffffff;
+      margin-bottom: 1.5rem;
+    }
+
+    .comparison-table {
+      background: rgba(255, 255, 255, 0.05);
+      border-radius: 12px;
+      overflow: hidden;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+
+      .table-header,
+      .table-row {
+        display: grid;
+        grid-template-columns: 80px 1fr 100px 120px 180px;
+        gap: 1rem;
+        padding: 1rem 1.5rem;
+        align-items: center;
+      }
+
+      .table-header {
+        background: rgba(255, 255, 255, 0.05);
+        border-bottom: 2px solid rgba(78, 205, 196, 0.3);
+        font-weight: 600;
+        color: #4ecdc4;
+        font-size: 0.9rem;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+      }
+
+      .table-row {
+        border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        transition: all 0.3s ease;
+
+        &:hover {
+          background: rgba(255, 255, 255, 0.08);
+        }
+
+        &.uberlandia-row {
+          background: rgba(78, 205, 196, 0.1);
+          border: 2px solid rgba(78, 205, 196, 0.3);
+
+          &:hover {
+            background: rgba(78, 205, 196, 0.15);
+          }
+        }
+
+        &.top-three {
+          font-weight: 600;
+        }
+
+        .table-cell {
+          color: #ffffff;
+
+          &.rank-cell {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+
+            .rank-number {
+              font-size: 1.2rem;
+              font-weight: 700;
+            }
+
+            .rank-emoji {
+              font-size: 1.5rem;
+            }
+          }
+
+          &.city-cell {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+
+            .city-name {
+              font-size: 1rem;
+            }
+
+            .city-badge {
+              font-size: 1.2rem;
+            }
+          }
+
+          &.teams-cell,
+          &.submitted-cell {
+            .cell-value {
+              font-size: 1.1rem;
+              font-weight: 600;
+              color: #4ecdc4;
+            }
+
+            .cell-detail {
+              font-size: 0.85rem;
+              color: #718096;
+              margin-left: 0.25rem;
+            }
+          }
+
+          &.rate-cell {
+            .rate-container {
+              display: flex;
+              align-items: center;
+              gap: 0.75rem;
+
+              .rate-bar-container {
+                flex: 1;
+                height: 8px;
+                background: rgba(255, 255, 255, 0.1);
+                border-radius: 4px;
+                overflow: hidden;
+
+                .rate-bar {
+                  height: 100%;
+                  border-radius: 4px;
+                  transition: width 0.5s ease;
+
+                  &.excellent {
+                    background: linear-gradient(90deg, #48bb78, #38a169);
+                  }
+
+                  &.good {
+                    background: linear-gradient(90deg, #4ecdc4, #45b7d1);
+                  }
+
+                  &.average {
+                    background: linear-gradient(90deg, #f59e0b, #d97706);
+                  }
+
+                  &.needs-improvement {
+                    background: linear-gradient(90deg, #ef4444, #dc2626);
+                  }
+                }
+              }
+
+              .rate-value {
+                font-size: 0.9rem;
+                font-weight: 600;
+                color: #ffffff;
+                min-width: 50px;
+                text-align: right;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  // Performance Insights
+  .performance-insights {
+    margin-top: 2rem;
+
+    .insights-title {
+      font-size: 1.5rem;
+      font-weight: 600;
+      color: #ffffff;
+      margin-bottom: 1.5rem;
+    }
+
+    .insights-list {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+
+      .insight-item {
+        display: flex;
+        align-items: flex-start;
+        gap: 1rem;
+        padding: 1.5rem;
+        background: rgba(255, 255, 255, 0.05);
+        border-radius: 12px;
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        transition: all 0.3s ease;
+
+        &:hover {
+          transform: translateX(4px);
+          border-color: rgba(78, 205, 196, 0.3);
+        }
+
+        .insight-icon {
+          font-size: 1.5rem;
+          flex-shrink: 0;
+
+          &.success {
+            filter: drop-shadow(0 0 8px rgba(72, 187, 120, 0.5));
+          }
+
+          &.warning {
+            filter: drop-shadow(0 0 8px rgba(245, 158, 11, 0.5));
+          }
+
+          &.info {
+            filter: drop-shadow(0 0 8px rgba(78, 205, 196, 0.5));
+          }
+        }
+
+        .insight-text {
+          color: #e2e8f0;
+          font-size: 1rem;
+          line-height: 1.6;
+          margin: 0;
+
+          strong {
+            color: #4ecdc4;
+            font-weight: 600;
+          }
+        }
+      }
+    }
+  }
+
+  // Empty State
+  .empty-state {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 4rem 2rem;
+    text-align: center;
+
+    .empty-icon {
+      font-size: 4rem;
+      margin-bottom: 1rem;
+      opacity: 0.5;
+    }
+
+    p {
+      color: #a0aec0;
+      font-size: 1.1rem;
+    }
+  }
+}
+
+// Animations
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+// Responsive Design
+@media (max-width: 1024px) {
+  .world-cities-comparison-section {
+    .uberlandia-highlights .highlights-grid {
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    }
+
+    .comparison-table-container {
+      .comparison-table {
+        .table-header,
+        .table-row {
+          grid-template-columns: 60px 1fr 80px 100px 140px;
+          gap: 0.75rem;
+          padding: 0.75rem 1rem;
+          font-size: 0.9rem;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .world-cities-comparison-section {
+    padding: 1.5rem;
+
+    .section-header .section-title {
+      font-size: 1.5rem;
+
+      .title-icon {
+        font-size: 2rem;
+      }
+    }
+
+    .uberlandia-highlights .highlights-grid,
+    .world-summary .summary-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .comparison-table-container {
+      overflow-x: auto;
+
+      .comparison-table {
+        min-width: 600px;
+      }
+    }
+
+    .performance-insights .insights-list .insight-item {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+  }
+}

@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { Observable, throwError } from 'rxjs';
+import { Observable, throwError, of } from 'rxjs';
 import { map, catchError } from 'rxjs/operators';
 
 export interface RegistrationRow {
@@ -26,6 +26,19 @@ export interface RegistrationRow {
 export class GoogleSheetsService {
 
   constructor(private http: HttpClient) {}
+
+  /**
+   * Carrega dados de inscrição do arquivo JSON local
+   * Os dados já estão anonimizados (nome com iniciais, CPF parcialmente oculto)
+   */
+  getRegistrationDataFromLocal(): Observable<RegistrationRow[]> {
+    return this.http.get<RegistrationRow[]>('assets/data/registrations.json').pipe(
+      catchError(error => {
+        console.error('Erro ao carregar dados locais:', error);
+        return throwError(() => error);
+      })
+    );
+  }
 
   getRegistrationData(spreadsheetId: string, range: string = 'A:L'): Observable<RegistrationRow[]> {
     // Acessa a planilha como CSV público

@@ -1,0 +1,207 @@
+.country-table-container {
+  background: linear-gradient(135deg, rgba(26, 26, 46, 0.9), rgba(30, 30, 60, 0.8));
+  border-radius: 15px;
+  padding: 1.5rem;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(78, 205, 196, 0.2);
+  color: #ffffff;
+  width: 100%;
+  max-width: 100%;
+  margin-bottom: 2rem;
+
+  .table-header {
+    margin-bottom: 1.5rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid rgba(78, 205, 196, 0.3);
+
+    h3 {
+      margin: 0;
+      color: #ffffff;
+      font-size: 1.4rem;
+      font-weight: 600;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+
+      &::before {
+        content: '🏆';
+        font-size: 1.2rem;
+      }
+    }
+  }
+
+  .countries-table {
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      background: rgba(0, 0, 0, 0.2);
+      border-radius: 10px;
+      overflow: hidden;
+
+      thead {
+        background: linear-gradient(135deg, #4ecdc4, #45b7d1);
+
+        th {
+          padding: 1rem;
+          text-align: left;
+          font-weight: 600;
+          color: #ffffff;
+          font-size: 0.95rem;
+          text-transform: uppercase;
+          letter-spacing: 0.5px;
+
+          &.position {
+            width: 80px;
+            text-align: center;
+          }
+
+          &.count {
+            width: 120px;
+            text-align: center;
+          }
+
+          &.percentage {
+            width: 100px;
+            text-align: center;
+          }
+        }
+      }
+
+      tbody {
+        tr {
+          transition: all 0.3s ease;
+          border-bottom: 1px solid rgba(78, 205, 196, 0.1);
+
+          &:hover {
+            background: rgba(78, 205, 196, 0.1);
+            transform: translateX(3px);
+          }
+
+          &:last-child {
+            border-bottom: none;
+          }
+
+          td {
+            padding: 1rem;
+            vertical-align: middle;
+
+            &.position {
+              text-align: center;
+              font-weight: bold;
+              color: #4ecdc4;
+              font-size: 1.1rem;
+            }
+
+            &.country-info {
+              display: flex;
+              align-items: center;
+              gap: 0.8rem;
+
+              .country-flag {
+                font-size: 1.2rem;
+                min-width: 24px;
+              }
+
+              .country-name {
+                font-weight: 500;
+                color: #ffffff;
+              }
+            }
+
+            &.count {
+              text-align: center;
+              font-weight: bold;
+              color: #4ecdc4;
+              font-size: 1.1rem;
+            }
+
+            &.percentage {
+              text-align: center;
+              color: rgba(255, 255, 255, 0.8);
+              font-size: 0.95rem;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .no-data-message {
+    text-align: center;
+    padding: 3rem 1rem;
+    color: rgba(255, 255, 255, 0.7);
+
+    i {
+      font-size: 3rem;
+      color: #4ecdc4;
+      margin-bottom: 1rem;
+    }
+
+    h4 {
+      color: #ffffff;
+      margin-bottom: 0.5rem;
+    }
+
+    p {
+      color: rgba(255, 255, 255, 0.6);
+      margin: 0;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .country-table-container {
+    padding: 1rem;
+
+    .countries-table {
+      overflow-x: auto;
+
+      table {
+        min-width: 500px;
+        font-size: 0.9rem;
+
+        th, td {
+          padding: 0.8rem 0.5rem;
+        }
+
+        .country-info {
+          gap: 0.5rem;
+
+          .country-flag {
+            font-size: 1rem;
+          }
+
+          .country-name {
+            font-size: 0.9rem;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .country-table-container {
+    .countries-table {
+      table {
+        th, td {
+          padding: 0.6rem 0.3rem;
+          font-size: 0.85rem;
+        }
+
+        .position {
+          width: 60px;
+        }
+
+        .count {
+          width: 80px;
+        }
+
+        .percentage {
+          width: 80px;
+        }
+      }
+    }
+  }
+}

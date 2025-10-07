@@ -9,8 +9,10 @@
   <section class="countdown-wrapper">
     <div class="container">
       <div class="countdown-content">
-        <h2 class="countdown-title">Contagem Regressiva para o Evento</h2>
-        <p class="countdown-subtitle">O NASA Space Apps Challenge Uberlândia 2025 começa em:</p>
+        <h2 class="countdown-title">Contagem Regressiva para os Global Nominees</h2>
+        <p class="countdown-subtitle">
+          O anúncio dos Global Nominees será em:
+        </p>
         <div class="countdown-timer">
           <div class="countdown-item">
             <div class="countdown-number">{{ countdown.days }}</div>
@@ -32,7 +34,42 @@
             <div class="countdown-label">Segundos</div>
           </div>
         </div>
-        <p class="event-date">4 de Outubro de 2025</p>
+        <p class="event-date">16 de Outubro de 2025</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Awards Timeline Section -->
+  <section class="awards-timeline-wrapper">
+    <div class="container">
+      <div class="awards-timeline-content">
+        <h2 class="awards-title">Cronograma de Premiações</h2>
+        <p class="section-description">
+          Acompanhe as datas importantes para o anúncio dos vencedores globais do NASA Space Apps Challenge 2025.
+        </p>
+        <div class="timeline">
+          <div class="timeline-item">
+            <div class="timeline-icon">🏆</div>
+            <div class="timeline-info">
+              <h3>16 de Outubro</h3>
+              <p>Anúncio dos Global Nominees</p>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-icon">🥇</div>
+            <div class="timeline-info">
+              <h3>26 de Novembro</h3>
+              <p>Anúncio dos Global Finalists e Honorable Mentions</p>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-icon">🎉</div>
+            <div class="timeline-info">
+              <h3>18 de Dezembro</h3>
+              <p>Anúncio dos Global Winners!</p>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </section>
@@ -45,115 +82,13 @@
     <app-event-info-tabs></app-event-info-tabs>
   </section>
 
-
-  <!-- Teams Section -->
-  <section class="teams-section-wrapper">
-    <div class="container">
-      <div class="teams-section-content">
-        <h2 i18n="@@teams.title">Times Participantes</h2>
-        <p class="section-description" i18n="@@teams.description">
-          Conheça os times já inscritos no NASA Space Apps Challenge Uberlândia 2025.
-          Veja os projetos em desenvolvimento, habilidades desejadas e encontre sua equipe ideal!
-        </p>
-        <div class="teams-stats">
-          <div class="stat-item">
-            <div class="stat-number">{{ totalTeams }}</div>
-            <div class="stat-label" i18n="@@teams.stat.registered">Times Inscritos</div>
-          </div>
-          <!-- <div class="stat-item">
-            <div class="stat-number">{{ totalMembers }}</div>
-            <div class="stat-label">Participantes</div>
-          </div> -->
-        </div>
-        <div class="teams-cta">
-          <a routerLink="/times" class="teams-btn" aria-label="Ver todos os times participantes">
-            <div class="btn-icon">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M16 21V19C16 17.9391 15.5786 16.9217 14.8284 16.1716C14.0783 15.4214 13.0609 15 12 15H5C3.93913 15 2.92172 15.4214 2.17157 16.1716C1.42143 16.9217 1 17.9391 1 19V21M12.5 7C12.5 9.20914 10.7091 11 8.5 11C6.29086 11 4.5 9.20914 4.5 7C4.5 4.79086 6.29086 3 8.5 3C10.7091 3 12.5 4.79086 12.5 7ZM20 8V14M23 11H17" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-              </svg>
-            </div>
-            <div class="btn-content">
-              <span class="btn-title" i18n="@@teams.button.title">Ver Todos os Times</span>
-              <span class="btn-subtitle" i18n="@@teams.button.subtitle">Encontre sua equipe ou conheça os participantes</span>
-            </div>
-          </a>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Community Section -->
-  <section class="community-wrapper">
-    <div class="container">
-      <div class="community-content">
-        <h2 i18n="@@community.title">Junte-se à Nossa Comunidade</h2>
-        <p class="section-description" i18n="@@community.description">
-          Conecte-se com outros participantes, tire dúvidas, compartilhe ideias e fique por dentro das últimas novidades do evento.
-          Nossa comunidade está sempre pronta para ajudar e colaborar!
-        </p>
-        <div class="community-buttons">
-          <a href="https://discord.gg/FT4Jsvj5vy" target="_blank" rel="noopener noreferrer" class="community-btn discord-btn" aria-label="Junte-se ao nosso Discord">
-            <i class="fab fa-discord" aria-hidden="true"></i>
-            <div class="btn-content">
-              <span class="btn-title">Discord</span>
-              <span class="btn-subtitle" i18n="@@community.discord.subtitle">Converse em tempo real</span>
-            </div>
-          </a>
-          <a href="https://chat.whatsapp.com/LXwUUZaJPXtBOeKr7N4axg" target="_blank" rel="noopener noreferrer" class="community-btn whatsapp-btn" aria-label="Entre no grupo WhatsApp">
-            <i class="fab fa-whatsapp" aria-hidden="true"></i>
-            <div class="btn-content">
-              <span class="btn-title">WhatsApp</span>
-              <span class="btn-subtitle" i18n="@@community.whatsapp.subtitle">Grupo oficial do evento</span>
-            </div>
-          </a>
-        </div>
-      </div>
-    </div>
-  </section>
-
   <!-- Events Map Component -->
   <app-events-map></app-events-map>
-
-    <!-- Mentors and Volunteers Section -->
-  <section class="mentors-volunteers-wrapper">
-    <div class="container">
-      <div class="mentors-volunteers-content">
-        <h2 i18n="@@mentors.title">Seja Parte da Nossa Missão</h2>
-        <p class="section-description" i18n="@@mentors.description">
-          Junte-se a nós como mentor ou voluntário e ajude a transformar ideias em soluções inovadoras que podem mudar o mundo.
-          Sua experiência e dedicação são fundamentais para o sucesso do NASA Space Apps Challenge Uberlândia.
-        </p>
-        <div class="roles-grid">
-          <div class="role-card">
-            <div class="role-icon">🧑‍🏫</div>
-            <h3 i18n="@@mentors.role.mentor.title">Mentores</h3>
-            <p i18n="@@mentors.role.mentor.description">Compartilhe sua expertise técnica e oriente equipes a desenvolver soluções inovadoras para os desafios da NASA.</p>
-          </div>
-          <div class="role-card">
-            <div class="role-icon">🤝</div>
-            <h3 i18n="@@mentors.role.volunteer.title">Voluntários</h3>
-            <p i18n="@@mentors.role.volunteer.description">Ajude na organização do evento e garanta que tudo funcione perfeitamente durante os dois dias de hackathon.</p>
-          </div>
-        </div>
-        <div class="cta-section">
-          <a href="https://docs.google.com/forms/d/e/1FAIpQLScymeJJNAjNw5cHH_swG0kxsaagx2EC__n4wXW7lyJWs1TTZQ/viewform"
-             target="_blank"
-             rel="noopener noreferrer"
-             class="volunteer-btn"
-             aria-label="Formulário para se inscrever como mentor ou voluntário">
-            <span i18n="@@mentors.button">Quero Participar</span>
-          </a>
-        </div>
-      </div>
-    </div>
-  </section>
 
   <!-- Sponsors Section Component -->
   <section class="sponsors-wrapper">
     <app-sponsors-section></app-sponsors-section>
   </section>
-
-
 
   <!-- Organizers Section -->
   <section class="organizers-wrapper">
@@ -161,17 +96,24 @@
       <div class="organizers-content">
         <h2 i18n="@@organizers.title">Nossa Equipe Organizadora</h2>
         <p class="section-description" i18n="@@organizers.description">
-          Conheça as pessoas que tornam o NASA Space Apps Challenge Uberlândia uma realidade.
-          Uma equipe dedicada e apaixonada por inovação e tecnologia espacial.
+          Conheça as pessoas que tornam o NASA Space Apps Challenge Uberlândia
+          uma realidade. Uma equipe dedicada e apaixonada por inovação e
+          tecnologia espacial.
         </p>
         <div class="organizers-grid">
-          <a class="organizer-card" *ngFor="let organizer of organizers; trackBy: trackByName" href="{{organizer.url}}" target="_blank" >
+          <a
+            class="organizer-card"
+            *ngFor="let organizer of organizers; trackBy: trackByName"
+            href="{{ organizer.url }}"
+            target="_blank"
+          >
             <div class="organizer-photo">
               <img
                 [src]="organizer.photo"
                 [alt]="'Foto de ' + organizer.name"
                 loading="lazy"
-                onerror="this.src='assets/organizers/placeholder.svg'">
+                onerror="this.src='assets/organizers/placeholder.svg'"
+              />
             </div>
             <div class="organizer-info">
               <h3>{{ organizer.name }}</h3>
@@ -183,7 +125,6 @@
       </div>
     </div>
   </section>
-
 
   <!-- Footer -->
 </div>

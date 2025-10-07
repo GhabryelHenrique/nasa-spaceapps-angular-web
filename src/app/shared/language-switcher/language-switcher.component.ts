@@ -1,5 +1,6 @@
 import { Component, Inject, LOCALE_ID } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-language-switcher',
@@ -28,7 +29,13 @@ export class LanguageSwitcherComponent {
     } else {
       // In a production environment, you would handle routing for different locales
       // For now, we'll just indicate the language change
-      alert('English version would be loaded at /en/');
+      Swal.fire({
+        icon: 'info',
+        title: 'Idioma Inglês',
+        text: 'Versão em inglês será carregada em /en/',
+        confirmButtonColor: '#45b7d1',
+        confirmButtonText: 'Entendi'
+      });
     }
   }
 }

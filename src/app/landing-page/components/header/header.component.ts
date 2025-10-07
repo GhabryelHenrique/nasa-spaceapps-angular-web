@@ -1,7 +1,11 @@
 import { CommonModule } from '@angular/common';
 import { Component, HostListener } from '@angular/core';
-import { RouterLink } from '@angular/router';
+import { Router, RouterLink } from '@angular/router';
+import { CodeVerificationModalComponent } from '../../../shared/components/code-verification-modal/code-verification-modal.component';
+import { EmailVerificationModalComponent } from '../../../shared/components/email-verification-modal/email-verification-modal.component';
 import { CHALLENGES_DATA } from '../../../shared/data/challenges.data';
+import { LanguageSwitcherComponent } from '../../../shared/language-switcher/language-switcher.component';
+import { MatchmakingService } from '../../../shared/services/matchmaking.service';
 
 interface ChallengeCategory {
   id: number;
@@ -14,7 +18,7 @@ interface ChallengeCategory {
 
 @Component({
   selector: 'app-header',
-  imports: [RouterLink, CommonModule],
+  imports: [RouterLink, CommonModule, EmailVerificationModalComponent, CodeVerificationModalComponent, LanguageSwitcherComponent],
   templateUrl: './header.component.html',
   styleUrl: './header.component.scss',
 })
@@ -23,6 +27,10 @@ export class HeaderComponent {
   showInfo = false;
   mobileMenuOpen = false;
   mobileChallengesOpen = false;
+  showEmailModal = false;
+  showCodeModal = false;
+  userEmail = '';
+  isLoggedIn = false;
 
   challengeCategories: ChallengeCategory[] = [
     {
@@ -50,6 +58,15 @@ export class HeaderComponent {
       count: this.getCategoryCount('advanced')
     }
   ];
+
+  constructor(
+    private matchmakingService: MatchmakingService,
+    private router: Router
+  ) {
+    this.matchmakingService.isAuthenticated$.subscribe(isAuth => {
+      this.isLoggedIn = isAuth;
+    });
+  }
 
   @HostListener('window:scroll', ['$event'])
   onScroll(): void {
@@ -122,5 +139,23 @@ export class HeaderComponent {
     this.mobileMenuOpen = false;
     this.mobileChallengesOpen = false;
     document.body.style.overflow = 'auto';
+  }
+
+  openMatchmaking(): void {
+    window.open('https://tinder.com', '_blank');
+  }
+
+  onEmailVerified(data: { email: string; isRegistered: boolean }): void {
+    this.userEmail = data.email;
+    this.showEmailModal = false;
+    if (data.isRegistered) {
+      this.showCodeModal = true;
+    }
+  }
+
+  onCodeVerified(): void {
+    this.showCodeModal = false;
+    this.isLoggedIn = true;
+    this.router.navigate(['/dashboard']);
   }
 }

@@ -1,0 +1,156 @@
+<div class="matchmaking-dashboard">
+  <div class="space-background">
+    <div class="stars"></div>
+    <div class="floating-elements">
+      <div class="planet planet-1"></div>
+      <div class="planet planet-2"></div>
+      <div class="satellite">
+        <i class="fa-solid fa-satellite"></i>
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <header class="dashboard-header">
+      <div class="header-content">
+        <h1>
+          <i class="fa-solid fa-users"></i>
+          Sistema de Matchmaking
+        </h1>
+        <div class="header-actions">
+          <button class="logout-btn" (click)="logout()">
+            <i class="fa-solid fa-sign-out-alt"></i>
+            Sair
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <div class="user-profile-section" *ngIf="currentUser">
+      <div class="profile-card">
+        <div class="profile-header">
+          <div class="profile-icon">
+            <i class="fa-solid fa-user-astronaut"></i>
+          </div>
+          <div class="profile-info">
+            <h2>{{ currentUser.name || currentUser.email }}</h2>
+            <p class="profile-area" *ngIf="currentUser.area">
+              <i [class]="getAreaIcon(currentUser.area)"></i>
+              {{ getAreaDisplayName(currentUser.area) }}
+            </p>
+          </div>
+        </div>
+        
+        <div class="profile-skills" *ngIf="currentUser.skills">
+          <h3>Minhas Habilidades:</h3>
+          <p>{{ currentUser.skills }}</p>
+        </div>
+
+        <div class="profile-actions">
+          <div class="looking-status">
+            <span class="status-label">Procurando por time:</span>
+            <button 
+              class="toggle-btn"
+              [class.active]="currentUser.lookingForTeam"
+              (click)="toggleLookingForTeam()"
+              [disabled]="isLoading">
+              <span *ngIf="currentUser.lookingForTeam">
+                <i class="fa-solid fa-check-circle"></i>
+                Sim, procurando!
+              </span>
+              <span *ngIf="!currentUser.lookingForTeam">
+                <i class="fa-solid fa-times-circle"></i>
+                Não procurando
+              </span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="main-content">
+      <div class="error-message" *ngIf="errorMessage">
+        <i class="fa-solid fa-exclamation-triangle"></i>
+        {{ errorMessage }}
+      </div>
+
+      <div class="not-looking-state" *ngIf="currentUser && !currentUser.lookingForTeam">
+        <div class="state-card">
+          <div class="state-icon">
+            <i class="fa-solid fa-user-clock"></i>
+          </div>
+          <h3>Não está procurando por um time</h3>
+          <p>Quando estiver pronto para encontrar companheiros de equipe, ative o botão "Procurando por time" acima!</p>
+          
+          <div class="benefits-list">
+            <h4>O que você pode fazer:</h4>
+            <ul>
+              <li><i class="fa-solid fa-search"></i> Encontrar pessoas com habilidades complementares</li>
+              <li><i class="fa-solid fa-handshake"></i> Conectar-se com outros participantes</li>
+              <li><i class="fa-solid fa-rocket"></i> Formar um time diverso e equilibrado</li>
+              <li><i class="fa-solid fa-trophy"></i> Aumentar suas chances de sucesso no hackathon</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="matches-section" *ngIf="currentUser && currentUser.lookingForTeam">
+        <div class="section-header">
+          <h2>
+            <i class="fa-solid fa-users-line"></i>
+            Pessoas Procurando por Time
+          </h2>
+          <button class="refresh-btn" (click)="refreshMatches()" [disabled]="isLoading">
+            <i class="fa-solid fa-refresh" [class.fa-spin]="isLoading"></i>
+            Atualizar
+          </button>
+        </div>
+
+        <div class="loading-state" *ngIf="isLoading">
+          <i class="fa-solid fa-spinner fa-spin"></i>
+          <p>Buscando pessoas...</p>
+        </div>
+
+        <div class="matches-grid" *ngIf="!isLoading">
+          <div class="match-card" *ngFor="let user of matchingUsers">
+            <div class="match-header">
+              <div class="match-icon">
+                <i [class]="getAreaIcon(user.area)"></i>
+              </div>
+              <div class="match-info">
+                <h3>{{ user.name || 'Participante' }}</h3>
+                <p class="match-area">{{ getAreaDisplayName(user.area) }}</p>
+              </div>
+            </div>
+            
+            <div class="match-skills">
+              <h4>Habilidades:</h4>
+              <p>{{ user.skills }}</p>
+            </div>
+            
+            <div class="match-actions">
+              <button class="contact-btn" (click)="contactUser(user)">
+                <i class="fa-solid fa-envelope"></i>
+                Entrar em Contato
+              </button>
+            </div>
+          </div>
+
+          <div class="empty-state" *ngIf="matchingUsers.length === 0">
+            <div class="empty-icon">
+              <i class="fa-solid fa-search"></i>
+            </div>
+            <h3>Nenhuma pessoa encontrada</h3>
+            <p>No momento não há outras pessoas procurando por time. Tente novamente mais tarde!</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <app-team-preferences-modal
+    [isOpen]="showPreferencesModal"
+    (close)="showPreferencesModal = false"
+    (preferencesSet)="onPreferencesSet()">
+  </app-team-preferences-modal>
+</div>

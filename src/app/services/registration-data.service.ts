@@ -27,6 +27,7 @@ export interface RegistrationStats {
   participationModeStats: { mode: string; count: number }[];
   phoneAreaStats: { area: string; count: number }[];
   genderStats: { gender: string; count: number }[];
+  countryStats: { country: string; count: number; flag: string }[];
 }
 
 @Injectable({
@@ -140,6 +141,9 @@ export class RegistrationDataService {
     // Estatísticas de gênero
     const genderStats = this.calculateGenderStats();
 
+    // Estatísticas de país
+    const countryStats = this.calculateCountryStats();
+
     return {
       totalRegistrations,
       uberlandiaRegistrations,
@@ -151,7 +155,8 @@ export class RegistrationDataService {
       ageStats,
       participationModeStats,
       phoneAreaStats,
-      genderStats
+      genderStats,
+      countryStats
     };
   }
 
@@ -1066,5 +1071,388 @@ export class RegistrationDataService {
     };
 
     return genderMappings[normalizedGender] || `❓ ${gender}`;
+  }
+
+  private calculateCountryStats(): { country: string; count: number; flag: string }[] {
+    const countryMap = new Map<string, number>();
+
+    this.registrationData.forEach(reg => {
+      if (reg.city) {
+        const country = this.mapCityToCountry(reg.city);
+        countryMap.set(country, (countryMap.get(country) || 0) + 1);
+      }
+    });
+
+    return Array.from(countryMap.entries())
+      .map(([country, count]) => ({
+        country,
+        count,
+        flag: this.getCountryFlag(country)
+      }))
+      .sort((a, b) => b.count - a.count);
+  }
+
+  private mapCityToCountry(city: string): string {
+    const normalizedCity = city.toLowerCase().trim();
+
+    // Mapeamento de cidades para países baseado nas cidades brasileiras e internacionais
+    const cityToCountryMap: { [key: string]: string } = {
+      // Brasil - principais cidades
+      'uberlândia': 'Brasil',
+      'uberlandia': 'Brasil',
+      'são paulo': 'Brasil',
+      'sao paulo': 'Brasil',
+      'rio de janeiro': 'Brasil',
+      'belo horizonte': 'Brasil',
+      'brasília': 'Brasil',
+      'brasilia': 'Brasil',
+      'salvador': 'Brasil',
+      'fortaleza': 'Brasil',
+      'manaus': 'Brasil',
+      'curitiba': 'Brasil',
+      'recife': 'Brasil',
+      'porto alegre': 'Brasil',
+      'goiânia': 'Brasil',
+      'goiania': 'Brasil',
+      'belém': 'Brasil',
+      'belem': 'Brasil',
+      'guarulhos': 'Brasil',
+      'campinas': 'Brasil',
+      'são luís': 'Brasil',
+      'sao luis': 'Brasil',
+      'maceió': 'Brasil',
+      'maceio': 'Brasil',
+      'natal': 'Brasil',
+      'joão pessoa': 'Brasil',
+      'joao pessoa': 'Brasil',
+      'aracaju': 'Brasil',
+      'cuiabá': 'Brasil',
+      'cuiaba': 'Brasil',
+      'campo grande': 'Brasil',
+      'florianópolis': 'Brasil',
+      'florianopolis': 'Brasil',
+      'vitória': 'Brasil',
+      'vitoria': 'Brasil',
+      'araguari': 'Brasil',
+      'uberaba': 'Brasil',
+      'catalão': 'Brasil',
+      'catalao': 'Brasil',
+      'ituiutaba': 'Brasil',
+      'patos de minas': 'Brasil',
+      'araxá': 'Brasil',
+      'araxa': 'Brasil',
+      'ibiá': 'Brasil',
+      'ibia': 'Brasil',
+
+      // Países da América do Sul
+      'buenos aires': 'Argentina',
+      'córdoba': 'Argentina',
+      'rosario': 'Argentina',
+      'mendoza': 'Argentina',
+      'la plata': 'Argentina',
+      'lima': 'Peru',
+      'arequipa': 'Peru',
+      'trujillo': 'Peru',
+      'bogotá': 'Colômbia',
+      'bogota': 'Colômbia',
+      'medellín': 'Colômbia',
+      'medellin': 'Colômbia',
+      'cali': 'Colômbia',
+      'santiago': 'Chile',
+      'valparaíso': 'Chile',
+      'valparaiso': 'Chile',
+      'concepción': 'Chile',
+      'concepcion': 'Chile',
+      'caracas': 'Venezuela',
+      'maracaibo': 'Venezuela',
+      'valencia venezuela': 'Venezuela',
+      'quito': 'Equador',
+      'guayaquil': 'Equador',
+      'cuenca': 'Equador',
+      'la paz': 'Bolívia',
+      'santa cruz': 'Bolívia',
+      'cochabamba': 'Bolívia',
+      'asunción': 'Paraguai',
+      'asuncion': 'Paraguai',
+      'ciudad del este': 'Paraguai',
+      'montevideo': 'Uruguai',
+      'punta del este': 'Uruguai',
+      'georgetown': 'Guiana',
+      'paramaribo': 'Suriname',
+
+      // América do Norte
+      'new york': 'Estados Unidos',
+      'los angeles': 'Estados Unidos',
+      'chicago': 'Estados Unidos',
+      'houston': 'Estados Unidos',
+      'phoenix': 'Estados Unidos',
+      'philadelphia': 'Estados Unidos',
+      'san antonio': 'Estados Unidos',
+      'san diego': 'Estados Unidos',
+      'dallas': 'Estados Unidos',
+      'san jose': 'Estados Unidos',
+      'austin': 'Estados Unidos',
+      'washington': 'Estados Unidos',
+      'boston': 'Estados Unidos',
+      'miami': 'Estados Unidos',
+      'seattle': 'Estados Unidos',
+      'denver': 'Estados Unidos',
+      'las vegas': 'Estados Unidos',
+      'toronto': 'Canadá',
+      'montreal': 'Canadá',
+      'vancouver': 'Canadá',
+      'calgary': 'Canadá',
+      'ottawa': 'Canadá',
+      'edmonton': 'Canadá',
+      'mexico city': 'México',
+      'guadalajara': 'México',
+      'monterrey': 'México',
+      'puebla': 'México',
+      'tijuana': 'México',
+      'león': 'México',
+      'leon': 'México',
+
+      // Europa
+      'london': 'Reino Unido',
+      'manchester': 'Reino Unido',
+      'birmingham': 'Reino Unido',
+      'glasgow': 'Reino Unido',
+      'liverpool': 'Reino Unido',
+      'paris': 'França',
+      'marseille': 'França',
+      'lyon': 'França',
+      'toulouse': 'França',
+      'nice': 'França',
+      'berlin': 'Alemanha',
+      'hamburg': 'Alemanha',
+      'munich': 'Alemanha',
+      'cologne': 'Alemanha',
+      'frankfurt': 'Alemanha',
+      'madrid': 'Espanha',
+      'barcelona': 'Espanha',
+      'valencia': 'Espanha',
+      'sevilla': 'Espanha',
+      'bilbao': 'Espanha',
+      'rome': 'Itália',
+      'milan': 'Itália',
+      'naples': 'Itália',
+      'turin': 'Itália',
+      'florence': 'Itália',
+      'amsterdam': 'Holanda',
+      'rotterdam': 'Holanda',
+      'the hague': 'Holanda',
+      'brussels': 'Bélgica',
+      'antwerp': 'Bélgica',
+      'vienna': 'Áustria',
+      'zurich': 'Suíça',
+      'geneva': 'Suíça',
+      'basel': 'Suíça',
+      'stockholm': 'Suécia',
+      'gothenburg': 'Suécia',
+      'oslo': 'Noruega',
+      'copenhagen': 'Dinamarca',
+      'helsinki': 'Finlândia',
+      'dublin': 'Irlanda',
+      'lisbon': 'Portugal',
+      'porto': 'Portugal',
+      'prague': 'República Checa',
+      'budapest': 'Hungria',
+      'warsaw': 'Polônia',
+      'krakow': 'Polônia',
+      'moscow': 'Rússia',
+      'saint petersburg': 'Rússia',
+
+      // África
+      'cairo': 'Egito',
+      'alexandria': 'Egito',
+      'lagos': 'Nigéria',
+      'abuja': 'Nigéria',
+      'johannesburg': 'África do Sul',
+      'cape town': 'África do Sul',
+      'durban': 'África do Sul',
+      'casablanca': 'Marrocos',
+      'rabat': 'Marrocos',
+      'tunis': 'Tunísia',
+      'algiers': 'Argélia',
+      'addis ababa': 'Etiópia',
+      'nairobi': 'Quênia',
+      'dar es salaam': 'Tanzânia',
+      'accra': 'Gana',
+      'kampala': 'Uganda',
+      'kigali': 'Ruanda',
+      'luanda': 'Angola',
+      'maputo': 'Moçambique',
+
+      // Ásia
+      'tokyo': 'Japão',
+      'osaka': 'Japão',
+      'yokohama': 'Japão',
+      'nagoya': 'Japão',
+      'kyoto': 'Japão',
+      'beijing': 'China',
+      'shanghai': 'China',
+      'guangzhou': 'China',
+      'shenzhen': 'China',
+      'chengdu': 'China',
+      'mumbai': 'Índia',
+      'delhi': 'Índia',
+      'bangalore': 'Índia',
+      'hyderabad': 'Índia',
+      'chennai': 'Índia',
+      'kolkata': 'Índia',
+      'pune': 'Índia',
+      'seoul': 'Coreia do Sul',
+      'busan': 'Coreia do Sul',
+      'incheon': 'Coreia do Sul',
+      'bangkok': 'Tailândia',
+      'chiang mai': 'Tailândia',
+      'jakarta': 'Indonésia',
+      'surabaya': 'Indonésia',
+      'bandung': 'Indonésia',
+      'kuala lumpur': 'Malásia',
+      'george town': 'Malásia',
+      'singapore': 'Singapura',
+      'manila': 'Filipinas',
+      'cebu': 'Filipinas',
+      'davao': 'Filipinas',
+      'hanoi': 'Vietnã',
+      'ho chi minh': 'Vietnã',
+      'phnom penh': 'Camboja',
+      'yangon': 'Mianmar',
+      'vientiane': 'Laos',
+      'dhaka': 'Bangladesh',
+      'chittagong': 'Bangladesh',
+      'islamabad': 'Paquistão',
+      'karachi': 'Paquistão',
+      'lahore': 'Paquistão',
+      'tehran': 'Irã',
+      'isfahan': 'Irã',
+      'mashhad': 'Irã',
+      'dubai': 'Emirados Árabes Unidos',
+      'abu dhabi': 'Emirados Árabes Unidos',
+      'riyadh': 'Arábia Saudita',
+      'jeddah': 'Arábia Saudita',
+      'kuwait city': 'Kuwait',
+      'doha': 'Catar',
+      'manama': 'Bahrein',
+      'tel aviv': 'Israel',
+      'jerusalem': 'Israel',
+      'ankara': 'Turquia',
+      'istanbul': 'Turquia',
+      'izmir': 'Turquia',
+
+      // Oceania
+      'sydney': 'Austrália',
+      'melbourne': 'Austrália',
+      'brisbane': 'Austrália',
+      'perth': 'Austrália',
+      'adelaide': 'Austrália',
+      'canberra': 'Austrália',
+      'auckland': 'Nova Zelândia',
+      'wellington': 'Nova Zelândia',
+      'christchurch': 'Nova Zelândia'
+    };
+
+    // Verifica se a cidade está no mapeamento
+    if (cityToCountryMap[normalizedCity]) {
+      return cityToCountryMap[normalizedCity];
+    }
+
+    // Verifica se contém palavras-chave de países lusófonos em português
+    const brazilKeywords = ['mg', 'minas gerais', 'sp', 'são paulo', 'rj', 'rio de janeiro',
+                          'go', 'goias', 'goiás', 'pr', 'parana', 'paraná', 'sc', 'santa catarina',
+                          'rs', 'rio grande do sul', 'ce', 'ceara', 'ceará', 'ba', 'bahia',
+                          'pe', 'pernambuco', 'al', 'alagoas', 'ma', 'maranhao', 'maranhão',
+                          'ms', 'mato grosso do sul', 'df', 'distrito federal', 'am', 'amazonas',
+                          'se', 'sergipe', 'brasil', 'brazil'];
+
+    for (const keyword of brazilKeywords) {
+      if (normalizedCity.includes(keyword)) {
+        return 'Brasil';
+      }
+    }
+
+    // Para cidades não mapeadas, assume Brasil como padrão
+    return 'Brasil';
+  }
+
+  private getCountryFlag(country: string): string {
+    const flagMap: { [key: string]: string } = {
+      'Brasil': '🇧🇷',
+      'Argentina': '🇦🇷',
+      'Peru': '🇵🇪',
+      'Colômbia': '🇨🇴',
+      'Chile': '🇨🇱',
+      'Venezuela': '🇻🇪',
+      'Equador': '🇪🇨',
+      'Bolívia': '🇧🇴',
+      'Paraguai': '🇵🇾',
+      'Uruguai': '🇺🇾',
+      'Guiana': '🇬🇾',
+      'Suriname': '🇸🇷',
+      'Estados Unidos': '🇺🇸',
+      'Canadá': '🇨🇦',
+      'México': '🇲🇽',
+      'Reino Unido': '🇬🇧',
+      'França': '🇫🇷',
+      'Alemanha': '🇩🇪',
+      'Espanha': '🇪🇸',
+      'Itália': '🇮🇹',
+      'Holanda': '🇳🇱',
+      'Bélgica': '🇧🇪',
+      'Áustria': '🇦🇹',
+      'Suíça': '🇨🇭',
+      'Suécia': '🇸🇪',
+      'Noruega': '🇳🇴',
+      'Dinamarca': '🇩🇰',
+      'Finlândia': '🇫🇮',
+      'Irlanda': '🇮🇪',
+      'Portugal': '🇵🇹',
+      'República Checa': '🇨🇿',
+      'Hungria': '🇭🇺',
+      'Polônia': '🇵🇱',
+      'Rússia': '🇷🇺',
+      'Egito': '🇪🇬',
+      'Nigéria': '🇳🇬',
+      'África do Sul': '🇿🇦',
+      'Marrocos': '🇲🇦',
+      'Tunísia': '🇹🇳',
+      'Argélia': '🇩🇿',
+      'Etiópia': '🇪🇹',
+      'Quênia': '🇰🇪',
+      'Tanzânia': '🇹🇿',
+      'Gana': '🇬🇭',
+      'Uganda': '🇺🇬',
+      'Ruanda': '🇷🇼',
+      'Angola': '🇦🇴',
+      'Moçambique': '🇲🇿',
+      'Japão': '🇯🇵',
+      'China': '🇨🇳',
+      'Índia': '🇮🇳',
+      'Coreia do Sul': '🇰🇷',
+      'Tailândia': '🇹🇭',
+      'Indonésia': '🇮🇩',
+      'Malásia': '🇲🇾',
+      'Singapura': '🇸🇬',
+      'Filipinas': '🇵🇭',
+      'Vietnã': '🇻🇳',
+      'Camboja': '🇰🇭',
+      'Mianmar': '🇲🇲',
+      'Laos': '🇱🇦',
+      'Bangladesh': '🇧🇩',
+      'Paquistão': '🇵🇰',
+      'Irã': '🇮🇷',
+      'Emirados Árabes Unidos': '🇦🇪',
+      'Arábia Saudita': '🇸🇦',
+      'Kuwait': '🇰🇼',
+      'Catar': '🇶🇦',
+      'Bahrein': '🇧🇭',
+      'Israel': '🇮🇱',
+      'Turquia': '🇹🇷',
+      'Austrália': '🇦🇺',
+      'Nova Zelândia': '🇳🇿'
+    };
+
+    return flagMap[country] || '🌍';
   }
 }

@@ -1,0 +1,227 @@
+<section class="world-cities-comparison-section">
+  <div class="section-header">
+    <h2 class="section-title">
+      <span class="title-icon">🌍</span>
+      Comparação: Cidades do Mundo
+    </h2>
+    <p class="section-description">
+      Análise comparativa entre Uberlândia e outras cidades do mundo participantes do Space Apps Challenge
+    </p>
+  </div>
+
+  <!-- Loading State -->
+  <div class="loading-state" *ngIf="isLoading">
+    <div class="spinner"></div>
+    <p>Carregando dados de comparação...</p>
+  </div>
+
+  <!-- Content -->
+  <div class="comparison-content" *ngIf="!isLoading && uberlandia">
+
+    <!-- Uberlândia Highlights -->
+    <div class="uberlandia-highlights">
+      <h3 class="highlights-title">🏆 Desempenho de Uberlândia no Mundo</h3>
+
+      <div class="highlights-grid">
+        <div class="highlight-card rank-card">
+          <div class="highlight-icon">📊</div>
+          <div class="highlight-content">
+            <h4>Ranking Mundial por Times</h4>
+            <div class="rank-display">
+              <span class="rank-emoji">{{ getRankEmoji(uberlandiaTeamsRank) }}</span>
+              <span class="rank-position">#{{ uberlandiaTeamsRank }}</span>
+              <span class="rank-total">de {{ citiesComparison.length }}</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="highlight-card rank-card">
+          <div class="highlight-icon">✅</div>
+          <div class="highlight-content">
+            <h4>Ranking Mundial por Taxa de Submissão</h4>
+            <div class="rank-display">
+              <span class="rank-emoji">{{ getRankEmoji(uberlandiaSubmissionRank) }}</span>
+              <span class="rank-position">#{{ uberlandiaSubmissionRank }}</span>
+              <span class="rank-total">de {{ citiesComparison.length }}</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="highlight-card stats-card">
+          <div class="highlight-icon">🚀</div>
+          <div class="highlight-content">
+            <h4>Contribuição em Times</h4>
+            <div class="stats-display">
+              <span class="stats-value">{{ uberlandia.totalTeams }}</span>
+              <span class="stats-label">times</span>
+            </div>
+            <div class="percentage-bar">
+              <div class="percentage-fill" [style.width.%]="getUberlandiaPercentage('teams')"></div>
+            </div>
+            <span class="percentage-text">{{ getUberlandiaPercentage('teams').toFixed(2) }}% do Mundo</span>
+          </div>
+        </div>
+
+        <div class="highlight-card stats-card">
+          <div class="highlight-icon">📝</div>
+          <div class="highlight-content">
+            <h4>Projetos Submetidos</h4>
+            <div class="stats-display">
+              <span class="stats-value">{{ uberlandia.submittedProjects }}</span>
+              <span class="stats-label">projetos</span>
+            </div>
+            <div class="percentage-bar">
+              <div class="percentage-fill" [style.width.%]="getUberlandiaPercentage('submitted')"></div>
+            </div>
+            <span class="percentage-text">{{ getUberlandiaPercentage('submitted').toFixed(2) }}% do Mundo</span>
+          </div>
+        </div>
+
+        <div class="highlight-card comparison-card" [ngClass]="getComparisonClass(uberlandia.submissionRate, averageSubmissionRate)">
+          <div class="highlight-icon">📈</div>
+          <div class="highlight-content">
+            <h4>Taxa de Submissão</h4>
+            <div class="comparison-display">
+              <div class="comparison-values">
+                <span class="city-value">{{ uberlandia.submissionRate.toFixed(1) }}%</span>
+                <span class="vs-text">vs</span>
+                <span class="avg-value">{{ averageSubmissionRate.toFixed(1) }}%</span>
+              </div>
+              <span class="comparison-label">Uberlândia vs Média Mundial</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- World Summary Stats -->
+    <div class="world-summary">
+      <h3 class="summary-title">🌐 Estatísticas Gerais do Mundo</h3>
+
+      <div class="summary-grid">
+        <div class="summary-card">
+          <div class="summary-icon">🌆</div>
+          <div class="summary-value">{{ citiesComparison.length }}</div>
+          <div class="summary-label">Cidades Participantes</div>
+        </div>
+
+        <div class="summary-card">
+          <div class="summary-icon">🚀</div>
+          <div class="summary-value">{{ totalTeamsWorld }}</div>
+          <div class="summary-label">Total de Times</div>
+        </div>
+
+        <div class="summary-card">
+          <div class="summary-icon">✅</div>
+          <div class="summary-value">{{ totalSubmittedWorld }}</div>
+          <div class="summary-label">Projetos Submetidos</div>
+        </div>
+
+        <div class="summary-card">
+          <div class="summary-icon">📈</div>
+          <div class="summary-value">{{ averageSubmissionRate.toFixed(1) }}%</div>
+          <div class="summary-label">Taxa Média Submissão</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Detailed Comparison Table -->
+    <div class="comparison-table-container">
+      <h3 class="table-title">🏅 Ranking Detalhado Mundial (Top 20)</h3>
+
+      <div class="comparison-table">
+        <div class="table-header">
+          <div class="table-cell rank-cell">Pos</div>
+          <div class="table-cell city-cell">Cidade</div>
+          <div class="table-cell teams-cell">Times</div>
+          <div class="table-cell submitted-cell">Submetidos</div>
+          <div class="table-cell rate-cell">Taxa</div>
+        </div>
+
+        <div
+          class="table-row"
+          *ngFor="let city of citiesComparison.slice(0, 20); let i = index"
+          [class.uberlandia-row]="city.isUberlandia"
+          [class.top-three]="i < 3">
+
+          <div class="table-cell rank-cell">
+            <span class="rank-number">{{ city.rank }}</span>
+            <span class="rank-emoji" *ngIf="i < 3">{{ getRankEmoji(city.rank || 0) }}</span>
+          </div>
+
+          <div class="table-cell city-cell">
+            <span class="city-name">{{ city.cityName }}</span>
+            <span class="city-badge" *ngIf="city.isUberlandia">🎯</span>
+          </div>
+
+          <div class="table-cell teams-cell">
+            <span class="cell-value">{{ city.totalTeams }}</span>
+          </div>
+
+          <div class="table-cell submitted-cell">
+            <span class="cell-value">{{ city.submittedProjects }}</span>
+            <span class="cell-detail">/ {{ city.totalTeams }}</span>
+          </div>
+
+          <div class="table-cell rate-cell">
+            <div class="rate-container">
+              <div class="rate-bar-container">
+                <div
+                  class="rate-bar"
+                  [style.width.%]="city.submissionRate"
+                  [ngClass]="getSubmissionRateClass(city.submissionRate)">
+                </div>
+              </div>
+              <span class="rate-value">{{ city.submissionRate.toFixed(1) }}%</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Performance Insights -->
+    <div class="performance-insights" *ngIf="uberlandia">
+      <h3 class="insights-title">💡 Insights de Desempenho Mundial</h3>
+
+      <div class="insights-list">
+        <div class="insight-item" *ngIf="uberlandiaTeamsRank <= 10">
+          <span class="insight-icon success">🎉</span>
+          <p class="insight-text">
+            <strong>Excelente!</strong> Uberlândia está entre as top 10 cidades do mundo em número de times!
+          </p>
+        </div>
+
+        <div class="insight-item" *ngIf="uberlandia.submissionRate > averageSubmissionRate">
+          <span class="insight-icon success">✨</span>
+          <p class="insight-text">
+            <strong>Acima da média!</strong> A taxa de submissão de Uberlândia está
+            {{ (uberlandia.submissionRate - averageSubmissionRate).toFixed(1) }}% acima da média mundial.
+          </p>
+        </div>
+
+        <div class="insight-item" *ngIf="uberlandia.submissionRate <= averageSubmissionRate">
+          <span class="insight-icon warning">⚠️</span>
+          <p class="insight-text">
+            <strong>Oportunidade de melhoria:</strong> A taxa de submissão está
+            {{ (averageSubmissionRate - uberlandia.submissionRate).toFixed(1) }}% abaixo da média mundial.
+            Vamos incentivar mais times a submeter seus projetos!
+          </p>
+        </div>
+
+        <div class="insight-item">
+          <span class="insight-icon info">📊</span>
+          <p class="insight-text">
+            Uberlândia representa <strong>{{ getUberlandiaPercentage('teams').toFixed(2) }}%</strong>
+            de todos os times no Space Apps Challenge no mundo.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Empty State -->
+  <div class="empty-state" *ngIf="!isLoading && !uberlandia">
+    <div class="empty-icon">📊</div>
+    <p>Nenhum dado disponível para comparação.</p>
+  </div>
+</section>

@@ -1,0 +1,36 @@
+<div class="participants-container">
+  <div class="header">
+    <h1>Participantes NASA Space Apps Challenge</h1>
+    <p class="subtitle">Conheça os participantes do desafio em Uberlândia</p>
+  </div>
+
+  <div class="participants-grid">
+    <div
+      *ngFor="let profile of profiles$ | async"
+      class="participant-card"
+      (click)="openProfile(profile.profileUrl)"
+    >
+      <div class="card-content">
+        <div class="photo-container">
+          <img
+            [src]="profile.photoUrl"
+            [alt]="profile.name"
+            class="profile-photo"
+          />
+          <div class="platform-badge">
+            LinkedIn
+          </div>
+        </div>
+
+        <div class="info-container">
+          <h3 class="name">{{ profile.name }}</h3>
+          <p class="title">{{ profile.title }}</p>
+        </div>
+
+        <div class="hover-overlay">
+          <span class="view-profile">Ver Perfil →</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

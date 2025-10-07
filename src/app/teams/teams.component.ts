@@ -18,10 +18,11 @@ export class TeamsComponent implements OnInit {
   totalCount = 0;
   hasNextPage = false;
   endCursor = '';
-  
+
   // Filter properties
   selectedChallenge = '';
   availableChallenges: { id: string, title: string }[] = [];
+  selectedSubmissionStatus = ''; // '' = todos, 'submitted' = submetidos, 'not-submitted' = não submetidos
 
   constructor(private teamsService: TeamsService) {}
 
@@ -39,15 +40,22 @@ export class TeamsComponent implements OnInit {
         if (response.data && response.data[0] && response.data[0].teams) {
           const teamsData = response.data[0].teams;
           let teams = teamsData.edges.map(edge => edge.node);
-          
+
           // Apply challenge filter
           if (this.selectedChallenge) {
-            teams = teams.filter(team => 
+            teams = teams.filter(team =>
               team.challengeDetails?.id === this.selectedChallenge ||
               team.challengeDetails?.title === this.selectedChallenge
             );
           }
-          
+
+          // Apply submission status filter
+          if (this.selectedSubmissionStatus === 'submitted') {
+            teams = teams.filter(team => team.projectSubmitted === true);
+          } else if (this.selectedSubmissionStatus === 'not-submitted') {
+            teams = teams.filter(team => team.projectSubmitted === false);
+          }
+
           if (after) {
             this.teams.push(...teams);
           } else {
@@ -91,7 +99,7 @@ export class TeamsComponent implements OnInit {
         if (response.data && response.data[0] && response.data[0].teams) {
           const teams = response.data[0].teams.edges.map(edge => edge.node);
           const challengeMap = new Map<string, string>();
-          
+
           teams.forEach(team => {
             if (team.challengeDetails && team.challengeDetails.title) {
               challengeMap.set(team.challengeDetails.id || team.challenge, team.challengeDetails.title);
@@ -101,6 +109,8 @@ export class TeamsComponent implements OnInit {
           this.availableChallenges = Array.from(challengeMap.entries())
             .map(([id, title]) => ({ id, title }))
             .sort((a, b) => a.title.localeCompare(b.title));
+
+            console.log('Available Challenges:', this.availableChallenges);
         }
       },
       error: (error) => {
@@ -113,8 +123,13 @@ export class TeamsComponent implements OnInit {
     this.loadTeams();
   }
 
+  onSubmissionStatusFilter(): void {
+    this.loadTeams();
+  }
+
   clearFilters(): void {
     this.selectedChallenge = '';
+    this.selectedSubmissionStatus = '';
     this.searchQuery = '';
     this.loadTeams();
   }
@@ -122,5 +137,23 @@ export class TeamsComponent implements OnInit {
   getSelectedChallengeTitle(): string {
     const challenge = this.availableChallenges.find(c => c.id === this.selectedChallenge);
     return challenge ? challenge.title : '';
+  }
+
+  getSubmissionStatusLabel(): string {
+    if (this.selectedSubmissionStatus === 'submitted') {
+      return 'Projeto submetido';
+    } else if (this.selectedSubmissionStatus === 'not-submitted') {
+      return 'Projeto não submetido';
+    }
+    return '';
+  }
+
+  getTotalCountLabel(): string {
+    if (this.selectedSubmissionStatus === 'submitted') {
+      return this.teams.filter(team => team.projectSubmitted).length.toString();
+    } else if (this.selectedSubmissionStatus === 'not-submitted') {
+      return this.teams.filter(team => !team.projectSubmitted).length.toString();
+    }
+    return this.totalCount.toString();
   }
 }

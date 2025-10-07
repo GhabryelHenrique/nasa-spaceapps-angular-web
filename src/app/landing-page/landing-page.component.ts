@@ -14,7 +14,6 @@ import { TeamsService } from '../services/teams.service';
   imports: [
     CommonModule,
     RouterModule,
-    HeaderComponent,
     HeroSectionComponent,
     UberlandiaHighlightsComponent,
     EventInfoTabsComponent,
@@ -27,9 +26,9 @@ import { TeamsService } from '../services/teams.service';
 export class LandingPageComponent implements OnInit, OnDestroy {
   totalTeams = 0;
   totalMembers = 0;
-  
+
   // Countdown properties
-  eventDate = new Date('2025-10-04T00:00:00-03:00'); // October 4th, 2025 in Brazil timezone
+  eventDate = new Date('2025-10-16T23:59:59-03:00'); // Global Nominees announcement: October 16th, 2025 23:59:59 in Brazil timezone
   countdown = { days: 0, hours: 0, minutes: 0, seconds: 0 };
   countdownInterval: any;
 
@@ -39,7 +38,7 @@ export class LandingPageComponent implements OnInit, OnDestroy {
     this.loadTeamsStats();
     this.startCountdown();
   }
-  
+
   ngOnDestroy(): void {
     if (this.countdownInterval) {
       clearInterval(this.countdownInterval);
@@ -82,7 +81,7 @@ export class LandingPageComponent implements OnInit, OnDestroy {
       name: 'Mariana Milena',
       role: 'Divulgação Científica',
       description: 'Divulgadora aeroespacial, palestrantes, mentores e principal rosto do evento.',
-      photo: 'https://media.licdn.com/dms/image/v2/D4D03AQFfrA4KuxAvSg/profile-displayphoto-crop_800_800/B4DZf2yGpmHkAI-/0/1752192019589?e=1758153600&v=beta&t=tTvFpM9yDl-z5gZAfFdAPWlq1D5wCDIO8-ld4LA2wRM',
+      photo: 'assets/organizers/mari.jpeg',
       url: 'https://www.instagram.com/marimilenastudies'
     },
     {
@@ -94,11 +93,11 @@ export class LandingPageComponent implements OnInit, OnDestroy {
 
     },
     {
-      name: 'Melissa Nobre',
-      role: 'Comunicação & Redes Sociais',
-      description: 'Comunicação, posicionamento, redes sociais e mídia digital e tradicional.',
-      photo: 'https://media.licdn.com/dms/image/v2/D4D03AQHSnq26V6HB5A/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1711410916045?e=1758153600&v=beta&t=5k--Nr5ttnI1c0zxNtNEhDSztV6ydOez2DiTK5_vz_Y',
-      url: 'https://www.instagram.com/melissa.nobre'
+      name: 'Giulia Maronezzi',
+      role: 'Marketing & Divulgação',
+      description: 'Marketing, divulgação, parcerias e mídia digital e tradicional.',
+      photo: 'assets/organizers/giulia.jpg',
+      url: 'https://www.instagram.com/giuliamaronezzi'
     },
     {
       name: 'Ghabryel',
@@ -108,11 +107,11 @@ export class LandingPageComponent implements OnInit, OnDestroy {
       url: 'https://www.instagram.com/ghabryel.dev'
     },
     {
-      name: 'Giulia Maronezzi',
-      role: 'Marketing & Divulgação',
-      description: 'Marketing, divulgação, parcerias e mídia digital e tradicional.',
-      photo: 'https://media.licdn.com/dms/image/v2/D4D03AQHM0b1GWL7w9g/profile-displayphoto-shrink_800_800/B4DZd7tT3XGUAc-/0/1750127166671?e=1758153600&v=beta&t=WRHFHWxVzjAttnHSEZYAGATOdfE3PjIczdzCsGZp6jI',
-      url: 'https://www.instagram.com/giuliamaronezzi'
+      name: 'Antônio Augusto Norato',
+      role: 'Juridico',
+      description: 'Responsável pela advocacia e jurisprudência do evento.',
+      photo: 'assets/organizers/antonio.jpg',
+      url: 'https://www.instagram.com/ghabryel.dev'
     },
     {
       name: 'Wellington Alexandre',
@@ -125,8 +124,15 @@ export class LandingPageComponent implements OnInit, OnDestroy {
       name: 'Cris Izawa',
       role: 'Parceria MTI & Organização',
       description: 'Responsável pela parceria com o MTI e organização macro do evento.',
-      photo: 'cris-izawa.jpg',
+      photo: 'assets/organizers/cris.png',
       url: 'https://www.instagram.com/mti.oficial'
+    },
+    {
+      name: 'Melissa Nobre',
+      role: 'Comunicação & Redes Sociais',
+      description: 'Comunicação, posicionamento, redes sociais e mídia digital e tradicional.',
+      photo: 'assets/organizers/melissa.jpg',
+      url: 'https://www.instagram.com/melissa.nobre'
     },
     {
       name: 'Thaynan Salviano',
@@ -141,14 +147,7 @@ export class LandingPageComponent implements OnInit, OnDestroy {
       description: 'Infraestrutura, parcerias, geração de oportunidades e apoiadores.',
       photo: 'assets/organizers/image.png',
       url: 'https://www.instagram.com/bia.neves'
-    },
-    {
-      name: 'Eduarda',
-      role: 'Iniciativa Meninas Tech',
-      description: 'Promove a presença feminina no Space Apps em todos os aspectos.',
-      photo: 'https://media.licdn.com/dms/image/v2/D4D03AQE29YklVx-1UQ/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1724866739948?e=1758153600&v=beta&t=CnHmdtE39j6yUGxpVPmABZM_1Raajceo7PjLHcBn1NQ',
-      url: 'https://www.instagram.com/maismeninastech'
-    },
+    }
   ];
 
   trackByName(index: number, organizer: any): string {
@@ -158,19 +157,19 @@ export class LandingPageComponent implements OnInit, OnDestroy {
   registerNow(): void {
     window.open('https://discord.gg/FT4Jsvj5vy', '_blank');
   }
-  
+
   private startCountdown(): void {
     this.updateCountdown();
     this.countdownInterval = setInterval(() => {
       this.updateCountdown();
     }, 1000);
   }
-  
+
   private updateCountdown(): void {
     const now = new Date().getTime();
     const eventTime = this.eventDate.getTime();
     const difference = eventTime - now;
-    
+
     if (difference > 0) {
       this.countdown.days = Math.floor(difference / (1000 * 60 * 60 * 24));
       this.countdown.hours = Math.floor((difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));

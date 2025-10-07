@@ -1,0 +1,484 @@
+
+    .profile-create {
+      min-height: 100vh;
+      background: #0b0d17;
+      color: #ffffff;
+    }
+
+    /* Header */
+    .profile-header {
+      background: linear-gradient(135deg, #1a1d35 0%, #2c3555 50%, #0f3460 100%);
+      border-bottom: 2px solid #ff4444;
+      padding: 6rem 0 2rem;
+      position: relative;
+    }
+
+    .profile-header::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="stars" x="0" y="0" width="10" height="10" patternUnits="userSpaceOnUse"><circle cx="2" cy="2" r="0.5" fill="%23ffffff" opacity="0.3"/><circle cx="7" cy="7" r="0.3" fill="%23ffffff" opacity="0.5"/></pattern></defs><rect width="100" height="100" fill="url(%23stars)"/></svg>') repeat;
+      opacity: 0.1;
+      pointer-events: none;
+    }
+
+    .header-content {
+      display: flex;
+      align-items: center;
+      gap: 2rem;
+    }
+
+    .btn-back {
+      background: transparent;
+      border: 2px solid #ff4444;
+      color: #ff4444;
+      padding: 0.75rem 1.5rem;
+      border-radius: 12px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-weight: 500;
+    }
+
+    .btn-back:hover {
+      background: #ff4444;
+      color: white;
+      transform: translateY(-2px);
+    }
+
+    .header-info h1 {
+      font-size: 2.5rem;
+      font-weight: 700;
+      margin: 0 0 0.5rem 0;
+      text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+    }
+
+    .header-info p {
+      margin: 0;
+      color: #b8c5d6;
+      font-size: 1.1rem;
+    }
+
+    /* Main Content */
+    .profile-main {
+      padding: 3rem 0;
+    }
+
+    .container {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 0 2rem;
+    }
+
+    /* Progress */
+    .progress-section {
+      background: linear-gradient(135deg, #1a1d35 0%, #2c3555 100%);
+      border: 1px solid #3a4370;
+      border-radius: 16px;
+      padding: 2rem;
+      margin-bottom: 2rem;
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+
+    .progress-bar {
+      flex: 1;
+      height: 8px;
+      background: rgba(58, 67, 112, 0.5);
+      border-radius: 4px;
+      overflow: hidden;
+    }
+
+    .progress-fill {
+      height: 100%;
+      background: linear-gradient(90deg, #ff4444 0%, #ff6b6b 100%);
+      border-radius: 4px;
+      transition: width 0.3s ease;
+    }
+
+    .progress-text {
+      color: #ff4444;
+      font-weight: 600;
+      font-size: 1.1rem;
+    }
+
+    /* Form Sections */
+    .form-section {
+      background: linear-gradient(135deg, #1a1d35 0%, #2c3555 100%);
+      border: 1px solid #3a4370;
+      border-radius: 16px;
+      padding: 2rem;
+      margin-bottom: 2rem;
+    }
+
+    .section-title {
+      font-size: 1.5rem;
+      font-weight: 600;
+      color: #ffffff;
+      margin-bottom: 1.5rem;
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+    }
+
+    .section-title i {
+      color: #ff4444;
+      font-size: 1.2rem;
+    }
+
+    .btn-add-section {
+      background: #ff4444;
+      border: none;
+      color: white;
+      padding: 0.5rem 1rem;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 0.9rem;
+      margin-left: auto;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      transition: all 0.3s ease;
+    }
+
+    .btn-add-section:hover {
+      background: #e63939;
+      transform: translateY(-1px);
+    }
+
+    /* Form Grid */
+    .form-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .form-group {
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+
+    .form-group.full-width {
+      grid-column: 1 / -1;
+    }
+
+    /* Form Elements */
+    label {
+      color: #e8ecf0;
+      font-weight: 500;
+      font-size: 1rem;
+    }
+
+    input, select, textarea {
+      background: rgba(26, 29, 53, 0.5);
+      border: 1px solid #3a4370;
+      border-radius: 12px;
+      padding: 0.875rem 1rem;
+      color: #ffffff;
+      font-size: 1rem;
+      transition: all 0.3s ease;
+    }
+
+    input:focus, select:focus, textarea:focus {
+      outline: none;
+      border-color: #ff4444;
+      box-shadow: 0 0 0 3px rgba(255, 68, 68, 0.1);
+    }
+
+    input::placeholder, textarea::placeholder {
+      color: #8892b0;
+    }
+
+    input.error, select.error, textarea.error {
+      border-color: #ff6b6b;
+      background: rgba(255, 107, 107, 0.1);
+    }
+
+    small {
+      color: #8892b0;
+      font-size: 0.85rem;
+    }
+
+    /* Skills Input */
+    .skills-input {
+      display: flex;
+      gap: 0.5rem;
+    }
+
+    .skills-input input {
+      flex: 1;
+    }
+
+    .btn-add {
+      background: #ff4444;
+      border: none;
+      color: white;
+      padding: 0.875rem 1rem;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    .btn-add:hover {
+      background: #e63939;
+    }
+
+    /* Tags */
+    .tags-container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin-top: 0.5rem;
+    }
+
+    .tag {
+      background: rgba(255, 68, 68, 0.2);
+      border: 1px solid #ff4444;
+      color: #ff6b6b;
+      padding: 0.5rem 0.75rem;
+      border-radius: 20px;
+      font-size: 0.9rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .tag button {
+      background: none;
+      border: none;
+      color: inherit;
+      cursor: pointer;
+      padding: 0;
+      font-size: 0.8rem;
+      opacity: 0.7;
+    }
+
+    .tag button:hover {
+      opacity: 1;
+    }
+
+    /* Experience Items */
+    .experience-item {
+      background: rgba(58, 67, 112, 0.2);
+      border: 1px solid #3a4370;
+      border-radius: 12px;
+      padding: 1.5rem;
+      margin-bottom: 1rem;
+    }
+
+    .experience-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 1rem;
+    }
+
+    .experience-header h3 {
+      color: #ff4444;
+      font-size: 1.1rem;
+      margin: 0;
+    }
+
+    .btn-remove {
+      background: rgba(255, 107, 107, 0.2);
+      border: 1px solid #ff6b6b;
+      color: #ff6b6b;
+      padding: 0.5rem;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    .btn-remove:hover {
+      background: #ff6b6b;
+      color: white;
+    }
+
+    /* Empty State */
+    .empty-state {
+      text-align: center;
+      padding: 3rem 2rem;
+      color: #8892b0;
+    }
+
+    .empty-state i {
+      font-size: 3rem;
+      color: #3a4370;
+      margin-bottom: 1rem;
+    }
+
+    .empty-state p {
+      margin: 0 0 1.5rem 0;
+      font-size: 1.1rem;
+    }
+
+    /* Buttons */
+    .btn {
+      padding: 0.875rem 2rem;
+      border-radius: 12px;
+      font-weight: 600;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      border: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      text-decoration: none;
+    }
+
+    .btn-primary {
+      background: #ff4444;
+      color: white;
+    }
+
+    .btn-primary:hover:not(:disabled) {
+      background: #e63939;
+      transform: translateY(-2px);
+      box-shadow: 0 8px 25px rgba(255, 68, 68, 0.3);
+    }
+
+    .btn-primary:disabled {
+      opacity: 0.6;
+      cursor: not-allowed;
+      transform: none;
+    }
+
+    .btn-secondary {
+      background: transparent;
+      color: #8892b0;
+      border: 1px solid #3a4370;
+    }
+
+    .btn-secondary:hover {
+      border-color: #8892b0;
+      color: #ffffff;
+    }
+
+    /* Form Actions */
+    .form-actions {
+      display: flex;
+      justify-content: flex-end;
+      gap: 1rem;
+      padding-top: 2rem;
+      margin-top: 2rem;
+      border-top: 1px solid #3a4370;
+    }
+
+    /* Checkbox Groups */
+    .checkbox-group {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 12px;
+      margin-top: 8px;
+    }
+
+    .checkbox-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 8px;
+      padding: 12px;
+      background: rgba(26, 29, 53, 0.3);
+      border: 1px solid #3a4370;
+      border-radius: 12px;
+      transition: all 0.2s ease;
+
+      &:hover {
+        background: rgba(58, 67, 112, 0.2);
+        border-color: #5a6494;
+      }
+
+      input[type="checkbox"] {
+        margin: 0;
+        flex-shrink: 0;
+        margin-top: 2px;
+        accent-color: #ff4444;
+        width: 18px;
+        height: 18px;
+      }
+
+      label {
+        margin: 0;
+        font-weight: 500;
+        color: #e8ecf0;
+        cursor: pointer;
+        line-height: 1.4;
+        flex: 1;
+
+        small {
+          display: block;
+          font-weight: normal;
+          color: #8892b0;
+          margin-top: 4px;
+          font-size: 0.875rem;
+        }
+      }
+
+      input[type="checkbox"]:checked + label {
+        color: #ff6b6b;
+      }
+    }
+
+    .form-group.full-width .checkbox-item {
+      background: rgba(255, 68, 68, 0.1);
+      border-color: #ff4444;
+      padding: 16px;
+      
+      label {
+        font-size: 1rem;
+        
+        strong {
+          color: #ff6b6b;
+        }
+      }
+
+      input[type="checkbox"]:checked + label strong {
+        color: #ff4444;
+      }
+    }
+
+    /* Error Messages */
+    .error-message {
+      color: #ff6b6b;
+      font-size: 0.9rem;
+      margin-top: 0.25rem;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .header-content {
+        flex-direction: column;
+        text-align: center;
+        gap: 1rem;
+      }
+
+      .header-info h1 {
+        font-size: 2rem;
+      }
+
+      .form-grid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+      }
+
+      .form-actions {
+        flex-direction: column;
+      }
+
+      .container {
+        padding: 0 1rem;
+      }
+
+      .checkbox-group {
+        grid-template-columns: 1fr;
+      }
+    }

@@ -4,10 +4,10 @@
       <img src="assets/nasa-spaceapps-logo-removebg-preview.png" alt="Logo do NASA Space Apps Challenge - Hackathon espacial internacional" width="10%"  loading="lazy" style="cursor: pointer;">
     </a>
     <div class="nav-actions">
-      <button class="social-btn whatsapp-btn" (click)="openWhatsApp()">
+      <!-- <button class="social-btn whatsapp-btn" (click)="openWhatsApp()">
         <i class="fa-brands fa-whatsapp"></i>
         WhatsApp
-      </button>
+      </button> -->
       <button class="social-btn discord-btn" (click)="joinDiscordServer()">
         <i class="fa-brands fa-discord"></i>
         Discord
@@ -25,10 +25,27 @@
         <i class="fa-solid fa-users"></i>
         <span i18n="@@nav.teams">Times</span>
       </a>
-      <a href="https://docs.google.com/forms/d/e/1FAIpQLSfXZyu0PCuyIGgC_33jCLaOk-dmB1SugvrIt2eUK7EaWvq6mg/viewform" class="login-btn" target="_blank" rel="noopener noreferrer">
+      <!-- <button class="matchmaking-btn" (click)="openMatchmaking()">
+        <i class="fa-solid fa-handshake"></i>
+        Matchmaking
+      </button> -->
+      <!-- <a href="https://docs.google.com/forms/d/e/1FAIpQLSfXZyu0PCuyIGgC_33jCLaOk-dmB1SugvrIt2eUK7EaWvq6mg/viewform" class="login-btn" target="_blank" rel="noopener noreferrer">
         <i class="fa-solid fa-user-plus"></i>
         <span i18n="@@nav.register">Inscreva-se Agora</span>
-      </a>
+      </a> -->
     </div>
   </nav>
 </header>
+
+<app-email-verification-modal
+  [isOpen]="showEmailModal"
+  (close)="showEmailModal = false"
+  (emailVerified)="onEmailVerified($event)">
+</app-email-verification-modal>
+
+<app-code-verification-modal
+  [isOpen]="showCodeModal"
+  [email]="userEmail"
+  (close)="showCodeModal = false"
+  (codeVerified)="onCodeVerified()">
+</app-code-verification-modal>

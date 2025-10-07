@@ -186,6 +186,25 @@ a {
         }
       }
 
+      .matchmaking-btn {
+        background: linear-gradient(135deg, #ff6b9d, #dc267f);
+        border: none;
+        padding: 0.75rem 1.5rem;
+        border-radius: 25px;
+        color: var(--nasa-white);
+        font-weight: 600;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+
+        &:hover {
+          transform: translateY(-2px);
+          box-shadow: 0 6px 20px rgba(255, 107, 157, 0.4);
+        }
+      }
+
       .mobile-menu-btn {
         display: none;
         background: none;
@@ -340,7 +359,7 @@ a {
     justify-content: space-between;
 
     .nav-actions {
-      .social-btn, .register-btn, .login-btn {
+      .social-btn, .register-btn, .matchmaking-btn, .login-btn {
         display: none;
       }
 

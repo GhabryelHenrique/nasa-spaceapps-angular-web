@@ -5,17 +5,21 @@ import { CityParticipation } from '../shared/interfaces/local-event.interface';
 import { RegistrationChartsComponent } from './components/registration-charts/registration-charts.component';
 import { RegistrationMapComponent } from './components/registration-map/registration-map.component';
 import { ChallengeChartComponent } from './components/challenge-chart/challenge-chart.component';
+import { ParticipantsByCountryChartComponent } from './components/participants-by-country-chart/participants-by-country-chart.component';
+import { BrazilianCitiesComparisonComponent } from './components/brazilian-cities-comparison/brazilian-cities-comparison.component';
+import { WorldCitiesComparisonComponent } from './components/world-cities-comparison/world-cities-comparison.component';
 import { RegistrationDataService, RegistrationStats } from '../services/registration-data.service';
 import { GoogleSheetsService, RegistrationRow } from '../services/google-sheets.service';
 import { NasaTeamsService, TeamData, LocalEventData } from '../services/nasa-teams.service';
 import { TeamsService } from '../services/teams.service';
+import { OtherCitiesTeamsService } from '../services/other-cities-teams.service';
 import { Team } from '../shared/data/teams.data';
 import { Subject } from 'rxjs';
 import { takeUntil } from 'rxjs/operators';
 
 @Component({
   selector: 'app-war-room',
-  imports: [CommonModule, RegistrationChartsComponent, RegistrationMapComponent, ChallengeChartComponent],
+  imports: [CommonModule, RegistrationChartsComponent, RegistrationMapComponent, ChallengeChartComponent, ParticipantsByCountryChartComponent, BrazilianCitiesComparisonComponent, WorldCitiesComparisonComponent],
   templateUrl: './war-room.component.html',
   styleUrl: './war-room.component.scss'
 })
@@ -27,7 +31,6 @@ export class WarRoomComponent implements OnInit, OnDestroy {
   uberlandia: any
   registrationStats: RegistrationStats | null = null;
   isLoadingFile = false;
-  private readonly spreadsheetId = '1U9DX-_bsEHT0goXNtSmFctEOO3UflkD3zkyDPeyrdjQ';
 
   // NASA Teams data
   teams: TeamData[] = [];
@@ -39,13 +42,23 @@ export class WarRoomComponent implements OnInit, OnDestroy {
   // Teams data for challenge chart
   teamsForChart: Team[] = [];
 
+  // City teams stats
+  cityTeamsStats: Array<{
+    locationName: string;
+    locationId: string;
+    totalTeams: number;
+    submittedProjects: number;
+    submissionRate: number;
+  }> = [];
+
   private destroy$ = new Subject<void>();
 
   constructor(
     private registrationDataService: RegistrationDataService,
     private googleSheetsService: GoogleSheetsService,
     private nasaTeamsService: NasaTeamsService,
-    private teamsService: TeamsService
+    private teamsService: TeamsService,
+    private otherCitiesTeamsService: OtherCitiesTeamsService
   ) {}
 
   ngOnInit() {
@@ -53,6 +66,7 @@ export class WarRoomComponent implements OnInit, OnDestroy {
     this.loadGoogleSheetsData();
     this.subscribeToNasaData();
     this.loadTeamsData();
+    this.loadCityTeamsStats();
   }
 
   ngOnDestroy() {
@@ -138,28 +152,23 @@ export class WarRoomComponent implements OnInit, OnDestroy {
   }
 
   private loadGoogleSheetsData() {
-    if (!this.spreadsheetId) {
-      console.warn('ID da planilha não configurado. Configure a propriedade spreadsheetId com o ID da sua planilha do Google Sheets.');
-      return;
-    }
-
     console.log('=== WAR ROOM COMPONENT DEBUG ===');
-    console.log('Carregando dados do spreadsheet ID:', this.spreadsheetId);
+    console.log('Carregando dados do arquivo local (Excel convertido)');
 
     this.isLoadingFile = true;
 
-    this.googleSheetsService.getRegistrationData(this.spreadsheetId).subscribe({
+    this.googleSheetsService.getRegistrationDataFromLocal().subscribe({
       next: (data: RegistrationRow[]) => {
-        console.log('Dados brutos recebidos do Google Sheets:', data.length, 'registros');
-        console.log('Primeira linha de dados:', data[0]);
+        console.log('Dados brutos recebidos do arquivo local:', data.length, 'registros');
+        console.log('Primeira linha de dados (anonimizada):', data[0]);
 
         try {
-          // Transforma os dados do Google Sheets no formato esperado pelo service
+          // Transforma os dados do arquivo local no formato esperado pelo service
           const registrationData = data.map((row: RegistrationRow) => ({
             timestamp: this.convertTimestampToDate(row.timestamp),
-            name: row.name || '', // Mantém o nome para análise (pode ser removido depois se necessário)
-            email: row.email || row.emailAddress || '', // Usa o email principal ou secundário
-            phone: row.ddd ? `${row.ddd}000000000` : (row.phone || ''), // DDD ou telefone completo para análise de região
+            name: row.name || '', // Nome anonimizado (apenas iniciais)
+            email: row.email || row.emailAddress || '', // Email removido para privacidade
+            phone: row.ddd ? `${row.ddd}000000000` : (row.phone || ''), // DDD ou telefone para análise de região
             city: row.city || '',
             motivations: row.howHeard || '',
             experience: row.education || '',
@@ -172,21 +181,21 @@ export class WarRoomComponent implements OnInit, OnDestroy {
           console.log('Dados transformados:', registrationData.length, 'registros');
           console.log('Primeiro registro transformado:', registrationData[0]);
 
-          // Atualiza o service com os dados do Google Sheets
+          // Atualiza o service com os dados do arquivo local
           this.registrationDataService.setRegistrationData(registrationData);
           this.registrationStats = this.registrationDataService.getRegistrationStats();
 
           console.log('Stats calculadas:', this.registrationStats);
-          console.log(`Dados do Google Sheets carregados com sucesso: ${this.registrationStats?.totalRegistrations} registros`);
+          console.log(`Dados do arquivo local carregados com sucesso: ${this.registrationStats?.totalRegistrations} registros`);
           console.log('=== END WAR ROOM DEBUG ===');
         } catch (error) {
-          console.error('Erro ao processar dados do Google Sheets:', error);
+          console.error('Erro ao processar dados do arquivo local:', error);
         } finally {
           this.isLoadingFile = false;
         }
       },
       error: (error) => {
-        console.error('Erro ao carregar dados do Google Sheets:', error);
+        console.error('Erro ao carregar dados do arquivo local:', error);
         console.log('Detalhes do erro:', error);
         this.isLoadingFile = false;
       }
@@ -425,5 +434,36 @@ export class WarRoomComponent implements OnInit, OnDestroy {
         console.error('Erro ao carregar times para gráfico:', error);
       }
     });
+  }
+
+  // Method to load city teams statistics (outras cidades)
+  private loadCityTeamsStats() {
+    this.otherCitiesTeamsService.getTeamStatsByCity().subscribe({
+      next: (stats) => {
+        this.cityTeamsStats = stats;
+        console.log(`🌍 Estatísticas de times por cidade carregadas: ${stats.length} cidades`);
+        console.log('Estatísticas:', stats);
+      },
+      error: (error) => {
+        console.error('Erro ao carregar estatísticas de times por cidade:', error);
+      }
+    });
+  }
+
+  // Helper method to get total teams across all cities
+  get totalTeamsAllCities(): number {
+    return this.cityTeamsStats.reduce((total, city) => total + city.totalTeams, 0);
+  }
+
+  // Helper method to get total submitted projects across all cities
+  get totalSubmittedProjectsAllCities(): number {
+    return this.cityTeamsStats.reduce((total, city) => total + city.submittedProjects, 0);
+  }
+
+  // Helper method to get average submission rate
+  get averageSubmissionRate(): number {
+    if (this.cityTeamsStats.length === 0) return 0;
+    const totalRate = this.cityTeamsStats.reduce((total, city) => total + city.submissionRate, 0);
+    return totalRate / this.cityTeamsStats.length;
   }
 }

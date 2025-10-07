@@ -1,0 +1,96 @@
+<div class="modal-backdrop" *ngIf="isOpen" (click)="onBackdropClick($event)">
+  <div class="modal-content" (click)="$event.stopPropagation()">
+    <div class="modal-header">
+      <div class="header-content">
+        <button class="back-btn" (click)="goBack()" [disabled]="isLoading">
+          <i class="fa-solid fa-arrow-left"></i>
+        </button>
+        <h2>
+          <i class="fa-solid fa-key"></i>
+          Verificação de Código
+        </h2>
+      </div>
+      <button class="close-btn" (click)="closeModal()" [disabled]="isLoading">
+        <i class="fa-solid fa-times"></i>
+      </button>
+    </div>
+
+    <div class="modal-body">
+      <div class="space-theme">
+        <div class="stars"></div>
+        <div class="satellite">
+          <i class="fa-solid fa-satellite"></i>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="icon-container">
+          <i class="fa-solid fa-envelope-open"></i>
+        </div>
+
+        <h3>Código de Verificação</h3>
+        <p>Enviamos um código de 6 dígitos para:</p>
+        <div class="email-display">
+          <strong>{{ email }}</strong>
+        </div>
+
+        <form (ngSubmit)="onSubmit()" class="code-form">
+          <div class="input-group">
+            <label for="code">Código de 6 dígitos</label>
+            <input 
+              type="text" 
+              id="code"
+              [value]="code"
+              (input)="onCodeInput($event)"
+              name="code"
+              placeholder="000000"
+              maxlength="6"
+              class="code-input"
+              [disabled]="isLoading"
+              autocomplete="one-time-code"
+              required>
+          </div>
+
+          <div class="messages">
+            <div class="error-message" *ngIf="errorMessage">
+              <i class="fa-solid fa-exclamation-triangle"></i>
+              {{ errorMessage }}
+            </div>
+            
+            <div class="success-message" *ngIf="successMessage">
+              <i class="fa-solid fa-check-circle"></i>
+              {{ successMessage }}
+            </div>
+          </div>
+
+          <button 
+            type="submit" 
+            class="submit-btn"
+            [disabled]="isLoading || code.length !== 6">
+            <span *ngIf="!isLoading">
+              <i class="fa-solid fa-unlock"></i>
+              Verificar Código
+            </span>
+            <span *ngIf="isLoading">
+              <i class="fa-solid fa-spinner fa-spin"></i>
+              Verificando...
+            </span>
+          </button>
+        </form>
+
+        <div class="resend-section">
+          <p>Não recebeu o código?</p>
+          <button class="resend-btn" (click)="resendCode()" [disabled]="isLoading">
+            <i class="fa-solid fa-refresh"></i>
+            Reenviar Código
+          </button>
+        </div>
+
+        <div class="security-note">
+          <i class="fa-solid fa-shield-halved"></i>
+          <span>Este código expira em 10 minutos por segurança</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

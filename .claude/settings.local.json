@@ -13,10 +13,14 @@
       "Bash(npm install:*)",
       "Bash(python:*)",
       "Bash(node:*)",
+      "Bash(npm init:*)",
+      "Read(C:\\Users\\ghabr\\OneDrive\\Documentos\\Angular/**)",
       "Bash(npm uninstall:*)",
       "Bash(curl:*)",
       "Bash(ng add:*)",
-      "Bash(ng extract-i18n:*)"
+      "Bash(ng extract-i18n:*)",
+      "Bash(npm test)",
+      "Bash(npm test:*)"
     ],
     "deny": [],
     "defaultMode": "acceptEdits"
