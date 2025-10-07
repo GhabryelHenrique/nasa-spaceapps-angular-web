@@ -2359,7 +2359,7 @@
           "country": "Indonesia",
           "displayName": "Surabaya",
           "cachedRegistrations": 27,
-          "eventType": "Virtual & In-Person",
+          "eventType": "Virtual",
           "registrationEnabled": true,
           "isHostEvent": false,
           "__typename": "LocationPage"
