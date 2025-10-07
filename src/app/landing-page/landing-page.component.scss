@@ -167,6 +167,121 @@
   }
 }
 
+// Awards Timeline Section
+.awards-timeline-wrapper {
+  padding: 80px 0;
+  position: relative;
+  background: rgba(78, 205, 196, 0.08);
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url('/assets/patterns/Orbits.png');
+    background-size: 600px 600px;
+    background-repeat: repeat;
+    background-position: center;
+    opacity: 0.06;
+    z-index: -1;
+    pointer-events: none;
+  }
+
+  .awards-timeline-content {
+    text-align: center;
+    position: relative;
+    z-index: 1;
+
+    .awards-title {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+      background: linear-gradient(135deg, #FC3D21, #FFD700);
+      background-clip: text;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      font-weight: 700;
+    }
+
+    .section-description {
+      font-size: 1.2rem;
+      color: var(--text-secondary);
+      max-width: 800px;
+      margin: 0 auto 3rem;
+      line-height: 1.6;
+    }
+
+    .timeline {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 2rem;
+      max-width: 1000px;
+      margin: 0 auto;
+
+      .timeline-item {
+        background: rgba(255, 255, 255, 0.05);
+        border: 1px solid rgba(252, 61, 33, 0.2);
+        border-radius: 20px;
+        padding: 2rem;
+        text-align: center;
+        transition: all 0.3s ease;
+        backdrop-filter: blur(10px);
+        position: relative;
+        overflow: hidden;
+
+        &::before {
+          content: '';
+          position: absolute;
+          top: 0;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          background: linear-gradient(135deg, rgba(252, 61, 33, 0.1), rgba(255, 215, 0, 0.1));
+          opacity: 0;
+          transition: opacity 0.3s ease;
+          z-index: -1;
+        }
+
+        &:hover {
+          transform: translateY(-8px);
+          border-color: rgba(252, 61, 33, 0.4);
+          box-shadow: 0 15px 40px rgba(252, 61, 33, 0.2);
+
+          &::before {
+            opacity: 1;
+          }
+
+          .timeline-icon {
+            transform: scale(1.2) rotateZ(10deg);
+          }
+        }
+
+        .timeline-icon {
+          font-size: 3rem;
+          margin-bottom: 1rem;
+          transition: transform 0.3s ease;
+        }
+
+        .timeline-info {
+          h3 {
+            color: #FC3D21;
+            font-size: 1.5rem;
+            margin-bottom: 0.5rem;
+            font-weight: 700;
+          }
+
+          p {
+            color: var(--text-secondary);
+            font-size: 1rem;
+            line-height: 1.5;
+          }
+        }
+      }
+    }
+  }
+}
+
 // Event Info Section Wrapper
 .event-info-wrapper {
   position: relative;
@@ -1143,6 +1258,32 @@
       }
     }
   }
+
+  .awards-timeline-wrapper {
+    padding: 70px 0;
+
+    .awards-timeline-content {
+      .awards-title {
+        font-size: 2.2rem;
+      }
+
+      .timeline {
+        gap: 1.5rem;
+
+        .timeline-item {
+          padding: 1.8rem;
+
+          .timeline-icon {
+            font-size: 2.8rem;
+          }
+
+          .timeline-info h3 {
+            font-size: 1.4rem;
+          }
+        }
+      }
+    }
+  }
 }
 
 @media (max-width: 768px) {
@@ -1393,6 +1534,43 @@
       }
     }
   }
+
+  .awards-timeline-wrapper {
+    padding: 60px 0;
+
+    .awards-timeline-content {
+      .awards-title {
+        font-size: 2rem;
+      }
+
+      .section-description {
+        font-size: 1.1rem;
+      }
+
+      .timeline {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+
+        .timeline-item {
+          padding: 1.5rem;
+
+          .timeline-icon {
+            font-size: 2.5rem;
+          }
+
+          .timeline-info {
+            h3 {
+              font-size: 1.3rem;
+            }
+
+            p {
+              font-size: 0.95rem;
+            }
+          }
+        }
+      }
+    }
+  }
 }
 
 @media (max-width: 480px) {
@@ -1574,6 +1752,45 @@
 
       .event-date {
         font-size: 1.1rem;
+      }
+    }
+  }
+
+  .awards-timeline-wrapper {
+    padding: 40px 0;
+
+    .awards-timeline-content {
+      .awards-title {
+        font-size: 1.8rem;
+        line-height: 1.2;
+      }
+
+      .section-description {
+        font-size: 1rem;
+        margin-bottom: 2rem;
+      }
+
+      .timeline {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+
+        .timeline-item {
+          padding: 1.2rem;
+
+          .timeline-icon {
+            font-size: 2.5rem;
+          }
+
+          .timeline-info {
+            h3 {
+              font-size: 1.1rem;
+            }
+
+            p {
+              font-size: 0.9rem;
+            }
+          }
+        }
       }
     }
   }
