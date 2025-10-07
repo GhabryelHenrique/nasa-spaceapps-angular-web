@@ -8,9 +8,9 @@ import json
 import requests
 from typing import Dict, Any, List
 
-def fetch_teams_page(after_cursor: str = "") -> Dict[str, Any]:
+def fetch_teams_page(location_id: str, after_cursor: str = "") -> Dict[str, Any]:
     """
-    Faz uma requisição GraphQL para buscar uma página de dados dos times
+    Faz uma requisição GraphQL para buscar uma página de dados dos times de uma cidade específica
     """
     url = "https://api.spaceappschallenge.org/graphql"
 
@@ -21,7 +21,7 @@ def fetch_teams_page(after_cursor: str = "") -> Dict[str, Any]:
         "Accept": "application/json",
         "Accept-Language": "pt-BR,pt;q=0.9,en;q=0.8",
         "Origin": "https://www.spaceappschallenge.org",
-        "Referer": "https://www.spaceappschallenge.org/2025/local-events/uberlandia/?tab=teams"
+        "Referer": "https://www.spaceappschallenge.org/2025/local-events/?tab=teams"
     }
 
     # Payload GraphQL conforme especificado
@@ -1794,7 +1794,7 @@ fragment OfferFields on Offer {
                 "filtering": [
                     {
                         "field": "location",
-                        "value": "aWQ6MzA2NjM=",
+                        "value": location_id,
                         "compare": "id"
                     }
                 ]
@@ -1999,7 +1999,7 @@ fragment CoreEventFields on GlobalEvent {
     ]
 
     try:
-        print(f"Fazendo requisição para a API (cursor: {after_cursor or 'início'})...")
+        print(f"Fazendo requisição para a API (location_id: {location_id}, cursor: {after_cursor or 'início'})...")
         response = requests.post(url, headers=headers, json=payload, timeout=30)
         response.raise_for_status()
 
@@ -2028,9 +2028,9 @@ fragment CoreEventFields on GlobalEvent {
         print(f"Erro inesperado: {e}")
         raise
 
-def fetch_all_teams_data() -> Dict[str, Any]:
+def fetch_all_teams_for_location(location_id: str, location_name: str) -> Dict[str, Any]:
     """
-    Busca todos os dados dos times paginando através de todas as páginas
+    Busca todos os dados dos times de uma cidade específica paginando através de todas as páginas
     """
     all_teams = []
     after_cursor = ""
@@ -2038,10 +2038,10 @@ def fetch_all_teams_data() -> Dict[str, Any]:
     total_count = 0
 
     while True:
-        print(f"\n--- Buscando página {page_num} ---")
+        print(f"\n--- Buscando página {page_num} de {location_name} ---")
 
         # Busca uma página de dados
-        teams_page = fetch_teams_page(after_cursor)
+        teams_page = fetch_teams_page(location_id, after_cursor)
 
         # Extrai informações da página
         page_info = teams_page.get('pageInfo', {})
@@ -2049,14 +2049,14 @@ def fetch_all_teams_data() -> Dict[str, Any]:
         total_count = teams_page.get('totalCount', 0)
 
         print(f"Times nesta página: {len(edges)}")
-        print(f"Total de times: {total_count}")
+        print(f"Total de times em {location_name}: {total_count}")
 
         # Adiciona os times desta página à lista completa
         all_teams.extend(edges)
 
         # Verifica se há próxima página
         if not page_info.get('hasNextPage', False):
-            print("Última página alcançada!")
+            print(f"Última página de {location_name} alcançada!")
             break
 
         # Atualiza o cursor para a próxima página
@@ -2069,6 +2069,8 @@ def fetch_all_teams_data() -> Dict[str, Any]:
 
     # Constrói o objeto final com todos os times
     return {
+        'locationId': location_id,
+        'locationName': location_name,
         'teams': {
             'pageInfo': {
                 'hasPreviousPage': False,
@@ -2082,6 +2084,87 @@ def fetch_all_teams_data() -> Dict[str, Any]:
             '__typename': 'TeamPageConnection'
         }
     }
+
+def find_location_ids(city_names: List[str]) -> Dict[str, str]:
+    """
+    Busca os IDs das cidades especificadas a partir da API de eventos locais
+    """
+    print("\n=== BUSCANDO IDs DAS CIDADES ===")
+
+    # Busca todos os eventos locais
+    all_events = []
+    after_cursor = ""
+    page_num = 1
+
+    while True:
+        print(f"\n--- Buscando página {page_num} de eventos locais ---")
+        events_page = fetch_local_events_page(after_cursor)
+
+        page_info = events_page.get('pageInfo', {})
+        edges = events_page.get('edges', [])
+
+        all_events.extend(edges)
+
+        if not page_info.get('hasNextPage', False):
+            break
+
+        after_cursor = page_info.get('endCursor', '')
+        page_num += 1
+
+        import time
+        time.sleep(0.5)
+
+    # Mapeia nomes de cidades para IDs
+    location_map = {}
+    for edge in all_events:
+        node = edge.get('node', {})
+        properties = node.get('properties', {})
+        title = properties.get('title', '')
+        display_name = properties.get('displayName', '')
+        location_id = properties.get('id', '')
+
+        # Normaliza os nomes para comparação (remove espaços extras, lowercase)
+        normalized_title = title.lower().strip()
+        normalized_display = display_name.lower().strip()
+
+        # Verifica se alguma das cidades procuradas está no título ou display_name
+        for city_name in city_names:
+            normalized_city = city_name.lower().strip()
+            if normalized_city in normalized_title or normalized_city in normalized_display:
+                location_map[city_name] = {
+                    'id': location_id,
+                    'title': title,
+                    'displayName': display_name
+                }
+                print(f"✓ Encontrado: {city_name} -> {title} (ID: {location_id})")
+                break
+
+    # Verifica se todas as cidades foram encontradas
+    not_found = [city for city in city_names if city not in location_map]
+    if not_found:
+        print(f"\n⚠ Cidades não encontradas: {', '.join(not_found)}")
+
+    return location_map
+
+def fetch_all_teams_data(city_names: List[str]) -> List[Dict[str, Any]]:
+    """
+    Busca todos os dados dos times de múltiplas cidades
+    """
+    # Primeiro, encontra os IDs das cidades
+    location_map = find_location_ids(city_names)
+
+    # Busca times para cada cidade encontrada
+    all_cities_data = []
+
+    for city_name, location_info in location_map.items():
+        location_id = location_info['id']
+        location_title = location_info['title']
+
+        print(f"\n=== BUSCANDO TIMES DE {location_title.upper()} ===")
+        city_data = fetch_all_teams_for_location(location_id, location_title)
+        all_cities_data.append(city_data)
+
+    return all_cities_data
 
 def fetch_local_events_page(after_cursor: str = "") -> Dict[str, Any]:
     """
@@ -2245,33 +2328,74 @@ def fetch_local_events_data() -> Dict[str, Any]:
         '__typename': 'LocationConnection'
     }
 
-def update_teams_file(teams_data: Dict[str, Any]) -> None:
+def update_teams_file(all_cities_data: List[Dict[str, Any]]) -> None:
     """
-    Atualiza o arquivo teams.json com os novos dados
+    Atualiza o arquivo teams.json com os novos dados de múltiplas cidades
     """
     teams_file_path = r"src\assets\data\teams.json"
 
     try:
         # Cria o objeto de dados no formato esperado
         updated_data = {
-            "data": [teams_data]
+            "data": all_cities_data
         }
 
         # Escreve os dados no arquivo
         with open(teams_file_path, 'w', encoding='utf-8') as f:
             json.dump(updated_data, f, ensure_ascii=False, indent=2)
 
-        print(f"Arquivo {teams_file_path} atualizado com sucesso!")
+        print(f"\nArquivo {teams_file_path} atualizado com sucesso!")
 
         # Mostra estatísticas básicas
-        if 'teams' in teams_data:
-            total_teams = teams_data['teams'].get('totalCount', 0)
-            teams_fetched = len(teams_data['teams'].get('edges', []))
-            print(f"Total de times: {total_teams}")
-            print(f"Times salvos no arquivo: {teams_fetched}")
+        print("\n=== ESTATÍSTICAS ===")
+        total_teams_all_cities = 0
+        for city_data in all_cities_data:
+            location_name = city_data.get('locationName', 'Desconhecido')
+            teams = city_data.get('teams', {})
+            total_teams = teams.get('totalCount', 0)
+            teams_fetched = len(teams.get('edges', []))
+            total_teams_all_cities += teams_fetched
+            print(f"- {location_name}: {teams_fetched} times")
+
+        print(f"\nTotal geral: {total_teams_all_cities} times de {len(all_cities_data)} cidades")
 
     except Exception as e:
         print(f"Erro ao atualizar arquivo: {e}")
+        raise
+
+def update_other_cities_teams_file(all_cities_data: List[Dict[str, Any]]) -> None:
+    """
+    Atualiza o arquivo otherCitiesTeams.json com os dados de outras cidades (para War Room)
+    """
+    teams_file_path = r"src\assets\data\otherCitiesTeams.json"
+
+    try:
+        # Cria o objeto de dados no formato esperado
+        updated_data = {
+            "data": all_cities_data
+        }
+
+        # Escreve os dados no arquivo
+        with open(teams_file_path, 'w', encoding='utf-8') as f:
+            json.dump(updated_data, f, ensure_ascii=False, indent=2)
+
+        print(f"\nArquivo {teams_file_path} atualizado com sucesso!")
+
+        # Mostra estatísticas básicas
+        print("\n=== ESTATÍSTICAS DAS OUTRAS CIDADES ===")
+        total_teams_all_cities = 0
+        for city_data in all_cities_data:
+            location_name = city_data.get('locationName', 'Desconhecido')
+            teams = city_data.get('teams', {})
+            total_teams = teams.get('totalCount', 0)
+            teams_fetched = len(teams.get('edges', []))
+            total_teams_all_cities += teams_fetched
+            print(f"- {location_name}: {teams_fetched} times")
+
+        print(f"\nTotal geral: {total_teams_all_cities} times de {len(all_cities_data)} cidades")
+
+    except Exception as e:
+        print(f"Erro ao atualizar arquivo de outras cidades: {e}")
         raise
 
 def update_local_events_file(events_data: Dict[str, Any]) -> None:
@@ -2309,12 +2433,36 @@ def main():
     try:
         print("Iniciando atualização dos dados...")
 
-        print("\n=== BUSCANDO DADOS DOS TIMES ===")
-        # Busca todos os dados dos times (todas as páginas)
-        teams_data = fetch_all_teams_data()
+        # Lista de cidades para buscar times (Uberlândia)
+        uberlandia_city = ["Uberlândia"]
 
-        # Atualiza o arquivo dos times
-        update_teams_file(teams_data)
+        # Lista de outras cidades para comparação na War Room
+        other_cities = [
+            "Harohalli",
+            "Cairo",
+            "Kanjirappally",
+            "Abu Dhabi",
+            "Coimbatore",
+            "Chikkamagaluru",
+            "Kochi",
+            "Thrissur",
+            "Nashik"
+        ]
+
+        # Busca dados de Uberlândia
+        print(f"\n=== BUSCANDO DADOS DOS TIMES DE UBERLÂNDIA ===")
+        uberlandia_teams_data = fetch_all_teams_data(uberlandia_city)
+
+        # Atualiza o arquivo dos times de Uberlândia (para a tela de teams)
+        update_teams_file(uberlandia_teams_data)
+
+        # Busca dados das outras cidades
+        print(f"\n=== BUSCANDO DADOS DOS TIMES DAS OUTRAS CIDADES ===")
+        print(f"Cidades: {', '.join(other_cities)}")
+        other_cities_teams_data = fetch_all_teams_data(other_cities)
+
+        # Atualiza o arquivo dos times das outras cidades (para a war room)
+        update_other_cities_teams_file(other_cities_teams_data)
 
         print("\n=== BUSCANDO DADOS DOS EVENTOS LOCAIS ===")
         # Busca dados dos eventos locais

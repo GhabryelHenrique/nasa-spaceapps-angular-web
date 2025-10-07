@@ -10,6 +10,7 @@ import { RegistrationDataService, RegistrationStats } from '../services/registra
 import { GoogleSheetsService, RegistrationRow } from '../services/google-sheets.service';
 import { NasaTeamsService, TeamData, LocalEventData } from '../services/nasa-teams.service';
 import { TeamsService } from '../services/teams.service';
+import { OtherCitiesTeamsService } from '../services/other-cities-teams.service';
 import { Team } from '../shared/data/teams.data';
 import { Subject } from 'rxjs';
 import { takeUntil } from 'rxjs/operators';
@@ -40,13 +41,23 @@ export class WarRoomComponent implements OnInit, OnDestroy {
   // Teams data for challenge chart
   teamsForChart: Team[] = [];
 
+  // City teams stats
+  cityTeamsStats: Array<{
+    locationName: string;
+    locationId: string;
+    totalTeams: number;
+    submittedProjects: number;
+    submissionRate: number;
+  }> = [];
+
   private destroy$ = new Subject<void>();
 
   constructor(
     private registrationDataService: RegistrationDataService,
     private googleSheetsService: GoogleSheetsService,
     private nasaTeamsService: NasaTeamsService,
-    private teamsService: TeamsService
+    private teamsService: TeamsService,
+    private otherCitiesTeamsService: OtherCitiesTeamsService
   ) {}
 
   ngOnInit() {
@@ -54,6 +65,7 @@ export class WarRoomComponent implements OnInit, OnDestroy {
     this.loadGoogleSheetsData();
     this.subscribeToNasaData();
     this.loadTeamsData();
+    this.loadCityTeamsStats();
   }
 
   ngOnDestroy() {
@@ -426,5 +438,36 @@ export class WarRoomComponent implements OnInit, OnDestroy {
         console.error('Erro ao carregar times para gráfico:', error);
       }
     });
+  }
+
+  // Method to load city teams statistics (outras cidades)
+  private loadCityTeamsStats() {
+    this.otherCitiesTeamsService.getTeamStatsByCity().subscribe({
+      next: (stats) => {
+        this.cityTeamsStats = stats;
+        console.log(`🌍 Estatísticas de times por cidade carregadas: ${stats.length} cidades`);
+        console.log('Estatísticas:', stats);
+      },
+      error: (error) => {
+        console.error('Erro ao carregar estatísticas de times por cidade:', error);
+      }
+    });
+  }
+
+  // Helper method to get total teams across all cities
+  get totalTeamsAllCities(): number {
+    return this.cityTeamsStats.reduce((total, city) => total + city.totalTeams, 0);
+  }
+
+  // Helper method to get total submitted projects across all cities
+  get totalSubmittedProjectsAllCities(): number {
+    return this.cityTeamsStats.reduce((total, city) => total + city.submittedProjects, 0);
+  }
+
+  // Helper method to get average submission rate
+  get averageSubmissionRate(): number {
+    if (this.cityTeamsStats.length === 0) return 0;
+    const totalRate = this.cityTeamsStats.reduce((total, city) => total + city.submissionRate, 0);
+    return totalRate / this.cityTeamsStats.length;
   }
 }

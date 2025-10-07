@@ -317,8 +317,11 @@ export class TeamsService {
     after: string = '',
     q: string = ''
   ): Observable<TeamsResponse> {
-    // Filtra teams baseado na query de busca se fornecida
+    // Usa apenas os dados de Uberlândia (primeiro elemento do array)
+    // O arquivo teams.json agora contém apenas Uberlândia
     let filteredEdges = realApiResponse.data[0].teams.edges;
+
+    // Filtra teams baseado na query de busca se fornecida
     if (q.trim()) {
       filteredEdges = realApiResponse.data[0].teams.edges.filter(
         (edge) =>
@@ -346,4 +349,5 @@ export class TeamsService {
     // Simula delay da API
     return of(response).pipe(delay(500));
   }
+
 }

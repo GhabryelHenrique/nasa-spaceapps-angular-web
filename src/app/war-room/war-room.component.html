@@ -166,6 +166,86 @@
     [teams]="teamsForChart">
   </app-challenge-chart>
 
+  <!-- City Teams Statistics Section -->
+  <section class="city-teams-stats-section" *ngIf="cityTeamsStats.length > 0">
+    <div class="section-header">
+      <h2 class="section-title">
+        <span class="title-icon">🌍</span>
+        Estatísticas de Times por Cidade
+      </h2>
+    </div>
+
+    <!-- Summary Cards -->
+    <div class="insights-grid">
+      <div class="insight-card highlight">
+        <div class="insight-icon">🚀</div>
+        <div class="insight-content">
+          <h3>{{ totalTeamsAllCities }}</h3>
+          <p>Total de Times</p>
+          <div class="insight-percentage">
+            em {{ cityTeamsStats.length }} cidades
+          </div>
+        </div>
+      </div>
+
+      <div class="insight-card">
+        <div class="insight-icon">✅</div>
+        <div class="insight-content">
+          <h3>{{ totalSubmittedProjectsAllCities }}</h3>
+          <p>Projetos Submetidos</p>
+          <div class="insight-detail">
+            {{ ((totalSubmittedProjectsAllCities / totalTeamsAllCities) * 100).toFixed(1) }}% do total
+          </div>
+        </div>
+      </div>
+
+      <div class="insight-card">
+        <div class="insight-icon">📊</div>
+        <div class="insight-content">
+          <h3>{{ averageSubmissionRate.toFixed(1) }}%</h3>
+          <p>Taxa Média de Submissão</p>
+          <div class="insight-detail">
+            entre todas as cidades
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Cities Stats Table -->
+    <div class="cities-stats-table">
+      <div class="table-header">
+        <div class="table-cell city-name-cell">Cidade</div>
+        <div class="table-cell teams-count-cell">Times</div>
+        <div class="table-cell projects-cell">Projetos</div>
+        <div class="table-cell rate-cell">Taxa</div>
+      </div>
+      <div
+        class="table-row"
+        *ngFor="let cityStat of cityTeamsStats; let i = index"
+        [class.top-city]="i < 3">
+        <div class="table-cell city-name-cell">
+          <span class="rank-badge" *ngIf="i === 0">🥇</span>
+          <span class="rank-badge" *ngIf="i === 1">🥈</span>
+          <span class="rank-badge" *ngIf="i === 2">🥉</span>
+          <span class="city-name-text">{{ cityStat.locationName }}</span>
+        </div>
+        <div class="table-cell teams-count-cell">
+          <span class="stat-number">{{ cityStat.totalTeams }}</span>
+        </div>
+        <div class="table-cell projects-cell">
+          <span class="stat-number">{{ cityStat.submittedProjects }}</span>
+          <span class="stat-detail">/ {{ cityStat.totalTeams }}</span>
+        </div>
+        <div class="table-cell rate-cell">
+          <div class="progress-bar-container">
+            <div class="progress-bar" [style.width.%]="cityStat.submissionRate"></div>
+          </div>
+          <span class="rate-text">{{ cityStat.submissionRate.toFixed(1) }}%</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- Controls Section -->
   <div class="controls-section">
     <div class="sort-controls">
