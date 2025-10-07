@@ -14,16 +14,16 @@ interface CityComparison {
 }
 
 @Component({
-  selector: 'app-brazilian-cities-comparison',
+  selector: 'app-world-cities-comparison',
   standalone: true,
   imports: [CommonModule],
-  templateUrl: './brazilian-cities-comparison.component.html',
-  styleUrl: './brazilian-cities-comparison.component.scss'
+  templateUrl: './world-cities-comparison.component.html',
+  styleUrl: './world-cities-comparison.component.scss'
 })
-export class BrazilianCitiesComparisonComponent implements OnInit {
+export class WorldCitiesComparisonComponent implements OnInit {
   citiesComparison: CityComparison[] = [];
   uberlandia: CityComparison | null = null;
-  otherCities: CityComparison[] = [];
+  worldCities: CityComparison[] = [];
   isLoading = true;
 
   // Rankings
@@ -31,8 +31,8 @@ export class BrazilianCitiesComparisonComponent implements OnInit {
   uberlandiaSubmissionRank: number = 0;
 
   // Statistics
-  totalTeamsBrazil = 0;
-  totalSubmittedBrazil = 0;
+  totalTeamsWorld = 0;
+  totalSubmittedWorld = 0;
   averageSubmissionRate = 0;
 
   constructor(
@@ -55,7 +55,7 @@ export class BrazilianCitiesComparisonComponent implements OnInit {
           const teams = uberlandiaData.teams.edges.map(edge => edge.node);
 
           this.uberlandia = {
-            cityName: 'Uberlândia',
+            cityName: 'Uberlândia, Brasil',
             totalTeams: teams.length,
             submittedProjects: teams.filter(t => t.projectSubmitted).length,
             submissionRate: teams.length > 0
@@ -65,7 +65,7 @@ export class BrazilianCitiesComparisonComponent implements OnInit {
             isUberlandia: true
           };
 
-          this.loadOtherCitiesData();
+          this.loadWorldCitiesData();
         }
       },
       error: (error) => {
@@ -75,26 +75,23 @@ export class BrazilianCitiesComparisonComponent implements OnInit {
     });
   }
 
-  private loadOtherCitiesData() {
-    this.otherCitiesTeamsService.getBrazilianCitiesStats().subscribe({
+  private loadWorldCitiesData() {
+    this.otherCitiesTeamsService.getWorldCitiesStats().subscribe({
       next: (stats) => {
-        // Filtra Uberlândia para não duplicar
-        this.otherCities = stats
-          .filter(city => city.locationName.toLowerCase() !== 'uberlândia')
-          .map(city => ({
-            cityName: city.locationName,
-            totalTeams: city.totalTeams,
-            submittedProjects: city.submittedProjects,
-            submissionRate: city.submissionRate,
-            members: 0,
-            isUberlandia: false
-          }));
+        this.worldCities = stats.map(city => ({
+          cityName: city.locationName,
+          totalTeams: city.totalTeams,
+          submittedProjects: city.submittedProjects,
+          submissionRate: city.submissionRate,
+          members: 0,
+          isUberlandia: false
+        }));
 
         this.buildComparison();
         this.isLoading = false;
       },
       error: (error) => {
-        console.error('Erro ao carregar dados de outras cidades brasileiras:', error);
+        console.error('Erro ao carregar dados de cidades do mundo:', error);
         this.isLoading = false;
       }
     });
@@ -104,7 +101,7 @@ export class BrazilianCitiesComparisonComponent implements OnInit {
     if (!this.uberlandia) return;
 
     // Combine all cities
-    this.citiesComparison = [this.uberlandia, ...this.otherCities];
+    this.citiesComparison = [this.uberlandia, ...this.worldCities];
 
     // Sort by total teams
     const sortedByTeams = [...this.citiesComparison].sort((a, b) => b.totalTeams - a.totalTeams);
@@ -121,8 +118,8 @@ export class BrazilianCitiesComparisonComponent implements OnInit {
     this.uberlandiaSubmissionRank = uberlandiaSubmissionIndex + 1;
 
     // Calculate statistics
-    this.totalTeamsBrazil = this.citiesComparison.reduce((sum, c) => sum + c.totalTeams, 0);
-    this.totalSubmittedBrazil = this.citiesComparison.reduce((sum, c) => sum + c.submittedProjects, 0);
+    this.totalTeamsWorld = this.citiesComparison.reduce((sum, c) => sum + c.totalTeams, 0);
+    this.totalSubmittedWorld = this.citiesComparison.reduce((sum, c) => sum + c.submittedProjects, 0);
     this.averageSubmissionRate = this.citiesComparison.length > 0
       ? this.citiesComparison.reduce((sum, c) => sum + c.submissionRate, 0) / this.citiesComparison.length
       : 0;
@@ -134,12 +131,12 @@ export class BrazilianCitiesComparisonComponent implements OnInit {
   getUberlandiaPercentage(metric: 'teams' | 'submitted'): number {
     if (!this.uberlandia) return 0;
 
-    if (metric === 'teams' && this.totalTeamsBrazil > 0) {
-      return (this.uberlandia.totalTeams / this.totalTeamsBrazil) * 100;
+    if (metric === 'teams' && this.totalTeamsWorld > 0) {
+      return (this.uberlandia.totalTeams / this.totalTeamsWorld) * 100;
     }
 
-    if (metric === 'submitted' && this.totalSubmittedBrazil > 0) {
-      return (this.uberlandia.submittedProjects / this.totalSubmittedBrazil) * 100;
+    if (metric === 'submitted' && this.totalSubmittedWorld > 0) {
+      return (this.uberlandia.submittedProjects / this.totalSubmittedWorld) * 100;
     }
 
     return 0;

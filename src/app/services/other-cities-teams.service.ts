@@ -10,12 +10,29 @@ export interface CityTeamStats {
   totalTeams: number;
   submittedProjects: number;
   submissionRate: number;
+  country?: string;
+  isBrazilian?: boolean;
 }
 
 @Injectable({
   providedIn: 'root',
 })
 export class OtherCitiesTeamsService {
+  // Lista de cidades brasileiras conhecidas
+  private readonly brazilianCities = [
+    'Uberlândia',
+    'Campinas',
+    'Recife',
+    'Ribeirao Preto',
+    'Boa Vista',
+    'Maringá',
+    'São Gonçalo',
+    'Jaguariúna',
+    'Maceió',
+    'São Paulo',
+    'Guarulhos',
+  ];
+
   /**
    * Retorna estatísticas de times por cidade (incluindo Uberlândia e outras cidades)
    */
@@ -23,10 +40,16 @@ export class OtherCitiesTeamsService {
     const cityStats: CityTeamStats[] = [];
 
     // Adiciona dados de Uberlândia
-    if (uberlandiaData.data && Array.isArray(uberlandiaData.data) && uberlandiaData.data.length > 0) {
+    if (
+      uberlandiaData.data &&
+      Array.isArray(uberlandiaData.data) &&
+      uberlandiaData.data.length > 0
+    ) {
       const uberlandiaCityData = uberlandiaData.data[0];
       if (uberlandiaCityData.teams && uberlandiaCityData.teams.edges) {
-        const totalTeams = uberlandiaCityData.teams.totalCount || uberlandiaCityData.teams.edges.length;
+        const totalTeams =
+          uberlandiaCityData.teams.totalCount ||
+          uberlandiaCityData.teams.edges.length;
         const submittedProjects = uberlandiaCityData.teams.edges.filter(
           (edge: any) => edge.node.projectSubmitted === true
         ).length;
@@ -36,7 +59,8 @@ export class OtherCitiesTeamsService {
           locationId: uberlandiaCityData.locationId || '',
           totalTeams,
           submittedProjects,
-          submissionRate: totalTeams > 0 ? (submittedProjects / totalTeams) * 100 : 0
+          submissionRate:
+            totalTeams > 0 ? (submittedProjects / totalTeams) * 100 : 0,
         });
       }
     }
@@ -45,7 +69,8 @@ export class OtherCitiesTeamsService {
     if (otherCitiesData.data && Array.isArray(otherCitiesData.data)) {
       otherCitiesData.data.forEach((cityData: any) => {
         if (cityData.teams && cityData.teams.edges) {
-          const totalTeams = cityData.teams.totalCount || cityData.teams.edges.length;
+          const totalTeams =
+            cityData.teams.totalCount || cityData.teams.edges.length;
           const submittedProjects = cityData.teams.edges.filter(
             (edge: any) => edge.node.projectSubmitted === true
           ).length;
@@ -55,7 +80,8 @@ export class OtherCitiesTeamsService {
             locationId: cityData.locationId || '',
             totalTeams,
             submittedProjects,
-            submissionRate: totalTeams > 0 ? (submittedProjects / totalTeams) * 100 : 0
+            submissionRate:
+              totalTeams > 0 ? (submittedProjects / totalTeams) * 100 : 0,
           });
         }
       });
@@ -76,10 +102,12 @@ export class OtherCitiesTeamsService {
     if (otherCitiesData.data && Array.isArray(otherCitiesData.data)) {
       otherCitiesData.data.forEach((cityData: any) => {
         if (cityData.teams && cityData.teams.edges) {
-          allTeams = allTeams.concat(cityData.teams.edges.map((edge: any) => ({
-            ...edge.node,
-            cityName: cityData.locationName
-          })));
+          allTeams = allTeams.concat(
+            cityData.teams.edges.map((edge: any) => ({
+              ...edge.node,
+              cityName: cityData.locationName,
+            }))
+          );
         }
       });
     }
@@ -95,7 +123,8 @@ export class OtherCitiesTeamsService {
 
     if (otherCitiesData.data && Array.isArray(otherCitiesData.data)) {
       const cityData = otherCitiesData.data.find(
-        (city: any) => city.locationName?.toLowerCase() === cityName.toLowerCase()
+        (city: any) =>
+          city.locationName?.toLowerCase() === cityName.toLowerCase()
       );
 
       if (cityData && cityData.teams && cityData.teams.edges) {
@@ -104,5 +133,47 @@ export class OtherCitiesTeamsService {
     }
 
     return of(cityTeams).pipe(delay(100));
+  }
+
+  /**
+   * Verifica se uma cidade é brasileira
+   */
+  private isBrazilianCity(cityName: string): boolean {
+    return this.brazilianCities.some(
+      (city) => city.toLowerCase() === cityName.toLowerCase()
+    );
+  }
+
+  /**
+   * Retorna apenas cidades brasileiras
+   */
+  getBrazilianCitiesStats(): Observable<CityTeamStats[]> {
+    return this.getTeamStatsByCity().pipe(
+      map((cities) =>
+        cities
+          .filter((city) => this.isBrazilianCity(city.locationName))
+          .map((city) => ({
+            ...city,
+            isBrazilian: true,
+            country: 'Brasil',
+          }))
+      )
+    );
+  }
+
+  /**
+   * Retorna apenas cidades internacionais (não brasileiras)
+   */
+  getWorldCitiesStats(): Observable<CityTeamStats[]> {
+    return this.getTeamStatsByCity().pipe(
+      map((cities) =>
+        cities
+          .filter((city) => !this.isBrazilianCity(city.locationName))
+          .map((city) => ({
+            ...city,
+            isBrazilian: false,
+          }))
+      )
+    );
   }
 }
