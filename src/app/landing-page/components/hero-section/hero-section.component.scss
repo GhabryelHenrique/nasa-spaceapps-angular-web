@@ -42,7 +42,7 @@
       gap: 1rem;
       flex-wrap: wrap;
 
-      .cta-primary, .cta-secondary, .cta-discord, .cta-whatsapp, .cta-instagram {
+      .cta-primary, .cta-secondary, .cta-discord, .cta-whatsapp, .cta-instagram, .cta-feedback {
         padding: 1rem 2rem;
         border-radius: 30px;
         font-size: 1.1rem;
@@ -109,6 +109,16 @@
           box-shadow: 0 8px 25px rgba(228, 64, 95, 0.3);
         }
       }
+
+      .cta-feedback {
+        background: linear-gradient(135deg, #FF9800, #F57C00);
+        color: var(--nasa-white);
+
+        &:hover {
+          transform: translateY(-3px);
+          box-shadow: 0 8px 25px rgba(255, 152, 0, 0.3);
+        }
+      }
     }
   }
 
@@ -134,7 +144,7 @@
       }
 
       .hero-actions {
-        .cta-primary, .cta-secondary, .cta-discord, .cta-whatsapp, .cta-instagram {
+        .cta-primary, .cta-secondary, .cta-discord, .cta-whatsapp, .cta-instagram, .cta-feedback {
           min-width: 120px;
           padding: 0.9rem 1.5rem;
           font-size: 1rem;
@@ -169,7 +179,7 @@
         justify-content: center;
         gap: 0.8rem;
 
-        .cta-primary, .cta-secondary, .cta-discord, .cta-whatsapp, .cta-instagram {
+        .cta-primary, .cta-secondary, .cta-discord, .cta-whatsapp, .cta-instagram, .cta-feedback {
           min-width: 100px;
           padding: 0.8rem 1.2rem;
           font-size: 0.95rem;
@@ -210,7 +220,7 @@
         gap: 0.8rem;
         align-items: center;
 
-        .cta-primary, .cta-secondary, .cta-discord, .cta-whatsapp, .cta-instagram {
+        .cta-primary, .cta-secondary, .cta-discord, .cta-whatsapp, .cta-instagram, .cta-feedback {
           width: 100%;
           max-width: 280px;
           padding: 1rem;
