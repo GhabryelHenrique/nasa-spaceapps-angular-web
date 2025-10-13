@@ -3,7 +3,7 @@ const fs = require('fs');
 const path = require('path');
 
 // Caminho do arquivo Excel
-const excelFilePath = path.join(__dirname, 'src', 'assets', 'data', 'INSCRICAO DO NASA SPACE APPS 2025 (respostas) (5).xlsx');
+const excelFilePath = path.join(__dirname, 'src', 'assets', 'data', 'inscricao_nasa.xlsx');
 const outputJsonPath = path.join(__dirname, 'src', 'assets', 'data', 'registrations.json');
 
 // Função para extrair DDD do telefone
@@ -54,29 +54,7 @@ try {
   console.log(`Total de registros encontrados: ${rawData.length}`);
 
   // Processa os dados para ocultar informações sensíveis
-  const processedData = rawData.map(row => {
-    // Detecta automaticamente os nomes das colunas (podem variar)
-    const keys = Object.keys(row);
-
-    return {
-      timestamp: row[keys[0]] || '',
-      name: anonymizeName(row[keys[1]]), // Anonimiza nome
-      email: '', // Remove email completamente
-      phone: row[keys[3]] || '',
-      cpf: anonymizeCPF(row[keys[4]]), // Anonimiza CPF
-      city: row[keys[5]] || '',
-      education: row[keys[6]] || '',
-      birthDate: row[keys[7]] || '',
-      participationMode: row[keys[8]] || '',
-      emailAddress: '', // Remove email secundário
-      interestAreas: row[keys[10]] || '',
-      howHeard: row[keys[11]] || '',
-      ddd: extractDDD(row[keys[3]]),
-      gender: row[keys[12]] || ''
-    };
-  });
-
-  // Salva o JSON processado
+  const processedData = rawData
   fs.writeFileSync(outputJsonPath, JSON.stringify(processedData, null, 2), 'utf8');
 
   console.log(`✅ Arquivo JSON criado com sucesso: ${outputJsonPath}`);

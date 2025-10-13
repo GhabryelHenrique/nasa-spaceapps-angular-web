@@ -9,7 +9,7 @@ import { ParticipantsByCountryChartComponent } from './components/participants-b
 import { BrazilianCitiesComparisonComponent } from './components/brazilian-cities-comparison/brazilian-cities-comparison.component';
 import { WorldCitiesComparisonComponent } from './components/world-cities-comparison/world-cities-comparison.component';
 import { RegistrationDataService, RegistrationStats } from '../services/registration-data.service';
-import { GoogleSheetsService, RegistrationRow } from '../services/google-sheets.service';
+import { GoogleSheetsService, RegistrationRow, FeedbackRow } from '../services/google-sheets.service';
 import { NasaTeamsService, TeamData, LocalEventData } from '../services/nasa-teams.service';
 import { TeamsService } from '../services/teams.service';
 import { OtherCitiesTeamsService } from '../services/other-cities-teams.service';
@@ -29,8 +29,13 @@ export class WarRoomComponent implements OnInit, OnDestroy {
   totalParticipants = 0;
   totalCities = 0;
   uberlandia: any
-  registrationStats: RegistrationStats | null = null;
+  registrationStats: RegistrationStats | any = null;
   isLoadingFile = false;
+
+  // Feedback data
+  feedbackData: FeedbackRow[] = [];
+  feedbackStats: any = null;
+  isLoadingFeedback = false;
 
   // NASA Teams data
   teams: TeamData[] = [];
@@ -64,6 +69,7 @@ export class WarRoomComponent implements OnInit, OnDestroy {
   ngOnInit() {
     this.loadCities();
     this.loadGoogleSheetsData();
+    this.loadFeedbackData();
     this.subscribeToNasaData();
     this.loadTeamsData();
     this.loadCityTeamsStats();
@@ -153,17 +159,17 @@ export class WarRoomComponent implements OnInit, OnDestroy {
 
   private loadGoogleSheetsData() {
     console.log('=== WAR ROOM COMPONENT DEBUG ===');
-    console.log('Carregando dados do arquivo local (Excel convertido)');
+    console.log('Carregando dados diretamente do Google Sheets');
 
     this.isLoadingFile = true;
 
-    this.googleSheetsService.getRegistrationDataFromLocal().subscribe({
+    this.googleSheetsService.getRegistrationDataFromGoogleSheets().subscribe({
       next: (data: RegistrationRow[]) => {
-        console.log('Dados brutos recebidos do arquivo local:', data.length, 'registros');
+        console.log('Dados brutos recebidos do Google Sheets:', data.length, 'registros');
         console.log('Primeira linha de dados (anonimizada):', data[0]);
 
         try {
-          // Transforma os dados do arquivo local no formato esperado pelo service
+          // Transforma os dados do Google Sheets no formato esperado pelo service
           const registrationData = data.map((row: RegistrationRow) => ({
             timestamp: this.convertTimestampToDate(row.timestamp),
             name: row.name || '', // Nome anonimizado (apenas iniciais)
@@ -181,23 +187,50 @@ export class WarRoomComponent implements OnInit, OnDestroy {
           console.log('Dados transformados:', registrationData.length, 'registros');
           console.log('Primeiro registro transformado:', registrationData[0]);
 
-          // Atualiza o service com os dados do arquivo local
+          // Atualiza o service com os dados do Google Sheets
           this.registrationDataService.setRegistrationData(registrationData);
           this.registrationStats = this.registrationDataService.getRegistrationStats();
 
           console.log('Stats calculadas:', this.registrationStats);
-          console.log(`Dados do arquivo local carregados com sucesso: ${this.registrationStats?.totalRegistrations} registros`);
+          console.log(`Dados do Google Sheets carregados com sucesso: ${this.registrationStats?.totalRegistrations} registros`);
           console.log('=== END WAR ROOM DEBUG ===');
         } catch (error) {
-          console.error('Erro ao processar dados do arquivo local:', error);
+          console.error('Erro ao processar dados do Google Sheets:', error);
         } finally {
           this.isLoadingFile = false;
         }
       },
       error: (error) => {
-        console.error('Erro ao carregar dados do arquivo local:', error);
+        console.error('Erro ao carregar dados do Google Sheets:', error);
         console.log('Detalhes do erro:', error);
-        this.isLoadingFile = false;
+        console.log('Tentando carregar dados do arquivo local como fallback...');
+
+        // Fallback para arquivo local em caso de erro
+        this.googleSheetsService.getRegistrationDataFromLocal().subscribe({
+          next: (data: RegistrationRow[]) => {
+            console.log('Dados do fallback local carregados:', data.length, 'registros');
+            const registrationData = data.map((row: RegistrationRow) => ({
+              timestamp: this.convertTimestampToDate(row.timestamp),
+              name: row.name || '',
+              email: row.email || row.emailAddress || '',
+              phone: row.ddd ? `${row.ddd}000000000` : (row.phone || ''),
+              city: row.city || '',
+              motivations: row.howHeard || '',
+              experience: row.education || '',
+              interests: row.birthDate || '',
+              availability: row.participationMode || '',
+              expectations: row.interestAreas || '',
+              gender: row.gender || '',
+            }));
+            this.registrationDataService.setRegistrationData(registrationData);
+            this.registrationStats = this.registrationDataService.getRegistrationStats();
+            this.isLoadingFile = false;
+          },
+          error: (fallbackError) => {
+            console.error('Erro ao carregar fallback local:', fallbackError);
+            this.isLoadingFile = false;
+          }
+        });
       }
     });
   }
@@ -305,7 +338,7 @@ export class WarRoomComponent implements OnInit, OnDestroy {
     if (!this.registrationStats || !this.registrationStats.dailyRegistrations.length) {
       return 0;
     }
-    return Math.max(...this.registrationStats.dailyRegistrations.map(d => d.count));
+    return Math.max(...this.registrationStats.dailyRegistrations.map((d: { date: string; count: number }) => d.count));
   }
 
   getMostCommonEducation(): string {
@@ -327,7 +360,7 @@ export class WarRoomComponent implements OnInit, OnDestroy {
     if (!this.registrationStats || !this.registrationStats.ageStats.length) {
       return 'N/A';
     }
-    return this.registrationStats.ageStats.sort((a, b) => b.count - a.count)[0].ageGroup;
+    return this.registrationStats.ageStats.sort((a: { ageGroup: string; count: number }, b: { ageGroup: string; count: number }) => b.count - a.count)[0].ageGroup;
   }
 
   getAgeGroupPercentage(): number {
@@ -465,5 +498,114 @@ export class WarRoomComponent implements OnInit, OnDestroy {
     if (this.cityTeamsStats.length === 0) return 0;
     const totalRate = this.cityTeamsStats.reduce((total, city) => total + city.submissionRate, 0);
     return totalRate / this.cityTeamsStats.length;
+  }
+
+  // Feedback data methods
+  private loadFeedbackData() {
+    console.log('=== LOADING FEEDBACK DATA ===');
+    this.isLoadingFeedback = true;
+
+    this.googleSheetsService.getFeedbackDataFromGoogleSheets().subscribe({
+      next: (data: FeedbackRow[]) => {
+        console.log('Dados de feedback recebidos:', data.length, 'respostas');
+        this.feedbackData = data;
+        this.calculateFeedbackStats();
+        this.isLoadingFeedback = false;
+      },
+      error: (error) => {
+        console.error('Erro ao carregar dados de feedback:', error);
+        this.isLoadingFeedback = false;
+      }
+    });
+  }
+
+  private calculateFeedbackStats() {
+    if (this.feedbackData.length === 0) {
+      this.feedbackStats = null;
+      return;
+    }
+
+    // Calcula médias das avaliações numéricas
+    const numericRatings = {
+      organization: this.calculateAverageRating(this.feedbackData.map(f => f.organizationRating)),
+      venue: this.calculateAverageRating(this.feedbackData.map(f => f.venueRating)),
+      food: this.calculateAverageRating(this.feedbackData.map(f => f.foodRating)),
+      communication: this.calculateAverageRating(this.feedbackData.map(f => f.communicationRating)),
+      support: this.calculateAverageRating(this.feedbackData.map(f => f.supportRating))
+    };
+
+    // Conta satisfação geral
+    const satisfactionCounts = this.countValues(this.feedbackData.map(f => f.overallSatisfaction));
+
+    // Conta participação futura
+    const futureParticipationCounts = this.countValues(this.feedbackData.map(f => f.futureParticipation));
+
+    // Conta recomendação
+    const recommendationCounts = this.countValues(this.feedbackData.map(f => f.recommendation));
+
+    this.feedbackStats = {
+      totalResponses: this.feedbackData.length,
+      averageRatings: numericRatings,
+      overallAverage: this.calculateOverallAverage(numericRatings),
+      satisfactionCounts,
+      futureParticipationCounts,
+      recommendationCounts,
+      technicalIssuesCount: this.feedbackData.filter(f => f.technicalIssues && f.technicalIssues.trim() !== '').length,
+      commentsCount: this.feedbackData.filter(f => f.additionalComments && f.additionalComments.trim() !== '').length
+    };
+
+    console.log('Estatísticas de feedback calculadas:', this.feedbackStats);
+  }
+
+  private calculateAverageRating(ratings: string[]): number {
+    const validRatings = ratings
+      .map(r => parseFloat(r))
+      .filter(r => !isNaN(r) && r > 0);
+
+    if (validRatings.length === 0) return 0;
+
+    const sum = validRatings.reduce((acc, val) => acc + val, 0);
+    return Math.round((sum / validRatings.length) * 10) / 10;
+  }
+
+  private calculateOverallAverage(ratings: any): number {
+    const values = Object.values(ratings) as number[];
+    const validValues = values.filter(v => v > 0);
+    if (validValues.length === 0) return 0;
+    const sum = validValues.reduce((acc, val) => acc + val, 0);
+    return Math.round((sum / validValues.length) * 10) / 10;
+  }
+
+  private countValues(values: string[]): { [key: string]: number } {
+    return values.reduce((acc, val) => {
+      if (val && val.trim() !== '') {
+        acc[val] = (acc[val] || 0) + 1;
+      }
+      return acc;
+    }, {} as { [key: string]: number });
+  }
+
+  // Getter methods for feedback stats
+  get feedbackResponsesCount(): number {
+    return this.feedbackStats?.totalResponses || 0;
+  }
+
+  get feedbackOverallAverage(): number {
+    return this.feedbackStats?.overallAverage || 0;
+  }
+
+  get feedbackMostCommonSatisfaction(): string {
+    if (!this.feedbackStats?.satisfactionCounts) return 'N/A';
+    const entries = Object.entries(this.feedbackStats.satisfactionCounts);
+    if (entries.length === 0) return 'N/A';
+    const sorted = entries.sort((a, b) => (b[1] as number) - (a[1] as number));
+    return sorted[0][0];
+  }
+
+  get feedbackRecommendationPercentage(): number {
+    if (!this.feedbackStats?.recommendationCounts) return 0;
+    const positive = (this.feedbackStats.recommendationCounts['Sim'] || 0) +
+                     (this.feedbackStats.recommendationCounts['Com certeza'] || 0);
+    return Math.round((positive / this.feedbackStats.totalResponses) * 100);
   }
 }

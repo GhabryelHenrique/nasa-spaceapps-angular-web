@@ -19,6 +19,10 @@
           <div class="stat-number">{{ registrationStats.totalRegistrations }}</div>
           <div class="stat-label">Inscrições Formulário</div>
         </div>
+        <div class="stat-card" *ngIf="feedbackStats" [class.loading]="isLoadingFeedback">
+          <div class="stat-number">{{ feedbackResponsesCount }}</div>
+          <div class="stat-label">Feedbacks Recebidos</div>
+        </div>
         <div class="stat-card live-data" [class.loading]="isLoadingTeams">
           <div class="stat-number">{{ totalTeams }}</div>
           <div class="stat-label">Times NASA 🔴</div>
@@ -72,7 +76,7 @@
 
   <!-- Dashboard Insights -->
   <div class="insights-dashboard" *ngIf="registrationStats">
-    <h2 class="dashboard-title">📈 Insights dos Dados</h2>
+    <h2 class="dashboard-title">📈 Insights dos Dados de Inscrição</h2>
 
     <div class="insights-grid">
       <div class="insight-card highlight">
@@ -141,6 +145,140 @@
         </div>
       </div>
     </div>
+  </div>
+
+  <!-- Feedback Dashboard -->
+  <div class="insights-dashboard" *ngIf="feedbackStats">
+    <h2 class="dashboard-title">💬 Insights dos Feedbacks do Evento</h2>
+
+    <div class="insights-grid">
+      <div class="insight-card highlight">
+        <div class="insight-icon">📊</div>
+        <div class="insight-content">
+          <h3>{{ feedbackResponsesCount }}</h3>
+          <p>Respostas de Feedback</p>
+          <div class="insight-percentage">
+            {{ ((feedbackResponsesCount / registrationStats.totalRegistrations) * 100).toFixed(1) }}% taxa de resposta
+          </div>
+        </div>
+      </div>
+
+      <div class="insight-card">
+        <div class="insight-icon">⭐</div>
+        <div class="insight-content">
+          <h3>{{ feedbackOverallAverage }}/5</h3>
+          <p>Avaliação Média Geral</p>
+          <div class="insight-detail">
+            Média de todas as categorias
+          </div>
+        </div>
+      </div>
+
+      <div class="insight-card">
+        <div class="insight-icon">😊</div>
+        <div class="insight-content">
+          <h3>{{ feedbackMostCommonSatisfaction }}</h3>
+          <p>Nível de Satisfação Predominante</p>
+          <div class="insight-detail">
+            Satisfação geral dos participantes
+          </div>
+        </div>
+      </div>
+
+      <div class="insight-card">
+        <div class="insight-icon">👍</div>
+        <div class="insight-content">
+          <h3>{{ feedbackRecommendationPercentage }}%</h3>
+          <p>Recomendariam o Evento</p>
+          <div class="insight-detail">
+            Índice de recomendação positivo
+          </div>
+        </div>
+      </div>
+
+      <div class="insight-card">
+        <div class="insight-icon">🏢</div>
+        <div class="insight-content">
+          <h3>{{ feedbackStats.averageRatings.organization }}/5</h3>
+          <p>Avaliação da Organização</p>
+          <div class="insight-detail">
+            Organização do evento
+          </div>
+        </div>
+      </div>
+
+      <div class="insight-card">
+        <div class="insight-icon">📍</div>
+        <div class="insight-content">
+          <h3>{{ feedbackStats.averageRatings.venue }}/5</h3>
+          <p>Avaliação do Local</p>
+          <div class="insight-detail">
+            Infraestrutura e espaço
+          </div>
+        </div>
+      </div>
+
+      <div class="insight-card">
+        <div class="insight-icon">🍕</div>
+        <div class="insight-content">
+          <h3>{{ feedbackStats.averageRatings.food }}/5</h3>
+          <p>Avaliação da Alimentação</p>
+          <div class="insight-detail">
+            Qualidade da comida
+          </div>
+        </div>
+      </div>
+
+      <div class="insight-card">
+        <div class="insight-icon">💬</div>
+        <div class="insight-content">
+          <h3>{{ feedbackStats.averageRatings.communication }}/5</h3>
+          <p>Avaliação da Comunicação</p>
+          <div class="insight-detail">
+            Clareza das informações
+          </div>
+        </div>
+      </div>
+
+      <div class="insight-card">
+        <div class="insight-icon">🤝</div>
+        <div class="insight-content">
+          <h3>{{ feedbackStats.averageRatings.support }}/5</h3>
+          <p>Avaliação do Suporte</p>
+          <div class="insight-detail">
+            Apoio da equipe
+          </div>
+        </div>
+      </div>
+
+      <div class="insight-card">
+        <div class="insight-icon">⚠️</div>
+        <div class="insight-content">
+          <h3>{{ feedbackStats.technicalIssuesCount }}</h3>
+          <p>Problemas Técnicos Reportados</p>
+          <div class="insight-detail">
+            Incidentes registrados
+          </div>
+        </div>
+      </div>
+
+      <div class="insight-card">
+        <div class="insight-icon">💭</div>
+        <div class="insight-content">
+          <h3>{{ feedbackStats.commentsCount }}</h3>
+          <p>Comentários Adicionais</p>
+          <div class="insight-detail">
+            Feedback qualitativo
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Loading State for Feedback -->
+  <div class="loading-state" *ngIf="isLoadingFeedback && !feedbackStats">
+    <div class="loading-icon">⏳</div>
+    <p>Carregando dados de feedback...</p>
   </div>
 
   <!-- Registration Map -->

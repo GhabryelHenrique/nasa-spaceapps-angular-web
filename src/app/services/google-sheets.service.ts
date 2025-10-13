@@ -20,10 +20,32 @@ export interface RegistrationRow {
   gender: string;
 }
 
+export interface FeedbackRow {
+  timestamp: string;
+  email: string;
+  overallSatisfaction: string;
+  organizationRating: string;
+  venueRating: string;
+  foodRating: string;
+  communicationRating: string;
+  supportRating: string;
+  positiveAspects: string;
+  improvementSuggestions: string;
+  highlights: string;
+  technicalIssues: string;
+  futureParticipation: string;
+  recommendation: string;
+  additionalComments: string;
+}
+
 @Injectable({
   providedIn: 'root'
 })
 export class GoogleSheetsService {
+  // IDs das planilhas do Google Sheets
+  private readonly REGISTRATION_SPREADSHEET_ID = '1U9DX-_bsEHT0goXNtSmFctEOO3UflkD3zkyDPeyrdjQ';
+  private readonly FEEDBACK_SPREADSHEET_ID = '1KQ79MBgj0mSVg0QpPms6yHw6gAillmaqMn_WJ3p0zHU';
+  private readonly REGISTRATION_GID = '276652387'; // GID da aba de inscrições
 
   constructor(private http: HttpClient) {}
 
@@ -40,9 +62,35 @@ export class GoogleSheetsService {
     );
   }
 
-  getRegistrationData(spreadsheetId: string, range: string = 'A:L'): Observable<RegistrationRow[]> {
-    // Acessa a planilha como CSV público
-    const csvUrl = `https://docs.google.com/spreadsheets/d/${spreadsheetId}/export?format=csv`;
+  /**
+   * Carrega dados de inscrição diretamente do Google Sheets
+   */
+  getRegistrationDataFromGoogleSheets(): Observable<RegistrationRow[]> {
+    return this.getRegistrationData(this.REGISTRATION_SPREADSHEET_ID, this.REGISTRATION_GID);
+  }
+
+  /**
+   * Carrega dados de feedback diretamente do Google Sheets
+   */
+  getFeedbackDataFromGoogleSheets(): Observable<FeedbackRow[]> {
+    const csvUrl = `https://docs.google.com/spreadsheets/d/${this.FEEDBACK_SPREADSHEET_ID}/export?format=csv`;
+
+    return this.http.get(csvUrl, { responseType: 'text' }).pipe(
+      map(csvData => this.parseFeedbackCSV(csvData)),
+      catchError(error => {
+        console.error('Erro ao buscar dados de feedback do Google Sheets:', error);
+        console.error('Certifique-se que a planilha está configurada como pública para leitura.');
+        return throwError(() => error);
+      })
+    );
+  }
+
+  getRegistrationData(spreadsheetId: string, gid?: string): Observable<RegistrationRow[]> {
+    // Acessa a planilha como CSV público, com GID específico se fornecido
+    let csvUrl = `https://docs.google.com/spreadsheets/d/${spreadsheetId}/export?format=csv`;
+    if (gid) {
+      csvUrl += `&gid=${gid}`;
+    }
 
     return this.http.get(csvUrl, { responseType: 'text' }).pipe(
       map(csvData => this.parseCSV(csvData)),
@@ -127,5 +175,41 @@ export class GoogleSheetsService {
     }
 
     return '';
+  }
+
+  private parseFeedbackCSV(csvData: string): FeedbackRow[] {
+    const lines = csvData.split('\n');
+
+    if (lines.length <= 1) {
+      console.warn('CSV de feedback vazio ou apenas com cabeçalho');
+      return [];
+    }
+
+    // Remove a primeira linha (cabeçalhos)
+    const dataLines = lines.slice(1);
+    const validLines = dataLines.filter(line => line.trim() !== '');
+
+    const processedData = validLines.map((line) => {
+      const columns = this.parseCSVLine(line);
+      return {
+        timestamp: columns[0] || '',
+        email: columns[1] || '',
+        overallSatisfaction: columns[2] || '',
+        organizationRating: columns[3] || '',
+        venueRating: columns[4] || '',
+        foodRating: columns[5] || '',
+        communicationRating: columns[6] || '',
+        supportRating: columns[7] || '',
+        positiveAspects: columns[8] || '',
+        improvementSuggestions: columns[9] || '',
+        highlights: columns[10] || '',
+        technicalIssues: columns[11] || '',
+        futureParticipation: columns[12] || '',
+        recommendation: columns[13] || '',
+        additionalComments: columns[14] || ''
+      };
+    });
+
+    return processedData;
   }
 }
