@@ -197,43 +197,10 @@
       </div>
 
       <div class="insight-card">
-        <div class="insight-icon">🏢</div>
-        <div class="insight-content">
-          <h3>{{ feedbackStats.averageRatings.organization }}/5</h3>
-          <p>Avaliação da Organização</p>
-          <div class="insight-detail">
-            Organização do evento
-          </div>
-        </div>
-      </div>
-
-      <div class="insight-card">
-        <div class="insight-icon">📍</div>
-        <div class="insight-content">
-          <h3>{{ feedbackStats.averageRatings.venue }}/5</h3>
-          <p>Avaliação do Local</p>
-          <div class="insight-detail">
-            Infraestrutura e espaço
-          </div>
-        </div>
-      </div>
-
-      <div class="insight-card">
-        <div class="insight-icon">🍕</div>
-        <div class="insight-content">
-          <h3>{{ feedbackStats.averageRatings.food }}/5</h3>
-          <p>Avaliação da Alimentação</p>
-          <div class="insight-detail">
-            Qualidade da comida
-          </div>
-        </div>
-      </div>
-
-      <div class="insight-card">
         <div class="insight-icon">💬</div>
         <div class="insight-content">
           <h3>{{ feedbackStats.averageRatings.communication }}/5</h3>
-          <p>Avaliação da Comunicação</p>
+          <p>Comunicação Pré-Evento</p>
           <div class="insight-detail">
             Clareza das informações
           </div>
@@ -241,23 +208,67 @@
       </div>
 
       <div class="insight-card">
-        <div class="insight-icon">🤝</div>
+        <div class="insight-icon">📅</div>
         <div class="insight-content">
-          <h3>{{ feedbackStats.averageRatings.support }}/5</h3>
-          <p>Avaliação do Suporte</p>
+          <h3>{{ feedbackStats.averageRatings.scheduleClarity }}/5</h3>
+          <p>Clareza do Cronograma</p>
           <div class="insight-detail">
-            Apoio da equipe
+            Organização dos horários
           </div>
         </div>
       </div>
 
       <div class="insight-card">
-        <div class="insight-icon">⚠️</div>
+        <div class="insight-icon">👨‍🏫</div>
         <div class="insight-content">
-          <h3>{{ feedbackStats.technicalIssuesCount }}</h3>
-          <p>Problemas Técnicos Reportados</p>
+          <h3>{{ feedbackStats.averageRatings.mentorsSupport }}/5</h3>
+          <p>Suporte dos Mentores</p>
           <div class="insight-detail">
-            Incidentes registrados
+            Disponibilidade e qualidade
+          </div>
+        </div>
+      </div>
+
+      <div class="insight-card">
+        <div class="insight-icon">🤝</div>
+        <div class="insight-content">
+          <h3>{{ feedbackStats.averageRatings.volunteersQuality }}/5</h3>
+          <p>Equipe de Voluntários</p>
+          <div class="insight-detail">
+            Atendimento e suporte
+          </div>
+        </div>
+      </div>
+
+      <div class="insight-card">
+        <div class="insight-icon">💬</div>
+        <div class="insight-content">
+          <h3>{{ feedbackStats.averageRatings.discordStructure }}/5</h3>
+          <p>Estrutura do Discord</p>
+          <div class="insight-detail">
+            Organização e usabilidade
+          </div>
+        </div>
+      </div>
+
+      <div class="insight-card">
+        <div class="insight-icon">✨</div>
+        <div class="insight-content">
+          <h3>{{ feedbackStats.positiveAspectsCount }}</h3>
+          <p>Aspectos Positivos</p>
+          <div class="insight-detail">
+            Feedback positivo escrito
+          </div>
+        </div>
+      </div>
+
+      <div class="insight-card">
+        <div class="insight-icon">🔧</div>
+        <div class="insight-content">
+          <h3>{{ feedbackStats.improvementSuggestionsCount }}</h3>
+          <p>Sugestões de Melhoria</p>
+          <div class="insight-detail">
+            Ideias para próximas edições
           </div>
         </div>
       </div>
@@ -268,7 +279,7 @@
           <h3>{{ feedbackStats.commentsCount }}</h3>
           <p>Comentários Adicionais</p>
           <div class="insight-detail">
-            Feedback qualitativo
+            Feedback qualitativo extra
           </div>
         </div>
       </div>
@@ -280,6 +291,12 @@
     <div class="loading-icon">⏳</div>
     <p>Carregando dados de feedback...</p>
   </div>
+
+  <!-- Feedback Details Component - Análise Detalhada -->
+  <app-feedback-details
+    [feedbackData]="feedbackData"
+    *ngIf="!isLoadingFeedback && feedbackData.length > 0">
+  </app-feedback-details>
 
   <!-- Registration Map -->
   <app-registration-map

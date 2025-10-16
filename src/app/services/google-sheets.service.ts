@@ -22,19 +22,48 @@ export interface RegistrationRow {
 
 export interface FeedbackRow {
   timestamp: string;
+  name: string;
   email: string;
-  overallSatisfaction: string;
-  organizationRating: string;
-  venueRating: string;
-  foodRating: string;
+  role: string;
+  participationMode: string;
+  previousParticipation: string;
+  areaOfExpertise: string;
+
+  // Avaliações numéricas
   communicationRating: string;
-  supportRating: string;
+  scheduleClarity: string;
+  venueNASADigital: string;
+  venueIFTM: string;
+  venueSankhya: string;
+  venueUFU: string;
+  venueUNA: string;
+  venueUniube: string;
+
+  // Palestras
+  talkUberlandia: string;
+  talkGabrielle: string;
+  talkCasosSucesso: string;
+  talkIA: string;
+  talkDicasHackathon: string;
+  talkPitch: string;
+  talkAstronauta: string;
+  talkCienciaEspaco: string;
+
+  // Suporte e estrutura
+  mentorsSupport: string;
+  volunteersQuality: string;
+  discordStructure: string;
+  challengesDiversity: string;
+  teamFormation: string;
+  challengeDifficulty: string;
+  projectSatisfaction: string;
+  recommendation: string;
+  overallSatisfaction: string;
+
+  // Feedback qualitativo
   positiveAspects: string;
   improvementSuggestions: string;
   highlights: string;
-  technicalIssues: string;
-  futureParticipation: string;
-  recommendation: string;
   additionalComments: string;
 }
 
@@ -189,26 +218,71 @@ export class GoogleSheetsService {
     const dataLines = lines.slice(1);
     const validLines = dataLines.filter(line => line.trim() !== '');
 
-    const processedData = validLines.map((line) => {
+    console.log('=== PARSING FEEDBACK CSV ===');
+    console.log('Total de linhas válidas:', validLines.length);
+
+    const processedData = validLines.map((line, index) => {
       const columns = this.parseCSVLine(line);
+
+      // Log da primeira linha para debug
+      if (index === 0) {
+        console.log('Primeira linha - Total de colunas:', columns.length);
+        columns.forEach((col, i) => {
+          if (col) console.log(`Coluna ${i}: ${col.substring(0, 50)}...`);
+        });
+      }
+
       return {
         timestamp: columns[0] || '',
-        email: columns[1] || '',
-        overallSatisfaction: columns[2] || '',
-        organizationRating: columns[3] || '',
-        venueRating: columns[4] || '',
-        foodRating: columns[5] || '',
-        communicationRating: columns[6] || '',
-        supportRating: columns[7] || '',
-        positiveAspects: columns[8] || '',
-        improvementSuggestions: columns[9] || '',
-        highlights: columns[10] || '',
-        technicalIssues: columns[11] || '',
-        futureParticipation: columns[12] || '',
-        recommendation: columns[13] || '',
-        additionalComments: columns[14] || ''
+        name: columns[1] || '',
+        email: columns[2] || '',
+        role: columns[3] || '',
+        participationMode: columns[4] || '',
+        previousParticipation: columns[5] || '',
+        areaOfExpertise: columns[6] || '',
+
+        // Avaliações numéricas
+        communicationRating: columns[7] || '',
+        scheduleClarity: columns[8] || '',
+        venueNASADigital: columns[9] || '',
+        venueIFTM: columns[10] || '',
+        venueSankhya: columns[11] || '',
+        venueUFU: columns[12] || '',
+        venueUNA: columns[13] || '',
+        venueUniube: columns[14] || '',
+
+        // Palestras (colunas 15-22)
+        talkUberlandia: columns[15] || '',
+        talkGabrielle: columns[16] || '',
+        talkCasosSucesso: columns[17] || '',
+        talkIA: columns[18] || '',
+        talkDicasHackathon: columns[19] || '',
+        talkPitch: columns[20] || '',
+        talkAstronauta: columns[21] || '',
+        talkCienciaEspaco: columns[22] || '',
+
+        // Suporte e estrutura (colunas 23-31)
+        mentorsSupport: columns[23] || '',
+        volunteersQuality: columns[24] || '',
+        discordStructure: columns[25] || '',
+        challengesDiversity: columns[26] || '',
+        teamFormation: columns[27] || '',
+        challengeDifficulty: columns[28] || '',
+        projectSatisfaction: columns[29] || '',
+        recommendation: columns[30] || '',
+        overallSatisfaction: columns[31] || '',
+
+        // Feedback qualitativo (colunas 32-35)
+        positiveAspects: columns[32] || '',
+        improvementSuggestions: columns[33] || '',
+        highlights: columns[34] || '',
+        additionalComments: columns[35] || ''
       };
     });
+
+    console.log('Dados processados:', processedData.length, 'feedbacks');
+    console.log('Primeiro feedback processado:', processedData[0]);
+    console.log('=== END PARSING FEEDBACK ===');
 
     return processedData;
   }

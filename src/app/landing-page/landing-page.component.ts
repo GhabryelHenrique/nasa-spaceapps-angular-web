@@ -28,7 +28,7 @@ export class LandingPageComponent implements OnInit, OnDestroy {
   totalMembers = 0;
 
   // Countdown properties
-  eventDate = new Date('2025-10-16T23:59:59-03:00'); // Global Nominees announcement: October 16th, 2025 23:59:59 in Brazil timezone
+  eventDate = new Date('2025-10-21T18:59:59-03:00'); // Global Nominees announcement: October 16th, 2025 23:59:59 in Brazil timezone
   countdown = { days: 0, hours: 0, minutes: 0, seconds: 0 };
   countdownInterval: any;
 

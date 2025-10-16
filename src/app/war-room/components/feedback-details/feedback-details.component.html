@@ -1,0 +1,274 @@
+<div class="feedback-details-container" *ngIf="feedbackData.length > 0">
+  <!-- Navegação por Abas -->
+  <div class="tabs-navigation">
+    <button
+      class="tab-button"
+      [class.active]="selectedTab === 'overview'"
+      (click)="selectTab('overview')">
+      <span class="tab-icon">📊</span>
+      <span class="tab-label">Visão Geral</span>
+    </button>
+    <button
+      class="tab-button"
+      [class.active]="selectedTab === 'insights'"
+      (click)="selectTab('insights')">
+      <span class="tab-icon">🎯</span>
+      <span class="tab-label">Insights & Ações</span>
+      <span class="badge" *ngIf="actionPlan.length > 0">{{ actionPlan.length }}</span>
+    </button>
+    <button
+      class="tab-button"
+      [class.active]="selectedTab === 'positive'"
+      (click)="selectTab('positive')">
+      <span class="tab-icon">✅</span>
+      <span class="tab-label">Pontos Positivos</span>
+      <span class="badge">{{ positiveCategories.length }}</span>
+    </button>
+    <button
+      class="tab-button"
+      [class.active]="selectedTab === 'improvements'"
+      (click)="selectTab('improvements')">
+      <span class="tab-icon">🔧</span>
+      <span class="tab-label">Melhorias</span>
+      <span class="badge warning">{{ improvementCategories.length }}</span>
+    </button>
+    <button
+      class="tab-button"
+      [class.active]="selectedTab === 'highlights'"
+      (click)="selectTab('highlights')">
+      <span class="tab-icon">⭐</span>
+      <span class="tab-label">Destaques</span>
+      <span class="badge">{{ highlightsCategories.length }}</span>
+    </button>
+  </div>
+
+  <!-- Conteúdo das Abas -->
+  <div class="tab-content">
+
+    <!-- Aba: Visão Geral -->
+    <div class="tab-panel" *ngIf="selectedTab === 'overview'">
+      <div class="panel-header">
+        <h2>📊 Visão Geral dos Feedbacks</h2>
+        <p class="subtitle">Análise consolidada de {{ feedbackData.length }} respostas recebidas</p>
+      </div>
+
+      <div class="overview-grid">
+        <!-- Word Cloud - Aspectos Positivos -->
+        <div class="word-cloud-card">
+          <h3>✨ Palavras Mais Mencionadas (Positivo)</h3>
+          <div class="word-cloud">
+            <span
+              *ngFor="let word of positiveWordCloud.slice(0, 20)"
+              class="word"
+              [style.font-size.px]="12 + (word.weight / 5)"
+              [style.opacity]="0.5 + (word.weight / 200)">
+              {{ word.word }}
+              <span class="word-count">({{ word.count }})</span>
+            </span>
+          </div>
+        </div>
+
+        <!-- Word Cloud - Melhorias -->
+        <div class="word-cloud-card">
+          <h3>🔍 Palavras Mais Mencionadas (Melhorias)</h3>
+          <div class="word-cloud">
+            <span
+              *ngFor="let word of improvementWordCloud.slice(0, 20)"
+              class="word improvement"
+              [style.font-size.px]="12 + (word.weight / 5)"
+              [style.opacity]="0.5 + (word.weight / 200)">
+              {{ word.word }}
+              <span class="word-count">({{ word.count }})</span>
+            </span>
+          </div>
+        </div>
+
+        <!-- Resumo Rápido -->
+        <div class="quick-summary">
+          <h3>📋 Resumo Executivo</h3>
+          <div class="summary-stats">
+            <div class="summary-stat">
+              <div class="stat-number">{{ positiveCategories.length }}</div>
+              <div class="stat-label">Categorias Positivas</div>
+            </div>
+            <div class="summary-stat warning">
+              <div class="stat-number">{{ improvementCategories.length }}</div>
+              <div class="stat-label">Áreas de Melhoria</div>
+            </div>
+            <div class="summary-stat">
+              <div class="stat-number">{{ highlightsCategories.length }}</div>
+              <div class="stat-label">Destaques</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Aba: Insights & Plano de Ação -->
+    <div class="tab-panel" *ngIf="selectedTab === 'insights'">
+      <div class="panel-header">
+        <h2>🎯 Insights e Plano de Ação</h2>
+        <p class="subtitle">Análises inteligentes e recomendações baseadas nos feedbacks</p>
+      </div>
+
+      <!-- Insights Principais -->
+      <div class="insights-section">
+        <h3>💡 Principais Insights</h3>
+        <div class="insights-list">
+          <div
+            *ngFor="let insight of insights"
+            class="insight-card"
+            [class]="getPriorityClass(insight.priority)">
+            <div class="insight-header">
+              <div class="insight-title">
+                <span class="insight-icon">{{ insight.icon }}</span>
+                <h4>{{ insight.title }}</h4>
+              </div>
+              <span class="priority-badge">{{ getPriorityLabel(insight.priority) }}</span>
+            </div>
+            <p class="insight-description">{{ insight.description }}</p>
+            <div class="action-items" *ngIf="insight.actionItems.length > 0">
+              <h5>Ações Recomendadas:</h5>
+              <ul>
+                <li *ngFor="let action of insight.actionItems">{{ action }}</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Plano de Ação Detalhado -->
+      <div class="action-plan-section" *ngIf="actionPlan.length > 0">
+        <h3>📋 Plano de Ação Detalhado</h3>
+        <p class="section-description">Itens priorizados que requerem atenção imediata</p>
+        <div class="action-plan-list">
+          <div
+            *ngFor="let action of actionPlan; let i = index"
+            class="action-card"
+            [class]="getPriorityClass(action.priority)">
+            <div class="action-number">{{ i + 1 }}</div>
+            <div class="action-content">
+              <div class="action-header">
+                <div class="action-title">
+                  <span class="action-icon">{{ action.icon }}</span>
+                  <h4>{{ action.title }}</h4>
+                </div>
+                <span class="priority-badge">{{ getPriorityLabel(action.priority) }}</span>
+              </div>
+              <p class="action-description">{{ action.description }}</p>
+              <div class="action-checklist">
+                <h5>✓ Checklist de Implementação:</h5>
+                <ul>
+                  <li *ngFor="let item of action.actionItems">
+                    <label>
+                      <input type="checkbox">
+                      <span>{{ item }}</span>
+                    </label>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Aba: Pontos Positivos -->
+    <div class="tab-panel" *ngIf="selectedTab === 'positive'">
+      <div class="panel-header">
+        <h2>✅ Aspectos Positivos do Evento</h2>
+        <p class="subtitle">O que os participantes mais gostaram</p>
+      </div>
+
+      <div class="categories-grid">
+        <div
+          *ngFor="let category of positiveCategories"
+          class="category-card positive">
+          <div class="category-header" [style.background-color]="category.color">
+            <span class="category-icon">{{ category.icon }}</span>
+            <h3>{{ category.category }}</h3>
+            <span class="category-count">{{ category.count }} menções</span>
+          </div>
+          <div class="category-content">
+            <div class="feedback-items">
+              <div *ngFor="let item of category.items" class="feedback-item">
+                <span class="item-icon">💬</span>
+                <p>{{ item }}</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Aba: Sugestões de Melhoria -->
+    <div class="tab-panel" *ngIf="selectedTab === 'improvements'">
+      <div class="panel-header">
+        <h2>🔧 Sugestões de Melhoria</h2>
+        <p class="subtitle">Oportunidades de aprimoramento identificadas pelos participantes</p>
+      </div>
+
+      <div class="categories-grid">
+        <div
+          *ngFor="let category of improvementCategories"
+          class="category-card improvement">
+          <div class="category-header" [style.background-color]="category.color">
+            <span class="category-icon">{{ category.icon }}</span>
+            <h3>{{ category.category }}</h3>
+            <span class="category-count">{{ category.count }} menções</span>
+          </div>
+          <div class="category-content">
+            <div class="feedback-items">
+              <div *ngFor="let item of category.items" class="feedback-item">
+                <span class="item-icon">💡</span>
+                <p>{{ item }}</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Aba: Destaques -->
+    <div class="tab-panel" *ngIf="selectedTab === 'highlights'">
+      <div class="panel-header">
+        <h2>⭐ Destaques do Evento</h2>
+        <p class="subtitle">Momentos e aspectos mais marcantes segundo os participantes</p>
+      </div>
+
+      <div class="categories-grid">
+        <div
+          *ngFor="let category of highlightsCategories"
+          class="category-card highlight">
+          <div class="category-header" [style.background-color]="category.color">
+            <span class="category-icon">{{ category.icon }}</span>
+            <h3>{{ category.category }}</h3>
+            <span class="category-count">{{ category.count }} menções</span>
+          </div>
+          <div class="category-content">
+            <div class="feedback-items">
+              <div *ngFor="let item of category.items" class="feedback-item">
+                <span class="item-icon">⭐</span>
+                <p>{{ item }}</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="empty-state" *ngIf="highlightsCategories.length === 0">
+        <div class="empty-icon">💭</div>
+        <h3>Sem destaques específicos</h3>
+        <p>Nenhum participante mencionou destaques específicos do evento.</p>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- Estado Vazio -->
+<div class="empty-state-main" *ngIf="feedbackData.length === 0">
+  <div class="empty-icon">📭</div>
+  <h3>Nenhum feedback disponível</h3>
+  <p>Aguardando respostas dos participantes...</p>
+</div>

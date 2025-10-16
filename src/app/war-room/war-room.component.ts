@@ -8,6 +8,7 @@ import { ChallengeChartComponent } from './components/challenge-chart/challenge-
 import { ParticipantsByCountryChartComponent } from './components/participants-by-country-chart/participants-by-country-chart.component';
 import { BrazilianCitiesComparisonComponent } from './components/brazilian-cities-comparison/brazilian-cities-comparison.component';
 import { WorldCitiesComparisonComponent } from './components/world-cities-comparison/world-cities-comparison.component';
+import { FeedbackDetailsComponent } from './components/feedback-details/feedback-details.component';
 import { RegistrationDataService, RegistrationStats } from '../services/registration-data.service';
 import { GoogleSheetsService, RegistrationRow, FeedbackRow } from '../services/google-sheets.service';
 import { NasaTeamsService, TeamData, LocalEventData } from '../services/nasa-teams.service';
@@ -19,7 +20,7 @@ import { takeUntil } from 'rxjs/operators';
 
 @Component({
   selector: 'app-war-room',
-  imports: [CommonModule, RegistrationChartsComponent, RegistrationMapComponent, ChallengeChartComponent, ParticipantsByCountryChartComponent, BrazilianCitiesComparisonComponent, WorldCitiesComparisonComponent],
+  imports: [CommonModule, RegistrationChartsComponent, RegistrationMapComponent, ChallengeChartComponent, ParticipantsByCountryChartComponent, BrazilianCitiesComparisonComponent, WorldCitiesComparisonComponent, FeedbackDetailsComponent],
   templateUrl: './war-room.component.html',
   styleUrl: './war-room.component.scss'
 })
@@ -525,33 +526,56 @@ export class WarRoomComponent implements OnInit, OnDestroy {
       return;
     }
 
-    // Calcula médias das avaliações numéricas
+    // Calcula médias das avaliações numéricas baseadas nos novos campos
     const numericRatings = {
-      organization: this.calculateAverageRating(this.feedbackData.map(f => f.organizationRating)),
-      venue: this.calculateAverageRating(this.feedbackData.map(f => f.venueRating)),
-      food: this.calculateAverageRating(this.feedbackData.map(f => f.foodRating)),
       communication: this.calculateAverageRating(this.feedbackData.map(f => f.communicationRating)),
-      support: this.calculateAverageRating(this.feedbackData.map(f => f.supportRating))
+      scheduleClarity: this.calculateAverageRating(this.feedbackData.map(f => f.scheduleClarity)),
+      mentorsSupport: this.calculateAverageRating(this.feedbackData.map(f => f.mentorsSupport)),
+      volunteersQuality: this.calculateAverageRating(this.feedbackData.map(f => f.volunteersQuality)),
+      discordStructure: this.calculateAverageRating(this.feedbackData.map(f => f.discordStructure)),
+
+      // Médias dos locais
+      venueNASADigital: this.calculateAverageRating(this.feedbackData.map(f => f.venueNASADigital)),
+      venueIFTM: this.calculateAverageRating(this.feedbackData.map(f => f.venueIFTM)),
+      venueSankhya: this.calculateAverageRating(this.feedbackData.map(f => f.venueSankhya)),
+      venueUFU: this.calculateAverageRating(this.feedbackData.map(f => f.venueUFU)),
+      venueUNA: this.calculateAverageRating(this.feedbackData.map(f => f.venueUNA)),
+      venueUniube: this.calculateAverageRating(this.feedbackData.map(f => f.venueUniube)),
+
+      // Médias das palestras
+      talkUberlandia: this.calculateAverageRating(this.feedbackData.map(f => f.talkUberlandia)),
+      talkGabrielle: this.calculateAverageRating(this.feedbackData.map(f => f.talkGabrielle)),
+      talkCasosSucesso: this.calculateAverageRating(this.feedbackData.map(f => f.talkCasosSucesso)),
+      talkIA: this.calculateAverageRating(this.feedbackData.map(f => f.talkIA)),
+      talkDicasHackathon: this.calculateAverageRating(this.feedbackData.map(f => f.talkDicasHackathon)),
+      talkPitch: this.calculateAverageRating(this.feedbackData.map(f => f.talkPitch)),
+      talkAstronauta: this.calculateAverageRating(this.feedbackData.map(f => f.talkAstronauta)),
+      talkCienciaEspaco: this.calculateAverageRating(this.feedbackData.map(f => f.talkCienciaEspaco))
     };
 
     // Conta satisfação geral
     const satisfactionCounts = this.countValues(this.feedbackData.map(f => f.overallSatisfaction));
 
-    // Conta participação futura
-    const futureParticipationCounts = this.countValues(this.feedbackData.map(f => f.futureParticipation));
-
     // Conta recomendação
     const recommendationCounts = this.countValues(this.feedbackData.map(f => f.recommendation));
+
+    // Conta diversidade de desafios
+    const challengesDiversityCounts = this.countValues(this.feedbackData.map(f => f.challengesDiversity));
+
+    // Conta formação de equipe
+    const teamFormationCounts = this.countValues(this.feedbackData.map(f => f.teamFormation));
 
     this.feedbackStats = {
       totalResponses: this.feedbackData.length,
       averageRatings: numericRatings,
       overallAverage: this.calculateOverallAverage(numericRatings),
       satisfactionCounts,
-      futureParticipationCounts,
       recommendationCounts,
-      technicalIssuesCount: this.feedbackData.filter(f => f.technicalIssues && f.technicalIssues.trim() !== '').length,
-      commentsCount: this.feedbackData.filter(f => f.additionalComments && f.additionalComments.trim() !== '').length
+      challengesDiversityCounts,
+      teamFormationCounts,
+      commentsCount: this.feedbackData.filter(f => f.additionalComments && f.additionalComments.trim() !== '').length,
+      positiveAspectsCount: this.feedbackData.filter(f => f.positiveAspects && f.positiveAspects.trim() !== '').length,
+      improvementSuggestionsCount: this.feedbackData.filter(f => f.improvementSuggestions && f.improvementSuggestions.trim() !== '').length
     };
 
     console.log('Estatísticas de feedback calculadas:', this.feedbackStats);

@@ -1174,7 +1174,7 @@
           },
           "country": "Jamaica",
           "displayName": "Trelawny",
-          "cachedRegistrations": 1,
+          "cachedRegistrations": 0,
           "eventType": "Virtual & In-Person",
           "registrationEnabled": true,
           "isHostEvent": false,
