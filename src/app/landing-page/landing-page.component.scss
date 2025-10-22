@@ -302,6 +302,10 @@
             .award-icon {
               transform: scale(1.2) rotate(10deg);
             }
+
+            .award-image img {
+              transform: scale(1.05);
+            }
           }
 
           .award-icon {
@@ -310,8 +314,28 @@
             transition: transform 0.3s ease;
           }
 
+          // Suporte para imagem da ganhadora
+          .award-image {
+            min-width: 80px;
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            overflow: hidden;
+            border: 3px solid rgba(78, 205, 196, 0.4);
+            background: linear-gradient(135deg, rgba(78, 205, 196, 0.2), rgba(88, 101, 242, 0.2));
+            transition: all 0.3s ease;
+
+            img {
+              width: 100%;
+              height: 100%;
+              object-fit: cover;
+              transition: transform 0.3s ease;
+            }
+          }
+
           .award-content {
             text-align: left;
+            flex: 1;
 
             .award-category {
               font-size: 1.1rem;
@@ -326,7 +350,14 @@
               font-size: 1.4rem;
               color: var(--text-primary);
               font-weight: 700;
-              margin: 0;
+              margin: 0 0 0.3rem 0;
+            }
+
+            .award-description {
+              font-size: 0.95rem;
+              color: var(--text-secondary);
+              opacity: 0.9;
+              line-height: 1.5;
             }
           }
         }
@@ -1448,9 +1479,19 @@
               font-size: 2.5rem;
             }
 
+            .award-image {
+              min-width: 70px;
+              width: 70px;
+              height: 70px;
+            }
+
             .award-content {
               .award-winner {
                 font-size: 1.2rem;
+              }
+
+              .award-description {
+                font-size: 0.9rem;
               }
             }
           }
@@ -1761,6 +1802,12 @@
               font-size: 2.5rem;
             }
 
+            .award-image {
+              min-width: 70px;
+              width: 70px;
+              height: 70px;
+            }
+
             .award-content {
               .award-category {
                 font-size: 1rem;
@@ -1768,6 +1815,10 @@
 
               .award-winner {
                 font-size: 1.2rem;
+              }
+
+              .award-description {
+                font-size: 0.9rem;
               }
             }
           }
@@ -2025,6 +2076,13 @@
               font-size: 2.5rem;
             }
 
+            .award-image {
+              min-width: 60px;
+              width: 60px;
+              height: 60px;
+              border-width: 2px;
+            }
+
             .award-content {
               text-align: center;
 
@@ -2034,6 +2092,10 @@
 
               .award-winner {
                 font-size: 1.1rem;
+              }
+
+              .award-description {
+                font-size: 0.85rem;
               }
             }
           }

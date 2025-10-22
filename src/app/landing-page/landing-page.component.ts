@@ -46,25 +46,37 @@ export class LandingPageComponent implements OnInit {
 
   // Prêmios Especiais
   specialAwards = [
-    {
-      category: 'Melhor nome do ano',
-      winner: 'Trem de IA',
-      icon: '🚂',
-    },
+    // {
+    //   category: 'Melhor nome do ano',
+    //   winner: 'Trem de IA',
+    //   icon: '🚂',
+    //   imagePath: 'assets/awards/melhor-nome-do-ano-trem-de-ia.jpg',
+    //   url: '#',
+    //   description: 'Pelo nome mais criativo e divertido do evento'
+    // },
     {
       category: 'Melhor mentora do ano',
-      winner: 'Pamela Dev',
+      winner: 'Pamela Mendes',
       icon: '👩‍🏫',
+      imagePath: 'assets/images/melhor-mentora-do-ano-pamela-dev.jpg',
+      url: 'https://www.instagram.com/pam.dev/',
+      description: 'Pela dedicação excepcional em orientar os participantes'
     },
     {
       category: 'Melhor voluntário do ano',
       winner: 'Júlia Pettersen',
       icon: '🌟',
+      imagePath: 'assets/images/melhor-voluntario-do-ano-julia-pettersen.png',
+      url: 'https://www.instagram.com/julia.pettersen',
+      description: 'Pelo comprometimento e apoio durante todo o evento'
     },
     {
       category: 'Melhor juíza do ano',
       winner: 'Júlia Guidolim',
       icon: '⚖️',
+      imagePath: 'assets/images/melhor-juiza-do-ano-julia-guidolim.jpeg',
+      url: 'https://www.linkedin.com/in/julia-guidolim',
+      description: 'Pela avaliação criteriosa e imparcial dos projetos'
     },
   ];
 

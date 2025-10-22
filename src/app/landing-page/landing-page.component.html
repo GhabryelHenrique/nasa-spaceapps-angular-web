@@ -42,13 +42,22 @@
         <div class="special-awards-section">
           <h3 class="special-awards-title">✨ Prêmios Especiais</h3>
           <div class="special-awards-grid">
-            <div class="special-award-card" *ngFor="let award of specialAwards">
-              <div class="award-icon">{{ award.icon }}</div>
+            <a class="special-award-card" *ngFor="let award of specialAwards"
+               [href]="award.url" target="_blank" rel="noopener noreferrer">
+              <!-- Mostra ícone ou imagem -->
+              <div class="award-icon" *ngIf="!award.imagePath">{{ award.icon }}</div>
+              <div class="award-image" *ngIf="award.imagePath">
+                <img [src]="award.imagePath"
+                     [alt]="'Ganhador do prêmio ' + award.category"
+                     loading="lazy"
+                     onerror="this.src='assets/organizers/placeholder.svg'"/>
+              </div>
               <div class="award-content">
                 <h4 class="award-category">{{ award.category }}</h4>
                 <p class="award-winner">{{ award.winner }}</p>
+                <p class="award-description" *ngIf="award.description">{{ award.description }}</p>
               </div>
-            </div>
+            </a>
           </div>
         </div>
       </div>
