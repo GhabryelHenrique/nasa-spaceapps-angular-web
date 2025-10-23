@@ -1,0 +1,218 @@
+<div class="winner-detail-container">
+  <!-- Loading State -->
+  <div *ngIf="loading" class="loading-container">
+    <div class="loading-spinner"></div>
+    <p>Carregando dados da equipe...</p>
+  </div>
+
+  <!-- Error State -->
+  <div *ngIf="error && !loading" class="error-container">
+    <div class="error-icon">⚠️</div>
+    <h2>{{ error }}</h2>
+    <button class="btn-back" (click)="goBack()">Voltar para Times</button>
+  </div>
+
+  <!-- Team Content -->
+  <div *ngIf="team && !loading" class="team-content">
+    <!-- Header -->
+    <header class="team-header">
+      <button class="btn-back-header" (click)="goBack()">
+        ← Voltar
+      </button>
+
+      <div class="header-content">
+        <div class="award-badge">
+          <span class="award-icon">🏆</span>
+          <span class="award-text">{{ team.awardCategory }} - {{ team.awardYear }}</span>
+        </div>
+        <h1 class="team-title">{{ team.title }}</h1>
+        <p class="team-excerpt">{{ team.excerpt }}</p>
+
+        <div class="team-meta">
+          <span class="meta-item">
+            <strong>Desafio:</strong> {{ team.challengeDetails.title }}
+          </span>
+          <span class="meta-item">
+            <strong>Local:</strong> {{ team.locationDetails.displayName }}
+          </span>
+        </div>
+      </div>
+    </header>
+
+    <!-- Two Column Layout -->
+    <div class="two-column-layout">
+      <!-- Left Column: Text Content -->
+      <div class="text-column">
+        <section class="content-section">
+          <h2 class="section-title">Introdução</h2>
+          <p class="section-text">{{ team.presentation.introduction }}</p>
+        </section>
+
+        <section class="content-section">
+          <h2 class="section-title">Descrição do Projeto</h2>
+          <p class="section-text">{{ team.presentation.projectDescription }}</p>
+        </section>
+
+        <section class="content-section">
+          <h2 class="section-title">Conquistas</h2>
+          <ul class="achievements-list">
+            <li *ngFor="let achievement of team.presentation.achievements" class="achievement-item">
+              <span class="achievement-icon">✨</span>
+              <span>{{ achievement }}</span>
+            </li>
+          </ul>
+        </section>
+
+        <section class="content-section">
+          <h2 class="section-title">Impacto</h2>
+          <p class="section-text">{{ team.presentation.impact }}</p>
+        </section>
+
+        <section class="content-section">
+          <h2 class="section-title">Tecnologias Utilizadas</h2>
+          <div class="tech-tags">
+            <span *ngFor="let tech of team.presentation.technologiesUsed" class="tech-tag">
+              {{ tech }}
+            </span>
+          </div>
+        </section>
+
+        <!-- Project Links -->
+        <section class="content-section project-links">
+          <h2 class="section-title">Links do Projeto</h2>
+          <div class="links-grid">
+            <a *ngIf="team.projectVideo" [href]="team.projectVideo" target="_blank" class="project-link">
+              <span class="link-icon">🎥</span>
+              <span>Vídeo de Apresentação</span>
+            </a>
+            <a *ngIf="team.githubRepo" [href]="team.githubRepo" target="_blank" class="project-link">
+              <span class="link-icon">💻</span>
+              <span>Repositório GitHub</span>
+            </a>
+            <a *ngIf="team.presentationSlides" [href]="team.presentationSlides" target="_blank" class="project-link">
+              <span class="link-icon">📊</span>
+              <span>Slides da Apresentação</span>
+            </a>
+            <a *ngIf="team.projectDetails.demoLink" [href]="team.projectDetails.demoLink" target="_blank" class="project-link">
+              <span class="link-icon">🚀</span>
+              <span>Demo ao Vivo</span>
+            </a>
+          </div>
+        </section>
+      </div>
+
+      <!-- Right Column: Media & Team Members -->
+      <div class="media-column">
+        <!-- Media Gallery -->
+        <section class="media-section">
+          <h2 class="section-title">Galeria de Mídia</h2>
+
+          <!-- Main Media Display -->
+          <div class="main-media-container" *ngIf="selectedMedia">
+            <!-- Image Display -->
+            <div *ngIf="selectedMedia.type === 'image'" class="media-display image-display">
+              <img
+                [src]="selectedMedia.url"
+                [alt]="selectedMedia.alt || 'Imagem da equipe'"
+                (error)="$any($event.target).src = getDefaultImage()"
+                class="main-image"
+              />
+            </div>
+
+            <!-- Video Display -->
+            <div *ngIf="selectedMedia.type === 'video'" class="media-display video-display">
+              <iframe
+                [src]="getSafeVideoUrl(selectedMedia.url)"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen
+                class="main-video"
+              ></iframe>
+            </div>
+
+            <!-- Media Caption -->
+            <p *ngIf="selectedMedia.caption" class="media-caption">
+              {{ selectedMedia.caption }}
+            </p>
+
+            <!-- Navigation Arrows -->
+            <button
+              *ngIf="team.mediaGallery.length > 1"
+              class="media-nav media-nav-prev"
+              (click)="previousMedia()"
+              aria-label="Mídia anterior"
+            >
+              ‹
+            </button>
+            <button
+              *ngIf="team.mediaGallery.length > 1"
+              class="media-nav media-nav-next"
+              (click)="nextMedia()"
+              aria-label="Próxima mídia"
+            >
+              ›
+            </button>
+          </div>
+
+          <!-- Thumbnail Gallery -->
+          <div class="thumbnail-gallery" *ngIf="team.mediaGallery.length > 1">
+            <div
+              *ngFor="let media of team.mediaGallery; let i = index"
+              class="thumbnail-item"
+              [class.active]="i === selectedMediaIndex"
+              (click)="selectMedia(media, i)"
+            >
+              <img
+                *ngIf="media.type === 'image'"
+                [src]="media.url"
+                [alt]="media.alt || 'Miniatura'"
+                (error)="$any($event.target).src = getDefaultImage()"
+                class="thumbnail-image"
+              />
+              <div *ngIf="media.type === 'video'" class="thumbnail-video">
+                <img
+                  [src]="media.thumbnail || '/assets/video-placeholder.jpg'"
+                  [alt]="media.caption || 'Vídeo'"
+                  (error)="$any($event.target).src = getDefaultImage()"
+                  class="thumbnail-image"
+                />
+                <span class="play-icon">▶</span>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Team Members -->
+        <section class="team-members-section">
+          <h2 class="section-title">Membros da Equipe</h2>
+          <div class="team-members-grid">
+            <div *ngFor="let member of team.teamMembers" class="member-card">
+              <div class="member-photo-container">
+                <img
+                  [src]="member.photo || getDefaultImage()"
+                  [alt]="member.name"
+                  (error)="$any($event.target).src = getDefaultImage()"
+                  class="member-photo"
+                />
+              </div>
+              <div class="member-info">
+                <h3 class="member-name">{{ member.name }}</h3>
+                <p class="member-role">{{ member.role }}</p>
+                <p *ngIf="member.bio" class="member-bio">{{ member.bio }}</p>
+
+                <div class="member-social" *ngIf="member.linkedin || member.github">
+                  <a *ngIf="member.linkedin" [href]="member.linkedin" target="_blank" class="social-link" aria-label="LinkedIn">
+                    <span>in</span>
+                  </a>
+                  <a *ngIf="member.github" [href]="member.github" target="_blank" class="social-link" aria-label="GitHub">
+                    <span>{{ '{' }} {{ '}' }}</span>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </div>
+  </div>
+</div>

@@ -11,6 +11,7 @@ import { MatchesComponent } from './components/matches/matches.component';
 import { AuthGuard } from './guards/auth.guard';
 import { ChallengesComponent } from './challenges/challenges.component';
 import { ParticipantsComponent } from './participants/participants.component';
+import { WinnerTeamDetailComponent } from './winner-team-detail/winner-team-detail.component';
 
 export const routes: Routes = [
   { path: '', component: LandingPageComponent },
@@ -20,6 +21,7 @@ export const routes: Routes = [
   { path: 'matches', component: MatchesComponent, canActivate: [AuthGuard] },
   { path: 'desafios', component: ChallengesComponent },
   { path: 'times', component: TeamsComponent },
+  { path: 'times-vencedores/:slug', component: WinnerTeamDetailComponent },
   { path: 'sala-de-guerra', component: WarRoomComponent },
   { path: 'matchmaking', component: MatchmakingDashboardComponent },
   { path: 'participantes', component: ParticipantsComponent },

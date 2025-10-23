@@ -1,0 +1,275 @@
+{
+  "teams": [
+    {
+      "id": "winner-team-1",
+      "slug": "asteroid-watchers",
+      "title": "Asteroid Watchers",
+      "awardCategory": "Global Nominee",
+      "awardYear": 2025,
+      "excerpt": "Solução inovadora para monitoramento de detritos espaciais usando machine learning",
+      "description": "Projeto premiado que desenvolveu um sistema de rastreamento e previsão de colisões com detritos espaciais",
+      "meta": {
+        "relativeUrl": "/times-vencedores/asteroid-watchers"
+      },
+      "presentation": {
+        "introduction": "Nosso projeto é uma plataforma educacional interativa projetada para traduzir a ciência complexa de asteroides em uma experiência visual compreensível. Usando dados de APIs da NASA, como o Banco de Dados de Pequenos Corpos do JPL e o NeoWs, garantimos que cada simulação seja baseada em objetos celestes reais e suas trajetórias observadas. A partir de dados primários, como diâmetro e velocidade, nossa plataforma aplica princípios da física de impacto e mecânica orbital para calcular parâmetros derivados, incluindo massa, energia cinética e liberação de energia sísmica. Os usuários podem selecionar um asteroide real e um local de impacto para visualizar as consequências, incluindo o raio da bola de fogo, a propagação da onda de choque, as velocidades devastadoras dos ventos e a magnitude do terremoto resultante. Além de simular o problema, nosso projeto também se concentra na solução. Ele serve como uma ferramenta educacional para mostrar as estratégias de mitigação e deflexão que a ciência moderna oferece, desmistificando os perigos, criando soluções e capacitando as pessoas com uma compreensão clara dos desafios e soluções na defesa planetária.",
+        "projectDescription": "Desenvolvemos um sistema de monitoramento em tempo real que utiliza algoritmos de machine learning para prever colisões com detritos espaciais. O sistema analisa dados de múltiplas fontes da NASA e agências espaciais parceiras, processando mais de 500.000 objetos catalogados em órbita. Nossa solução consegue prever colisões com 95% de precisão até 72 horas antes do evento.",
+        "achievements": [
+          "Precisão de 95% na previsão de colisões em 72 horas",
+          "Processamento de mais de 500.000 objetos espaciais catalogados",
+          "Interface web responsiva e intuitiva para visualização 3D",
+          "Sistema de alertas em tempo real para operadores de satélites",
+          "Integração com APIs de múltiplas agências espaciais"
+        ],
+        "impact": "Nosso projeto tem o potencial de revolucionar a segurança espacial. Estamos em conversações com operadores de satélites comerciais e agências governamentais para implementar nosso sistema em operações reais. A solução pode prevenir colisões que custariam bilhões em perdas de satélites e potencialmente salvar vidas de astronautas.",
+        "technologiesUsed": [
+          "Python for backend data processing and API integration",
+          "JavaScript for frontend interactivity",
+          "HTML/CSS for user interface design"
+        ]
+      },
+      "mediaGallery": [
+        {
+          "type": "image",
+          "url": "/assets/winners/asteroid-watchers/1760115380844.jpeg",
+          "alt": "Equipe Astro Guardians no evento",
+          "caption": "Equipe Astro Guardians no evento"
+        },
+        {
+          "type": "image",
+          "url": "/assets/winners/asteroid-watchers/dashboard.jpg",
+          "alt": "Dashboard do sistema",
+          "caption": "Interface principal do sistema de monitoramento"
+        },
+        {
+          "type": "video",
+          "url": "https://www.youtube.com/embed/dQw4w9WgXcQ",
+          "thumbnail": "/assets/winners/asteroid-watchers/video-thumb.jpg",
+          "caption": "Demonstração do sistema em funcionamento"
+        },
+        {
+          "type": "image",
+          "url": "/assets/winners/asteroid-watchers/3d-visualization.jpg",
+          "alt": "Visualização 3D de detritos",
+          "caption": "Visualização 3D dos detritos espaciais em órbita"
+        }
+      ],
+      "teamMembers": [
+        {
+          "name": "Arthur Milander de Oliveira Freitas",
+          "role": "Líder de Projeto",
+          "photo": "/assets/winners/asteroid-watchers/arthur-Milander.jpeg",
+          "bio": "Behring Academy | TKS ’26",
+          "linkedin": "https://www.linkedin.com/in/arthur-milander ",
+          "github": "https://github.com/anasilva"
+        },
+        {
+          "name": "Kauan Nogueira Tavares",
+          "role": "NASA API data collection and analysis and insane physics calculations for asteroid information.",
+          "photo": "/assets/winners/asteroid-watchers/carlos.jpg",
+          "bio": "Engenheiro de Software com 8 anos de experiência em aplicações web",
+          "linkedin": "https://linkedin.com/in/carlosmendes",
+          "github": "https://github.com/carlosmendes"
+        },
+        {
+          "name": "Maria Eduarda Gomes Kuhn",
+          "role": "UI/UX Designer",
+          "photo": "/assets/winners/asteroid-watchers/maria.jpg",
+          "bio": "Designer especializada em visualização de dados complexos",
+          "linkedin": "https://linkedin.com/in/mariasantos"
+        },
+        {
+          "name": "Isadora de Medeiros Muniz",
+          "role": "Write the pitch, create our video, slides, and design feedback for the frontend.",
+          "photo": "/assets/winners/asteroid-watchers/joao.jpg",
+          "bio": "Especialista em sistemas distribuídos e APIs de alta performance",
+          "linkedin": "https://linkedin.com/in/joaooliveira",
+          "github": "https://github.com/joaooliveira"
+        }
+      ],
+      "projectVideo": "https://www.youtube.com/watch?v=PGRNQUAGdLQ",
+      "presentationSlides": "https://docs.google.com/presentation/d/exemplo",
+      "githubRepo": "https://github.com/asteroid-watchers/space-debris-tracker",
+      "challenge": "space-debris",
+      "challengeDetails": {
+        "id": "challenge-1",
+        "title": "Meteor Madness",
+        "excerpt": "Desenvolva soluções para rastreamento e mitigação de detritos espaciais"
+      },
+      "location": "uberlandia",
+      "locationDetails": {
+        "id": "loc-1",
+        "title": "Uberlândia",
+        "displayName": "Uberlândia, MG, Brasil",
+        "country": "Brazil"
+      },
+      "projectSubmitted": true,
+      "owner": "user-1",
+      "ownerDetails": {
+        "id": "user-1",
+        "username": "anasilva"
+      },
+      "project": "proj-1",
+      "projectDetails": {
+        "id": "proj-1",
+        "name": "Space Debris Collision Predictor",
+        "summary": "Sistema de previsão de colisões com detritos espaciais",
+        "demoLink": "https://asteroid-watchers.demo.com",
+        "projectLink": "https://github.com/asteroid-watchers/space-debris-tracker",
+        "details": "Sistema completo de monitoramento e previsão",
+        "solution": "Machine learning aplicado a dados orbitais",
+        "isSubmitted": true,
+        "submittedAt": "2024-10-08T20:00:00Z"
+      },
+      "desiredSkills": [
+        "Python",
+        "Machine Learning",
+        "Angular",
+        "Data Science"
+      ],
+      "languages": ["pt", "en"],
+      "joinEnabled": false,
+      "nominationBadges": ["best-use-of-data"],
+      "awardBadges": ["global-nominee"]
+    },
+    {
+      "id": "winner-team-2",
+      "slug": "clima-connect-2024",
+      "title": "Clima Connect",
+      "awardCategory": "Global Nominee",
+      "awardYear": 2025,
+      "excerpt": "Plataforma para conectar comunidades rurais com dados climáticos em tempo real",
+      "description": "Solução que democratiza o acesso a informações meteorológicas para pequenos agricultores",
+      "meta": {
+        "relativeUrl": "/times-vencedores/clima-connect-2024"
+      },
+      "presentation": {
+        "introduction": "O Clima Connect foi criado para resolver um problema crítico: pequenos agricultores em comunidades rurais do Brasil não têm acesso a informações meteorológicas confiáveis e em tempo real. Nossa missão é democratizar o acesso a dados climáticos da NASA e outras fontes, traduzindo informações complexas em insights acionáveis.",
+        "projectDescription": "Desenvolvemos uma plataforma mobile-first que fornece previsões meteorológicas hiperlocais, alertas de eventos climáticos extremos e recomendações agrícolas baseadas em dados de satélite. O sistema funciona offline, sincronizando quando há conexão disponível, e utiliza uma interface simples com ícones e áudio para atender agricultores com diferentes níveis de alfabetização.",
+        "achievements": [
+          "Interface acessível para usuários com baixa alfabetização",
+          "Funcionalidade offline com sincronização automática",
+          "Alertas de eventos climáticos extremos com 7 dias de antecedência",
+          "Recomendações agrícolas personalizadas por tipo de cultura",
+          "Integração com dados de satélite da NASA (MODIS, VIIRS)",
+          "Pilot program com 200 agricultores em Minas Gerais"
+        ],
+        "impact": "Durante nosso programa piloto de 6 meses, os agricultores que usaram o Clima Connect reportaram aumento médio de 23% na produtividade e redução de 35% em perdas por eventos climáticos. Nosso objetivo é alcançar 100.000 agricultores em todo o Brasil nos próximos 2 anos.",
+        "technologiesUsed": [
+          "React Native para aplicativo mobile",
+          "Firebase para backend e sincronização offline",
+          "Python para processamento de dados climáticos",
+          "NASA Earth Data APIs",
+          "Google Cloud Platform",
+          "TensorFlow Lite para recomendações on-device",
+          "Progressive Web App para acesso via navegador"
+        ]
+      },
+      "mediaGallery": [
+        {
+          "type": "image",
+          "url": "/assets/winners/clima-connect/team-field.jpg",
+          "alt": "Equipe em visita a campo",
+          "caption": "Equipe testando o app com agricultores locais"
+        },
+        {
+          "type": "image",
+          "url": "/assets/winners/clima-connect/app-screens.jpg",
+          "alt": "Telas do aplicativo",
+          "caption": "Interface do aplicativo Clima Connect"
+        },
+        {
+          "type": "video",
+          "url": "https://www.youtube.com/embed/dQw4w9WgXcQ",
+          "thumbnail": "/assets/winners/clima-connect/demo-thumb.jpg",
+          "caption": "Demonstração do aplicativo em uso"
+        },
+        {
+          "type": "image",
+          "url": "/assets/winners/clima-connect/impact-chart.jpg",
+          "alt": "Gráfico de impacto",
+          "caption": "Resultados do programa piloto"
+        }
+      ],
+      "teamMembers": [
+        {
+          "name": "Pedro Almeida",
+          "role": "Product Manager",
+          "photo": "/assets/winners/clima-connect/pedro.jpg",
+          "bio": "Engenheiro agrônomo com experiência em tecnologia para o campo",
+          "linkedin": "https://linkedin.com/in/pedroalmeida"
+        },
+        {
+          "name": "Juliana Costa",
+          "role": "Mobile Developer",
+          "photo": "/assets/winners/clima-connect/juliana.jpg",
+          "bio": "Desenvolvedora mobile especializada em aplicações offline-first",
+          "linkedin": "https://linkedin.com/in/julianacosta",
+          "github": "https://github.com/julianacosta"
+        },
+        {
+          "name": "Rafael Souza",
+          "role": "Data Engineer",
+          "photo": "/assets/winners/clima-connect/rafael.jpg",
+          "bio": "Especialista em processamento de dados geoespaciais",
+          "linkedin": "https://linkedin.com/in/rafaelsouza",
+          "github": "https://github.com/rafaelsouza"
+        },
+        {
+          "name": "Beatriz Lima",
+          "role": "UX Researcher",
+          "photo": "/assets/winners/clima-connect/beatriz.jpg",
+          "bio": "Pesquisadora focada em design inclusivo e acessibilidade",
+          "linkedin": "https://linkedin.com/in/beatrizlima"
+        },
+        {
+          "name": "Lucas Ferreira",
+          "role": "Backend Developer",
+          "photo": "/assets/winners/clima-connect/lucas.jpg",
+          "bio": "Desenvolvedor com foco em sistemas escaláveis e resilientes",
+          "linkedin": "https://linkedin.com/in/lucasferreira",
+          "github": "https://github.com/lucasferreira"
+        }
+      ],
+      "projectVideo": "https://www.youtube.com/watch?v=exemplo2",
+      "presentationSlides": "https://docs.google.com/presentation/d/exemplo2",
+      "githubRepo": "https://github.com/clima-connect/mobile-app",
+      "challenge": "agriculture-climate",
+      "challengeDetails": {
+        "id": "challenge-2",
+        "title": "Leveraging Earth Observation Data for Informed Agricultural Decision-Making",
+        "excerpt": "Use dados de observação da Terra para apoiar decisões agrícolas"
+      },
+      "location": "uberlandia",
+      "locationDetails": {
+        "id": "loc-1",
+        "title": "Uberlândia",
+        "displayName": "Uberlândia, MG, Brasil",
+        "country": "Brazil"
+      },
+      "projectSubmitted": true,
+      "owner": "user-2",
+      "ownerDetails": {
+        "id": "user-2",
+        "username": "pedroalmeida"
+      },
+      "project": "proj-2",
+      "projectDetails": {
+        "id": "proj-2",
+        "name": "Clima Connect - Agricultural Weather Platform",
+        "summary": "Plataforma mobile para dados climáticos para agricultores",
+        "demoLink": "https://clima-connect.app",
+        "projectLink": "https://github.com/clima-connect/mobile-app",
+        "details": "Aplicativo mobile com funcionalidade offline",
+        "solution": "Democratização de dados climáticos via mobile",
+        "isSubmitted": true,
+        "submittedAt": "2024-10-08T19:30:00Z"
+      },
+      "desiredSkills": ["React Native", "Firebase", "Python", "UX Design"],
+      "languages": ["pt"],
+      "joinEnabled": false,
+      "nominationBadges": ["best-social-impact"],
+      "awardBadges": ["peoples-choice"]
+    }
+  ]
+}
