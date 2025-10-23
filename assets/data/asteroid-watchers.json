@@ -1,0 +1,294 @@
+
+[
+    {
+        "data": {
+            "page": {
+                "__typename": "TeamsIndexPage",
+                "id": "aWQ6MzEzMzE=",
+                "title": "Find a Team",
+                "meta": {
+                    "type": "TEAMINDEX",
+                    "slug": "find-a-team",
+                    "firstPublishedAt": "2025-08-18T15:59:03.579622Z",
+                    "lastPublishedAt": "2025-10-03T18:04:31.703391Z",
+                    "relativeUrl": "/2025/find-a-team/",
+                    "live": true,
+                    "parent": {
+                        "id": "aWQ6MzA2MjA=",
+                        "__typename": "PageParent"
+                    },
+                    "__typename": "ExpandedPageMeta"
+                },
+                "breadcrumbs": [
+                    {
+                        "name": "Home",
+                        "link": "/",
+                        "__typename": "Breadcrumb"
+                    },
+                    {
+                        "name": "2025 NASA Space Apps Challenge",
+                        "link": "/2025/",
+                        "__typename": "Breadcrumb"
+                    },
+                    {
+                        "name": "Find a Team",
+                        "link": "/2025/find-a-team/",
+                        "__typename": "Breadcrumb"
+                    }
+                ],
+                "event": "aWQ6Mw==",
+                "eventDetails": {
+                    "__typename": "GlobalEvent",
+                    "id": "aWQ6Mw==",
+                    "name": "2025 NASA Space Apps Challenge",
+                    "displayName": "2025 NASA Space Apps Challenge",
+                    "slug": "2025",
+                    "status": 2,
+                    "startDate": "2025-10-04T13:00:00",
+                    "endDate": "2025-10-05T23:59:00",
+                    "certificate": "aWQ6Mw==",
+                    "createRegistrationForm": "aWQ6MQ==",
+                    "editRegistrationForm": "aWQ6MQ==",
+                    "createTeamForm": "aWQ6Ng==",
+                    "timezone": "GMT",
+                    "teamMemberLimit": 6,
+                    "eventRegistrationStatus": 1,
+                    "localEventRegistrationStatus": 1,
+                    "teamRegistrationStatus": 1,
+                    "isTeamPagesActive": true,
+                    "isAwardsActive": false,
+                    "isChallengePagesActive": true,
+                    "localEventEditStatus": 1,
+                    "teamEditStatus": 1,
+                    "teamStreamEditStatus": 0,
+                    "projectEditStatus": 1,
+                    "localEventJudgingStatus": 1,
+                    "nominationJudgingStatus": 2,
+                    "projectFields": [
+                        {
+                            "title": "Summary",
+                            "caption": "",
+                            "fieldMapping": "summary",
+                            "fieldType": "TEXT",
+                            "__typename": "ProjectFieldBlock"
+                        },
+                        {
+                            "title": "Project Demonstration",
+                            "caption": "",
+                            "fieldMapping": "demoLink",
+                            "fieldType": "URL",
+                            "__typename": "ProjectFieldBlock"
+                        },
+                        {
+                            "title": "Project",
+                            "caption": "",
+                            "fieldMapping": "projectLink",
+                            "fieldType": "URL",
+                            "__typename": "ProjectFieldBlock"
+                        },
+                        {
+                            "title": "Project Details",
+                            "caption": "",
+                            "fieldMapping": "details",
+                            "fieldType": "RICHFULL",
+                            "__typename": "ProjectFieldBlock"
+                        },
+                        {
+                            "title": "Use of Artificial Intelligence (AI)",
+                            "caption": "",
+                            "fieldMapping": "aiReferences",
+                            "fieldType": "RICH",
+                            "__typename": "ProjectFieldBlock"
+                        },
+                        {
+                            "title": "NASA Data",
+                            "caption": "",
+                            "fieldMapping": "dataReferences",
+                            "fieldType": "LINKS",
+                            "__typename": "ProjectFieldBlock"
+                        },
+                        {
+                            "title": "Space Agency Partner & Other Data",
+                            "caption": "",
+                            "fieldMapping": "projectReferences",
+                            "fieldType": "LINKS",
+                            "__typename": "ProjectFieldBlock"
+                        }
+                    ]
+                },
+                "eventPages": {
+                    "eventPage": "aWQ6MzA2MjA=",
+                    "registrationPage": null,
+                    "localEventsPage": "aWQ6MzA2MjE=",
+                    "challengesPage": "aWQ6MzA2MjI=",
+                    "teamsPage": "aWQ6MzEzMzE=",
+                    "createTeamPage": "aWQ6MzEzMzI=",
+                    "judgingPage": "aWQ6NDY0MDE=",
+                    "__typename": "EventPages"
+                },
+                "featuredImage": null,
+                "heroContent": "<p data-block-key=\"t4kt0\">Join one of the teams below or create your own. Please note that all teammates, including the Team Owner, must be registered for the same Local Event to be eligible for Global Judging. Use the search bar if you are looking for a specific team name, look for teams who are still seeking members, or use the filters to narrow down your search for a team by: Skills, Languages, Challenges, and Local Event.</p>",
+                "noResultsContent": "",
+                "searchHeading": "All Teams",
+                "detailsTabLabel": "About",
+                "detailsSectionHeading": "About the Team",
+                "challengeSectionHeading": "About the Challenge",
+                "projectTabLabel": "Project",
+                "showProjectTab": true,
+                "boardTabLabel": "Board",
+                "showBoardTab": false,
+                "membersTabLabel": "Members",
+                "showMembersTab": true,
+                "membersSectionHeading": "Team Members",
+                "memberRequestsSectionHeading": "New Member Requests",
+                "chatCardTitle": "Join the Discussion",
+                "chatCardText": "Get support and connect with the NASA Space Apps GO Team, Subject Matter Experts, Navigators, Global Collaborators, and fellow participants in Space Apps Connect that is hosted on GitHub Discussions.",
+                "chatCardLink": "https://github.com/nasa/spaceapps/discussions",
+                "chatCardLinkLabel": "Join Space Apps Connect",
+                "showChatCard": false,
+                "editHelpText": "",
+                "judgingHelpText": "<p data-block-key=\"at1re\"><b>Tips for Submitting Your Project</b></p><p data-block-key=\"990bm\">1) Review the Project Submission Guide for detailed instructions and best practices for submitting your project.<br/><br/>2) <b>Save your project often!</b> Use the \"Save Progress\" button to save your changes as you edit your Project. Your changes will now be viewable to anyone who visits your page.<b> Saving your project does not submit it for judging, you must click “Submit for Judging” to be considered for awards.</b> <b><br/><br/></b>3) If you have multiple team members who might be trying to edit your project at the same time, you can toggle the edit \"Lock\" to 'ON'. This will let other team members know you are making changes to the project tab so they do not try to make edits at the same time. However, another team member may still remove the lock and make changes to the project, overwriting any changes you had not yet saved.<br/><br/>4) Once you are ready, click the \"Submit for Judging\" button. You should see a notification bar at the top letting you know that your project has been submitted and that your certificate is available.<br/><br/> 5) You can see the latest times your project was saved or submitted in the “Edit Details” box on the Project tab. <b>Only your final click on “Submit for Judging” will be reviewed by judges.<br/><br/></b>6) Project submission closes on Sunday, October 5 at 11:59 PM local time, in accordance with the time zone of your Local Event. If your team is registered for the Universal Event, your project must be submitted in accordance with the local time of your Team Owner's area of residence. You must click the “Submit for Judging” button prior to 11:59pm local time of your Local Event. <b>Any projects saved or submitted past this deadline will not be eligible for judging. No edit requests or exceptions past this deadline are allowed. Submission is final.</b></p>",
+                "editTeamForm": "aWQ6Nw==",
+                "editProjectForm": "aWQ6NDE=",
+                "modelIndex": {
+                    "__typename": "ModelIndex",
+                    "id": "aWQ6NA==",
+                    "name": "Teams Index",
+                    "enabledSearch": null,
+                    "enabledFilter": null,
+                    "menuTitle": "Filter",
+                    "menuDescription": "",
+                    "filters": [
+                        {
+                            "name": "location",
+                            "label": "Local Events",
+                            "field": "LOCALEVENTLOOKUP",
+                            "menu": true,
+                            "values": null,
+                            "__typename": "ModelIndexFilter"
+                        },
+                        {
+                            "name": "challenge",
+                            "label": "Challenges",
+                            "field": "CHALLENGELOOKUP",
+                            "menu": true,
+                            "values": null,
+                            "__typename": "ModelIndexFilter"
+                        },
+                        {
+                            "name": "desired_skills",
+                            "label": "Desired Skills",
+                            "field": "CHECKBOXES",
+                            "menu": true,
+                            "values": [
+                                "Agriculture",
+                                "Animation",
+                                "Artificial Intelligence & Machine Learning",
+                                "Arts & Multimedia",
+                                "Astrophysics",
+                                "Business & Economics",
+                                "Coding",
+                                "Data Analysis",
+                                "Data Management",
+                                "Data Visualization",
+                                "Design",
+                                "Disaster Response",
+                                "Earth Orbit",
+                                "Earth Science",
+                                "Education",
+                                "Ergonomics & Human Factors",
+                                "Extrasolar Objects",
+                                "Flora & Fauna",
+                                "Forecasting",
+                                "Games",
+                                "Graphic Design",
+                                "Habitats",
+                                "Hardware",
+                                "Manmade Satellites",
+                                "Planets & Moons",
+                                "Pollution",
+                                "Satellites",
+                                "Software",
+                                "Space Exploration",
+                                "Space Weather",
+                                "Statistics",
+                                "Storytelling",
+                                "Sun",
+                                "Videography/Photography",
+                                "Virtual Reality",
+                                "Waste & Resources",
+                                "Weather",
+                                "Web Development",
+                                "Writing & Communications"
+                            ],
+                            "__typename": "ModelIndexFilter"
+                        },
+                        {
+                            "name": "languages",
+                            "label": "Languages Spoken",
+                            "field": "CHECKBOXES",
+                            "menu": true,
+                            "values": [
+                                "Albanian",
+                                "Arabic",
+                                "Armenian",
+                                "Bengali",
+                                "Bosnian",
+                                "Bulgarian",
+                                "Burmese",
+                                "Chinese",
+                                "Czech",
+                                "Danish",
+                                "Dutch",
+                                "English",
+                                "Farsi",
+                                "Finnish",
+                                "French",
+                                "Gaelic",
+                                "German",
+                                "Greek",
+                                "Haitian",
+                                "Hebrew",
+                                "Hindi",
+                                "Hungarian",
+                                "Icelandic",
+                                "Indonesian",
+                                "Italian",
+                                "Japanese",
+                                "Korean",
+                                "Lithuanian",
+                                "Other",
+                                "Polish",
+                                "Portuguese",
+                                "Russian",
+                                "Serbian",
+                                "Sicilian",
+                                "Spanish",
+                                "Swahili",
+                                "Swedish",
+                                "Tagalog",
+                                "Tahitian",
+                                "Thai",
+                                "Tibetan",
+                                "Turkish",
+                                "Ukrainian",
+                                "Vietnamese",
+                                "Welsh",
+                                "Yiddish"
+                            ],
+                            "__typename": "ModelIndexFilter"
+                        },
+                        {
+                            "name": "join_enabled",
+                            "label": "Looking For Members",
+                            "field": "CHECKBOX",
+                            "menu": true,
+                            "values": null,
+                            "__typename": "ModelIndexFilter"
+                        }
+                    ]
+                }
+            }
+        }
+    }
+]
