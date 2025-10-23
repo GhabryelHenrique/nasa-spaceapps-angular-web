@@ -129,7 +129,8 @@ export class LandingPageComponent implements OnInit {
               team.title
                 .toLowerCase()
                 .includes('Guardians of the city'.toLowerCase()) ||
-              team.title.toLowerCase().includes('Extraplant'.toLowerCase())
+              team.title.toLowerCase().includes('Extraplant'.toLowerCase()) ||
+              team.title.toLowerCase().includes('Code and cheese'.toLowerCase())
           );
 
           console.log('Global Nominees encontrados:', this.globalNomineesTeams);
