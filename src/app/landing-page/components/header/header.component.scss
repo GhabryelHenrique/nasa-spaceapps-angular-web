@@ -357,7 +357,7 @@ a {
 }
 
 // Primeiro oculta texto das redes sociais (só ícones)
-@media (max-width: 900px) {
+@media (max-width: 500px) {
   .header .navbar {
     .nav-actions {
       .social-btn {
@@ -384,7 +384,7 @@ a {
 }
 
 // Por último, oculta texto de Desafios/Times (só ícones)
-@media (max-width: 600px) {
+@media (max-width: 650px) {
   .header .navbar {
     .nav-actions {
       .register-btn, .matchmaking-btn, .login-btn {
