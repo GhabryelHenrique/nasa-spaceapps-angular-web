@@ -40,8 +40,9 @@
 
 // Search Section
 .search-section {
-  max-width: 800px;
+  max-width: 1200px;
   margin: 0 auto;
+  padding: 0 1rem;
 
   .search-controls {
     display: flex;
@@ -53,6 +54,7 @@
       flex-direction: row;
       align-items: center;
       justify-content: center;
+      flex-wrap: wrap;
     }
   }
 
@@ -64,7 +66,8 @@
     backdrop-filter: blur(10px);
     border: 1px solid rgba(255, 255, 255, 0.2);
     flex: 1;
-    max-width: 350px;
+    min-width: 250px;
+    max-width: 100%;
 
     .search-input {
       flex: 1;
@@ -102,9 +105,11 @@
   .filter-section {
     display: flex;
     align-items: center;
+    flex: 1;
+    min-width: 200px;
 
     .challenge-filter {
-      min-width: 280px;
+      width: 100%;
       padding: 1rem 1.5rem;
       background: rgba(255, 255, 255, 0.1);
       border: 1px solid rgba(255, 255, 255, 0.2);
@@ -603,6 +608,24 @@
 }
 
 // Responsive
+@media (min-width: 769px) and (max-width: 1024px) {
+  .search-section {
+    max-width: 900px;
+
+    .search-controls {
+      gap: 0.75rem;
+    }
+
+    .search-bar {
+      flex: 1 1 200px;
+    }
+
+    .filter-section {
+      flex: 1 1 180px;
+    }
+  }
+}
+
 @media (max-width: 768px) {
   .teams-header {
     .page-title {
@@ -611,6 +634,20 @@
 
     .page-subtitle {
       font-size: 1.1rem;
+    }
+  }
+
+  .search-section {
+    .search-controls {
+      gap: 0.75rem;
+    }
+
+    .search-bar {
+      max-width: 100%;
+    }
+
+    .filter-section {
+      max-width: 100%;
     }
   }
 
@@ -646,9 +683,24 @@
     padding: 1rem;
   }
 
-  .search-section .search-bar {
-    .search-input, .search-button {
-      padding: 0.75rem 1rem;
+  .search-section {
+    padding: 0 0.5rem;
+
+    .search-bar {
+      min-width: 100%;
+
+      .search-input, .search-button {
+        padding: 0.75rem 1rem;
+      }
+    }
+
+    .filter-section {
+      min-width: 100%;
+    }
+
+    .clear-filters-btn {
+      width: 100%;
+      justify-content: center;
     }
   }
 }
