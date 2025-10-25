@@ -30,6 +30,8 @@ export class WinnerTeamDetailComponent implements OnInit {
       const slug = params['slug'];
       this.loadTeam(slug);
     });
+
+    console.log(this.team!.presentation.nasaData)
   }
 
   loadTeam(slug: string): void {

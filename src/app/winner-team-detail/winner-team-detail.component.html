@@ -16,14 +16,17 @@
   <div *ngIf="team && !loading" class="team-content">
     <!-- Header -->
     <header class="team-header">
-      <button class="btn-back-header" (click)="goBack()">
-        ← Voltar
-      </button>
 
       <div class="header-content">
-        <div class="award-badge">
-          <span class="award-icon">🏆</span>
-          <span class="award-text">{{ team.awardCategory }} - {{ team.awardYear }}</span>
+        <div class="actions">
+
+          <button class="btn-back-header" (click)="goBack()">
+            ← Voltar
+          </button>
+          <div class="award-badge">
+            <span class="award-icon">🏆</span>
+            <span class="award-text">{{ team.awardCategory }} - {{ team.awardYear }}</span>
+          </div>
         </div>
         <h1 class="team-title">{{ team.title }}</h1>
         <p class="team-excerpt">{{ team.excerpt }}</p>
@@ -37,6 +40,12 @@
           </span>
         </div>
       </div>
+      <div class="team-image" >
+             <img [src]="team.featuredImage"
+                  [alt]="team.title"
+                  loading="lazy"
+                  onerror="this.src='assets/organizers/placeholder.svg'">
+           </div>
     </header>
 
     <!-- Two Column Layout -->
@@ -45,15 +54,20 @@
       <div class="text-column">
         <section class="content-section">
           <h2 class="section-title">Introdução</h2>
-          <p class="section-text">{{ team.presentation.introduction }}</p>
+          <p class="section-text" [innerHTML]="team.presentation.introduction"></p>
         </section>
 
         <section class="content-section">
           <h2 class="section-title">Descrição do Projeto</h2>
-          <p class="section-text">{{ team.presentation.projectDescription }}</p>
+          <p class="section-text" [innerHTML]="team.presentation.projectDescription"></p>
         </section>
 
         <section class="content-section">
+          <h2 class="section-title">Uso da Inteligência Artificial (IA)</h2>
+          <p class="section-text"  [innerHTML]="team.presentation.usesOfAI"></p>
+        </section>
+
+        <section class="content-section" *ngIf="team.presentation.achievements">
           <h2 class="section-title">Conquistas</h2>
           <ul class="achievements-list">
             <li *ngFor="let achievement of team.presentation.achievements" class="achievement-item">
@@ -63,17 +77,26 @@
           </ul>
         </section>
 
-        <section class="content-section">
+        <section class="content-section" *ngIf="team.presentation.impact">
           <h2 class="section-title">Impacto</h2>
           <p class="section-text">{{ team.presentation.impact }}</p>
         </section>
 
-        <section class="content-section">
+        <section class="content-section" *ngIf="team.presentation.technologiesUsed.length > 0">
           <h2 class="section-title">Tecnologias Utilizadas</h2>
           <div class="tech-tags">
             <span *ngFor="let tech of team.presentation.technologiesUsed" class="tech-tag">
               {{ tech }}
             </span>
+          </div>
+        </section>
+
+        <section class="content-section" *ngIf="team.presentation.nasaData.length > 0">
+          <h2 class="section-title">Tecnologias Utilizadas da NASA</h2>
+          <div class="tech-tags">
+            <a *ngFor="let tech of team.presentation.nasaData" href="{{ tech.link }}" target="_blank" class="tech-tag">
+              {{ tech.name }}
+            </a>
           </div>
         </section>
 
@@ -87,7 +110,7 @@
             </a>
             <a *ngIf="team.githubRepo" [href]="team.githubRepo" target="_blank" class="project-link">
               <span class="link-icon">💻</span>
-              <span>Repositório GitHub</span>
+              <span>Repositório</span>
             </a>
             <a *ngIf="team.presentationSlides" [href]="team.presentationSlides" target="_blank" class="project-link">
               <span class="link-icon">📊</span>
@@ -205,7 +228,10 @@
                     <span>in</span>
                   </a>
                   <a *ngIf="member.github" [href]="member.github" target="_blank" class="social-link" aria-label="GitHub">
-                    <span>{{ '{' }} {{ '}' }}</span>
+                    <i class="fa-brands fa-github"></i>
+                  </a>
+                  <a *ngIf="member.instagram" [href]="member.github" target="_blank" class="social-link" aria-label="GitHub">
+                    <i class="fa-brands fa-instagram"></i>
                   </a>
                 </div>
               </div>

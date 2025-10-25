@@ -46,14 +46,14 @@ export class LandingPageComponent implements OnInit {
 
   // Prêmios Especiais
   specialAwards = [
-    // {
-    //   category: 'Melhor nome do ano',
-    //   winner: 'Trem de IA',
-    //   icon: '🚂',
-    //   imagePath: 'assets/awards/melhor-nome-do-ano-trem-de-ia.jpg',
-    //   url: '#',
-    //   description: 'Pelo nome mais criativo e divertido do evento'
-    // },
+    {
+      category: 'Melhor nome do ano',
+      winner: 'Trem de IA',
+      icon: '🚂',
+      imagePath: 'assets/awards/melhor-nome-do-ano-trem-de-ia.jpg',
+      url: '#',
+      description: 'Pelo nome mais criativo e divertido do evento'
+    },
     {
       category: 'Melhor mentora do ano',
       winner: 'Pamela Mendes',

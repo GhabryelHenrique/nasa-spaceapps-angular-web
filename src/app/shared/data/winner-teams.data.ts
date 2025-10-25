@@ -13,7 +13,9 @@ export interface WinnerTeamPresentation {
   projectDescription: string;
   achievements: string[];
   impact: string;
+  usesOfAI: string;
   technologiesUsed: string[];
+  nasaData: any[];
 }
 
 export interface WinnerTeam extends Omit<Team, 'memberships'> {
@@ -38,6 +40,7 @@ export interface WinnerTeam extends Omit<Team, 'memberships'> {
     bio?: string;
     linkedin?: string;
     github?: string;
+    instagram?: string;
   }[];
 
   // Links adicionais

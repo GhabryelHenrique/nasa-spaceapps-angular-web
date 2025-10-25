@@ -108,8 +108,14 @@
   background: linear-gradient(135deg, rgba(88, 101, 242, 0.2), rgba(69, 183, 209, 0.2));
   backdrop-filter: blur(10px);
   padding: 2rem;
+      margin-top: 4rem;
   margin-bottom: 3rem;
   border-bottom: 2px solid rgba(69, 183, 209, 0.3);
+
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
 
   .btn-back-header {
     background: rgba(255, 255, 255, 0.1);
@@ -119,7 +125,7 @@
     border-radius: 8px;
     cursor: pointer;
     font-size: 1rem;
-    margin-bottom: 1.5rem;
+    // margin-bottom: 1.5rem;
     transition: all 0.3s;
 
     &:hover {
@@ -132,6 +138,13 @@
     max-width: 1200px;
     margin: 0 auto;
 
+.actions{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 2rem;
+}
+
     .award-badge {
       display: inline-flex;
       align-items: center;
@@ -139,7 +152,7 @@
       background: linear-gradient(135deg, #5865F2, #45b7d1);
       padding: 0.5rem 1.5rem;
       border-radius: 20px;
-      margin-bottom: 1rem;
+      // margin-bottom: 1rem;
       font-weight: 600;
 
       .award-icon {
@@ -184,7 +197,7 @@
 
 // Two Column Layout
 .two-column-layout {
-  max-width: 1400px;
+  max-width: 1650px;
   margin: 0 auto;
   padding: 0 2rem 4rem;
   display: grid;
@@ -262,6 +275,8 @@
         font-size: 0.95rem;
         font-weight: 500;
         transition: all 0.3s;
+        text-decoration: none;
+        color: white;
 
         &:hover {
           background: linear-gradient(135deg, rgba(88, 101, 242, 0.5), rgba(69, 183, 209, 0.5));
@@ -313,6 +328,7 @@
     border-radius: 12px;
     padding: 2rem;
     margin-bottom: 2rem;
+
 
     .section-title {
       font-size: 1.8rem;
@@ -452,6 +468,7 @@
     border: 1px solid rgba(255, 255, 255, 0.1);
     border-radius: 12px;
     padding: 2rem;
+
 
     .section-title {
       font-size: 1.8rem;
