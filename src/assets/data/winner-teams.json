@@ -177,7 +177,7 @@
       "mediaGallery": [
         {
           "type": "image",
-          "url": "/assets/winners/finstream/1761148630417.jpeg",
+          "url": "/assets/winners/titan/1761148630417.jpeg",
           "alt": "Equipe Finstream no evento",
           "caption": "Equipe Finstream no evento"
         },
@@ -224,6 +224,157 @@
           "linkedin": "https://www.linkedin.com/in/lucasbelchior-sep/",
           "github": "https://github.com/LuksbellN",
           "instagram": "https://www.instagram.com/luksbell/"
+        }
+      ],
+      "projectVideo": null,
+      "presentationSlides": "https://ufubr-my.sharepoint.com/:p:/g/personal/lucas_lara_ufu_br/EcyJRzOWEfFKohqnWhuDIWQBbBQEXQBSuezlp6A02k9b0g?e=iKrJen",
+      "githubRepo": "https://drive.google.com/drive/folders/1Svb9tGn2uLuBnoFUHAmx4cYg-GttnVIS",
+      "challenge": "sharks-from-space",
+      "challengeDetails": {
+        "id": "challenge-2",
+        "title": "Sharks from Space",
+        "excerpt": "Earth’s ocean is one of the most powerful habitats in our universe, supporting a range of life that sustains ecosystems and habitability across the globe. It is common to measure photosynthetic activity in the ocean from space, but far more challenging to track top predators. Your challenge is to create a mathematical framework for identifying sharks and predicting their foraging habitats using NASA satellite data, and also to suggest a new conceptual model of a tag (a small electronic device that can be attached to an animal to track and study its movement) that could measure not only where sharks are, but also what they are eating, and in real time transmit that data back to users to enable development of predictive models."
+      },
+      "location": "uberlandia",
+      "locationDetails": {
+        "id": "loc-1",
+        "title": "Uberlândia",
+        "displayName": "Uberlândia, MG, Brasil",
+        "country": "Brazil"
+      },
+      "projectSubmitted": true,
+      "owner": "user-1",
+      "ownerDetails": {
+        "id": "user-1",
+        "username": "anasilva"
+      },
+      "project": "proj-1",
+      "projectDetails": {
+        "id": "proj-1",
+        "name": "Space Debris Collision Predictor",
+        "summary": "Sistema de previsão de colisões com detritos espaciais",
+        "demoLink": null,
+        "projectLink": "https://drive.google.com/drive/folders/1Svb9tGn2uLuBnoFUHAmx4cYg-GttnVIS",
+        "details": "Sistema completo de monitoramento e previsão",
+        "solution": "Machine learning aplicado a dados orbitais",
+        "isSubmitted": true,
+        "submittedAt": "2024-10-08T20:00:00Z"
+      },
+      "desiredSkills": [
+        "Python",
+        "Machine Learning",
+        "Angular",
+        "Data Science"
+      ],
+      "languages": ["pt", "en"],
+      "joinEnabled": false,
+      "nominationBadges": ["best-use-of-data"],
+      "awardBadges": ["global-nominee"]
+    },
+    {
+      "id": "winner-team-3",
+      "slug": "titan",
+      "title": "Titan",
+      "awardCategory": "Global Nominee",
+      "awardYear": 2025,
+      "featuredImage": "https://assets.spaceappschallenge.org/media/images/titan-logo-affinit.2e16d0ba.fill-300x250.jpg",
+      "excerpt": "Nesta edição, focaremos em VR para integrar e visualizar dados do oceano ao céu. Nossa equipe é experiente em desenvolvimento de sistemas, arquitetura de software, game engines, modelagem 3D, engenharia e IA. Proporemos uma solução tangível ao desafio “Deep Dive: Immersive Data Stories from Ocean to Sky”, usando práticas e ferramentas de ponta para tecnologias imersivas. Apoio: https://pixr.studio",
+      "description": "Projeto premiado que desenvolveu um sistema de rastreamento e previsão de colisões com detritos espaciais",
+      "meta": {
+        "relativeUrl": "/times-vencedores/titan"
+      },
+      "presentation": {
+        "introduction": "A Equipe Titan apresenta “Blue Point: O Legado do Oceano”, uma experiência imersiva de Realidade Virtual (RV) que transforma dados brutos do oceano da NASA em uma narrativa visual e sonora cativante. Nosso projeto aborda o desafio “Mergulho Profundo: Histórias de Dados Imersivas do Oceano ao Céu”, colocando o usuário no papel de um explorador espacial cuja nave espacial encontra a Terra como um potencial novo lar. Por meio de um sistema de análise interativo, a experiência de RV leva o usuário em uma jornada do espaço às profundezas do oceano, destacando a complexa relação entre os oceanos.",
+        "projectDescription": "<p><span style=\"white-space: pre-wrap;\">O </span><b><strong style=\"white-space: pre-wrap;\">Projeto Pálido Ponto Azul</strong></b><span style=\"white-space: pre-wrap;\"> é uma experiência imersiva de </span><b><strong style=\"white-space: pre-wrap;\">Realidade Virtual (RV)</strong></b><span style=\"white-space: pre-wrap;\"> que transforma dados científicos oficiais da </span><b><strong style=\"white-space: pre-wrap;\">NASA</strong></b><span style=\"white-space: pre-wrap;\"> sobre os oceanos da Terra em uma </span><b><strong style=\"white-space: pre-wrap;\">narrativa interativa</strong></b><span style=\"white-space: pre-wrap;\">. O usuário assume o papel de um viajante espacial de uma galáxia distante em uma missão para encontrar planetas habitáveis, eventualmente descobrindo a Terra. Isso permite uma exploração profunda e imersiva dos </span><b><strong style=\"white-space: pre-wrap;\">processos ecológicos, oceanografia e mudanças ambientais</strong></b><span style=\"white-space: pre-wrap;\">ao longo do tempo.</span></p><hr/><h3><span style=\"white-space: pre-wrap;\">Benefícios e impacto:</span></h3><ul><li><span style=\"white-space: pre-wrap;\">Permite a </span><b><strong style=\"white-space: pre-wrap;\">compreensão visual e sensorial</strong></b><span style=\"white-space: pre-wrap;\">do impacto humano nos oceanos e na biosfera.</span></li><li><span style=\"white-space: pre-wrap;\">Aumenta </span><b><strong style=\"white-space: pre-wrap;\">conscientização</strong></b><span style=\"white-space: pre-wrap;\">sobre degradação ambiental e desequilíbrios ecológicos, unindo </span><b><strong style=\"white-space: pre-wrap;\">ciência e educação ambiental</strong></b><span style=\"white-space: pre-wrap;\">.</span></li><li><span style=\"white-space: pre-wrap;\">Ele fornece uma </span><b><strong style=\"white-space: pre-wrap;\">experiência única de aprendizado e engajamento em RV</strong></b><span style=\"white-space: pre-wrap;\">, explorando dados complexos de forma intuitiva e interativa.</span></li></ul><hr/><h3><span style=\"white-space: pre-wrap;\">Ferramentas, linguagens e hardware/software usados:</span></h3><ul><li><b><strong style=\"white-space: pre-wrap;\">Unity e C#</strong></b><span style=\"white-space: pre-wrap;\"> para desenvolvimento e interações em ambientes de RV.</span></li><li><b><strong style=\"white-space: pre-wrap;\">Deep Voice</strong></b><span style=\"white-space: pre-wrap;\"> (plug-in Unity) para a narração pelo copiloto de IA AURA.</span></li><li><b><strong style=\"white-space: pre-wrap;\">Blender 3D, 3Ds Max e Autodesk Inventor</strong></b><span style=\"white-space: pre-wrap;\"> para modelagem e animação de objetos e hologramas.</span></li><li><b><strong style=\"white-space: pre-wrap;\">Meta Quest 2</strong></b><span style=\"white-space: pre-wrap;\"> como hardware de imersão.</span></li><li><b><strong style=\"white-space: pre-wrap;\">Audacity</strong></b><span style=\"white-space: pre-wrap;\"> para edição e limpeza de áudio.</span></li><li><b><strong style=\"white-space: pre-wrap;\">Python Web Scraping</strong></b><span style=\"white-space: pre-wrap;\"> para coletar dados públicos da NASA.</span></li><li><b><strong style=\"white-space: pre-wrap;\">Ferramentas de IA</strong></b><span style=\"white-space: pre-wrap;\"> como </span><b><strong style=\"white-space: pre-wrap;\">ChatGPT e Gemini</strong></b><span style=\"white-space: pre-wrap;\"> para suporte narrativo, análise e narrativa dinâmica.</span></li><li><b><strong style=\"white-space: Panoply</strong></b><span style=\"white-space: pre-wrap;\"> para séries temporais e visualização de dados geoespaciais.</span></li></ul><hr/><h3><span style=\"white-space: pre-wrap;\">Criatividade e principais considerações:</span></h3><ul><li><span style=\"white-space: pre-wrap;\">Ele combina </span><b><strong style=\"white-space: pre-wrap;\">ciência real, narrativa e interatividade em RV</strong></b><span style=\"white-space: pre-wrap;\">, permitindo que o usuário experimente uma jornada de exploração espacial.</span></li><li><span style=\"white-space: pre-wrap;\">Ele foi projetado para ser </span><b><strong style=\"white-space: pre-wrap;\">intuitivo, educacional e esteticamente imersivo</strong></b><span style=\"white-space: pre-wrap;\">, garantindo que os dados sejam compreensíveis e impactantes.</span></li><li><span style=\"white-space: pre-wrap;\">A equipe considerou </span><b><strong style=\"white-space: pre-wrap;\">design narrativo, precisão científica, imersão visual e auditiva, interatividade de dados e envolvimento emocional do usuário</strong></b><span style=\"white-space: pre-wrap;\">.</span></li></ul>",
+        "achievements": null,
+        "impact": "Permite a compreensão visual e sensorialdo impacto humano nos oceanos e na biosfera. Aumenta conscientizaçãosobre degradação ambiental e desequilíbrios ecológicos, unindo ciência e educação ambiental. Ele fornece uma experiência única de aprendizado e engajamento em RV, explorando dados complexos de forma intuitiva e interativa.",
+        "technologiesUsed": [
+          "Unity e C# para desenvolvimento e interações em ambientes de RV.",
+"Deep Voice (plug-in Unity) para a narração pelo copiloto de IA AURA.",
+"Blender 3D, 3Ds Max e Autodesk Inventor para modelagem e animação de objetos e hologramas.",
+"Meta Quest 2 como hardware de imersão.",
+"Audacity para edição e limpeza de áudio.",
+"Python Web Scraping para coletar dados públicos da NASA.",
+"Ferramentas de IA como ChatGPT e Gemini para suporte narrativo, análise e narrativa dinâmica.",
+"para séries temporais e visualização de dados geoespaciais."
+        ],
+        "nasaData": [
+          {
+            "name": "ICEC WEBSCRAPING",
+            "link": "https://gis.nnvl.noaa.gov/arcgis/rest/services/ICEC/ICEC_monthly/ImageServer"
+          },
+          {
+            "name": "CO2F WEBSCRAPING",
+            "link": "https://gis.nnvl.noaa.gov/arcgis/rest/services/CO2F/CO2F_yearly/ImageServer"
+          },
+          {
+            "name": "CDHW WEBSCRAPING",
+            "link": "https://gis.nnvl.noaa.gov/arcgis/rest/services/CDHW/CDHW_monthly/ImageServer"
+          },
+          {
+            "name": "SURF WEBSCRAPING",
+            "link": "https://gis.nnvl.noaa.gov/arcgis/rest/services/SURF/SURF_monthly/ImageServer"
+          },
+          {
+            "name": "WOAQ WEBSCRAPING",
+            "link": "https://gis.nnvl.noaa.gov/arcgis/rest/services/WOAQ/WOAQ_yearly/ImageServer"
+          },
+          {
+            "name": "CDHW DATASET",
+            "link": "https://www.ncei.noaa.gov/data/oceans/crw/5km/v3.1/nc/v1.0/monthly/2023/"
+          },
+          {
+            "name": "ICEC DATASET",
+            "link": "https://www.ncei.noaa.gov/data/sea-surface-temperature-optimum-interpolation/v2.1/access/avhrr/202001/"
+          },
+          {
+            "name": "SURF DATASET",
+            "link": "https://cmr.earthdata.nasa.gov/virtual-directory/collections/C1996881146-POCLOUD/temporal"
+          }
+        ],
+        "usesOfAI": "<p dir=\"ltr\"><span style=\"white-space: pre-wrap;\">A Inteligência Artificial (IA) foi utilizada como uma ferramenta integral e </span><b><strong style=\"white-space: pre-wrap;\">aceleradora de desenvolvimento</strong></b><span style=\"white-space: pre-wrap;\"> em diversas fases do nosso projeto. O modelo </span><b><strong style=\"white-space: pre-wrap;\">GPT-5</strong></b><span style=\"white-space: pre-wrap;\"> foi empregado para auxiliar na otimização e estruturação do </span><b><strong style=\"white-space: pre-wrap;\">código C#</strong></b><span style=\"white-space: pre-wrap;\"> para lógica e objetos no Unity. Também se mostrou essencial na fase criativa, sendo usado para estruturar a narrativa, integrar dados científicos de forma coesa ao enredo e refinar os diálogos do robô. </span><b><strong style=\"white-space: pre-wrap;\">Aura</strong></b><span style=\"white-space: pre-wrap;\">. Simultaneamente, o modelo </span><b><strong style=\"white-space: pre-wrap;\">Gemini 2.5 Pro</strong></b><span style=\"white-space: pre-wrap;\"> forneceu assistência crucial na análise de dados e </span><b><strong style=\"white-space: pre-wrap;\">raspagem da web</strong></b><span style=\"white-space: pre-wrap;\">, ajudando a depurar o script Python e diagnosticar problemas de intervalo de tempo para conjuntos de dados como </span><b><strong style=\"white-space: pre-wrap;\">ICEC, CDHW, CO2F, SURF</strong></b><span style=\"white-space: pre-wrap;\"> e </span><b><strong style=\"white-space: pre-wrap;\">WOAQ</strong></b><span style=\"white-space: pre-wrap;\">, garantindo assim a precisão na coleta de dados históricos. Por fim, para a geração de todo o áudio contendo a fala de Aura, utilizamos exclusivamente o plugin </span><b><strong style=\"white-space: pre-wrap;\">Deep Voice (Text-to-Speech)</strong></b><span style=\"white-space: pre-wrap;\"> Unity, conforme exigido pelas diretrizes. Em resumo, o uso estratégico da IA ​​permitiu à equipe maximizar a originalidade e a execução do conceito central, otimizando drasticamente o tempo gasto no desenvolvimento técnico e na produção de conteúdo.</span></p>"
+      },
+      "mediaGallery": [
+        {
+          "type": "video",
+          "url": "/assets/winners/titan/1761100169368.mp4",
+          "alt": "Video de apresentação do projeto",
+          "caption": "Video de apresentação do projeto"
+        },
+        {
+          "type": "image",
+          "url": "/assets/winners/titan/1761148630417.jpeg",
+          "alt": "Equipe Finstream no evento",
+          "caption": "Equipe Finstream no evento"
+        },
+        {
+          "type": "image",
+          "url": "/assets/winners/titan/1761148631144.jpeg",
+          "alt": "Equipe Finstream trabalhando no evento",
+          "caption": "Equipe Finstream trabalhando no evento"
+        },
+        {
+          "type": "image",
+          "url": "/assets/winners/titan/1759807044836.jpeg",
+          "alt": "Visualização 3D do rastreamento",
+          "caption": "Visualização 3D do rastreamento"
+        },
+        {
+          "type": "image",
+          "url": "/assets/winners/titan/3d-visualization.jpg",
+          "alt": "Visualização 3D de detritos",
+          "caption": "Visualização 3D dos detritos espaciais em órbita"
+        }
+      ],
+      "teamMembers": [
+        {
+          "name": "Camilo de Lellis Barreto Junior",
+          "role": "XR Developer",
+          "photo": "/assets/winners/titan/camilo.png",
+          "bio": "Programador, professor e estudante que ama engenharia/computação e tem uma queda por Tecnologias Imersivas. Fogueteiro de coração, fã de lançamentos e apaixonado pelo espaço desde que se entende por gente. Gamer dos anos 90 e 00! Ainda quer ser piloto!",
+          "linkedin": "https://www.linkedin.com/in/camilobarreto/",
+          "github": "https://github.com/CamiloJr",
+          "instagram": "https://www.instagram.com/camilobarretojr/"
         }
       ],
       "projectVideo": null,
