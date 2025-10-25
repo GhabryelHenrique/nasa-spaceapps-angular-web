@@ -71,6 +71,7 @@
 
     .search-input {
       flex: 1;
+      min-width: 0;
       padding: 1rem 1.5rem;
       background: transparent;
       border: none;
@@ -84,12 +85,17 @@
     }
 
     .search-button {
-      padding: 1rem 1.5rem;
+      flex-shrink: 0;
+      width: 52px;
+      padding: 1rem;
       background: rgba(255, 255, 255, 0.2);
       border: none;
       color: white;
       cursor: pointer;
       transition: background-color 0.3s;
+      display: flex;
+      align-items: center;
+      justify-content: center;
 
       &:hover:not(:disabled) {
         background: rgba(255, 255, 255, 0.3);
@@ -98,6 +104,10 @@
       &:disabled {
         opacity: 0.5;
         cursor: not-allowed;
+      }
+
+      svg {
+        flex-shrink: 0;
       }
     }
   }
