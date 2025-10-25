@@ -352,6 +352,28 @@ a {
   }
 }
 
+// Primeiro oculta texto das redes sociais (só ícones)
+@media (max-width: 900px) {
+  .header .navbar {
+    .nav-actions {
+      gap: 0.75rem;
+
+      .social-btn {
+        padding: 0.6rem 0.8rem;
+        min-width: auto;
+
+        span {
+          display: none;
+        }
+
+        i {
+          margin: 0;
+        }
+      }
+    }
+  }
+}
+
 @media (max-width: 768px) {
   .header .navbar {
     display: flex;
@@ -359,12 +381,37 @@ a {
     justify-content: space-between;
 
     .nav-actions {
-      .social-btn, .register-btn, .matchmaking-btn, .login-btn {
-        display: none;
-      }
+      gap: 0.5rem;
 
       .mobile-menu-btn {
-        display: block;
+        display: none;
+      }
+    }
+  }
+}
+
+// Por último, oculta texto de Desafios/Times (só ícones)
+@media (max-width: 600px) {
+  .header .navbar {
+    .nav-actions {
+      gap: 0.5rem;
+      display: flex;
+      align-items: center;
+
+      .register-btn, .matchmaking-btn, .login-btn {
+        padding: 0.6rem 0.8rem;
+        min-width: auto;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        span {
+          display: none;
+        }
+
+        i {
+          margin: 0;
+        }
       }
     }
   }
@@ -379,6 +426,14 @@ a {
 
       .brand-text h1 {
         font-size: 1rem;
+      }
+    }
+
+    .nav-actions {
+      gap: 0.3rem;
+
+      .register-btn, .matchmaking-btn, .login-btn {
+        padding: 0.5rem 0.6rem;
       }
     }
   }
