@@ -361,11 +361,10 @@ a {
   .header .navbar {
     .nav-actions {
       .social-btn {
+        justify-content: center;
+
         span {
-          width: 0;
-          overflow: hidden;
-          opacity: 0;
-          transition: all 0.3s ease;
+          display: none;
         }
       }
     }
@@ -389,11 +388,10 @@ a {
   .header .navbar {
     .nav-actions {
       .register-btn, .matchmaking-btn, .login-btn {
+        justify-content: center;
+
         span {
-          width: 0;
-          overflow: hidden;
-          opacity: 0;
-          transition: all 0.3s ease;
+          display: none;
         }
       }
     }
