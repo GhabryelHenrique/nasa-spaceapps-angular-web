@@ -13,20 +13,21 @@
       },
       "presentation": {
         "introduction": "Nosso projeto é uma plataforma educacional interativa projetada para traduzir a ciência complexa de asteroides em uma experiência visual compreensível. Usando dados de APIs da NASA, como o Banco de Dados de Pequenos Corpos do JPL e o NeoWs, garantimos que cada simulação seja baseada em objetos celestes reais e suas trajetórias observadas. A partir de dados primários, como diâmetro e velocidade, nossa plataforma aplica princípios da física de impacto e mecânica orbital para calcular parâmetros derivados, incluindo massa, energia cinética e liberação de energia sísmica. Os usuários podem selecionar um asteroide real e um local de impacto para visualizar as consequências, incluindo o raio da bola de fogo, a propagação da onda de choque, as velocidades devastadoras dos ventos e a magnitude do terremoto resultante. Além de simular o problema, nosso projeto também se concentra na solução. Ele serve como uma ferramenta educacional para mostrar as estratégias de mitigação e deflexão que a ciência moderna oferece, desmistificando os perigos, criando soluções e capacitando as pessoas com uma compreensão clara dos desafios e soluções na defesa planetária.",
-        "projectDescription": "Desenvolvemos um sistema de monitoramento em tempo real que utiliza algoritmos de machine learning para prever colisões com detritos espaciais. O sistema analisa dados de múltiplas fontes da NASA e agências espaciais parceiras, processando mais de 500.000 objetos catalogados em órbita. Nossa solução consegue prever colisões com 95% de precisão até 72 horas antes do evento.",
-        "achievements": [
-          "Precisão de 95% na previsão de colisões em 72 horas",
-          "Processamento de mais de 500.000 objetos espaciais catalogados",
-          "Interface web responsiva e intuitiva para visualização 3D",
-          "Sistema de alertas em tempo real para operadores de satélites",
-          "Integração com APIs de múltiplas agências espaciais"
-        ],
-        "impact": "Nosso projeto tem o potencial de revolucionar a segurança espacial. Estamos em conversações com operadores de satélites comerciais e agências governamentais para implementar nosso sistema em operações reais. A solução pode prevenir colisões que custariam bilhões em perdas de satélites e potencialmente salvar vidas de astronautas.",
+        "projectDescription": "<h2>O que o projeto faz e como funciona?</h2><p><strong>Asteroid Watchers</strong> é uma plataforma educacional baseada na web que modela impactos de asteroides próximos à Terra e fornece análise abrangente de objetos potencialmente perigosos. O sistema funciona através de vários componentes integrados:</p><p><strong>Coleta e Processamento de Dados</strong>: A plataforma utiliza a API NEO Web Service da NASA para buscar dados em tempo real sobre objetos próximos à Terra em qualquer data selecionada. O backend em Python processa esses dados para calcular propriedades físicas adicionais, incluindo estimativa de massa, energia orbital e velocidades de impacto usando cálculos de física gravitacional.</p><p><strong>Visualização Interativa em 3D</strong>: Os usuários podem explorar asteroides através de um sistema de visualização 3D que permite rotação e funcionalidade de zoom para inspecionar visualmente as características dos objetos.</p><p><strong>Motor de Simulação de Impacto</strong>: A funcionalidade principal permite que os usuários simulem impactos de asteroides em qualquer local da Terra através de:</p><ul><li>Seleção de datas específicas para visualizar objetos próximos à Terra disponíveis</li><li>Escolha de uma lista de asteroides com suas distâncias de aproximação</li><li>Colocação de coordenadas de impacto em um mapa interativo</li><li>Execução de simulações baseadas em física que calculam tamanho da cratera, estimativas de vítimas, efeitos sísmicos, raio da bola de fogo e impactos de ondas de choque</li></ul><p><strong>Ferramentas de Personalização</strong>: Um módulo criador permite que os usuários projetem asteroides personalizados com parâmetros variáveis (tamanho, velocidade, composição) para cenários experimentais \"e se\".</p><h2>Benefícios e Impacto Pretendido</h2><p><strong>Valor Educacional</strong>: O projeto transforma conceitos complexos de astronomia e física em experiências de aprendizado acessíveis e interativas. Estudantes e educadores podem visualizar as consequências reais de impactos de asteroides, tornando conceitos científicos abstratos tangíveis.</p><p><strong>Conscientização Pública</strong>: Ao fornecer visualização precisa de dados de asteroides potencialmente perigosos, a plataforma aumenta a compreensão pública dos desafios de defesa planetária e da importância dos programas de monitoramento de asteroides.</p><p><strong>Alfabetização Científica</strong>: O simulador preenche a lacuna entre os dados brutos da NASA e a compreensão pública, ajudando os usuários a entender mecânica orbital, física de impacto e metodologias de avaliação de risco.</p><p><strong>Suporte à Pesquisa</strong>: A plataforma pode auxiliar pesquisadores e educadores na demonstração de cenários de impacto e teste de estratégias teóricas de deflexão através do sistema integrado de recomendação de deflexão.</p>",
+        "achievements": null,
+        "impact": null,
         "technologiesUsed": [
-          "Python for backend data processing and API integration",
-          "JavaScript for frontend interactivity",
-          "HTML/CSS for user interface design"
-        ]
+          "Python para processamento de dados backend e integração de APIs",
+          "JavaScript para interatividade frontend",
+          "HTML/CSS para design de interface de usuário",
+          "Flask como framework backend",
+          "Nuxt e Vue como frameworks frontend",
+          "Vercel para hospedagem web e deployment",
+          "Railway para deployment backend",
+          "API NEO Web Service da NASA para dados de asteroides em tempo real",
+          "WorldPop para exibição de mapa em tempo real"
+        ],
+        "usesOfAI": "Usamos IA para entender a biblioteca ThreeJs, já que todos os membros conheciam pouco dela. Também usamos algum texto gerado para preencher nossa aplicação web, para revisar alguns textos em inglês e também para gerar imagens de IA, como o logotipo do grupo e a textura do asteroide. Outros casos incluem revisão de código para solucionar problemas que não conseguimos resolver a tempo."
       },
       "mediaGallery": [
         {
@@ -116,6 +117,144 @@
         "summary": "Sistema de previsão de colisões com detritos espaciais",
         "demoLink": "https://asteroid-watchers.demo.com",
         "projectLink": "https://github.com/asteroid-watchers/space-debris-tracker",
+        "details": "Sistema completo de monitoramento e previsão",
+        "solution": "Machine learning aplicado a dados orbitais",
+        "isSubmitted": true,
+        "submittedAt": "2024-10-08T20:00:00Z"
+      },
+      "desiredSkills": [
+        "Python",
+        "Machine Learning",
+        "Angular",
+        "Data Science"
+      ],
+      "languages": ["pt", "en"],
+      "joinEnabled": false,
+      "nominationBadges": ["best-use-of-data"],
+      "awardBadges": ["global-nominee"]
+    },
+    {
+      "id": "winner-team-2",
+      "slug": "finstream",
+      "title": "Finstream",
+      "awardCategory": "Global Nominee",
+      "awardYear": 2025,
+      "featuredImage": "https://assets.spaceappschallenge.org/media/images/shark_BOHrsBu.2e16d0ba.fill-300x250.png",
+      "excerpt": "Nossa equipe multidisciplinar se destaca no desenvolvimento de sistemas integrados, combinando expertise em Software (CS), Powertrain (ME), Sistemas Embarcados (CE) e Robótica (Mtr). Entregamos soluções completas por meio de engenharia rigorosa. Estamos abertos a colaborações com especialistas em áreas adjacentes para parcerias sinérgicas.",
+      "description": "Projeto premiado que desenvolveu um sistema de rastreamento e previsão de colisões com detritos espaciais",
+      "meta": {
+        "relativeUrl": "/times-vencedores/finstream"
+      },
+      "presentation": {
+        "introduction": "O FINSTREAM é um sistema interdisciplinar avançado que integra dados de satélite da NASA com inteligência artificial para prever e analisar o comportamento dos tubarões em tempo real. Ele conecta oceanografia, ecologia e ciência de dados por meio de uma rede neural profunda treinada em mais de 345.000 registros biológicos e ambientais, alcançando precisões de classificação comportamental acima de 85%. Para fundamentar as percepções dos satélites com evidências biológicas diretas, o projeto inclui um dispositivo de monitoramento subaquático personalizado, acoplado à barbatana dorsal do tubarão. Esta placa modular, baseada em um microcontrolador ESP32 e equipada com sensores de pressão, temperatura e movimento, transmite dados em tempo real pela rede de satélites Argos. Uma carcaça compacta e hidrodinâmica garante impermeabilização, durabilidade e impacto mínimo sobre o animal, permitindo uma operação totalmente autônoma. Ao vincular observações orbitais com medições in situ, o FINSTREAM fornece uma nova estrutura para validar dados de sensoriamento remoto por meio de organismos vivos. O sistema promove a conservação marinha ao identificar pontos de alimentação, reduzir conflitos entre humanos e tubarões e orientar a gestão sustentável dos oceanos, demonstrando como dados espaciais e IA podem trabalhar juntos para entender e proteger ecossistemas marinhos.",
+        "projectDescription": "<p><span style=\"white-space: pre-wrap;\">FINSTREAM is an advanced, interdisciplinary system designed to integrate NASA satellite data with artificial intelligence for the real-time prediction and analysis of shark behavior. It unites oceanography, ecology, and data science to create a dynamic platform capable of transforming environmental information into biological insight.</span></p><p><span style=\"white-space: pre-wrap;\">The system operates by acquiring satellite observations from NASA’s SWOT (Surface Water and Ocean Topography) and MODIS (Moderate Resolution Imaging Spectroradiometer) missions. SWOT data provide precise measurements of sea surface height anomalies, while MODIS offers chlorophyll-a concentrations, an indicator of marine productivity. All MODIS data were collected through the NASA Ocean Biology Processing Group (OBPG) API between </span><b><strong style=\"white-space: pre-wrap;\">January 1, 2024, and January 24, 2024</strong></b><span style=\"white-space: pre-wrap;\">, and used to train the artificial intelligence model. These environmental datasets were spatially and temporally aligned with high-fidelity shark telemetry, including geographic position, depth, temperature, and movement data generated or collected at high frequency.</span></p><p><span style=\"white-space: pre-wrap;\">A deep neural network trained on over 345,000 records integrates these environmental and biological variables to predict behavioral states—searching, foraging, or transit—and estimates foraging probability (p_forrageio) under varying ocean conditions. The model achieves behavioral classification accuracies exceeding 85%, allowing real-time assessment of ecological responses to ocean variability.</span></p><p><span style=\"white-space: pre-wrap;\">FINSTREAM’s architecture combines Python-based AI modules with a .NET backend, PostgreSQL database, and a React-based web interface for real-time visualization. The infrastructure supports simultaneous multi-shark tracking, sub-second latency processing, and modular scalability for expanded datasets.</span></p><p><span style=\"white-space: pre-wrap;\">Beyond its technical achievements, FINSTREAM delivers substantial scientific and conservation value. It provides a unique framework for correlating satellite-derived environmental metrics with biological behavior, offering an innovative validation mechanism for remote sensing data through living organisms. From a conservation perspective, it identifies biologically significant foraging regions, supports marine spatial planning, and contributes to reducing bycatch and human–shark interactions through predictive modeling.</span></p><p><span style=\"white-space: pre-wrap;\">Technologically, the project demonstrates a powerful application of NASA data to real-world ecological challenges, showcasing how spaceborne measurements can directly inform ocean management and species conservation. Its open-source design encourages scientific collaboration, reproducibility, and educational use, fostering interdisciplinary research across artificial intelligence, marine science, and climate studies.</span></p><p><span style=\"white-space: pre-wrap;\">In essence, FINSTREAM represents a novel synthesis of satellite observation, machine learning, and marine ecology. By bridging the gap between orbital sensors and biological systems, it provides a scalable, accurate, and ethically driven model for environmental intelligence—advancing both technological innovation and the global effort to understand and preserve marine ecosystems.</span></p>",
+        "achievements": null,
+        "impact": null,
+        "technologiesUsed": [
+          "Python para processamento de dados backend e integração de APIs",
+          "JavaScript para interatividade frontend",
+          "HTML/CSS para design de interface de usuário",
+          ".NET para backend",
+          "PostgreSQL para banco de dados",
+          "React para interface web e visualização em tempo real",
+          "API MODIS da NASA (Ocean Biology Processing Group)",
+          "Dados SWOT da NASA (Surface Water and Ocean Topography)",
+          "ESP32 microcontrolador para dispositivo de monitoramento",
+          "Rede de satélites Argos para transmissão de dados"
+        ],
+        "nasaData": [
+          {
+            "name": "NASA MODIS Ocean Color (Chlorophyll-a) Dataset",
+            "link": "https://oceandata.sci.gsfc.nasa.gov/api/file_search/"
+          },
+          {
+            "name": "SWOT Level 2 KaRIn Low Rate Sea Surface Height Data Product, Version C, 2024/01/01",
+            "link": "https://cmr.earthdata.nasa.gov/virtual-directory/collections/C2799438306-POCLOUD/temporal/2024/01"
+          }
+        ],
+        "usesOfAI": "<p><span style=\"white-space: pre-wrap;\">A Inteligência Artificial (IA) foi empregada no projeto FINSTREAM como uma ferramenta criativa e analítica para acelerar o desenvolvimento científico e a execução técnica. A IA auxiliou em várias fases do projeto — do processamento e modelagem de dados ao suporte à ideação e codificação.</span></p><p><span style=\"white-space: pre-wrap;\">Tecnicamente, a IA foi usada para interpretar e integrar conjuntos de dados de satélite da NASA das missões </span><b><strong style=\"white-space: pre-wrap;\">SWOT</strong></b><span style=\"white-space: pre-wrap;\"> (Águas de Superfície e Topografia Oceânica) e </span><b><strong style=\"white-space: pre-wrap;\">MODIS</strong></b><span style=\"white-space: pre-wrap;\"> (Espectrorradiômetro de Imagem de Resolução Moderada). Algoritmos de aprendizado de máquina realizaram alinhamento espaço-temporal de anomalias de altura da superfície do mar e concentrações de clorofila-a com base em coordenadas geográficas (latitude e longitude), permitindo a criação de um conjunto de dados ambientais unificado.</span></p><p><span style=\"white-space: pre-wrap;\">A IA também foi utilizada para gerar simulações de telemetria de tubarões biologicamente realistas, modelando comportamentos como migração, variação de profundidade e atividade de forrageamento. Esses conjuntos de dados sintéticos foram combinados com dados reais da NASA para treinar uma rede neural profunda capaz de prever estados comportamentais e probabilidade de forrageamento sob condições oceanográficas variáveis.</span></p><p><span style=\"white-space: pre-wrap;\">Além de dados e modelagem, as ferramentas de IA foram valiosas para </span><b><strong style=\"white-space: pre-wrap;\">geração de conceitos, otimização de código e estruturação de fluxo de trabalho</strong></b><span style=\"white-space: pre-wrap;\">, ajudando a equipe a projetar algoritmos mais eficientes e melhorar os pipelines de análise de dados.</span></p><p><span style=\"white-space: pre-wrap;\">Todo o conteúdo gerado por IA, incluindo dados simulados, segmentos de código e saídas analíticas, é devidamente documentado e reconhecido nos metadados do projeto, sem a marca da NASA ou elementos de design usados ​​ou modificados.</span></p>"
+      },
+      "mediaGallery": [
+        {
+          "type": "image",
+          "url": "/assets/winners/finstream/1761148630417.jpeg",
+          "alt": "Equipe Finstream no evento",
+          "caption": "Equipe Finstream no evento"
+        },
+        {
+          "type": "image",
+          "url": "/assets/winners/finstream/1759807044662.jpeg",
+          "alt": "Dashboard do sistema",
+          "caption": "Interface principal do sistema de monitoramento"
+        },
+        {
+          "type": "image",
+          "url": "/assets/winners/finstream/1761148631144.jpeg",
+          "alt": "Equipe Finstream trabalhando no evento",
+          "caption": "Equipe Finstream trabalhando no evento"
+        },
+        {
+          "type": "image",
+          "url": "/assets/winners/finstream/1759807044836.jpeg",
+          "alt": "Visualização 3D do rastreamento",
+          "caption": "Visualização 3D do rastreamento"
+        },
+        {
+          "type": "image",
+          "url": "/assets/winners/finstream/3d-visualization.jpg",
+          "alt": "Visualização 3D de detritos",
+          "caption": "Visualização 3D dos detritos espaciais em órbita"
+        }
+      ],
+      "teamMembers": [
+        {
+          "name": "Leandro Marques Gontijo Jersé",
+          "role": "Data Scientist",
+          "photo": "/assets/winners/finstream/leandro.jpg",
+          "bio": "Estudante de Ciência da Computação na Universidade Federal de Uberlândia (UFU), com foco em desenvolvimento back-end e interesse em Ciência de Dados e Inteligência Artificial. Atua principalmente com Java e JavaScript, desenvolvendo APIs, microsserviços e integrações com plataformas em nuvem (AWS). Tem experiência prática em projetos acadêmicos e pessoais envolvendo IoT, MQTT, ESP32 e análise de dados em tempo real.",
+          "linkedin": "https://www.linkedin.com/in/leandro-marques-b377a6271/",
+          "github": "https://github.com/LeandroJerse",
+          "instagram": "https://www.instagram.com/leandro_marques_g"
+        },
+        {
+          "name": "Lucas Panonko Assis Belchior",
+          "role": "Desenvolvedor Fullstack",
+          "photo": "/assets/winners/finstream/lucas.jpg",
+          "bio": "Sou Lucas Belchior, tenho 22 anos e sou natural de Franca (SP). Desde 2022, estudo Ciência da Computação na Universidade Federal de Uberlândia (UFU) e atuo na área como desenvolvedor Fullstack, com experiência em C#, React e bancos de dados Oracle.",
+          "linkedin": "https://www.linkedin.com/in/lucasbelchior-sep/",
+          "github": "https://github.com/LuksbellN",
+          "instagram": "https://www.instagram.com/luksbell/"
+        }
+      ],
+      "projectVideo": null,
+      "presentationSlides": "https://ufubr-my.sharepoint.com/:p:/g/personal/lucas_lara_ufu_br/EcyJRzOWEfFKohqnWhuDIWQBbBQEXQBSuezlp6A02k9b0g?e=iKrJen",
+      "githubRepo": "https://drive.google.com/drive/folders/1Svb9tGn2uLuBnoFUHAmx4cYg-GttnVIS",
+      "challenge": "sharks-from-space",
+      "challengeDetails": {
+        "id": "challenge-2",
+        "title": "Sharks from Space",
+        "excerpt": "Earth’s ocean is one of the most powerful habitats in our universe, supporting a range of life that sustains ecosystems and habitability across the globe. It is common to measure photosynthetic activity in the ocean from space, but far more challenging to track top predators. Your challenge is to create a mathematical framework for identifying sharks and predicting their foraging habitats using NASA satellite data, and also to suggest a new conceptual model of a tag (a small electronic device that can be attached to an animal to track and study its movement) that could measure not only where sharks are, but also what they are eating, and in real time transmit that data back to users to enable development of predictive models."
+      },
+      "location": "uberlandia",
+      "locationDetails": {
+        "id": "loc-1",
+        "title": "Uberlândia",
+        "displayName": "Uberlândia, MG, Brasil",
+        "country": "Brazil"
+      },
+      "projectSubmitted": true,
+      "owner": "user-1",
+      "ownerDetails": {
+        "id": "user-1",
+        "username": "anasilva"
+      },
+      "project": "proj-1",
+      "projectDetails": {
+        "id": "proj-1",
+        "name": "Space Debris Collision Predictor",
+        "summary": "Sistema de previsão de colisões com detritos espaciais",
+        "demoLink": null,
+        "projectLink": "https://drive.google.com/drive/folders/1Svb9tGn2uLuBnoFUHAmx4cYg-GttnVIS",
         "details": "Sistema completo de monitoramento e previsão",
         "solution": "Machine learning aplicado a dados orbitais",
         "isSubmitted": true,
