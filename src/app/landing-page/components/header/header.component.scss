@@ -115,6 +115,7 @@ a {
         align-items: center;
         gap: 0.5rem;
         font-size: 0.9rem;
+        white-space: nowrap;
 
         &.whatsapp-btn {
           border-color: #25D366;
@@ -150,7 +151,7 @@ a {
       .login-btn {
         background: var(--gradient-nasa-blue);
         border: none;
-        padding: 0.75rem 1.5rem;
+        padding: 0.5rem 1rem;
         border-radius: 25px;
         color: var(--nasa-white);
         font-weight: 600;
@@ -159,6 +160,7 @@ a {
         display: flex;
         align-items: center;
         gap: 0.5rem;
+        white-space: nowrap;
 
         &:hover {
           transform: translateY(-2px);
@@ -169,7 +171,7 @@ a {
       .register-btn {
         background: linear-gradient(135deg, #4ecdc4, #45b7d1);
         border: none;
-        padding: 0.75rem 1.5rem;
+        padding: 0.5rem 1rem;
         border-radius: 25px;
         color: var(--nasa-white);
         font-weight: 600;
@@ -179,6 +181,7 @@ a {
         align-items: center;
         gap: 0.5rem;
         text-decoration: none;
+        white-space: nowrap;
 
         &:hover {
           transform: translateY(-2px);
@@ -189,7 +192,7 @@ a {
       .matchmaking-btn {
         background: linear-gradient(135deg, #ff6b9d, #dc267f);
         border: none;
-        padding: 0.75rem 1.5rem;
+        padding: 0.5rem 1rem;
         border-radius: 25px;
         color: var(--nasa-white);
         font-weight: 600;
@@ -198,6 +201,7 @@ a {
         display: flex;
         align-items: center;
         gap: 0.5rem;
+        white-space: nowrap;
 
         &:hover {
           transform: translateY(-2px);
@@ -352,19 +356,43 @@ a {
   }
 }
 
+// Primeiro oculta texto das redes sociais (só ícones)
+@media (max-width: 500px) {
+  .header .navbar {
+    .nav-actions {
+      .social-btn {
+        justify-content: center;
+
+        span {
+          display: none;
+        }
+      }
+    }
+  }
+}
+
 @media (max-width: 768px) {
   .header .navbar {
-    display: none;
     padding: 0.75rem 1rem;
-    justify-content: space-between;
 
     .nav-actions {
-      .social-btn, .register-btn, .matchmaking-btn, .login-btn {
+      .mobile-menu-btn {
         display: none;
       }
+    }
+  }
+}
 
-      .mobile-menu-btn {
-        display: block;
+// Por último, oculta texto de Desafios/Times (só ícones)
+@media (max-width: 650px) {
+  .header .navbar {
+    .nav-actions {
+      .register-btn, .matchmaking-btn, .login-btn {
+        justify-content: center;
+
+        span {
+          display: none;
+        }
       }
     }
   }
