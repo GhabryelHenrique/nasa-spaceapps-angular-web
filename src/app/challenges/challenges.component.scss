@@ -130,6 +130,8 @@
       border: 1px solid rgba(255, 255, 255, 0.1);
       transition: all 0.3s ease;
       position: relative;
+      display: flex;
+      flex-direction: column;
 
       &:hover {
         transform: translateY(-8px);
@@ -188,6 +190,9 @@
 
       .challenge-content {
         padding: 1.5rem;
+        display: flex;
+        flex-direction: column;
+        flex: 1;
 
         .challenge-title {
           font-size: 1.3rem;
@@ -244,6 +249,8 @@
         }
 
         .challenge-actions {
+          margin-top: auto;
+
           .challenge-link {
             display: inline-flex;
             align-items: center;
