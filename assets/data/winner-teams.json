@@ -217,6 +217,15 @@
           "instagram": "https://www.instagram.com/leandro_marques_g"
         },
         {
+          "name": "Lucas Lara Carvalho",
+          "role": "Data Scientist",
+          "photo": "/assets/winners/finstream/leandro.jpg",
+          "bio": "Estudante de Ciência da Computação na Universidade Federal de Uberlândia (UFU), com foco em desenvolvimento back-end e interesse em Ciência de Dados e Inteligência Artificial. Atua principalmente com Java e JavaScript, desenvolvendo APIs, microsserviços e integrações com plataformas em nuvem (AWS). Tem experiência prática em projetos acadêmicos e pessoais envolvendo IoT, MQTT, ESP32 e análise de dados em tempo real.",
+          "linkedin": "https://www.linkedin.com/in/leandro-marques-b377a6271/",
+          "github": "https://github.com/LeandroJerse",
+          "instagram": "https://www.instagram.com/leandro_marques_g"
+        },
+        {
           "name": "Lucas Panonko Assis Belchior",
           "role": "Desenvolvedor Fullstack",
           "photo": "/assets/winners/finstream/lucas.jpg",
