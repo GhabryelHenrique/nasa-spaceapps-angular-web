@@ -95,7 +95,6 @@ export class ProfileCreateComponent implements OnInit {
 
     this.matchmakingService.getProfile(this.currentUser.email).subscribe({
       next: (profile) => {
-        console.log(profile)
         if (profile) {
           this.isEditing = true;
           this.populateForm(profile.profile);

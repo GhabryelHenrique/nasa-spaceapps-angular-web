@@ -1,0 +1,190 @@
+<div class="global-stats-wrapper">
+  <div class="container">
+    <!-- Header -->
+    <div class="stats-header">
+      <h2 class="section-title">📊 Estatísticas Global Nominees 2025</h2>
+      <p class="section-description">
+        Uberlândia entre as melhores cidades do mundo no NASA Space Apps Challenge
+      </p>
+    </div>
+
+    <!-- Destaques Principais -->
+    <div class="highlights-grid">
+      <div class="highlight-card uberlandia-highlight">
+        <div class="highlight-icon">🏆</div>
+        <div class="highlight-content">
+          <h3 class="highlight-title">Uberlândia</h3>
+          <p class="highlight-value">{{ uberlandiaStats.worldPosition }}º Lugar Mundial</p>
+          <p class="highlight-subtitle">{{ uberlandiaStats.nominations }} indicações Global Nominees</p>
+        </div>
+      </div>
+
+      <div class="highlight-card brazil-highlight">
+        <div class="highlight-icon">🇧🇷</div>
+        <div class="highlight-content">
+          <h3 class="highlight-title">Brasil</h3>
+          <p class="highlight-value">{{ brazilStats.worldPosition }}º Lugar Mundial</p>
+          <p class="highlight-subtitle">{{ brazilStats.totalNominations }} indicações • {{ brazilStats.totalCities }} cidades</p>
+        </div>
+      </div>
+
+      <div class="highlight-card world-highlight">
+        <div class="highlight-icon">🌍</div>
+        <div class="highlight-content">
+          <h3 class="highlight-title">Mundo</h3>
+          <p class="highlight-value">{{ globalStats.totalTeams | number }} Times</p>
+          <p class="highlight-subtitle">{{ globalStats.totalCities }} cidades • {{ globalStats.totalCountries }} países</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Tabs de Rankings -->
+    <div class="rankings-section">
+      <div class="tabs-container">
+        <input type="radio" id="tab-world" name="ranking-tabs" checked>
+        <input type="radio" id="tab-brazil" name="ranking-tabs">
+        <input type="radio" id="tab-countries" name="ranking-tabs">
+
+        <div class="tabs-header">
+          <label for="tab-world" class="tab-label">
+            <span class="tab-icon">🌍</span>
+            Top 10 Mundial
+          </label>
+          <label for="tab-brazil" class="tab-label">
+            <span class="tab-icon">🇧🇷</span>
+            Top 10 Brasil
+          </label>
+          <label for="tab-countries" class="tab-label">
+            <span class="tab-icon">🏴</span>
+            Top 5 Países
+          </label>
+        </div>
+
+        <!-- Tab Content: World Ranking -->
+        <div class="tab-content world-content">
+          <div class="ranking-header">
+            <h3>🏆 Top 10 Cidades do Mundo</h3>
+            <p>Ranking mundial de cidades com mais indicações Global Nominees</p>
+          </div>
+          <div class="ranking-table">
+            <div class="table-header">
+              <div class="col-pos">Pos</div>
+              <div class="col-city">Cidade</div>
+              <div class="col-country">País</div>
+              <div class="col-nominations">Indicações</div>
+            </div>
+            <div class="table-body">
+              <div class="table-row"
+                   *ngFor="let city of topWorldCities"
+                   [class.uberlandia-row]="city.isUberlandia">
+                <div class="col-pos">
+                  <span class="medal">{{ getMedalEmoji(city.position) }}</span>
+                  <span class="position">{{ city.position }}º</span>
+                </div>
+                <div class="col-city">
+                  <strong *ngIf="city.isUberlandia">{{ city.city }}</strong>
+                  <span *ngIf="!city.isUberlandia">{{ city.city }}</span>
+                  <span class="city-badge" *ngIf="city.isUberlandia">⭐</span>
+                </div>
+                <div class="col-country">{{ city.country }}</div>
+                <div class="col-nominations">
+                  <span class="nominations-badge">{{ city.nominations }}</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="ranking-footer">
+            <p><strong>🎯 Destaque:</strong> Uberlândia é a única cidade brasileira no Top 10 mundial!</p>
+          </div>
+        </div>
+
+        <!-- Tab Content: Brazil Ranking -->
+        <div class="tab-content brazil-content">
+          <div class="ranking-header">
+            <h3>🇧🇷 Top 10 Cidades do Brasil</h3>
+            <p>Ranking nacional de cidades com mais indicações Global Nominees</p>
+          </div>
+          <div class="ranking-table">
+            <div class="table-header">
+              <div class="col-pos">Pos</div>
+              <div class="col-city">Cidade</div>
+              <div class="col-nominations">Indicações</div>
+              <div class="col-percentage">% do Total</div>
+            </div>
+            <div class="table-body">
+              <div class="table-row"
+                   *ngFor="let city of topBrazilCities"
+                   [class.uberlandia-row]="city.isUberlandia">
+                <div class="col-pos">
+                  <span class="medal">{{ getMedalEmoji(city.position) }}</span>
+                  <span class="position">{{ city.position }}º</span>
+                </div>
+                <div class="col-city">
+                  <strong *ngIf="city.isUberlandia">{{ city.city }}</strong>
+                  <span *ngIf="!city.isUberlandia">{{ city.city }}</span>
+                  <span class="city-badge" *ngIf="city.isUberlandia">👑</span>
+                </div>
+                <div class="col-nominations">
+                  <span class="nominations-badge">{{ city.nominations }}</span>
+                </div>
+                <div class="col-percentage">
+                  {{ (city.nominations / brazilStats.totalNominations * 100).toFixed(1) }}%
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="ranking-footer">
+            <p><strong>🏆 Campeã:</strong> Uberlândia lidera com {{ uberlandiaStats.percentageOfBrazil }}% do total brasileiro!</p>
+          </div>
+        </div>
+
+        <!-- Tab Content: Countries Ranking -->
+        <div class="tab-content countries-content">
+          <div class="ranking-header">
+            <h3>🌎 Top 5 Países do Mundo</h3>
+            <p>Países com mais indicações Global Nominees</p>
+          </div>
+          <div class="ranking-table">
+            <div class="table-header">
+              <div class="col-pos">Pos</div>
+              <div class="col-country-full">País</div>
+              <div class="col-nominations">Indicações</div>
+              <div class="col-percentage">% do Total</div>
+            </div>
+            <div class="table-body">
+              <div class="table-row"
+                   *ngFor="let country of topCountries"
+                   [class.brazil-row]="country.isBrazil">
+                <div class="col-pos">
+                  <span class="medal">{{ getMedalEmoji(country.position) }}</span>
+                  <span class="position">{{ country.position }}º</span>
+                </div>
+                <div class="col-country-full">
+                  <span class="flag">{{ country.flag }}</span>
+                  <strong *ngIf="country.isBrazil">{{ country.country }}</strong>
+                  <span *ngIf="!country.isBrazil">{{ country.country }}</span>
+                </div>
+                <div class="col-nominations">
+                  <span class="nominations-badge">{{ country.nominations }}</span>
+                </div>
+                <div class="col-percentage">
+                  {{ (country.nominations / globalStats.totalTeams * 100).toFixed(1) }}%
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="ranking-footer">
+            <p><strong>🥉 Pódio:</strong> Brasil conquista o 3º lugar mundial com {{ brazilStats.totalNominations }} indicações!</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Info Footer -->
+    <div class="stats-footer">
+      <p class="footer-note">
+        📅 Dados extraídos da API oficial do NASA Space Apps Challenge em 14/11/2025
+      </p>
+    </div>
+  </div>
+</div>

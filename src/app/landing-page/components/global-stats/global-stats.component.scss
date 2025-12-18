@@ -1,0 +1,398 @@
+.global-stats-wrapper {
+  background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+  padding: 80px 0;
+  color: #fff;
+  position: relative;
+  overflow: hidden;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image:
+      radial-gradient(2px 2px at 20% 30%, white, transparent),
+      radial-gradient(2px 2px at 60% 70%, white, transparent),
+      radial-gradient(1px 1px at 50% 50%, white, transparent),
+      radial-gradient(1px 1px at 80% 10%, white, transparent),
+      radial-gradient(2px 2px at 90% 60%, white, transparent);
+    background-size: 200% 200%;
+    animation: stars 100s linear infinite;
+    opacity: 0.3;
+  }
+
+  @keyframes stars {
+    from { transform: translateY(0); }
+    to { transform: translateY(-100%); }
+  }
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  position: relative;
+  z-index: 1;
+}
+
+// Header
+.stats-header {
+  text-align: center;
+  margin-bottom: 60px;
+
+  .section-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 16px;
+    background: linear-gradient(135deg, #4ecdc4, #45b7d1, #5865F2);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .section-description {
+    font-size: 1.1rem;
+    color: rgba(255, 255, 255, 0.8);
+    max-width: 600px;
+    margin: 0 auto;
+  }
+}
+
+// Highlights Grid
+.highlights-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 24px;
+  margin-bottom: 60px;
+}
+
+.highlight-card {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border-radius: 16px;
+  padding: 32px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+
+  &:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(78, 205, 196, 0.3);
+    border-color: rgba(78, 205, 196, 0.5);
+  }
+
+  .highlight-icon {
+    font-size: 3rem;
+    flex-shrink: 0;
+  }
+
+  .highlight-content {
+    flex: 1;
+  }
+
+  .highlight-title {
+    font-size: 1rem;
+    color: rgba(255, 255, 255, 0.7);
+    margin-bottom: 8px;
+    font-weight: 500;
+  }
+
+  .highlight-value {
+    font-size: 1.8rem;
+    font-weight: 700;
+    margin-bottom: 4px;
+    background: linear-gradient(135deg, #4ecdc4, #45b7d1);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .highlight-subtitle {
+    font-size: 0.9rem;
+    color: rgba(255, 255, 255, 0.6);
+  }
+}
+
+.uberlandia-highlight {
+  border-color: rgba(255, 215, 0, 0.3);
+  background: linear-gradient(135deg, rgba(255, 215, 0, 0.1), rgba(255, 215, 0, 0.05));
+
+  &:hover {
+    border-color: rgba(255, 215, 0, 0.6);
+    box-shadow: 0 10px 30px rgba(255, 215, 0, 0.3);
+  }
+}
+
+// Rankings Section
+.rankings-section {
+  margin-bottom: 40px;
+}
+
+.tabs-container {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 20px;
+  padding: 24px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+
+  input[type="radio"] {
+    display: none;
+  }
+}
+
+.tabs-header {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 32px;
+  border-bottom: 2px solid rgba(255, 255, 255, 0.1);
+  padding-bottom: 16px;
+}
+
+.tab-label {
+  flex: 1;
+  padding: 12px 20px;
+  text-align: center;
+  cursor: pointer;
+  border-radius: 8px 8px 0 0;
+  transition: all 0.3s ease;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid transparent;
+  color: rgba(255, 255, 255, 0.6);
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+
+  .tab-icon {
+    font-size: 1.2rem;
+  }
+
+  &:hover {
+    background: rgba(255, 255, 255, 0.1);
+    color: rgba(255, 255, 255, 0.9);
+  }
+}
+
+#tab-world:checked ~ .tabs-header label[for="tab-world"],
+#tab-brazil:checked ~ .tabs-header label[for="tab-brazil"],
+#tab-countries:checked ~ .tabs-header label[for="tab-countries"] {
+  background: linear-gradient(135deg, rgba(78, 205, 196, 0.2), rgba(69, 183, 209, 0.2));
+  border-color: rgba(78, 205, 196, 0.5);
+  color: #fff;
+}
+
+.tab-content {
+  display: none;
+}
+
+#tab-world:checked ~ .world-content,
+#tab-brazil:checked ~ .brazil-content,
+#tab-countries:checked ~ .countries-content {
+  display: block;
+}
+
+// Ranking Header
+.ranking-header {
+  text-align: center;
+  margin-bottom: 32px;
+
+  h3 {
+    font-size: 1.8rem;
+    margin-bottom: 8px;
+    color: #fff;
+  }
+
+  p {
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 0.95rem;
+  }
+}
+
+// Ranking Table
+.ranking-table {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 12px;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.table-header {
+  display: grid;
+  grid-template-columns: 80px 1fr 200px 120px;
+  padding: 16px 20px;
+  background: rgba(255, 255, 255, 0.1);
+  font-weight: 600;
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.9);
+  border-bottom: 2px solid rgba(78, 205, 196, 0.3);
+}
+
+.table-body {
+  .table-row {
+    display: grid;
+    grid-template-columns: 80px 1fr 200px 120px;
+    padding: 16px 20px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    transition: all 0.2s ease;
+    align-items: center;
+
+    &:hover {
+      background: rgba(255, 255, 255, 0.05);
+    }
+
+    &:last-child {
+      border-bottom: none;
+    }
+
+    &.uberlandia-row {
+      background: linear-gradient(90deg, rgba(255, 215, 0, 0.1), rgba(255, 215, 0, 0.05), transparent);
+      border-left: 3px solid rgba(255, 215, 0, 0.6);
+
+      &:hover {
+        background: linear-gradient(90deg, rgba(255, 215, 0, 0.15), rgba(255, 215, 0, 0.08), transparent);
+      }
+    }
+
+    &.brazil-row {
+      background: linear-gradient(90deg, rgba(0, 255, 0, 0.1), rgba(0, 255, 0, 0.05), transparent);
+      border-left: 3px solid rgba(0, 255, 0, 0.6);
+
+      &:hover {
+        background: linear-gradient(90deg, rgba(0, 255, 0, 0.15), rgba(0, 255, 0, 0.08), transparent);
+      }
+    }
+  }
+}
+
+// Brazil ranking - different grid
+.brazil-content .table-header,
+.brazil-content .table-row {
+  grid-template-columns: 80px 1fr 120px 120px;
+}
+
+// Countries ranking - different grid
+.countries-content .table-header,
+.countries-content .table-row {
+  grid-template-columns: 80px 1fr 140px 120px;
+}
+
+// Columns
+.col-pos {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  .medal {
+    font-size: 1.5rem;
+  }
+
+  .position {
+    font-weight: 600;
+    color: rgba(255, 255, 255, 0.7);
+  }
+}
+
+.col-city, .col-country-full {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: rgba(255, 255, 255, 0.9);
+
+  .city-badge {
+    font-size: 1.2rem;
+  }
+
+  .flag {
+    font-size: 1.3rem;
+  }
+}
+
+.col-country {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 0.9rem;
+}
+
+.col-nominations {
+  text-align: center;
+
+  .nominations-badge {
+    background: linear-gradient(135deg, rgba(78, 205, 196, 0.3), rgba(69, 183, 209, 0.3));
+    border: 1px solid rgba(78, 205, 196, 0.5);
+    padding: 6px 16px;
+    border-radius: 20px;
+    font-weight: 600;
+    display: inline-block;
+    color: #4ecdc4;
+  }
+}
+
+.col-percentage {
+  text-align: center;
+  color: rgba(255, 255, 255, 0.8);
+  font-weight: 600;
+}
+
+// Ranking Footer
+.ranking-footer {
+  margin-top: 24px;
+  padding: 16px;
+  background: rgba(78, 205, 196, 0.1);
+  border-radius: 8px;
+  border-left: 4px solid rgba(78, 205, 196, 0.5);
+
+  p {
+    margin: 0;
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 0.95rem;
+
+    strong {
+      color: #4ecdc4;
+    }
+  }
+}
+
+// Stats Footer
+.stats-footer {
+  text-align: center;
+  margin-top: 40px;
+  padding-top: 24px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+
+  .footer-note {
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 0.9rem;
+  }
+}
+
+// Responsive
+@media (max-width: 768px) {
+  .stats-header .section-title {
+    font-size: 2rem;
+  }
+
+  .highlights-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .tabs-header {
+    flex-direction: column;
+  }
+
+  .table-header, .table-row {
+    grid-template-columns: 60px 1fr 100px !important;
+    font-size: 0.85rem;
+    padding: 12px 16px;
+  }
+
+  .col-country, .col-percentage {
+    display: none !important;
+  }
+
+  .col-city {
+    font-size: 0.9rem;
+  }
+}

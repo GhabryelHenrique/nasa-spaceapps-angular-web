@@ -104,7 +104,6 @@ export class ChallengeChartComponent implements OnInit, OnChanges {
   }
 
   ngOnChanges(changes: SimpleChanges): void {
-    console.log(this.teams)
     if (changes['teams']) {
       this.processTeamData();
     }

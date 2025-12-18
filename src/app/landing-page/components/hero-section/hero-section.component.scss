@@ -21,6 +21,34 @@
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
       line-height: 1.2;
+
+      .year-easter-egg {
+        position: relative;
+        display: inline-block;
+        transition: opacity 0.6s ease;
+
+        &::after {
+          content: '2026?';
+          position: absolute;
+          left: 0;
+          top: 0;
+          width: 100%;
+          opacity: 0;
+          background: var(--gradient-nasa-primary);
+          background-clip: text;
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+          transition: opacity 0.6s ease;
+        }
+
+        &:hover::after {
+          opacity: 1;
+        }
+
+        &:hover {
+          opacity: 0;
+        }
+      }
     }
 
     .hero-subtitle {

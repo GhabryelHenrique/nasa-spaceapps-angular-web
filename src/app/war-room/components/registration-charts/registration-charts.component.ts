@@ -151,7 +151,6 @@ getMotivationStats() {
   this.motivationStats = this.registrationStats.motivationStats
     .slice(0, 5);
 
-  console.log('Top 5 motivações:', this.motivationStats);
 }
 
 
@@ -399,7 +398,7 @@ getMotivationStats() {
           data: this.registrationStats.genderStats.map(g => g.count),
           backgroundColor: [
             '#4ecdc4',  // Masculino
-            '#ff6b9d',  // Feminino  
+            '#ff6b9d',  // Feminino
             '#a8e6cf',  // Não-binário
             '#ffb347',  // Outro
             '#c7a8ff'   // Prefiro não informar
@@ -414,8 +413,8 @@ getMotivationStats() {
         plugins: {
           legend: {
             position: 'bottom',
-            labels: { 
-              color: '#ffffff', 
+            labels: {
+              color: '#ffffff',
               padding: 20,
               usePointStyle: true,
               pointStyle: 'circle'

@@ -672,7 +672,6 @@ export class RegistrationDataService {
     try {
       // Verifica assinaturas conhecidas
       const signature = Array.from(data.slice(0, 8)).map(byte => byte.toString(16).padStart(2, '0')).join('').toLowerCase();
-      console.log('Assinatura do arquivo (primeiros 8 bytes):', signature);
 
       // XLSX/DOCX (ZIP-based) - PK
       if (data[0] === 0x50 && data[1] === 0x4B) {
@@ -726,15 +725,11 @@ export class RegistrationDataService {
     try {
       // Pega o range da planilha
       const range = XLSX.utils.decode_range(worksheet['!ref'] || 'A1:A1');
-      console.log('Range da planilha:', worksheet['!ref']);
-      console.log('Primeira célula:', range.s);
-      console.log('Última célula:', range.e);
 
       // Mostra algumas células específicas para debug
       const sampleCells = ['A1', 'B1', 'C1', 'A2', 'B2', 'C2'];
       sampleCells.forEach(cell => {
         if (worksheet[cell]) {
-          console.log(`Célula ${cell}:`, worksheet[cell]);
         }
       });
     } catch (diagError) {
@@ -751,7 +746,6 @@ export class RegistrationDataService {
 
     // Pega a primeira aba do Excel
     const sheetName = workbook.SheetNames[0];
-    console.log('Usando aba:', sheetName);
 
     const worksheet = workbook.Sheets[sheetName];
     if (!worksheet) {
@@ -759,7 +753,6 @@ export class RegistrationDataService {
     }
 
     // Diagnóstico da estrutura da planilha
-    console.log('Executando diagnóstico da planilha...');
     this.diagnoseExcelStructure(worksheet);
 
     // Converte para JSON com headers automáticos
@@ -781,7 +774,6 @@ export class RegistrationDataService {
 
   // Método para processar tabela HTML
   private processHTMLTable(htmlContent: string): RegistrationData[] {
-    console.log('Processando tabela HTML...');
 
     // Extrai dados da tabela HTML usando regex ou parsing básico
     const tableRegex = /<table[^>]*>(.*?)<\/table>/is;
@@ -826,14 +818,11 @@ export class RegistrationDataService {
       return cells;
     });
 
-    console.log('Dados extraídos da tabela HTML:', jsonData.slice(0, 3));
     return this.processJSONData(jsonData);
   }
 
   // Método para processar dados JSON (comum para Excel e HTML)
   private processJSONData(jsonData: any[][]): RegistrationData[] {
-    console.log('Total de linhas encontradas:', jsonData.length);
-    console.log('Primeiras 3 linhas:', jsonData.slice(0, 3));
 
     if (jsonData.length === 0) {
       throw new Error('Os dados estão vazios. Verifique se há dados na planilha.');
@@ -845,14 +834,11 @@ export class RegistrationDataService {
 
     // A primeira linha contém os cabeçalhos
     const headers = jsonData[0];
-    console.log('Cabeçalhos encontrados:', headers);
 
     // Remove linhas vazias e processa os dados
     const rows = jsonData.slice(1).filter(row =>
       row && row.some(cell => cell !== null && cell !== undefined && cell !== '')
     );
-    console.log(rows, 'linhas de dados processadas');
-    console.log(`Processando ${rows.length} linhas de dados`);
 
     this.registrationData = rows.map((row, index) => {
       try {
@@ -870,11 +856,6 @@ export class RegistrationDataService {
           expectations: this.parseValue(row[9]) || '',
           gender: this.parseValue(row[10]) || ''
         };
-
-        // Log detalhado para debug
-        if (index < 3) {
-          console.log(`Linha ${index + 2} processada:`, record);
-        }
 
         return record;
       } catch (rowError) {
@@ -900,7 +881,6 @@ export class RegistrationDataService {
       record.name || record.email || record.city
     );
 
-    console.log(`Dados processados com sucesso: ${this.registrationData.length} registros válidos`);
     return this.registrationData;
   }
 
@@ -926,7 +906,6 @@ export class RegistrationDataService {
       }
 
       if (consistentLines >= 3) {
-        console.log(`CSV detectado com separador '${sep}', ${firstLineCount} colunas`);
         return true;
       }
     }
@@ -936,7 +915,6 @@ export class RegistrationDataService {
 
   // Processa conteúdo CSV
   private processCSVContent(csvContent: string): RegistrationData[] {
-    console.log('Processando arquivo como CSV...');
 
     // Detecta o separador
     const separators = [',', ';', '\t'];
@@ -952,7 +930,6 @@ export class RegistrationDataService {
       }
     }
 
-    console.log(`Usando separador: '${separator}'`);
 
     // Converte CSV para array de arrays
     const lines = csvContent.split('\n')
@@ -964,13 +941,11 @@ export class RegistrationDataService {
       return line.split(separator).map(cell => cell.trim().replace(/^"|"$/g, ''));
     });
 
-    console.log('Dados CSV processados:', csvData.slice(0, 3));
     return this.processJSONData(csvData);
   }
 
   // Processa dados como texto bruto (última tentativa)
   private processRawTextData(content: string): RegistrationData[] {
-    console.log('Analisando texto bruto para encontrar padrões de dados...');
 
     // Remove tags HTML se houver
     let cleanContent = content.replace(/<[^>]+>/g, '');
@@ -988,9 +963,6 @@ export class RegistrationDataService {
     const lines = cleanContent.split(/\r?\n/)
       .map(line => line.trim())
       .filter(line => line.length > 0);
-
-    console.log(`${lines.length} linhas encontradas no texto`);
-    console.log('Primeiras 10 linhas:', lines.slice(0, 10));
 
     if (lines.length < 2) {
       throw new Error('Não foi possível encontrar dados estruturados no arquivo.');
@@ -1016,7 +988,6 @@ export class RegistrationDataService {
           );
 
           if (consistentRows.length >= Math.min(3, testData.length)) {
-            console.log(`Padrão encontrado com separador '${sep}': ${firstRowLength} colunas, ${consistentRows.length} linhas consistentes`);
             return this.processJSONData(consistentRows);
           }
         }

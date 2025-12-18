@@ -88,7 +88,6 @@ export class WarRoomComponent implements OnInit, OnDestroy {
       .subscribe(teams => {
         this.teams = teams;
         this.lastTeamsUpdate = new Date();
-        console.log(`🚀 Times NASA atualizados: ${teams.length} teams`);
       });
 
     // Subscribe to local events data
@@ -98,7 +97,6 @@ export class WarRoomComponent implements OnInit, OnDestroy {
         this.localEventsLive = events;
         // Atualiza os dados das cidades com dados em tempo real se disponível
         this.updateCitiesWithLiveData();
-        console.log(`🌍 Eventos locais atualizados: ${events.length} eventos`);
       });
 
     // Subscribe to loading state
@@ -159,15 +157,12 @@ export class WarRoomComponent implements OnInit, OnDestroy {
   }
 
   private loadGoogleSheetsData() {
-    console.log('=== WAR ROOM COMPONENT DEBUG ===');
-    console.log('Carregando dados diretamente do Google Sheets');
 
     this.isLoadingFile = true;
 
     this.googleSheetsService.getRegistrationDataFromGoogleSheets().subscribe({
       next: (data: RegistrationRow[]) => {
-        console.log('Dados brutos recebidos do Google Sheets:', data.length, 'registros');
-        console.log('Primeira linha de dados (anonimizada):', data[0]);
+
 
         try {
           // Transforma os dados do Google Sheets no formato esperado pelo service
@@ -185,16 +180,12 @@ export class WarRoomComponent implements OnInit, OnDestroy {
             gender: row.gender || '', // Dados de gênero para análise
           }));
 
-          console.log('Dados transformados:', registrationData.length, 'registros');
-          console.log('Primeiro registro transformado:', registrationData[0]);
 
           // Atualiza o service com os dados do Google Sheets
           this.registrationDataService.setRegistrationData(registrationData);
           this.registrationStats = this.registrationDataService.getRegistrationStats();
 
-          console.log('Stats calculadas:', this.registrationStats);
-          console.log(`Dados do Google Sheets carregados com sucesso: ${this.registrationStats?.totalRegistrations} registros`);
-          console.log('=== END WAR ROOM DEBUG ===');
+
         } catch (error) {
           console.error('Erro ao processar dados do Google Sheets:', error);
         } finally {
@@ -203,13 +194,10 @@ export class WarRoomComponent implements OnInit, OnDestroy {
       },
       error: (error) => {
         console.error('Erro ao carregar dados do Google Sheets:', error);
-        console.log('Detalhes do erro:', error);
-        console.log('Tentando carregar dados do arquivo local como fallback...');
 
         // Fallback para arquivo local em caso de erro
         this.googleSheetsService.getRegistrationDataFromLocal().subscribe({
           next: (data: RegistrationRow[]) => {
-            console.log('Dados do fallback local carregados:', data.length, 'registros');
             const registrationData = data.map((row: RegistrationRow) => ({
               timestamp: this.convertTimestampToDate(row.timestamp),
               name: row.name || '',
@@ -404,17 +392,14 @@ export class WarRoomComponent implements OnInit, OnDestroy {
 
   // Métodos para refresh manual dos dados NASA
   refreshNasaTeams() {
-    console.log('🔄 Refresh manual dos times NASA...');
     this.nasaTeamsService.refreshTeams();
   }
 
   refreshLocalEvents() {
-    console.log('🔄 Refresh manual dos eventos locais...');
     this.nasaTeamsService.refreshLocalEvents();
   }
 
   refreshAllNasaData() {
-    console.log('🔄 Refresh manual de todos os dados NASA...');
     this.nasaTeamsService.refreshAll();
   }
 
@@ -461,7 +446,6 @@ export class WarRoomComponent implements OnInit, OnDestroy {
       next: (response) => {
         if (response.data && response.data[0] && response.data[0].teams) {
           this.teamsForChart = response.data[0].teams.edges.map(edge => edge.node);
-          console.log(`📊 Teams carregados para gráfico de desafios: ${this.teamsForChart.length} times`);
         }
       },
       error: (error) => {
@@ -475,8 +459,7 @@ export class WarRoomComponent implements OnInit, OnDestroy {
     this.otherCitiesTeamsService.getTeamStatsByCity().subscribe({
       next: (stats) => {
         this.cityTeamsStats = stats;
-        console.log(`🌍 Estatísticas de times por cidade carregadas: ${stats.length} cidades`);
-        console.log('Estatísticas:', stats);
+
       },
       error: (error) => {
         console.error('Erro ao carregar estatísticas de times por cidade:', error);
@@ -503,12 +486,10 @@ export class WarRoomComponent implements OnInit, OnDestroy {
 
   // Feedback data methods
   private loadFeedbackData() {
-    console.log('=== LOADING FEEDBACK DATA ===');
     this.isLoadingFeedback = true;
 
     this.googleSheetsService.getFeedbackDataFromGoogleSheets().subscribe({
       next: (data: FeedbackRow[]) => {
-        console.log('Dados de feedback recebidos:', data.length, 'respostas');
         this.feedbackData = data;
         this.calculateFeedbackStats();
         this.isLoadingFeedback = false;
@@ -578,7 +559,6 @@ export class WarRoomComponent implements OnInit, OnDestroy {
       improvementSuggestionsCount: this.feedbackData.filter(f => f.improvementSuggestions && f.improvementSuggestions.trim() !== '').length
     };
 
-    console.log('Estatísticas de feedback calculadas:', this.feedbackStats);
   }
 
   private calculateAverageRating(ratings: string[]): number {

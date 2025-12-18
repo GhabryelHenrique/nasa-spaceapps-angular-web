@@ -5,9 +5,59 @@
     <app-hero-section></app-hero-section>
   </section>
 
+  <!-- Winners Highlight Section -->
+  <section class="winners-highlight-wrapper">
+    <div class="container">
+      <div class="winners-highlight-content">
+        <h2 class="section-title">🎖️ Destaques Globais de Uberlândia</h2>
+        <p class="section-description">
+          Celebramos com orgulho os times de Uberlândia que alcançaram reconhecimento internacional no NASA Space Apps Challenge 2025
+        </p>
+
+        <div class="winners-grid">
+          <!-- Titan - Global Finalist (Destaque Principal) -->
+          <div class="winner-card global-finalist" *ngFor="let winner of highlightedWinners" [class.top-winner]="winner.isTopWinner">
+            <div class="winner-badge" [style.color]="winner.color">{{ winner.badge }}</div>
+            <div class="winner-header">
+              <div class="winner-image-main">
+                <img [src]="winner.imagePath"
+                     [alt]="winner.team"
+                     loading="lazy"
+                     onerror="this.src='assets/organizers/placeholder.svg'">
+              </div>
+              <div class="winner-info-main">
+                <h3 class="winner-name" [style.color]="winner.color">{{ winner.team }}</h3>
+                <p class="winner-achievement" [style.border-color]="winner.color">{{ winner.achievement }}</p>
+                <p class="winner-description">{{ winner.description }}</p>
+              </div>
+            </div>
+
+            <div class="winner-members" *ngIf="winner.members && winner.members.length > 0">
+              <h4 class="members-title">Time</h4>
+              <div class="members-grid">
+                <a class="member-item"
+                   *ngFor="let member of winner.members"
+                   [href]="member.url"
+                   target="_blank"
+                   rel="noopener noreferrer"
+                   [title]="'Ver perfil de ' + member.name">
+                  <img [src]="member.photo"
+                       [alt]="member.name"
+                       loading="lazy"
+                       onerror="this.src='assets/organizers/placeholder.svg'">
+                  <span>{{ member.name }}</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- Global Nominees 2025 Section -->
   <section class="global-nominees-wrapper">
-    <div class="container">
+    <div class="">
       <div class="global-nominees-content">
         <h2 class="section-title">🏆 Global Nominees 2025</h2>
         <p class="section-description">
@@ -65,7 +115,7 @@
   </section>
 
   <!-- Awards Timeline Section -->
-  <section class="awards-timeline-wrapper">
+  <!-- <section class="awards-timeline-wrapper">
     <div class="container">
       <div class="awards-timeline-content">
         <h2 class="awards-title">Cronograma de Premiações</h2>
@@ -97,7 +147,7 @@
         </div>
       </div>
     </div>
-  </section>
+  </section> -->
 
   <!-- Uberlandia Highlights Component -->
   <app-uberlandia-highlights></app-uberlandia-highlights>

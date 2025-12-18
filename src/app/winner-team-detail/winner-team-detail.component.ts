@@ -31,7 +31,6 @@ export class WinnerTeamDetailComponent implements OnInit {
       this.loadTeam(slug);
     });
 
-    console.log(this.team!.presentation.nasaData)
   }
 
   loadTeam(slug: string): void {

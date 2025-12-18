@@ -123,7 +123,6 @@ export class NasaTeamsService {
       tap(teams => {
         this.teamsSubject.next(teams);
         this.loadingSubject.next(false);
-        console.log(`✅ Times carregados do arquivo local: ${teams.length} teams`);
       }),
       catchError(error => {
         console.error('❌ Erro ao carregar times do arquivo local:', error);
@@ -161,7 +160,6 @@ export class NasaTeamsService {
       }),
       tap(events => {
         this.localEventsSubject.next(events);
-        console.log(`✅ Eventos locais carregados do arquivo local: ${events.length} eventos`);
       }),
       catchError(error => {
         console.error('❌ Erro ao carregar eventos locais do arquivo:', error);

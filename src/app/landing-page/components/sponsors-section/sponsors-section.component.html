@@ -42,6 +42,8 @@
         <article
           class="sponsor-card gold-card"
           *ngFor="let sponsor of sponsors.gold"
+                      (mouseenter)="startHover(sponsor.name)"
+            (mouseleave)="stopHover()"
         >
           <a
             [href]="sponsor.url"
@@ -62,6 +64,15 @@
             />
             <span class="sponsor-name">{{ sponsor.name }}</span>
           </a>
+          <!-- Botão secreto -->
+          <button
+            *ngIf="showEasterEgg && sponsor.name.toLowerCase() === 'redbull'"
+            (click)="playMusic()"
+            class="easter-egg-btn"
+            [class.party-active]="isPartyMode"
+          >
+            {{ isPartyMode ? "🏎️ PARAR FESTA!" : "⚡ SUPER MAX!" }}
+          </button>
         </article>
       </div>
     </div>
@@ -72,8 +83,6 @@
         <article
           class="sponsor-card silver-card"
           *ngFor="let sponsor of sponsors.silver"
-          (mouseenter)="startHover(sponsor.name)"
-          (mouseleave)="stopHover()"
         >
           <a
             [href]="sponsor.url"
@@ -94,16 +103,6 @@
             />
             <span class="sponsor-name">{{ sponsor.name }}</span>
           </a>
-
-          <!-- Botão secreto -->
-          <button
-            *ngIf="showEasterEgg && sponsor.name.toLowerCase() === 'redbull'"
-            (click)="playMusic()"
-            class="easter-egg-btn"
-            [class.party-active]="isPartyMode"
-          >
-            {{ isPartyMode ? '🏎️ PARAR FESTA!' : '⚡ SUPER MAX!' }}
-          </button>
         </article>
       </div>
     </div>

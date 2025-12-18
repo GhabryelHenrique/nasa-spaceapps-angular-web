@@ -4,10 +4,10 @@
       <img class="nasa-logo" src="assets/nasa-spaceapps-logo-removebg-preview.png" alt="Logo do NASA Space Apps Challenge - Hackathon espacial internacional" loading="lazy">
     </a>
     <div class="nav-actions">
-      <!-- <button class="social-btn whatsapp-btn" (click)="openWhatsApp()">
+      <button class="social-btn whatsapp-btn" (click)="openWhatsApp()">
         <i class="fa-brands fa-whatsapp"></i>
         <span>WhatsApp</span>
-      </button> -->
+      </button>
       <button class="social-btn discord-btn" (click)="joinDiscordServer()">
         <i class="fa-brands fa-discord"></i>
         <span>Discord</span>
@@ -37,7 +37,7 @@
   </nav>
 </header>
 
-<app-email-verification-modal
+<!-- <app-email-verification-modal
   [isOpen]="showEmailModal"
   (close)="showEmailModal = false"
   (emailVerified)="onEmailVerified($event)">
@@ -48,4 +48,4 @@
   [email]="userEmail"
   (close)="showCodeModal = false"
   (codeVerified)="onCodeVerified()">
-</app-code-verification-modal>
+</app-code-verification-modal> -->

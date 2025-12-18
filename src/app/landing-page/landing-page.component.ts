@@ -44,14 +44,54 @@ export class LandingPageComponent implements OnInit {
   // Times vencedores com dados completos da API
   globalNomineesTeams: Team[] = [];
 
+  // Times Vencedores Destacados
+  highlightedWinners = [
+    {
+      team: 'Titan',
+      achievement: 'Global Finalist',
+      badge: '🏆',
+      color: '#FFD700', // Gold
+      description: 'Classificado entre os 45 melhores projetos do mundo no NASA Space Apps Challenge 2025',
+      imagePath: 'assets/winners/titan/image.png',
+      members: [
+        { name: 'Alan Gabriel', photo: 'assets/winners/titan/alan.jpg', url: 'https://www.linkedin.com/in/alangalonso/' },
+        { name: 'Camilo Barreto', photo: 'assets/winners/titan/camilo.png', url: 'https://pixr.studio/' },
+        { name: 'João Paulo',   photo: 'assets/winners/titan/joao.png', url: 'https://www.instagram.com/titan.nasa' },
+        { name: 'Luiz Fellipe', photo: 'assets/winners/titan/luiz-Fellipe.jpg', url: 'https://www.linkedin.com/in/luiz-fellipe-nun24b0752ba/' },
+        { name: 'Raul Fernandes', photo: 'assets/winners/titan/Raul2.jpg', url: 'https://www.linkedin.com/in/raul-fernandes-138a631a7' },
+        { name: 'Samuel Santos', photo: 'assets/winners/titan/samuel-photo.jpg', url: 'https://www.linkedin.com/in/samuel-santos' },
+      ],
+      challengeUrl: '#',
+      isTopWinner: true
+    },
+    {
+      team: 'Finstream',
+      achievement: 'Honorable Mention',
+      badge: '🌟',
+      color: '#4ECDC4', // Cyan
+      description: 'Reconhecido com Menção Honrosa entre milhares de projetos globais no NASA Space Apps Challenge 2025',
+      imagePath: 'assets/winners/finstream/time.jpeg',
+      members: [
+        { name: 'Leandro Marques', photo: 'assets/winners/finstream/leandro.jpg', url: 'https://www.instagram.com/leandro_marques_g/' },
+        { name: 'Lucas Panonko', photo: 'assets/winners/finstream/lucas.jpg', url: 'https://www.instagram.com/luksbell/' },
+        { name: 'Lucas Lara', photo: 'assets/winners/finstream/LucasLara.jpg', url: 'https://www.instagram.com/lucas.lc_?igsh=eXE4eHA3eWY3am5y' },
+        { name: 'Mauricio Cesar', photo: 'assets/winners/finstream/MauricioAndreata.jpg', url: 'https://www.instagram.com/lucas.lc_?igsh=eXE4eHA3eWY3am5y' },
+        { name: 'João Vitor', photo: 'assets/winners/finstream/gabriel.jpg', url: 'https://www.instagram.com/lucas.lc_?igsh=eXE4eHA3eWY3am5y' },
+
+      ],
+      challengeUrl: '#',
+      isTopWinner: false
+    }
+  ];
+
   // Prêmios Especiais
   specialAwards = [
     {
       category: 'Melhor nome do ano',
       winner: 'Trem de IA',
       icon: '🚂',
-      imagePath: 'assets/awards/melhor-nome-do-ano-trem-de-ia.jpg',
-      url: '#',
+      imagePath: 'assets/images/melhor-nome-do-ano-trem-de-ia.png',
+      url: 'https://www.spaceappschallenge.org/2025/find-a-team/trem-de-ia/',
       description: 'Pelo nome mais criativo e divertido do evento'
     },
     {
@@ -105,7 +145,6 @@ export class LandingPageComponent implements OnInit {
 
           this.totalMembers = memberCount;
 
-          console.log(allTeams);
           // Filtrar os times vencedores (Global Nominees)
           this.globalNomineesTeams = allTeams.filter(
             (team) =>
@@ -133,7 +172,6 @@ export class LandingPageComponent implements OnInit {
               team.title.toLowerCase().includes('Code and cheese'.toLowerCase())
           );
 
-          console.log('Global Nominees encontrados:', this.globalNomineesTeams);
         }
       },
       error: (error) => {

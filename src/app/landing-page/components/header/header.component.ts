@@ -67,14 +67,6 @@ export class HeaderComponent {
       this.isLoggedIn = isAuth;
     });
   }
-
-  @HostListener('window:scroll', ['$event'])
-  onScroll(): void {
-    // Close dropdowns when scrolling
-    this.showChallenges = false;
-    this.showInfo = false;
-  }
-
   private getCategoryCount(slug: string): number {
     return CHALLENGES_DATA.filter(challenge =>
       challenge.categories.some(cat => cat.slug === slug)
@@ -86,7 +78,7 @@ export class HeaderComponent {
   }
 
   openWhatsApp(): void {
-    window.open('https://chat.whatsapp.com/LXwUUZaJPXtBOeKr7N4axg', '_blank');
+    window.open('https://chat.whatsapp.com/LLsTZ9soMR2GflnGSrft0j', '_blank');
   }
 
   openInstagram(): void {

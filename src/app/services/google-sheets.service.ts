@@ -218,20 +218,8 @@ export class GoogleSheetsService {
     const dataLines = lines.slice(1);
     const validLines = dataLines.filter(line => line.trim() !== '');
 
-    console.log('=== PARSING FEEDBACK CSV ===');
-    console.log('Total de linhas válidas:', validLines.length);
-
     const processedData = validLines.map((line, index) => {
       const columns = this.parseCSVLine(line);
-
-      // Log da primeira linha para debug
-      if (index === 0) {
-        console.log('Primeira linha - Total de colunas:', columns.length);
-        columns.forEach((col, i) => {
-          if (col) console.log(`Coluna ${i}: ${col.substring(0, 50)}...`);
-        });
-      }
-
       return {
         timestamp: columns[0] || '',
         name: columns[1] || '',
@@ -279,10 +267,6 @@ export class GoogleSheetsService {
         additionalComments: columns[35] || ''
       };
     });
-
-    console.log('Dados processados:', processedData.length, 'feedbacks');
-    console.log('Primeiro feedback processado:', processedData[0]);
-    console.log('=== END PARSING FEEDBACK ===');
 
     return processedData;
   }

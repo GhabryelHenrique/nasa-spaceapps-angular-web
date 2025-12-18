@@ -110,7 +110,6 @@ export class TeamsComponent implements OnInit {
             .map(([id, title]) => ({ id, title }))
             .sort((a, b) => a.title.localeCompare(b.title));
 
-            console.log('Available Challenges:', this.availableChallenges);
         }
       },
       error: (error) => {

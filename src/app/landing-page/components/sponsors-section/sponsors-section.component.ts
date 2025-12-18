@@ -40,9 +40,9 @@ export class SponsorsSectionComponent implements OnDestroy {
       { name: 'IBM', logo: 'https://t.ctcdn.com.br/JA0gFhmfATSkDmbe7ITbkIzToa0=/i654119.png', url: 'https://www.ibm.com/br-pt' },
       { name: 'NVIDIA', logo: 'https://store-images.s-microsoft.com/image/apps.2971.13599037783181022.b05b7adf-6b7a-44ae-9a70-9dc9370ea7e6.1a5616ff-237c-407f-a1b2-c07e10ac7c04', url: 'https://www.nvidia.com/pt-br' },
       { name: 'Google', logo: 'https://images.seeklogo.com/logo-png/27/1/google-logo-png_seeklogo-273191.png', url: 'https://www.google.com' },
-      { name: 'Tata Consultancy Services', logo: 'https://media.licdn.com/dms/image/v2/D4D0BAQGsGR9p4ikS5w/company-logo_200_200/company-logo_200_200/0/1708946550425/tata_consultancy_services_logo?e=1759968000&v=beta&t=dUdTwgFYAKekff6cZ3FzP95KV88kETq1l8GCZRTd02A', url: 'https://www.tcs.com' },
-      { name: 'Logbit', logo: 'https://media.licdn.com/dms/image/v2/D4D0BAQGoKgrGKgrSIQ/company-logo_200_200/company-logo_200_200/0/1734106214792/logbit_logo?e=1759968000&v=beta&t=4IiOCSJZ-z3VP16k6pD8WHFszo0Mz-1sz7faNblnf-U', url: 'https://logbit.com.br/areacolab.html' },
-      { name: 'Neppo', logo: 'https://media.licdn.com/dms/image/v2/D4D0BAQHi_a5oi7IigQ/company-logo_200_200/company-logo_200_200/0/1710872636958/neppo_tecnologia_logo?e=1759968000&v=beta&t=IvrqZ5VMwjYj7PX_GwQCddPNmTLHqKf3YzJ3GqxFDzg', url: 'https://neppo.com.br' },
+      { name: 'Tata Consultancy Services', logo: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSokhoqS7vGdz3XdMwyYMNSX_xuR3wz7Z16wg&s', url: 'https://www.tcs.com' },
+      // { name: 'Logbit', logo: 'https://media.licdn.com/dms/image/v2/D4D0BAQGoKgrGKgrSIQ/company-logo_200_200/company-logo_200_200/0/1734106214792/logbit_logo?e=1759968000&v=beta&t=4IiOCSJZ-z3VP16k6pD8WHFszo0Mz-1sz7faNblnf-U', url: 'https://logbit.com.br/areacolab.html' },
+      // { name: 'Neppo', logo: 'https://media.licdn.com/dms/image/v2/D4D0BAQHi_a5oi7IigQ/company-logo_200_200/company-logo_200_200/0/1710872636958/neppo_tecnologia_logo?e=1759968000&v=beta&t=IvrqZ5VMwjYj7PX_GwQCddPNmTLHqKf3YzJ3GqxFDzg', url: 'https://neppo.com.br' },
       { name: 'Harvard', logo: 'https://images.seeklogo.com/logo-png/28/1/harvard-university-logo-png_seeklogo-284458.png', url: 'https://www.harvard.edu' },
       { name: 'USP', logo: 'https://media.licdn.com/dms/image/v2/D4E0BAQEEty1xF9jFog/company-logo_200_200/B4EZVMm.k3HMAU-/0/1740747041633/uspoficial_logo?e=2147483647&v=beta&t=2wo2exdbRWHbHUYlK9pzchZ4liW6Hf-zoiNxz_Sh_58', url: 'https://www5.usp.br' },
       { name: 'UFMG', logo: 'https://images.seeklogo.com/logo-png/19/1/ufmg-logo-png_seeklogo-193610.png', url: 'https://www.instagram.com/ufmg' },
@@ -54,7 +54,7 @@ export class SponsorsSectionComponent implements OnDestroy {
       { name: 'Ifood', logo: 'https://static.ifood.com.br/webapp/images/logo-smile-512x512.png', url: 'https://www.ifood.com.br' },
       { name: 'Itaú', logo: 'https://play-lh.googleusercontent.com/gRcutACE4XkEHmxcbUdOehxpTbp_LjmwJ6qIEbqfD34oh9feTNhTnlDgf97HEZ9eGKY=s256-rw', url: 'https://www.itau.com.br' },
       { name: 'Zup Innovation', logo: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRotJvZVHcO3WhugTZAEvPvrm0eJDfo7J8iOQ&s', url: 'https://zup.com.br/' },
-      { name: 'Neppo', logo: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSRSXytbvom-2xUIcP9vNNPfpGKOTgunVRo1A&s', url: 'https://neppo.com.br/' },
+      // { name: 'Neppo', logo: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSRSXytbvom-2xUIcP9vNNPfpGKOTgunVRo1A&s', url: 'https://neppo.com.br/' },
       { name: 'Brain', logo: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQOTTjjaMnLdAln0y6CoY2YSCqr3nYeQVzPPQ&s', url: 'https://inovacaobrain.com.br' },
       { name: 'Santander', logo: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQyldeRZdWVUtcV4pSSeJzQfKezzu1Q1qGt8w&s', url: 'https://www.santander.com.br' },
       { name: 'Bradesco', logo: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRDNVTc3mhbojIWSX9gonGIPaDetl3AhP66kA&s', url: 'https://banco.bradesco/marca/' },
@@ -65,14 +65,14 @@ export class SponsorsSectionComponent implements OnDestroy {
       { name: 'Snowflake', logo: 'https://images.seeklogo.com/logo-png/33/1/snowflake-logo-png_seeklogo-336501.png', url: 'https://www.snowflake.com/pt_br' },
       { name: 'Bizu Space', logo: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR7kR9ABFunhuP5EPW8HagIA1vhVXlWwvswzg&s', url: 'https://www.bizu.space' },
       { name: 'Geração de Marte', logo: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSMnfGx6ZKspT3Iln4YBFTXYab0O7ji42Tlig&s', url: 'https://www.instagram.com/geracao.de.marte' },
-      { name: 'Alter', logo: 'https://media.licdn.com/dms/image/v2/D4D0BAQGyhLjeUvvQ3w/company-logo_200_200/company-logo_200_200/0/1685957936806?e=1762387200&v=beta&t=UrXsGLV7RXnyUz-O8Lsbirx9mJZEl4Lt8biA5e-0Elc', url: 'https://www.alterconteudo.com.br/' },
+      // { name: 'Alter', logo: 'https://media.licdn.com/dms/image/v2/D4D0BAQGyhLjeUvvQ3w/company-logo_200_200/company-logo_200_200/0/1685957936806?e=1762387200&v=beta&t=UrXsGLV7RXnyUz-O8Lsbirx9mJZEl4Lt8biA5e-0Elc', url: 'https://www.alterconteudo.com.br/' },
       { name: 'GRVA', logo: 'https://media.licdn.com/dms/image/v2/C4E0BAQH5NIuzpkwyJw/company-logo_200_200/company-logo_200_200/0/1630576065144?e=2147483647&v=beta&t=og3l0xiFg4m_h1ZtJcQO2CcIkVK6ucDcXhZuAYfg_-Q', url: 'https://grva.com.br/' },
-      { name: 'Ntropy', logo: 'https://ffnews.com/wp-content/uploads/2023/06/ntropy-149x149.jpg', url: 'https://www.ntropy.com/' },
-      { name: 'Aimirim', logo: 'https://media.licdn.com/dms/image/v2/C4D0BAQE5wUH84mceMA/company-logo_200_200/company-logo_200_200/0/1630707182957/aimirim_solues_tecnolgicas_integradas_ltda__logo?e=1759968000&v=beta&t=TMUV2BK2zUCvHnkgl1l6KMp4ILlf3w7JHkYXseWJyXU', url: 'https://www.aimirimsti.com.br' },
+      // { name: 'Ntropy', logo: 'https://ffnews.com/wp-content/uploads/2023/06/ntropy-149x149.jpg', url: 'https://www.ntropy.com/' },
+      // { name: 'Aimirim', logo: 'https://media.licdn.com/dms/image/v2/C4D0BAQE5wUH84mceMA/company-logo_200_200/company-logo_200_200/0/1630707182957/aimirim_solues_tecnolgicas_integradas_ltda__logo?e=1759968000&v=beta&t=TMUV2BK2zUCvHnkgl1l6KMp4ILlf3w7JHkYXseWJyXU', url: 'https://www.aimirimsti.com.br' },
       { name: 'Agro Smart', logo: 'https://media.licdn.com/dms/image/v2/C4D0BAQH44jdcui91xA/company-logo_200_200/company-logo_200_200/0/1657037642094/agrosmart_logo?e=2147483647&v=beta&t=uKD3P6woxuauHHnSu2Ir-xijngQMkZJHJZf6ULgxSWo', url: 'https://agrosmart.com.br/' },
-      { name: 'LayerX', logo: 'https://media.licdn.com/dms/image/v2/D4D0BAQHZQ8yCJxxisQ/company-logo_200_200/company-logo_200_200/0/1734982286382/layerxsolucoes_logo?e=1759968000&v=beta&t=F756UStC-NSvBRmcEbT2vRK8QKv0xXKl8go0_ylSw8U', url: 'https://layerx.com.br' },
+      { name: 'LayerX', logo: 'https://media.licdn.com/dms/image/v2/D4D0BAQHZQ8yCJxxisQ/company-logo_200_200/company-logo_200_200/0/1734982286382/layerxsolucoes_logo?e=1767830400&v=beta&t=Nh19j2j7ddWQ25hImkHx0XTA1tEKFBDadPy2hHLXA5k', url: 'https://layerx.com.br' },
       { name: 'Observatório Nacional', logo: 'https://media.licdn.com/dms/image/v2/C4E0BAQFVZtnLQKrmNg/company-logo_200_200/company-logo_200_200/0/1631356595002?e=2147483647&v=beta&t=ONLM2nZjv3fbTw7420qtgQhwiC1ef13bkhIMRscBlaE', url: 'https://www.gov.br/observatorio/pt-br' },
-      { name: 'CMCC Foundation', logo: 'https://media.licdn.com/dms/image/v2/C560BAQGVE_6icH6sTg/company-logo_200_200/company-logo_200_200/0/1673359113519/cmccfoundation_logo?e=1759968000&v=beta&t=U9JcKHUFyqqHOWhhzTy5emTpx1-_qoTEW7-zgfUuxu0', url: 'https://www.cmcc.it' },
+      // { name: 'CMCC Foundation', logo: 'https://media.licdn.com/dms/image/v2/C560BAQGVE_6icH6sTg/company-logo_200_200/company-logo_200_200/0/1673359113519/cmccfoundation_logo?e=1759968000&v=beta&t=U9JcKHUFyqqHOWhhzTy5emTpx1-_qoTEW7-zgfUuxu0', url: 'https://www.cmcc.it' },
       { name: 'Rede de Ensino e Pesquisa', logo: 'https://media.licdn.com/dms/image/v2/D4D0BAQFbfp7mW4TEkA/company-logo_200_200/company-logo_200_200/0/1662129972806/redernp_logo?e=2147483647&v=beta&t=s2uVsmm_0aq1DaFp_aTtl0sdOEsbRRoJZMJVZFazYyA', url: 'https://www.rnp.br' },
       { name: 'Empreendedorismo Ambiental', logo: 'assets/sponsors/emprendendorismo.jpg', url: 'https://www.rnp.br' },
     ]
@@ -85,11 +85,9 @@ private hoverTimeout: any;
   isPartyMode = false;
 
   startHover(sponsorName: string) {
-    this.hoverTimeout = setTimeout(() => {
-      if (sponsorName.toLowerCase() === 'redbull') {
-        this.showEasterEgg = true; // mostra botão escondido
-      }
-    }, 10000); // 1 min e 4s
+    if (sponsorName.toLowerCase() === 'redbull') {
+      this.showEasterEgg = true; // mostra botão escondido
+    }
   }
 
   stopHover() {
