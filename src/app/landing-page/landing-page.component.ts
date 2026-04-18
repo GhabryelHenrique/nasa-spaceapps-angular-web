@@ -3,10 +3,10 @@ import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
 import { HeaderComponent } from './components/header/header.component';
 import { HeroSectionComponent } from './components/hero-section/hero-section.component';
-import { UberlandiaHighlightsComponent } from './components/uberlandia-highlights/uberlandia-highlights.component';
 import { EventInfoTabsComponent } from './components/event-info-tabs/event-info-tabs.component';
-import { EventsMapComponent } from './components/events-map/events-map.component';
 import { SponsorsSectionComponent } from './components/sponsors-section/sponsors-section.component';
+import { Recap2025SectionComponent } from './components/recap2025-section/recap2025-section.component';
+import { PhotosGalleryComponent } from './components/photos-gallery/photos-gallery.component';
 import { TeamsService } from '../services/teams.service';
 import { Team } from '../shared/data/teams.data';
 
@@ -16,10 +16,10 @@ import { Team } from '../shared/data/teams.data';
     CommonModule,
     RouterModule,
     HeroSectionComponent,
-    UberlandiaHighlightsComponent,
     EventInfoTabsComponent,
-    EventsMapComponent,
     SponsorsSectionComponent,
+    Recap2025SectionComponent,
+    PhotosGalleryComponent,
   ],
   templateUrl: './landing-page.component.html',
   styleUrl: './landing-page.component.scss',

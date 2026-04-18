@@ -5,17 +5,19 @@
     <app-hero-section></app-hero-section>
   </section>
 
+  <!-- Recap 2025 Section -->
+  <app-recap2025-section></app-recap2025-section>
+
   <!-- Winners Highlight Section -->
   <section class="winners-highlight-wrapper">
     <div class="container">
       <div class="winners-highlight-content">
-        <h2 class="section-title">🎖️ Destaques Globais de Uberlândia</h2>
-        <p class="section-description">
+        <h2 class="section-title reveal reveal-up">🎖️ Destaques Globais de Uberlândia</h2>
+        <p class="section-description reveal reveal-up delay-1">
           Celebramos com orgulho os times de Uberlândia que alcançaram reconhecimento internacional no NASA Space Apps Challenge 2025
         </p>
 
-        <div class="winners-grid">
-          <!-- Titan - Global Finalist (Destaque Principal) -->
+        <div class="winners-grid reveal reveal-up delay-2">
           <div class="winner-card global-finalist" *ngFor="let winner of highlightedWinners" [class.top-winner]="winner.isTopWinner">
             <div class="winner-badge" [style.color]="winner.color">{{ winner.badge }}</div>
             <div class="winner-header">
@@ -59,13 +61,12 @@
   <section class="global-nominees-wrapper">
     <div class="">
       <div class="global-nominees-content">
-        <h2 class="section-title">🏆 Global Nominees 2025</h2>
-        <p class="section-description">
+        <h2 class="section-title reveal reveal-up">🏆 Global Nominees 2025</h2>
+        <p class="section-description reveal reveal-up delay-1">
           Parabéns aos projetos de Uberlândia que conquistaram a indicação aos Global Nominees do NASA Space Apps Challenge 2025!
         </p>
 
-        <!-- Lista de Projetos Vencedores -->
-        <div class="nominees-grid">
+        <div class="nominees-grid reveal reveal-up delay-2">
           <a class="nominee-card"
              *ngFor="let team of globalNomineesTeams; let i = index"
              [href]="'https://www.spaceappschallenge.org' + team.meta.relativeUrl"
@@ -87,81 +88,54 @@
             </div>
           </a>
         </div>
+      </div>
+    </div>
+  </section>
 
-        <!-- Prêmios Especiais -->
-        <div class="special-awards-section">
-          <h3 class="special-awards-title">✨ Prêmios Especiais</h3>
-          <div class="special-awards-grid">
-            <a class="special-award-card" *ngFor="let award of specialAwards"
-               [href]="award.url" target="_blank" rel="noopener noreferrer">
-              <!-- Mostra ícone ou imagem -->
-              <div class="award-icon" *ngIf="!award.imagePath">{{ award.icon }}</div>
-              <div class="award-image" *ngIf="award.imagePath">
-                <img [src]="award.imagePath"
-                     [alt]="'Ganhador do prêmio ' + award.category"
-                     loading="lazy"
-                     onerror="this.src='assets/organizers/placeholder.svg'"/>
-              </div>
-              <div class="award-content">
-                <h4 class="award-category">{{ award.category }}</h4>
-                <p class="award-winner">{{ award.winner }}</p>
-                <p class="award-description" *ngIf="award.description">{{ award.description }}</p>
-              </div>
-            </a>
-          </div>
+  <!-- Prêmios Especiais Section -->
+  <section class="special-awards-wrapper">
+    <div class="">
+      <div class="special-awards-content">
+        <h2 class="section-title reveal reveal-up">✨ Prêmios Especiais</h2>
+        <p class="section-description reveal reveal-up delay-1">
+          Reconhecimentos especiais para quem tornou o NASA Space Apps Uberlândia 2025 único e inesquecível.
+        </p>
+        <div class="special-awards-grid reveal reveal-up delay-2">
+          <a class="special-award-card" *ngFor="let award of specialAwards"
+             [href]="award.url" target="_blank" rel="noopener noreferrer">
+            <div class="award-icon" *ngIf="!award.imagePath">{{ award.icon }}</div>
+            <div class="award-image" *ngIf="award.imagePath">
+              <img [src]="award.imagePath"
+                   [alt]="'Ganhador do prêmio ' + award.category"
+                   loading="lazy"
+                   onerror="this.src='assets/organizers/placeholder.svg'"/>
+            </div>
+            <div class="award-content">
+              <h4 class="award-category">{{ award.category }}</h4>
+              <p class="award-winner">{{ award.winner }}</p>
+              <p class="award-description" *ngIf="award.description">{{ award.description }}</p>
+            </div>
+          </a>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Awards Timeline Section -->
-  <!-- <section class="awards-timeline-wrapper">
-    <div class="container">
-      <div class="awards-timeline-content">
-        <h2 class="awards-title">Cronograma de Premiações</h2>
-        <p class="section-description">
-          Acompanhe as datas importantes para o anúncio dos vencedores globais do NASA Space Apps Challenge 2025.
-        </p>
-        <div class="timeline">
-          <div class="timeline-item">
-            <div class="timeline-icon">🏆</div>
-            <div class="timeline-info">
-              <h3>16 de Outubro</h3>
-              <p>Anúncio dos Global Nominees</p>
-            </div>
-          </div>
-          <div class="timeline-item">
-            <div class="timeline-icon">🥇</div>
-            <div class="timeline-info">
-              <h3>26 de Novembro</h3>
-              <p>Anúncio dos Global Finalists e Honorable Mentions</p>
-            </div>
-          </div>
-          <div class="timeline-item">
-            <div class="timeline-icon">🎉</div>
-            <div class="timeline-info">
-              <h3>18 de Dezembro</h3>
-              <p>Anúncio dos Global Winners!</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section> -->
-
-  <!-- Uberlandia Highlights Component -->
-  <app-uberlandia-highlights></app-uberlandia-highlights>
+  <!-- Photos Gallery Section -->
+  <!-- <div class="reveal reveal-fade">
+    <app-photos-gallery></app-photos-gallery>
+  </div> -->
 
   <!-- Event Info Tabs Component -->
-  <section class="event-info-wrapper">
+  <section class="event-info-wrapper reveal reveal-up">
     <app-event-info-tabs></app-event-info-tabs>
   </section>
 
   <!-- Events Map Component -->
-  <app-events-map></app-events-map>
+  <!-- <app-events-map></app-events-map> -->
 
   <!-- Sponsors Section Component -->
-  <section class="sponsors-wrapper">
+  <section class="sponsors-wrapper reveal reveal-up">
     <app-sponsors-section></app-sponsors-section>
   </section>
 
@@ -169,13 +143,13 @@
   <section class="organizers-wrapper">
     <div class="container">
       <div class="organizers-content">
-        <h2 i18n="@@organizers.title">Nossa Equipe Organizadora</h2>
-        <p class="section-description" i18n="@@organizers.description">
+        <h2 class="reveal reveal-up" i18n="@@organizers.title">Nossa Equipe Organizadora</h2>
+        <p class="section-description reveal reveal-up delay-1" i18n="@@organizers.description">
           Conheça as pessoas que tornam o NASA Space Apps Challenge Uberlândia
           uma realidade. Uma equipe dedicada e apaixonada por inovação e
           tecnologia espacial.
         </p>
-        <div class="organizers-grid">
+        <div class="organizers-grid reveal reveal-up delay-2">
           <a
             class="organizer-card"
             *ngFor="let organizer of organizers; trackBy: trackByName"

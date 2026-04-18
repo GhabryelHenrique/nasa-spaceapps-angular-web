@@ -1,0 +1,423 @@
+@import "../../../../styles/variables";
+
+// =============================================
+// PHOTOS GALLERY SECTION
+// =============================================
+
+.photos-gallery-section {
+  position: relative;
+  padding: 100px 0 80px;
+  background: linear-gradient(180deg,
+    #000000 0%,
+    #030b1e 25%,
+    #050f28 50%,
+    #030b1e 75%,
+    #000000 100%
+  );
+  overflow: hidden;
+}
+
+// Stars
+.stars-layer {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+
+  .star {
+    position: absolute;
+    border-radius: 50%;
+    background: white;
+    animation: twinkle-star 3s infinite alternate;
+
+    @for $i from 1 through 25 {
+      &:nth-child(#{$i}) {
+        top: random(100) * 1%;
+        left: random(100) * 1%;
+        width: 1px + random(2) * 1px;
+        height: 1px + random(2) * 1px;
+        opacity: 0.2 + random(6) * 0.1;
+        animation-delay: random(4000) * 1ms;
+      }
+    }
+  }
+}
+
+@keyframes twinkle-star {
+  from { opacity: 0.15; transform: scale(1); }
+  to   { opacity: 1; transform: scale(1.6); }
+}
+
+.gallery-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  position: relative;
+  z-index: 1;
+}
+
+// =============================================
+// HEADER
+// =============================================
+
+.gallery-header {
+  text-align: center;
+  margin-bottom: 3.5rem;
+}
+
+.year-badge {
+  display: inline-block;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: $nasa-blue-light;
+  border: 1px solid rgba($nasa-blue-light, 0.4);
+  background: rgba($nasa-blue, 0.08);
+  padding: 0.3rem 1.1rem;
+  border-radius: 100px;
+  margin-bottom: 1rem;
+}
+
+.gallery-title {
+  font-size: clamp(2rem, 5vw, 3.2rem);
+  font-weight: 900;
+  font-family: "Fira Sans", sans-serif;
+  background: linear-gradient(135deg, $nasa-white 30%, rgba($nasa-blue-light, 0.8) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin: 0 0 1rem;
+}
+
+.gallery-subtitle {
+  font-size: 1rem;
+  color: $text-secondary;
+  max-width: 520px;
+  margin: 0 auto;
+  line-height: 1.7;
+}
+
+// =============================================
+// PHOTO GRID (CSS COLUMNS MASONRY)
+// =============================================
+
+.photo-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-auto-rows: 220px;
+  gap: 10px;
+  margin-bottom: 4rem;
+
+  @media (max-width: 1024px) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  @media (max-width: 700px) {
+    grid-template-columns: repeat(2, 1fr);
+    grid-auto-rows: 160px;
+  }
+
+  @media (max-width: 450px) {
+    grid-template-columns: 1fr 1fr;
+    grid-auto-rows: 140px;
+  }
+}
+
+.photo-item {
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+  cursor: pointer;
+  background: rgba($nasa-blue, 0.1);
+  border: 1px solid rgba($nasa-blue, 0.15);
+  padding: 0;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+
+  &.wide  { grid-column: span 2; }
+  &.tall  { grid-row:    span 2; }
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.4s ease;
+  }
+
+  .photo-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+      135deg,
+      rgba($nasa-blue, 0.6),
+      rgba($nasa-red, 0.4)
+    );
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .photo-zoom-icon {
+      font-size: 2rem;
+      transform: scale(0.5);
+      transition: transform 0.3s ease;
+    }
+  }
+
+  &:hover {
+    transform: scale(1.02);
+    box-shadow: 0 12px 40px rgba($nasa-blue, 0.4);
+    border-color: rgba($nasa-blue, 0.5);
+
+    img {
+      transform: scale(1.06);
+    }
+
+    .photo-overlay {
+      opacity: 1;
+
+      .photo-zoom-icon {
+        transform: scale(1);
+      }
+    }
+  }
+}
+
+// =============================================
+// VIDEO SECTION
+// =============================================
+
+.video-section {
+  margin-top: 2rem;
+}
+
+.video-section-title {
+  font-size: 1.6rem;
+  font-weight: 800;
+  font-family: "Fira Sans", sans-serif;
+  color: $nasa-white;
+  text-align: center;
+  margin-bottom: 2rem;
+
+  &::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 3px;
+    background: linear-gradient(90deg, $nasa-blue, $nasa-red);
+    margin: 0.6rem auto 0;
+    border-radius: 2px;
+  }
+}
+
+.video-layout {
+  display: grid;
+  grid-template-columns: 1fr 260px;
+  gap: 1.2rem;
+  align-items: start;
+
+  @media (max-width: 900px) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.video-main {
+  border-radius: 14px;
+  overflow: hidden;
+  background: #000;
+  border: 1px solid rgba($nasa-blue, 0.3);
+  box-shadow: 0 8px 40px rgba($nasa-blue, 0.2);
+}
+
+.main-video {
+  width: 100%;
+  display: block;
+  max-height: 480px;
+  object-fit: contain;
+  background: #000;
+}
+
+.video-thumbnails {
+  display: flex;
+  flex-direction: column;
+  gap: 0.7rem;
+
+  @media (max-width: 900px) {
+    flex-direction: row;
+    overflow-x: auto;
+    padding-bottom: 0.5rem;
+  }
+}
+
+.video-thumb {
+  position: relative;
+  border-radius: 10px;
+  overflow: hidden;
+  cursor: pointer;
+  border: 2px solid rgba($nasa-blue, 0.2);
+  background: #000;
+  padding: 0;
+  height: 80px;
+  flex-shrink: 0;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+
+  @media (max-width: 900px) {
+    width: 120px;
+    height: 70px;
+  }
+
+  .thumb-preview {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+
+  .thumb-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.55);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.2rem;
+    transition: background 0.3s;
+
+    .play-icon {
+      font-size: 1.1rem;
+      color: $nasa-white;
+      line-height: 1;
+    }
+
+    .video-label {
+      font-size: 0.65rem;
+      color: $text-secondary;
+      font-weight: 600;
+      letter-spacing: 0.05em;
+    }
+  }
+
+  &.active,
+  &:hover {
+    border-color: $nasa-blue;
+    box-shadow: 0 0 18px rgba($nasa-blue, 0.4);
+
+    .thumb-overlay {
+      background: rgba($nasa-blue, 0.4);
+    }
+  }
+}
+
+// =============================================
+// LIGHTBOX
+// =============================================
+
+.lightbox {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.95);
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+  backdrop-filter: blur(8px);
+
+  &.open {
+    opacity: 1;
+    pointer-events: all;
+  }
+}
+
+.lightbox-content {
+  position: relative;
+  max-width: 90vw;
+  max-height: 90vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.lightbox-image-wrapper {
+  border-radius: 12px;
+  overflow: hidden;
+  border: 1px solid rgba($nasa-blue, 0.3);
+  box-shadow: 0 20px 80px rgba(0, 0, 0, 0.8);
+}
+
+.lightbox-img {
+  max-width: 85vw;
+  max-height: 80vh;
+  object-fit: contain;
+  display: block;
+}
+
+.lightbox-close {
+  position: absolute;
+  top: -2.5rem;
+  right: 0;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: $nasa-white;
+  width: 2.2rem;
+  height: 2.2rem;
+  border-radius: 50%;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.2s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &:hover {
+    background: rgba($nasa-red, 0.4);
+    transform: rotate(90deg);
+  }
+}
+
+.lightbox-nav {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  color: $nasa-white;
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  font-size: 1.8rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.2s, transform 0.2s;
+  line-height: 1;
+
+  &.prev { left: -4rem; }
+  &.next { right: -4rem; }
+
+  &:hover {
+    background: rgba($nasa-blue, 0.5);
+    transform: translateY(-50%) scale(1.1);
+  }
+
+  @media (max-width: 768px) {
+    &.prev { left: -3rem; }
+    &.next { right: -3rem; }
+  }
+}
+
+.lightbox-counter {
+  position: absolute;
+  bottom: -2.2rem;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 0.8rem;
+  color: $text-muted;
+  letter-spacing: 0.1em;
+}

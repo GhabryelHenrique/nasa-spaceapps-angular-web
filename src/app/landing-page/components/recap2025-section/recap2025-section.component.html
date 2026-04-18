@@ -1,0 +1,118 @@
+<section class="recap2025-section">
+  <!-- Background stars -->
+  <div class="stars-bg" aria-hidden="true">
+    <div class="star" *ngFor="let s of [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20]"></div>
+  </div>
+
+  <div class="container">
+
+    <!-- Section Header -->
+    <div class="section-header reveal reveal-up">
+      <div class="year-badge">2025</div>
+      <h2 class="section-title">Recap em Números</h2>
+      <p class="section-subtitle">
+        Uberlândia escreveu história no NASA Space Apps Challenge 2025.<br>
+        Veja o que construímos juntos.
+      </p>
+    </div>
+
+    <!-- Stats Grid -->
+     <div class="stats-section">
+
+       <div class="stats-grid reveal reveal-up delay-1">
+      <div class="stat-card" *ngFor="let stat of stats">
+        <div class="stat-icon">{{ stat.icon }}</div>
+        <div class="stat-number" [style.color]="stat.color">
+          <span class="stat-prefix">{{ stat.prefix }}</span>
+          <span class="stat-value">{{ animationStarted ? stat.animatedValue : 0 }}</span>
+          <span class="stat-suffix">{{ stat.suffix }}</span>
+        </div>
+        <div class="stat-label">{{ stat.label }}</div>
+      </div>
+      </div>
+       <img src="assets/photos/IMG_0659.png" alt="" class="timeline-bg reveal reveal-up" aria-hidden="true">
+
+    </div>
+
+    <!-- Highlights -->
+    <div class="highlights-section">
+      <h3 class="highlights-title reveal reveal-up">Conquistas Históricas</h3>
+      <div class="achievements-grid reveal reveal-up delay-1">
+        <div class="achievement-card" *ngFor="let a of achievements" [style.--accent]="a.color">
+          <div class="achievement-icon">{{ a.icon }}</div>
+          <div class="achievement-info">
+            <div class="achievement-title" [style.color]="a.color">{{ a.title }}</div>
+            <div class="achievement-subtitle">{{ a.subtitle }}</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Timeline -->
+    <div class="timeline-section">
+      <h3 class="timeline-title reveal reveal-up">A Jornada de 2025</h3>
+      <div class="timeline">
+        <img [src]="imgTimeline" alt="" class="timeline-bg reveal reveal-up" aria-hidden="true">
+        <div class="">
+
+        <div class="timeline-item reveal reveal-up"
+             *ngFor="let item of timeline; let i = index; let last = last"
+             [class.highlight]="item.highlight"
+             >
+
+          <!-- Coluna esquerda: dot + connector -->
+          <div class="timeline-spine">
+            <div class="timeline-dot">
+              <span class="timeline-dot-icon">{{ item.icon }}</span>
+            </div>
+            <div class="timeline-connector" *ngIf="!last"></div>
+          </div>
+
+          <!-- Texto -->
+          <div class="timeline-content">
+            <div class="timeline-date">{{ item.date }}</div>
+            <h4 class="timeline-event-title">{{ item.title }}</h4>
+            <p class="timeline-description">{{ item.description }}</p>
+          </div>
+
+          <!-- Fotos
+          <div class="timeline-photos" *ngIf="item.photos && item.photos.length">
+            <img
+              *ngFor="let photo of item.photos"
+              [src]="photo"
+              [alt]="item.title"
+              loading="lazy"
+              class="timeline-photo"
+              onerror="this.style.display='none'">
+          </div> -->
+
+        </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- 2026 Teaser -->
+    <div class="teaser-2026 reveal reveal-scale">
+      <div class="teaser-glow" aria-hidden="true"></div>
+      <div class="teaser-content">
+        <div class="teaser-year">2026</div>
+        <h3 class="teaser-title">Está Chegando...</h3>
+        <p class="teaser-description">
+          Se 2025 foi histórico, imagine o que vem por aí.<br>
+          Novos desafios. Novas conquistas. Uberlândia no mapa do universo.
+        </p>
+        <div class="teaser-cta">
+          <button class="cta-button" (click)="openDiscord()" aria-label="Entrar no Discord para ficar por dentro do NASA Space Apps 2026">
+            <span class="cta-icon">🚀</span>
+            Fique por Dentro
+          </button>
+        </div>
+        <div class="teaser-hint">
+          Junte-se à comunidade e seja o primeiro a saber das novidades
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>

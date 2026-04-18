@@ -1,413 +1,241 @@
 @import "../../../../styles/variables";
 
-
-a {
-  text-wrap: nowrap;
-}
 .header {
-  background: rgba(0, 0, 0, 0.95);
-  backdrop-filter: blur(15px);
   position: fixed;
   top: 0;
-  width: 100%;
+  left: 0;
+  right: 0;
   z-index: 1000;
-  border-bottom: 1px solid rgba(11, 61, 145, 0.3);
-  transition: all 0.3s ease;
+  transition: background 0.4s ease, backdrop-filter 0.4s ease, border-color 0.4s ease, padding 0.3s ease;
+  background: transparent;
+  border-bottom: 1px solid transparent;
 
-  .navbar {
+  &.scrolled {
+    background: rgba(0, 5, 20, 0.85);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border-bottom-color: rgba(9, 96, 225, 0.25);
+
+    .navbar { padding: 0.65rem 2rem; }
+  }
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.1rem 2rem;
+  max-width: 1400px;
+  margin: 0 auto;
+  transition: padding 0.3s ease;
+  gap: 2rem;
+}
+
+// Brand
+.nav-brand {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  text-decoration: none;
+  flex-shrink: 0;
+
+  .nasa-logo {
+    width: 44px;
+    height: 36px;
+    object-fit: contain;
+  }
+
+  .brand-text {
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
+    line-height: 1.1;
+
+    .brand-title {
+      font-family: 'Fira Sans', sans-serif;
+      font-weight: 800;
+      font-size: 1rem;
+      color: #ffffff;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+    }
+
+    .brand-location {
+      font-size: 0.68rem;
+      color: rgba(46, 150, 245, 0.85);
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+  }
+}
+
+// Desktop nav links
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  flex: 1;
+  justify-content: center;
+
+  .nav-link {
+    display: flex;
     align-items: center;
-    padding: 1rem 2rem;
-    max-width: 1400px;
-    margin: 0 auto;
+    gap: 0.45rem;
+    padding: 0.45rem 1rem;
+    border-radius: 100px;
+    font-size: 0.88rem;
+    font-weight: 600;
+    color: rgba(255, 255, 255, 0.75);
+    text-decoration: none;
+    transition: color 0.2s ease, background 0.2s ease;
+    letter-spacing: 0.02em;
 
-    .nav-brand {
-      display: flex;
-      align-items: center;
-      gap: 1rem;
-      cursor: pointer;
+    i { font-size: 0.8em; }
 
-      .nasa-logo {
-        width: 50px;
-        height: 40px;
-      }
-
-      .brand-text {
-        h1 {
-          font-size: 1.5rem;
-          font-weight: 700;
-          background: var(--gradient-nasa-primary);
-          background-clip: text;
-          -webkit-background-clip: text;
-          -webkit-text-fill-color: transparent;
-          margin: 0;
-          line-height: 1.2;
-        }
-
-        .brand-subtitle {
-          font-size: 0.85rem;
-          color: #4ecdc4;
-          font-weight: 500;
-        }
-      }
+    &:hover {
+      color: #ffffff;
+      background: rgba(255, 255, 255, 0.07);
     }
 
-    .nav-menu {
-      display: flex;
-      justify-content: center;
-      flex-direction: row;
-      align-items: center;
-      gap: 2rem;
-
-      .nav-item {
-        position: relative;
-
-        .nav-link {
-          color: var(--nasa-white);
-          text-decoration: none;
-          font-weight: 500;
-          padding: 0.75rem 1.25rem;
-          border-radius: 25px;
-          transition: all 0.3s ease;
-          display: flex;
-          align-items: center;
-          gap: 0.5rem;
-          cursor: pointer;
-
-          &:hover {
-            background: rgba(78, 205, 196, 0.1);
-            color: #4ecdc4;
-            transform: translateY(-2px);
-          }
-
-          i {
-            font-size: 1em;
-
-            &.fa-chevron-down {
-              font-size: 0.8em;
-              transition: transform 0.3s ease;
-
-              &.rotated {
-                transform: rotate(180deg);
-              }
-            }
-          }
-        }
-      }
-    }
-
-    .nav-actions {
-      display: flex;
-      align-items: center;
-      gap: 1rem;
-
-      .social-btn {
-        background: none;
-        border: 2px solid;
-        padding: 0.5rem 1rem;
-        border-radius: 20px;
-        color: var(--nasa-white);
-        font-weight: 600;
-        cursor: pointer;
-        transition: all 0.3s ease;
-        display: flex;
-        align-items: center;
-        gap: 0.5rem;
-        font-size: 0.9rem;
-        white-space: nowrap;
-
-        &.whatsapp-btn {
-          border-color: #25D366;
-
-          &:hover {
-            background: #25D366;
-            transform: translateY(-2px);
-            box-shadow: 0 4px 15px rgba(37, 211, 102, 0.4);
-          }
-        }
-
-        &.discord-btn {
-          border-color: #5865F2;
-
-          &:hover {
-            background: #5865F2;
-            transform: translateY(-2px);
-            box-shadow: 0 4px 15px rgba(88, 101, 242, 0.4);
-          }
-        }
-
-        &.instagram-btn {
-          border-color: #E4405F;
-
-          &:hover {
-            background: #E4405F;
-            transform: translateY(-2px);
-            box-shadow: 0 4px 15px rgba(228, 64, 95, 0.4);
-          }
-        }
-      }
-
-      .login-btn {
-        background: var(--gradient-nasa-blue);
-        border: none;
-        padding: 0.5rem 1rem;
-        border-radius: 25px;
-        color: var(--nasa-white);
-        font-weight: 600;
-        cursor: pointer;
-        transition: all 0.3s ease;
-        display: flex;
-        align-items: center;
-        gap: 0.5rem;
-        white-space: nowrap;
-
-        &:hover {
-          transform: translateY(-2px);
-          box-shadow: var(--shadow-nasa-blue);
-        }
-      }
-
-      .register-btn {
-        background: linear-gradient(135deg, #4ecdc4, #45b7d1);
-        border: none;
-        padding: 0.5rem 1rem;
-        border-radius: 25px;
-        color: var(--nasa-white);
-        font-weight: 600;
-        cursor: pointer;
-        transition: all 0.3s ease;
-        display: flex;
-        align-items: center;
-        gap: 0.5rem;
-        text-decoration: none;
-        white-space: nowrap;
-
-        &:hover {
-          transform: translateY(-2px);
-          box-shadow: 0 6px 20px rgba(78, 205, 196, 0.4);
-        }
-      }
-
-      .matchmaking-btn {
-        background: linear-gradient(135deg, #ff6b9d, #dc267f);
-        border: none;
-        padding: 0.5rem 1rem;
-        border-radius: 25px;
-        color: var(--nasa-white);
-        font-weight: 600;
-        cursor: pointer;
-        transition: all 0.3s ease;
-        display: flex;
-        align-items: center;
-        gap: 0.5rem;
-        white-space: nowrap;
-
-        &:hover {
-          transform: translateY(-2px);
-          box-shadow: 0 6px 20px rgba(255, 107, 157, 0.4);
-        }
-      }
-
-      .mobile-menu-btn {
-        display: none;
-        background: none;
-        border: none;
-        color: white;
-        font-size: 1.5rem;
-        cursor: pointer;
-        padding: 0.5rem;
-        border-radius: 8px;
-        transition: all 0.3s ease;
-
-        &:hover {
-          background: rgba(78, 205, 196, 0.1);
-          color: #4ecdc4;
-        }
-      }
-    }
-
-    .mobile-menu {
-      position: fixed;
-      top: 100%;
-      left: 0;
-      width: 100%;
-      height: calc(100vh - 100%);
-      background: rgba(0, 0, 0, 0.98);
-      backdrop-filter: blur(20px);
-      transform: translateY(-100%);
-      transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-      z-index: 999;
-      overflow-y: auto;
-
-      &.open {
-        transform: translateY(0);
-      }
-
-      .mobile-menu-content {
-        padding: 2rem 1rem;
-        display: flex;
-        flex-direction: column;
-        gap: 0.5rem;
-        max-width: 400px;
-        margin: 0 auto;
-
-        .mobile-menu-item {
-          .mobile-menu-link {
-            display: flex;
-            align-items: center;
-            gap: 1rem;
-            padding: 1rem;
-            color: white;
-            text-decoration: none;
-            background: none;
-            border: none;
-            width: 100%;
-            text-align: left;
-            border-radius: 15px;
-            transition: all 0.3s ease;
-            font-size: 1rem;
-            font-weight: 500;
-            cursor: pointer;
-
-            &:hover {
-              background: rgba(78, 205, 196, 0.1);
-              color: #4ecdc4;
-            }
-
-            i {
-              width: 20px;
-              text-align: center;
-            }
-          }
-
-          .mobile-submenu {
-            max-height: 0;
-            overflow: hidden;
-            transition: max-height 0.3s ease;
-            margin-left: 1rem;
-
-            &.open {
-              max-height: 300px;
-            }
-
-            .mobile-challenge-category {
-              display: flex;
-              align-items: center;
-              gap: 1rem;
-              padding: 0.75rem;
-              margin: 0.25rem 0;
-              border-radius: 10px;
-              cursor: pointer;
-              transition: all 0.3s ease;
-
-              &:hover {
-                background: rgba(78, 205, 196, 0.1);
-              }
-
-              .category-icon {
-                width: 35px;
-                height: 35px;
-                border-radius: 50%;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                color: white;
-                font-size: 1rem;
-              }
-
-              .category-info {
-                span {
-                  color: white;
-                  font-weight: 500;
-                  display: block;
-                }
-
-                small {
-                  color: #4ecdc4;
-                  font-size: 0.75rem;
-                }
-              }
-            }
-          }
-        }
-
-        .mobile-register-btn {
-          margin-top: 1rem;
-          padding: 1rem 2rem;
-          background: linear-gradient(135deg, #4ecdc4, #45b7d1);
-          color: white;
-          text-decoration: none;
-          border-radius: 25px;
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          gap: 0.75rem;
-          font-weight: 600;
-          transition: all 0.3s ease;
-
-          &:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 8px 25px rgba(78, 205, 196, 0.4);
-          }
-        }
-      }
+    &.active {
+      color: #2E96F5;
+      background: rgba(46, 150, 245, 0.12);
     }
   }
 }
 
-// Primeiro oculta texto das redes sociais (só ícones)
-@media (max-width: 500px) {
-  .header .navbar {
-    .nav-actions {
-      .social-btn {
-        justify-content: center;
+// Nav actions
+.nav-actions {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  flex-shrink: 0;
+}
 
-        span {
-          display: none;
-        }
-      }
-    }
+.icon-btn {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  border: 1.5px solid rgba(255, 255, 255, 0.15);
+  background: rgba(255, 255, 255, 0.05);
+  color: rgba(255, 255, 255, 0.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+
+  &:hover { color: #fff; border-color: rgba(255,255,255,0.4); background: rgba(255,255,255,0.1); }
+
+  &.whatsapp:hover  { border-color: #25D366; color: #25D366; background: rgba(37,211,102,0.1); }
+  &.discord:hover   { border-color: #5865F2; color: #5865F2; background: rgba(88,101,242,0.1); }
+  &.instagram:hover { border-color: #E4405F; color: #E4405F; background: rgba(228,64,95,0.1); }
+}
+
+// Hamburger
+.hamburger {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
+  width: 36px;
+  height: 36px;
+  background: none;
+  border: 1.5px solid rgba(255,255,255,0.15);
+  border-radius: 8px;
+  cursor: pointer;
+  padding: 8px;
+  transition: border-color 0.2s;
+
+  span {
+    display: block;
+    width: 100%;
+    height: 1.5px;
+    background: rgba(255,255,255,0.8);
+    border-radius: 2px;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    transform-origin: center;
+  }
+
+  &.active {
+    span:nth-child(1) { transform: translateY(6.5px) rotate(45deg); }
+    span:nth-child(2) { opacity: 0; transform: scaleX(0); }
+    span:nth-child(3) { transform: translateY(-6.5px) rotate(-45deg); }
   }
 }
 
+// Mobile drawer
+.mobile-drawer {
+  position: fixed;
+  inset: 0;
+  z-index: 999;
+  background: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(4px);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+
+  &.open {
+    opacity: 1;
+    pointer-events: all;
+
+    .drawer-nav { transform: translateX(0); }
+  }
+}
+
+.drawer-nav {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: min(320px, 85vw);
+  height: 100%;
+  background: rgba(3, 10, 30, 0.97);
+  border-left: 1px solid rgba(9, 96, 225, 0.3);
+  padding: 5rem 2rem 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  transform: translateX(100%);
+  transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+
+  .drawer-link {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    padding: 0.9rem 1rem;
+    border-radius: 12px;
+    color: rgba(255,255,255,0.85);
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: 600;
+    transition: background 0.2s, color 0.2s;
+
+    &:hover { background: rgba(9, 96, 225, 0.12); color: #2E96F5; }
+  }
+
+  .drawer-social {
+    display: flex;
+    gap: 0.75rem;
+    margin-top: auto;
+    padding-top: 1.5rem;
+    border-top: 1px solid rgba(255,255,255,0.08);
+  }
+}
+
+// Responsive
 @media (max-width: 768px) {
-  .header .navbar {
-    padding: 0.75rem 1rem;
+  .nav-links { display: none; }
+  .hamburger { display: flex; }
 
-    .nav-actions {
-      .mobile-menu-btn {
-        display: none;
-      }
-    }
-  }
-}
-
-// Por último, oculta texto de Desafios/Times (só ícones)
-@media (max-width: 650px) {
-  .header .navbar {
-    .nav-actions {
-      .register-btn, .matchmaking-btn, .login-btn {
-        justify-content: center;
-
-        span {
-          display: none;
-        }
-      }
-    }
+  .icon-btn:not(.hamburger) {
+    display: none;
   }
 }
 
 @media (max-width: 480px) {
-  .header .navbar {
-    padding: 0.5rem 1rem;
-
-    .nav-brand {
-      gap: 0.75rem;
-
-      .brand-text h1 {
-        font-size: 1rem;
-      }
-    }
-  }
+  .navbar { padding: 0.8rem 1rem; }
+  .nav-brand .brand-text { display: none; }
 }

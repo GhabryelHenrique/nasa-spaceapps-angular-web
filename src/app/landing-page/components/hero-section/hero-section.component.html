@@ -1,27 +1,77 @@
 <section class="hero" role="banner">
-  <div class="hero-content">
-    <h1 class="hero-title">NASA Space Apps Challenge <span class="year-easter-egg">2025</span></h1>
-    <h2 class="hero-subtitle">Uberlândia, Brasil</h2>
-    <p class="hero-description" i18n="@@hero.description">
-      Junte-se ao maior hackathon espacial do mundo! Resolva desafios reais da NASA
-      e colabore com equipes globais para criar soluções inovadoras.
+
+  <!-- Background photo com overlay -->
+  <div class="hero-bg" aria-hidden="true">
+    <img [src]="heroBg" alt="" class="hero-bg-photo" loading="eager">
+    <div class="hero-bg-overlay"></div>
+    <div class="hero-bg-gradient"></div>
+  </div>
+
+  <!-- Conteúdo centralizado -->
+  <div class="hero-body">
+
+    <!-- Badge -->
+    <div class="hero-badge reveal reveal-up">
+      <span class="badge-dot"></span>
+      NASA Space Apps Challenge
+    </div>
+
+    <!-- Título -->
+    <h1 class="hero-title reveal reveal-up delay-1">
+      Uberlândia<br>
+      <span class="hero-title-highlight">escreveu história</span>
+    </h1>
+
+    <!-- Subtítulo -->
+    <p class="hero-subtitle reveal reveal-up delay-2">
+      O maior hackathon espacial do mundo passou por aqui.<br>
+      1400+ participantes. 160+ times. Uma cidade no mapa do universo.
     </p>
-    <div class="hero-actions">
-      <a href="https://discord.gg/FT4Jsvj5vy" class="cta-discord" target="_blank" rel="noopener noreferrer" aria-label="Entre no Discord">
-      <i class="fab fa-discord" aria-hidden="true"></i>
-      Discord
+
+    <!-- CTAs -->
+    <div class="hero-actions reveal reveal-up delay-3">
+      <a href="https://discord.gg/FT4Jsvj5vy" class="cta-btn cta-discord" target="_blank" rel="noopener noreferrer">
+        <i class="fab fa-discord"></i>
+        Discord
       </a>
-      <a href="https://chat.whatsapp.com/LXwUUZaJPXtBOeKr7N4axg" class="cta-whatsapp" target="_blank" rel="noopener noreferrer" aria-label="Entre no grupo WhatsApp">
-      <i class="fab fa-whatsapp" aria-hidden="true"></i>
-      WhatsApp
+      <a href="https://chat.whatsapp.com/LXwUUZaJPXtBOeKr7N4axg" class="cta-btn cta-whatsapp" target="_blank" rel="noopener noreferrer">
+        <i class="fab fa-whatsapp"></i>
+        WhatsApp
       </a>
-      <a href="https://www.instagram.com/nasaspaceappsuberlandia" class="cta-instagram" target="_blank" rel="noopener noreferrer" aria-label="Siga no Instagram">
-      <i class="fab fa-instagram" aria-hidden="true"></i>
-      Instagram
+      <a href="https://www.instagram.com/nasaspaceappsuberlandia" class="cta-btn cta-instagram" target="_blank" rel="noopener noreferrer">
+        <i class="fab fa-instagram"></i>
+        Instagram
       </a>
     </div>
+
   </div>
-  <div class="hero-image">
-    <img src="assets/nasa-spaceapps-logo.png" alt="Logo oficial do NASA Space Apps Challenge - Hackathon espacial internacional" width="400"  loading="eager">
+
+  <!-- Stat bar na base do hero -->
+  <div class="hero-stats reveal reveal-up delay-4">
+    <div class="hero-stat">
+      <span class="hero-stat-value">1400<span class="hero-stat-plus">+</span></span>
+      <span class="hero-stat-label">Participantes</span>
+    </div>
+    <div class="hero-stat-divider" aria-hidden="true"></div>
+    <div class="hero-stat">
+      <span class="hero-stat-value">160<span class="hero-stat-plus">+</span></span>
+      <span class="hero-stat-label">Times</span>
+    </div>
+    <div class="hero-stat-divider" aria-hidden="true"></div>
+    <div class="hero-stat">
+      <span class="hero-stat-value">#1</span>
+      <span class="hero-stat-label">Hemisfério Ocidental</span>
+    </div>
+    <div class="hero-stat-divider" aria-hidden="true"></div>
+    <div class="hero-stat">
+      <span class="hero-stat-value">10</span>
+      <span class="hero-stat-label">Global Nominees</span>
+    </div>
   </div>
+
+  <!-- Scroll indicator -->
+  <div class="scroll-indicator" aria-hidden="true">
+    <span class="scroll-dot"></span>
+  </div>
+
 </section>
