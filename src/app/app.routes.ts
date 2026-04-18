@@ -12,11 +12,9 @@ import { AuthGuard } from './guards/auth.guard';
 import { ChallengesComponent } from './challenges/challenges.component';
 import { ParticipantsComponent } from './participants/participants.component';
 import { WinnerTeamDetailComponent } from './winner-team-detail/winner-team-detail.component';
-import { GaleriaComponent } from './galeria/galeria.component';
 
 export const routes: Routes = [
   { path: '', component: LandingPageComponent },
-  { path: 'galeria', component: GaleriaComponent },
   { path: 'login', component: LoginComponent },
   { path: 'dashboard', component: DashboardComponent, canActivate: [AuthGuard] },
   { path: 'profile/create', component: ProfileCreateComponent, canActivate: [AuthGuard] },
