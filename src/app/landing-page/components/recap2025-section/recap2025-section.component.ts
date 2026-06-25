@@ -62,7 +62,7 @@ export class Recap2025SectionComponent implements OnInit, OnDestroy {
     { value: 48, displayValue: '48', prefix: '', suffix: 'h', label: 'De hackathon intenso e criativo', icon: '⏱️', color: '#0960E1', animatedValue: 0 },
     // { value: 4, displayValue: '4', prefix: '', suffix: '', label: 'Prêmios Especiais entregues', icon: '🎖️', color: '#E43700', animatedValue: 0 },
     // { value: 20, displayValue: '20', prefix: '+', suffix: '', label: 'Desafios da NASA disponíveis', icon: '🚀', color: '#E43700', animatedValue: 0 },
-    { value: 200, displayValue: '200', prefix: '+', suffix: '', label: 'Latas de RedBull Distribuidas', icon: '💪', color: '#E43700', animatedValue: 0 },
+    { value: 200, displayValue: '600', prefix: '+', suffix: '', label: 'Latas de RedBull Distribuidas', icon: '💪', color: '#E43700', animatedValue: 0 },
     { value: 30, displayValue: '30', prefix: '+', suffix: '', label: 'Patrocinadores e apoiadores', icon: '🤝', color: '#EAFE07', animatedValue: 0 },
   ];
 

@@ -1,7 +1,7 @@
-import { Injectable } from '@angular/core';
+import { Injectable, inject } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { BehaviorSubject, Observable } from 'rxjs';
-import { map, tap } from 'rxjs/operators';
+import { tap } from 'rxjs/operators';
 import { environment } from '../../../environments/environment';
 import { 
   CheckEmailRequest, 
@@ -15,12 +15,12 @@ import {
   providedIn: 'root'
 })
 export class AuthService {
-  private apiUrl = environment.apiUrl;
-  private currentUserSubject = new BehaviorSubject<UserRegistration | null>(null);
-  public currentUser$ = this.currentUserSubject.asObservable();
+  private readonly http = inject(HttpClient);
+  private readonly apiUrl = environment.apiUrl;
+  private readonly currentUserSubject = new BehaviorSubject<UserRegistration | null>(null);
+  readonly currentUser$ = this.currentUserSubject.asObservable();
 
-  constructor(private http: HttpClient) {
-    // Verificar se existe usuário no localStorage
+  constructor() {
     const savedUser = localStorage.getItem('currentUser');
     if (savedUser) {
       this.currentUserSubject.next(JSON.parse(savedUser));

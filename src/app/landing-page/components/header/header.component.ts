@@ -1,10 +1,9 @@
 import { CommonModule, isPlatformBrowser } from '@angular/common';
-import { Component, HostListener, Inject, PLATFORM_ID } from '@angular/core';
+import { Component, HostListener, PLATFORM_ID, inject } from '@angular/core';
 import { Router, RouterLink } from '@angular/router';
 import { CodeVerificationModalComponent } from '../../../shared/components/code-verification-modal/code-verification-modal.component';
 import { EmailVerificationModalComponent } from '../../../shared/components/email-verification-modal/email-verification-modal.component';
 import { CHALLENGES_DATA } from '../../../shared/data/challenges.data';
-import { LanguageSwitcherComponent } from '../../../shared/language-switcher/language-switcher.component';
 import { MatchmakingService } from '../../../shared/services/matchmaking.service';
 
 interface ChallengeCategory {
@@ -18,7 +17,7 @@ interface ChallengeCategory {
 
 @Component({
   selector: 'app-header',
-  imports: [RouterLink, CommonModule, EmailVerificationModalComponent, CodeVerificationModalComponent, LanguageSwitcherComponent],
+  imports: [RouterLink, CommonModule, EmailVerificationModalComponent, CodeVerificationModalComponent],
   templateUrl: './header.component.html',
   styleUrl: './header.component.scss',
 })
@@ -36,11 +35,11 @@ export class HeaderComponent {
     { id: 3, name: 'Avançado', slug: 'advanced', color: '#8B0A03', icon: 'fa-solid fa-trophy', count: this.getCategoryCount('advanced') }
   ];
 
-  constructor(
-    private matchmakingService: MatchmakingService,
-    private router: Router,
-    @Inject(PLATFORM_ID) private platformId: object
-  ) {
+  private readonly matchmakingService = inject(MatchmakingService);
+  private readonly router = inject(Router);
+  private readonly platformId = inject(PLATFORM_ID);
+
+  constructor() {
     this.matchmakingService.isAuthenticated$.subscribe(isAuth => { this.isLoggedIn = isAuth; });
   }
 

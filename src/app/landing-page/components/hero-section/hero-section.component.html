@@ -7,36 +7,49 @@
     <div class="hero-bg-gradient"></div>
   </div>
 
+  <!-- Partículas decorativas -->
+  <div class="hero-particles" aria-hidden="true">
+    <span class="particle" *ngFor="let p of particles"></span>
+  </div>
+
   <!-- Conteúdo centralizado -->
   <div class="hero-body">
 
-    <!-- Badge -->
-    <div class="hero-badge reveal reveal-up">
-      <span class="badge-dot"></span>
-      NASA Space Apps Challenge
+    <!-- Badge duplo: edição atual + próxima -->
+    <div class="hero-badges reveal reveal-up">
+      <div class="hero-badge hero-badge-past">
+        <span class="badge-dot"></span>
+        2025 · Uberlândia escreveu história
+      </div>
+      <div class="hero-badge-sep" aria-hidden="true">→</div>
+      <div class="hero-badge hero-badge-next">
+        <span class="badge-pulse"></span>
+        2026 · Prepare-se
+      </div>
     </div>
 
     <!-- Título -->
     <h1 class="hero-title reveal reveal-up delay-1">
-      Uberlândia<br>
-      <span class="hero-title-highlight">escreveu história</span>
+      O maior hackathon<br>
+      <span class="hero-title-highlight">espacial do mundo</span><br>
+      <span class="hero-title-sub">volta em novembro</span>
     </h1>
 
     <!-- Subtítulo -->
     <p class="hero-subtitle reveal reveal-up delay-2">
-      O maior hackathon espacial do mundo passou por aqui.<br>
-      1400+ participantes. 160+ times. Uma cidade no mapa do universo.
+      Em 2025 fomos <strong>#1 no Hemisfério Ocidental</strong> com 1400+ participantes e 10 Global Nominees.<br>
+      Em 2026, a missão recomeça. <strong>14 de Novembro.</strong> Você vai estar lá?
     </p>
 
     <!-- CTAs -->
     <div class="hero-actions reveal reveal-up delay-3">
-      <a href="https://discord.gg/FT4Jsvj5vy" class="cta-btn cta-discord" target="_blank" rel="noopener noreferrer">
+      <a href="https://chat.whatsapp.com/LXwUUZaJPXtBOeKr7N4axg" class="cta-btn cta-primary-hero" target="_blank" rel="noopener noreferrer">
+        <i class="fab fa-whatsapp"></i>
+        Garantir meu lugar
+      </a>
+      <a href="https://discord.gg/FT4Jsvj5vy" class="cta-btn cta-discord-hero" target="_blank" rel="noopener noreferrer">
         <i class="fab fa-discord"></i>
         Discord
-      </a>
-      <a href="https://chat.whatsapp.com/LXwUUZaJPXtBOeKr7N4axg" class="cta-btn cta-whatsapp" target="_blank" rel="noopener noreferrer">
-        <i class="fab fa-whatsapp"></i>
-        WhatsApp
       </a>
       <a href="https://www.instagram.com/nasaspaceappsuberlandia" class="cta-btn cta-instagram" target="_blank" rel="noopener noreferrer">
         <i class="fab fa-instagram"></i>
@@ -50,7 +63,7 @@
   <div class="hero-stats reveal reveal-up delay-4">
     <div class="hero-stat">
       <span class="hero-stat-value">1400<span class="hero-stat-plus">+</span></span>
-      <span class="hero-stat-label">Participantes</span>
+      <span class="hero-stat-label">Participantes 2025</span>
     </div>
     <div class="hero-stat-divider" aria-hidden="true"></div>
     <div class="hero-stat">
@@ -66,6 +79,11 @@
     <div class="hero-stat">
       <span class="hero-stat-value">10</span>
       <span class="hero-stat-label">Global Nominees</span>
+    </div>
+    <div class="hero-stat-divider" aria-hidden="true"></div>
+    <div class="hero-stat hero-stat-next">
+      <span class="hero-stat-value hero-stat-date">14 Nov</span>
+      <span class="hero-stat-label">Próxima edição 2026</span>
     </div>
   </div>
 

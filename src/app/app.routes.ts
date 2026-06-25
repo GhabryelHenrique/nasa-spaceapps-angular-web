@@ -1,30 +1,57 @@
 import { Routes } from '@angular/router';
-import { LandingPageComponent } from './landing-page/landing-page.component';
-import { PrivacyPolicyComponent } from './privacy-policy/privacy-policy.component';
-import { TeamsComponent } from './teams/teams.component';
-import { WarRoomComponent } from './war-room/war-room.component';
-import { MatchmakingDashboardComponent } from './matchmaking/matchmaking-dashboard.component';
-import { LoginComponent } from './components/auth/login.component';
-import { DashboardComponent } from './components/dashboard/dashboard.component';
-import { ProfileCreateComponent } from './components/profile-create/profile-create.component';
-import { MatchesComponent } from './components/matches/matches.component';
-import { AuthGuard } from './guards/auth.guard';
-import { ChallengesComponent } from './challenges/challenges.component';
-import { ParticipantsComponent } from './participants/participants.component';
-import { WinnerTeamDetailComponent } from './winner-team-detail/winner-team-detail.component';
+import { authGuard } from './guards/auth.guard';
 
 export const routes: Routes = [
-  { path: '', component: LandingPageComponent },
-  { path: 'login', component: LoginComponent },
-  { path: 'dashboard', component: DashboardComponent, canActivate: [AuthGuard] },
-  { path: 'profile/create', component: ProfileCreateComponent, canActivate: [AuthGuard] },
-  { path: 'matches', component: MatchesComponent, canActivate: [AuthGuard] },
-  { path: 'desafios', component: ChallengesComponent },
-  { path: 'times', component: TeamsComponent },
-  { path: 'times-vencedores/:slug', component: WinnerTeamDetailComponent },
-  { path: 'sala-de-guerra', component: WarRoomComponent },
-  { path: 'matchmaking', component: MatchmakingDashboardComponent },
-  { path: 'participantes', component: ParticipantsComponent },
-  { path: 'politica-privacidade', component: PrivacyPolicyComponent },
+  {
+    path: '',
+    loadComponent: () => import('./landing-page/landing-page.component').then(m => m.LandingPageComponent)
+  },
+  {
+    path: 'login',
+    loadComponent: () => import('./components/auth/login.component').then(m => m.LoginComponent)
+  },
+  {
+    path: 'dashboard',
+    loadComponent: () => import('./components/dashboard/dashboard.component').then(m => m.DashboardComponent),
+    canActivate: [authGuard]
+  },
+  {
+    path: 'profile/create',
+    loadComponent: () => import('./components/profile-create/profile-create.component').then(m => m.ProfileCreateComponent),
+    canActivate: [authGuard]
+  },
+  {
+    path: 'matches',
+    loadComponent: () => import('./components/matches/matches.component').then(m => m.MatchesComponent),
+    canActivate: [authGuard]
+  },
+  {
+    path: 'desafios',
+    loadComponent: () => import('./challenges/challenges.component').then(m => m.ChallengesComponent)
+  },
+  {
+    path: 'times',
+    loadComponent: () => import('./teams/teams.component').then(m => m.TeamsComponent)
+  },
+  {
+    path: 'times-vencedores/:slug',
+    loadComponent: () => import('./winner-team-detail/winner-team-detail.component').then(m => m.WinnerTeamDetailComponent)
+  },
+  {
+    path: 'sala-de-guerra',
+    loadComponent: () => import('./war-room/war-room.component').then(m => m.WarRoomComponent)
+  },
+  {
+    path: 'matchmaking',
+    loadComponent: () => import('./matchmaking/matchmaking-dashboard.component').then(m => m.MatchmakingDashboardComponent)
+  },
+  {
+    path: 'participantes',
+    loadComponent: () => import('./participants/participants.component').then(m => m.ParticipantsComponent)
+  },
+  {
+    path: 'politica-privacidade',
+    loadComponent: () => import('./privacy-policy/privacy-policy.component').then(m => m.PrivacyPolicyComponent)
+  },
   { path: '**', redirectTo: '' }
 ];

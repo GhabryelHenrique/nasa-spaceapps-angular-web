@@ -1,4 +1,5 @@
-@import "../../../../styles/variables";
+@use 'sass:math';
+@use "../../../../styles/variables" as *;
 
 // =============================================
 // PHOTOS GALLERY SECTION
@@ -32,12 +33,12 @@
 
     @for $i from 1 through 25 {
       &:nth-child(#{$i}) {
-        top: random(100) * 1%;
-        left: random(100) * 1%;
-        width: 1px + random(2) * 1px;
-        height: 1px + random(2) * 1px;
-        opacity: 0.2 + random(6) * 0.1;
-        animation-delay: random(4000) * 1ms;
+        top: math.random(100) * 1%;
+        left: math.random(100) * 1%;
+        width: 1px + math.random(2) * 1px;
+        height: 1px + math.random(2) * 1px;
+        opacity: 0.2 + math.random(6) * 0.1;
+        animation-delay: math.random(4000) * 1ms;
       }
     }
   }

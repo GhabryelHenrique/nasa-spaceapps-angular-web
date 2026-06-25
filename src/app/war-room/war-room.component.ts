@@ -1,4 +1,5 @@
-import { Component, OnInit, OnDestroy } from '@angular/core';
+import { Component, OnInit, DestroyRef, inject } from '@angular/core';
+import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
 import { CommonModule } from '@angular/common';
 import * as localEvents  from '../../assets/data/localEvents.json';
 import { CityParticipation } from '../shared/interfaces/local-event.interface';
@@ -7,7 +8,6 @@ import { RegistrationMapComponent } from './components/registration-map/registra
 import { ChallengeChartComponent } from './components/challenge-chart/challenge-chart.component';
 import { ParticipantsByCountryChartComponent } from './components/participants-by-country-chart/participants-by-country-chart.component';
 import { BrazilianCitiesComparisonComponent } from './components/brazilian-cities-comparison/brazilian-cities-comparison.component';
-import { WorldCitiesComparisonComponent } from './components/world-cities-comparison/world-cities-comparison.component';
 import { FeedbackDetailsComponent } from './components/feedback-details/feedback-details.component';
 import { RegistrationDataService, RegistrationStats } from '../services/registration-data.service';
 import { GoogleSheetsService, RegistrationRow, FeedbackRow } from '../services/google-sheets.service';
@@ -15,16 +15,14 @@ import { NasaTeamsService, TeamData, LocalEventData } from '../services/nasa-tea
 import { TeamsService } from '../services/teams.service';
 import { OtherCitiesTeamsService } from '../services/other-cities-teams.service';
 import { Team } from '../shared/data/teams.data';
-import { Subject } from 'rxjs';
-import { takeUntil } from 'rxjs/operators';
 
 @Component({
   selector: 'app-war-room',
-  imports: [CommonModule, RegistrationChartsComponent, RegistrationMapComponent, ChallengeChartComponent, ParticipantsByCountryChartComponent, BrazilianCitiesComparisonComponent, WorldCitiesComparisonComponent, FeedbackDetailsComponent],
+  imports: [CommonModule, RegistrationChartsComponent, RegistrationMapComponent, ChallengeChartComponent, ParticipantsByCountryChartComponent, BrazilianCitiesComparisonComponent, FeedbackDetailsComponent],
   templateUrl: './war-room.component.html',
   styleUrl: './war-room.component.scss'
 })
-export class WarRoomComponent implements OnInit, OnDestroy {
+export class WarRoomComponent implements OnInit {
   cities: CityParticipation[] = [];
   sortOrder: 'desc' | 'asc' = 'desc';
   totalParticipants = 0;
@@ -57,15 +55,12 @@ export class WarRoomComponent implements OnInit, OnDestroy {
     submissionRate: number;
   }> = [];
 
-  private destroy$ = new Subject<void>();
-
-  constructor(
-    private registrationDataService: RegistrationDataService,
-    private googleSheetsService: GoogleSheetsService,
-    private nasaTeamsService: NasaTeamsService,
-    private teamsService: TeamsService,
-    private otherCitiesTeamsService: OtherCitiesTeamsService
-  ) {}
+  private readonly destroyRef = inject(DestroyRef);
+  private readonly registrationDataService = inject(RegistrationDataService);
+  private readonly googleSheetsService = inject(GoogleSheetsService);
+  private readonly nasaTeamsService = inject(NasaTeamsService);
+  private readonly teamsService = inject(TeamsService);
+  private readonly otherCitiesTeamsService = inject(OtherCitiesTeamsService);
 
   ngOnInit() {
     this.loadCities();
@@ -76,39 +71,29 @@ export class WarRoomComponent implements OnInit, OnDestroy {
     this.loadCityTeamsStats();
   }
 
-  ngOnDestroy() {
-    this.destroy$.next();
-    this.destroy$.complete();
-  }
-
   private subscribeToNasaData() {
-    // Subscribe to teams data
     this.nasaTeamsService.teams$
-      .pipe(takeUntil(this.destroy$))
+      .pipe(takeUntilDestroyed(this.destroyRef))
       .subscribe(teams => {
         this.teams = teams;
         this.lastTeamsUpdate = new Date();
       });
 
-    // Subscribe to local events data
     this.nasaTeamsService.localEvents$
-      .pipe(takeUntil(this.destroy$))
+      .pipe(takeUntilDestroyed(this.destroyRef))
       .subscribe(events => {
         this.localEventsLive = events;
-        // Atualiza os dados das cidades com dados em tempo real se disponível
         this.updateCitiesWithLiveData();
       });
 
-    // Subscribe to loading state
     this.nasaTeamsService.loading$
-      .pipe(takeUntil(this.destroy$))
+      .pipe(takeUntilDestroyed(this.destroyRef))
       .subscribe(loading => {
         this.isLoadingTeams = loading;
       });
 
-    // Subscribe to error state
     this.nasaTeamsService.error$
-      .pipe(takeUntil(this.destroy$))
+      .pipe(takeUntilDestroyed(this.destroyRef))
       .subscribe(error => {
         this.teamsError = error;
       });
