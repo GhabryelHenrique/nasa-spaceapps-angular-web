@@ -1,16 +1,21 @@
 {
-    "name": "NASA Space Apps Challenge 2025 Uberlândia",
+    "name": "NASA Space Apps Challenge 2026 Uberlândia",
     "short_name": "Space Apps UDI",
     "description": "Hackathon internacional de 48 horas para resolver desafios espaciais e terrestres",
     "icons": [
         {
-            "src": "/android-chrome-192x192.png",
-            "sizes": "192x192",
+            "src": "/favicon.ico",
+            "sizes": "48x48",
+            "type": "image/x-icon"
+        },
+        {
+            "src": "/favicon-32x32.png",
+            "sizes": "32x32",
             "type": "image/png"
         },
         {
-            "src": "/android-chrome-512x512.png",
-            "sizes": "512x512",
+            "src": "/favicon-16x16.png",
+            "sizes": "16x16",
             "type": "image/png"
         }
     ],
