@@ -1,27 +1,97 @@
 <section class="hero" role="banner">
-  <div class="hero-content">
-    <h1 class="hero-title">NASA Space Apps Challenge <span class="year-easter-egg">2025</span></h1>
-    <h2 class="hero-subtitle">Uberlândia, Brasil</h2>
-    <p class="hero-description" i18n="@@hero.description">
-      Junte-se ao maior hackathon espacial do mundo! Resolva desafios reais da NASA
-      e colabore com equipes globais para criar soluções inovadoras.
+
+  <!-- Background photo com overlay -->
+  <div class="hero-bg" aria-hidden="true">
+    <img [src]="heroBg" alt="" class="hero-bg-photo" loading="eager">
+    <div class="hero-bg-overlay"></div>
+    <div class="hero-bg-gradient"></div>
+  </div>
+
+  <!-- Partículas decorativas -->
+  <div class="hero-particles" aria-hidden="true">
+    @for (p of particles; track p) {
+      <span class="particle"></span>
+    }
+  </div>
+
+  <!-- Conteúdo centralizado -->
+  <div class="hero-body">
+
+    <!-- Badge duplo: edição atual + próxima -->
+    <div class="hero-badges reveal reveal-up">
+      <div class="hero-badge hero-badge-past">
+        <span class="badge-dot"></span>
+        2025 · Uberlândia escreveu história
+      </div>
+      <div class="hero-badge-sep" aria-hidden="true">→</div>
+      <div class="hero-badge hero-badge-next">
+        <span class="badge-pulse"></span>
+        2026 · Prepare-se
+      </div>
+    </div>
+
+    <!-- Título -->
+    <h1 class="hero-title reveal reveal-up delay-1">
+      O maior hackathon<br>
+      <span class="hero-title-highlight">espacial do mundo</span><br>
+      <span class="hero-title-sub">volta em novembro</span>
+    </h1>
+
+    <!-- Subtítulo -->
+    <p class="hero-subtitle reveal reveal-up delay-2">
+      Em 2025 fomos <strong>#1 no Hemisfério Ocidental</strong> com 1400+ participantes e 10 Global Nominees.<br>
+      Em 2026, a missão recomeça. <strong>14 de Novembro.</strong> Você vai estar lá?
     </p>
-    <div class="hero-actions">
-      <a href="https://discord.gg/FT4Jsvj5vy" class="cta-discord" target="_blank" rel="noopener noreferrer" aria-label="Entre no Discord">
-      <i class="fab fa-discord" aria-hidden="true"></i>
-      Discord
+
+    <!-- CTAs -->
+    <div class="hero-actions reveal reveal-up delay-3">
+      <a href="https://chat.whatsapp.com/LLsTZ9soMR2GflnGSrft0j" class="cta-btn cta-primary-hero" target="_blank" rel="noopener noreferrer">
+        <i class="fab fa-whatsapp"></i>
+        Garantir meu lugar
       </a>
-      <a href="https://chat.whatsapp.com/LXwUUZaJPXtBOeKr7N4axg" class="cta-whatsapp" target="_blank" rel="noopener noreferrer" aria-label="Entre no grupo WhatsApp">
-      <i class="fab fa-whatsapp" aria-hidden="true"></i>
-      WhatsApp
+      <a href="https://discord.gg/FT4Jsvj5vy" class="cta-btn cta-discord-hero" target="_blank" rel="noopener noreferrer">
+        <i class="fab fa-discord"></i>
+        Discord
       </a>
-      <a href="https://www.instagram.com/nasaspaceappsuberlandia" class="cta-instagram" target="_blank" rel="noopener noreferrer" aria-label="Siga no Instagram">
-      <i class="fab fa-instagram" aria-hidden="true"></i>
-      Instagram
+      <a href="https://www.instagram.com/nasaspaceappsuberlandia" class="cta-btn cta-instagram" target="_blank" rel="noopener noreferrer">
+        <i class="fab fa-instagram"></i>
+        Instagram
       </a>
     </div>
+
   </div>
-  <div class="hero-image">
-    <img src="assets/nasa-spaceapps-logo.png" alt="Logo oficial do NASA Space Apps Challenge - Hackathon espacial internacional" width="400"  loading="eager">
+
+  <!-- Stat bar na base do hero -->
+  <div class="hero-stats reveal reveal-up delay-4">
+    <div class="hero-stat">
+      <span class="hero-stat-value">1400<span class="hero-stat-plus">+</span></span>
+      <span class="hero-stat-label">Participantes 2025</span>
+    </div>
+    <div class="hero-stat-divider" aria-hidden="true"></div>
+    <div class="hero-stat">
+      <span class="hero-stat-value">160<span class="hero-stat-plus">+</span></span>
+      <span class="hero-stat-label">Times</span>
+    </div>
+    <div class="hero-stat-divider" aria-hidden="true"></div>
+    <div class="hero-stat">
+      <span class="hero-stat-value">#1</span>
+      <span class="hero-stat-label">Hemisfério Ocidental</span>
+    </div>
+    <div class="hero-stat-divider" aria-hidden="true"></div>
+    <div class="hero-stat">
+      <span class="hero-stat-value">10</span>
+      <span class="hero-stat-label">Global Nominees</span>
+    </div>
+    <div class="hero-stat-divider" aria-hidden="true"></div>
+    <div class="hero-stat hero-stat-next">
+      <span class="hero-stat-value hero-stat-date">14 Nov</span>
+      <span class="hero-stat-label">Próxima edição 2026</span>
+    </div>
   </div>
+
+  <!-- Scroll indicator -->
+  <div class="scroll-indicator" aria-hidden="true">
+    <span class="scroll-dot"></span>
+  </div>
+
 </section>

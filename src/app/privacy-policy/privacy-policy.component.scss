@@ -1,11 +1,11 @@
-@import '../../styles/variables';
+@use '../../styles/variables' as *;
 
 .privacy-policy-container {
   min-height: 100vh;
   background: var(--gradient-space);
   color: var(--text-primary);
   font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-  padding: 2rem 0;
+  padding: 100px 0 2rem;
   position: relative;
 
   &::before {

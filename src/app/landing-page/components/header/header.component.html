@@ -1,51 +1,62 @@
-<header class="header">
+<header class="header" [class.scrolled]="scrolled && !mobileMenuOpen">
   <nav class="navbar" role="navigation" aria-label="Navegação principal">
+
+    <!-- Brand -->
     <a class="nav-brand" routerLink="/">
-      <img class="nasa-logo" src="assets/nasa-spaceapps-logo-removebg-preview.png" alt="Logo do NASA Space Apps Challenge - Hackathon espacial internacional" loading="lazy">
+      <img class="nasa-logo" src="assets/nasa-spaceapps-logo-removebg-preview.png" alt="NASA Space Apps Challenge" loading="lazy">
+      <div class="brand-text">
+        <span class="brand-title">NASA Space Apps</span>
+        <span class="brand-location">Uberlândia</span>
+      </div>
     </a>
+
+    <!-- Desktop nav links -->
+    <ul class="nav-links" role="list">
+      <li><a routerLink="/desafios" class="nav-link"><i class="fa-solid fa-trophy"></i> Desafios</a></li>
+      <li><a routerLink="/times" class="nav-link"><i class="fa-solid fa-users"></i> Times</a></li>
+    </ul>
+
+    <!-- Social CTAs -->
     <div class="nav-actions">
-      <button class="social-btn whatsapp-btn" (click)="openWhatsApp()">
+      <button class="icon-btn whatsapp" (click)="openWhatsApp()" aria-label="WhatsApp">
         <i class="fa-brands fa-whatsapp"></i>
-        <span>WhatsApp</span>
       </button>
-      <button class="social-btn discord-btn" (click)="joinDiscordServer()">
+      <button class="icon-btn discord" (click)="joinDiscordServer()" aria-label="Discord">
         <i class="fa-brands fa-discord"></i>
-        <span>Discord</span>
       </button>
-      <button class="social-btn instagram-btn" (click)="openInstagram()">
+      <button class="icon-btn instagram" (click)="openInstagram()" aria-label="Instagram">
         <i class="fa-brands fa-instagram"></i>
-        <span>Instagram</span>
       </button>
-      <!-- <app-language-switcher></app-language-switcher> -->
-      <a routerLink="/desafios" class="register-btn">
-        <i class="fa-solid fa-trophy"></i>
-        <span i18n="@@nav.challenges">Desafios</span>
-      </a>
-      <a routerLink="/times" class="register-btn">
-        <i class="fa-solid fa-users"></i>
-        <span i18n="@@nav.teams">Times</span>
-      </a>
-      <!-- <button class="matchmaking-btn" (click)="openMatchmaking()">
-        <i class="fa-solid fa-handshake"></i>
-        Matchmaking
-      </button> -->
-      <!-- <a href="https://docs.google.com/forms/d/e/1FAIpQLSfXZyu0PCuyIGgC_33jCLaOk-dmB1SugvrIt2eUK7EaWvq6mg/viewform" class="login-btn" target="_blank" rel="noopener noreferrer">
-        <i class="fa-solid fa-user-plus"></i>
-        <span i18n="@@nav.register">Inscreva-se Agora</span>
-      </a> -->
+      <!-- Hamburger -->
+      <button class="hamburger" (click)="toggleMobileMenu()" [class.active]="mobileMenuOpen" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
     </div>
+
   </nav>
+
+  <!-- Mobile drawer -->
+  <div class="mobile-drawer" [class.open]="mobileMenuOpen" (click)="closeMobileMenu()">
+    <nav class="drawer-nav" (click)="$event.stopPropagation()">
+      <a routerLink="/desafios" class="drawer-link" (click)="closeMobileMenu()"><i class="fa-solid fa-trophy"></i> Desafios</a>
+      <a routerLink="/times" class="drawer-link" (click)="closeMobileMenu()"><i class="fa-solid fa-users"></i> Times</a>
+      <div class="drawer-social">
+        <button class="icon-btn whatsapp" (click)="openWhatsApp()"><i class="fa-brands fa-whatsapp"></i></button>
+        <button class="icon-btn discord" (click)="joinDiscordServer()"><i class="fa-brands fa-discord"></i></button>
+        <button class="icon-btn instagram" (click)="openInstagram()"><i class="fa-brands fa-instagram"></i></button>
+      </div>
+    </nav>
+  </div>
 </header>
 
-<!-- <app-email-verification-modal
+<app-email-verification-modal
   [isOpen]="showEmailModal"
   (close)="showEmailModal = false"
   (emailVerified)="onEmailVerified($event)">
 </app-email-verification-modal>
-
 <app-code-verification-modal
   [isOpen]="showCodeModal"
   [email]="userEmail"
   (close)="showCodeModal = false"
   (codeVerified)="onCodeVerified()">
-</app-code-verification-modal> -->
+</app-code-verification-modal>

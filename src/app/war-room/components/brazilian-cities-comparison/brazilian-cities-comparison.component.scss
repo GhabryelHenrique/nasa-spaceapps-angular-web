@@ -43,7 +43,7 @@
       width: 50px;
       height: 50px;
       border: 4px solid rgba(255, 255, 255, 0.1);
-      border-top-color: #4ecdc4;
+      border-top-color: #2E96F5;
       border-radius: 50%;
       animation: spin 1s linear infinite;
     }
@@ -79,8 +79,8 @@
 
         &:hover {
           transform: translateY(-4px);
-          box-shadow: 0 8px 24px rgba(78, 205, 196, 0.2);
-          border-color: rgba(78, 205, 196, 0.5);
+          box-shadow: 0 8px 24px rgba(46, 150, 245, 0.2);
+          border-color: rgba(46, 150, 245, 0.5);
         }
 
         .highlight-icon {
@@ -112,7 +112,7 @@
             .rank-position {
               font-size: 2rem;
               font-weight: 700;
-              color: #4ecdc4;
+              color: #2E96F5;
             }
 
             .rank-total {
@@ -133,7 +133,7 @@
             .stats-value {
               font-size: 2.5rem;
               font-weight: 700;
-              color: #4ecdc4;
+              color: #2E96F5;
             }
 
             .stats-label {
@@ -152,7 +152,7 @@
 
             .percentage-fill {
               height: 100%;
-              background: linear-gradient(90deg, #4ecdc4, #45b7d1);
+              background: linear-gradient(90deg, #2E96F5, #0960E1);
               border-radius: 4px;
               transition: width 0.5s ease;
             }
@@ -176,7 +176,7 @@
               .city-value {
                 font-size: 2rem;
                 font-weight: 700;
-                color: #4ecdc4;
+                color: #2E96F5;
               }
 
               .vs-text {
@@ -245,7 +245,7 @@
 
         &:hover {
           transform: translateY(-2px);
-          border-color: rgba(78, 205, 196, 0.3);
+          border-color: rgba(46, 150, 245, 0.3);
         }
 
         .summary-icon {
@@ -256,7 +256,7 @@
         .summary-value {
           font-size: 2rem;
           font-weight: 700;
-          color: #4ecdc4;
+          color: #2E96F5;
           display: block;
           margin-bottom: 0.25rem;
         }
@@ -297,9 +297,9 @@
 
       .table-header {
         background: rgba(255, 255, 255, 0.05);
-        border-bottom: 2px solid rgba(78, 205, 196, 0.3);
+        border-bottom: 2px solid rgba(46, 150, 245, 0.3);
         font-weight: 600;
-        color: #4ecdc4;
+        color: #2E96F5;
         font-size: 0.9rem;
         text-transform: uppercase;
         letter-spacing: 0.5px;
@@ -314,11 +314,11 @@
         }
 
         &.uberlandia-row {
-          background: rgba(78, 205, 196, 0.1);
-          border: 2px solid rgba(78, 205, 196, 0.3);
+          background: rgba(46, 150, 245, 0.1);
+          border: 2px solid rgba(46, 150, 245, 0.3);
 
           &:hover {
-            background: rgba(78, 205, 196, 0.15);
+            background: rgba(46, 150, 245, 0.15);
           }
         }
 
@@ -363,7 +363,7 @@
             .cell-value {
               font-size: 1.1rem;
               font-weight: 600;
-              color: #4ecdc4;
+              color: #2E96F5;
             }
 
             .cell-detail {
@@ -396,7 +396,7 @@
                   }
 
                   &.good {
-                    background: linear-gradient(90deg, #4ecdc4, #45b7d1);
+                    background: linear-gradient(90deg, #2E96F5, #0960E1);
                   }
 
                   &.average {
@@ -451,7 +451,7 @@
 
         &:hover {
           transform: translateX(4px);
-          border-color: rgba(78, 205, 196, 0.3);
+          border-color: rgba(46, 150, 245, 0.3);
         }
 
         .insight-icon {
@@ -467,7 +467,7 @@
           }
 
           &.info {
-            filter: drop-shadow(0 0 8px rgba(78, 205, 196, 0.5));
+            filter: drop-shadow(0 0 8px rgba(46, 150, 245, 0.5));
           }
         }
 
@@ -478,7 +478,7 @@
           margin: 0;
 
           strong {
-            color: #4ecdc4;
+            color: #2E96F5;
             font-weight: 600;
           }
         }

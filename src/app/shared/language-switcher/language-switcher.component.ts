@@ -24,7 +24,7 @@ export class LanguageSwitcherComponent {
     this.isOpen = false;
     
     // For development, we'll reload the page with the appropriate path
-    if (locale === 'pt-BR') {
+    if (locale === 'pt-BR' || locale === 'pt') {
       window.location.href = '/';
     } else {
       // In a production environment, you would handle routing for different locales

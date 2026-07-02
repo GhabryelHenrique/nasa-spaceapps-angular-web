@@ -1,11 +1,11 @@
 <section class="event-info" id="info" role="region" aria-labelledby="event-info-title">
   <div class="container">
     <h2 id="event-info-title">Informações do Evento</h2>
-    
+
     <!-- Tab Navigation -->
     <div class="tab-navigation" role="tablist" aria-label="Informações do evento">
-      <button 
-        class="tab-btn" 
+      <button
+        class="tab-btn"
         [class.active]="activeTab === 'evento'"
         (click)="setActiveTab('evento')"
         role="tab"
@@ -14,8 +14,8 @@
         id="evento-tab">
         Sobre o Evento
       </button>
-      <button 
-        class="tab-btn" 
+      <button
+        class="tab-btn"
         [class.active]="activeTab === 'hackathon'"
         (click)="setActiveTab('hackathon')"
         role="tab"
@@ -24,8 +24,8 @@
         id="hackathon-tab">
         O que é o Hackathon
       </button>
-      <button 
-        class="tab-btn" 
+      <button
+        class="tab-btn"
         [class.active]="activeTab === 'desafios'"
         (click)="setActiveTab('desafios')"
         role="tab"
@@ -34,8 +34,8 @@
         id="desafios-tab">
         Desafios
       </button>
-      <button 
-        class="tab-btn" 
+      <button
+        class="tab-btn"
         [class.active]="activeTab === 'premios'"
         (click)="setActiveTab('premios')"
         role="tab"
@@ -54,7 +54,7 @@
           <article class="info-card">
             <div class="info-icon" role="img" aria-label="Ícone calendário">📅</div>
             <h3>Quando</h3>
-            <p>4-5 de Outubro, 2025<br>48 horas de inovação</p>
+            <p>14 e 15 de Novembro, 2026<br>48 horas de inovação</p>
           </article>
           <article class="info-card">
             <div class="info-icon" role="img" aria-label="Ícone localização">📍</div>
@@ -80,11 +80,11 @@
           <div class="hackathon-description">
             <h3>O que é o NASA Space Apps Challenge?</h3>
             <p>
-              O NASA Space Apps Challenge é o maior hackathon internacional da NASA, reunindo milhares de participantes 
-              em mais de 450 cidades ao redor do mundo. Durante 48 horas, equipes multidisciplinares trabalham juntas 
+              O NASA Space Apps Challenge é o maior hackathon internacional da NASA, reunindo milhares de participantes
+              em mais de 450 cidades ao redor do mundo. Durante 48 horas, equipes multidisciplinares trabalham juntas
               para resolver desafios reais propostos pela NASA e suas agências parceiras.
             </p>
-            
+
             <h4>Como funciona?</h4>
             <ul>
               <li><strong>Desafios Reais:</strong> Todos os desafios são baseados em problemas reais enfrentados pela NASA</li>
@@ -122,7 +122,7 @@
         <div class="challenges-info">
           <h3>Categorias de Desafios 2025</h3>
           <p class="challenges-intro">
-            A NASA disponibilizou 19 desafios únicos para 2025, cada um projetado para abordar problemas reais 
+            A NASA disponibilizou 19 desafios únicos para 2025, cada um projetado para abordar problemas reais
             enfrentados pela agência espacial e pela humanidade. Os desafios são classificados em três níveis de dificuldade.
           </p>
 
@@ -196,7 +196,7 @@
 
           <div class="award-categories">
             <h4>Categorias de Prêmios Locais e Globais</h4>
-            
+
             <div class="awards-grid">
               <img src="assets/awards/Art & Technology.png" alt="Art & Technology" class="award-image" (click)="openAwardModal('Art & Technology')">
               <img src="assets/awards/Best Mission Concept.png" alt="Best Mission Concept" class="award-image" (click)="openAwardModal('Best Mission Concept')">
@@ -213,7 +213,7 @@
 
           <div class="judging-process">
             <h4>Processo de Avaliação</h4>
-            
+
             <div class="judging-steps">
               <div class="judging-step">
                 <div class="step-number">1</div>

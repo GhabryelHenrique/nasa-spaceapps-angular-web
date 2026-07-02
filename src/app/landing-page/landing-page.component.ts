@@ -1,12 +1,11 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, inject, signal } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
 import { HeaderComponent } from './components/header/header.component';
 import { HeroSectionComponent } from './components/hero-section/hero-section.component';
-import { UberlandiaHighlightsComponent } from './components/uberlandia-highlights/uberlandia-highlights.component';
 import { EventInfoTabsComponent } from './components/event-info-tabs/event-info-tabs.component';
-import { EventsMapComponent } from './components/events-map/events-map.component';
-import { SponsorsSectionComponent } from './components/sponsors-section/sponsors-section.component';
+import { Recap2025SectionComponent } from './components/recap2025-section/recap2025-section.component';
+import { CountdownComponent } from './components/countdown/countdown.component';
 import { TeamsService } from '../services/teams.service';
 import { Team } from '../shared/data/teams.data';
 
@@ -16,10 +15,9 @@ import { Team } from '../shared/data/teams.data';
     CommonModule,
     RouterModule,
     HeroSectionComponent,
-    UberlandiaHighlightsComponent,
     EventInfoTabsComponent,
-    EventsMapComponent,
-    SponsorsSectionComponent,
+    Recap2025SectionComponent,
+    CountdownComponent,
   ],
   templateUrl: './landing-page.component.html',
   styleUrl: './landing-page.component.scss',
@@ -42,7 +40,7 @@ export class LandingPageComponent implements OnInit {
   ];
 
   // Times vencedores com dados completos da API
-  globalNomineesTeams: Team[] = [];
+  globalNomineesTeams = signal<Team[]>([]);
 
   // Times Vencedores Destacados
   highlightedWinners = [
@@ -120,7 +118,7 @@ export class LandingPageComponent implements OnInit {
     },
   ];
 
-  constructor(private teamsService: TeamsService) {}
+  private readonly teamsService = inject(TeamsService);
 
   ngOnInit(): void {
     this.loadTeamsStats();
@@ -144,9 +142,9 @@ export class LandingPageComponent implements OnInit {
           });
 
           this.totalMembers = memberCount;
+          console.log('Total Teams:', allTeams);
 
-          // Filtrar os times vencedores (Global Nominees)
-          this.globalNomineesTeams = allTeams.filter(
+          this.globalNomineesTeams.set(allTeams.filter(
             (team) =>
               team.title.toLowerCase().includes('Titan'.toLowerCase()) ||
               team.title.toLowerCase().includes('Finstream'.toLowerCase()) ||
@@ -170,7 +168,9 @@ export class LandingPageComponent implements OnInit {
                 .includes('Guardians of the city'.toLowerCase()) ||
               team.title.toLowerCase().includes('Extraplant'.toLowerCase()) ||
               team.title.toLowerCase().includes('Code and cheese'.toLowerCase())
-          );
+          ));
+
+          console.log(this.globalNomineesTeams);
 
         }
       },

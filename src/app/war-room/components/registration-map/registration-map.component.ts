@@ -218,13 +218,13 @@ export class RegistrationMapComponent implements OnInit, OnDestroy, OnChanges, A
       .leaflet-popup-content-wrapper {
         background: rgba(15, 15, 35, 0.95) !important;
         backdrop-filter: blur(10px);
-        border: 1px solid rgba(78, 205, 196, 0.3);
+        border: 1px solid rgba(46, 150, 245, 0.3);
         border-radius: 12px;
         color: #ffffff !important;
       }
       .leaflet-popup-tip {
         background: rgba(15, 15, 35, 0.95) !important;
-        border: 1px solid rgba(78, 205, 196, 0.3);
+        border: 1px solid rgba(46, 150, 245, 0.3);
       }
     `;
 
@@ -264,7 +264,7 @@ export class RegistrationMapComponent implements OnInit, OnDestroy, OnChanges, A
       const circle = L.circleMarker([cityInfo.lat, cityInfo.lng], {
         radius: radius,
         fillColor: color,
-        color: '#4ecdc4',
+        color: '#2E96F5',
         weight: 2,
         opacity: 0.8,
         fillOpacity: 0.6
@@ -273,7 +273,7 @@ export class RegistrationMapComponent implements OnInit, OnDestroy, OnChanges, A
       // Adicionar popup com informações
       const popupContent = `
         <div style="text-align: center; padding: 8px;">
-          <h4 style="margin: 0 0 8px 0; color: #4ecdc4; font-size: 1.1rem;">
+          <h4 style="margin: 0 0 8px 0; color: #2E96F5; font-size: 1.1rem;">
             📍 ${cityInfo.city}
           </h4>
           <p style="margin: 0; font-size: 1rem; font-weight: bold;">
@@ -341,6 +341,6 @@ export class RegistrationMapComponent implements OnInit, OnDestroy, OnChanges, A
     if (percentage >= 0.6) return '#ff8844'; // Laranja - alta
     if (percentage >= 0.4) return '#ffcc44'; // Amarelo - média alta
     if (percentage >= 0.2) return '#44ccff'; // Azul - média
-    return '#4ecdc4'; // Verde - baixa
+    return '#2E96F5'; // Verde - baixa
   }
 }

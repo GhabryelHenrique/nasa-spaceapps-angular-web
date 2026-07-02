@@ -1,508 +1,176 @@
-<div class="war-room-container">
-  <!-- Header Section -->
+<div class="war-room">
+
+  <!-- Cabeçalho -->
   <header class="war-room-header">
-    <div class="header-content">
-      <h1 class="war-room-title">
-        <span class="title-icon">🚀</span>
-        Sala de Guerra
-      </h1>
-      <div class="stats-container">
-        <div class="stat-card">
-          <div class="stat-number">{{ totalCities }}</div>
-          <div class="stat-label">Cidades</div>
-        </div>
-        <div class="stat-card">
-          <div class="stat-number">{{ totalParticipants }}</div>
-          <div class="stat-label">Participantes</div>
-        </div>
-        <div class="stat-card" *ngIf="registrationStats">
-          <div class="stat-number">{{ registrationStats.totalRegistrations }}</div>
-          <div class="stat-label">Inscrições Formulário</div>
-        </div>
-        <div class="stat-card" *ngIf="feedbackStats" [class.loading]="isLoadingFeedback">
-          <div class="stat-number">{{ feedbackResponsesCount }}</div>
-          <div class="stat-label">Feedbacks Recebidos</div>
-        </div>
-        <div class="stat-card live-data" [class.loading]="isLoadingTeams">
-          <div class="stat-number">{{ totalTeams }}</div>
-          <div class="stat-label">Times NASA 🔴</div>
-          <div class="live-indicator">LIVE</div>
-        </div>
-        <!-- <div class="stat-card live-data">
-          <div class="stat-number">{{ teamMembersTotal }}</div>
-          <div class="stat-label">Membros</div>
-        </div> -->
-      </div>
-    </div>
+    <h1>🛰️ Sala de Guerra</h1>
+    <p class="tagline">
+      Central de insights do NASA Space Apps Challenge Uberlândia 2025 —
+      inscrições, mentores, feedback, times e o cenário global, em um só lugar.
+    </p>
+    <p class="sources">
+      Fontes: planilhas de inscrição, mentoria e feedback (Google Sheets) +
+      dados oficiais da plataforma Space Apps.
+    </p>
   </header>
 
-  <!-- Live Data Controls -->
-  <!-- <div class="live-controls">
-    <div class="controls-section">
-      <h3>🔄 Controles de Dados em Tempo Real</h3>
-      <div class="control-buttons">
-        <button class="refresh-btn" (click)="refreshAllNasaData()" [disabled]="isLoadingTeams">
-          <span class="btn-icon">🔄</span>
-          Atualizar Tudo
-        </button>
-        <button class="refresh-btn secondary" (click)="refreshNasaTeams()" [disabled]="isLoadingTeams">
-          🚀 Times
-        </button>
-        <button class="refresh-btn secondary" (click)="refreshLocalEvents()" [disabled]="isLoadingTeams">
-          🌍 Eventos
-        </button>
-      </div>
-    </div>
-
-    <div class="status-section">
-      <div class="status-item" [class.error]="teamsError">
-        <span class="status-label">Status NASA API:</span>
-        <span class="status-value" *ngIf="!teamsError && !isLoadingTeams">✅ Conectado</span>
-        <span class="status-value loading" *ngIf="isLoadingTeams">🔄 Carregando...</span>
-        <span class="status-value error" *ngIf="teamsError">❌ Erro</span>
-      </div>
-
-      <div class="status-item">
-        <span class="status-label">Última atualização:</span>
-        <span class="status-value">{{ formatLastUpdate(lastTeamsUpdate) }}</span>
-      </div>
-
-      <div class="status-item" *ngIf="teamsError">
-        <span class="status-label">Erro:</span>
-        <span class="status-value error">{{ teamsError }}</span>
-      </div>
-    </div>
-  </div> -->
-
-  <!-- Dashboard Insights -->
-  <div class="insights-dashboard" *ngIf="registrationStats">
-    <h2 class="dashboard-title">📈 Insights dos Dados de Inscrição</h2>
-
-    <div class="insights-grid">
-      <div class="insight-card highlight">
-        <div class="insight-icon">🏆</div>
-        <div class="insight-content">
-          <h3>{{ uberlandia.registrations }}</h3>
-          <p>Inscrições confirmadas para Uberlândia</p>
-          <div class="insight-percentage">
-            {{ ((uberlandia.registrations / registrationStats.totalRegistrations) * 100).toFixed(1) }}% do total
-          </div>
-        </div>
-      </div>
-
-      <div class="insight-card">
-        <div class="insight-icon">📅</div>
-        <div class="insight-content">
-          <h3>{{ registrationStats.dailyRegistrations.length }}</h3>
-          <p>Dias com inscrições ativas</p>
-          <div class="insight-detail">
-            Pico: {{ getDayWithMostRegistrations() }} inscrições
-          </div>
-        </div>
-      </div>
-
-      <div class="insight-card">
-        <div class="insight-icon">🎓</div>
-        <div class="insight-content">
-          <h3>{{ getMostCommonEducation() }}</h3>
-          <p>Escolaridade mais comum</p>
-          <div class="insight-detail">
-            {{ getEducationPercentage() }}% dos participantes
-          </div>
-        </div>
-      </div>
-
-      <div class="insight-card">
-        <div class="insight-icon">👥</div>
-        <div class="insight-content">
-          <h3>{{ getMostCommonAgeGroup() }}</h3>
-          <p>Faixa etária predominante</p>
-          <div class="insight-detail">
-            {{ getAgeGroupPercentage() }}% dos participantes
-          </div>
-        </div>
-      </div>
-
-      <div class="insight-card">
-        <div class="insight-icon">💻</div>
-        <div class="insight-content">
-          <h3>{{ getParticipationMode() }}</h3>
-          <p>Modo de participação preferido</p>
-          <div class="insight-detail">
-            {{ getParticipationPercentage() }}% dos participantes
-          </div>
-        </div>
-      </div>
-
-      <div class="insight-card">
-        <div class="insight-icon">📍</div>
-        <div class="insight-content">
-          <h3>{{ getMostCommonArea() }}</h3>
-          <p>Região com mais participantes</p>
-          <div class="insight-detail">
-            {{ getAreaPercentage() }}% do total
-          </div>
-        </div>
-      </div>
-    </div>
+  <!-- KPIs gerais do evento -->
+  <div class="hero-tiles">
+    @if (inscritosStats()) {
+      <app-stat-tile
+        label="Inscritos"
+        [value]="fmt(inscritosStats()!.totalRegistrations)"
+        [accent]="true">
+      </app-stat-tile>
+    }
+    @if (teamsInsights()) {
+      <app-stat-tile
+        label="Times"
+        [value]="fmt(teamsInsights()!.totalTeams)">
+      </app-stat-tile>
+    }
+    @if (teamsInsights()) {
+      <app-stat-tile
+        label="Projetos enviados"
+        [value]="fmt(teamsInsights()!.submitted)"
+        [detail]="teamsInsights()!.submissionRate + '% dos times'">
+      </app-stat-tile>
+    }
+    @if (mentores()) {
+      <app-stat-tile
+        label="Mentores"
+        [value]="fmt(mentores()!.total)">
+      </app-stat-tile>
+    }
+    @if (feedback()) {
+      <app-stat-tile
+        label="NPS do evento"
+        [value]="'' + feedback()!.nps.score">
+      </app-stat-tile>
+    }
+    @if (feedback()) {
+      <app-stat-tile
+        label="Satisfação"
+        [value]="fmt(feedback()!.overallAvg) + ' / 5'">
+      </app-stat-tile>
+    }
   </div>
 
-  <!-- Feedback Dashboard -->
-  <div class="insights-dashboard" *ngIf="feedbackStats">
-    <h2 class="dashboard-title">💬 Insights dos Feedbacks do Evento</h2>
-
-    <div class="insights-grid">
-      <div class="insight-card highlight">
-        <div class="insight-icon">📊</div>
-        <div class="insight-content">
-          <h3>{{ feedbackResponsesCount }}</h3>
-          <p>Respostas de Feedback</p>
-          <div class="insight-percentage">
-            {{ ((feedbackResponsesCount / registrationStats.totalRegistrations) * 100).toFixed(1) }}% taxa de resposta
-          </div>
-        </div>
-      </div>
-
-      <div class="insight-card">
-        <div class="insight-icon">⭐</div>
-        <div class="insight-content">
-          <h3>{{ feedbackOverallAverage }}/5</h3>
-          <p>Avaliação Média Geral</p>
-          <div class="insight-detail">
-            Média de todas as categorias
-          </div>
-        </div>
-      </div>
-
-      <div class="insight-card">
-        <div class="insight-icon">😊</div>
-        <div class="insight-content">
-          <h3>{{ feedbackMostCommonSatisfaction }}</h3>
-          <p>Nível de Satisfação Predominante</p>
-          <div class="insight-detail">
-            Satisfação geral dos participantes
-          </div>
-        </div>
-      </div>
-
-      <div class="insight-card">
-        <div class="insight-icon">👍</div>
-        <div class="insight-content">
-          <h3>{{ feedbackRecommendationPercentage }}%</h3>
-          <p>Recomendariam o Evento</p>
-          <div class="insight-detail">
-            Índice de recomendação positivo
-          </div>
-        </div>
-      </div>
-
-      <div class="insight-card">
-        <div class="insight-icon">💬</div>
-        <div class="insight-content">
-          <h3>{{ feedbackStats.averageRatings.communication }}/5</h3>
-          <p>Comunicação Pré-Evento</p>
-          <div class="insight-detail">
-            Clareza das informações
-          </div>
-        </div>
-      </div>
-
-      <div class="insight-card">
-        <div class="insight-icon">📅</div>
-        <div class="insight-content">
-          <h3>{{ feedbackStats.averageRatings.scheduleClarity }}/5</h3>
-          <p>Clareza do Cronograma</p>
-          <div class="insight-detail">
-            Organização dos horários
-          </div>
-        </div>
-      </div>
-
-      <div class="insight-card">
-        <div class="insight-icon">👨‍🏫</div>
-        <div class="insight-content">
-          <h3>{{ feedbackStats.averageRatings.mentorsSupport }}/5</h3>
-          <p>Suporte dos Mentores</p>
-          <div class="insight-detail">
-            Disponibilidade e qualidade
-          </div>
-        </div>
-      </div>
-
-      <div class="insight-card">
-        <div class="insight-icon">🤝</div>
-        <div class="insight-content">
-          <h3>{{ feedbackStats.averageRatings.volunteersQuality }}/5</h3>
-          <p>Equipe de Voluntários</p>
-          <div class="insight-detail">
-            Atendimento e suporte
-          </div>
-        </div>
-      </div>
-
-      <div class="insight-card">
-        <div class="insight-icon">💬</div>
-        <div class="insight-content">
-          <h3>{{ feedbackStats.averageRatings.discordStructure }}/5</h3>
-          <p>Estrutura do Discord</p>
-          <div class="insight-detail">
-            Organização e usabilidade
-          </div>
-        </div>
-      </div>
-
-      <div class="insight-card">
-        <div class="insight-icon">✨</div>
-        <div class="insight-content">
-          <h3>{{ feedbackStats.positiveAspectsCount }}</h3>
-          <p>Aspectos Positivos</p>
-          <div class="insight-detail">
-            Feedback positivo escrito
-          </div>
-        </div>
-      </div>
-
-      <div class="insight-card">
-        <div class="insight-icon">🔧</div>
-        <div class="insight-content">
-          <h3>{{ feedbackStats.improvementSuggestionsCount }}</h3>
-          <p>Sugestões de Melhoria</p>
-          <div class="insight-detail">
-            Ideias para próximas edições
-          </div>
-        </div>
-      </div>
-
-      <div class="insight-card">
-        <div class="insight-icon">💭</div>
-        <div class="insight-content">
-          <h3>{{ feedbackStats.commentsCount }}</h3>
-          <p>Comentários Adicionais</p>
-          <div class="insight-detail">
-            Feedback qualitativo extra
-          </div>
-        </div>
-      </div>
+  <!-- Inscrições -->
+  @if (loadingInscritos()) {
+    <div class="loading-banner">
+      <span class="spinner"></span> Carregando dados de inscrição…
     </div>
-  </div>
-
-  <!-- Loading State for Feedback -->
-  <div class="loading-state" *ngIf="isLoadingFeedback && !feedbackStats">
-    <div class="loading-icon">⏳</div>
-    <p>Carregando dados de feedback...</p>
-  </div>
-
-  <!-- Feedback Details Component - Análise Detalhada -->
-  <app-feedback-details
-    [feedbackData]="feedbackData"
-    *ngIf="!isLoadingFeedback && feedbackData.length > 0">
-  </app-feedback-details>
-
-  <!-- Registration Map -->
-  <app-registration-map
-    [registrationStats]="registrationStats"
-    [uberlandia]="uberlandia"
-    >
-  </app-registration-map>
-
-  <app-registration-charts
-    [registrationStats]="registrationStats"
-    [uberlandia]="uberlandia"
-    >
-  </app-registration-charts>
-
-  <!-- Participants by Country Chart -->
-  <app-participants-by-country-chart
-    [cities]="cities || []">
-  </app-participants-by-country-chart>
-
-  <!-- Challenge Analytics Chart -->
-  <app-challenge-chart
-    [teams]="teamsForChart">
-  </app-challenge-chart>
-
-  <!-- Brazilian Cities Comparison -->
-  <app-brazilian-cities-comparison></app-brazilian-cities-comparison>
-
-  <!-- World Cities Comparison -->
-  <!-- <app-world-cities-comparison></app-world-cities-comparison> -->
-
-  <!-- City Teams Statistics Section -->
-  <section class="city-teams-stats-section" *ngIf="cityTeamsStats.length > 0">
-    <div class="section-header">
-      <h2 class="section-title">
-        <span class="title-icon">🌍</span>
-        Estatísticas de Times por Cidade
-      </h2>
+  }
+  @if (erroInscritos()) {
+    <div class="error-banner">
+      ⚠️ Não foi possível carregar a planilha de inscrições. Verifique se ela continua pública.
     </div>
+  }
+  @if (inscritosStats() && inscritosExtras()) {
+    <app-inscritos-section
+      [stats]="inscritosStats()!"
+      [extras]="inscritosExtras()!">
+    </app-inscritos-section>
+  }
 
-    <!-- Summary Cards -->
-    <div class="insights-grid">
-      <div class="insight-card highlight">
-        <div class="insight-icon">🚀</div>
-        <div class="insight-content">
-          <h3>{{ totalTeamsAllCities }}</h3>
-          <p>Total de Times</p>
-          <div class="insight-percentage">
-            em {{ cityTeamsStats.length }} cidades
-          </div>
-        </div>
-      </div>
-
-      <div class="insight-card">
-        <div class="insight-icon">✅</div>
-        <div class="insight-content">
-          <h3>{{ totalSubmittedProjectsAllCities }}</h3>
-          <p>Projetos Submetidos</p>
-          <div class="insight-detail">
-            {{ ((totalSubmittedProjectsAllCities / totalTeamsAllCities) * 100).toFixed(1) }}% do total
-          </div>
-        </div>
-      </div>
-
-      <div class="insight-card">
-        <div class="insight-icon">📊</div>
-        <div class="insight-content">
-          <h3>{{ averageSubmissionRate.toFixed(1) }}%</h3>
-          <p>Taxa Média de Submissão</p>
-          <div class="insight-detail">
-            entre todas as cidades
-          </div>
-        </div>
-      </div>
+  <!-- Mentores -->
+  @if (loadingMentores()) {
+    <div class="loading-banner">
+      <span class="spinner"></span> Carregando dados de mentores…
     </div>
-
-    <!-- Cities Stats Table -->
-    <div class="cities-stats-table">
-      <div class="table-header">
-        <div class="table-cell city-name-cell">Cidade</div>
-        <div class="table-cell teams-count-cell">Times</div>
-        <div class="table-cell projects-cell">Projetos</div>
-        <div class="table-cell rate-cell">Taxa</div>
-      </div>
-      <div
-        class="table-row"
-        *ngFor="let cityStat of cityTeamsStats; let i = index"
-        [class.top-city]="i < 3">
-        <div class="table-cell city-name-cell">
-          <span class="rank-badge" *ngIf="i === 0">🥇</span>
-          <span class="rank-badge" *ngIf="i === 1">🥈</span>
-          <span class="rank-badge" *ngIf="i === 2">🥉</span>
-          <span class="city-name-text">{{ cityStat.locationName }}</span>
-        </div>
-        <div class="table-cell teams-count-cell">
-          <span class="stat-number">{{ cityStat.totalTeams }}</span>
-        </div>
-        <div class="table-cell projects-cell">
-          <span class="stat-number">{{ cityStat.submittedProjects }}</span>
-          <span class="stat-detail">/ {{ cityStat.totalTeams }}</span>
-        </div>
-        <div class="table-cell rate-cell">
-          <div class="progress-bar-container">
-            <div class="progress-bar" [style.width.%]="cityStat.submissionRate"></div>
-          </div>
-          <span class="rate-text">{{ cityStat.submissionRate.toFixed(1) }}%</span>
-        </div>
-      </div>
+  }
+  @if (erroMentores()) {
+    <div class="error-banner">
+      ⚠️ Não foi possível carregar a planilha de mentores. Verifique se ela continua pública.
     </div>
-  </section>
+  }
+  @if (mentores()) {
+    <app-mentores-section
+      [insights]="mentores()!"
+      [inscritosTotal]="inscritosStats()?.totalRegistrations || 0">
+    </app-mentores-section>
+  }
 
-  <!-- Controls Section -->
-  <div class="controls-section">
-    <div class="sort-controls">
-      <label class="sort-label">Ordenar por participantes:</label>
-      <div class="sort-buttons">
-        <button
-          class="sort-btn"
-          [class.active]="sortOrder === 'desc'"
-          (click)="sortCities('desc')">
-          ↓ Maior para Menor
-        </button>
-        <button
-          class="sort-btn"
-          [class.active]="sortOrder === 'asc'"
-          (click)="sortCities('asc')">
-          ↑ Menor para Maior
-        </button>
-      </div>
+  <!-- Feedback -->
+  @if (loadingFeedback()) {
+    <div class="loading-banner">
+      <span class="spinner"></span> Carregando feedback do evento…
     </div>
-  </div>
-
-  <!-- Cities Grid -->
-  <div class="cities-grid">
-    <div
-      class="city-card"
-      *ngFor="let city of cities; trackBy: trackByCity; let i = index"
-      [class.top-city]="i < 3">
-
-      <!-- City Rank -->
-      <div class="city-rank">
-        <span class="rank-number">{{ i + 1 }}</span>
-        <span class="rank-medal" *ngIf="i === 0">🥇</span>
-        <span class="rank-medal" *ngIf="i === 1">🥈</span>
-        <span class="rank-medal" *ngIf="i === 2">🥉</span>
-      </div>
-
-      <!-- City Info -->
-      <div class="city-info">
-        <div class="city-name">{{ city.city }}</div>
-        <div class="city-country">{{ city.country }}</div>
-
-        <!-- Event Type -->
-        <div class="event-type" [ngClass]="getEventTypeClass(city.eventType)">
-          <span class="event-icon">{{ getEventTypeIcon(city.eventType) }}</span>
-          <span class="event-label">{{ city.eventType }}</span>
-        </div>
-      </div>
-
-      <!-- Registrations -->
-      <div class="registrations-section">
-        <div class="registrations-count">{{ city.registrations }}</div>
-        <div class="registrations-label">participantes</div>
-      </div>
-
-      <!-- Action Button -->
-      <div class="city-actions">
-        <a [href]="city.url" target="_blank" class="visit-btn">
-          <span class="btn-icon">🔗</span>
-          Ver Evento
-        </a>
-      </div>
+  }
+  @if (erroFeedback()) {
+    <div class="error-banner">
+      ⚠️ Não foi possível carregar a planilha de feedback. Verifique se ela continua pública.
     </div>
-  </div>
+  }
+  @if (feedback()) {
+    <app-feedback-section
+      [insights]="feedback()!">
+    </app-feedback-section>
+  }
 
-  <!-- Registration Analytics Section -->
-  <!-- <section class="analytics-section">
-    <div class="section-header">
-      <h2 class="section-title">
-        <span class="title-icon">📊</span>
-        Dados das Inscrições Uberlândia
-      </h2>
-      <div class="action-buttons">
-        <button
-          class="demo-btn"
-          (click)="loadDemoData()"
-          [disabled]="isLoadingFile">
-          <span class="btn-icon">🎯</span>
-          Ver Demo
-        </button>
-        <button
-          class="upload-btn"
-          (click)="triggerFileUpload()"
-          [disabled]="isLoadingFile">
-          <span class="btn-icon">📁</span>
-          {{ isLoadingFile ? 'Carregando...' : 'Upload Excel' }}
-        </button>
+  <!-- Times & Desafios -->
+  @if (teamsInsights()) {
+    <app-teams-section
+      [insights]="teamsInsights()!"
+      [winners]="winners()">
+    </app-teams-section>
+  }
+
+  <!-- Uberlândia no mundo -->
+  @if (cities().length > 0) {
+    <section class="wr-section global-section">
+      <h2 class="section-title"><span class="title-icon">🌍</span>Uberlândia no mundo</h2>
+      <p class="section-subtitle">
+        Comparação com os {{ fmt(totalCitiesWorld()) }} eventos locais oficiais
+        ({{ fmt(totalParticipantsWorld()) }} participantes registrados no mundo).
+      </p>
+
+      <div class="hero-tiles">
+        @if (uberlandia()) {
+          <app-stat-tile
+            label="Ranking mundial"
+            [value]="'#' + uberlandiaRank()"
+            [detail]="'entre ' + fmt(totalCitiesWorld()) + ' sedes'"
+            [accent]="true">
+          </app-stat-tile>
+        }
+        @if (uberlandia()) {
+          <app-stat-tile
+            label="Participantes em Uberlândia"
+            [value]="fmt(uberlandia()!.registrations)"
+            [detail]="uberlandia()!.eventType">
+          </app-stat-tile>
+        }
+        <app-stat-tile
+          label="Sedes no mundo"
+          [value]="fmt(totalCitiesWorld())">
+        </app-stat-tile>
       </div>
-    </div>
 
+      <div class="top-cities card">
+        <h3>Top 10 sedes por participantes</h3>
+        <ol class="city-list">
+          @for (city of topCities(); track city.city; let i = $index) {
+            <li [class.uberlandia]="city === uberlandia()">
+              <span class="rank">{{ i + 1 }}</span>
+              <span class="name">{{ city.city }} <small>{{ city.country }}</small></span>
+              <span class="count">{{ fmt(city.registrations) }}</span>
+            </li>
+          }
+        </ol>
+      </div>
 
-  </section> -->
+      @if (inscritosStats()) {
+        <app-registration-map
+          [registrationStats]="inscritosStats()!"
+          [uberlandia]="uberlandia()">
+        </app-registration-map>
+      }
 
-  <!-- Empty State -->
-  <div class="empty-state" *ngIf="cities.length === 0">
-    <div class="empty-icon">🌌</div>
-    <h3>Nenhuma cidade encontrada</h3>
-    <p>Os dados dos eventos estão sendo carregados...</p>
-  </div>
+      <app-participants-by-country-chart [cities]="cities()"></app-participants-by-country-chart>
+
+      <app-brazilian-cities-comparison></app-brazilian-cities-comparison>
+    </section>
+  }
+
 </div>

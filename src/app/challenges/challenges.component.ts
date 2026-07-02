@@ -1,10 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { RouterModule } from '@angular/router';
 import { Challenge, CHALLENGES_DATA } from '../shared/data/challenges.data';
 
 @Component({
   selector: 'app-challenges',
-  imports: [CommonModule],
+  imports: [CommonModule, RouterModule],
   templateUrl: './challenges.component.html',
   styleUrl: './challenges.component.scss'
 })

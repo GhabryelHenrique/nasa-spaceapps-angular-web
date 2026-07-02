@@ -170,6 +170,9 @@ export class RegistrationDataService {
 
   private calculateAgeStats(): { ageGroup: string; count: number }[] {
     const ageGroups = new Map<string, number>();
+    let skippedFutureDates = 0;
+    let skippedInvalidAges = 0;
+    let skippedInvalidDates = 0;
 
     this.registrationData.forEach(reg => {
       if (reg.interests) {
@@ -193,15 +196,25 @@ export class RegistrationDataService {
           }
 
           if (!isNaN(birthDate.getTime())) {
-            const today = new Date();
-            let age = today.getFullYear() - birthDate.getFullYear();
-            const monthDiff = today.getMonth() - birthDate.getMonth();
-            if (monthDiff < 0 || (monthDiff === 0 && today.getDate() < birthDate.getDate())) {
+            // Idade na data do evento (04/10/2025), não na data de hoje
+            const eventDate = new Date(2025, 9, 4);
+
+            // Pula datas que claramente são timestamps de inscrição (não datas de nascimento)
+            // Se a data é de 2024 em diante, provavelmente é uma data de inscrição, não nascimento
+            if (birthDate.getFullYear() >= 2024) {
+              skippedFutureDates++;
+              return; // skip - não é data de nascimento
+            }
+
+            let age = eventDate.getFullYear() - birthDate.getFullYear();
+            const monthDiff = eventDate.getMonth() - birthDate.getMonth();
+            if (monthDiff < 0 || (monthDiff === 0 && eventDate.getDate() < birthDate.getDate())) {
               age--;
             }
 
-            // Validação de idade razoável (entre 10 e 100 anos)
-            if (age >= 10 && age <= 100) {
+            // Validação de idade razoável (entre 5 e 100 anos)
+            // Permite crianças a partir de 5 anos pois hackathons podem ter participantes jovens
+            if (age >= 5 && age <= 100) {
               let ageGroup: string;
               if (age < 18) ageGroup = '< 18 anos';
               else if (age < 25) ageGroup = '18-24 anos';
@@ -211,21 +224,32 @@ export class RegistrationDataService {
 
               ageGroups.set(ageGroup, (ageGroups.get(ageGroup) || 0) + 1);
             } else {
-              console.warn('Idade inválida calculada:', age, 'para data:', birthDateStr);
+              skippedInvalidAges++;
             }
           } else {
-            console.warn('Data de nascimento inválida:', birthDateStr);
+            skippedInvalidDates++;
           }
         } catch (error) {
-          console.warn('Erro ao calcular idade:', error, 'para:', reg.interests);
+          skippedInvalidDates++;
         }
       }
     });
 
+    // Log resumido (evita spam no console)
+    if (skippedFutureDates > 0) {
+      console.info(`[AgeStats] ${skippedFutureDates} registro(s) ignorados — data parece ser timestamp de inscrição (ano >= 2024)`);
+    }
+    if (skippedInvalidAges > 0) {
+      console.info(`[AgeStats] ${skippedInvalidAges} registro(s) com idade fora da faixa válida (5-100)`);
+    }
+    if (skippedInvalidDates > 0) {
+      console.info(`[AgeStats] ${skippedInvalidDates} registro(s) com data de nascimento inválida`);
+    }
+
     return Array.from(ageGroups.entries())
       .map(([ageGroup, count]) => ({ ageGroup, count }))
       .sort((a, b) => {
-        const order = ['< 18 anos', '20-24 anos', '25-29 anos', '30-34 anos', '35+ anos'];
+        const order = ['< 18 anos', '18-24 anos', '25-29 anos', '30-34 anos', '35+ anos'];
         return order.indexOf(a.ageGroup) - order.indexOf(b.ageGroup);
       });
   }
@@ -238,9 +262,9 @@ export class RegistrationDataService {
         const availability = reg.availability.toLowerCase();
         let mode: string;
 
-        if (availability.includes('remotamente de qualquer lugar do mundo')) {
+        if (availability.includes('remot')) {
           mode = '💻 Remoto';
-        } else if (availability.includes('presencialmente em uberlândia')) {
+        } else if (availability.includes('presencial')) {
           mode = '👥 Presencial';
         } else {
           mode = '❓ Não especificado';
@@ -293,7 +317,11 @@ export class RegistrationDataService {
       '16': 'Ribeirão Preto (16)',
       '61': 'Brasília (61)',
       '38': 'Montes Claros (38)',
-      '64': 'Rio Verde (64)'
+      '64': 'Rio Verde (64)',
+      '62': 'Goiânia (62)',
+      '35': 'Sul de Minas (35)',
+      '37': 'Centro-Oeste de Minas (37)',
+      '19': 'Campinas (19)'
     };
 
     return areas[ddd] || `DDD ${ddd}`;

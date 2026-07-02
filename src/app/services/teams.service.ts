@@ -1,4 +1,4 @@
-import { Injectable } from '@angular/core';
+import { Injectable, inject } from '@angular/core';
 import { Observable, delay, of } from 'rxjs';
 import { TeamsResponse } from '../shared/data/teams.data';
 import * as realApiResponse from '../../assets/data/teams.json';
@@ -52,7 +52,7 @@ export class TeamsService {
     });
   }
 
-  constructor(private http: HttpClient) {}
+  private readonly http = inject(HttpClient);
 
   getTeams(
     first: number = 20,

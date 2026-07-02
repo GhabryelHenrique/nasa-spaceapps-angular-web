@@ -1,0 +1,66 @@
+// =============================================
+// GLOBAL SHOOTING STARS
+// =============================================
+
+.shooting-stars-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  pointer-events: none;
+  z-index: 0;
+}
+
+// A estrela é um elemento horizontal.
+// rotate(-45deg) faz ela apontar para baixo-direita.
+// translateX() após rotate() move ela ao longo desse eixo diagonal.
+// Assim TODAS viajam exatamente na mesma direção.
+@keyframes shoot {
+  0%   { transform: rotate(-45deg) translateX(-300px); opacity: 0; }
+  4%   { opacity: 1; }
+  88%  { opacity: 1; }
+  100% { transform: rotate(-45deg) translateX(220vw);  opacity: 0; }
+}
+
+.shooting-star {
+  position: absolute;
+  height: 1.5px;
+  border-radius: 100px;
+  // Gradiente: transparente na cauda (esquerda), brilhante na ponta (direita)
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    rgba(160, 200, 255, 0.4) 40%,
+    rgba(255, 255, 255, 0.95) 100%
+  );
+  opacity: 0;
+
+  // Ponto brilhante na ponta
+  &::after {
+    content: '';
+    position: absolute;
+    right: -1px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 4px;
+    height: 4px;
+    border-radius: 50%;
+    background: white;
+    box-shadow:
+      0 0 4px 2px rgba(255, 255, 255, 0.8),
+      0 0 10px 4px rgba(180, 210, 255, 0.4);
+  }
+}
+
+// Estrelas espalhadas pelo topo — todas partem da mesma direção geral
+// (upper-left → lower-right), delays e tamanhos variados para naturalidade
+.s1 { top:  2%; left: 10%; width: 140px; animation: shoot  7s ease-out  0.0s infinite; }
+.s2 { top:  8%; left: 60%; width: 100px; animation: shoot  9s ease-out  2.1s infinite; }
+.s3 { top:  0%; left: 35%; width: 160px; animation: shoot  8s ease-out  4.3s infinite; }
+.s4 { top:  5%; left: 80%; width:  90px; animation: shoot 11s ease-out  6.8s infinite; }
+.s5 { top: 12%; left: 20%; width: 120px; animation: shoot  6s ease-out  8.5s infinite; }
+.s6 { top:  1%; left: 50%; width: 110px; animation: shoot 10s ease-out 11.0s infinite; }
+.s7 { top:  7%; left: 90%; width:  80px; animation: shoot  8s ease-out 13.2s infinite; }
+.s8 { top:  3%; left: 72%; width: 130px; animation: shoot  7s ease-out 15.7s infinite; }

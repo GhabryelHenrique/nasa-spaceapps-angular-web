@@ -1,0 +1,63 @@
+// Blocos visuais compartilhados pelas seções da Sala de Guerra.
+// Segue o design system do site: Fira Sans (títulos), Overpass (texto),
+// paleta NASA sobre o starfield global.
+
+@mixin wr-section {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2.5rem 1.5rem;
+}
+
+@mixin wr-section-title {
+  font-family: 'Fira Sans', sans-serif;
+  font-weight: 700;
+  font-size: clamp(1.4rem, 3vw, 1.9rem);
+  color: var(--text-primary, #FFFFFF);
+  margin: 0 0 0.35rem;
+
+  .title-icon {
+    margin-right: 0.5rem;
+  }
+}
+
+@mixin wr-section-subtitle {
+  font-family: 'Overpass', sans-serif;
+  color: var(--text-secondary, #B8B8B8);
+  font-size: 0.95rem;
+  margin: 0 0 1.75rem;
+}
+
+@mixin wr-card {
+  background: rgba(7, 23, 63, 0.55);
+  border: 1px solid rgba(46, 150, 245, 0.18);
+  border-radius: 14px;
+  padding: 1.25rem 1.4rem;
+  backdrop-filter: blur(8px);
+
+  h3 {
+    font-family: 'Fira Sans', sans-serif;
+    font-weight: 600;
+    font-size: 1.02rem;
+    color: var(--text-primary, #FFFFFF);
+    margin: 0 0 0.2rem;
+  }
+
+  .card-subtitle {
+    font-size: 0.8rem;
+    color: var(--text-muted, #888888);
+    margin: 0 0 1rem;
+  }
+}
+
+@mixin wr-tiles {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+  gap: 0.9rem;
+  margin-bottom: 1.5rem;
+}
+
+@mixin wr-chart-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(430px, 100%), 1fr));
+  gap: 1.1rem;
+}

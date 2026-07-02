@@ -1,0 +1,76 @@
+<section class="wr-section">
+  <h2 class="section-title"><span class="title-icon">🧑‍🚀</span>Mentores</h2>
+  <p class="section-subtitle">
+    Dados do formulário de voluntariado de mentoria ({{ fmt(insights.total) }} respostas).
+  </p>
+
+  <div class="tiles">
+    <app-stat-tile
+      label="Mentores inscritos"
+      [value]="fmt(insights.total)"
+      [accent]="true">
+    </app-stat-tile>
+    <app-stat-tile
+      label="Disponibilidade presencial"
+      [value]="presencialPct + '%'"
+      [detail]="'demais remotos via Discord'">
+    </app-stat-tile>
+    <app-stat-tile
+      label="Inscritos por mentor"
+      [value]="fmt(participantsPerMentor)"
+      detail="razão participantes ÷ mentores">
+    </app-stat-tile>
+    <app-stat-tile
+      label="Com pós-graduação"
+      [value]="insights.postgradPct + '%'"
+      [detail]="fmt(insights.postgradCount) + ' mentores (mestrado ou acima)'">
+    </app-stat-tile>
+    <app-stat-tile
+      label="Vieram por indicação"
+      [value]="insights.referredPct + '%'"
+      detail="indicados por organizadores ou mentores">
+    </app-stat-tile>
+  </div>
+
+  <div class="chart-grid">
+    @if (slotsConfig) {
+      <div class="card">
+        <h3>Horários de mentoria</h3>
+        <p class="card-subtitle">Preferência de turno durante as 48h do evento</p>
+        <app-insight-chart [config]="slotsConfig" [height]="280"></app-insight-chart>
+      </div>
+    }
+
+    @if (availabilityConfig) {
+      <div class="card">
+        <h3>Presencial × Remoto</h3>
+        <p class="card-subtitle">Formato de atuação preferido</p>
+        <app-insight-chart [config]="availabilityConfig" [height]="280"></app-insight-chart>
+      </div>
+    }
+
+    @if (areasConfig) {
+      <div class="card">
+        <h3>Áreas de mentoria</h3>
+        <p class="card-subtitle">Múltipla escolha — soma supera o total de mentores</p>
+        <app-insight-chart [config]="areasConfig" [height]="320"></app-insight-chart>
+      </div>
+    }
+
+    @if (educationConfig) {
+      <div class="card">
+        <h3>Escolaridade dos mentores</h3>
+        <p class="card-subtitle">Níveis normalizados</p>
+        <app-insight-chart [config]="educationConfig" [height]="320"></app-insight-chart>
+      </div>
+    }
+
+    @if (orgsConfig) {
+      <div class="card span-2">
+        <h3>Principais organizações</h3>
+        <p class="card-subtitle">Empresas e instituições mais citadas pelos mentores</p>
+        <app-insight-chart [config]="orgsConfig" [height]="280"></app-insight-chart>
+      </div>
+    }
+  </div>
+</section>

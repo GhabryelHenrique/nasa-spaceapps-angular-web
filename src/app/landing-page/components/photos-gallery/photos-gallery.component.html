@@ -1,0 +1,105 @@
+<section class="photos-gallery-section">
+  <!-- Stars -->
+  <div class="stars-layer" aria-hidden="true">
+    @for (s of [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25]; track s) {
+      <span class="star"></span>
+    }
+  </div>
+
+  <div class="gallery-container">
+
+    <!-- Header -->
+    <div class="gallery-header">
+      <div class="year-badge">2025</div>
+      <h2 class="gallery-title">Momentos do Hackathon</h2>
+      <p class="gallery-subtitle">
+        48 horas de inovação, colaboração e conquistas que ficaram gravadas na história de Uberlândia.
+      </p>
+    </div>
+
+    <!-- Photo Grid -->
+    <div class="photo-grid">
+      @for (photo of photos; track photo.src; let i = $index) {
+        <button
+          class="photo-item"
+          [class.wide]="photo.span === 'wide'"
+          [class.tall]="photo.span === 'tall'"
+          (click)="openLightbox(i)"
+          [attr.aria-label]="'Ver foto: ' + photo.alt"
+          type="button">
+          <img
+            [src]="photo.src"
+            [alt]="photo.alt"
+            loading="lazy"
+            onerror="this.parentElement.style.display='none'">
+          <div class="photo-overlay">
+            <span class="photo-zoom-icon">🔍</span>
+          </div>
+        </button>
+      }
+    </div>
+
+    <!-- Video Section -->
+    <div class="video-section">
+      <h3 class="video-section-title">Vídeos do Evento</h3>
+
+      <div class="video-layout">
+        <!-- Main Player -->
+        <div class="video-main">
+          <video
+            class="main-video"
+            [src]="videos[activeVideo].src"
+            controls
+            playsinline
+            preload="metadata"
+            aria-label="Vídeo do NASA Space Apps Uberlândia 2025">
+            Seu navegador não suporta a reprodução de vídeo.
+          </video>
+        </div>
+
+        <!-- Thumbnails -->
+        <div class="video-thumbnails">
+          @for (video of videos; track video.src; let i = $index) {
+            <button
+              class="video-thumb"
+              [class.active]="i === activeVideo"
+              (click)="setActiveVideo(i)"
+              type="button"
+              [attr.aria-label]="'Selecionar vídeo ' + (i + 1)">
+              <video
+                [src]="video.src"
+                preload="metadata"
+                muted
+                class="thumb-preview">
+              </video>
+              <div class="thumb-overlay">
+                <span class="play-icon">▶</span>
+                <span class="video-label">Vídeo {{ i + 1 }}</span>
+              </div>
+            </button>
+          }
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Lightbox -->
+  <div class="lightbox" [class.open]="lightboxOpen" (click)="closeLightbox()" role="dialog" aria-modal="true" [attr.aria-hidden]="!lightboxOpen">
+    <div class="lightbox-content" (click)="$event.stopPropagation()">
+      <button class="lightbox-close" (click)="closeLightbox()" aria-label="Fechar">✕</button>
+      <button class="lightbox-nav prev" (click)="prevPhoto()" aria-label="Foto anterior">‹</button>
+
+      <div class="lightbox-image-wrapper">
+        <img
+          [src]="photos[lightboxIndex]?.src"
+          [alt]="photos[lightboxIndex]?.alt"
+          class="lightbox-img">
+      </div>
+
+      <button class="lightbox-nav next" (click)="nextPhoto()" aria-label="Próxima foto">›</button>
+
+      <div class="lightbox-counter">{{ lightboxIndex + 1 }} / {{ photos.length }}</div>
+    </div>
+  </div>
+</section>
