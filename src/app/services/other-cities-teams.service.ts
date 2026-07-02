@@ -176,12 +176,22 @@ export class OtherCitiesTeamsService {
     return of(cityTeams).pipe(delay(100));
   }
 
+  private normalizeString(str: string): string {
+    if (!str) return '';
+    return str
+      .normalize('NFD')
+      .replace(/[\u0300-\u036f]/g, '')
+      .toLowerCase()
+      .trim();
+  }
+
   /**
    * Verifica se uma cidade é brasileira
    */
   private isBrazilianCity(cityName: string): boolean {
+    const normalizedTarget = this.normalizeString(cityName);
     return this.brazilianCities.some(
-      (city) => city.toLowerCase() === cityName.toLowerCase()
+      (city) => this.normalizeString(city) === normalizedTarget
     );
   }
 

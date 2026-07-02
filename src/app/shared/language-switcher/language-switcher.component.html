@@ -1,11 +1,11 @@
 <div class="language-switcher">
   <button class="language-btn" (click)="toggleDropdown()" [attr.aria-expanded]="isOpen" aria-label="Change language">
-    <span class="current-lang">{{ currentLang === 'pt-BR' ? 'PT' : 'EN' }}</span>
+    <span class="current-lang">{{ (currentLang === 'pt-BR' || currentLang === 'pt') ? 'PT' : 'EN' }}</span>
     <i class="fas fa-chevron-down" [class.rotated]="isOpen"></i>
   </button>
   
   <div class="language-dropdown" [class.show]="isOpen">
-    <a class="language-option" (click)="switchLanguage('pt-BR')" [class.active]="currentLang === 'pt-BR'">
+    <a class="language-option" (click)="switchLanguage('pt')" [class.active]="currentLang === 'pt-BR' || currentLang === 'pt'">
       <span class="flag">🇧🇷</span>
       <span class="lang-name">Português</span>
     </a>

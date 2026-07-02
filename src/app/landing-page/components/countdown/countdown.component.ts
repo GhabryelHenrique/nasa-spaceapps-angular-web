@@ -11,6 +11,7 @@ export class CountdownComponent {
   private readonly destroyRef = inject(DestroyRef);
   private readonly eventDate = new Date('2026-11-14T09:00:00-03:00');
   private readonly now = signal(new Date());
+  readonly starsArray = Array.from({ length: 60 }, (_, i) => i);
 
   readonly diff = computed(() => Math.max(0, this.eventDate.getTime() - this.now().getTime()));
   readonly isLive = computed(() => this.diff() <= 0);

@@ -9,7 +9,9 @@
 
   <!-- Partículas decorativas -->
   <div class="hero-particles" aria-hidden="true">
-    <span class="particle" *ngFor="let p of particles"></span>
+    @for (p of particles; track p) {
+      <span class="particle"></span>
+    }
   </div>
 
   <!-- Conteúdo centralizado -->
@@ -43,7 +45,7 @@
 
     <!-- CTAs -->
     <div class="hero-actions reveal reveal-up delay-3">
-      <a href="https://chat.whatsapp.com/LXwUUZaJPXtBOeKr7N4axg" class="cta-btn cta-primary-hero" target="_blank" rel="noopener noreferrer">
+      <a href="https://chat.whatsapp.com/LLsTZ9soMR2GflnGSrft0j" class="cta-btn cta-primary-hero" target="_blank" rel="noopener noreferrer">
         <i class="fab fa-whatsapp"></i>
         Garantir meu lugar
       </a>

@@ -74,23 +74,26 @@
               <div class="col-nominations">Indicações</div>
             </div>
             <div class="table-body">
-              <div class="table-row"
-                   *ngFor="let city of topWorldCities"
-                   [class.uberlandia-row]="city.isUberlandia">
-                <div class="col-pos">
-                  <span class="medal">{{ getMedalEmoji(city.position) }}</span>
-                  <span class="position">{{ city.position }}º</span>
+              @for (city of topWorldCities; track city.city) {
+                <div class="table-row" [class.uberlandia-row]="city.isUberlandia">
+                  <div class="col-pos">
+                    <span class="medal">{{ getMedalEmoji(city.position) }}</span>
+                    <span class="position">{{ city.position }}º</span>
+                  </div>
+                  <div class="col-city">
+                    @if (city.isUberlandia) {
+                      <strong>{{ city.city }}</strong>
+                      <span class="city-badge">⭐</span>
+                    } @else {
+                      <span>{{ city.city }}</span>
+                    }
+                  </div>
+                  <div class="col-country">{{ city.country }}</div>
+                  <div class="col-nominations">
+                    <span class="nominations-badge">{{ city.nominations }}</span>
+                  </div>
                 </div>
-                <div class="col-city">
-                  <strong *ngIf="city.isUberlandia">{{ city.city }}</strong>
-                  <span *ngIf="!city.isUberlandia">{{ city.city }}</span>
-                  <span class="city-badge" *ngIf="city.isUberlandia">⭐</span>
-                </div>
-                <div class="col-country">{{ city.country }}</div>
-                <div class="col-nominations">
-                  <span class="nominations-badge">{{ city.nominations }}</span>
-                </div>
-              </div>
+              }
             </div>
           </div>
           <div class="ranking-footer">
@@ -112,25 +115,28 @@
               <div class="col-percentage">% do Total</div>
             </div>
             <div class="table-body">
-              <div class="table-row"
-                   *ngFor="let city of topBrazilCities"
-                   [class.uberlandia-row]="city.isUberlandia">
-                <div class="col-pos">
-                  <span class="medal">{{ getMedalEmoji(city.position) }}</span>
-                  <span class="position">{{ city.position }}º</span>
+              @for (city of topBrazilCities; track city.city) {
+                <div class="table-row" [class.uberlandia-row]="city.isUberlandia">
+                  <div class="col-pos">
+                    <span class="medal">{{ getMedalEmoji(city.position) }}</span>
+                    <span class="position">{{ city.position }}º</span>
+                  </div>
+                  <div class="col-city">
+                    @if (city.isUberlandia) {
+                      <strong>{{ city.city }}</strong>
+                      <span class="city-badge">👑</span>
+                    } @else {
+                      <span>{{ city.city }}</span>
+                    }
+                  </div>
+                  <div class="col-nominations">
+                    <span class="nominations-badge">{{ city.nominations }}</span>
+                  </div>
+                  <div class="col-percentage">
+                    {{ (city.nominations / brazilStats.totalNominations * 100).toFixed(1) }}%
+                  </div>
                 </div>
-                <div class="col-city">
-                  <strong *ngIf="city.isUberlandia">{{ city.city }}</strong>
-                  <span *ngIf="!city.isUberlandia">{{ city.city }}</span>
-                  <span class="city-badge" *ngIf="city.isUberlandia">👑</span>
-                </div>
-                <div class="col-nominations">
-                  <span class="nominations-badge">{{ city.nominations }}</span>
-                </div>
-                <div class="col-percentage">
-                  {{ (city.nominations / brazilStats.totalNominations * 100).toFixed(1) }}%
-                </div>
-              </div>
+              }
             </div>
           </div>
           <div class="ranking-footer">
@@ -152,25 +158,28 @@
               <div class="col-percentage">% do Total</div>
             </div>
             <div class="table-body">
-              <div class="table-row"
-                   *ngFor="let country of topCountries"
-                   [class.brazil-row]="country.isBrazil">
-                <div class="col-pos">
-                  <span class="medal">{{ getMedalEmoji(country.position) }}</span>
-                  <span class="position">{{ country.position }}º</span>
+              @for (country of topCountries; track country.country) {
+                <div class="table-row" [class.brazil-row]="country.isBrazil">
+                  <div class="col-pos">
+                    <span class="medal">{{ getMedalEmoji(country.position) }}</span>
+                    <span class="position">{{ country.position }}º</span>
+                  </div>
+                  <div class="col-country-full">
+                    <span class="flag">{{ country.flag }}</span>
+                    @if (country.isBrazil) {
+                      <strong>{{ country.country }}</strong>
+                    } @else {
+                      <span>{{ country.country }}</span>
+                    }
+                  </div>
+                  <div class="col-nominations">
+                    <span class="nominations-badge">{{ country.nominations }}</span>
+                  </div>
+                  <div class="col-percentage">
+                    {{ (country.nominations / globalStats.totalTeams * 100).toFixed(1) }}%
+                  </div>
                 </div>
-                <div class="col-country-full">
-                  <span class="flag">{{ country.flag }}</span>
-                  <strong *ngIf="country.isBrazil">{{ country.country }}</strong>
-                  <span *ngIf="!country.isBrazil">{{ country.country }}</span>
-                </div>
-                <div class="col-nominations">
-                  <span class="nominations-badge">{{ country.nominations }}</span>
-                </div>
-                <div class="col-percentage">
-                  {{ (country.nominations / globalStats.totalTeams * 100).toFixed(1) }}%
-                </div>
-              </div>
+              }
             </div>
           </div>
           <div class="ranking-footer">

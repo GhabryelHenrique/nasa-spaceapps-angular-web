@@ -1,0 +1,60 @@
+<section class="wr-section">
+  <h2 class="section-title"><span class="title-icon">🚀</span>Times &amp; Desafios</h2>
+  <p class="section-subtitle">
+    Times de Uberlândia registrados na plataforma oficial do NASA Space Apps Challenge.
+  </p>
+
+  <div class="tiles">
+    <app-stat-tile
+      label="Times formados"
+      [value]="fmt(insights.totalTeams)"
+      [accent]="true">
+    </app-stat-tile>
+    <app-stat-tile
+      label="Projetos enviados"
+      [value]="fmt(insights.submitted)"
+      [detail]="insights.submissionRate + '% de taxa de envio'">
+    </app-stat-tile>
+    <app-stat-tile
+      label="Participantes em times"
+      [value]="fmt(insights.totalMembers)">
+    </app-stat-tile>
+    <app-stat-tile
+      label="Tamanho médio dos times"
+      [value]="fmt(insights.avgTeamSize)"
+      detail="pessoas por time">
+    </app-stat-tile>
+  </div>
+
+  <div class="chart-grid">
+    @if (challengesConfig) {
+      <div class="card span-2">
+        <h3>Times por desafio</h3>
+        <p class="card-subtitle">Desafios mais escolhidos e quantos times enviaram projeto</p>
+        <app-insight-chart [config]="challengesConfig" [height]="420"></app-insight-chart>
+      </div>
+    }
+  </div>
+
+  @if (winners.length > 0) {
+    <div class="winners">
+      <h3 class="winners-title">🏆 Times premiados</h3>
+      <div class="winners-grid">
+        @for (team of winners; track team.slug) {
+          <a
+            class="winner-card"
+            [routerLink]="['/times-vencedores', team.slug]">
+            <span class="winner-award">{{ team.awardCategory }} · {{ team.awardYear }}</span>
+            <span class="winner-name">{{ team.title }}</span>
+            @if (team.challengeDetails.title) {
+              <span class="winner-challenge">
+                {{ team.challengeDetails.title }}
+              </span>
+            }
+            <span class="winner-link">Ver apresentação →</span>
+          </a>
+        }
+      </div>
+    </div>
+  }
+</section>

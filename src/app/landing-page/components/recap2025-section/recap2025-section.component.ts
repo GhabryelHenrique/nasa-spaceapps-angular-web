@@ -1,5 +1,5 @@
-import { Component, OnInit, OnDestroy, PLATFORM_ID, Inject } from '@angular/core';
-import { CommonModule, isPlatformBrowser } from '@angular/common';
+import { Component, signal } from '@angular/core';
+import { CommonModule } from '@angular/common';
 
 interface StatCard {
   value: number;
@@ -28,13 +28,13 @@ interface Achievement {
   color: string;
 }
 
-const   HERO_PHOTOS = [
-      'assets/photos/IMG_0684.png',
-      'assets/photos/IMG_0619.png',
-      'assets/photos/IMG_0685.png',
-      'assets/photos/IMG_0686.png',
-      'assets/photos/IMG_0626.png',
-  ]
+const HERO_PHOTOS = [
+  'assets/photos/IMG_0684.png',
+  'assets/photos/IMG_0619.png',
+  'assets/photos/IMG_0685.png',
+  'assets/photos/IMG_0686.png',
+  'assets/photos/IMG_0626.png',
+];
 
 @Component({
   selector: 'app-recap2025-section',
@@ -43,13 +43,18 @@ const   HERO_PHOTOS = [
   templateUrl: './recap2025-section.component.html',
   styleUrl: './recap2025-section.component.scss',
 })
-export class Recap2025SectionComponent implements OnInit, OnDestroy {
-  private observer: IntersectionObserver | null = null;
-  private animationTimers: ReturnType<typeof setInterval>[] = [];
-  animationStarted = false;
+export class Recap2025SectionComponent {
+  showLightbox = signal(false);
+
+  openLightbox(): void {
+    this.showLightbox.set(true);
+  }
+
+  closeLightbox(): void {
+    this.showLightbox.set(false);
+  }
 
   readonly imgTimeline = HERO_PHOTOS[Math.floor(Math.random() * HERO_PHOTOS.length)];
-
 
   stats: StatCard[] = [
     { value: 1400, displayValue: '1400', prefix: '', suffix: '+', label: 'Participantes em Uberlândia', icon: '👥', color: '#EAFE07', animatedValue: 0 },
@@ -57,11 +62,7 @@ export class Recap2025SectionComponent implements OnInit, OnDestroy {
     { value: 100, displayValue: '100', prefix: '', suffix: '+', label: 'Projetos submetidos', icon: '📡', color: '#2E96F5', animatedValue: 0 },
     { value: 1, displayValue: '1', prefix: '#', suffix: '', label: 'Maior sede do Hemisfério Ocidental', icon: '🌎', color: '#FFD700', animatedValue: 0 },
     { value: 10, displayValue: '10', prefix: '', suffix: '', label: 'Global Nominees de Uberlândia', icon: '🌍', color: '#FFD700', animatedValue: 0 },
-    // { value: 1, displayValue: '1', prefix: '', suffix: '', label: 'Global Finalist — Time Titan', icon: '🏆', color: '#FFD700', animatedValue: 0 },
-    // { value: 1, displayValue: '1', prefix: '', suffix: '', label: 'Honorable Mention — Finstream', icon: '🌟', color: '#4ECDC4', animatedValue: 0 },
     { value: 48, displayValue: '48', prefix: '', suffix: 'h', label: 'De hackathon intenso e criativo', icon: '⏱️', color: '#0960E1', animatedValue: 0 },
-    // { value: 4, displayValue: '4', prefix: '', suffix: '', label: 'Prêmios Especiais entregues', icon: '🎖️', color: '#E43700', animatedValue: 0 },
-    // { value: 20, displayValue: '20', prefix: '+', suffix: '', label: 'Desafios da NASA disponíveis', icon: '🚀', color: '#E43700', animatedValue: 0 },
     { value: 200, displayValue: '600', prefix: '+', suffix: '', label: 'Latas de RedBull Distribuidas', icon: '💪', color: '#E43700', animatedValue: 0 },
     { value: 30, displayValue: '30', prefix: '+', suffix: '', label: 'Patrocinadores e apoiadores', icon: '🤝', color: '#EAFE07', animatedValue: 0 },
   ];
@@ -123,64 +124,6 @@ export class Recap2025SectionComponent implements OnInit, OnDestroy {
     { icon: '🚂', title: 'Trem de IA', subtitle: 'Melhor Nome do Ano — o mais criativo do evento', color: '#E43700' },
     { icon: '🌍', title: '10 Global Nominees', subtitle: 'Uberlândia com 10 times entre os melhores do planeta', color: '#0960E1' },
   ];
-
-  constructor(@Inject(PLATFORM_ID) private platformId: object) {}
-
-  ngOnInit(): void {
-    if (isPlatformBrowser(this.platformId)) {
-      this.setupIntersectionObserver();
-    }
-  }
-
-  ngOnDestroy(): void {
-    this.observer?.disconnect();
-    this.animationTimers.forEach(clearInterval);
-  }
-
-  private setupIntersectionObserver(): void {
-    this.observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting && !this.animationStarted) {
-            this.animationStarted = true;
-            this.startCounterAnimations();
-          }
-        });
-      },
-      { threshold: 0.2 }
-    );
-
-    const section = document.querySelector('.recap2025-section');
-    if (section) {
-      this.observer.observe(section);
-    }
-  }
-
-  private startCounterAnimations(): void {
-    this.stats.forEach((stat, index) => {
-      const duration = 1800;
-      const steps = 60;
-      const increment = stat.value / steps;
-      let current = 0;
-      let step = 0;
-
-      const delay = index * 100;
-
-      setTimeout(() => {
-        const timer = setInterval(() => {
-          step++;
-          current = Math.min(Math.round(increment * step), stat.value);
-          stat.animatedValue = current;
-
-          if (current >= stat.value) {
-            clearInterval(timer);
-          }
-        }, duration / steps);
-
-        this.animationTimers.push(timer);
-      }, delay);
-    });
-  }
 
   openDiscord(): void {
     window.open('https://discord.gg/FT4Jsvj5vy', '_blank');

@@ -1,7 +1,9 @@
 <section class="recap2025-section">
   <!-- Background stars -->
   <div class="stars-bg" aria-hidden="true">
-    <div class="star" *ngFor="let s of [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20]"></div>
+    @for (s of [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20]; track s) {
+      <div class="star"></div>
+    }
   </div>
 
   <div class="container">
@@ -20,17 +22,19 @@
      <div class="stats-section">
 
        <div class="stats-grid reveal reveal-up delay-1">
-      <div class="stat-card" *ngFor="let stat of stats">
-        <div class="stat-icon">{{ stat.icon }}</div>
-        <div class="stat-number" [style.color]="stat.color">
-          <span class="stat-prefix">{{ stat.prefix }}</span>
-          <span class="stat-value">{{ animationStarted ? stat.animatedValue : 0 }}</span>
-          <span class="stat-suffix">{{ stat.suffix }}</span>
-        </div>
-        <div class="stat-label">{{ stat.label }}</div>
+         @for (stat of stats; track stat.label) {
+           <div class="stat-card">
+             <div class="stat-icon">{{ stat.icon }}</div>
+             <div class="stat-number" [style.color]="stat.color">
+               <span class="stat-prefix">{{ stat.prefix }}</span>
+               <span class="stat-value">{{ stat.value }}</span>
+               <span class="stat-suffix">{{ stat.suffix }}</span>
+             </div>
+             <div class="stat-label">{{ stat.label }}</div>
+           </div>
+         }
       </div>
-      </div>
-       <img src="assets/photos/IMG_0659.png" alt="" class="timeline-bg reveal reveal-up" aria-hidden="true">
+      <img src="assets/photos/IMG_0659.png" alt="" class="timeline-bg reveal reveal-up" aria-hidden="true">
 
     </div>
 
@@ -38,13 +42,26 @@
     <div class="highlights-section">
       <h3 class="highlights-title reveal reveal-up">Conquistas Históricas</h3>
       <div class="achievements-grid reveal reveal-up delay-1">
-        <div class="achievement-card" *ngFor="let a of achievements" [style.--accent]="a.color">
-          <div class="achievement-icon">{{ a.icon }}</div>
-          <div class="achievement-info">
-            <div class="achievement-title" [style.color]="a.color">{{ a.title }}</div>
-            <div class="achievement-subtitle">{{ a.subtitle }}</div>
+        @for (a of achievements; track a.title) {
+          <div class="achievement-card" [style.--accent]="a.color">
+            <div class="achievement-icon">{{ a.icon }}</div>
+            <div class="achievement-info">
+              <div class="achievement-title" [style.color]="a.color">{{ a.title }}</div>
+              <div class="achievement-subtitle">{{ a.subtitle }}</div>
+            </div>
           </div>
-        </div>
+        }
+      </div>
+    </div>
+
+    <!-- Global Impact Infographic -->
+    <div class="global-infographic-section reveal reveal-up">
+      <h3 class="global-infographic-title">Impacto Global 2025</h3>
+      <p class="global-infographic-description">
+        O NASA Space Apps Challenge é a maior maratona de inovação do planeta. Em 2025, o Brasil alcançou o TOP 5 mundial de inscritos! Veja os números consolidados globais:
+      </p>
+      <div class="infographic-container-wrapper" (click)="openLightbox()">
+        <img src="assets/images/2025_NASA_Space_Apps_Challenge_Infographic_Fi.width-1024.png" alt="NASA Space Apps Challenge 2025 Infographic" class="infographic-showcase-img">
       </div>
     </div>
 
@@ -53,40 +70,30 @@
       <h3 class="timeline-title reveal reveal-up">A Jornada de 2025</h3>
       <div class="timeline">
         <img [src]="imgTimeline" alt="" class="timeline-bg reveal reveal-up" aria-hidden="true">
-        <div class="">
+        <div>
 
-        <div class="timeline-item reveal reveal-up"
-             *ngFor="let item of timeline; let i = index; let last = last"
-             [class.highlight]="item.highlight"
-             >
+          @for (item of timeline; track item.title; let i = $index; let last = $last) {
+            <div class="timeline-item reveal reveal-up" [class.highlight]="item.highlight">
 
-          <!-- Coluna esquerda: dot + connector -->
-          <div class="timeline-spine">
-            <div class="timeline-dot">
-              <span class="timeline-dot-icon">{{ item.icon }}</span>
+              <!-- Coluna esquerda: dot + connector -->
+              <div class="timeline-spine">
+                <div class="timeline-dot">
+                  <span class="timeline-dot-icon">{{ item.icon }}</span>
+                </div>
+                @if (!last) {
+                  <div class="timeline-connector"></div>
+                }
+              </div>
+
+              <!-- Texto -->
+              <div class="timeline-content">
+                <div class="timeline-date">{{ item.date }}</div>
+                <h4 class="timeline-event-title">{{ item.title }}</h4>
+                <p class="timeline-description">{{ item.description }}</p>
+              </div>
+
             </div>
-            <div class="timeline-connector" *ngIf="!last"></div>
-          </div>
-
-          <!-- Texto -->
-          <div class="timeline-content">
-            <div class="timeline-date">{{ item.date }}</div>
-            <h4 class="timeline-event-title">{{ item.title }}</h4>
-            <p class="timeline-description">{{ item.description }}</p>
-          </div>
-
-          <!-- Fotos
-          <div class="timeline-photos" *ngIf="item.photos && item.photos.length">
-            <img
-              *ngFor="let photo of item.photos"
-              [src]="photo"
-              [alt]="item.title"
-              loading="lazy"
-              class="timeline-photo"
-              onerror="this.style.display='none'">
-          </div> -->
-
-        </div>
+          }
         </div>
 
       </div>
@@ -116,3 +123,12 @@
 
   </div>
 </section>
+
+@if (showLightbox()) {
+  <div class="lightbox-backdrop" (click)="closeLightbox()">
+    <button class="close-lightbox-btn" (click)="closeLightbox()">&times;</button>
+    <div class="lightbox-content-wrapper" (click)="$event.stopPropagation()">
+      <img src="assets/images/2025_NASA_Space_Apps_Challenge_Infographic_Fi.width-1024.png" alt="Infográfico Global NASA Space Apps 2025">
+    </div>
+  </div>
+}

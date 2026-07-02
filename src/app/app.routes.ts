@@ -50,6 +50,10 @@ export const routes: Routes = [
     loadComponent: () => import('./participants/participants.component').then(m => m.ParticipantsComponent)
   },
   {
+    path: 'patrocinio',
+    loadComponent: () => import('./sponsorship/sponsorship.component').then(m => m.SponsorshipComponent)
+  },
+  {
     path: 'politica-privacidade',
     loadComponent: () => import('./privacy-policy/privacy-policy.component').then(m => m.PrivacyPolicyComponent)
   },

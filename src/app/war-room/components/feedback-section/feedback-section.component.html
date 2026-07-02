@@ -1,0 +1,109 @@
+<section class="wr-section">
+  <h2 class="section-title"><span class="title-icon">💬</span>Feedback do evento</h2>
+  <p class="section-subtitle">
+    Pesquisa pós-evento ({{ fmt(insights.total) }} respostas de participantes, mentores e voluntários).
+  </p>
+
+  <div class="tiles">
+    <app-stat-tile
+      label="NPS"
+      [value]="'' + insights.nps.score"
+      [detail]="insights.nps.promoters + ' promotores · ' + insights.nps.passives + ' neutros · ' + insights.nps.detractors + ' detratores'"
+      [accent]="true">
+    </app-stat-tile>
+    <app-stat-tile
+      label="Satisfação geral"
+      [value]="fmt(insights.overallAvg) + ' / 5'"
+      detail="média da experiência no evento">
+    </app-stat-tile>
+    <app-stat-tile
+      label="Respostas"
+      [value]="fmt(insights.total)">
+    </app-stat-tile>
+    <app-stat-tile
+      label="Formaram equipe fácil"
+      [value]="teamFormationPct + '%'"
+      [detail]="insights.teamFormation.yes + ' sim · ' + insights.teamFormation.no + ' não'">
+    </app-stat-tile>
+    <app-stat-tile
+      label="Primeira participação"
+      [value]="firstTimersPct + '%'"
+      detail="nunca tinham feito um Space Apps">
+    </app-stat-tile>
+  </div>
+
+  <div class="chart-grid">
+    @if (npsConfig) {
+      <div class="card">
+        <h3>Recomendação (NPS)</h3>
+        <p class="card-subtitle">"Recomendaria a um amigo?" — escala 0 a 10</p>
+        <app-insight-chart [config]="npsConfig" [height]="280"></app-insight-chart>
+      </div>
+    }
+
+    @if (overallConfig) {
+      <div class="card">
+        <h3>Distribuição da satisfação</h3>
+        <p class="card-subtitle">Notas de 1 a 5 para a experiência geral</p>
+        <app-insight-chart [config]="overallConfig" [height]="280"></app-insight-chart>
+      </div>
+    }
+
+    @if (ratingsConfig) {
+      <div class="card span-2">
+        <h3>Notas médias por dimensão</h3>
+        <p class="card-subtitle">Escala de 1 a 5</p>
+        <app-insight-chart [config]="ratingsConfig" [height]="300"></app-insight-chart>
+      </div>
+    }
+
+    @if (venuesConfig) {
+      <div class="card">
+        <h3>Avaliação dos locais</h3>
+        <p class="card-subtitle">Só quem esteve na unidade avaliou — bases diferentes por local</p>
+        <app-insight-chart [config]="venuesConfig" [height]="300"></app-insight-chart>
+      </div>
+    }
+
+    @if (rolesConfig) {
+      <div class="card">
+        <h3>Quem respondeu</h3>
+        <p class="card-subtitle">Papel no evento</p>
+        <app-insight-chart [config]="rolesConfig" [height]="300"></app-insight-chart>
+      </div>
+    }
+
+    @if (talksConfig) {
+      <div class="card span-2">
+        <h3>Avaliação das palestras</h3>
+        <p class="card-subtitle">Ordenadas pela melhor avaliação média</p>
+        <app-insight-chart [config]="talksConfig" [height]="360"></app-insight-chart>
+      </div>
+    }
+  </div>
+
+  <div class="quotes card">
+    <h3>Na voz de quem participou</h3>
+    <div class="quote-tabs">
+      @for (tab of tabs; track tab.key) {
+        <button
+          type="button"
+          [class.active]="activeTab === tab.key"
+          (click)="activeTab = tab.key">
+          {{ tab.label }} ({{ insights.quotes[tab.key].length }})
+        </button>
+      }
+    </div>
+    <ul class="quote-list">
+      @for (quote of activeQuotes; track $index) {
+        <li>
+          <span class="quote-role">{{ quote.role }}</span>
+          <p>{{ quote.text }}</p>
+        </li>
+      }
+      @if (activeQuotes.length === 0) {
+        <li class="empty">Nenhuma resposta nesta categoria.</li>
+      }
+    </ul>
+  </div>
+</section>

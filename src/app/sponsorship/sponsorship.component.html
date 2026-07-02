@@ -1,0 +1,221 @@
+<div class="sponsorship-container">
+  <!-- Back navigation header -->
+  <header class="sponsorship-header">
+    <div class="nav-back">
+      <a routerLink="/" class="back-link">
+        <span class="arrow">←</span> Voltar para o início
+      </a>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="sponsorship-hero">
+    <div class="hero-glow"></div>
+    <div class="container">
+      <div class="hero-content">
+        <span class="hero-badge">💡 DOSSIÊ DE PATROCÍNIO</span>
+        <h1>NASA Space Apps Challenge Uberlândia</h1>
+        <p class="hero-description">
+          O NASA Space Apps Challenge é o maior hackathon do mundo, realizado pela NASA com dados abertos para resolver desafios reais da Terra e do espaço. A edição Uberlândia virou referência nacional — e está montando o time de patrocinadores da próxima edição.
+        </p>
+        <div class="hero-actions">
+          <button (click)="contactWhatsApp()" class="btn btn-primary">
+            <span class="btn-icon">💬</span> Falar com Ghabryel Henrique
+          </button>
+          <button (click)="contactEmail()" class="btn btn-secondary">
+            <span class="btn-icon">✉️</span> Enviar E-mail
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Metrics Section -->
+  <section class="metrics-section">
+    <div class="container">
+      <div class="section-title-wrapper">
+        <h2>A última edição em Uberlândia, em números</h2>
+        <p>Dados consolidados da nossa sede que se consolidou como uma potência no ecossistema de inovação.</p>
+      </div>
+      <div class="metrics-grid">
+        @for (metric of metrics; track metric.label) {
+          <div class="metric-card">
+            <div class="metric-value">{{ metric.value }}</div>
+            <div class="metric-label">{{ metric.label }}</div>
+          </div>
+        }
+      </div>
+    </div>
+  </section>
+
+  <!-- Global Impact Infographic Section -->
+  <section class="global-impact-section reveal reveal-up">
+    <div class="container">
+      <div class="section-title-wrapper">
+        <h2>Impacto & Escala Global</h2>
+        <p>Ao apoiar a sede local, sua marca se conecta ao maior hackathon do planeta, com mais de 160 países e alcance massivo de mídia.</p>
+      </div>
+      
+      <div class="infographic-container-wrapper" (click)="openLightbox()">
+        <img 
+          src="assets/images/2025_NASA_Space_Apps_Challenge_Infographic_Fi.width-1024.png" 
+          alt="NASA Space Apps Challenge 2025 Infographic" 
+          class="infographic-showcase-img"
+        >
+      </div>
+    </div>
+  </section>
+
+  <!-- Why Sponsor / Benefits Section -->
+  <section class="benefits-section">
+    <div class="container">
+      <div class="section-title-wrapper">
+        <h2>Por que patrocinar?</h2>
+        <p>Apoiando o evento, sua empresa se posiciona na vanguarda da tecnologia e inovação, conectando-se diretamente a agentes transformadores.</p>
+      </div>
+
+      <div class="benefits-grid">
+        @for (benefit of benefits; track benefit.title) {
+          <div class="benefit-card">
+            <div class="benefit-icon">{{ benefit.icon }}</div>
+            <h3>{{ benefit.title }}</h3>
+            <p>{{ benefit.description }}</p>
+          </div>
+        }
+      </div>
+    </div>
+  </section>
+
+  <!-- Sponsorship Tiers Section -->
+  <section class="tiers-section">
+    <div class="container">
+      <div class="section-title-wrapper">
+        <h2>Cotas de Apoio & Patrocínio</h2>
+        <p>Escolha a cota ideal para colocar sua marca em órbita. Cotas e contrapartidas são negociáveis.</p>
+      </div>
+
+      <div class="tiers-grid">
+        @for (tier of tiers; track tier.name) {
+          <div class="tier-card" [class.highlighted]="tier.highlighted">
+            @if (tier.highlighted) {
+              <div class="tier-ribbon">Cota Única</div>
+            }
+            <div class="tier-header">
+              <span class="tier-icon">{{ tier.icon }}</span>
+              <h3>Cota {{ tier.name }}</h3>
+              <div class="tier-price">{{ tier.price }}</div>
+              <span class="tier-slots">{{ tier.slots }}</span>
+            </div>
+            <ul class="tier-features">
+              @for (feature of tier.features; track feature) {
+                <li>
+                  <span class="check">✓</span>
+                  <span class="feature-text">{{ feature }}</span>
+                </li>
+              }
+            </ul>
+            <div class="tier-action">
+              <button (click)="contactWhatsApp()" class="btn" [class.btn-primary]="tier.highlighted" [class.btn-secondary]="!tier.highlighted">
+                Escolher Cota {{ tier.name }}
+              </button>
+            </div>
+          </div>
+        }
+      </div>
+    </div>
+  </section>
+
+  <!-- Comparison Table Section -->
+  <section class="comparison-section">
+    <div class="container">
+      <div class="section-title-wrapper">
+        <h2>Cotas & Contrapartidas</h2>
+        <p>Tabela comparativa detalhada dos benefícios e entregas de cada cota.</p>
+      </div>
+      <div class="table-responsive">
+        <table class="comparison-table">
+          <thead>
+            <tr>
+              <th>Contrapartida</th>
+              <th class="diamante-col">💎 Diamante</th>
+              <th>🥇 Ouro</th>
+              <th>🥈 Prata</th>
+              <th>🥉 Bronze</th>
+              <th>🤝 Apoio</th>
+            </tr>
+          </thead>
+          <tbody>
+            @for (row of tableData; track row.contrapartida) {
+              <tr>
+                <td class="feature-name">{{ row.contrapartida }}</td>
+                <td class="diamante-cell">{{ row.diamante }}</td>
+                <td>{{ row.ouro }}</td>
+                <td>{{ row.prata }}</td>
+                <td>{{ row.bronze }}</td>
+                <td>{{ row.apoio }}</td>
+              </tr>
+            }
+          </tbody>
+        </table>
+      </div>
+
+      <!-- Notes -->
+      <div class="sponsorship-notes">
+        <div class="note-item">
+          <strong>* Desafio patrocinado:</strong> os desafios oficiais são propostos pela NASA. A marca pode criar um desafio próprio que <strong>não concorre à competição global</strong>, mas com <strong>premiação separada</strong> para os participantes que o resolverem.
+        </div>
+        <div class="note-item">
+          <strong>Apoio em Permuta:</strong> Alimentação, espaço, transporte, brindes para o kit e mídia/divulgação entram como cota de apoio, com contrapartida de marca proporcional. Marca que resolve a logística do evento também aparece para o público.
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact CTA Section -->
+  <section class="contact-cta-section">
+    <div class="cta-glow"></div>
+    <div class="container">
+      <div class="cta-card">
+        <h2>Bora colocar sua marca em órbita?</h2>
+        <p>
+          Fale diretamente com a comissão organizadora para negociar ativações personalizadas ou garantir a cota do evento.
+        </p>
+        <div class="contact-info-list">
+          <div class="contact-info-item">
+            <span class="icon">👤</span>
+            <span><strong>Falar com:</strong> Ghabryel Henrique</span>
+          </div>
+          <div class="contact-info-item">
+            <span class="icon">✉️</span>
+            <span><strong>E-mail:</strong> ghabryelcode@gmail.com</span>
+          </div>
+          <div class="contact-info-item">
+            <span class="icon">📞</span>
+            <span><strong>WhatsApp:</strong> (34) 98443-2264</span>
+          </div>
+          <div class="contact-info-item">
+            <span class="icon">📸</span>
+            <span><strong>Instagram:</strong> @nasaspaceappsuberlandia</span>
+          </div>
+        </div>
+        <div class="cta-actions">
+          <button (click)="contactWhatsApp()" class="btn btn-primary btn-large">
+            <span class="btn-icon">💬</span> Falar no WhatsApp
+          </button>
+          <button (click)="contactEmail()" class="btn btn-secondary btn-large">
+            <span class="btn-icon">✉️</span> Enviar E-mail de Proposta
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  @if (showLightbox()) {
+    <div class="lightbox-backdrop" (click)="closeLightbox()">
+      <button class="close-lightbox-btn" (click)="closeLightbox()">&times;</button>
+      <div class="lightbox-content-wrapper" (click)="$event.stopPropagation()">
+        <img src="assets/images/2025_NASA_Space_Apps_Challenge_Infographic_Fi.width-1024.png" alt="Infográfico Global NASA Space Apps 2025">
+      </div>
+    </div>
+  }
+</div>

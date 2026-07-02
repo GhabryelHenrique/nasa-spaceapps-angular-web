@@ -1,23 +1,24 @@
 import { CommonModule } from '@angular/common';
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, signal } from '@angular/core';
 import { FormsModule } from '@angular/forms';
+import { RouterModule } from '@angular/router';
 import { TeamsService } from '../services/teams.service';
 import { Team } from '../shared/data/teams.data';
 
 @Component({
   selector: 'app-teams',
-  imports: [CommonModule, FormsModule],
+  imports: [CommonModule, FormsModule, RouterModule],
   templateUrl: './teams.component.html',
   styleUrl: './teams.component.scss'
 })
 export class TeamsComponent implements OnInit {
-  teams: Team[] = [];
-  loading = false;
-  error = '';
+  teams = signal<Team[]>([]);
+  loading = signal(false);
+  error = signal('');
   searchQuery = '';
-  totalCount = 0;
-  hasNextPage = false;
-  endCursor = '';
+  totalCount = signal(0);
+  hasNextPage = signal(false);
+  endCursor = signal('');
 
   // Filter properties
   selectedChallenge = '';
@@ -32,18 +33,18 @@ export class TeamsComponent implements OnInit {
   }
 
   loadTeams(after: string = ''): void {
-    this.loading = true;
-    this.error = '';
+    this.loading.set(true);
+    this.error.set('');
 
     this.teamsService.getTeams(100, after, this.searchQuery).subscribe({
       next: (response) => {
         if (response.data && response.data[0] && response.data[0].teams) {
           const teamsData = response.data[0].teams;
-          let teams = teamsData.edges.map(edge => edge.node);
+          let teamsList = teamsData.edges.map(edge => edge.node);
 
           // Apply challenge filter
           if (this.selectedChallenge) {
-            teams = teams.filter(team =>
+            teamsList = teamsList.filter(team =>
               team.challengeDetails?.id === this.selectedChallenge ||
               team.challengeDetails?.title === this.selectedChallenge
             );
@@ -51,25 +52,25 @@ export class TeamsComponent implements OnInit {
 
           // Apply submission status filter
           if (this.selectedSubmissionStatus === 'submitted') {
-            teams = teams.filter(team => team.projectSubmitted === true);
+            teamsList = teamsList.filter(team => team.projectSubmitted === true);
           } else if (this.selectedSubmissionStatus === 'not-submitted') {
-            teams = teams.filter(team => team.projectSubmitted === false);
+            teamsList = teamsList.filter(team => team.projectSubmitted === false);
           }
 
           if (after) {
-            this.teams.push(...teams);
+            this.teams.update(prev => [...prev, ...teamsList]);
           } else {
-            this.teams = teams;
+            this.teams.set(teamsList);
           }
-          this.totalCount = this.selectedChallenge ? teams.length : teamsData.totalCount;
-          this.hasNextPage = teamsData.pageInfo.hasNextPage;
-          this.endCursor = teamsData.pageInfo.endCursor;
+          this.totalCount.set(this.selectedChallenge ? teamsList.length : teamsData.totalCount);
+          this.hasNextPage.set(teamsData.pageInfo.hasNextPage);
+          this.endCursor.set(teamsData.pageInfo.endCursor);
         }
-        this.loading = false;
+        this.loading.set(false);
       },
       error: (error) => {
-        this.error = 'Erro ao carregar times. Tente novamente mais tarde.';
-        this.loading = false;
+        this.error.set('Erro ao carregar times. Tente novamente mais tarde.');
+        this.loading.set(false);
         console.error('Error loading teams:', error);
       }
     });
@@ -80,13 +81,13 @@ export class TeamsComponent implements OnInit {
   }
 
   loadMore(): void {
-    if (this.hasNextPage && !this.loading) {
-      this.loadTeams(this.endCursor);
+    if (this.hasNextPage() && !this.loading()) {
+      this.loadTeams(this.endCursor());
     }
   }
 
   getTeamImageUrl(team: Team): string {
-    return team.featuredImage?.rendition?.fullUrl || '/assets/nasa-spaceapps-logo.png';
+    return team.featuredImage?.rendition?.url || '/assets/nasa-spaceapps-logo.png';
   }
 
   getMemberCount(team: Team): number {
@@ -149,10 +150,10 @@ export class TeamsComponent implements OnInit {
 
   getTotalCountLabel(): string {
     if (this.selectedSubmissionStatus === 'submitted') {
-      return this.teams.filter(team => team.projectSubmitted).length.toString();
+      return this.teams().filter(team => team.projectSubmitted).length.toString();
     } else if (this.selectedSubmissionStatus === 'not-submitted') {
-      return this.teams.filter(team => !team.projectSubmitted).length.toString();
+      return this.teams().filter(team => !team.projectSubmitted).length.toString();
     }
-    return this.totalCount.toString();
+    return this.totalCount().toString();
   }
 }

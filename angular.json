@@ -14,7 +14,7 @@
       "sourceRoot": "src",
       "prefix": "app",
       "i18n": {
-        "sourceLocale": "pt-BR",
+        "sourceLocale": "pt",
         "locales": {
           "en-US": {
             "translation": "src/locale/messages.en.xlf",
@@ -69,7 +69,7 @@
               "sourceMap": true
             },
             "pt": {
-              "localize": ["pt-BR"]
+              "localize": ["pt"]
             },
             "en": {
               "localize": ["en-US"]

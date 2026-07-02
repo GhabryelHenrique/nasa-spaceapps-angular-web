@@ -3,7 +3,9 @@
   <!-- Cosmic background -->
   <div class="cosmic-bg" aria-hidden="true">
     <div class="stars">
-      <span class="star" *ngFor="let s of [].constructor(60)"></span>
+      @for (s of starsArray; track s) {
+        <span class="star"></span>
+      }
     </div>
     <div class="nebula nebula-blue"></div>
     <div class="nebula nebula-red"></div>
@@ -150,7 +152,7 @@
         <i class="fab fa-discord"></i>
         Garantir meu lugar
       </a>
-      <a href="https://chat.whatsapp.com/LXwUUZaJPXtBOeKr7N4axg"
+      <a href="https://chat.whatsapp.com/LLsTZ9soMR2GflnGSrft0j"
          class="cta-outline"
          target="_blank"
          rel="noopener noreferrer"

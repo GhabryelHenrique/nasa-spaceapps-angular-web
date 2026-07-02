@@ -11,6 +11,29 @@
   <!-- Recap 2025 Section -->
   <app-recap2025-section></app-recap2025-section>
 
+  <section class="become-partner-section reveal reveal-up">
+    <div class="container">
+      <div class="partner-card">
+        <div class="partner-glow"></div>
+        <div class="partner-content">
+          <span class="partner-badge">🤝 Oportunidade Única</span>
+          <h2>Torne-se um Parceiro do Space Apps 2026</h2>
+          <p>
+            Conecte sua empresa com a maior comunidade de inovação, tecnologia e ciência espacial de Uberlândia. Conheça nossos benefícios de patrocínio e impulsione projetos inovadores locais.
+          </p>
+          <div class="partner-actions">
+            <a routerLink="/patrocinio" class="btn btn-primary btn-large">
+              Ver Benefícios e Cotas
+            </a>
+            <a href="https://wa.me/5534984432264?text=Ol%C3%A1!%20Gostaria%20de%20saber%20mais%20sobre%20as%20cotas%20de%20patroc%C3%ADnio%20do%20NASA%20Space%20Apps%20Uberl%C3%A2ndia." target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-large">
+              Falar com Organização
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- Winners Highlight Section -->
   <section class="winners-highlight-wrapper">
     <div class="container">
@@ -21,75 +44,85 @@
         </p>
 
         <div class="winners-grid reveal reveal-up delay-2">
-          <div class="winner-card global-finalist" *ngFor="let winner of highlightedWinners" [class.top-winner]="winner.isTopWinner">
-            <div class="winner-badge" [style.color]="winner.color">{{ winner.badge }}</div>
-            <div class="winner-header">
-              <div class="winner-image-main">
-                <img [src]="winner.imagePath"
-                     [alt]="winner.team"
-                     loading="lazy"
-                     onerror="this.src='assets/organizers/placeholder.svg'">
-              </div>
-              <div class="winner-info-main">
-                <h3 class="winner-name" [style.color]="winner.color">{{ winner.team }}</h3>
-                <p class="winner-achievement" [style.border-color]="winner.color">{{ winner.achievement }}</p>
-                <p class="winner-description">{{ winner.description }}</p>
-              </div>
-            </div>
-
-            <div class="winner-members" *ngIf="winner.members && winner.members.length > 0">
-              <h4 class="members-title">Time</h4>
-              <div class="members-grid">
-                <a class="member-item"
-                   *ngFor="let member of winner.members"
-                   [href]="member.url"
-                   target="_blank"
-                   rel="noopener noreferrer"
-                   [title]="'Ver perfil de ' + member.name">
-                  <img [src]="member.photo"
-                       [alt]="member.name"
+          @for (winner of highlightedWinners; track winner.team) {
+            <div class="winner-card global-finalist" [class.top-winner]="winner.isTopWinner">
+              <div class="winner-badge" [style.color]="winner.color">{{ winner.badge }}</div>
+              <div class="winner-header">
+                <div class="winner-image-main">
+                  <img [src]="winner.imagePath"
+                       [alt]="winner.team"
                        loading="lazy"
                        onerror="this.src='assets/organizers/placeholder.svg'">
-                  <span>{{ member.name }}</span>
-                </a>
+                </div>
+                <div class="winner-info-main">
+                  <h3 class="winner-name" [style.color]="winner.color">{{ winner.team }}</h3>
+                  <p class="winner-achievement" [style.border-color]="winner.color">{{ winner.achievement }}</p>
+                  <p class="winner-description">{{ winner.description }}</p>
+                </div>
               </div>
+
+              @if (winner.members && winner.members.length > 0) {
+                <div class="winner-members">
+                  <h4 class="members-title">Time</h4>
+                  <div class="members-grid">
+                    @for (member of winner.members; track member.name) {
+                      <a class="member-item"
+                         [href]="member.url"
+                         target="_blank"
+                         rel="noopener noreferrer"
+                         [title]="'Ver perfil de ' + member.name">
+                        <img [src]="member.photo"
+                             [alt]="member.name"
+                             loading="lazy"
+                             onerror="this.src='assets/organizers/placeholder.svg'">
+                        <span>{{ member.name }}</span>
+                      </a>
+                    }
+                  </div>
+                </div>
+              }
             </div>
-          </div>
+          }
         </div>
       </div>
     </div>
   </section>
 
   <!-- Global Nominees 2025 Section -->
-  <section class="global-nominees-wrapper">
+  <section class="global-nominees-wrapper reveal reveal-up">
     <div class="">
       <div class="global-nominees-content">
-        <h2 class="section-title reveal reveal-up">🏆 Global Nominees 2025</h2>
-        <p class="section-description reveal reveal-up delay-1">
+        <h2 class="section-title">🏆 Global Nominees 2025</h2>
+        <p class="section-description">
           Parabéns aos projetos de Uberlândia que conquistaram a indicação aos Global Nominees do NASA Space Apps Challenge 2025!
         </p>
 
-        <div class="nominees-grid reveal reveal-up delay-2">
-          <a class="nominee-card"
-             *ngFor="let team of globalNomineesTeams; let i = index"
-             [href]="'https://www.spaceappschallenge.org' + team.meta.relativeUrl"
-             target="_blank"
-             rel="noopener noreferrer">
-            <div class="nominee-badge">🌟</div>
-            <div class="team-image" *ngIf="team.featuredImage">
-              <img [src]="team.featuredImage.rendition.fullUrl"
-                   [alt]="team.title"
-                   loading="lazy"
-                   onerror="this.src='assets/organizers/placeholder.svg'">
-            </div>
-            <div class="team-info">
-              <h3 class="nominee-name">{{ team.title }}</h3>
-              <p class="challenge-name" *ngIf="team.challengeDetails">
-                {{ team.challengeDetails.title }}
-              </p>
-              <div class="nominee-position">#{{ i + 1 }}</div>
-            </div>
-          </a>
+        <div class="nominees-grid">
+          @for (team of globalNomineesTeams(); track team.title; let i = $index) {
+            <a class="nominee-card"
+               [href]="'https://www.spaceappschallenge.org' + team.meta.relativeUrl"
+               target="_blank"
+               rel="noopener noreferrer">
+              <div class="nominee-badge">🌟</div>
+              @if (team.featuredImage) {
+                <div class="team-image">
+                  <img [src]="team.featuredImage.rendition.fullUrl"
+                       [alt]="team.title"
+                       loading="lazy"
+                       onerror="this.src='assets/organizers/placeholder.svg'">
+                </div>
+              }
+              <div class="team-info">
+                <h3 class="nominee-name">{{ team.title }}</h3>
+                @if (team.challengeDetails) {
+                  <p class="challenge-name">
+                    {{ team.challengeDetails.title }}
+                  </p>
+                }
+                <div class="nominee-position">#{{ i + 1 }}</div>
+              </div>
+            </a>
+          }
         </div>
       </div>
     </div>
@@ -104,21 +137,29 @@
           Reconhecimentos especiais para quem tornou o NASA Space Apps Uberlândia 2025 único e inesquecível.
         </p>
         <div class="special-awards-grid reveal reveal-up delay-2">
-          <a class="special-award-card" *ngFor="let award of specialAwards"
-             [href]="award.url" target="_blank" rel="noopener noreferrer">
-            <div class="award-icon" *ngIf="!award.imagePath">{{ award.icon }}</div>
-            <div class="award-image" *ngIf="award.imagePath">
-              <img [src]="award.imagePath"
-                   [alt]="'Ganhador do prêmio ' + award.category"
-                   loading="lazy"
-                   onerror="this.src='assets/organizers/placeholder.svg'"/>
-            </div>
-            <div class="award-content">
-              <h4 class="award-category">{{ award.category }}</h4>
-              <p class="award-winner">{{ award.winner }}</p>
-              <p class="award-description" *ngIf="award.description">{{ award.description }}</p>
-            </div>
-          </a>
+          @for (award of specialAwards; track award.category) {
+            <a class="special-award-card"
+               [href]="award.url" target="_blank" rel="noopener noreferrer">
+              @if (!award.imagePath) {
+                <div class="award-icon">{{ award.icon }}</div>
+              }
+              @if (award.imagePath) {
+                <div class="award-image">
+                  <img [src]="award.imagePath"
+                       [alt]="'Ganhador do prêmio ' + award.category"
+                       loading="lazy"
+                       onerror="this.src='assets/organizers/placeholder.svg'"/>
+                </div>
+              }
+              <div class="award-content">
+                <h4 class="award-category">{{ award.category }}</h4>
+                <p class="award-winner">{{ award.winner }}</p>
+                @if (award.description) {
+                  <p class="award-description">{{ award.description }}</p>
+                }
+              </div>
+            </a>
+          }
         </div>
       </div>
     </div>
@@ -137,13 +178,32 @@
   <!-- Events Map Component -->
   <!-- <app-events-map></app-events-map> -->
 
-  <!-- Sponsors Section Component -->
-  <section class="sponsors-wrapper reveal reveal-up">
-    <app-sponsors-section></app-sponsors-section>
+  <!-- Torne-se um Parceiro Section -->
+  <section class="become-partner-section reveal reveal-up">
+    <div class="container">
+      <div class="partner-card">
+        <div class="partner-glow"></div>
+        <div class="partner-content">
+          <span class="partner-badge">🤝 Oportunidade Única</span>
+          <h2>Torne-se um Parceiro do Space Apps 2026</h2>
+          <p>
+            Conecte sua empresa com a maior comunidade de inovação, tecnologia e ciência espacial de Uberlândia. Conheça nossos benefícios de patrocínio e impulsione projetos inovadores locais.
+          </p>
+          <div class="partner-actions">
+            <a routerLink="/patrocinio" class="btn btn-primary btn-large">
+              Ver Benefícios e Cotas
+            </a>
+            <a href="https://wa.me/5534984432264?text=Ol%C3%A1!%20Gostaria%20de%20saber%20mais%20sobre%20as%20cotas%20de%20patroc%C3%ADnio%20do%20NASA%20Space%20Apps%20Uberl%C3%A2ndia." target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-large">
+              Falar com Organização
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
   </section>
 
   <!-- Organizers Section -->
-  <section class="organizers-wrapper">
+  <!-- <section class="organizers-wrapper">
     <div class="container">
       <div class="organizers-content">
         <h2 class="reveal reveal-up" i18n="@@organizers.title">Nossa Equipe Organizadora</h2>
@@ -153,30 +213,31 @@
           tecnologia espacial.
         </p>
         <div class="organizers-grid reveal reveal-up delay-2">
-          <a
-            class="organizer-card"
-            *ngFor="let organizer of organizers; trackBy: trackByName"
-            href="{{ organizer.url }}"
-            target="_blank"
-          >
-            <div class="organizer-photo">
-              <img
-                [src]="organizer.photo"
-                [alt]="'Foto de ' + organizer.name"
-                loading="lazy"
-                onerror="this.src='assets/organizers/placeholder.svg'"
-              />
-            </div>
-            <div class="organizer-info">
-              <h3>{{ organizer.name }}</h3>
-              <p class="role">{{ organizer.role }}</p>
-              <p class="description">{{ organizer.description }}</p>
-            </div>
-          </a>
+          @for (organizer of organizers; track organizer.name) {
+            <a
+              class="organizer-card"
+              href="{{ organizer.url }}"
+              target="_blank"
+            >
+              <div class="organizer-photo">
+                <img
+                  [src]="organizer.photo"
+                  [alt]="'Foto de ' + organizer.name"
+                  loading="lazy"
+                  onerror="this.src='assets/organizers/placeholder.svg'"
+                />
+              </div>
+              <div class="organizer-info">
+                <h3>{{ organizer.name }}</h3>
+                <p class="role">{{ organizer.role }}</p>
+                <p class="description">{{ organizer.description }}</p>
+              </div>
+            </a>
+          }
         </div>
       </div>
     </div>
-  </section>
+  </section> -->
 
   <!-- Footer -->
 </div>

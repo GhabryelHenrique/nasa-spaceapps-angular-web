@@ -46,7 +46,7 @@
   width: 12px;
   height: 12px;
   border-radius: 50%;
-  border: 2px solid #4ecdc4;
+  border: 2px solid #2E96F5;
   
   &.high {
     background-color: #ff4444;
@@ -57,7 +57,7 @@
   }
   
   &.low {
-    background-color: #4ecdc4;
+    background-color: #2E96F5;
   }
 }
 
@@ -70,7 +70,7 @@
   width: 100%;
   border-radius: 12px;
   background: #0f0f23;
-  border: 1px solid rgba(78, 205, 196, 0.2);
+  border: 1px solid rgba(46, 150, 245, 0.2);
   z-index: 1;
 }
 
@@ -93,7 +93,7 @@
   
   &:hover {
     transform: translateY(-2px);
-    border-color: rgba(78, 205, 196, 0.4);
+    border-color: rgba(46, 150, 245, 0.4);
     box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
   }
   
@@ -113,7 +113,7 @@
   width: 48px;
   height: 48px;
   border-radius: 10px;
-  background: linear-gradient(135deg, #4ecdc4, #45b7d1);
+  background: linear-gradient(135deg, #2E96F5, #0960E1);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -253,8 +253,8 @@
     color: #ffffff !important;
     
     &:hover {
-      background-color: rgba(78, 205, 196, 0.2) !important;
-      border-color: rgba(78, 205, 196, 0.4) !important;
+      background-color: rgba(46, 150, 245, 0.2) !important;
+      border-color: rgba(46, 150, 245, 0.4) !important;
     }
   }
   
@@ -265,14 +265,14 @@
     font-size: 0.7rem !important;
     
     a {
-      color: #4ecdc4 !important;
+      color: #2E96F5 !important;
     }
   }
   
   .leaflet-popup-content-wrapper {
     background: rgba(15, 15, 35, 0.95) !important;
     backdrop-filter: blur(10px) !important;
-    border: 1px solid rgba(78, 205, 196, 0.3) !important;
+    border: 1px solid rgba(46, 150, 245, 0.3) !important;
     border-radius: 12px !important;
     color: #ffffff !important;
     box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4) !important;
@@ -280,7 +280,7 @@
   
   .leaflet-popup-tip {
     background: rgba(15, 15, 35, 0.95) !important;
-    border: 1px solid rgba(78, 205, 196, 0.3) !important;
+    border: 1px solid rgba(46, 150, 245, 0.3) !important;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3) !important;
   }
   
@@ -288,7 +288,7 @@
     color: #ffffff !important;
     
     &:hover {
-      color: #4ecdc4 !important;
+      color: #2E96F5 !important;
     }
   }
 }

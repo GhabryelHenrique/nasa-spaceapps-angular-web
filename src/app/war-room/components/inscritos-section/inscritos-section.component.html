@@ -1,0 +1,124 @@
+<section class="wr-section">
+  <h2 class="section-title"><span class="title-icon">📈</span>Inscrições</h2>
+  <p class="section-subtitle">
+    Dados do formulário de inscrição ({{ fmt(stats.totalRegistrations) }} respostas,
+    de {{ fmtDate(extras.firstDate) }} a {{ fmtDate(extras.lastDate) }}). Dados pessoais são
+    descartados no carregamento — apenas agregados chegam a esta tela.
+  </p>
+
+  <div class="tiles">
+    <app-stat-tile
+      label="Total de inscritos"
+      [value]="fmt(stats.totalRegistrations)"
+      [accent]="true">
+    </app-stat-tile>
+    <app-stat-tile
+      label="De Uberlândia"
+      [value]="fmt(stats.uberlandiaRegistrations)"
+      [detail]="uberlandiaPct + '% do total'">
+    </app-stat-tile>
+    <app-stat-tile
+      label="Média por dia"
+      [value]="fmt(stats.averagePerDay)"
+      [detail]="stats.dailyRegistrations.length + ' dias de campanha'">
+    </app-stat-tile>
+    @if (extras.peakDay) {
+      <app-stat-tile
+        label="Pico de inscrições"
+        [value]="fmt(extras.peakDay.count)"
+        [detail]="'em ' + fmtDate(extras.peakDay.date)">
+      </app-stat-tile>
+    }
+    <app-stat-tile
+      label="Cidades distintas"
+      [value]="fmt(extras.distinctCities)">
+    </app-stat-tile>
+    <app-stat-tile
+      label="Menores de 18 anos"
+      [value]="extras.under18Pct + '%'"
+      [detail]="fmt(extras.under18Count) + ' inscritos'">
+    </app-stat-tile>
+  </div>
+
+  <div class="chart-grid">
+    @if (dailyConfig) {
+      <div class="card span-2">
+        <h3>Inscrições por dia</h3>
+        <p class="card-subtitle">Volume diário e média móvel de 7 dias</p>
+        <app-insight-chart [config]="dailyConfig" [height]="280"></app-insight-chart>
+      </div>
+    }
+
+    @if (cumulativeConfig) {
+      <div class="card span-2">
+        <h3>Crescimento acumulado</h3>
+        <p class="card-subtitle">Total de inscritos ao longo da campanha</p>
+        <app-insight-chart [config]="cumulativeConfig" [height]="280"></app-insight-chart>
+      </div>
+    }
+
+    @if (educationConfig) {
+      <div class="card">
+        <h3>Escolaridade</h3>
+        <p class="card-subtitle">Principais níveis declarados</p>
+        <app-insight-chart [config]="educationConfig" [height]="280"></app-insight-chart>
+      </div>
+    }
+
+    @if (ageConfig) {
+      <div class="card">
+        <h3>Faixa etária</h3>
+        <p class="card-subtitle">Calculada pela data de nascimento</p>
+        <app-insight-chart [config]="ageConfig" [height]="280"></app-insight-chart>
+      </div>
+    }
+
+    @if (genderConfig) {
+      <div class="card">
+        <h3>Gênero</h3>
+        <p class="card-subtitle">Conforme declarado na inscrição</p>
+        <app-insight-chart [config]="genderConfig" [height]="280"></app-insight-chart>
+      </div>
+    }
+
+    @if (modeConfig) {
+      <div class="card">
+        <h3>Modalidade preferida</h3>
+        <p class="card-subtitle">Presencial em Uberlândia vs. remoto</p>
+        <app-insight-chart [config]="modeConfig" [height]="280"></app-insight-chart>
+      </div>
+    }
+
+    @if (citiesConfig) {
+      <div class="card">
+        <h3>Top 10 cidades</h3>
+        <p class="card-subtitle">Cidade de residência (nomes normalizados)</p>
+        <app-insight-chart [config]="citiesConfig" [height]="300"></app-insight-chart>
+      </div>
+    }
+
+    @if (dddConfig) {
+      <div class="card">
+        <h3>Regiões por DDD</h3>
+        <p class="card-subtitle">Só o DDD do telefone é usado — o número é descartado</p>
+        <app-insight-chart [config]="dddConfig" [height]="300"></app-insight-chart>
+      </div>
+    }
+
+    @if (interestConfig) {
+      <div class="card">
+        <h3>Áreas de interesse</h3>
+        <p class="card-subtitle">Múltipla escolha — soma supera o total de inscritos</p>
+        <app-insight-chart [config]="interestConfig" [height]="300"></app-insight-chart>
+      </div>
+    }
+
+    @if (howHeardConfig) {
+      <div class="card">
+        <h3>Canais de aquisição</h3>
+        <p class="card-subtitle">"Como ficou sabendo?" agrupado por palavras-chave</p>
+        <app-insight-chart [config]="howHeardConfig" [height]="300"></app-insight-chart>
+      </div>
+    }
+  </div>
+</section>

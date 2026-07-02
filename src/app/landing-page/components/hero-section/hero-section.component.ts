@@ -19,7 +19,7 @@ const HERO_PHOTOS = [
 export class HeroSectionComponent {
   private readonly platformId = inject(PLATFORM_ID);
   readonly heroBg = HERO_PHOTOS[Math.floor(Math.random() * HERO_PHOTOS.length)];
-  readonly particles = Array(20).fill(null);
+  readonly particles = Array.from({ length: 20 }, (_, i) => i);
 
   scrollToInfo(): void {
     if (isPlatformBrowser(this.platformId)) {

@@ -7,35 +7,39 @@
 
     <div class="map-container">
       <!-- Carregando o mapa -->
-      <div *ngIf="!isGoogleMapsLoaded" class="map-loading">
-        <div class="loading-spinner">
-          <div class="spinner"></div>
+      @if (!isGoogleMapsLoaded) {
+        <div class="map-loading">
+          <div class="loading-spinner">
+            <div class="spinner"></div>
+          </div>
+          <p>Carregando mapa interativo...</p>
         </div>
-        <p>Carregando mapa interativo...</p>
-      </div>
+      }
 
       <!-- Mapa do Google Maps -->
-      <google-map
-        *ngIf="isGoogleMapsLoaded"
-        [center]="center"
-        [zoom]="zoom"
-        [options]="mapOptions"
-        height="400px"
-        width="100%">
+      @if (isGoogleMapsLoaded) {
+        <google-map
+          [center]="center"
+          [zoom]="zoom"
+          [options]="mapOptions"
+          height="400px"
+          width="100%">
 
-        <map-marker
-          *ngFor="let location of eventLocations"
-          [position]="location.position"
-          [title]="location.title">
+          @for (location of eventLocations; track location.title) {
+            <map-marker
+              [position]="location.position"
+              [title]="location.title">
 
-          <map-info-window>
-            <div class="info-window">
-              <h3>{{ location.title }}</h3>
-              <p>{{ location.info }}</p>
-            </div>
-          </map-info-window>
-        </map-marker>
-      </google-map>
+              <map-info-window>
+                <div class="info-window">
+                  <h3>{{ location.title }}</h3>
+                  <p>{{ location.info }}</p>
+                </div>
+              </map-info-window>
+            </map-marker>
+          }
+        </google-map>
+      }
     </div>
 
     <div class="map-controls">
@@ -49,18 +53,21 @@
     </div>
 
     <div class="locations-list">
-      <div 
-        class="location-card" 
-        *ngFor="let location of eventLocations"
-        (click)="zoomToLocation(location)"
-        [class.clickable]="isGoogleMapsLoaded">
-        <h3>{{ location.title }}</h3>
-        <p>{{ location.info }}</p>
-        <div class="card-action" *ngIf="isGoogleMapsLoaded">
-          <span class="zoom-icon">🔍</span>
-          <span class="action-text">Clique para localizar no mapa</span>
+      @for (location of eventLocations; track location.title) {
+        <div 
+          class="location-card" 
+          (click)="zoomToLocation(location)"
+          [class.clickable]="isGoogleMapsLoaded">
+          <h3>{{ location.title }}</h3>
+          <p>{{ location.info }}</p>
+          @if (isGoogleMapsLoaded) {
+            <div class="card-action">
+              <span class="zoom-icon">🔍</span>
+              <span class="action-text">Clique para localizar no mapa</span>
+            </div>
+          }
         </div>
-      </div>
+      }
     </div>
   </div>
 </section>

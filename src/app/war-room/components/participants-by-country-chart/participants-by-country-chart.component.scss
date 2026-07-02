@@ -4,7 +4,7 @@
   padding: 1.5rem;
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
   backdrop-filter: blur(10px);
-  border: 1px solid rgba(78, 205, 196, 0.2);
+  border: 1px solid rgba(46, 150, 245, 0.2);
   color: #ffffff;
   width: 100%;
   max-width: 100%;
@@ -13,7 +13,7 @@
   .table-header {
     margin-bottom: 1.5rem;
     padding-bottom: 1rem;
-    border-bottom: 1px solid rgba(78, 205, 196, 0.3);
+    border-bottom: 1px solid rgba(46, 150, 245, 0.3);
 
     h3 {
       margin: 0;
@@ -40,7 +40,7 @@
       overflow: hidden;
 
       thead {
-        background: linear-gradient(135deg, #4ecdc4, #45b7d1);
+        background: linear-gradient(135deg, #2E96F5, #0960E1);
 
         th {
           padding: 1rem;
@@ -71,10 +71,10 @@
       tbody {
         tr {
           transition: all 0.3s ease;
-          border-bottom: 1px solid rgba(78, 205, 196, 0.1);
+          border-bottom: 1px solid rgba(46, 150, 245, 0.1);
 
           &:hover {
-            background: rgba(78, 205, 196, 0.1);
+            background: rgba(46, 150, 245, 0.1);
             transform: translateX(3px);
           }
 
@@ -89,7 +89,7 @@
             &.position {
               text-align: center;
               font-weight: bold;
-              color: #4ecdc4;
+              color: #2E96F5;
               font-size: 1.1rem;
             }
 
@@ -112,7 +112,7 @@
             &.count {
               text-align: center;
               font-weight: bold;
-              color: #4ecdc4;
+              color: #2E96F5;
               font-size: 1.1rem;
             }
 
@@ -134,7 +134,7 @@
 
     i {
       font-size: 3rem;
-      color: #4ecdc4;
+      color: #2E96F5;
       margin-bottom: 1rem;
     }
 
