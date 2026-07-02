@@ -1,4 +1,4 @@
-<header class="header" [class.scrolled]="scrolled">
+<header class="header" [class.scrolled]="scrolled && !mobileMenuOpen">
   <nav class="navbar" role="navigation" aria-label="Navegação principal">
 
     <!-- Brand -->
@@ -14,7 +14,6 @@
     <ul class="nav-links" role="list">
       <li><a routerLink="/desafios" class="nav-link"><i class="fa-solid fa-trophy"></i> Desafios</a></li>
       <li><a routerLink="/times" class="nav-link"><i class="fa-solid fa-users"></i> Times</a></li>
-      <!-- <li><a routerLink="/galeria" class="nav-link"><i class="fa-solid fa-images"></i> Galeria</a></li> -->
     </ul>
 
     <!-- Social CTAs -->
@@ -41,7 +40,6 @@
     <nav class="drawer-nav" (click)="$event.stopPropagation()">
       <a routerLink="/desafios" class="drawer-link" (click)="closeMobileMenu()"><i class="fa-solid fa-trophy"></i> Desafios</a>
       <a routerLink="/times" class="drawer-link" (click)="closeMobileMenu()"><i class="fa-solid fa-users"></i> Times</a>
-      <a routerLink="/galeria" class="drawer-link" (click)="closeMobileMenu()"><i class="fa-solid fa-images"></i> Galeria</a>
       <div class="drawer-social">
         <button class="icon-btn whatsapp" (click)="openWhatsApp()"><i class="fa-brands fa-whatsapp"></i></button>
         <button class="icon-btn discord" (click)="joinDiscordServer()"><i class="fa-brands fa-discord"></i></button>
