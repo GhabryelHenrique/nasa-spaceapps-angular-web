@@ -5,7 +5,7 @@
   top: 0;
   left: 0;
   right: 0;
-  z-index: 1000;
+  z-index: 9999;
   transition: background 0.4s ease, backdrop-filter 0.4s ease, border-color 0.4s ease, padding 0.3s ease;
   background: transparent;
   border-bottom: 1px solid transparent;
@@ -171,7 +171,7 @@
 .mobile-drawer {
   position: fixed;
   inset: 0;
-  z-index: 999;
+  z-index: 10000;
   background: rgba(0, 0, 0, 0.6);
   backdrop-filter: blur(4px);
   opacity: 0;
