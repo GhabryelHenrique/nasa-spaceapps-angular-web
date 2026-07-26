@@ -1,47 +1,20 @@
-import { CommonModule, isPlatformBrowser } from '@angular/common';
-import { Component, HostListener, PLATFORM_ID, inject } from '@angular/core';
-import { Router, RouterLink } from '@angular/router';
-import { CodeVerificationModalComponent } from '../../../shared/components/code-verification-modal/code-verification-modal.component';
-import { EmailVerificationModalComponent } from '../../../shared/components/email-verification-modal/email-verification-modal.component';
-import { CHALLENGES_DATA } from '../../../shared/data/challenges.data';
-import { MatchmakingService } from '../../../shared/services/matchmaking.service';
-
-interface ChallengeCategory {
-  id: number;
-  name: string;
-  slug: string;
-  color: string;
-  icon: string;
-  count: number;
-}
+import { isPlatformBrowser } from '@angular/common';
+import { Component, HostListener, PLATFORM_ID, computed, inject, signal } from '@angular/core';
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-header',
-  imports: [RouterLink, CommonModule, EmailVerificationModalComponent, CodeVerificationModalComponent],
+  imports: [RouterLink],
   templateUrl: './header.component.html',
   styleUrl: './header.component.scss',
 })
 export class HeaderComponent {
   scrolled = false;
   mobileMenuOpen = false;
-  showEmailModal = false;
-  showCodeModal = false;
-  userEmail = '';
-  isLoggedIn = false;
 
-  challengeCategories: ChallengeCategory[] = [
-    { id: 1, name: 'Iniciante/Jovem', slug: 'beginneryouth', color: '#07173F', icon: 'fa-solid fa-seedling', count: this.getCategoryCount('beginneryouth') },
-    { id: 2, name: 'Intermediário', slug: 'intermediate', color: '#FF580A', icon: 'fa-solid fa-rocket', count: this.getCategoryCount('intermediate') },
-    { id: 3, name: 'Avançado', slug: 'advanced', color: '#8B0A03', icon: 'fa-solid fa-trophy', count: this.getCategoryCount('advanced') }
-  ];
+  readonly userMenuOpen = signal(false);
 
-  private readonly matchmakingService = inject(MatchmakingService);
-  private readonly router = inject(Router);
   private readonly platformId = inject(PLATFORM_ID);
-
-  constructor() {
-    this.matchmakingService.isAuthenticated$.subscribe(isAuth => { this.isLoggedIn = isAuth; });
-  }
 
   @HostListener('window:scroll')
   onScroll(): void {
@@ -50,8 +23,11 @@ export class HeaderComponent {
     }
   }
 
-  private getCategoryCount(slug: string): number {
-    return CHALLENGES_DATA.filter(c => c.categories.some(cat => cat.slug === slug)).length;
+  @HostListener('document:click', ['$event'])
+  onDocumentClick(event: MouseEvent): void {
+    if (this.userMenuOpen() && !(event.target as HTMLElement).closest('.user-menu')) {
+      this.userMenuOpen.set(false);
+    }
   }
 
   joinDiscordServer(): void { window.open('https://discord.gg/FT4Jsvj5vy', '_blank'); }
@@ -72,15 +48,8 @@ export class HeaderComponent {
     }
   }
 
-  onEmailVerified(data: { email: string; isRegistered: boolean }): void {
-    this.userEmail = data.email;
-    this.showEmailModal = false;
-    if (data.isRegistered) this.showCodeModal = true;
-  }
-
-  onCodeVerified(): void {
-    this.showCodeModal = false;
-    this.isLoggedIn = true;
-    this.router.navigate(['/dashboard']);
+  toggleUserMenu(event: MouseEvent): void {
+    event.stopPropagation();
+    this.userMenuOpen.update(open => !open);
   }
 }

@@ -9,7 +9,7 @@ import { CommonModule } from '@angular/common';
 })
 export class CountdownComponent {
   private readonly destroyRef = inject(DestroyRef);
-  private readonly eventDate = new Date('2026-11-14T09:00:00-03:00');
+  private readonly eventDate = new Date('2026-11-14T00:00:00-03:00');
   private readonly now = signal(new Date());
   readonly starsArray = Array.from({ length: 60 }, (_, i) => i);
 
@@ -21,10 +21,10 @@ export class CountdownComponent {
   readonly seconds = computed(() => Math.floor((this.diff() % 60_000) / 1_000));
 
   readonly totalDays = computed(() =>
-    Math.ceil((this.eventDate.getTime() - new Date('2026-06-24').getTime()) / 86_400_000)
+    Math.ceil((this.eventDate.getTime() - new Date('2026-06-24T00:00:00-03:00').getTime()) / 86_400_000)
   );
   readonly elapsed = computed(() =>
-    Math.ceil((this.now().getTime() - new Date('2026-06-24').getTime()) / 86_400_000)
+    Math.ceil((this.now().getTime() - new Date('2026-06-24T00:00:00-03:00').getTime()) / 86_400_000)
   );
   readonly progress = computed(() =>
     Math.min(100, Math.max(0, (this.elapsed() / this.totalDays()) * 100))

@@ -1,29 +1,9 @@
 import { Routes } from '@angular/router';
-import { authGuard } from './guards/auth.guard';
 
 export const routes: Routes = [
   {
     path: '',
     loadComponent: () => import('./landing-page/landing-page.component').then(m => m.LandingPageComponent)
-  },
-  {
-    path: 'login',
-    loadComponent: () => import('./components/auth/login.component').then(m => m.LoginComponent)
-  },
-  {
-    path: 'dashboard',
-    loadComponent: () => import('./components/dashboard/dashboard.component').then(m => m.DashboardComponent),
-    canActivate: [authGuard]
-  },
-  {
-    path: 'profile/create',
-    loadComponent: () => import('./components/profile-create/profile-create.component').then(m => m.ProfileCreateComponent),
-    canActivate: [authGuard]
-  },
-  {
-    path: 'matches',
-    loadComponent: () => import('./components/matches/matches.component').then(m => m.MatchesComponent),
-    canActivate: [authGuard]
   },
   {
     path: 'desafios',
@@ -40,10 +20,6 @@ export const routes: Routes = [
   {
     path: 'sala-de-guerra',
     loadComponent: () => import('./war-room/war-room.component').then(m => m.WarRoomComponent)
-  },
-  {
-    path: 'matchmaking',
-    loadComponent: () => import('./matchmaking/matchmaking-dashboard.component').then(m => m.MatchmakingDashboardComponent)
   },
   {
     path: 'participantes',

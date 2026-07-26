@@ -16,7 +16,7 @@
       <li><a routerLink="/times" class="nav-link"><i class="fa-solid fa-users"></i> Times</a></li>
     </ul>
 
-    <!-- Social CTAs -->
+    <!-- Social + auth CTAs -->
     <div class="nav-actions">
       <button class="icon-btn whatsapp" (click)="openWhatsApp()" aria-label="WhatsApp">
         <i class="fa-brands fa-whatsapp"></i>
@@ -27,6 +27,35 @@
       <button class="icon-btn instagram" (click)="openInstagram()" aria-label="Instagram">
         <i class="fa-brands fa-instagram"></i>
       </button>
+<!--
+      @if (auth.isAuthenticated()) {
+        <div class="user-menu">
+          <button class="user-chip" (click)="toggleUserMenu($event)" aria-haspopup="menu"
+                  [attr.aria-expanded]="userMenuOpen()">
+            <i class="fa-solid" [class.fa-user-astronaut]="auth.isParticipant()"
+               [class.fa-user-graduate]="auth.isMentor()"></i>
+            <span>{{ firstName() }}</span>
+            <i class="fa-solid fa-chevron-down caret" [class.open]="userMenuOpen()"></i>
+          </button>
+          @if (userMenuOpen()) {
+            <div class="user-dropdown" role="menu">
+              <a routerLink="/app" role="menuitem" (click)="userMenuOpen.set(false)">
+                <i class="fa-solid fa-gauge-high"></i> Minha área
+              </a>
+              <a routerLink="/app/perfil" role="menuitem" (click)="userMenuOpen.set(false)">
+                <i class="fa-solid fa-circle-user"></i> Perfil
+              </a>
+              <button role="menuitem" (click)="logout()">
+                <i class="fa-solid fa-right-from-bracket"></i> Sair
+              </button>
+            </div>
+          }
+        </div>
+      } @else {
+        <a routerLink="/login" class="auth-btn ghost">Entrar</a>
+        <a routerLink="/cadastro" class="auth-btn primary">Cadastrar</a>
+      } -->
+
       <!-- Hamburger -->
       <button class="hamburger" (click)="toggleMobileMenu()" [class.active]="mobileMenuOpen" aria-label="Menu">
         <span></span><span></span><span></span>
@@ -40,6 +69,28 @@
     <nav class="drawer-nav" (click)="$event.stopPropagation()">
       <a routerLink="/desafios" class="drawer-link" (click)="closeMobileMenu()"><i class="fa-solid fa-trophy"></i> Desafios</a>
       <a routerLink="/times" class="drawer-link" (click)="closeMobileMenu()"><i class="fa-solid fa-users"></i> Times</a>
+<!--
+      <div class="drawer-divider"></div>
+
+      @if (auth.isAuthenticated()) {
+        <a routerLink="/app" class="drawer-link" (click)="closeMobileMenu()">
+          <i class="fa-solid fa-gauge-high"></i> Minha área
+        </a>
+        <a routerLink="/app/perfil" class="drawer-link" (click)="closeMobileMenu()">
+          <i class="fa-solid fa-circle-user"></i> Perfil
+        </a>
+        <button class="drawer-link drawer-button" (click)="logout()">
+          <i class="fa-solid fa-right-from-bracket"></i> Sair
+        </button>
+      } @else {
+        <a routerLink="/login" class="drawer-link" (click)="closeMobileMenu()">
+          <i class="fa-solid fa-right-to-bracket"></i> Entrar
+        </a>
+        <a routerLink="/cadastro" class="drawer-link highlight" (click)="closeMobileMenu()">
+          <i class="fa-solid fa-rocket"></i> Cadastrar
+        </a>
+      } -->
+
       <div class="drawer-social">
         <button class="icon-btn whatsapp" (click)="openWhatsApp()"><i class="fa-brands fa-whatsapp"></i></button>
         <button class="icon-btn discord" (click)="joinDiscordServer()"><i class="fa-brands fa-discord"></i></button>
@@ -48,15 +99,3 @@
     </nav>
   </div>
 </header>
-
-<app-email-verification-modal
-  [isOpen]="showEmailModal"
-  (close)="showEmailModal = false"
-  (emailVerified)="onEmailVerified($event)">
-</app-email-verification-modal>
-<app-code-verification-modal
-  [isOpen]="showCodeModal"
-  [email]="userEmail"
-  (close)="showCodeModal = false"
-  (codeVerified)="onCodeVerified()">
-</app-code-verification-modal>
