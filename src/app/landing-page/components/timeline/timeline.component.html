@@ -1,0 +1,114 @@
+<section class="timeline-section" id="cronograma" aria-label="Cronograma do evento">
+
+  <!-- Cosmic background -->
+  <div class="cosmic-bg" aria-hidden="true">
+    <div class="stars">
+      @for (s of starsArray; track s) {
+        <span class="star"></span>
+      }
+    </div>
+    <div class="nebula nebula-blue"></div>
+    <div class="nebula nebula-red"></div>
+  </div>
+
+  <div class="timeline-container">
+
+    <!-- Header -->
+    <div class="timeline-header">
+      <span class="timeline-badge reveal reveal-up">
+        <span class="badge-icon">🗓️</span>
+        Cronograma Oficial
+      </span>
+      <h2 class="timeline-title reveal reveal-up delay-1">
+        A contagem regressiva <span class="title-highlight">já começou</span>
+      </h2>
+      <p class="timeline-subtitle reveal reveal-up delay-2">
+        Reúna sua equipe, prepare suas ideias e anote as datas oficiais para não perder
+        nenhum passo desta missão rumo ao NASA Space Apps Challenge 2026.
+      </p>
+    </div>
+
+    <!-- Rumo ao Hackathon -->
+    <div class="phase-label reveal reveal-up">
+      <span class="phase-line" aria-hidden="true"></span>
+      <span class="phase-text">🚀 Rumo ao Hackathon</span>
+      <span class="phase-line" aria-hidden="true"></span>
+    </div>
+
+    <ol class="timeline">
+      @for (item of mainMilestones; track item.title; let last = $last) {
+        <li class="tl-item reveal reveal-up"
+            [class.is-highlight]="item.highlight"
+            [class.is-done]="status(item) === 'done'"
+            [class.is-live]="status(item) === 'live'">
+          <div class="tl-marker" aria-hidden="true">
+            <span class="tl-dot">{{ item.icon }}</span>
+            @if (!last) { <span class="tl-connector"></span> }
+          </div>
+          <div class="tl-card">
+            <div class="tl-card-top">
+              <span class="tl-date">{{ item.label }}</span>
+              <span class="tl-status" [attr.data-status]="status(item)">{{ statusText(item) }}</span>
+            </div>
+            <h3 class="tl-heading">{{ item.title }}</h3>
+            <p class="tl-desc">{{ item.description }}</p>
+          </div>
+        </li>
+      }
+    </ol>
+
+    <!-- Depois do Hackathon -->
+    <div class="phase-label reveal reveal-up">
+      <span class="phase-line" aria-hidden="true"></span>
+      <span class="phase-text">🏁 E depois do hackathon?</span>
+      <span class="phase-line" aria-hidden="true"></span>
+    </div>
+
+    <p class="phase-note reveal reveal-up delay-1">
+      A jornada continua! Os projetos serão avaliados por especialistas da NASA,
+      de Agências Espaciais parceiras e líderes da indústria.
+    </p>
+
+    <ol class="timeline">
+      @for (item of postMilestones; track item.title; let last = $last) {
+        <li class="tl-item reveal reveal-up"
+            [class.is-done]="status(item) === 'done'"
+            [class.is-live]="status(item) === 'live'">
+          <div class="tl-marker" aria-hidden="true">
+            <span class="tl-dot">{{ item.icon }}</span>
+            @if (!last) { <span class="tl-connector"></span> }
+          </div>
+          <div class="tl-card">
+            <div class="tl-card-top">
+              <span class="tl-date">{{ item.label }}</span>
+              <span class="tl-status" [attr.data-status]="status(item)">{{ statusText(item) }}</span>
+            </div>
+            <h3 class="tl-heading">{{ item.title }}</h3>
+            <p class="tl-desc">{{ item.description }}</p>
+          </div>
+        </li>
+      }
+    </ol>
+
+    <!-- CTA -->
+    <div class="timeline-cta reveal reveal-up">
+      <p class="cta-text">Já sabe com quem você vai salvar o mundo (ou o espaço)? 🌍🛰️</p>
+      <div class="cta-actions">
+        <a href="https://discord.gg/FT4Jsvj5vy"
+           class="cta-main"
+           target="_blank"
+           rel="noopener noreferrer">
+          <i class="fab fa-discord"></i>
+          Garantir meu lugar
+        </a>
+        <a href="https://www.spaceappschallenge.org/resources/participant-faqs"
+           class="cta-outline"
+           target="_blank"
+           rel="noopener noreferrer">
+          Ver FAQ dos participantes
+        </a>
+      </div>
+    </div>
+
+  </div>
+</section>

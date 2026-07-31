@@ -14,6 +14,7 @@
     <ul class="nav-links" role="list">
       <li><a routerLink="/desafios" class="nav-link"><i class="fa-solid fa-trophy"></i> Desafios</a></li>
       <li><a routerLink="/times" class="nav-link"><i class="fa-solid fa-users"></i> Times</a></li>
+      <li><a routerLink="/" fragment="cronograma" class="nav-link"><i class="fa-solid fa-calendar-days"></i> Cronograma</a></li>
     </ul>
 
     <!-- Social + auth CTAs -->
@@ -69,6 +70,7 @@
     <nav class="drawer-nav" (click)="$event.stopPropagation()">
       <a routerLink="/desafios" class="drawer-link" (click)="closeMobileMenu()"><i class="fa-solid fa-trophy"></i> Desafios</a>
       <a routerLink="/times" class="drawer-link" (click)="closeMobileMenu()"><i class="fa-solid fa-users"></i> Times</a>
+      <a routerLink="/" fragment="cronograma" class="drawer-link" (click)="closeMobileMenu()"><i class="fa-solid fa-calendar-days"></i> Cronograma</a>
 <!--
       <div class="drawer-divider"></div>
 

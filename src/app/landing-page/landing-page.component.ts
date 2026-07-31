@@ -6,6 +6,7 @@ import { HeroSectionComponent } from './components/hero-section/hero-section.com
 import { EventInfoTabsComponent } from './components/event-info-tabs/event-info-tabs.component';
 import { Recap2025SectionComponent } from './components/recap2025-section/recap2025-section.component';
 import { CountdownComponent } from './components/countdown/countdown.component';
+import { TimelineComponent } from './components/timeline/timeline.component';
 import { TeamsService } from '../services/teams.service';
 import { Team } from '../shared/data/teams.data';
 
@@ -18,6 +19,7 @@ import { Team } from '../shared/data/teams.data';
     EventInfoTabsComponent,
     Recap2025SectionComponent,
     CountdownComponent,
+    TimelineComponent,
   ],
   templateUrl: './landing-page.component.html',
   styleUrl: './landing-page.component.scss',
