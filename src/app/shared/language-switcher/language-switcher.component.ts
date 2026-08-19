@@ -33,7 +33,7 @@ export class LanguageSwitcherComponent {
         icon: 'info',
         title: 'Idioma Inglês',
         text: 'Versão em inglês será carregada em /en/',
-        confirmButtonColor: '#45b7d1',
+        confirmButtonColor: '#2E96F5',
         confirmButtonText: 'Entendi'
       });
     }

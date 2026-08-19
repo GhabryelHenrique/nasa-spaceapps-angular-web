@@ -1,0 +1,59 @@
+<section class="theme-section" id="tema" aria-labelledby="tema-titulo">
+  <div class="theme-pattern" aria-hidden="true"></div>
+
+  <div class="theme-inner">
+
+    <!-- Holding shape circular com a arte do tema (pág. 10) -->
+    <div class="theme-art reveal reveal-scale">
+      <span class="art-ring art-ring-1" aria-hidden="true"></span>
+      <span class="art-ring art-ring-2" aria-hidden="true"></span>
+      <div class="art-shape">
+        <img [src]="themeImage"
+             alt="The Next Frontier: capacete de astronauta com Marte e a Lua refletidos na viseira"
+             width="484" height="492" loading="lazy">
+      </div>
+    </div>
+
+    <div class="theme-copy">
+      <p class="theme-eyebrow reveal reveal-up">
+        <span class="eyebrow-mark" aria-hidden="true"></span>
+        Tema da edição 2026
+      </p>
+
+      <h2 id="tema-titulo" class="theme-title reveal reveal-up delay-1">
+        The Next Frontier
+      </h2>
+
+      <p class="theme-title-pt reveal reveal-up delay-1">A Próxima Fronteira</p>
+
+      <!-- Linhas alternando cores, "como as listras da bandeira" (pág. 12) -->
+      <p class="theme-lead text-stripes reveal reveal-up delay-2">
+        <span>Toda geração herda uma fronteira e escolhe o que fazer com ela.</span>
+        <span>A nossa é feita de dados abertos, satélites e perguntas sem resposta.</span>
+        <span>Em 2026, a próxima fronteira passa por Uberlândia.</span>
+      </p>
+
+      <div class="theme-pillars reveal reveal-up delay-3">
+        @for (pillar of pillars; track pillar.title) {
+          <article class="pillar">
+            <i [class]="pillar.icon" aria-hidden="true"></i>
+            <h3>{{ pillar.title }}</h3>
+            <p>{{ pillar.description }}</p>
+          </article>
+        }
+      </div>
+
+      <div class="theme-actions reveal reveal-up delay-4">
+        <a routerLink="/desafios" class="btn-primary">
+          <i class="ph ph-rocket-launch" aria-hidden="true"></i>
+          Ver os desafios
+        </a>
+        <a href="https://www.spaceappschallenge.org/" class="btn-link" target="_blank" rel="noopener noreferrer">
+          <i class="ph ph-globe-hemisphere-west" aria-hidden="true"></i>
+          Space Apps Global
+        </a>
+      </div>
+    </div>
+
+  </div>
+</section>

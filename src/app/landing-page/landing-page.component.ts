@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
 import { HeaderComponent } from './components/header/header.component';
 import { HeroSectionComponent } from './components/hero-section/hero-section.component';
+import { ThemeSectionComponent } from './components/theme-section/theme-section.component';
 import { EventInfoTabsComponent } from './components/event-info-tabs/event-info-tabs.component';
 import { Recap2025SectionComponent } from './components/recap2025-section/recap2025-section.component';
 import { CountdownComponent } from './components/countdown/countdown.component';
@@ -16,6 +17,7 @@ import { Team } from '../shared/data/teams.data';
     CommonModule,
     RouterModule,
     HeroSectionComponent,
+    ThemeSectionComponent,
     EventInfoTabsComponent,
     Recap2025SectionComponent,
     CountdownComponent,
@@ -68,7 +70,7 @@ export class LandingPageComponent implements OnInit {
       team: 'Finstream',
       achievement: 'Honorable Mention',
       badge: '🌟',
-      color: '#4ECDC4', // Cyan
+      color: '#2E96F5', // Cyan
       description: 'Reconhecido com Menção Honrosa entre milhares de projetos globais no NASA Space Apps Challenge 2025',
       imagePath: 'assets/winners/finstream/time.jpeg',
       members: [
@@ -76,7 +78,10 @@ export class LandingPageComponent implements OnInit {
         { name: 'Lucas Panonko', photo: 'assets/winners/finstream/lucas.jpg', url: 'https://www.instagram.com/luksbell/' },
         { name: 'Lucas Lara', photo: 'assets/winners/finstream/LucasLara.jpg', url: 'https://www.instagram.com/lucas.lc_?igsh=eXE4eHA3eWY3am5y' },
         { name: 'Mauricio Cesar', photo: 'assets/winners/finstream/MauricioAndreata.jpg', url: 'https://www.instagram.com/lucas.lc_?igsh=eXE4eHA3eWY3am5y' },
-        { name: 'João Vitor', photo: 'assets/winners/finstream/gabriel.jpg', url: 'https://www.instagram.com/lucas.lc_?igsh=eXE4eHA3eWY3am5y' },
+        // TODO: falta a foto do João Vitor. `gabriel.jpg` não existe e os
+        // arquivos restantes da pasta são numerados, sem como identificar quem
+        // é quem — placeholder até alguém subir a foto certa.
+        { name: 'João Vitor', photo: 'assets/organizers/placeholder.svg', url: 'https://www.instagram.com/lucas.lc_?igsh=eXE4eHA3eWY3am5y' },
 
       ],
       challengeUrl: '#',

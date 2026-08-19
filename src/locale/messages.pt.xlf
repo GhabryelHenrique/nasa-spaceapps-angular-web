@@ -178,7 +178,7 @@
         </context-group>
       </trans-unit>
       <trans-unit id="footer.copyright" datatype="html">
-        <source>© 2025 NASA Space Apps Uberlândia. Todos os direitos reservados.</source>
+        <source>© 2026 NASA Space Apps Uberlândia. Todos os direitos reservados.</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/landing-page/landing-page.component.html</context>
           <context context-type="linenumber">187,189</context>

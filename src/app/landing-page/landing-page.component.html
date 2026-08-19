@@ -1,246 +1,179 @@
 <div class="landing-container">
-  <!-- Header Component -->
-  <!-- Hero Section Component -->
+
+  <!-- Hero -->
   <section class="hero-wrapper">
     <app-hero-section></app-hero-section>
   </section>
 
-  <!-- Countdown 2026 Section -->
+  <!-- Tema 2026: The Next Frontier -->
+  <app-theme-section></app-theme-section>
+
+  <!-- Countdown 2026 -->
   <app-countdown></app-countdown>
 
-  <!-- Cronograma / Timeline 2026 Section -->
+  <!-- Cronograma / Timeline 2026 -->
   <app-timeline></app-timeline>
 
-  <!-- Recap 2025 Section -->
+  <!-- Recap 2025 -->
   <app-recap2025-section></app-recap2025-section>
 
-  <section class="become-partner-section reveal reveal-up">
-    <div class="container">
-      <div class="partner-card">
-        <div class="partner-glow"></div>
-        <div class="partner-content">
-          <span class="partner-badge">🤝 Oportunidade Única</span>
-          <h2>Torne-se um Parceiro do Space Apps 2026</h2>
-          <p>
-            Conecte sua empresa com a maior comunidade de inovação, tecnologia e ciência espacial de Uberlândia. Conheça nossos benefícios de patrocínio e impulsione projetos inovadores locais.
-          </p>
-          <div class="partner-actions">
-            <a routerLink="/patrocinio" class="btn btn-primary btn-large">
-              Ver Benefícios e Cotas
-            </a>
-            <a href="https://wa.me/5534984432264?text=Ol%C3%A1!%20Gostaria%20de%20saber%20mais%20sobre%20as%20cotas%20de%20patroc%C3%ADnio%20do%20NASA%20Space%20Apps%20Uberl%C3%A2ndia." target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-large">
-              Falar com Organização
-            </a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
+  <!-- ─── Destaques Globais ──────────────────────────────── -->
+  <section class="sa-section sa-section--deep winners-section">
+    <div class="sa-pattern sa-pattern--voronoi" aria-hidden="true"></div>
+    <div class="sa-container">
 
-  <!-- Winners Highlight Section -->
-  <section class="winners-highlight-wrapper">
-    <div class="container">
-      <div class="winners-highlight-content">
-        <h2 class="section-title reveal reveal-up">🎖️ Destaques Globais de Uberlândia</h2>
-        <p class="section-description reveal reveal-up delay-1">
-          Celebramos com orgulho os times de Uberlândia que alcançaram reconhecimento internacional no NASA Space Apps Challenge 2025
+      <header class="sa-head reveal reveal-up">
+        <p class="sa-eyebrow">Reconhecimento internacional</p>
+        <h2 class="sa-title">Destaques <span class="accent">globais</span> de Uberlândia</h2>
+        <p class="sa-lead">
+          Os times de Uberlândia que chegaram ao topo no NASA Space Apps Challenge 2025.
         </p>
+      </header>
 
-        <div class="winners-grid reveal reveal-up delay-2">
-          @for (winner of highlightedWinners; track winner.team) {
-            <div class="winner-card global-finalist" [class.top-winner]="winner.isTopWinner">
-              <div class="winner-badge" [style.color]="winner.color">{{ winner.badge }}</div>
-              <div class="winner-header">
-                <div class="winner-image-main">
-                  <img [src]="winner.imagePath"
-                       [alt]="winner.team"
-                       loading="lazy"
-                       onerror="this.src='assets/organizers/placeholder.svg'">
-                </div>
-                <div class="winner-info-main">
-                  <h3 class="winner-name" [style.color]="winner.color">{{ winner.team }}</h3>
-                  <p class="winner-achievement" [style.border-color]="winner.color">{{ winner.achievement }}</p>
-                  <p class="winner-description">{{ winner.description }}</p>
-                </div>
-              </div>
+      <div class="winners-grid reveal reveal-up delay-1">
+        @for (winner of highlightedWinners; track winner.team) {
+          <article class="winner-card" [class.is-top]="winner.isTopWinner">
+            <figure class="winner-photo">
+              <img [src]="winner.imagePath" [alt]="'Equipe ' + winner.team" loading="lazy"
+                   onerror="this.src='assets/organizers/placeholder.svg'">
+            </figure>
+
+            <div class="winner-body">
+              <p class="winner-award">
+                <i class="ph ph-medal" aria-hidden="true"></i>
+                {{ winner.achievement }}
+              </p>
+              <h3 class="winner-name">{{ winner.team }}</h3>
+              <p class="winner-desc">{{ winner.description }}</p>
 
               @if (winner.members && winner.members.length > 0) {
                 <div class="winner-members">
                   <h4 class="members-title">Time</h4>
-                  <div class="members-grid">
+                  <ul class="members-grid">
                     @for (member of winner.members; track member.name) {
-                      <a class="member-item"
-                         [href]="member.url"
-                         target="_blank"
-                         rel="noopener noreferrer"
-                         [title]="'Ver perfil de ' + member.name">
-                        <img [src]="member.photo"
-                             [alt]="member.name"
-                             loading="lazy"
-                             onerror="this.src='assets/organizers/placeholder.svg'">
-                        <span>{{ member.name }}</span>
-                      </a>
+                      <li>
+                        <a [href]="member.url" target="_blank" rel="noopener noreferrer"
+                           [title]="'Ver perfil de ' + member.name">
+                          <img [src]="member.photo" [alt]="member.name" loading="lazy"
+                               onerror="this.src='assets/organizers/placeholder.svg'">
+                          <span>{{ member.name }}</span>
+                        </a>
+                      </li>
                     }
-                  </div>
+                  </ul>
                 </div>
               }
             </div>
-          }
-        </div>
+          </article>
+        }
       </div>
+
     </div>
   </section>
 
-  <!-- Global Nominees 2025 Section -->
-  <section class="global-nominees-wrapper reveal reveal-up">
-    <div class="">
-      <div class="global-nominees-content">
-        <h2 class="section-title">🏆 Global Nominees 2025</h2>
-        <p class="section-description">
-          Parabéns aos projetos de Uberlândia que conquistaram a indicação aos Global Nominees do NASA Space Apps Challenge 2025!
+  <!-- ─── Global Nominees 2025 ───────────────────────────── -->
+  <section class="sa-section sa-section--sunken nominees-section">
+    <div class="sa-pattern sa-pattern--orbits" aria-hidden="true"></div>
+    <div class="sa-container">
+
+      <header class="sa-head reveal reveal-up">
+        <p class="sa-eyebrow">Indicados globais</p>
+        <h2 class="sa-title">Global <span class="accent">Nominees</span> 2025</h2>
+        <p class="sa-lead">
+          Dez projetos de Uberlândia indicados aos Global Nominees do
+          NASA Space Apps Challenge 2025.
         </p>
+      </header>
 
-        <div class="nominees-grid">
-          @for (team of globalNomineesTeams(); track team.title; let i = $index) {
-            <a class="nominee-card"
-               [href]="'https://www.spaceappschallenge.org' + team.meta.relativeUrl"
-               target="_blank"
-               rel="noopener noreferrer">
-              <div class="nominee-badge">🌟</div>
-              @if (team.featuredImage) {
-                <div class="team-image">
-                  <img [src]="team.featuredImage.rendition.fullUrl"
-                       [alt]="team.title"
-                       loading="lazy"
-                       onerror="this.src='assets/organizers/placeholder.svg'">
-                </div>
+      <div class="nominees-grid reveal reveal-up delay-1">
+        @for (team of globalNomineesTeams(); track team.title; let i = $index) {
+          <a class="nominee-card"
+             [href]="'https://www.spaceappschallenge.org' + team.meta.relativeUrl"
+             target="_blank" rel="noopener noreferrer">
+            <span class="nominee-rank">{{ i + 1 }}</span>
+            @if (team.featuredImage) {
+              <figure class="nominee-photo">
+                <img [src]="team.featuredImage.rendition.fullUrl" [alt]="team.title" loading="lazy"
+                     onerror="this.src='assets/organizers/placeholder.svg'">
+              </figure>
+            }
+            <div class="nominee-body">
+              <h3>{{ team.title }}</h3>
+              @if (team.challengeDetails) {
+                <p class="nominee-challenge">{{ team.challengeDetails.title }}</p>
               }
-              <div class="team-info">
-                <h3 class="nominee-name">{{ team.title }}</h3>
-                @if (team.challengeDetails) {
-                  <p class="challenge-name">
-                    {{ team.challengeDetails.title }}
-                  </p>
-                }
-                <div class="nominee-position">#{{ i + 1 }}</div>
-              </div>
-            </a>
-          }
-        </div>
+            </div>
+          </a>
+        }
       </div>
+
     </div>
   </section>
 
-  <!-- Prêmios Especiais Section -->
-  <section class="special-awards-wrapper">
-    <div class="">
-      <div class="special-awards-content">
-        <h2 class="section-title reveal reveal-up">✨ Prêmios Especiais</h2>
-        <p class="section-description reveal reveal-up delay-1">
-          Reconhecimentos especiais para quem tornou o NASA Space Apps Uberlândia 2025 único e inesquecível.
+  <!-- ─── Prêmios Especiais ──────────────────────────────── -->
+  <section class="sa-section sa-section--deep awards-section">
+    <div class="sa-pattern sa-pattern--rosette" aria-hidden="true"></div>
+    <div class="sa-container">
+
+      <header class="sa-head reveal reveal-up">
+        <p class="sa-eyebrow">Reconhecimentos locais</p>
+        <h2 class="sa-title">Prêmios <span class="accent">especiais</span></h2>
+        <p class="sa-lead">
+          Quem tornou o NASA Space Apps Uberlândia 2025 único e inesquecível.
         </p>
-        <div class="special-awards-grid reveal reveal-up delay-2">
-          @for (award of specialAwards; track award.category) {
-            <a class="special-award-card"
-               [href]="award.url" target="_blank" rel="noopener noreferrer">
-              @if (!award.imagePath) {
-                <div class="award-icon">{{ award.icon }}</div>
+      </header>
+
+      <div class="special-awards-grid reveal reveal-up delay-1">
+        @for (award of specialAwards; track award.category) {
+          <a class="special-award" [href]="award.url" target="_blank" rel="noopener noreferrer">
+            <figure class="award-portrait">
+              <img [src]="award.imagePath" [alt]="'Ganhador do prêmio ' + award.category"
+                   loading="lazy" onerror="this.src='assets/organizers/placeholder.svg'">
+            </figure>
+            <div class="award-body">
+              <p class="award-category">{{ award.category }}</p>
+              <h3 class="award-winner">{{ award.winner }}</h3>
+              @if (award.description) {
+                <p class="award-desc">{{ award.description }}</p>
               }
-              @if (award.imagePath) {
-                <div class="award-image">
-                  <img [src]="award.imagePath"
-                       [alt]="'Ganhador do prêmio ' + award.category"
-                       loading="lazy"
-                       onerror="this.src='assets/organizers/placeholder.svg'"/>
-                </div>
-              }
-              <div class="award-content">
-                <h4 class="award-category">{{ award.category }}</h4>
-                <p class="award-winner">{{ award.winner }}</p>
-                @if (award.description) {
-                  <p class="award-description">{{ award.description }}</p>
-                }
-              </div>
-            </a>
-          }
-        </div>
+            </div>
+          </a>
+        }
       </div>
+
     </div>
   </section>
 
-  <!-- Photos Gallery Section -->
-  <!-- <div class="reveal reveal-fade">
-    <app-photos-gallery></app-photos-gallery>
-  </div> -->
-
-  <!-- Event Info Tabs Component -->
+  <!-- Informações do Evento -->
   <section class="event-info-wrapper reveal reveal-up">
     <app-event-info-tabs></app-event-info-tabs>
   </section>
 
-  <!-- Events Map Component -->
-  <!-- <app-events-map></app-events-map> -->
-
-  <!-- Torne-se um Parceiro Section -->
-  <section class="become-partner-section reveal reveal-up">
-    <div class="container">
-      <div class="partner-card">
-        <div class="partner-glow"></div>
-        <div class="partner-content">
-          <span class="partner-badge">🤝 Oportunidade Única</span>
-          <h2>Torne-se um Parceiro do Space Apps 2026</h2>
-          <p>
-            Conecte sua empresa com a maior comunidade de inovação, tecnologia e ciência espacial de Uberlândia. Conheça nossos benefícios de patrocínio e impulsione projetos inovadores locais.
-          </p>
-          <div class="partner-actions">
-            <a routerLink="/patrocinio" class="btn btn-primary btn-large">
-              Ver Benefícios e Cotas
-            </a>
-            <a href="https://wa.me/5534984432264?text=Ol%C3%A1!%20Gostaria%20de%20saber%20mais%20sobre%20as%20cotas%20de%20patroc%C3%ADnio%20do%20NASA%20Space%20Apps%20Uberl%C3%A2ndia." target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-large">
-              Falar com Organização
-            </a>
-          </div>
+  <!-- ─── Torne-se um Parceiro ───────────────────────────── -->
+  <section class="sa-section sa-section--deep partner-section">
+    <div class="sa-pattern sa-pattern--fiduciaries" aria-hidden="true"></div>
+    <div class="sa-container">
+      <div class="partner-card reveal reveal-up">
+        <p class="sa-eyebrow">Oportunidade única</p>
+        <h2 class="sa-title">Torne-se um <span class="accent">parceiro</span> do Space Apps 2026</h2>
+        <p class="sa-lead">
+          Conecte sua empresa com a maior comunidade de inovação, tecnologia e ciência
+          espacial de Uberlândia. Conheça as cotas de patrocínio e impulsione projetos
+          inovadores locais.
+        </p>
+        <div class="partner-actions">
+          <a routerLink="/patrocinio" class="btn-primary">
+            <i class="ph ph-arrow-right" aria-hidden="true"></i>
+            Ver benefícios e cotas
+          </a>
+          <a href="https://wa.me/5534984432264?text=Ol%C3%A1!%20Gostaria%20de%20saber%20mais%20sobre%20as%20cotas%20de%20patroc%C3%ADnio%20do%20NASA%20Space%20Apps%20Uberl%C3%A2ndia."
+             target="_blank" rel="noopener noreferrer" class="btn-secondary">
+            <i class="fab fa-whatsapp" aria-hidden="true"></i>
+            Falar com a organização
+          </a>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Organizers Section -->
-  <!-- <section class="organizers-wrapper">
-    <div class="container">
-      <div class="organizers-content">
-        <h2 class="reveal reveal-up" i18n="@@organizers.title">Nossa Equipe Organizadora</h2>
-        <p class="section-description reveal reveal-up delay-1" i18n="@@organizers.description">
-          Conheça as pessoas que tornam o NASA Space Apps Challenge Uberlândia
-          uma realidade. Uma equipe dedicada e apaixonada por inovação e
-          tecnologia espacial.
-        </p>
-        <div class="organizers-grid reveal reveal-up delay-2">
-          @for (organizer of organizers; track organizer.name) {
-            <a
-              class="organizer-card"
-              href="{{ organizer.url }}"
-              target="_blank"
-            >
-              <div class="organizer-photo">
-                <img
-                  [src]="organizer.photo"
-                  [alt]="'Foto de ' + organizer.name"
-                  loading="lazy"
-                  onerror="this.src='assets/organizers/placeholder.svg'"
-                />
-              </div>
-              <div class="organizer-info">
-                <h3>{{ organizer.name }}</h3>
-                <p class="role">{{ organizer.role }}</p>
-                <p class="description">{{ organizer.description }}</p>
-              </div>
-            </a>
-          }
-        </div>
-      </div>
-    </div>
-  </section> -->
-
-  <!-- Footer -->
 </div>

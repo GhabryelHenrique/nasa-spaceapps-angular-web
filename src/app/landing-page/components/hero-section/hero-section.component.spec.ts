@@ -1,6 +1,5 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { HeroSectionComponent } from './hero-section.component';
-import { PLATFORM_ID } from '@angular/core';
 
 describe('HeroSectionComponent', () => {
   let component: HeroSectionComponent;
@@ -8,8 +7,7 @@ describe('HeroSectionComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [HeroSectionComponent],
-      providers: [{ provide: PLATFORM_ID, useValue: 'browser' }]
+      imports: [HeroSectionComponent]
     }).compileComponents();
 
     fixture = TestBed.createComponent(HeroSectionComponent);
@@ -21,37 +19,28 @@ describe('HeroSectionComponent', () => {
     expect(component).toBeTruthy();
   });
 
-  it('should have a hero background image', () => {
-    const img = fixture.nativeElement.querySelector('.hero-bg-photo') as HTMLImageElement;
+  it('should render the hero art inside a circular holding shape, with a description', () => {
+    // A arte em si é escolha editorial (logo, capacete…). O que o teste
+    // trava é o tratamento: existe imagem, dentro da holding shape, com alt.
+    const img = fixture.nativeElement.querySelector('.orb-shape img') as HTMLImageElement;
     expect(img).toBeTruthy();
-    expect(component.heroBg).toBeTruthy();
+    expect(component.themeImage).toBeTruthy();
+    expect(img.getAttribute('alt')?.trim().length).toBeGreaterThan(0);
+  });
+
+  it('should name the 2026 theme', () => {
+    const themeName = fixture.nativeElement.querySelector('.hero-theme-name') as HTMLElement;
+    expect(themeName.textContent?.trim()).toBe('The Next Frontier');
+  });
+
+  it('should not place any text on top of the theme art', () => {
+    // Brand Guide 2026, pág. 10: imagens nunca recebem texto ou conteúdo
+    // desenhado por cima.
+    const orb = fixture.nativeElement.querySelector('.hero-orb') as HTMLElement;
+    expect(orb.textContent?.trim()).toBe('');
   });
 
   it('should expose particles array', () => {
     expect(component.particles.length).toBe(20);
-  });
-
-  it('should not throw when scrollToCountdown is called on browser', () => {
-    spyOn(document, 'querySelector').and.returnValue(null);
-    expect(() => component.scrollToCountdown()).not.toThrow();
-  });
-
-  it('should not throw when scrollToInfo is called on browser', () => {
-    spyOn(document, 'getElementById').and.returnValue(null);
-    expect(() => component.scrollToInfo()).not.toThrow();
-  });
-
-  it('should not throw when methods are called on server platform', async () => {
-    await TestBed.resetTestingModule();
-    await TestBed.configureTestingModule({
-      imports: [HeroSectionComponent],
-      providers: [{ provide: PLATFORM_ID, useValue: 'server' }]
-    }).compileComponents();
-
-    const serverFixture = TestBed.createComponent(HeroSectionComponent);
-    const serverComponent = serverFixture.componentInstance;
-
-    expect(() => serverComponent.scrollToInfo()).not.toThrow();
-    expect(() => serverComponent.scrollToCountdown()).not.toThrow();
   });
 });

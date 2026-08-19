@@ -1,6 +1,6 @@
 <section class="timeline-section" id="cronograma" aria-label="Cronograma do evento">
+  <div class="section-pattern" aria-hidden="true"></div>
 
-  <!-- Cosmic background -->
   <div class="cosmic-bg" aria-hidden="true">
     <div class="stars">
       @for (s of starsArray; track s) {
@@ -8,30 +8,30 @@
       }
     </div>
     <div class="nebula nebula-blue"></div>
-    <div class="nebula nebula-red"></div>
   </div>
 
-  <div class="timeline-container">
+  <div class="container">
 
-    <!-- Header -->
-    <div class="timeline-header">
-      <span class="timeline-badge reveal reveal-up">
-        <span class="badge-icon">🗓️</span>
-        Cronograma Oficial
-      </span>
-      <h2 class="timeline-title reveal reveal-up delay-1">
-        A contagem regressiva <span class="title-highlight">já começou</span>
+    <!-- ─── Cabeçalho ────────────────────────────────────── -->
+    <header class="section-head">
+      <p class="section-eyebrow reveal reveal-up">Cronograma oficial</p>
+      <h2 class="section-title reveal reveal-up delay-1">
+        A contagem regressiva <span class="accent">já começou</span>
       </h2>
-      <p class="timeline-subtitle reveal reveal-up delay-2">
+      <p class="section-lead reveal reveal-up delay-2">
         Reúna sua equipe, prepare suas ideias e anote as datas oficiais para não perder
-        nenhum passo desta missão rumo ao NASA Space Apps Challenge 2026.
+        nenhum passo desta missão rumo ao NASA Space Apps Challenge 2026 —
+        <strong>The Next Frontier</strong>.
       </p>
-    </div>
+    </header>
 
-    <!-- Rumo ao Hackathon -->
+    <!-- ─── Rumo ao Hackathon ────────────────────────────── -->
     <div class="phase-label reveal reveal-up">
       <span class="phase-line" aria-hidden="true"></span>
-      <span class="phase-text">🚀 Rumo ao Hackathon</span>
+      <span class="phase-text">
+        <i class="ph ph-rocket-launch" aria-hidden="true"></i>
+        Rumo ao Hackathon
+      </span>
       <span class="phase-line" aria-hidden="true"></span>
     </div>
 
@@ -42,7 +42,7 @@
             [class.is-done]="status(item) === 'done'"
             [class.is-live]="status(item) === 'live'">
           <div class="tl-marker" aria-hidden="true">
-            <span class="tl-dot">{{ item.icon }}</span>
+            <span class="tl-dot"><i [class]="item.icon"></i></span>
             @if (!last) { <span class="tl-connector"></span> }
           </div>
           <div class="tl-card">
@@ -57,16 +57,19 @@
       }
     </ol>
 
-    <!-- Depois do Hackathon -->
+    <!-- ─── Depois do hackathon ──────────────────────────── -->
     <div class="phase-label reveal reveal-up">
       <span class="phase-line" aria-hidden="true"></span>
-      <span class="phase-text">🏁 E depois do hackathon?</span>
+      <span class="phase-text">
+        <i class="ph ph-flag-checkered" aria-hidden="true"></i>
+        E depois do hackathon?
+      </span>
       <span class="phase-line" aria-hidden="true"></span>
     </div>
 
     <p class="phase-note reveal reveal-up delay-1">
-      A jornada continua! Os projetos serão avaliados por especialistas da NASA,
-      de Agências Espaciais parceiras e líderes da indústria.
+      A jornada continua: os projetos são avaliados por especialistas da NASA,
+      de agências espaciais parceiras e líderes da indústria.
     </p>
 
     <ol class="timeline">
@@ -75,7 +78,7 @@
             [class.is-done]="status(item) === 'done'"
             [class.is-live]="status(item) === 'live'">
           <div class="tl-marker" aria-hidden="true">
-            <span class="tl-dot">{{ item.icon }}</span>
+            <span class="tl-dot"><i [class]="item.icon"></i></span>
             @if (!last) { <span class="tl-connector"></span> }
           </div>
           <div class="tl-card">
@@ -90,21 +93,17 @@
       }
     </ol>
 
-    <!-- CTA -->
+    <!-- ─── CTA ──────────────────────────────────────────── -->
     <div class="timeline-cta reveal reveal-up">
-      <p class="cta-text">Já sabe com quem você vai salvar o mundo (ou o espaço)? 🌍🛰️</p>
+      <p class="cta-text">Já sabe com quem você vai salvar o mundo — ou o espaço?</p>
       <div class="cta-actions">
-        <a href="https://discord.gg/FT4Jsvj5vy"
-           class="cta-main"
-           target="_blank"
-           rel="noopener noreferrer">
-          <i class="fab fa-discord"></i>
+        <a href="https://discord.gg/FT4Jsvj5vy" class="btn-primary" target="_blank" rel="noopener noreferrer">
+          <i class="fab fa-discord" aria-hidden="true"></i>
           Garantir meu lugar
         </a>
         <a href="https://www.spaceappschallenge.org/resources/participant-faqs"
-           class="cta-outline"
-           target="_blank"
-           rel="noopener noreferrer">
+           class="btn-secondary" target="_blank" rel="noopener noreferrer">
+          <i class="ph ph-question" aria-hidden="true"></i>
           Ver FAQ dos participantes
         </a>
       </div>

@@ -1,0 +1,159 @@
+// ─────────────────────────────────────────────────────────────
+// Sistema de seção — Space Apps Brand Guide 2026
+//
+// Todas as seções da home compartilham a mesma casca: tom de fundo
+// da família Deep Blue, padrão rebaixado, e o trio
+// eyebrow → título → lead. Isso mantém o ritmo da página sem
+// emendas duras e sem cada seção inventar sua própria escala.
+// ─────────────────────────────────────────────────────────────
+@forward 'variables';
+@use 'variables' as *;
+
+// Dois tons alternados, ambos aprovados pelo guia para blocos de texto
+// (pág. 12). Sem gradiente preso à viewport e sem preto puro.
+$tone-deep: #07173F;   // base, igual à do body
+$tone-sunken: #061027; // um degrau mais fundo, para alternar
+
+/// Casca da seção. `$tone: deep | sunken`.
+@mixin section-shell($tone: deep, $padding: 100px) {
+  position: relative;
+  isolation: isolate;
+  padding: $padding 0;
+  overflow: hidden;
+
+  @if $tone == sunken {
+    background: $tone-sunken;
+  } @else {
+    background: $tone-deep;
+  }
+}
+
+/// Padrão de fundo rebaixado sobre o azul (pág. 19).
+/// O guia pede ~25%; padrões de alto contraste como o Code.png
+/// pedem menos para não competir com o texto.
+@mixin section-pattern($file, $size: 720px, $opacity: 0.25) {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background-image: url('/assets/patterns/#{$file}');
+  background-size: $size $size;
+  background-repeat: repeat;
+  opacity: $opacity;
+  mix-blend-mode: soft-light;
+  pointer-events: none;
+}
+
+@mixin section-container($max: 1120px) {
+  max-width: $max;
+  margin: 0 auto;
+  padding: 0 2rem;
+  position: relative;
+  z-index: 1;
+
+  @media (max-width: 768px) { padding: 0 1.25rem; }
+}
+
+@mixin section-head {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+/// Losango Neon Yellow + rótulo. Neon Yellow como acento, nunca fundo.
+@mixin section-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-family: 'Overpass', sans-serif;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.6);
+  margin: 0 0 0.85rem;
+
+  &::before {
+    content: '';
+    width: 9px;
+    height: 9px;
+    flex-shrink: 0;
+    background: $sa-neon-yellow;
+    transform: rotate(45deg);
+    box-shadow: 0 0 10px rgba($sa-neon-yellow, 0.7);
+  }
+}
+
+/// Título de seção: Fira Sans Black, caixa-alta, 5% de letter-spacing
+/// (pág. 13), em branco sólido — 17.7:1 sobre Deep Blue.
+/// Substitui os gradientes recortados no texto, que desbotavam a ponta
+/// e reprovavam no contraste.
+@mixin section-title($size: clamp(1.9rem, 4vw, 2.9rem)) {
+  font-family: 'Fira Sans', sans-serif;
+  font-size: $size;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  line-height: 1.15;
+  color: $sa-white;
+  margin: 0 0 1rem;
+
+  // Uma palavra-chave em Blue Yonder (5.7:1) dá ênfase sem sair da paleta
+  .accent { color: $sa-blue-yonder; }
+}
+
+@mixin section-lead($max: 640px) {
+  max-width: $max;
+  margin: 0 auto;
+  font-size: 1.05rem;
+  font-weight: 300;
+  line-height: 1.6;
+  color: var(--text-secondary);
+}
+
+/// Superfície padrão de cartão.
+@mixin surface-card($pad: 1.6rem 1.4rem, $radius: 16px) {
+  padding: $pad;
+  border-radius: $radius;
+  background: rgba(0, 66, 166, 0.16);
+  border: 1px solid var(--border-subtle);
+  transition: transform 0.25s ease, background 0.25s ease, border-color 0.25s ease;
+
+  &:hover {
+    transform: translateY(-4px);
+    background: rgba(0, 66, 166, 0.28);
+    border-color: rgba($sa-blue-yonder, 0.45);
+  }
+}
+
+/// Ícone de linha (Phosphor). Tamanhos arredondados, como pede a pág. 17.
+@mixin section-icon($size: 32px, $color: $sa-blue-yonder) {
+  display: block;
+  font-size: $size;
+  line-height: 1;
+  color: $color;
+}
+
+/// Número de destaque em cartão de estatística.
+@mixin stat-value($size: clamp(2rem, 4vw, 2.8rem)) {
+  font-family: 'Fira Sans', sans-serif;
+  font-size: $size;
+  font-weight: 900;
+  line-height: 1;
+  color: $sa-white;
+
+  sup, .plus {
+    font-size: 0.5em;
+    color: $sa-blue-yonder;
+    vertical-align: super;
+    margin-left: 0.05em;
+  }
+}
+
+@mixin stat-label {
+  font-family: 'Overpass', sans-serif;
+  font-size: 0.76rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+}

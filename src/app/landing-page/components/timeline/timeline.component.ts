@@ -31,7 +31,7 @@ export class TimelineComponent {
     {
       date: '2026-08-26T00:00:00-03:00',
       label: '26 de Agosto',
-      icon: '📝',
+      icon: 'ph ph-note-pencil',
       title: 'Abertura das Inscrições',
       description:
         'As inscrições para o maior hackathon do planeta são liberadas. Garanta seu lugar na missão!',
@@ -39,7 +39,7 @@ export class TimelineComponent {
     {
       date: '2026-09-17T00:00:00-03:00',
       label: '17 de Setembro',
-      icon: '🤝',
+      icon: 'ph ph-handshake',
       title: 'Resumos dos Desafios e Formação de Equipes',
       description:
         'Resumos dos desafios disponíveis e abertura para a formação de equipes. O Guia do Participante é liberado.',
@@ -47,7 +47,7 @@ export class TimelineComponent {
     {
       date: '2026-10-28T00:00:00-03:00',
       label: '28 de Outubro',
-      icon: '📋',
+      icon: 'ph ph-clipboard-text',
       title: 'Declarações dos Desafios',
       description:
         'Divulgação oficial das Declarações dos Desafios (Challenge Statements) que guiarão os projetos.',
@@ -55,7 +55,7 @@ export class TimelineComponent {
     {
       date: '2026-11-02T00:00:00-03:00',
       label: '2 de Novembro',
-      icon: '🌐',
+      icon: 'ph ph-globe-hemisphere-west',
       title: 'Abertura do Space Apps Connect',
       description:
         'Abertura do Space Apps Connect e lançamento do guia da plataforma para conectar participantes do mundo todo.',
@@ -63,7 +63,7 @@ export class TimelineComponent {
     {
       date: '2026-11-13T00:00:00-03:00',
       label: '13 de Novembro',
-      icon: '🎁',
+      icon: 'ph ph-gift',
       title: 'Ofertas Globais Liberadas',
       description:
         'Guias de Submissão de Projetos, Julgamento e Premiação ficam disponíveis para todas as equipes.',
@@ -72,7 +72,7 @@ export class TimelineComponent {
       date: '2026-11-14T00:00:00-03:00',
       endDate: '2026-11-15T23:59:59-03:00',
       label: '14 e 15 de Novembro',
-      icon: '🏆',
+      icon: 'ph ph-trophy',
       title: 'NASA Space Apps Challenge',
       description:
         'O grande evento! 48 horas para reunir sua equipe, inovar e resolver desafios reais da NASA. 👩‍🚀👨‍💻',
@@ -84,7 +84,7 @@ export class TimelineComponent {
     {
       date: '2026-12-01T00:00:00-03:00',
       label: 'Dezembro de 2026',
-      icon: '🌟',
+      icon: 'ph ph-star',
       title: 'Indicados e Finalistas Globais',
       description:
         'Anúncio dos Indicados Globais (Global Nominees), Finalistas Globais e Menções Honrosas, avaliados por especialistas da NASA e agências parceiras.',
@@ -92,7 +92,7 @@ export class TimelineComponent {
     {
       date: '2027-01-01T00:00:00-03:00',
       label: 'Janeiro de 2027',
-      icon: '🎉',
+      icon: 'ph ph-confetti',
       title: 'Vencedores Globais',
       description:
         'O grande anúncio dos Vencedores Globais (Global Winners)! O ápice da jornada iniciada no hackathon. 🏆',

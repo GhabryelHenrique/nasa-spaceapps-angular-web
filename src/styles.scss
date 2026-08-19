@@ -8,11 +8,20 @@
   box-sizing: border-box;
 }
 
+// Base do site: Deep Blue sólido — um dos três fundos que o guia permite para
+// texto (pág. 12). O gradiente 45° da marca é tratamento de SEÇÃO, não do body:
+// num scroll longo, um gradiente preso à viewport faz cada seção sem fundo
+// próprio revelar a parte clara e cria faixas brilhantes com emendas duras.
+html {
+  background: var(--bg-primary);
+}
+
 body {
   font-family: 'Overpass', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-  background: #000000;
+  font-weight: 300; // Overpass Light (pág. 13)
+  background: var(--bg-primary);
   color: var(--text-primary);
-  line-height: 1.6;
+  line-height: 1.5;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   position: relative;
@@ -48,51 +57,219 @@ body::before {
   to   { background-position: 362px 384px, 590px 660px, 900px 780px, 560px 470px; }
 }
 
-// Typography
-h1, h2, h3, h4, h5, h6,
-.title, .heading {
-  font-family: 'Fira Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-}
+// =============================================
+// TIPOGRAFIA — Brand Guide 2026, pág. 11 e 13
+// Fira Sans (títulos) · Overpass (texto) · Fira Code (código)
+// As fontes são carregadas via <link> em index.html.
+// =============================================
 
+$font-display: 'Fira Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+$font-body: 'Overpass', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+$font-mono: 'Fira Code', 'SFMono-Regular', Consolas, 'Liberation Mono', monospace;
+
+// H1 — Fira Sans Black, all-caps, 5% de letter-spacing, 120%
 h1, .title-large {
-  font-weight: 900; // Fira Sans Black
+  font-family: $font-display;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  line-height: 1.2;
 }
 
-h2, h3, .title-medium {
-  font-weight: 700; // Fira Sans Bold
+// H2 — Overpass Regular, 120%. Não é Fira Sans: o guia reserva
+// Fira Sans para o H1 e usa Overpass da hierarquia H2 para baixo.
+h2, .title-medium {
+  font-family: $font-body;
+  font-weight: 400;
+  line-height: 1.2;
 }
 
-h4, h5, h6, .heading {
-  font-weight: 700; // Overpass Bold
+// H3 — Overpass SemiBold, 150%. O all-caps do guia fica na utilitária
+// `.subheading`: no site, `h3` também carrega nome de time, patrocinador e
+// prêmio, e caixa-alta em nome próprio prejudica a leitura.
+h3 {
+  font-family: $font-body;
+  font-weight: 600;
+  line-height: 1.5;
+}
+
+// H3 Subheading conforme pág. 13, para subtítulos de fato.
+.subheading, .heading {
+  font-family: $font-body;
+  font-weight: 600;
+  text-transform: uppercase;
+  line-height: 1.5;
+}
+
+h4, h5, h6 {
+  font-family: $font-body;
+  font-weight: 600;
+  line-height: 1.5;
+}
+
+// `.title` continua disponível para quem quer o peso display fora de um <h1>
+.title {
+  font-family: $font-display;
+  font-weight: 900;
+}
+
+// Body — Overpass Light, 150%
+p {
+  line-height: 1.5;
+}
+
+// Espaçamento de 20pt entre parágrafos (pág. 13). Escopado a `.prose` para
+// não somar com as margens que os componentes já definem nos seus cards.
+.prose p + p {
+  margin-top: 20px;
+}
+
+code, pre, kbd, samp {
+  font-family: $font-mono;
 }
 
 .body-copy {
-  font-family: 'Overpass', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-  font-weight: 400; // Overpass Regular
+  font-family: $font-body;
+  font-weight: 300; // Overpass Light
 }
 
 .body-copy-bold {
-  font-family: 'Overpass', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-family: $font-body;
   font-weight: 700; // Overpass Bold
 }
 
 .body-copy-italic {
-  font-family: 'Overpass', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-  font-weight: 400;
-  font-style: italic; // Overpass Italic
+  font-family: $font-body;
+  font-weight: 300;
+  font-style: italic;
+}
+
+// Parágrafos longos podem alternar cores por linha, "como as listras
+// da bandeira" (pág. 12). Cada linha vira um <span>.
+.text-stripes {
+  > span {
+    display: block;
+
+    &:nth-child(odd)  { color: var(--sa-white); }
+    &:nth-child(even) { color: var(--sa-neon-yellow); }
+  }
 }
 
 html {
   scroll-behavior: smooth;
 }
 
-// Import Google Fonts
-@import url('https://fonts.googleapis.com/css2?family=Fira+Sans:wght@400;700;900&family=Overpass:ital,wght@0,400;0,700;1,400&display=swap');
-
 a {
   text-decoration: none;
   display: inline-block;
+  color: inherit;
 }
+
+// Neon Yellow marca links de texto corrido. Escopado a prosa de propósito:
+// o guia pede uso "sparingly" (regra 60-30-10), então cards e botões que
+// também são <a> ficam de fora. `li a` ficou de fora também — listas são
+// usadas para navegação e grades de cartão, não só para texto.
+p a, .prose a {
+  color: var(--text-link);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+
+  &:hover { color: var(--sa-white); }
+}
+
+// =============================================
+// BOTÕES — Brand Guide 2026, pág. 14–16
+// Primário: fundo Neon Yellow + texto Deep Blue (15.7:1, AAA).
+// Neon Yellow nunca é fundo de área — só de elemento interativo.
+// =============================================
+
+.btn-primary,
+.btn-secondary,
+.btn-link {
+  font-family: $font-body;
+  font-weight: 700; // Overpass Bold
+  font-size: 1.05rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 0.85rem 1.75rem;
+  border-radius: 100px;
+  border: 2px solid transparent;
+  cursor: pointer;
+  transition: background 0.25s ease, color 0.25s ease, border-color 0.25s ease,
+    transform 0.25s ease, box-shadow 0.25s ease;
+
+  &:hover { transform: translateY(-2px); }
+  &:focus-visible {
+    outline: 3px solid var(--sa-neon-yellow);
+    outline-offset: 3px;
+  }
+}
+
+.btn-primary {
+  background: var(--sa-neon-yellow);
+  color: var(--sa-deep-blue);
+  box-shadow: var(--shadow-neon-yellow);
+
+  &:hover {
+    background: var(--sa-white);
+    color: var(--sa-deep-blue);
+  }
+}
+
+.btn-secondary {
+  background: transparent;
+  color: var(--sa-white);
+  border-color: var(--border-strong);
+
+  &:hover {
+    background: var(--bg-surface-hover);
+    border-color: var(--sa-blue-yonder);
+  }
+}
+
+.btn-link {
+  padding: 0.85rem 0.5rem;
+  background: none;
+  color: var(--sa-blue-yonder);
+
+  &:hover {
+    color: var(--sa-neon-yellow);
+    transform: none;
+    text-decoration: underline;
+    text-underline-offset: 4px;
+  }
+}
+
+// =============================================
+// PADRÕES DE FUNDO — Brand Guide 2026, pág. 19
+// Vetor de uma cor só, rebaixado a ~25% de opacidade sobre uma cor
+// da marca (de preferência azul).
+// =============================================
+
+@mixin pattern-overlay($file, $size: 720px, $opacity: 0.25) {
+  position: relative;
+  isolation: isolate;
+
+  &::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    background-image: url('/assets/patterns/#{$file}');
+    background-size: $size $size;
+    background-repeat: repeat;
+    opacity: $opacity;
+    pointer-events: none;
+  }
+}
+
+.pattern-orbits    { @include pattern-overlay('Orbits.png'); }
+.pattern-voronoi   { @include pattern-overlay('Voronoi.png'); }
+.pattern-waves     { @include pattern-overlay('Waves.png'); }
+.pattern-code      { @include pattern-overlay('Code.png'); }
+.pattern-rosette   { @include pattern-overlay('Rosette.png'); }
+.pattern-fiduciaries { @include pattern-overlay('Fiduciaries.png'); }
 
 // 🏎️ RED BULL EASTER EGG - SITE DANCING ANIMATIONS! ⚡
 body.red-bull-party-mode {

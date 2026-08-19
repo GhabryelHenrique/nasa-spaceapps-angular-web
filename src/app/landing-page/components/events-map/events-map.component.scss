@@ -1,6 +1,6 @@
 .events-map-section {
   padding: 4rem 0;
-  background: linear-gradient(135deg, #0f0f23 0%, #1a1a3e 100%);
+  background: linear-gradient(135deg, #07173F 0%, #07173F 100%);
   min-height: 100vh;
   color: white;
 
@@ -15,7 +15,7 @@
     font-weight: 700;
     text-align: center;
     margin-bottom: 1rem;
-    background: linear-gradient(45deg, #4ecdc4, #45b7d1);
+    background: linear-gradient(45deg, #2E96F5, #2E96F5);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
@@ -24,7 +24,7 @@
   .section-description {
     text-align: center;
     font-size: 1.2rem;
-    color: #b8c3d9;
+    color: #C3D3EA;
     margin-bottom: 3rem;
     max-width: 600px;
     margin-left: auto;
@@ -36,7 +36,7 @@
     border-radius: 12px;
     overflow: hidden;
     box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
-    border: 2px solid rgba(78, 205, 196, 0.2);
+    border: 2px solid rgba(46, 150, 245, 0.2);
     min-height: 400px;
     position: relative;
 
@@ -51,7 +51,7 @@
       justify-content: center;
       height: 400px;
       background: rgba(15, 15, 35, 0.95);
-      color: #b8c3d9;
+      color: #C3D3EA;
 
       .loading-spinner {
         margin-bottom: 1rem;
@@ -59,8 +59,8 @@
         .spinner {
           width: 40px;
           height: 40px;
-          border: 3px solid rgba(78, 205, 196, 0.3);
-          border-top: 3px solid #4ecdc4;
+          border: 3px solid rgba(46, 150, 245, 0.3);
+          border-top: 3px solid #2E96F5;
           border-radius: 50%;
           animation: spin 1s linear infinite;
         }
@@ -74,14 +74,14 @@
 
     .info-window {
       h3 {
-        color: #2c3e50;
+        color: #07173F;
         font-size: 1.1rem;
         font-weight: 600;
         margin-bottom: 0.5rem;
       }
 
       p {
-        color: #5a6c7d;
+        color: #8FA6C6;
         font-size: 0.9rem;
         margin: 0;
       }
@@ -99,7 +99,7 @@
     margin-bottom: 2rem;
 
     .reset-view-btn {
-      background: linear-gradient(45deg, #4ecdc4, #45b7d1);
+      background: linear-gradient(45deg, #2E96F5, #2E96F5);
       border: none;
       border-radius: 8px;
       padding: 0.75rem 1.5rem;
@@ -114,7 +114,7 @@
 
       &:hover:not(:disabled) {
         transform: translateY(-2px);
-        box-shadow: 0 5px 15px rgba(78, 205, 196, 0.3);
+        box-shadow: 0 5px 15px rgba(46, 150, 245, 0.3);
       }
 
       &:disabled {
@@ -138,7 +138,7 @@
       background: rgba(255, 255, 255, 0.05);
       border-radius: 12px;
       padding: 1.5rem;
-      border: 1px solid rgba(78, 205, 196, 0.2);
+      border: 1px solid rgba(46, 150, 245, 0.2);
       backdrop-filter: blur(10px);
       transition: all 0.3s ease;
       position: relative;
@@ -148,8 +148,8 @@
         
         &:hover {
           transform: translateY(-5px);
-          border-color: rgba(78, 205, 196, 0.4);
-          box-shadow: 0 10px 30px rgba(78, 205, 196, 0.1);
+          border-color: rgba(46, 150, 245, 0.4);
+          box-shadow: 0 10px 30px rgba(46, 150, 245, 0.1);
           
           .card-action {
             opacity: 1;
@@ -159,19 +159,19 @@
 
       &:not(.clickable):hover {
         transform: translateY(-5px);
-        border-color: rgba(78, 205, 196, 0.4);
-        box-shadow: 0 10px 30px rgba(78, 205, 196, 0.1);
+        border-color: rgba(46, 150, 245, 0.4);
+        box-shadow: 0 10px 30px rgba(46, 150, 245, 0.1);
       }
 
       h3 {
-        color: #4ecdc4;
+        color: #2E96F5;
         font-size: 1.2rem;
         font-weight: 600;
         margin-bottom: 0.75rem;
       }
 
       p {
-        color: #b8c3d9;
+        color: #C3D3EA;
         font-size: 1rem;
         line-height: 1.5;
         margin-bottom: 1rem;
@@ -179,12 +179,12 @@
 
       .coordinates {
         font-size: 0.85rem;
-        color: #8892b0;
+        color: #8FA6C6;
         font-family: 'Courier New', monospace;
         background: rgba(0, 0, 0, 0.2);
         padding: 0.5rem;
         border-radius: 6px;
-        border-left: 3px solid #45b7d1;
+        border-left: 3px solid #2E96F5;
       }
 
       .card-action {
@@ -193,7 +193,7 @@
         gap: 0.5rem;
         margin-top: 1rem;
         padding: 0.5rem;
-        background: rgba(78, 205, 196, 0.1);
+        background: rgba(46, 150, 245, 0.1);
         border-radius: 6px;
         opacity: 0.7;
         transition: opacity 0.3s ease;
@@ -204,7 +204,7 @@
         }
 
         .action-text {
-          color: #4ecdc4;
+          color: #2E96F5;
           font-weight: 500;
         }
       }

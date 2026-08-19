@@ -80,7 +80,7 @@
 
       &::before {
         content: '▶';
-        color: var(--nasa-blue);
+        color: var(--sa-blue-yonder);
         font-size: 0.8em;
         font-weight: bold;
       }
@@ -124,7 +124,7 @@
           content: '"';
           position: absolute;
           left: 0.8rem;
-          color: var(--nasa-blue);
+          color: var(--sa-blue-yonder);
           font-weight: bold;
           font-size: 1.2em;
         }
@@ -159,7 +159,7 @@
       &:hover {
         transform: translateY(-3px);
         box-shadow: var(--shadow-nasa-blue);
-        background: var(--gradient-nasa-red);
+        background: var(--gradient-nasa-blue);
       }
 
       &:active {

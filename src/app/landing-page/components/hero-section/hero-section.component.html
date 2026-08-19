@@ -1,10 +1,9 @@
 <section class="hero" role="banner">
 
-  <!-- Background photo com overlay -->
+  <!-- Fundo: gradiente da marca a 45° (Brand Guide 2026, pág. 8) -->
   <div class="hero-bg" aria-hidden="true">
-    <img [src]="heroBg" alt="" class="hero-bg-photo" loading="eager">
-    <div class="hero-bg-overlay"></div>
-    <div class="hero-bg-gradient"></div>
+    <div class="hero-bg-pattern"></div>
+    <div class="hero-bg-glow"></div>
   </div>
 
   <!-- Partículas decorativas -->
@@ -14,49 +13,68 @@
     }
   </div>
 
-  <!-- Conteúdo centralizado -->
   <div class="hero-body">
 
-    <!-- Badge duplo: edição atual + próxima -->
-    <div class="hero-badges reveal reveal-up">
-      <div class="hero-badge hero-badge-past">
-        <span class="badge-dot"></span>
-        2025 · Uberlândia escreveu história
+    <!-- ─── Coluna de texto ─────────────────────────────── -->
+    <div class="hero-copy">
+
+      <!-- Tema da edição 2026 -->
+      <div class="hero-theme reveal reveal-up">
+        <span class="hero-theme-mark" aria-hidden="true"></span>
+        <span class="hero-theme-label">Tema 2026</span>
+        <span class="hero-theme-name">The Next Frontier</span>
       </div>
-      <div class="hero-badge-sep" aria-hidden="true">→</div>
-      <div class="hero-badge hero-badge-next">
-        <span class="badge-pulse"></span>
-        2026 · Prepare-se
+      <p class="hero-theme-pt reveal reveal-up delay-1">A Próxima Fronteira</p>
+
+      <h1 class="hero-title reveal reveal-up delay-1">
+        O maior hackathon<br>
+        <span class="hero-title-highlight">espacial do mundo</span><br>
+        <span class="hero-title-sub">volta em novembro</span>
+      </h1>
+
+      <p class="hero-subtitle reveal reveal-up delay-2">
+        Em 2025 fomos <strong>#1 no Hemisfério Ocidental</strong> com 1400+ participantes e 10 Global Nominees.<br>
+        Em 2026, a missão recomeça. <strong>14 de Novembro.</strong> Você vai estar lá?
+      </p>
+
+      <div class="hero-actions reveal reveal-up delay-3">
+        <a href="https://chat.whatsapp.com/LLsTZ9soMR2GflnGSrft0j" class="btn-primary" target="_blank" rel="noopener noreferrer">
+          <i class="fab fa-whatsapp" aria-hidden="true"></i>
+          Garantir meu lugar
+        </a>
+        <a href="https://discord.gg/FT4Jsvj5vy" class="btn-secondary" target="_blank" rel="noopener noreferrer">
+          <i class="fab fa-discord" aria-hidden="true"></i>
+          Discord
+        </a>
+        <a href="https://www.instagram.com/nasaspaceappsuberlandia" class="btn-link" target="_blank" rel="noopener noreferrer">
+          <i class="fab fa-instagram" aria-hidden="true"></i>
+          Instagram
+        </a>
       </div>
+
+      <!-- Badge duplo: edição passada + próxima -->
+      <div class="hero-badges reveal reveal-up delay-4">
+        <div class="hero-badge hero-badge-past">
+          <span class="badge-dot"></span>
+          2025 · Uberlândia escreveu história
+        </div>
+        <div class="hero-badge-sep" aria-hidden="true">→</div>
+        <div class="hero-badge hero-badge-next">
+          <span class="badge-pulse"></span>
+          2026 · Prepare-se
+        </div>
+      </div>
+
     </div>
 
-    <!-- Título -->
-    <h1 class="hero-title reveal reveal-up delay-1">
-      O maior hackathon<br>
-      <span class="hero-title-highlight">espacial do mundo</span><br>
-      <span class="hero-title-sub">volta em novembro</span>
-    </h1>
-
-    <!-- Subtítulo -->
-    <p class="hero-subtitle reveal reveal-up delay-2">
-      Em 2025 fomos <strong>#1 no Hemisfério Ocidental</strong> com 1400+ participantes e 10 Global Nominees.<br>
-      Em 2026, a missão recomeça. <strong>14 de Novembro.</strong> Você vai estar lá?
-    </p>
-
-    <!-- CTAs -->
-    <div class="hero-actions reveal reveal-up delay-3">
-      <a href="https://chat.whatsapp.com/LLsTZ9soMR2GflnGSrft0j" class="cta-btn cta-primary-hero" target="_blank" rel="noopener noreferrer">
-        <i class="fab fa-whatsapp"></i>
-        Garantir meu lugar
-      </a>
-      <a href="https://discord.gg/FT4Jsvj5vy" class="cta-btn cta-discord-hero" target="_blank" rel="noopener noreferrer">
-        <i class="fab fa-discord"></i>
-        Discord
-      </a>
-      <a href="https://www.instagram.com/nasaspaceappsuberlandia" class="cta-btn cta-instagram" target="_blank" rel="noopener noreferrer">
-        <i class="fab fa-instagram"></i>
-        Instagram
-      </a>
+    <!-- ─── Holding shape circular com a arte do tema ────── -->
+    <div class="hero-orb reveal reveal-scale delay-2">
+      <span class="orb-ring orb-ring-1" aria-hidden="true"></span>
+      <span class="orb-ring orb-ring-2" aria-hidden="true"></span>
+      <span class="orb-ring orb-ring-3" aria-hidden="true"></span>
+      <div class="orb-shape">
+        <img [src]="themeImage" [alt]="themeImageAlt" loading="eager">
+      </div>
     </div>
 
   </div>
@@ -89,7 +107,6 @@
     </div>
   </div>
 
-  <!-- Scroll indicator -->
   <div class="scroll-indicator" aria-hidden="true">
     <span class="scroll-dot"></span>
   </div>

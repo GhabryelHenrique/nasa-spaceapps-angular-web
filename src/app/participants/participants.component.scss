@@ -1,6 +1,6 @@
 .participants-container {
   min-height: 100vh;
-  background: linear-gradient(135deg, #0f0c29 0%, #302b63 50%, #24243e 100%);
+  background: linear-gradient(135deg, #061027 0%, #0042A6 50%, #07173F 100%);
   padding: 80px 20px 60px;
 
   .header {
@@ -11,7 +11,7 @@
     h1 {
       font-size: 3rem;
       font-weight: 700;
-      background: linear-gradient(135deg, #4ecdc4 0%, #45b7d1 100%);
+      background: linear-gradient(135deg, #2E96F5 0%, #2E96F5 100%);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
       background-clip: text;
@@ -63,8 +63,8 @@
 
     &:hover {
       transform: translateY(-8px);
-      box-shadow: 0 12px 40px rgba(78, 205, 196, 0.3);
-      border-color: rgba(78, 205, 196, 0.5);
+      box-shadow: 0 12px 40px rgba(46, 150, 245, 0.3);
+      border-color: rgba(46, 150, 245, 0.5);
 
       .hover-overlay {
         opacity: 1;
@@ -91,7 +91,7 @@
         height: 100%;
         border-radius: 50%;
         object-fit: cover;
-        border: 3px solid rgba(78, 205, 196, 0.5);
+        border: 3px solid rgba(46, 150, 245, 0.5);
         transition: transform 0.3s ease;
       }
 
@@ -141,7 +141,7 @@
       bottom: 0;
       left: 0;
       right: 0;
-      background: linear-gradient(135deg, #4ecdc4 0%, #45b7d1 100%);
+      background: linear-gradient(135deg, #2E96F5 0%, #2E96F5 100%);
       padding: 12px;
       text-align: center;
       opacity: 0;

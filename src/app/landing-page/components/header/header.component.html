@@ -12,9 +12,9 @@
 
     <!-- Desktop nav links -->
     <ul class="nav-links" role="list">
-      <li><a routerLink="/desafios" class="nav-link"><i class="fa-solid fa-trophy"></i> Desafios</a></li>
-      <li><a routerLink="/times" class="nav-link"><i class="fa-solid fa-users"></i> Times</a></li>
-      <li><a routerLink="/" fragment="cronograma" class="nav-link"><i class="fa-solid fa-calendar-days"></i> Cronograma</a></li>
+      <li><a routerLink="/desafios" class="nav-link"><i class="ph ph-trophy"></i> Desafios</a></li>
+      <li><a routerLink="/times" class="nav-link"><i class="ph ph-users-three"></i> Times</a></li>
+      <li><a routerLink="/" fragment="cronograma" class="nav-link"><i class="ph ph-calendar-dots"></i> Cronograma</a></li>
     </ul>
 
     <!-- Social + auth CTAs -->
@@ -36,18 +36,18 @@
             <i class="fa-solid" [class.fa-user-astronaut]="auth.isParticipant()"
                [class.fa-user-graduate]="auth.isMentor()"></i>
             <span>{{ firstName() }}</span>
-            <i class="fa-solid fa-chevron-down caret" [class.open]="userMenuOpen()"></i>
+            <i class="ph ph-caret-down caret" [class.open]="userMenuOpen()"></i>
           </button>
           @if (userMenuOpen()) {
             <div class="user-dropdown" role="menu">
               <a routerLink="/app" role="menuitem" (click)="userMenuOpen.set(false)">
-                <i class="fa-solid fa-gauge-high"></i> Minha área
+                <i class="ph ph-gauge"></i> Minha área
               </a>
               <a routerLink="/app/perfil" role="menuitem" (click)="userMenuOpen.set(false)">
-                <i class="fa-solid fa-circle-user"></i> Perfil
+                <i class="ph ph-user-circle"></i> Perfil
               </a>
               <button role="menuitem" (click)="logout()">
-                <i class="fa-solid fa-right-from-bracket"></i> Sair
+                <i class="ph ph-sign-out"></i> Sair
               </button>
             </div>
           }
@@ -68,28 +68,28 @@
   <!-- Mobile drawer -->
   <div class="mobile-drawer" [class.open]="mobileMenuOpen" (click)="closeMobileMenu()">
     <nav class="drawer-nav" (click)="$event.stopPropagation()">
-      <a routerLink="/desafios" class="drawer-link" (click)="closeMobileMenu()"><i class="fa-solid fa-trophy"></i> Desafios</a>
-      <a routerLink="/times" class="drawer-link" (click)="closeMobileMenu()"><i class="fa-solid fa-users"></i> Times</a>
-      <a routerLink="/" fragment="cronograma" class="drawer-link" (click)="closeMobileMenu()"><i class="fa-solid fa-calendar-days"></i> Cronograma</a>
+      <a routerLink="/desafios" class="drawer-link" (click)="closeMobileMenu()"><i class="ph ph-trophy"></i> Desafios</a>
+      <a routerLink="/times" class="drawer-link" (click)="closeMobileMenu()"><i class="ph ph-users-three"></i> Times</a>
+      <a routerLink="/" fragment="cronograma" class="drawer-link" (click)="closeMobileMenu()"><i class="ph ph-calendar-dots"></i> Cronograma</a>
 <!--
       <div class="drawer-divider"></div>
 
       @if (auth.isAuthenticated()) {
         <a routerLink="/app" class="drawer-link" (click)="closeMobileMenu()">
-          <i class="fa-solid fa-gauge-high"></i> Minha área
+          <i class="ph ph-gauge"></i> Minha área
         </a>
         <a routerLink="/app/perfil" class="drawer-link" (click)="closeMobileMenu()">
-          <i class="fa-solid fa-circle-user"></i> Perfil
+          <i class="ph ph-user-circle"></i> Perfil
         </a>
         <button class="drawer-link drawer-button" (click)="logout()">
-          <i class="fa-solid fa-right-from-bracket"></i> Sair
+          <i class="ph ph-sign-out"></i> Sair
         </button>
       } @else {
         <a routerLink="/login" class="drawer-link" (click)="closeMobileMenu()">
-          <i class="fa-solid fa-right-to-bracket"></i> Entrar
+          <i class="ph ph-sign-in"></i> Entrar
         </a>
         <a routerLink="/cadastro" class="drawer-link highlight" (click)="closeMobileMenu()">
-          <i class="fa-solid fa-rocket"></i> Cadastrar
+          <i class="ph ph-rocket-launch"></i> Cadastrar
         </a>
       } -->
 

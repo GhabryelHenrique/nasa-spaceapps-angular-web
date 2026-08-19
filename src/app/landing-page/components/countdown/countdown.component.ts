@@ -40,4 +40,12 @@ export class CountdownComponent {
   pad(n: number): string {
     return n.toString().padStart(2, '0');
   }
+
+  /** Números de 2025 usados como prova social. */
+  readonly hypeStats = [
+    { icon: 'ph ph-users-three', value: '1400', plus: true, label: 'Participantes em 2025' },
+    { icon: 'ph ph-trophy', value: '10', plus: false, label: 'Global Nominees' },
+    { icon: 'ph ph-globe-hemisphere-west', value: '#1', plus: false, label: 'Hemisfério Ocidental' },
+    { icon: 'ph ph-shooting-star', value: '160', plus: true, label: 'Times formados' }
+  ];
 }
