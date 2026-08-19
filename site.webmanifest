@@ -1,7 +1,7 @@
 {
-    "name": "NASA Space Apps Challenge 2026 Uberlândia",
+    "name": "NASA Space Apps Challenge 2026 Uberlândia — The Next Frontier",
     "short_name": "Space Apps UDI",
-    "description": "Hackathon internacional de 48 horas para resolver desafios espaciais e terrestres",
+    "description": "The Next Frontier — hackathon internacional de 48 horas para resolver desafios espaciais e terrestres",
     "icons": [
         {
             "src": "/favicon.ico",
@@ -19,8 +19,8 @@
             "type": "image/png"
         }
     ],
-    "theme_color": "#4ecdc4",
-    "background_color": "#1a1a2e",
+    "theme_color": "#07173F",
+    "background_color": "#07173F",
     "display": "standalone",
     "orientation": "portrait-primary",
     "start_url": "/",
