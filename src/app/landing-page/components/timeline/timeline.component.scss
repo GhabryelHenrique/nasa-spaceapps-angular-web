@@ -213,6 +213,34 @@
   margin: 0;
 }
 
+// Ação do marco — hoje só o de inscrições tem uma.
+.tl-action {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  margin-top: 1.1rem;
+  padding: 0.5rem 1.1rem;
+  border-radius: 100px;
+  border: 1px solid rgba($sa-neon-yellow, 0.45);
+  font-family: 'Overpass', sans-serif;
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: $sa-neon-yellow;
+  transition: background 0.2s ease, transform 0.2s ease;
+
+  &:hover {
+    background: rgba($sa-neon-yellow, 0.12);
+    transform: translateY(-2px);
+  }
+
+  &:focus-visible {
+    outline: 3px solid var(--sa-neon-yellow);
+    outline-offset: 3px;
+  }
+
+  i { font-size: 16px; }
+}
+
 // Marco principal (o hackathon em si)
 .tl-item.is-highlight {
   .tl-dot {
@@ -261,6 +289,22 @@
   gap: 0.9rem;
 
   i { font-size: 1.1rem; }
+}
+
+.cta-note {
+  margin: 1.5rem 0 0;
+  font-size: 0.88rem;
+  font-weight: 300;
+  color: var(--text-muted);
+
+  a {
+    color: $sa-neon-yellow;
+    font-weight: 600;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+
+    &:hover { color: $sa-white; }
+  }
 }
 
 // ─── Responsivo ───────────────────────────────────────────

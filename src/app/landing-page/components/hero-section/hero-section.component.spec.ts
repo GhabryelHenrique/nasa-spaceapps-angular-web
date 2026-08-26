@@ -1,4 +1,5 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { provideRouter } from '@angular/router';
 import { HeroSectionComponent } from './hero-section.component';
 
 describe('HeroSectionComponent', () => {
@@ -7,7 +8,8 @@ describe('HeroSectionComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [HeroSectionComponent]
+      imports: [HeroSectionComponent],
+      providers: [provideRouter([])]
     }).compileComponents();
 
     fixture = TestBed.createComponent(HeroSectionComponent);
@@ -42,5 +44,26 @@ describe('HeroSectionComponent', () => {
 
   it('should expose particles array', () => {
     expect(component.particles.length).toBe(20);
+  });
+
+  it('should point the primary CTA at the official NASA registration page', () => {
+    const cta = fixture.nativeElement.querySelector('.hero-actions .btn-primary') as HTMLAnchorElement;
+
+    expect(cta.getAttribute('href')).toBe(component.registrationUrl);
+    expect(cta.target).toBe('_blank');
+    expect(cta.rel).toContain('noopener');
+  });
+
+  it('should announce that registration is open', () => {
+    const badge = fixture.nativeElement.querySelector('.hero-live-badge') as HTMLElement;
+
+    expect(badge.textContent?.trim()).toBe('Inscrições abertas');
+  });
+
+  it('should offer the mentor form as a secondary path', () => {
+    const link = fixture.nativeElement.querySelector('.hero-mentor-note a') as HTMLAnchorElement;
+
+    expect(link.getAttribute('href')).toBe(component.mentorFormUrl);
+    expect(link.target).toBe('_blank');
   });
 });

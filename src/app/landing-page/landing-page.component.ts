@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
 import { HeaderComponent } from './components/header/header.component';
 import { HeroSectionComponent } from './components/hero-section/hero-section.component';
+import { RegistrationSectionComponent } from './components/registration-section/registration-section.component';
 import { ThemeSectionComponent } from './components/theme-section/theme-section.component';
 import { EventInfoTabsComponent } from './components/event-info-tabs/event-info-tabs.component';
 import { Recap2025SectionComponent } from './components/recap2025-section/recap2025-section.component';
@@ -17,6 +18,7 @@ import { Team } from '../shared/data/teams.data';
     CommonModule,
     RouterModule,
     HeroSectionComponent,
+    RegistrationSectionComponent,
     ThemeSectionComponent,
     EventInfoTabsComponent,
     Recap2025SectionComponent,

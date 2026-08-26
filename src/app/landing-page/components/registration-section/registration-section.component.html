@@ -1,0 +1,76 @@
+<section class="registration-section" id="inscricoes" aria-labelledby="inscricoes-titulo">
+  <div class="registration-pattern" aria-hidden="true"></div>
+
+  <div class="registration-container">
+
+    <!-- ─── Cabeçalho ────────────────────────────────────── -->
+    <header class="registration-head">
+      <p class="live-badge reveal reveal-up">
+        <span class="live-dot" aria-hidden="true"></span>
+        Inscrições abertas
+      </p>
+
+      <h2 id="inscricoes-titulo" class="registration-title reveal reveal-up delay-1">
+        As inscrições para 2026<br><span class="accent">já começaram</span>
+      </h2>
+
+      <p class="registration-lead reveal reveal-up delay-2">
+        A sede Uberlândia está confirmada no site oficial da NASA. A inscrição é
+        <strong>gratuita</strong>, feita direto na página global do Space Apps — e leva
+        menos de cinco minutos.
+      </p>
+    </header>
+
+    <!-- ─── Dois caminhos: participante e mentoria ───────── -->
+    <div class="tracks reveal reveal-up delay-3">
+      @for (item of tracks; track item.title) {
+        <article class="track" [class.is-primary]="item.primary">
+          <i class="track-icon" [class]="item.icon" aria-hidden="true"></i>
+          <p class="track-eyebrow">{{ item.eyebrow }}</p>
+          <h3 class="track-title">{{ item.title }}</h3>
+          <p class="track-desc">{{ item.description }}</p>
+
+          <ul class="track-bullets">
+            @for (bullet of item.bullets; track bullet) {
+              <li><i class="ph ph-check" aria-hidden="true"></i>{{ bullet }}</li>
+            }
+          </ul>
+
+          <a [href]="item.ctaUrl"
+             class="track-cta"
+             [class.btn-primary]="item.primary"
+             [class.btn-secondary]="!item.primary"
+             target="_blank" rel="noopener noreferrer">
+            <i [class]="item.ctaIcon" aria-hidden="true"></i>
+            {{ item.ctaLabel }}
+          </a>
+        </article>
+      }
+    </div>
+
+    <!-- ─── Ajuda ────────────────────────────────────────── -->
+    <div class="registration-help reveal reveal-up delay-4">
+      <div class="help-copy">
+        <i class="ph ph-lifebuoy" aria-hidden="true"></i>
+        <div>
+          <h3>Primeira vez? A gente te guia.</h3>
+          <p>
+            Passo a passo com telas, prazos, regras de time e as dúvidas mais comuns
+            de quem nunca participou de um hackathon.
+          </p>
+        </div>
+      </div>
+      <div class="help-actions">
+        <a routerLink="/como-se-inscrever" class="btn-secondary">
+          <i class="ph ph-list-numbers" aria-hidden="true"></i>
+          Ver o passo a passo
+        </a>
+        <a [href]="whatsappUrl" class="btn-link" target="_blank" rel="noopener noreferrer">
+          <i class="fab fa-whatsapp" aria-hidden="true"></i>
+          Tirar dúvidas no WhatsApp
+        </a>
+      </div>
+    </div>
+
+  </div>
+</section>

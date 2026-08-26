@@ -152,7 +152,48 @@
   font-style: italic;
   letter-spacing: 0.04em;
   color: rgba(255, 255, 255, 0.6);
+  margin: 0 0 1.1rem;
+}
+
+// ─── Selo "inscrições abertas" ──────────────────
+// Neon Yellow como acento de estado, nunca como fundo cheio (pág. 13).
+.hero-live-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.55rem;
   margin: 0 0 1.4rem;
+  padding: 0.4rem 1rem;
+  border-radius: 100px;
+  background: rgba($sa-neon-yellow, 0.08);
+  border: 1px solid rgba($sa-neon-yellow, 0.45);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: $sa-neon-yellow;
+
+  .live-dot {
+    position: relative;
+    width: 9px;
+    height: 9px;
+    flex-shrink: 0;
+    border-radius: 50%;
+    background: $sa-neon-yellow;
+
+    &::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      border-radius: 50%;
+      background: $sa-neon-yellow;
+      animation: hero-live-pulse 1.8s ease-out infinite;
+    }
+  }
+}
+
+@keyframes hero-live-pulse {
+  from { transform: scale(1); opacity: 0.7; }
+  to   { transform: scale(2.6); opacity: 0; }
 }
 
 // ─── Título ─────────────────────────────────────
@@ -203,9 +244,26 @@
   gap: 0.85rem;
   flex-wrap: wrap;
   align-items: center;
-  margin-bottom: 2.4rem;
+  margin-bottom: 1rem;
 
   i { font-size: 1.1rem; }
+}
+
+// Caminho secundário: quem não vai competir, mas quer estar no evento.
+.hero-mentor-note {
+  font-size: 0.9rem;
+  font-weight: 300;
+  color: rgba(255, 255, 255, 0.6);
+  margin: 0 0 2.2rem;
+
+  a {
+    color: $sa-neon-yellow;
+    font-weight: 600;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+
+    &:hover { color: $sa-white; }
+  }
 }
 
 // ─── Badges 2025 → 2026 ─────────────────────────
@@ -483,6 +541,16 @@
   .hero-badges { justify-content: center; }
 }
 
+@media (max-width: 600px) {
+  .hero-actions {
+    width: 100%;
+    flex-direction: column;
+    align-items: stretch;
+
+    :is(.btn-primary, .btn-secondary, .btn-link) { justify-content: center; }
+  }
+}
+
 @media (max-width: 768px) {
   .hero-orb { max-width: 270px; }
 
@@ -524,7 +592,8 @@
   .orb-shape,
   .badge-pulse,
   .particle,
-  .scroll-dot {
+  .scroll-dot,
+  .hero-live-badge .live-dot::after {
     animation: none !important;
   }
 }

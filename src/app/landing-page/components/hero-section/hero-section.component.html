@@ -26,6 +26,11 @@
       </div>
       <p class="hero-theme-pt reveal reveal-up delay-1">A Próxima Fronteira</p>
 
+      <p class="hero-live-badge reveal reveal-up delay-1">
+        <span class="live-dot" aria-hidden="true"></span>
+        Inscrições abertas
+      </p>
+
       <h1 class="hero-title reveal reveal-up delay-1">
         O maior hackathon<br>
         <span class="hero-title-highlight">espacial do mundo</span><br>
@@ -38,19 +43,24 @@
       </p>
 
       <div class="hero-actions reveal reveal-up delay-3">
-        <a href="https://chat.whatsapp.com/LLsTZ9soMR2GflnGSrft0j" class="btn-primary" target="_blank" rel="noopener noreferrer">
+        <a [href]="registrationUrl" class="btn-primary" target="_blank" rel="noopener noreferrer">
+          <i class="ph ph-rocket-launch" aria-hidden="true"></i>
+          Inscreva-se agora
+        </a>
+        <a routerLink="/como-se-inscrever" class="btn-secondary">
+          <i class="ph ph-list-numbers" aria-hidden="true"></i>
+          Como se inscrever
+        </a>
+        <a [href]="whatsappUrl" class="btn-link" target="_blank" rel="noopener noreferrer">
           <i class="fab fa-whatsapp" aria-hidden="true"></i>
-          Garantir meu lugar
-        </a>
-        <a href="https://discord.gg/FT4Jsvj5vy" class="btn-secondary" target="_blank" rel="noopener noreferrer">
-          <i class="fab fa-discord" aria-hidden="true"></i>
-          Discord
-        </a>
-        <a href="https://www.instagram.com/nasaspaceappsuberlandia" class="btn-link" target="_blank" rel="noopener noreferrer">
-          <i class="fab fa-instagram" aria-hidden="true"></i>
-          Instagram
+          Comunidade
         </a>
       </div>
+
+      <p class="hero-mentor-note reveal reveal-up delay-3">
+        Quer ser mentor, jurado ou voluntário?
+        <a [href]="mentorFormUrl" target="_blank" rel="noopener noreferrer">Inscreva-se por aqui</a>.
+      </p>
 
       <!-- Badge duplo: edição passada + próxima -->
       <div class="hero-badges reveal reveal-up delay-4">

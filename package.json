@@ -9,7 +9,7 @@
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
     "deploy": "npm run commitAndPush && npm run build-deploy",
-    "commitAndPush": "git add . && git commit -m \"[Auto] Update teams and Events\" && git push",
+    "commitAndPush": "git add . && git commit -m \"Update visual site\" && git push",
     "build-deploy": "ng build --configuration production && ngh --dir=dist/nasa-spaceapps-angular-web/browser"
   },
   "private": true,

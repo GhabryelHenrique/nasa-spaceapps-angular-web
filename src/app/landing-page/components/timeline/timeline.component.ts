@@ -1,5 +1,7 @@
 import { Component, signal } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { RouterLink } from '@angular/router';
+import { MENTOR_FORM_URL, REGISTRATION_URL } from '../../../shared/data/registration.data';
 
 interface Milestone {
   /** ISO date used to derive the milestone status */
@@ -13,19 +15,23 @@ interface Milestone {
   description: string;
   /** Destaca o marco principal (o hackathon) */
   highlight?: boolean;
+  /** Link externo do marco, quando já existe algo para fazer agora */
+  action?: { label: string; url: string };
 }
 
 type MilestoneStatus = 'done' | 'live' | 'upcoming';
 
 @Component({
   selector: 'app-timeline',
-  imports: [CommonModule],
+  imports: [CommonModule, RouterLink],
   templateUrl: './timeline.component.html',
   styleUrl: './timeline.component.scss',
 })
 export class TimelineComponent {
   readonly starsArray = Array.from({ length: 40 }, (_, i) => i);
   private readonly now = signal(new Date());
+  readonly registrationUrl = REGISTRATION_URL;
+  readonly mentorFormUrl = MENTOR_FORM_URL;
 
   readonly mainMilestones: Milestone[] = [
     {
@@ -35,6 +41,10 @@ export class TimelineComponent {
       title: 'Abertura das Inscrições',
       description:
         'As inscrições para o maior hackathon do planeta são liberadas. Garanta seu lugar na missão!',
+      action: {
+        label: 'Inscrever-se no site da NASA',
+        url: REGISTRATION_URL,
+      },
     },
     {
       date: '2026-09-17T00:00:00-03:00',

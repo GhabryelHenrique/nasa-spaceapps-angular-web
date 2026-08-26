@@ -10,6 +10,10 @@ export const routes: Routes = [
     loadComponent: () => import('./challenges/challenges.component').then(m => m.ChallengesComponent)
   },
   {
+    path: 'como-se-inscrever',
+    loadComponent: () => import('./how-to-register/how-to-register.component').then(m => m.HowToRegisterComponent)
+  },
+  {
     path: 'times',
     loadComponent: () => import('./teams/teams.component').then(m => m.TeamsComponent)
   },

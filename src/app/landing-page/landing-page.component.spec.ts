@@ -36,8 +36,8 @@ describe('LandingPageComponent', () => {
   describe('Section composition', () => {
     it('should render every section in order', () => {
       const order = [...compiled().querySelectorAll<HTMLElement>(
-        'app-hero-section, app-theme-section, app-countdown, app-timeline, ' +
-        'app-recap2025-section, .winners-section, .nominees-section, ' +
+        'app-hero-section, app-registration-section, app-theme-section, app-countdown, ' +
+        'app-timeline, app-recap2025-section, .winners-section, .nominees-section, ' +
         '.awards-section, .event-info-wrapper, .partner-section'
       )].map(el =>
         el.tagName.toLowerCase() === 'section'
@@ -48,6 +48,7 @@ describe('LandingPageComponent', () => {
 
       expect(order).toEqual([
         'app-hero-section',
+        'app-registration-section',
         'app-theme-section',
         'app-countdown',
         'app-timeline',

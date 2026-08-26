@@ -52,6 +52,12 @@
             </div>
             <h3 class="tl-heading">{{ item.title }}</h3>
             <p class="tl-desc">{{ item.description }}</p>
+            @if (item.action; as action) {
+              <a [href]="action.url" class="tl-action" target="_blank" rel="noopener noreferrer">
+                {{ action.label }}
+                <i class="ph ph-arrow-up-right" aria-hidden="true"></i>
+              </a>
+            }
           </div>
         </li>
       }
@@ -97,16 +103,19 @@
     <div class="timeline-cta reveal reveal-up">
       <p class="cta-text">Já sabe com quem você vai salvar o mundo — ou o espaço?</p>
       <div class="cta-actions">
-        <a href="https://discord.gg/FT4Jsvj5vy" class="btn-primary" target="_blank" rel="noopener noreferrer">
-          <i class="fab fa-discord" aria-hidden="true"></i>
+        <a [href]="registrationUrl" class="btn-primary" target="_blank" rel="noopener noreferrer">
+          <i class="ph ph-rocket-launch" aria-hidden="true"></i>
           Garantir meu lugar
         </a>
-        <a href="https://www.spaceappschallenge.org/resources/participant-faqs"
-           class="btn-secondary" target="_blank" rel="noopener noreferrer">
-          <i class="ph ph-question" aria-hidden="true"></i>
-          Ver FAQ dos participantes
+        <a routerLink="/como-se-inscrever" class="btn-secondary">
+          <i class="ph ph-list-numbers" aria-hidden="true"></i>
+          Como se inscrever
         </a>
       </div>
+      <p class="cta-note">
+        Vai atuar como mentor, jurado ou voluntário?
+        <a [href]="mentorFormUrl" target="_blank" rel="noopener noreferrer">Preencha o formulário de mentoria</a>.
+      </p>
     </div>
 
   </div>

@@ -15,10 +15,16 @@
       <li><a routerLink="/desafios" class="nav-link"><i class="ph ph-trophy"></i> Desafios</a></li>
       <li><a routerLink="/times" class="nav-link"><i class="ph ph-users-three"></i> Times</a></li>
       <li><a routerLink="/" fragment="cronograma" class="nav-link"><i class="ph ph-calendar-dots"></i> Cronograma</a></li>
+      <li><a routerLink="/como-se-inscrever" class="nav-link"><i class="ph ph-list-numbers"></i> Como se inscrever</a></li>
     </ul>
 
     <!-- Social + auth CTAs -->
     <div class="nav-actions">
+      <a [href]="registrationUrl" class="register-btn" target="_blank" rel="noopener noreferrer">
+        <span class="register-dot" aria-hidden="true"></span>
+        <span class="register-label">Inscreva-se</span>
+      </a>
+
       <button class="icon-btn whatsapp" (click)="openWhatsApp()" aria-label="WhatsApp">
         <i class="fa-brands fa-whatsapp"></i>
       </button>
@@ -68,6 +74,18 @@
   <!-- Mobile drawer -->
   <div class="mobile-drawer" [class.open]="mobileMenuOpen" (click)="closeMobileMenu()">
     <nav class="drawer-nav" (click)="$event.stopPropagation()">
+      <a [href]="registrationUrl" class="drawer-link highlight" target="_blank" rel="noopener noreferrer"
+         (click)="closeMobileMenu()">
+        <i class="ph ph-rocket-launch"></i> Inscreva-se no site da NASA
+      </a>
+      <a routerLink="/como-se-inscrever" class="drawer-link" (click)="closeMobileMenu()"><i class="ph ph-list-numbers"></i> Como se inscrever</a>
+      <a [href]="mentorFormUrl" class="drawer-link" target="_blank" rel="noopener noreferrer"
+         (click)="closeMobileMenu()">
+        <i class="ph ph-chalkboard-teacher"></i> Quero ser mentor
+      </a>
+
+      <div class="drawer-divider"></div>
+
       <a routerLink="/desafios" class="drawer-link" (click)="closeMobileMenu()"><i class="ph ph-trophy"></i> Desafios</a>
       <a routerLink="/times" class="drawer-link" (click)="closeMobileMenu()"><i class="ph ph-users-three"></i> Times</a>
       <a routerLink="/" fragment="cronograma" class="drawer-link" (click)="closeMobileMenu()"><i class="ph ph-calendar-dots"></i> Cronograma</a>

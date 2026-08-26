@@ -1,9 +1,11 @@
 import { Component, computed, signal, inject, DestroyRef, afterNextRender } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { RouterLink } from '@angular/router';
+import { REGISTRATION_URL } from '../../../shared/data/registration.data';
 
 @Component({
   selector: 'app-countdown',
-  imports: [CommonModule],
+  imports: [CommonModule, RouterLink],
   templateUrl: './countdown.component.html',
   styleUrl: './countdown.component.scss'
 })
@@ -12,6 +14,7 @@ export class CountdownComponent {
   private readonly eventDate = new Date('2026-11-14T00:00:00-03:00');
   private readonly now = signal(new Date());
   readonly starsArray = Array.from({ length: 60 }, (_, i) => i);
+  readonly registrationUrl = REGISTRATION_URL;
 
   readonly diff = computed(() => Math.max(0, this.eventDate.getTime() - this.now().getTime()));
   readonly isLive = computed(() => this.diff() <= 0);
