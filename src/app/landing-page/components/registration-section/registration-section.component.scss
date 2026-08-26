@@ -1,0 +1,259 @@
+@use '../../../../styles/section' as *;
+
+// ─────────────────────────────────────────────────────────────
+// Inscrições abertas
+// Primeiro bloco depois do hero. Separa os dois públicos que se
+// inscrevem por caminhos diferentes: participante (site da NASA)
+// e mentor/jurado/voluntário (formulário da organização local).
+// ─────────────────────────────────────────────────────────────
+
+.registration-section {
+  @include section-shell(deep, 96px);
+  // O header é fixo — evita que o alvo do link âncora fique escondido atrás dele.
+  scroll-margin-top: 84px;
+}
+
+.registration-pattern { @include section-pattern('Waves.png', 760px, 0.2); }
+
+.registration-container { @include section-container(1120px); }
+
+.registration-head {
+  @include section-head;
+}
+
+// Selo pulsante — o mesmo vocabulário do "ao vivo" do countdown.
+.live-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.55rem;
+  margin: 0 0 1rem;
+  padding: 0.4rem 1rem;
+  border: 1px solid rgba($sa-neon-yellow, 0.45);
+  border-radius: 100px;
+  background: rgba($sa-neon-yellow, 0.08);
+  font-family: 'Overpass', sans-serif;
+  font-size: 0.74rem;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: $sa-neon-yellow;
+}
+
+.live-dot {
+  position: relative;
+  width: 9px;
+  height: 9px;
+  flex-shrink: 0;
+  border-radius: 50%;
+  background: $sa-neon-yellow;
+
+  &::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: 50%;
+    background: $sa-neon-yellow;
+    animation: reg-pulse 1.8s ease-out infinite;
+  }
+}
+
+@keyframes reg-pulse {
+  from { transform: scale(1); opacity: 0.7; }
+  to   { transform: scale(2.6); opacity: 0; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .live-dot::after { animation: none; }
+}
+
+.registration-title {
+  @include section-title;
+}
+
+.registration-lead {
+  @include section-lead(660px);
+
+  strong { color: $sa-white; font-weight: 600; }
+}
+
+// ─── Dois caminhos ────────────────────────────────────────
+.tracks {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 1.5rem;
+  align-items: stretch;
+}
+
+.track {
+  display: flex;
+  flex-direction: column;
+  padding: 2rem 1.75rem;
+  border-radius: 20px;
+  background: rgba(0, 66, 166, 0.16);
+  border: 1px solid var(--border-subtle);
+  transition: transform 0.25s ease, border-color 0.25s ease, background 0.25s ease;
+
+  &:hover {
+    transform: translateY(-5px);
+    background: rgba(0, 66, 166, 0.26);
+    border-color: rgba($sa-blue-yonder, 0.45);
+  }
+
+  // O caminho do participante é o principal: borda Neon Yellow.
+  &.is-primary {
+    border-color: rgba($sa-neon-yellow, 0.3);
+
+    .track-icon,
+    .track-eyebrow { color: $sa-neon-yellow; }
+
+    &:hover { border-color: rgba($sa-neon-yellow, 0.55); }
+  }
+}
+
+.track-icon {
+  @include section-icon(34px);
+  margin-bottom: 1rem;
+}
+
+.track-eyebrow {
+  font-family: 'Overpass', sans-serif;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: $sa-blue-yonder;
+  margin: 0 0 0.5rem;
+}
+
+.track-title {
+  font-family: 'Fira Sans', sans-serif;
+  font-size: 1.45rem;
+  font-weight: 900;
+  letter-spacing: 0.02em;
+  color: $sa-white;
+  margin: 0 0 0.7rem;
+}
+
+.track-desc {
+  font-size: 0.95rem;
+  font-weight: 300;
+  line-height: 1.6;
+  color: var(--text-secondary);
+  margin: 0 0 1.35rem;
+}
+
+.track-bullets {
+  list-style: none;
+  margin: 0 0 1.75rem;
+  padding: 0;
+  display: grid;
+  gap: 0.6rem;
+
+  li {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.6rem;
+    font-size: 0.9rem;
+    font-weight: 300;
+    line-height: 1.45;
+    color: var(--text-secondary);
+  }
+
+  i {
+    flex-shrink: 0;
+    margin-top: 0.15rem;
+    font-size: 16px;
+    color: $sa-blue-yonder;
+  }
+}
+
+// Empurra o botão para a base, alinhando os dois cartões.
+.track-cta {
+  margin-top: auto;
+  align-self: flex-start;
+  font-size: 0.95rem;
+  text-align: left;
+}
+
+// ─── Faixa de ajuda ───────────────────────────────────────
+.registration-help {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.75rem;
+  margin-top: 2.5rem;
+  padding: 1.85rem 1.9rem;
+  border-radius: 20px;
+  background: rgba(0, 66, 166, 0.12);
+  border: 1px dashed var(--border-strong);
+}
+
+.help-copy {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  flex: 1 1 420px;
+
+  > i {
+    @include section-icon(30px);
+    flex-shrink: 0;
+    margin-top: 0.15rem;
+  }
+
+  h3 {
+    font-family: 'Fira Sans', sans-serif;
+    font-size: 1.2rem;
+    font-weight: 900;
+    letter-spacing: 0.02em;
+    color: $sa-white;
+    margin: 0 0 0.4rem;
+  }
+
+  p {
+    font-size: 0.92rem;
+    font-weight: 300;
+    line-height: 1.55;
+    color: var(--text-secondary);
+    margin: 0;
+  }
+}
+
+.help-actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.75rem;
+
+  i { font-size: 1.05rem; }
+}
+
+// ─── Responsivo ───────────────────────────────────────────
+@media (max-width: 768px) {
+  .registration-section { padding: 68px 0; }
+
+  .tracks { grid-template-columns: 1fr; }
+
+  .track { padding: 1.7rem 1.35rem; }
+
+  .track-cta {
+    align-self: stretch;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .registration-help {
+    padding: 1.5rem 1.25rem;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .help-actions {
+    width: 100%;
+    flex-direction: column;
+    align-items: stretch;
+
+    .btn-secondary { justify-content: center; }
+    .btn-link { justify-content: center; }
+  }
+}

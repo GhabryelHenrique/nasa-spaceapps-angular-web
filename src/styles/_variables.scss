@@ -1,68 +1,114 @@
-// NASA Official Colors
+// ─────────────────────────────────────────────────────────────
+// NASA Space Apps — Brand Guide 2026
+// Paleta oficial (pág. 7 do Space Apps Brand Guide 2026).
+// Estas 8 cores são as únicas cores de marca que existem.
+// ─────────────────────────────────────────────────────────────
 :root {
-  // Primary NASA Colors
-  --nasa-blue: #0960E1;        // NEON BLUE (NASA Official Midnight Blue replacement)
-  --nasa-red: #E43700;         // ROCKET RED (NASA Official Rocket Red)
-  --nasa-white: #FFFFFF;       // WHITE
+  // Paleta oficial
+  --sa-blue-yonder: #2E96F5;   // Blue Yonder
+  --sa-neon-blue: #0960E1;     // Neon Blue
+  --sa-electric-blue: #0042A6; // Electric Blue  (PMS 2146 C)
+  --sa-deep-blue: #07173F;     // Deep Blue      (PMS 295 C)
+  --sa-rocket-red: #E43700;    // Rocket Red     (PMS Bright Red C)
+  --sa-martian-red: #8E1100;   // Martian Red
+  --sa-neon-yellow: #EAFE07;   // Neon Yellow    (PMS Neon 387)
+  --sa-white: #FFFFFF;         // White
 
-  // Secondary NASA Colors
-  --nasa-worm-red: #8E1100;    // MARTIAN RED (NASA "Worm" Logo Red replacement)
+  // ── Aliases legados ────────────────────────────────────────
+  // Mantidos para não quebrar os ~190 var() já espalhados pelo código.
+  --nasa-blue: var(--sa-neon-blue);
+  --nasa-red: var(--sa-rocket-red);
+  --nasa-white: var(--sa-white);
+  --nasa-worm-red: var(--sa-martian-red);
+  --nasa-blue-dark: var(--sa-deep-blue);
+  --nasa-blue-light: var(--sa-blue-yonder);
+  --nasa-red-dark: var(--sa-martian-red);
+  --nasa-red-light: var(--sa-rocket-red);
+  --electric-blue: var(--sa-electric-blue);
+  --neon-yellow: var(--sa-neon-yellow);
 
-  // Dark Theme Extended Palette
-  --nasa-blue-dark: #07173F;   // DEEP BLUE (Darker blue for backgrounds)
-  --nasa-blue-light: #2E96F5;  // BLUE YONDER (Lighter blue for hover states)
-  --nasa-red-dark: #8E1100;    // MARTIAN RED (Darker red)
-  --nasa-red-light: #E43700;   // ROCKET RED (Lighter red for highlights)
+  // ── Fundos ─────────────────────────────────────────────────
+  // O guia (pág. 12/13) permite texto apenas sobre Deep Blue,
+  // Electric Blue ou White. Preto puro está fora da marca.
+  --bg-primary: #07173F;                      // Deep Blue
+  --bg-secondary: #061027;                    // Deep Blue mais fundo, para contraste de seção
+  --bg-elevated: #0A2050;                     // Cartões e superfícies elevadas
+  --bg-surface: rgba(0, 66, 166, 0.18);       // Electric Blue translúcido
+  --bg-surface-hover: rgba(0, 66, 166, 0.30);
+  --border-subtle: rgba(46, 150, 245, 0.18);  // Blue Yonder @18%
+  --border-strong: rgba(46, 150, 245, 0.42);
 
-  // Additional colors
-  --electric-blue: #0042A6;    // ELECTRIC BLUE
-  --neon-yellow: #EAFE07;      // NEON YELLOW
-
-  // Background and surface colors for dark theme
-  --bg-primary: #000000;       // Deep space black
-  --bg-secondary: #0A0A0A;     // Slightly lighter black
-  --bg-surface: rgba(0, 66, 166, 0.1);  // Electric blue with transparency
-  --bg-surface-hover: rgba(0, 66, 166, 0.2);
-
-  // Text colors
+  // ── Texto ──────────────────────────────────────────────────
   --text-primary: #FFFFFF;
-  --text-secondary: #B8B8B8;
-  --text-muted: #888888;
+  --text-secondary: #C3D3EA;   // "Slate Gray" sobre azul — 11.4:1 no Deep Blue
+  --text-muted: #8FA6C6;       // 6.4:1 no Deep Blue
+  // Texto azul sobre fundo escuro DEVE ser Blue Yonder (5.7:1).
+  // Neon Blue sobre Deep Blue dá só 3.2:1 — reprovado no WCAG AA.
+  --text-accent: var(--sa-blue-yonder);
+  --text-link: var(--sa-neon-yellow);          // Neon Yellow = elemento interativo (pág. 13)
 
-  // Accent colors derived from NASA palette
-  --accent-blue: var(--nasa-blue);
-  --accent-red: var(--nasa-red);
-  --accent-success: #28A745;   // Success green
-  --accent-warning: var(--neon-yellow);   // Warning yellow using NEON YELLOW
+  // ── Acentos ────────────────────────────────────────────────
+  --accent-blue: var(--sa-neon-blue);
+  --accent-red: var(--sa-rocket-red);
+  --accent-success: #3DD68C;
+  --accent-warning: var(--sa-neon-yellow);
 
-  // Gradients
-  --gradient-nasa-primary: linear-gradient(45deg, var(--nasa-blue), var(--nasa-red));
-  --gradient-nasa-blue: linear-gradient(135deg, var(--nasa-blue-dark), var(--nasa-blue));
-  --gradient-nasa-red: linear-gradient(135deg, var(--nasa-red-dark), var(--nasa-red));
-  --gradient-space: linear-gradient(135deg, #000000 0%, var(--nasa-blue-dark) 50%, #1a1a2e 100%);
+  // ── Gradientes ─────────────────────────────────────────────
+  // Pág. 8: linear, 45° descendo, Electric Blue (topo-esq.) → Deep Blue
+  // (base-dir.). Paradas intermediárias para a transição não "saltar".
+  --gradient-brand: linear-gradient(
+    135deg,
+    #0042A6 0%,
+    #01397F 22%,
+    #0A2F6B 45%,
+    #0A2454 68%,
+    #081C46 86%,
+    #07173F 100%
+  );
+  --gradient-brand-soft: linear-gradient(135deg, rgba(0, 66, 166, 0.55) 0%, rgba(7, 23, 63, 0.95) 100%);
+  --gradient-space: var(--gradient-brand);     // alias legado
+  --gradient-nasa-blue: linear-gradient(135deg, var(--sa-deep-blue), var(--sa-neon-blue));
+  --gradient-nasa-red: linear-gradient(135deg, var(--sa-martian-red), var(--sa-rocket-red));
+  --gradient-nasa-primary: linear-gradient(45deg, var(--sa-neon-blue), var(--sa-rocket-red));
 
-  // Shadows and effects
-  --shadow-nasa-blue: 0 10px 30px rgba(9, 96, 225, 0.3);
-  --shadow-nasa-red: 0 10px 30px rgba(228, 55, 0, 0.3);
-  --shadow-dark: 0 10px 30px rgba(0, 0, 0, 0.5);
+  // ── Sombras ────────────────────────────────────────────────
+  --shadow-nasa-blue: 0 10px 30px rgba(9, 96, 225, 0.35);
+  --shadow-nasa-red: 0 10px 30px rgba(228, 55, 0, 0.30);
+  --shadow-neon-yellow: 0 8px 26px rgba(234, 254, 7, 0.28);
+  --shadow-dark: 0 10px 30px rgba(2, 8, 24, 0.55);
 }
 
-// SCSS Variables (for backward compatibility and calculations)
-$nasa-blue: #0960E1;         // NEON BLUE
-$nasa-red: #E43700;          // ROCKET RED
-$nasa-white: #FFFFFF;        // WHITE
-$nasa-worm-red: #8E1100;     // MARTIAN RED
+// ─────────────────────────────────────────────────────────────
+// Espelho SCSS — usado onde é preciso calcular (rgba(), mix()…).
+// Precisa continuar em sincronia com o bloco :root acima.
+// ─────────────────────────────────────────────────────────────
 
-$nasa-blue-dark: #07173F;    // DEEP BLUE
-$nasa-blue-light: #2E96F5;   // BLUE YONDER
-$nasa-red-dark: #8E1100;     // MARTIAN RED
-$nasa-red-light: #E43700;    // ROCKET RED
+// Paleta oficial
+$sa-blue-yonder: #2E96F5;
+$sa-neon-blue: #0960E1;
+$sa-electric-blue: #0042A6;
+$sa-deep-blue: #07173F;
+$sa-rocket-red: #E43700;
+$sa-martian-red: #8E1100;
+$sa-neon-yellow: #EAFE07;
+$sa-white: #FFFFFF;
 
-$electric-blue: #0042A6;     // ELECTRIC BLUE
-$neon-yellow: #EAFE07;       // NEON YELLOW
+// Aliases legados
+$nasa-blue: $sa-neon-blue;
+$nasa-red: $sa-rocket-red;
+$nasa-white: $sa-white;
+$nasa-worm-red: $sa-martian-red;
+$nasa-blue-dark: $sa-deep-blue;
+$nasa-blue-light: $sa-blue-yonder;
+$nasa-red-dark: $sa-martian-red;
+$nasa-red-light: $sa-rocket-red;
+$electric-blue: $sa-electric-blue;
+$neon-yellow: $sa-neon-yellow;
 
-$bg-primary: #000000;
-$bg-secondary: #0A0A0A;
+// Fundos e texto
+$bg-primary: #07173F;
+$bg-secondary: #061027;
+$bg-elevated: #0A2050;
 $text-primary: #FFFFFF;
-$text-secondary: #B8B8B8;
-$text-muted: #888888;
+$text-secondary: #C3D3EA;
+$text-muted: #8FA6C6;

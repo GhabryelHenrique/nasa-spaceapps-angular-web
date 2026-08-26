@@ -1,0 +1,122 @@
+<section class="timeline-section" id="cronograma" aria-label="Cronograma do evento">
+  <div class="section-pattern" aria-hidden="true"></div>
+
+  <div class="cosmic-bg" aria-hidden="true">
+    <div class="stars">
+      @for (s of starsArray; track s) {
+        <span class="star"></span>
+      }
+    </div>
+    <div class="nebula nebula-blue"></div>
+  </div>
+
+  <div class="container">
+
+    <!-- ─── Cabeçalho ────────────────────────────────────── -->
+    <header class="section-head">
+      <p class="section-eyebrow reveal reveal-up">Cronograma oficial</p>
+      <h2 class="section-title reveal reveal-up delay-1">
+        A contagem regressiva <span class="accent">já começou</span>
+      </h2>
+      <p class="section-lead reveal reveal-up delay-2">
+        Reúna sua equipe, prepare suas ideias e anote as datas oficiais para não perder
+        nenhum passo desta missão rumo ao NASA Space Apps Challenge 2026 —
+        <strong>The Next Frontier</strong>.
+      </p>
+    </header>
+
+    <!-- ─── Rumo ao Hackathon ────────────────────────────── -->
+    <div class="phase-label reveal reveal-up">
+      <span class="phase-line" aria-hidden="true"></span>
+      <span class="phase-text">
+        <i class="ph ph-rocket-launch" aria-hidden="true"></i>
+        Rumo ao Hackathon
+      </span>
+      <span class="phase-line" aria-hidden="true"></span>
+    </div>
+
+    <ol class="timeline">
+      @for (item of mainMilestones; track item.title; let last = $last) {
+        <li class="tl-item reveal reveal-up"
+            [class.is-highlight]="item.highlight"
+            [class.is-done]="status(item) === 'done'"
+            [class.is-live]="status(item) === 'live'">
+          <div class="tl-marker" aria-hidden="true">
+            <span class="tl-dot"><i [class]="item.icon"></i></span>
+            @if (!last) { <span class="tl-connector"></span> }
+          </div>
+          <div class="tl-card">
+            <div class="tl-card-top">
+              <span class="tl-date">{{ item.label }}</span>
+              <span class="tl-status" [attr.data-status]="status(item)">{{ statusText(item) }}</span>
+            </div>
+            <h3 class="tl-heading">{{ item.title }}</h3>
+            <p class="tl-desc">{{ item.description }}</p>
+            @if (item.action; as action) {
+              <a [href]="action.url" class="tl-action" target="_blank" rel="noopener noreferrer">
+                {{ action.label }}
+                <i class="ph ph-arrow-up-right" aria-hidden="true"></i>
+              </a>
+            }
+          </div>
+        </li>
+      }
+    </ol>
+
+    <!-- ─── Depois do hackathon ──────────────────────────── -->
+    <div class="phase-label reveal reveal-up">
+      <span class="phase-line" aria-hidden="true"></span>
+      <span class="phase-text">
+        <i class="ph ph-flag-checkered" aria-hidden="true"></i>
+        E depois do hackathon?
+      </span>
+      <span class="phase-line" aria-hidden="true"></span>
+    </div>
+
+    <p class="phase-note reveal reveal-up delay-1">
+      A jornada continua: os projetos são avaliados por especialistas da NASA,
+      de agências espaciais parceiras e líderes da indústria.
+    </p>
+
+    <ol class="timeline">
+      @for (item of postMilestones; track item.title; let last = $last) {
+        <li class="tl-item reveal reveal-up"
+            [class.is-done]="status(item) === 'done'"
+            [class.is-live]="status(item) === 'live'">
+          <div class="tl-marker" aria-hidden="true">
+            <span class="tl-dot"><i [class]="item.icon"></i></span>
+            @if (!last) { <span class="tl-connector"></span> }
+          </div>
+          <div class="tl-card">
+            <div class="tl-card-top">
+              <span class="tl-date">{{ item.label }}</span>
+              <span class="tl-status" [attr.data-status]="status(item)">{{ statusText(item) }}</span>
+            </div>
+            <h3 class="tl-heading">{{ item.title }}</h3>
+            <p class="tl-desc">{{ item.description }}</p>
+          </div>
+        </li>
+      }
+    </ol>
+
+    <!-- ─── CTA ──────────────────────────────────────────── -->
+    <div class="timeline-cta reveal reveal-up">
+      <p class="cta-text">Já sabe com quem você vai salvar o mundo — ou o espaço?</p>
+      <div class="cta-actions">
+        <a [href]="registrationUrl" class="btn-primary" target="_blank" rel="noopener noreferrer">
+          <i class="ph ph-rocket-launch" aria-hidden="true"></i>
+          Garantir meu lugar
+        </a>
+        <a routerLink="/como-se-inscrever" class="btn-secondary">
+          <i class="ph ph-list-numbers" aria-hidden="true"></i>
+          Como se inscrever
+        </a>
+      </div>
+      <p class="cta-note">
+        Vai atuar como mentor, jurado ou voluntário?
+        <a [href]="mentorFormUrl" target="_blank" rel="noopener noreferrer">Preencha o formulário de mentoria</a>.
+      </p>
+    </div>
+
+  </div>
+</section>

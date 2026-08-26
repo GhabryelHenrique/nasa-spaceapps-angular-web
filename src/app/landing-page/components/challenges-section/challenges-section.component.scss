@@ -2,8 +2,8 @@
   padding: 4rem 0;
   background: linear-gradient(135deg, 
     rgba(13, 25, 56, 0.95) 0%, 
-    rgba(69, 183, 209, 0.1) 50%, 
-    rgba(78, 205, 196, 0.05) 100%);
+    rgba(46, 150, 245, 0.1) 50%, 
+    rgba(46, 150, 245, 0.05) 100%);
   position: relative;
   overflow: hidden;
 
@@ -15,8 +15,8 @@
     right: 0;
     bottom: 0;
     background: 
-      radial-gradient(circle at 20% 80%, rgba(78, 205, 196, 0.1) 0%, transparent 50%),
-      radial-gradient(circle at 80% 20%, rgba(69, 183, 209, 0.1) 0%, transparent 50%);
+      radial-gradient(circle at 20% 80%, rgba(46, 150, 245, 0.1) 0%, transparent 50%),
+      radial-gradient(circle at 80% 20%, rgba(46, 150, 245, 0.1) 0%, transparent 50%);
     pointer-events: none;
   }
 
@@ -39,7 +39,7 @@
 
     .section-description {
       font-size: 1.1rem;
-      color: #b8c5d6;
+      color: #C3D3EA;
       max-width: 800px;
       margin: 0 auto;
       line-height: 1.6;
@@ -91,7 +91,7 @@
       }
 
       &:focus {
-        outline: 2px solid #4ecdc4;
+        outline: 2px solid #2E96F5;
         outline-offset: 2px;
       }
     }
@@ -121,7 +121,7 @@
     &:hover {
       transform: translateY(-8px);
       box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
-      border-color: rgba(78, 205, 196, 0.5);
+      border-color: rgba(46, 150, 245, 0.5);
 
       .challenge-image img {
         transform: scale(1.05);
@@ -189,7 +189,7 @@
       }
 
       .challenge-excerpt {
-        color: #b8c5d6;
+        color: #C3D3EA;
         line-height: 1.6;
         margin-bottom: 1.5rem;
         display: -webkit-box;
@@ -203,7 +203,7 @@
 
         h4 {
           font-size: 0.9rem;
-          color: #4ecdc4;
+          color: #2E96F5;
           margin-bottom: 0.5rem;
           font-weight: 600;
         }
@@ -214,16 +214,16 @@
           gap: 0.5rem;
 
           .skill-tag {
-            background: rgba(78, 205, 196, 0.1);
-            color: #4ecdc4;
+            background: rgba(46, 150, 245, 0.1);
+            color: #2E96F5;
             padding: 0.3rem 0.8rem;
             border-radius: 12px;
             font-size: 0.8rem;
-            border: 1px solid rgba(78, 205, 196, 0.2);
+            border: 1px solid rgba(46, 150, 245, 0.2);
 
             &.more-skills {
               background: rgba(255, 255, 255, 0.1);
-              color: #b8c5d6;
+              color: #C3D3EA;
               border-color: rgba(255, 255, 255, 0.2);
             }
           }
@@ -235,7 +235,7 @@
           display: inline-flex;
           align-items: center;
           gap: 0.5rem;
-          background: linear-gradient(135deg, #4ecdc4, #45b7d1);
+          background: linear-gradient(135deg, #2E96F5, #2E96F5);
           color: #ffffff;
           text-decoration: none;
           padding: 0.8rem 1.5rem;
@@ -245,8 +245,8 @@
 
           &:hover {
             transform: translateY(-2px);
-            box-shadow: 0 8px 25px rgba(78, 205, 196, 0.4);
-            background: linear-gradient(135deg, #45b7d1, #4ecdc4);
+            box-shadow: 0 8px 25px rgba(46, 150, 245, 0.4);
+            background: linear-gradient(135deg, #2E96F5, #2E96F5);
           }
 
           .external-icon {
@@ -260,7 +260,7 @@
   .no-results {
     text-align: center;
     padding: 4rem 2rem;
-    color: #b8c5d6;
+    color: #C3D3EA;
 
     .no-results-icon {
       font-size: 4rem;
@@ -279,7 +279,7 @@
     }
 
     .reset-filters-btn {
-      background: linear-gradient(135deg, #4ecdc4, #45b7d1);
+      background: linear-gradient(135deg, #2E96F5, #2E96F5);
       color: #ffffff;
       border: none;
       padding: 1rem 2rem;
@@ -290,7 +290,7 @@
 
       &:hover {
         transform: translateY(-2px);
-        box-shadow: 0 8px 25px rgba(78, 205, 196, 0.4);
+        box-shadow: 0 8px 25px rgba(46, 150, 245, 0.4);
       }
     }
   }
@@ -309,7 +309,7 @@
     }
 
     p {
-      color: #b8c5d6;
+      color: #C3D3EA;
       font-size: 1.1rem;
       max-width: 600px;
       margin: 0 auto 2rem auto;
@@ -331,12 +331,12 @@
         min-width: 180px;
 
         &.primary {
-          background: linear-gradient(135deg, #4ecdc4, #45b7d1);
+          background: linear-gradient(135deg, #2E96F5, #2E96F5);
           color: #ffffff;
 
           &:hover {
             transform: translateY(-2px);
-            box-shadow: 0 8px 25px rgba(78, 205, 196, 0.4);
+            box-shadow: 0 8px 25px rgba(46, 150, 245, 0.4);
           }
         }
 

@@ -12,43 +12,45 @@
   padding: 0;
 }
 
-// ─── Background ───────────────────────────────
+// ─── Fundo ────────────────────────────────────
+// Gradiente linear a 45° descendo, Electric Blue → Deep Blue (pág. 8).
+// Sem foto: o guia proíbe texto por cima de imagem (pág. 10).
 .hero-bg {
   position: absolute;
   inset: 0;
   z-index: 0;
+  background: $sa-deep-blue;
+  background-image: linear-gradient(
+    135deg,
+    #0042A6 0%,
+    #01397F 22%,
+    #0A2F6B 45%,
+    #0A2454 68%,
+    #081C46 86%,
+    #07173F 100%
+  );
 }
 
-.hero-bg-photo {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: center 30%;
-  filter: saturate(0.65) brightness(0.55);
-  transform: scale(1.05);
-  animation: hero-zoom 22s ease-in-out infinite alternate;
-}
-
-@keyframes hero-zoom {
-  from { transform: scale(1.05); }
-  to   { transform: scale(1.13); }
-}
-
-.hero-bg-overlay {
+// Padrão de órbitas a 25% sobre o azul (pág. 19)
+.hero-bg-pattern {
   position: absolute;
   inset: 0;
-  background: rgba(0, 5, 20, 0.6);
+  background-image: url('/assets/patterns/Orbits.png');
+  background-size: 760px 760px;
+  background-repeat: repeat;
+  opacity: 0.25;
+  mix-blend-mode: soft-light;
 }
 
-.hero-bg-gradient {
+.hero-bg-glow {
   position: absolute;
   inset: 0;
   background:
-    radial-gradient(ellipse 80% 50% at 50% 0%, rgba($nasa-blue, 0.28) 0%, transparent 70%),
-    linear-gradient(180deg, rgba(0,0,0,0.15) 0%, rgba(0,0,0,0) 35%, rgba(0,0,0,0.65) 85%, rgba(0,0,0,0.97) 100%);
+    radial-gradient(ellipse 60% 50% at 78% 42%, rgba($sa-blue-yonder, 0.20) 0%, transparent 68%),
+    linear-gradient(180deg, transparent 0%, transparent 70%, rgba($sa-deep-blue, 0.85) 100%);
 }
 
-// ─── Floating particles ────────────────────────
+// ─── Partículas ────────────────────────────────
 .hero-particles {
   position: absolute;
   inset: 0;
@@ -59,7 +61,7 @@
   .particle {
     position: absolute;
     border-radius: 50%;
-    background: $nasa-blue-light;
+    background: $sa-blue-yonder;
     opacity: 0;
 
     @for $i from 1 through 20 {
@@ -87,24 +89,189 @@
   to   { opacity: 0; transform: translateY(-60px) scale(1.5); }
 }
 
-// ─── Body ─────────────────────────────────────
+// ─── Corpo: duas colunas ───────────────────────
 .hero-body {
   position: relative;
   z-index: 2;
-  text-align: center;
-  padding: 120px 2rem 180px;
-  max-width: 900px;
+  width: 100%;
+  max-width: 1240px;
   margin: 0 auto;
+  padding: 130px 2rem 190px;
+  display: grid;
+  grid-template-columns: minmax(0, 1.05fr) minmax(0, 0.95fr);
+  align-items: center;
+  gap: 3.5rem;
 }
 
-// ─── Dual Badge ───────────────────────────────
+.hero-copy {
+  min-width: 0;
+}
+
+// ─── Tema da edição ────────────────────────────
+.hero-theme {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.65rem;
+  padding: 0.4rem 1.1rem 0.4rem 0.75rem;
+  border: 1px solid rgba($sa-neon-yellow, 0.45);
+  border-radius: 100px;
+  background: rgba($sa-deep-blue, 0.55);
+  backdrop-filter: blur(10px);
+  margin-bottom: 0.9rem;
+}
+
+.hero-theme-mark {
+  width: 9px;
+  height: 9px;
+  flex-shrink: 0;
+  background: $sa-neon-yellow;
+  transform: rotate(45deg);
+  box-shadow: 0 0 10px rgba($sa-neon-yellow, 0.7);
+}
+
+.hero-theme-label {
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.55);
+}
+
+.hero-theme-name {
+  font-size: 0.86rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: $sa-neon-yellow;
+  white-space: nowrap;
+}
+
+.hero-theme-pt {
+  font-size: 0.95rem;
+  font-weight: 300;
+  font-style: italic;
+  letter-spacing: 0.04em;
+  color: rgba(255, 255, 255, 0.6);
+  margin: 0 0 1.1rem;
+}
+
+// ─── Selo "inscrições abertas" ──────────────────
+// Neon Yellow como acento de estado, nunca como fundo cheio (pág. 13).
+.hero-live-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.55rem;
+  margin: 0 0 1.4rem;
+  padding: 0.4rem 1rem;
+  border-radius: 100px;
+  background: rgba($sa-neon-yellow, 0.08);
+  border: 1px solid rgba($sa-neon-yellow, 0.45);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: $sa-neon-yellow;
+
+  .live-dot {
+    position: relative;
+    width: 9px;
+    height: 9px;
+    flex-shrink: 0;
+    border-radius: 50%;
+    background: $sa-neon-yellow;
+
+    &::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      border-radius: 50%;
+      background: $sa-neon-yellow;
+      animation: hero-live-pulse 1.8s ease-out infinite;
+    }
+  }
+}
+
+@keyframes hero-live-pulse {
+  from { transform: scale(1); opacity: 0.7; }
+  to   { transform: scale(2.6); opacity: 0; }
+}
+
+// ─── Título ─────────────────────────────────────
+// H1: Fira Sans Black, all-caps, 5% de letter-spacing (pág. 13)
+.hero-title {
+  font-family: 'Fira Sans', sans-serif;
+  font-size: clamp(2.3rem, 5.2vw, 4.2rem);
+  font-weight: 900;
+  line-height: 1.12;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: $sa-white;
+  margin: 0 0 1.3rem;
+
+  .hero-title-highlight {
+    color: $sa-blue-yonder; // 5.7:1 sobre Deep Blue — AA
+  }
+
+  .hero-title-sub {
+    display: block;
+    font-size: 0.52em;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    color: rgba(255, 255, 255, 0.6);
+    margin-top: 0.35rem;
+  }
+}
+
+// ─── Subtítulo ──────────────────────────────────
+.hero-subtitle {
+  font-size: clamp(1rem, 1.5vw, 1.15rem);
+  font-weight: 300;
+  color: rgba(255, 255, 255, 0.78);
+  line-height: 1.6;
+  margin: 0 0 2.2rem;
+  max-width: 560px;
+
+  strong {
+    color: $sa-white;
+    font-weight: 700;
+  }
+}
+
+// ─── CTAs ───────────────────────────────────────
+// .btn-primary / .btn-secondary / .btn-link vêm do styles.scss global.
+.hero-actions {
+  display: flex;
+  gap: 0.85rem;
+  flex-wrap: wrap;
+  align-items: center;
+  margin-bottom: 1rem;
+
+  i { font-size: 1.1rem; }
+}
+
+// Caminho secundário: quem não vai competir, mas quer estar no evento.
+.hero-mentor-note {
+  font-size: 0.9rem;
+  font-weight: 300;
+  color: rgba(255, 255, 255, 0.6);
+  margin: 0 0 2.2rem;
+
+  a {
+    color: $sa-neon-yellow;
+    font-weight: 600;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+
+    &:hover { color: $sa-white; }
+  }
+}
+
+// ─── Badges 2025 → 2026 ─────────────────────────
 .hero-badges {
   display: inline-flex;
   align-items: center;
   gap: 0.75rem;
-  margin-bottom: 2rem;
   flex-wrap: wrap;
-  justify-content: center;
 }
 
 .hero-badge {
@@ -114,7 +281,7 @@
   backdrop-filter: blur(10px);
   padding: 0.38rem 1.1rem;
   border-radius: 100px;
-  font-size: 0.76rem;
+  font-size: 0.72rem;
   font-weight: 700;
   letter-spacing: 0.1em;
   text-transform: uppercase;
@@ -123,18 +290,18 @@
   &.hero-badge-past {
     background: rgba(255, 255, 255, 0.07);
     border: 1px solid rgba(255, 255, 255, 0.15);
-    color: rgba(255, 255, 255, 0.55);
+    color: rgba(255, 255, 255, 0.6);
   }
 
   &.hero-badge-next {
-    background: rgba($nasa-blue, 0.18);
-    border: 1px solid rgba($nasa-blue, 0.45);
-    color: $nasa-blue-light;
+    background: rgba($sa-neon-blue, 0.25);
+    border: 1px solid rgba($sa-blue-yonder, 0.5);
+    color: $sa-blue-yonder;
   }
 }
 
 .hero-badge-sep {
-  color: rgba(255, 255, 255, 0.25);
+  color: rgba(255, 255, 255, 0.3);
   font-size: 0.9rem;
 }
 
@@ -150,127 +317,123 @@
   width: 7px;
   height: 7px;
   border-radius: 50%;
-  background: $nasa-blue-light;
+  background: $sa-blue-yonder;
   flex-shrink: 0;
   animation: badge-blink 1.5s ease-in-out infinite;
 }
 
 @keyframes badge-blink {
-  0%, 100% { opacity: 1; box-shadow: 0 0 6px $nasa-blue-light; }
-  50%       { opacity: 0.3; box-shadow: none; }
+  0%, 100% { opacity: 1; box-shadow: 0 0 6px $sa-blue-yonder; }
+  50%      { opacity: 0.3; box-shadow: none; }
 }
 
-// ─── Title ─────────────────────────────────────
-.hero-title {
-  font-family: 'Fira Sans', sans-serif;
-  font-size: clamp(2.6rem, 7.5vw, 5.5rem);
-  font-weight: 900;
-  line-height: 1.05;
-  letter-spacing: -0.03em;
-  color: #ffffff;
-  margin: 0 0 1.2rem;
-  text-shadow: 0 2px 40px rgba(0,0,0,0.6);
+// ─── Orbe: holding shape circular + anéis de órbita ──
+// Pág. 10: imagens sempre dentro de uma holding shape; círculos podem ser
+// pareados com linhas concêntricas sugerindo órbitas.
+.hero-orb {
+  position: relative;
+  display: grid;
+  place-items: center;
+  aspect-ratio: 1;
+  width: 100%;
+  max-width: 480px;
+  margin-inline: auto;
+}
 
-  .hero-title-highlight {
-    background: linear-gradient(135deg, $nasa-blue-light 0%, $neon-yellow 55%, $nasa-blue-light 100%);
-    background-size: 200% auto;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-    animation: title-shine 4s linear infinite;
-  }
+.orb-shape {
+  position: relative;
+  z-index: 2;
+  width: 72%;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 2px solid rgba($sa-blue-yonder, 0.35);
+  box-shadow:
+    0 0 0 10px rgba($sa-electric-blue, 0.16),
+    0 24px 70px rgba(2, 8, 24, 0.55);
+  animation: orb-bob 9s ease-in-out infinite alternate;
 
-  .hero-title-sub {
-    font-size: 0.65em;
-    font-weight: 700;
-    letter-spacing: 0.05em;
-    color: rgba(255, 255, 255, 0.55);
-    -webkit-text-fill-color: initial;
-    background: none;
+  // `contain` + respiro: a arte do orbe pode ser uma foto quadrada ou um logo
+  // com fundo transparente — `cover` recortaria as bordas do logo.
+  img {
     display: block;
-    margin-top: 0.2rem;
+    width: 100%;
+    height: 100%;
+    padding: 12%;
+    object-fit: contain;
   }
 }
 
-@keyframes title-shine {
-  from { background-position: 0% center; }
-  to   { background-position: 200% center; }
+@keyframes orb-bob {
+  from { transform: translateY(-8px); }
+  to   { transform: translateY(10px); }
 }
 
-// ─── Subtitle ──────────────────────────────────
-.hero-subtitle {
-  font-size: clamp(0.95rem, 2vw, 1.15rem);
-  color: rgba(255, 255, 255, 0.68);
-  line-height: 1.75;
-  margin: 0 auto 2.5rem;
-  max-width: 620px;
-  text-shadow: 0 1px 12px rgba(0,0,0,0.6);
+.orb-ring {
+  position: absolute;
+  border-radius: 50%;
+  border: 1px solid rgba($sa-blue-yonder, 0.28);
+  pointer-events: none;
 
-  strong {
-    color: rgba(255, 255, 255, 0.92);
-    font-weight: 700;
+  // O ponto na borda sugere um corpo em órbita
+  &::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    right: -4px;
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: $sa-neon-yellow;
+    box-shadow: 0 0 10px rgba($sa-neon-yellow, 0.8);
+    transform: translateY(-50%);
+  }
+
+  &.orb-ring-1 {
+    inset: 6%;
+    animation: orb-spin 26s linear infinite;
+  }
+
+  &.orb-ring-2 {
+    inset: 0;
+    border-color: rgba($sa-blue-yonder, 0.18);
+    border-style: dashed;
+    animation: orb-spin 44s linear infinite reverse;
+
+    &::after {
+      width: 5px;
+      height: 5px;
+      background: $sa-blue-yonder;
+      box-shadow: 0 0 8px rgba($sa-blue-yonder, 0.9);
+    }
+  }
+
+  &.orb-ring-3 {
+    inset: 13%;
+    border-color: rgba($sa-blue-yonder, 0.12);
+    &::after { display: none; }
   }
 }
 
-// ─── CTAs ──────────────────────────────────────
-.hero-actions {
-  display: flex;
-  gap: 0.75rem;
-  justify-content: center;
-  flex-wrap: wrap;
+@keyframes orb-spin {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(360deg); }
 }
 
-.cta-btn {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.5rem;
-  padding: 0.78rem 1.6rem;
-  border-radius: 100px;
-  font-size: 0.95rem;
-  font-weight: 700;
-  text-decoration: none;
-  transition: transform 0.25s ease, box-shadow 0.25s ease, background 0.25s ease;
-  border: none;
-  cursor: pointer;
-  font-family: inherit;
-
-  &:hover { transform: translateY(-3px); }
-
-  &.cta-primary-hero {
-    background: #25D366;
-    color: #fff;
-    box-shadow: 0 6px 24px rgba(37, 211, 102, 0.45);
-    &:hover { background: #1ebe5a; box-shadow: 0 10px 32px rgba(37, 211, 102, 0.55); }
-  }
-
-  &.cta-discord-hero {
-    background: #5865F2;
-    color: #fff;
-    box-shadow: 0 6px 24px rgba(88, 101, 242, 0.4);
-    &:hover { background: #4752c4; box-shadow: 0 10px 32px rgba(88, 101, 242, 0.5); }
-  }
-
-  &.cta-instagram {
-    background: linear-gradient(135deg, #E4405F, #C13584);
-    color: #fff;
-    &:hover { box-shadow: 0 8px 24px rgba(228,64,95,0.4); }
-  }
-}
-
-// ─── Stats bar ─────────────────────────────────
+// ─── Stats bar ──────────────────────────────────
 .hero-stats {
   position: absolute;
   bottom: 0;
   left: 0;
   right: 0;
-  z-index: 2;
+  z-index: 3;
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 0;
-  background: rgba(0, 5, 20, 0.78);
+  background: rgba($sa-deep-blue, 0.82);
   backdrop-filter: blur(18px);
-  border-top: 1px solid rgba($nasa-blue, 0.18);
+  border-top: 1px solid rgba($sa-blue-yonder, 0.2);
   padding: 1rem 2rem;
 }
 
@@ -293,7 +456,7 @@
       transform: translateY(-50%);
       width: 1px;
       height: 36px;
-      background: rgba(255, 255, 255, 0.1);
+      background: rgba(255, 255, 255, 0.12);
     }
   }
 }
@@ -302,20 +465,17 @@
   font-family: 'Fira Sans', sans-serif;
   font-size: 1.65rem;
   font-weight: 900;
-  color: #fff;
+  color: $sa-white;
   line-height: 1;
 
   &.hero-stat-date {
     font-size: 1.3rem;
-    background: linear-gradient(135deg, $nasa-blue-light, $neon-yellow);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
+    color: $sa-neon-yellow;
   }
 
   .hero-stat-plus {
     font-size: 0.65em;
-    color: $nasa-blue-light;
+    color: $sa-blue-yonder;
     vertical-align: super;
   }
 }
@@ -325,26 +485,26 @@
   font-weight: 600;
   letter-spacing: 0.08em;
   text-transform: uppercase;
-  color: rgba(255,255,255,0.45);
+  color: rgba(255, 255, 255, 0.55);
 }
 
 .hero-stat-divider {
   width: 1px;
   height: 36px;
-  background: rgba(255,255,255,0.1);
+  background: rgba(255, 255, 255, 0.12);
   flex-shrink: 0;
 }
 
-// ─── Scroll indicator ──────────────────────────
+// ─── Scroll indicator ───────────────────────────
 .scroll-indicator {
   position: absolute;
   bottom: 80px;
   left: 50%;
   transform: translateX(-50%);
-  z-index: 2;
+  z-index: 3;
   width: 22px;
   height: 36px;
-  border: 2px solid rgba(255,255,255,0.18);
+  border: 2px solid rgba(255, 255, 255, 0.2);
   border-radius: 100px;
   display: flex;
   justify-content: center;
@@ -355,18 +515,44 @@
   width: 4px;
   height: 8px;
   border-radius: 2px;
-  background: rgba(255,255,255,0.55);
+  background: rgba(255, 255, 255, 0.55);
   animation: scroll-bounce 2s ease-in-out infinite;
 }
 
 @keyframes scroll-bounce {
   0%, 100% { transform: translateY(0); opacity: 1; }
-  70%       { transform: translateY(12px); opacity: 0; }
+  70%      { transform: translateY(12px); opacity: 0; }
 }
 
-// ─── Responsive ────────────────────────────────
+// ─── Responsivo ─────────────────────────────────
+@media (max-width: 980px) {
+  .hero-body {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+    padding: 110px 1.5rem 170px;
+    text-align: center;
+  }
+
+  .hero-copy { order: 2; }
+  .hero-orb  { order: 1; max-width: 340px; }
+
+  .hero-subtitle { margin-inline: auto; }
+  .hero-actions,
+  .hero-badges { justify-content: center; }
+}
+
+@media (max-width: 600px) {
+  .hero-actions {
+    width: 100%;
+    flex-direction: column;
+    align-items: stretch;
+
+    :is(.btn-primary, .btn-secondary, .btn-link) { justify-content: center; }
+  }
+}
+
 @media (max-width: 768px) {
-  .hero-body { padding: 100px 1.5rem 150px; }
+  .hero-orb { max-width: 270px; }
 
   .hero-stats {
     padding: 0.85rem 0.5rem;
@@ -382,6 +568,7 @@
 @media (max-width: 600px) {
   .hero-badges { gap: 0.4rem; }
   .hero-badge-sep { display: none; }
+  .hero-orb { max-width: 220px; }
 }
 
 @media (max-width: 480px) {
@@ -391,5 +578,22 @@
     .hero-stat-next::before { display: none; }
   }
 
-  .cta-btn { padding: 0.7rem 1.15rem; font-size: 0.86rem; }
+  .hero-actions {
+    :is(.btn-primary, .btn-secondary) {
+      padding: 0.75rem 1.2rem;
+      font-size: 0.9rem;
+    }
+  }
+}
+
+// Respeita quem pediu menos movimento
+@media (prefers-reduced-motion: reduce) {
+  .orb-ring,
+  .orb-shape,
+  .badge-pulse,
+  .particle,
+  .scroll-dot,
+  .hero-live-badge .live-dot::after {
+    animation: none !important;
+  }
 }

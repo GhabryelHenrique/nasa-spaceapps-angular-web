@@ -1,7 +1,7 @@
 <div class="language-switcher">
   <button class="language-btn" (click)="toggleDropdown()" [attr.aria-expanded]="isOpen" aria-label="Change language">
     <span class="current-lang">{{ (currentLang === 'pt-BR' || currentLang === 'pt') ? 'PT' : 'EN' }}</span>
-    <i class="fas fa-chevron-down" [class.rotated]="isOpen"></i>
+    <i class="ph ph-caret-down" [class.rotated]="isOpen"></i>
   </button>
   
   <div class="language-dropdown" [class.show]="isOpen">

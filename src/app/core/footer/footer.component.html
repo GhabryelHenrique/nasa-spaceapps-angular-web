@@ -3,8 +3,25 @@
       <div class="footer-content">
         <div class="footer-brand">
           <img src="assets/nasa-spaceapps-logo-removebg-preview.png" alt="Logo do NASA Space Apps Challenge - Hackathon espacial internacional" width="120" height="120" loading="lazy">
-          <p>NASA Space Apps Challenge<br>Uberlândia 2025</p>
+          <div class="footer-brand-text">
+            <p>NASA Space Apps Challenge<br>Uberlândia 2026</p>
+            <p class="footer-theme">The Next Frontier</p>
+          </div>
         </div>
+        <nav class="footer-links" aria-label="Inscrições">
+          <h4>Inscrições</h4>
+          <ul>
+            <li>
+              <a [href]="registrationUrl" target="_blank" rel="noopener noreferrer"
+                 aria-label="Inscrever-se no site oficial da NASA">Inscrição de participante</a>
+            </li>
+            <li>
+              <a [href]="mentorFormUrl" target="_blank" rel="noopener noreferrer"
+                 aria-label="Formulário de mentores, jurados e voluntários">Mentores e voluntários</a>
+            </li>
+            <li><a routerLink="/como-se-inscrever">Como se inscrever</a></li>
+          </ul>
+        </nav>
         <nav class="footer-links" aria-label="Links úteis">
           <h4 i18n="@@footer.links.title">Links Úteis</h4>
           <ul>
@@ -24,7 +41,7 @@
         </div>
       </div>
       <div class="footer-bottom">
-        <p i18n="@@footer.copyright">&copy; 2025 NASA Space Apps Uberlândia. Todos os direitos reservados.</p>
+        <p i18n="@@footer.copyright">&copy; 2026 NASA Space Apps Uberlândia. Todos os direitos reservados.</p>
       </div>
     </div>
   </footer>

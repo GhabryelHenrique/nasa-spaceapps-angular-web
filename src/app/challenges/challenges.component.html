@@ -58,7 +58,7 @@
                   @for (categoryName of getCategoryBadges(challenge); track categoryName) {
                     <span
                       class="category-badge"
-                      [style.background-color]="getCategoryColor(challenge, categoryName)">
+                      [style.border-color]="getCategoryColor(challenge, categoryName)">
                       {{ categoryName }}
                     </span>
                   }

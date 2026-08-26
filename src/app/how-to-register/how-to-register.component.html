@@ -1,0 +1,208 @@
+<div class="guide-page">
+
+  <!-- ─── Hero ───────────────────────────────────────────── -->
+  <section class="guide-hero">
+    <div class="guide-pattern guide-pattern--orbits" aria-hidden="true"></div>
+    <div class="guide-container">
+
+      <p class="live-badge reveal reveal-up">
+        <span class="live-dot" aria-hidden="true"></span>
+        Inscrições abertas
+      </p>
+
+      <h1 class="guide-title reveal reveal-up delay-1">
+        Como se inscrever no <span class="accent">Space Apps</span> Uberlândia 2026
+      </h1>
+
+      <p class="guide-lead reveal reveal-up delay-2">
+        A inscrição é gratuita e feita no site oficial da NASA. São oito passos —
+        os três primeiros levam menos de cinco minutos, o resto acompanha o calendário do evento.
+      </p>
+
+      <div class="guide-actions reveal reveal-up delay-3">
+        <a [href]="registrationUrl" class="btn-primary" target="_blank" rel="noopener noreferrer">
+          <i class="ph ph-rocket-launch" aria-hidden="true"></i>
+          Inscrever-se no site da NASA
+        </a>
+        <a href="#mentores" class="btn-secondary">
+          <i class="ph ph-chalkboard-teacher" aria-hidden="true"></i>
+          Quero ser mentor ou voluntário
+        </a>
+      </div>
+
+      <ul class="guide-facts reveal reveal-up delay-4">
+        <li><i class="ph ph-currency-circle-dollar" aria-hidden="true"></i> Gratuito</li>
+        <li><i class="ph ph-users-three" aria-hidden="true"></i> Times de até 6 pessoas</li>
+        <li><i class="ph ph-calendar-dots" aria-hidden="true"></i> 14 e 15 de novembro</li>
+        <li><i class="ph ph-map-pin" aria-hidden="true"></i> Uberlândia · presencial</li>
+      </ul>
+
+    </div>
+  </section>
+
+  <!-- ─── Passo a passo ──────────────────────────────────── -->
+  <section class="guide-section guide-section--sunken" id="passo-a-passo">
+    <div class="guide-pattern guide-pattern--waves" aria-hidden="true"></div>
+    <div class="guide-container">
+
+      <header class="guide-head reveal reveal-up">
+        <p class="guide-eyebrow">Passo a passo</p>
+        <h2 class="guide-section-title">Da conta ao <span class="accent">hackathon</span></h2>
+        <p class="guide-section-lead">
+          Siga na ordem. Os passos 1 a 5 já podem ser feitos hoje; os últimos abrem
+          conforme o calendário oficial do Space Apps.
+        </p>
+      </header>
+
+      <ol class="steps">
+        @for (step of steps; track step.title; let i = $index; let last = $last) {
+          <li class="step reveal reveal-up">
+            <div class="step-marker" aria-hidden="true">
+              <span class="step-number">{{ i + 1 }}</span>
+              @if (!last) { <span class="step-connector"></span> }
+            </div>
+
+            <div class="step-card">
+              <div class="step-top">
+                <i class="step-icon" [class]="step.icon" aria-hidden="true"></i>
+                <h3 class="step-title">{{ step.title }}</h3>
+              </div>
+
+              @if (step.deadline) {
+                <p class="step-deadline">
+                  <i class="ph ph-calendar-check" aria-hidden="true"></i>
+                  {{ step.deadline }}
+                </p>
+              }
+
+              <p class="step-desc">{{ step.description }}</p>
+
+              <ul class="step-details">
+                @for (detail of step.details; track detail) {
+                  <li><i class="ph ph-caret-right" aria-hidden="true"></i>{{ detail }}</li>
+                }
+              </ul>
+
+              @if (step.action; as action) {
+                @if (action.external) {
+                  <a [href]="action.url" class="step-action" target="_blank" rel="noopener noreferrer">
+                    {{ action.label }}
+                    <i class="ph ph-arrow-up-right" aria-hidden="true"></i>
+                  </a>
+                } @else {
+                  <a [routerLink]="action.url" class="step-action">
+                    {{ action.label }}
+                    <i class="ph ph-arrow-right" aria-hidden="true"></i>
+                  </a>
+                }
+              }
+            </div>
+          </li>
+        }
+      </ol>
+
+      <div class="steps-cta reveal reveal-up">
+        <p>Pronto para começar?</p>
+        <a [href]="registrationUrl" class="btn-primary" target="_blank" rel="noopener noreferrer">
+          <i class="ph ph-rocket-launch" aria-hidden="true"></i>
+          Fazer minha inscrição
+        </a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ─── Mentores, jurados e voluntários ────────────────── -->
+  <section class="guide-section guide-section--deep" id="mentores">
+    <div class="guide-pattern guide-pattern--fiduciaries" aria-hidden="true"></div>
+    <div class="guide-container">
+
+      <header class="guide-head reveal reveal-up">
+        <p class="guide-eyebrow">Outro caminho</p>
+        <h2 class="guide-section-title">Seja <span class="accent">mentor</span>, jurado ou voluntário</h2>
+        <p class="guide-section-lead">
+          Quem orienta não compete. A seleção é feita pela organização local de
+          Uberlândia, por um formulário separado da inscrição de participante.
+        </p>
+      </header>
+
+      <div class="mentor-card reveal reveal-up delay-1">
+        <ol class="mentor-steps">
+          @for (mentorStep of mentorSteps; track mentorStep; let i = $index) {
+            <li>
+              <span class="mentor-step-number">{{ i + 1 }}</span>
+              <span>{{ mentorStep }}</span>
+            </li>
+          }
+        </ol>
+
+        <div class="mentor-cta">
+          <a [href]="mentorFormUrl" class="btn-primary" target="_blank" rel="noopener noreferrer">
+            <i class="ph ph-clipboard-text" aria-hidden="true"></i>
+            Abrir formulário de mentoria
+          </a>
+          <p class="mentor-note">
+            <i class="ph ph-info" aria-hidden="true"></i>
+            O formulário é hospedado no Google Forms e leva cerca de 5 minutos.
+          </p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ─── FAQ ────────────────────────────────────────────── -->
+  <section class="guide-section guide-section--sunken" id="duvidas">
+    <div class="guide-pattern guide-pattern--rosette" aria-hidden="true"></div>
+    <div class="guide-container guide-container--narrow">
+
+      <header class="guide-head reveal reveal-up">
+        <p class="guide-eyebrow">Ainda com dúvida?</p>
+        <h2 class="guide-section-title">Perguntas <span class="accent">frequentes</span></h2>
+      </header>
+
+      <div class="faq reveal reveal-up delay-1">
+        @for (faq of faqs; track faq.question; let i = $index) {
+          <div class="faq-item" [class.is-open]="openFaq() === i">
+            <h3>
+              <button type="button"
+                      class="faq-question"
+                      (click)="toggleFaq(i)"
+                      [attr.aria-expanded]="openFaq() === i"
+                      [attr.aria-controls]="'faq-answer-' + i">
+                <span>{{ faq.question }}</span>
+                <i class="ph ph-caret-down faq-caret" aria-hidden="true"></i>
+              </button>
+            </h3>
+            @if (openFaq() === i) {
+              <div class="faq-answer" [id]="'faq-answer-' + i">
+                <p>{{ faq.answer }}</p>
+              </div>
+            }
+          </div>
+        }
+      </div>
+
+      <div class="faq-help reveal reveal-up delay-2">
+        <p>Não achou sua dúvida? Fala com a organização — a gente responde.</p>
+        <div class="faq-help-actions">
+          <a [href]="whatsappUrl" class="btn-secondary" target="_blank" rel="noopener noreferrer">
+            <i class="fab fa-whatsapp" aria-hidden="true"></i>
+            WhatsApp
+          </a>
+          <a [href]="discordUrl" class="btn-secondary" target="_blank" rel="noopener noreferrer">
+            <i class="fab fa-discord" aria-hidden="true"></i>
+            Discord
+          </a>
+          <a href="https://www.spaceappschallenge.org/resources/participant-faqs"
+             class="btn-link" target="_blank" rel="noopener noreferrer">
+            <i class="ph ph-question" aria-hidden="true"></i>
+            FAQ oficial da NASA
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+</div>

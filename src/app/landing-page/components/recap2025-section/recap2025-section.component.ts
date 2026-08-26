@@ -8,7 +8,6 @@ interface StatCard {
   suffix: string;
   label: string;
   icon: string;
-  color: string;
   animatedValue: number;
 }
 
@@ -25,7 +24,6 @@ interface Achievement {
   icon: string;
   title: string;
   subtitle: string;
-  color: string;
 }
 
 const HERO_PHOTOS = [
@@ -57,14 +55,14 @@ export class Recap2025SectionComponent {
   readonly imgTimeline = HERO_PHOTOS[Math.floor(Math.random() * HERO_PHOTOS.length)];
 
   stats: StatCard[] = [
-    { value: 1400, displayValue: '1400', prefix: '', suffix: '+', label: 'Participantes em Uberlândia', icon: '👥', color: '#EAFE07', animatedValue: 0 },
-    { value: 160, displayValue: '160', prefix: '', suffix: '+', label: 'Equipes inscritas', icon: '🧑‍🚀', color: '#0960E1', animatedValue: 0 },
-    { value: 100, displayValue: '100', prefix: '', suffix: '+', label: 'Projetos submetidos', icon: '📡', color: '#2E96F5', animatedValue: 0 },
-    { value: 1, displayValue: '1', prefix: '#', suffix: '', label: 'Maior sede do Hemisfério Ocidental', icon: '🌎', color: '#FFD700', animatedValue: 0 },
-    { value: 10, displayValue: '10', prefix: '', suffix: '', label: 'Global Nominees de Uberlândia', icon: '🌍', color: '#FFD700', animatedValue: 0 },
-    { value: 48, displayValue: '48', prefix: '', suffix: 'h', label: 'De hackathon intenso e criativo', icon: '⏱️', color: '#0960E1', animatedValue: 0 },
-    { value: 200, displayValue: '600', prefix: '+', suffix: '', label: 'Latas de RedBull Distribuidas', icon: '💪', color: '#E43700', animatedValue: 0 },
-    { value: 30, displayValue: '30', prefix: '+', suffix: '', label: 'Patrocinadores e apoiadores', icon: '🤝', color: '#EAFE07', animatedValue: 0 },
+    { value: 1400, displayValue: '1400', prefix: '', suffix: '+', label: 'Participantes em Uberlândia', icon: 'ph ph-users-three', animatedValue: 0 },
+    { value: 160, displayValue: '160', prefix: '', suffix: '+', label: 'Equipes inscritas', icon: 'ph ph-user-focus', animatedValue: 0 },
+    { value: 100, displayValue: '100', prefix: '', suffix: '+', label: 'Projetos submetidos', icon: 'ph ph-broadcast', animatedValue: 0 },
+    { value: 1, displayValue: '1', prefix: '#', suffix: '', label: 'Maior sede do Hemisfério Ocidental', icon: 'ph ph-globe-hemisphere-west', animatedValue: 0 },
+    { value: 10, displayValue: '10', prefix: '', suffix: '', label: 'Global Nominees de Uberlândia', icon: 'ph ph-globe', animatedValue: 0 },
+    { value: 48, displayValue: '48', prefix: '', suffix: 'h', label: 'De hackathon intenso e criativo', icon: 'ph ph-timer', animatedValue: 0 },
+    { value: 200, displayValue: '600', prefix: '+', suffix: '', label: 'Latas de RedBull Distribuidas', icon: 'ph ph-lightning', animatedValue: 0 },
+    { value: 30, displayValue: '30', prefix: '+', suffix: '', label: 'Patrocinadores e apoiadores', icon: 'ph ph-handshake', animatedValue: 0 },
   ];
 
   timeline: TimelineItem[] = [
@@ -72,7 +70,7 @@ export class Recap2025SectionComponent {
       date: 'Out 4–5, 2025',
       title: '48 Horas de Inovação',
       description: 'Centenas de participantes reunidos em Uberlândia para o maior hackathon espacial do mundo. 160+ equipes, 48h não-stop de criatividade e tecnologia.',
-      icon: '🚀',
+      icon: 'ph ph-rocket-launch',
       highlight: false,
       photos: [
         'assets/photos/IMG_0383.JPG',
@@ -84,7 +82,7 @@ export class Recap2025SectionComponent {
       date: 'Out 16, 2025',
       title: '10 Global Nominees!',
       description: 'Uberlândia colocou 10 times entre os melhores do planeta — um marco histórico para a cidade e para o Brasil.',
-      icon: '🌍',
+      icon: 'ph ph-globe',
       highlight: true,
       photos: [
         'assets/photos/IMG_0508.JPG',
@@ -95,7 +93,7 @@ export class Recap2025SectionComponent {
       date: 'Nov 26, 2025',
       title: 'Titan & Finstream Globais',
       description: 'Titan conquistou o título de Global Finalist (Top 45 do mundo). Finstream recebeu Honorable Mention entre milhares de projetos globais.',
-      icon: '🏆',
+      icon: 'ph ph-trophy',
       highlight: true,
       photos: [
         'assets/photos/IMG_0532.JPG',
@@ -106,7 +104,7 @@ export class Recap2025SectionComponent {
       date: 'Dez 18, 2025',
       title: 'Celebração dos Campeões',
       description: 'Uberlândia encerrou 2025 como uma das cidades mais representativas do evento no mundo inteiro.',
-      icon: '🎉',
+      icon: 'ph ph-confetti',
       highlight: false,
       photos: [
         'assets/photos/FCBDAA57-7068-4DD8-802B-94799056AF42.jpg',
@@ -117,12 +115,12 @@ export class Recap2025SectionComponent {
   ];
 
   achievements: Achievement[] = [
-    { icon: '🌎', title: 'Maior Cidade do Ocidente', subtitle: 'Maior sede do hemisfério ocidental no NASA Space Apps 2025', color: '#FFD700' },
-    { icon: '🤖', title: 'Capital da IA no Brasil', subtitle: 'Polo de inovação em Inteligência Artificial No Brasil', color: '#2E96F5' },
-    { icon: '🥇', title: 'Titan — Global Finalist', subtitle: 'Top 45 do mundo no NASA Space Apps Challenge 2025', color: '#FFD700' },
-    { icon: '🌟', title: 'Finstream — Honorable Mention', subtitle: 'Reconhecimento global entre milhares de projetos', color: '#4ECDC4' },
-    { icon: '🚂', title: 'Trem de IA', subtitle: 'Melhor Nome do Ano — o mais criativo do evento', color: '#E43700' },
-    { icon: '🌍', title: '10 Global Nominees', subtitle: 'Uberlândia com 10 times entre os melhores do planeta', color: '#0960E1' },
+    { icon: 'ph ph-globe-hemisphere-west', title: 'Maior Cidade do Ocidente', subtitle: 'Maior sede do hemisfério ocidental no NASA Space Apps 2025' },
+    { icon: 'ph ph-robot', title: 'Capital da IA no Brasil', subtitle: 'Polo de inovação em Inteligência Artificial No Brasil' },
+    { icon: 'ph ph-medal', title: 'Titan — Global Finalist', subtitle: 'Top 45 do mundo no NASA Space Apps Challenge 2025' },
+    { icon: 'ph ph-star', title: 'Finstream — Honorable Mention', subtitle: 'Reconhecimento global entre milhares de projetos' },
+    { icon: 'ph ph-train', title: 'Trem de IA', subtitle: 'Melhor Nome do Ano — o mais criativo do evento' },
+    { icon: 'ph ph-globe', title: '10 Global Nominees', subtitle: 'Uberlândia com 10 times entre os melhores do planeta' },
   ];
 
   openDiscord(): void {

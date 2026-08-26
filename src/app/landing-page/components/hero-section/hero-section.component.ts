@@ -1,35 +1,28 @@
-import { Component, inject, PLATFORM_ID } from '@angular/core';
-import { isPlatformBrowser } from '@angular/common';
+import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
-
-const HERO_PHOTOS = [
-  'assets/photos/IMG_0828.png',
-  'assets/photos/IMG_0819.png',
-  'assets/photos/IMG_0691.JPG',
-  'assets/photos/IMG_0551.png',
-  'assets/photos/Titan - Global Finalist Nasa Space Apps 2025.mp4',
-];
+import { RouterLink } from '@angular/router';
+import {
+  MENTOR_FORM_URL,
+  REGISTRATION_URL,
+  WHATSAPP_URL,
+} from '../../../shared/data/registration.data';
 
 @Component({
   selector: 'app-hero-section',
-  imports: [CommonModule],
+  imports: [CommonModule, RouterLink],
   templateUrl: './hero-section.component.html',
   styleUrl: './hero-section.component.scss'
 })
 export class HeroSectionComponent {
-  private readonly platformId = inject(PLATFORM_ID);
-  readonly heroBg = HERO_PHOTOS[Math.floor(Math.random() * HERO_PHOTOS.length)];
+  /**
+   * Arte do tema 2026. Fica dentro de uma "holding shape" circular, sem texto
+   * por cima — Brand Guide 2026, pág. 10.
+   */
+  readonly themeImage = 'assets/nasa-spaceapps-logo-removebg-preview.png';
+  readonly themeImageAlt = 'NASA Space Apps Challenge';
   readonly particles = Array.from({ length: 20 }, (_, i) => i);
 
-  scrollToInfo(): void {
-    if (isPlatformBrowser(this.platformId)) {
-      document.getElementById('info')?.scrollIntoView({ behavior: 'smooth' });
-    }
-  }
-
-  scrollToCountdown(): void {
-    if (isPlatformBrowser(this.platformId)) {
-      document.querySelector('app-countdown')?.scrollIntoView({ behavior: 'smooth' });
-    }
-  }
+  readonly registrationUrl = REGISTRATION_URL;
+  readonly mentorFormUrl = MENTOR_FORM_URL;
+  readonly whatsappUrl = WHATSAPP_URL;
 }

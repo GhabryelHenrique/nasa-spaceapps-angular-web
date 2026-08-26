@@ -1,0 +1,343 @@
+@use 'sass:math';
+@use '../../../../styles/section' as *;
+
+.timeline-section {
+  @include section-shell(deep, 110px);
+}
+
+.section-pattern { @include section-pattern('Orbits.png', 780px, 0.22); }
+
+.container { @include section-container(920px); }
+
+// ─── Fundo cósmico ────────────────────────────────────────
+.cosmic-bg {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.stars .star {
+  position: absolute;
+  width: 2px;
+  height: 2px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.65);
+
+  @for $i from 1 through 40 {
+    &:nth-child(#{$i}) {
+      left: #{math.random(100)}%;
+      top: #{math.random(100)}%;
+      animation: star-twinkle #{math.random(5) + 3}s ease-in-out #{math.random(5000)}ms infinite alternate;
+    }
+  }
+}
+
+@keyframes star-twinkle {
+  from { opacity: 0.12; }
+  to   { opacity: 0.8; }
+}
+
+.nebula.nebula-blue {
+  position: absolute;
+  width: 620px;
+  height: 620px;
+  top: 4%;
+  right: -12%;
+  border-radius: 50%;
+  filter: blur(110px);
+  background: rgba($sa-electric-blue, 0.32);
+}
+
+// ─── Cabeçalho ────────────────────────────────────────────
+.section-head { @include section-head; }
+.section-eyebrow { @include section-eyebrow; }
+.section-title { @include section-title; }
+
+.section-lead {
+  @include section-lead(660px);
+
+  strong {
+    color: $sa-neon-yellow;
+    font-weight: 700;
+    letter-spacing: 0.03em;
+  }
+}
+
+// ─── Rótulo de fase ───────────────────────────────────────
+.phase-label {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin: 3rem 0 2rem;
+}
+
+.phase-line {
+  flex: 1;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba($sa-blue-yonder, 0.35), transparent);
+}
+
+.phase-text {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.55rem;
+  font-family: 'Overpass', sans-serif;
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: $sa-blue-yonder;
+  white-space: nowrap;
+
+  i { font-size: 20px; }
+}
+
+.phase-note {
+  text-align: center;
+  max-width: 620px;
+  margin: 0 auto 2rem;
+  font-size: 0.98rem;
+  font-weight: 300;
+  line-height: 1.6;
+  color: var(--text-secondary);
+}
+
+// ─── Linha do tempo ───────────────────────────────────────
+.timeline {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.tl-item {
+  display: grid;
+  grid-template-columns: 48px 1fr;
+  gap: 1.25rem;
+  align-items: stretch;
+}
+
+.tl-marker {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.tl-dot {
+  display: grid;
+  place-items: center;
+  width: 48px;
+  height: 48px;
+  flex-shrink: 0;
+  border-radius: 50%;
+  background: rgba(0, 66, 166, 0.3);
+  border: 1px solid var(--border-subtle);
+
+  i {
+    font-size: 24px; // tamanho de ícone "redondo" (pág. 17)
+    line-height: 1;
+    color: $sa-blue-yonder;
+  }
+}
+
+.tl-connector {
+  flex: 1;
+  width: 2px;
+  min-height: 24px;
+  margin: 0.35rem 0;
+  background: linear-gradient(180deg, rgba($sa-blue-yonder, 0.3), rgba($sa-blue-yonder, 0.08));
+}
+
+.tl-card {
+  @include surface-card(1.35rem 1.5rem);
+  margin-bottom: 1.1rem;
+
+  &:hover { transform: translateX(4px); }
+}
+
+.tl-card-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.85rem;
+  margin-bottom: 0.5rem;
+}
+
+.tl-date {
+  font-family: 'Overpass', sans-serif;
+  font-size: 0.82rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: $sa-blue-yonder;
+}
+
+// Status por texto, nunca só por cor (pág. 7)
+.tl-status {
+  font-size: 0.64rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  padding: 0.24rem 0.6rem;
+  border-radius: 100px;
+  white-space: nowrap;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  color: var(--text-muted);
+
+  &[data-status='done'] {
+    border-color: rgba($sa-blue-yonder, 0.45);
+    color: $sa-blue-yonder;
+  }
+
+  &[data-status='live'] {
+    border-color: rgba($sa-neon-yellow, 0.6);
+    color: $sa-neon-yellow;
+  }
+}
+
+.tl-heading {
+  font-family: 'Overpass', sans-serif;
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: $sa-white;
+  margin: 0 0 0.4rem;
+}
+
+.tl-desc {
+  font-size: 0.94rem;
+  font-weight: 300;
+  line-height: 1.55;
+  color: var(--text-secondary);
+  margin: 0;
+}
+
+// Ação do marco — hoje só o de inscrições tem uma.
+.tl-action {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  margin-top: 1.1rem;
+  padding: 0.5rem 1.1rem;
+  border-radius: 100px;
+  border: 1px solid rgba($sa-neon-yellow, 0.45);
+  font-family: 'Overpass', sans-serif;
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: $sa-neon-yellow;
+  transition: background 0.2s ease, transform 0.2s ease;
+
+  &:hover {
+    background: rgba($sa-neon-yellow, 0.12);
+    transform: translateY(-2px);
+  }
+
+  &:focus-visible {
+    outline: 3px solid var(--sa-neon-yellow);
+    outline-offset: 3px;
+  }
+
+  i { font-size: 16px; }
+}
+
+// Marco principal (o hackathon em si)
+.tl-item.is-highlight {
+  .tl-dot {
+    background: $sa-electric-blue;
+    border-color: rgba($sa-neon-yellow, 0.6);
+    i { color: $sa-neon-yellow; }
+  }
+
+  .tl-card {
+    background: rgba(0, 66, 166, 0.3);
+    border-color: rgba($sa-neon-yellow, 0.32);
+  }
+}
+
+.tl-item.is-live .tl-dot {
+  border-color: rgba($sa-neon-yellow, 0.7);
+  box-shadow: 0 0 0 4px rgba($sa-neon-yellow, 0.12);
+}
+
+.tl-item.is-done {
+  .tl-dot i { color: var(--text-muted); }
+  .tl-card { opacity: 0.78; }
+}
+
+// ─── CTA ──────────────────────────────────────────────────
+.timeline-cta {
+  margin-top: 3rem;
+  padding: 2.25rem 1.5rem;
+  border-radius: 20px;
+  background: rgba(0, 66, 166, 0.16);
+  border: 1px solid var(--border-subtle);
+  text-align: center;
+}
+
+.cta-text {
+  font-size: 1.05rem;
+  font-weight: 300;
+  color: var(--text-secondary);
+  margin: 0 0 1.4rem;
+}
+
+.cta-actions {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 0.9rem;
+
+  i { font-size: 1.1rem; }
+}
+
+.cta-note {
+  margin: 1.5rem 0 0;
+  font-size: 0.88rem;
+  font-weight: 300;
+  color: var(--text-muted);
+
+  a {
+    color: $sa-neon-yellow;
+    font-weight: 600;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+
+    &:hover { color: $sa-white; }
+  }
+}
+
+// ─── Responsivo ───────────────────────────────────────────
+@media (max-width: 768px) {
+  .timeline-section { padding: 70px 0; }
+
+  .tl-item {
+    grid-template-columns: 40px 1fr;
+    gap: 0.9rem;
+  }
+
+  .tl-dot {
+    width: 40px;
+    height: 40px;
+    i { font-size: 20px; }
+  }
+
+  .tl-card { padding: 1.15rem 1.2rem; }
+
+  .tl-card-top {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.4rem;
+  }
+
+  .phase-text { font-size: 0.72rem; }
+
+  .cta-actions {
+    flex-direction: column;
+    :is(.btn-primary, .btn-secondary) { justify-content: center; }
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .star { animation: none !important; }
+}

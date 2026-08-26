@@ -148,6 +148,6 @@ export class SponsorshipComponent {
   }
 
   contactEmail(): void {
-    window.open('mailto:ghabryelcode@gmail.com?subject=Patrocínio%20NASA%20Space%20Apps%20Uberlândia', '_blank');
+    window.open('mailto:spaceapps.uberlandia@gmail.com?subject=Patrocínio%20NASA%20Space%20Apps%20Uberlândia', '_blank');
   }
 }

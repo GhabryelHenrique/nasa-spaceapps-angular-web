@@ -1,5 +1,6 @@
 <section class="recap2025-section">
-  <!-- Background stars -->
+  <div class="section-pattern" aria-hidden="true"></div>
+
   <div class="stars-bg" aria-hidden="true">
     @for (s of [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20]; track s) {
       <div class="star"></div>
@@ -8,127 +9,116 @@
 
   <div class="container">
 
-    <!-- Section Header -->
-    <div class="section-header reveal reveal-up">
-      <div class="year-badge">2025</div>
-      <h2 class="section-title">Recap em Números</h2>
-      <p class="section-subtitle">
-        Uberlândia escreveu história no NASA Space Apps Challenge 2025.<br>
+    <!-- ─── Cabeçalho ────────────────────────────────────── -->
+    <header class="section-head reveal reveal-up">
+      <p class="section-eyebrow">Edição 2025</p>
+      <h2 class="section-title">Recap em <span class="accent">números</span></h2>
+      <p class="section-lead">
+        Uberlândia escreveu história no NASA Space Apps Challenge 2025.
         Veja o que construímos juntos.
       </p>
-    </div>
+    </header>
 
-    <!-- Stats Grid -->
-     <div class="stats-section">
-
-       <div class="stats-grid reveal reveal-up delay-1">
-         @for (stat of stats; track stat.label) {
-           <div class="stat-card">
-             <div class="stat-icon">{{ stat.icon }}</div>
-             <div class="stat-number" [style.color]="stat.color">
-               <span class="stat-prefix">{{ stat.prefix }}</span>
-               <span class="stat-value">{{ stat.value }}</span>
-               <span class="stat-suffix">{{ stat.suffix }}</span>
-             </div>
-             <div class="stat-label">{{ stat.label }}</div>
-           </div>
-         }
-      </div>
-      <img src="assets/photos/IMG_0659.png" alt="" class="timeline-bg reveal reveal-up" aria-hidden="true">
-
-    </div>
-
-    <!-- Highlights -->
-    <div class="highlights-section">
-      <h3 class="highlights-title reveal reveal-up">Conquistas Históricas</h3>
-      <div class="achievements-grid reveal reveal-up delay-1">
-        @for (a of achievements; track a.title) {
-          <div class="achievement-card" [style.--accent]="a.color">
-            <div class="achievement-icon">{{ a.icon }}</div>
-            <div class="achievement-info">
-              <div class="achievement-title" [style.color]="a.color">{{ a.title }}</div>
-              <div class="achievement-subtitle">{{ a.subtitle }}</div>
+    <!-- ─── Números ──────────────────────────────────────── -->
+    <div class="stats-section">
+      <div class="stats-grid reveal reveal-up delay-1">
+        @for (stat of stats; track stat.label) {
+          <div class="stat-card">
+            <i [class]="stat.icon" aria-hidden="true"></i>
+            <div class="stat-number">
+              <span class="stat-prefix">{{ stat.prefix }}</span>{{ stat.displayValue }}<span class="stat-suffix">{{ stat.suffix }}</span>
             </div>
+            <div class="stat-label">{{ stat.label }}</div>
           </div>
         }
       </div>
+
+      <figure class="stats-photo reveal reveal-up">
+        <img src="assets/photos/IMG_0659.png" alt="Participantes do NASA Space Apps Uberlândia 2025" loading="lazy">
+      </figure>
     </div>
 
-    <!-- Global Impact Infographic -->
-    <div class="global-infographic-section reveal reveal-up">
-      <h3 class="global-infographic-title">Impacto Global 2025</h3>
-      <p class="global-infographic-description">
-        O NASA Space Apps Challenge é a maior maratona de inovação do planeta. Em 2025, o Brasil alcançou o TOP 5 mundial de inscritos! Veja os números consolidados globais:
-      </p>
-      <div class="infographic-container-wrapper" (click)="openLightbox()">
-        <img src="assets/images/2025_NASA_Space_Apps_Challenge_Infographic_Fi.width-1024.png" alt="NASA Space Apps Challenge 2025 Infographic" class="infographic-showcase-img">
-      </div>
+    <!-- ─── Conquistas ───────────────────────────────────── -->
+    <h3 class="subhead reveal reveal-up">Conquistas históricas</h3>
+    <div class="achievements-grid reveal reveal-up delay-1">
+      @for (a of achievements; track a.title) {
+        <article class="achievement-card">
+          <i [class]="a.icon" aria-hidden="true"></i>
+          <div>
+            <h4>{{ a.title }}</h4>
+            <p>{{ a.subtitle }}</p>
+          </div>
+        </article>
+      }
     </div>
 
-    <!-- Timeline -->
-    <div class="timeline-section">
-      <h3 class="timeline-title reveal reveal-up">A Jornada de 2025</h3>
-      <div class="timeline">
-        <img [src]="imgTimeline" alt="" class="timeline-bg reveal reveal-up" aria-hidden="true">
-        <div>
+    <!-- ─── Infográfico global ───────────────────────────── -->
+    <h3 class="subhead reveal reveal-up">Impacto global 2025</h3>
+    <p class="subhead-note reveal reveal-up">
+      O NASA Space Apps Challenge é a maior maratona de inovação do planeta.
+      Em 2025 o Brasil alcançou o TOP 5 mundial de inscritos.
+    </p>
+    <figure class="infographic reveal reveal-up delay-1">
+      <button type="button" (click)="openLightbox()" aria-label="Ampliar o infográfico global de 2025">
+        <img src="assets/images/2025_NASA_Space_Apps_Challenge_Infographic_Fi.width-1024.png"
+             alt="Infográfico com os números globais do NASA Space Apps Challenge 2025" loading="lazy">
+      </button>
+    </figure>
 
-          @for (item of timeline; track item.title; let i = $index; let last = $last) {
-            <div class="timeline-item reveal reveal-up" [class.highlight]="item.highlight">
+    <!-- ─── Jornada ──────────────────────────────────────── -->
+    <h3 class="subhead reveal reveal-up">A jornada de 2025</h3>
+    <div class="journey">
+      <figure class="journey-photo reveal reveal-up">
+        <img [src]="imgTimeline" alt="Momentos do NASA Space Apps Uberlândia 2025" loading="lazy">
+      </figure>
 
-              <!-- Coluna esquerda: dot + connector -->
-              <div class="timeline-spine">
-                <div class="timeline-dot">
-                  <span class="timeline-dot-icon">{{ item.icon }}</span>
-                </div>
-                @if (!last) {
-                  <div class="timeline-connector"></div>
-                }
-              </div>
-
-              <!-- Texto -->
-              <div class="timeline-content">
-                <div class="timeline-date">{{ item.date }}</div>
-                <h4 class="timeline-event-title">{{ item.title }}</h4>
-                <p class="timeline-description">{{ item.description }}</p>
-              </div>
-
+      <ol class="journey-list">
+        @for (item of timeline; track item.title; let last = $last) {
+          <li class="journey-item reveal reveal-up" [class.highlight]="item.highlight">
+            <div class="journey-spine" aria-hidden="true">
+              <span class="journey-dot"><i [class]="item.icon"></i></span>
+              @if (!last) { <span class="journey-connector"></span> }
             </div>
-          }
-        </div>
-
-      </div>
+            <div class="journey-content">
+              <span class="journey-date">{{ item.date }}</span>
+              <h4>{{ item.title }}</h4>
+              <p>{{ item.description }}</p>
+            </div>
+          </li>
+        }
+      </ol>
     </div>
 
-    <!-- 2026 Teaser -->
-    <div class="teaser-2026 reveal reveal-scale">
-      <div class="teaser-glow" aria-hidden="true"></div>
-      <div class="teaser-content">
-        <div class="teaser-year">2026</div>
-        <h3 class="teaser-title">Está Chegando...</h3>
-        <p class="teaser-description">
-          Se 2025 foi histórico, imagine o que vem por aí.<br>
-          Novos desafios. Novas conquistas. Uberlândia no mapa do universo.
-        </p>
-        <div class="teaser-cta">
-          <button class="cta-button" (click)="openDiscord()" aria-label="Entrar no Discord para ficar por dentro do NASA Space Apps 2026">
-            <span class="cta-icon">🚀</span>
-            Fique por Dentro
-          </button>
-        </div>
-        <div class="teaser-hint">
-          Junte-se à comunidade e seja o primeiro a saber das novidades
-        </div>
-      </div>
-    </div>
+    <!-- ─── Teaser 2026 ──────────────────────────────────── -->
+    <aside class="teaser reveal reveal-scale">
+      <p class="teaser-eyebrow">Próxima edição</p>
+      <p class="teaser-year">2026</p>
+      <h3 class="teaser-title">Está chegando</h3>
+      <p class="teaser-description">
+        Se 2025 foi histórico, imagine o que vem por aí. Novos desafios,
+        novas conquistas e Uberlândia de volta ao mapa do universo com
+        <strong>The Next Frontier</strong>.
+      </p>
+      <button type="button" class="btn-primary" (click)="openDiscord()"
+              aria-label="Entrar no Discord para acompanhar o NASA Space Apps 2026">
+        <i class="ph ph-rocket-launch" aria-hidden="true"></i>
+        Fique por dentro
+      </button>
+      <p class="teaser-hint">Junte-se à comunidade e seja o primeiro a saber das novidades</p>
+    </aside>
 
   </div>
 </section>
 
 @if (showLightbox()) {
-  <div class="lightbox-backdrop" (click)="closeLightbox()">
-    <button class="close-lightbox-btn" (click)="closeLightbox()">&times;</button>
-    <div class="lightbox-content-wrapper" (click)="$event.stopPropagation()">
-      <img src="assets/images/2025_NASA_Space_Apps_Challenge_Infographic_Fi.width-1024.png" alt="Infográfico Global NASA Space Apps 2025">
+  <div class="lightbox-backdrop" (click)="closeLightbox()" role="dialog" aria-modal="true"
+       aria-label="Infográfico global NASA Space Apps 2025">
+    <button type="button" class="lightbox-close" (click)="closeLightbox()" aria-label="Fechar">
+      <i class="ph ph-x" aria-hidden="true"></i>
+    </button>
+    <div class="lightbox-content" (click)="$event.stopPropagation()">
+      <img src="assets/images/2025_NASA_Space_Apps_Challenge_Infographic_Fi.width-1024.png"
+           alt="Infográfico global NASA Space Apps 2025">
     </div>
   </div>
 }

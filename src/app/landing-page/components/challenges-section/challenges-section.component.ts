@@ -14,10 +14,10 @@ export class ChallengesSectionComponent implements OnInit {
   selectedCategory: string = 'all';
   
   categories = [
-    { id: 'all', name: 'Todos', color: '#5865F2' },
-    { id: 'beginneryouth', name: 'Iniciante/Jovem', color: '#07173F' },
-    { id: 'intermediate', name: 'Intermediário', color: '#FF580A' },
-    { id: 'advanced', name: 'Avançado', color: '#8B0A03' }
+    { id: 'all', name: 'Todos', color: '#2E96F5' },
+    { id: 'beginneryouth', name: 'Iniciante/Jovem', color: '#2E96F5' },
+    { id: 'intermediate', name: 'Intermediário', color: '#E43700' },
+    { id: 'advanced', name: 'Avançado', color: '#8E1100' }
   ];
 
   ngOnInit() {
@@ -54,7 +54,7 @@ export class ChallengesSectionComponent implements OnInit {
 
   getCategoryColor(challenge: Challenge, categoryName: string): string {
     const category = challenge.categories.find(c => c.name === categoryName);
-    return category ? category.color : '#5865F2';
+    return category ? category.color : '#2E96F5';
   }
 
   getSkillsToShow(skills: string[]): string[] {

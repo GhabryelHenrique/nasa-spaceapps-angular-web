@@ -1,262 +1,213 @@
 <section class="event-info" id="info" role="region" aria-labelledby="event-info-title">
-  <div class="container">
-    <h2 id="event-info-title">Informações do Evento</h2>
+  <div class="event-info-pattern" aria-hidden="true"></div>
 
-    <!-- Tab Navigation -->
-    <div class="tab-navigation" role="tablist" aria-label="Informações do evento">
-      <button
-        class="tab-btn"
-        [class.active]="activeTab === 'evento'"
-        (click)="setActiveTab('evento')"
-        role="tab"
-        [attr.aria-selected]="activeTab === 'evento'"
-        [attr.aria-controls]="'evento-panel'"
-        id="evento-tab">
-        Sobre o Evento
-      </button>
-      <button
-        class="tab-btn"
-        [class.active]="activeTab === 'hackathon'"
-        (click)="setActiveTab('hackathon')"
-        role="tab"
-        [attr.aria-selected]="activeTab === 'hackathon'"
-        [attr.aria-controls]="'hackathon-panel'"
-        id="hackathon-tab">
-        O que é o Hackathon
-      </button>
-      <button
-        class="tab-btn"
-        [class.active]="activeTab === 'desafios'"
-        (click)="setActiveTab('desafios')"
-        role="tab"
-        [attr.aria-selected]="activeTab === 'desafios'"
-        [attr.aria-controls]="'desafios-panel'"
-        id="desafios-tab">
-        Desafios
-      </button>
-      <button
-        class="tab-btn"
-        [class.active]="activeTab === 'premios'"
-        (click)="setActiveTab('premios')"
-        role="tab"
-        [attr.aria-selected]="activeTab === 'premios'"
-        [attr.aria-controls]="'premios-panel'"
-        id="premios-tab">
-        Modalidades e Prêmios
-      </button>
+  <div class="container">
+
+    <!-- ─── Cabeçalho ────────────────────────────────────── -->
+    <header class="section-head reveal reveal-up">
+      <p class="section-eyebrow">
+        <span class="eyebrow-mark" aria-hidden="true"></span>
+        Tudo sobre a edição 2026
+      </p>
+      <h2 id="event-info-title">Informações do Evento</h2>
+      <p class="section-lead">
+        O que é o Space Apps, como funcionam as 48 horas, que tipo de desafio você vai
+        encontrar e como os projetos são avaliados.
+      </p>
+    </header>
+
+    <!-- ─── Navegação ────────────────────────────────────── -->
+    <div class="tab-navigation reveal reveal-up delay-1" role="tablist" aria-label="Informações do evento">
+      @for (tab of tabs; track tab.id; let i = $index) {
+        <button
+          type="button"
+          class="tab-btn"
+          [class.active]="activeTab() === tab.id"
+          (click)="setActiveTab(tab.id)"
+          (keydown)="onTabKeydown($event, i)"
+          role="tab"
+          [id]="tab.id + '-tab'"
+          [attr.aria-selected]="activeTab() === tab.id"
+          [attr.aria-controls]="tab.id + '-panel'"
+          [attr.tabindex]="activeTab() === tab.id ? 0 : -1">
+          <i [class]="tab.icon" aria-hidden="true"></i>
+          <span>{{ tab.label }}</span>
+        </button>
+      }
     </div>
 
-    <!-- Tab Content -->
+    <!-- ─── Conteúdo ─────────────────────────────────────── -->
     <div class="tab-content">
-      <!-- Evento Tab -->
-      <div *ngIf="activeTab === 'evento'" class="tab-panel" role="tabpanel" id="evento-panel" aria-labelledby="evento-tab">
-        <div class="info-grid">
-          <article class="info-card">
-            <div class="info-icon" role="img" aria-label="Ícone calendário">📅</div>
-            <h3>Quando</h3>
-            <p>14 e 15 de Novembro, 2026<br>48 horas de inovação</p>
-          </article>
-          <article class="info-card">
-            <div class="info-icon" role="img" aria-label="Ícone localização">📍</div>
-            <h3>Onde</h3>
-            <p>Toda Uberlândia, MG<br>Múltiplas localizações</p>
-          </article>
-          <article class="info-card">
-            <div class="info-icon" role="img" aria-label="Ícone equipes">👥</div>
-            <h3>Equipes</h3>
-            <p>2-6 pessoas por equipe<br>Todas as idades</p>
-          </article>
-          <article class="info-card">
-            <div class="info-icon" role="img" aria-label="Ícone prêmios">🏆</div>
-            <h3>Prêmios</h3>
-            <p>Certificados NASA<br>Prêmios locais e globais</p>
-          </article>
-        </div>
-      </div>
 
-      <!-- Hackathon Tab -->
-      <div *ngIf="activeTab === 'hackathon'" class="tab-panel" role="tabpanel" id="hackathon-panel" aria-labelledby="hackathon-tab">
-        <div class="hackathon-info">
-          <div class="hackathon-description">
+      <!-- Sobre o Evento -->
+      @if (activeTab() === 'evento') {
+        <div class="tab-panel" role="tabpanel" id="evento-panel" aria-labelledby="evento-tab" tabindex="0">
+          <div class="info-grid">
+            @for (card of infoCards; track card.title) {
+              <article class="info-card">
+                <i [class]="card.icon" aria-hidden="true"></i>
+                <h3>{{ card.title }}</h3>
+                @for (line of card.lines; track line) {
+                  <p>{{ line }}</p>
+                }
+              </article>
+            }
+          </div>
+
+          <aside class="theme-callout">
+            <span class="callout-mark" aria-hidden="true"></span>
+            <p>
+              O tema desta edição é <strong>The Next Frontier</strong> — A Próxima Fronteira.
+            </p>
+          </aside>
+        </div>
+      }
+
+      <!-- O que é o Hackathon -->
+      @if (activeTab() === 'hackathon') {
+        <div class="tab-panel" role="tabpanel" id="hackathon-panel" aria-labelledby="hackathon-tab" tabindex="0">
+          <div class="prose">
             <h3>O que é o NASA Space Apps Challenge?</h3>
             <p>
-              O NASA Space Apps Challenge é o maior hackathon internacional da NASA, reunindo milhares de participantes
-              em mais de 450 cidades ao redor do mundo. Durante 48 horas, equipes multidisciplinares trabalham juntas
-              para resolver desafios reais propostos pela NASA e suas agências parceiras.
+              É o maior hackathon internacional da NASA, reunindo milhares de participantes em mais de
+              450 cidades ao redor do mundo. Durante 48 horas, equipes multidisciplinares trabalham
+              juntas para resolver desafios reais propostos pela NASA e por suas agências parceiras.
             </p>
+          </div>
 
-            <h4>Como funciona?</h4>
-            <ul>
-              <li><strong>Desafios Reais:</strong> Todos os desafios são baseados em problemas reais enfrentados pela NASA</li>
-              <li><strong>Dados Abertos:</strong> Acesso livre a dados e recursos da NASA para desenvolvimento das soluções</li>
-              <li><strong>48 Horas:</strong> Tempo limitado para criar protótipos funcionais e apresentações</li>
-              <li><strong>Equipes Diversas:</strong> Programadores, designers, cientistas, engenheiros e entusiastas</li>
-              <li><strong>Mentoria:</strong> Especialistas disponíveis para orientação técnica</li>
-            </ul>
+          <h4 class="subhead">Como funciona</h4>
+          <ul class="feature-list">
+            @for (item of howItWorks; track item) {
+              <li>
+                <i class="ph ph-check-circle" aria-hidden="true"></i>
+                <span [innerHTML]="item"></span>
+              </li>
+            }
+          </ul>
 
-            <h4>Categorias de Desafios</h4>
-            <div class="challenge-categories">
-              <div class="category">
-                <h5>🌍 Ciências da Terra</h5>
-                <p>Mudanças climáticas, desastres naturais, agricultura sustentável</p>
-              </div>
-              <div class="category">
-                <h5>🚀 Exploração Espacial</h5>
-                <p>Missões a Marte, exploração lunar, tecnologias espaciais</p>
-              </div>
-              <div class="category">
-                <h5>🛰️ Tecnologia Espacial</h5>
-                <p>Satélites, comunicações, navegação e instrumentação</p>
-              </div>
-              <div class="category">
-                <h5>🔬 Ciência Planetária</h5>
-                <p>Astronomia, astrofísica, ciências planetárias</p>
-              </div>
-            </div>
+          <h4 class="subhead">Categorias de desafios</h4>
+          <div class="topic-grid">
+            @for (topic of topics; track topic.title) {
+              <article class="topic-card">
+                <i [class]="topic.icon" aria-hidden="true"></i>
+                <h5>{{ topic.title }}</h5>
+                <p>{{ topic.description }}</p>
+              </article>
+            }
           </div>
         </div>
-      </div>
+      }
 
-      <!-- Desafios Tab -->
-      <div *ngIf="activeTab === 'desafios'" class="tab-panel" role="tabpanel" id="desafios-panel" aria-labelledby="desafios-tab">
-        <div class="challenges-info">
-          <h3>Categorias de Desafios 2025</h3>
-          <p class="challenges-intro">
-            A NASA disponibilizou 19 desafios únicos para 2025, cada um projetado para abordar problemas reais
-            enfrentados pela agência espacial e pela humanidade. Os desafios são classificados em três níveis de dificuldade.
-          </p>
-
-          <div class="challenge-categories-overview">
-            <div class="category-overview">
-              <div class="category-header">
-                <div class="category-badge beginneryouth">Iniciante/Jovem</div>
-                <span class="category-count">6 desafios</span>
-              </div>
-              <p>Perfeitos para quem está começando ou para participantes mais jovens. Focam em criatividade, storytelling e conceitos fundamentais.</p>
-            </div>
-
-            <div class="category-overview">
-              <div class="category-header">
-                <div class="category-badge intermediate">Intermediário</div>
-                <span class="category-count">12 desafios</span>
-              </div>
-              <p>Requerem conhecimento técnico moderado e habilidades de desenvolvimento. Envolvem análise de dados e prototipagem.</p>
-            </div>
-
-            <div class="category-overview">
-              <div class="category-header">
-                <div class="category-badge advanced">Avançado</div>
-                <span class="category-count">11 desafios</span>
-              </div>
-              <p>Desafios complexos que exigem expertise técnica avançada, incluindo IA, machine learning e modelagem científica complexa.</p>
-            </div>
+      <!-- Desafios -->
+      @if (activeTab() === 'desafios') {
+        <div class="tab-panel" role="tabpanel" id="desafios-panel" aria-labelledby="desafios-tab" tabindex="0">
+          <div class="prose">
+            <h3>Níveis de dificuldade</h3>
+            <p>
+              Na edição de 2025 a NASA lançou 19 desafios, cada um partindo de um problema real
+              enfrentado pela agência e pela humanidade, distribuídos em três níveis de dificuldade.
+              Os desafios de 2026 são divulgados mais perto do evento.
+            </p>
           </div>
 
-          <div class="challenge-highlights">
-            <h4>Destaques dos Desafios 2025</h4>
-            <div class="highlights-grid">
-              <div class="highlight-item">
-                <div class="highlight-icon">🛰️</div>
-                <h5>Exoplanetas com IA</h5>
-                <p>Use inteligência artificial para descobrir novos mundos além do nosso sistema solar.</p>
-              </div>
-              <div class="highlight-item">
-                <div class="highlight-icon">🌍</div>
-                <h5>Dados Terra de 25 Anos</h5>
-                <p>Crie animações com dados históricos do satélite Terra da NASA.</p>
-              </div>
-              <div class="highlight-item">
-                <div class="highlight-icon">🏠</div>
-                <h5>Habitats Espaciais</h5>
-                <p>Projete casas no espaço para futuras missões à Lua e Marte.</p>
-              </div>
-              <div class="highlight-item">
-                <div class="highlight-icon">🌸</div>
-                <h5>Floração Global</h5>
-                <p>Monitore padrões de floração de plantas ao redor do mundo usando dados de satélite.</p>
-              </div>
-            </div>
+          <div class="tier-list">
+            @for (tier of tiers; track tier.slug) {
+              <article class="tier" [class]="'tier ' + tier.slug">
+                <div class="tier-head">
+                  <span class="tier-chip">{{ tier.label }}</span>
+                  <span class="tier-count">{{ tier.count }}</span>
+                </div>
+                <p>{{ tier.description }}</p>
+              </article>
+            }
           </div>
 
-          <div class="challenge-cta">
-            <p><strong>Pronto para explorar todos os desafios?</strong></p>
-            <p>Navegue pela seção de desafios abaixo para ver a lista completa com filtros por categoria e detalhes de cada desafio.</p>
-            <a href="#desafios" class="scroll-to-challenges">Ver Todos os Desafios</a>
+          <h4 class="subhead">Destaques de 2025</h4>
+          <div class="topic-grid">
+            @for (item of highlights; track item.title) {
+              <article class="topic-card">
+                <i [class]="item.icon" aria-hidden="true"></i>
+                <h5>{{ item.title }}</h5>
+                <p>{{ item.description }}</p>
+              </article>
+            }
+          </div>
+
+          <div class="panel-cta">
+            <p>Quer ver a lista completa, com filtro por categoria e detalhe de cada desafio?</p>
+            <a routerLink="/desafios" class="btn-primary">
+              <i class="ph ph-arrow-right" aria-hidden="true"></i>
+              Ver todos os desafios
+            </a>
           </div>
         </div>
-      </div>
+      }
 
-      <!-- Prêmios Tab -->
-      <div *ngIf="activeTab === 'premios'" class="tab-panel" role="tabpanel" id="premios-panel" aria-labelledby="premios-tab">
-        <div class="awards-section">
-          <h3>Sistema de Premiação</h3>
-          <p class="awards-intro">
-            O NASA Space Apps Challenge possui um sistema de premiação em três níveis: Local, Global Nominees e Global Winners.
-          </p>
-
-          <div class="award-categories">
-            <h4>Categorias de Prêmios Locais e Globais</h4>
-
-            <div class="awards-grid">
-              <img src="assets/awards/Art & Technology.png" alt="Art & Technology" class="award-image" (click)="openAwardModal('Art & Technology')">
-              <img src="assets/awards/Best Mission Concept.png" alt="Best Mission Concept" class="award-image" (click)="openAwardModal('Best Mission Concept')">
-              <img src="assets/awards/Best Use of Data.png" alt="Best Use of Data" class="award-image" (click)="openAwardModal('Best Use of Data')">
-              <img src="assets/awards/Best Use of Science.png" alt="Best Use of Science" class="award-image" (click)="openAwardModal('Best Use of Science')">
-              <img src="assets/awards/Best Use of Storytelling.png" alt="Best Use of Storytelling" class="award-image" (click)="openAwardModal('Best Use of Storytelling')">
-              <img src="assets/awards/Best Use of Technology.png" alt="Best Use of Technology" class="award-image" (click)="openAwardModal('Best Use of Technology')">
-              <img src="assets/awards/Galactic Impact.png" alt="Galactic Impact" class="award-image" (click)="openAwardModal('Galactic Impact')">
-              <img src="assets/awards/Global Community.png" alt="Global Community" class="award-image" (click)="openAwardModal('Global Community')">
-              <img src="assets/awards/Local Impact.png" alt="Local Impact" class="award-image" (click)="openAwardModal('Local Impact')">
-              <img src="assets/awards/Most Inspirational.png" alt="Most Inspirational" class="award-image" (click)="openAwardModal('Most Inspirational')">
-            </div>
+      <!-- Modalidades e Prêmios -->
+      @if (activeTab() === 'premios') {
+        <div class="tab-panel" role="tabpanel" id="premios-panel" aria-labelledby="premios-tab" tabindex="0">
+          <div class="prose">
+            <h3>Sistema de premiação</h3>
+            <p>
+              A premiação acontece em três níveis: Local, Global Nominees e Global Winners.
+              Abaixo, as categorias globais — clique em qualquer uma para ver o critério.
+            </p>
           </div>
 
-          <div class="judging-process">
-            <h4>Processo de Avaliação</h4>
-
-            <div class="judging-steps">
-              <div class="judging-step">
-                <div class="step-number">1</div>
-                <div class="step-content">
-                  <h5>Avaliação Local</h5>
-                  <p>Juízes locais selecionam projetos vencedores em cada categoria para competir globalmente como <strong>Global Nominees</strong>.</p>
-                </div>
-              </div>
-
-              <div class="judging-step">
-                <div class="step-number">2</div>
-                <div class="step-content">
-                  <h5>Avaliação Global</h5>
-                  <p>Especialistas da NASA e agências parceiras avaliam todos os Global Nominees para selecionar os <strong>Global Finalists</strong>.</p>
-                </div>
-              </div>
-
-              <div class="judging-step">
-                <div class="step-number">3</div>
-                <div class="step-content">
-                  <h5>Avaliação Executiva</h5>
-                  <p>Comitê executivo da NASA seleciona os <strong>10 Global Winners</strong> finais entre todos os Global Finalists.</p>
-                </div>
-              </div>
-            </div>
+          <div class="awards-grid">
+            @for (name of awardNames; track name) {
+              <button type="button" class="award" (click)="openAwardModal(name)">
+                <span class="award-shape">
+                  <img [src]="awardImage(name)" [alt]="name" loading="lazy">
+                </span>
+                <span class="award-name">{{ name }}</span>
+              </button>
+            }
           </div>
+
+          <h4 class="subhead">Processo de avaliação</h4>
+          <ol class="judging-steps">
+            @for (step of judgingSteps; track step.title) {
+              <li class="judging-step">
+                <span class="step-number" aria-hidden="true">{{ step.icon }}</span>
+                <div>
+                  <h5>{{ step.title }}</h5>
+                  <p [innerHTML]="step.description"></p>
+                </div>
+              </li>
+            }
+          </ol>
         </div>
-      </div>
+      }
+
     </div>
   </div>
 
-  <!-- Award Modal -->
-  <div *ngIf="showModal" class="modal-overlay" (click)="closeModal()">
-    <div class="modal-content" (click)="$event.stopPropagation()">
-      <button class="modal-close" (click)="closeModal()">&times;</button>
-      <div *ngIf="selectedAward" class="modal-body">
-        <h3>{{ selectedAward.name }}</h3>
-        <p class="award-description">{{ selectedAward.description }}</p>
-        <div class="award-details">
-          <h4>Sobre este prêmio:</h4>
-          <p>{{ selectedAward.fullDescription }}</p>
-        </div>
+  <!-- ─── Modal do prêmio ────────────────────────────────── -->
+  @if (showModal()) {
+    <div class="modal-overlay" (click)="closeModal()">
+      <div class="modal-content"
+           (click)="$event.stopPropagation()"
+           role="dialog"
+           aria-modal="true"
+           aria-labelledby="award-modal-title">
+        <button type="button" class="modal-close" (click)="closeModal()" aria-label="Fechar">
+          <i class="ph ph-x" aria-hidden="true"></i>
+        </button>
+        @if (selectedAward(); as award) {
+          <div class="modal-body">
+            <span class="modal-shape">
+              <img [src]="awardImage(award.name)" [alt]="award.name" loading="lazy">
+            </span>
+            <h3 id="award-modal-title">{{ award.name }}</h3>
+            <p class="award-description">{{ award.description }}</p>
+            <div class="award-details">
+              <h4>Sobre este prêmio</h4>
+              <p>{{ award.fullDescription }}</p>
+            </div>
+          </div>
+        }
       </div>
     </div>
-  </div>
+  }
 </section>

@@ -26,9 +26,9 @@ export const CHALLENGES_DATA: Challenge[] = [
       alt: "NASA Space Apps 2025_Challenge 9"
     },
     categories: [
-      { id: 1, name: "Iniciante/Jovem", slug: "beginneryouth", color: "#07173F" },
-      { id: 2, name: "Intermediário", slug: "intermediate", color: "#FF580A" },
-      { id: 3, name: "Avançado", slug: "advanced", color: "#8B0A03" }
+      { id: 1, name: "Iniciante/Jovem", slug: "beginneryouth", color: "#2E96F5" },
+      { id: 2, name: "Intermediário", slug: "intermediate", color: "#E43700" },
+      { id: 3, name: "Avançado", slug: "advanced", color: "#8E1100" }
     ],
     skills: ["Animação", "Artes & Multimídia", "Análise de Dados", "Gestão de Dados", "Visualização de Dados", "Ciências da Terra", "Flora & Fauna", "Satélites Artificiais", "Narrativa", "Videografia/Fotografia", "Clima"],
     slug: "animation-celebration-of-terra-data"
@@ -42,7 +42,7 @@ export const CHALLENGES_DATA: Challenge[] = [
       alt: "Space Apps 2025__Challenge 2"
     },
     categories: [
-      { id: 3, name: "Avançado", slug: "advanced", color: "#8B0A03" }
+      { id: 3, name: "Avançado", slug: "advanced", color: "#8E1100" }
     ],
     skills: ["Inteligência Artificial & Aprendizado de Máquina", "Programação", "Análise de Dados", "Gestão de Dados", "Visualização de Dados", "Objetos Extrasolares", "Planetas & Luas", "Software", "Exploração Espacial"],
     slug: "a-world-away-hunting-for-exoplanets-with-ai"
@@ -56,9 +56,9 @@ export const CHALLENGES_DATA: Challenge[] = [
       alt: "NASA Space Apps 2025_Challenge 17"
     },
     categories: [
-      { id: 1, name: "Iniciante/Jovem", slug: "beginneryouth", color: "#07173F" },
-      { id: 2, name: "Intermediário", slug: "intermediate", color: "#FF580A" },
-      { id: 3, name: "Avançado", slug: "advanced", color: "#8B0A03" }
+      { id: 1, name: "Iniciante/Jovem", slug: "beginneryouth", color: "#2E96F5" },
+      { id: 2, name: "Intermediário", slug: "intermediate", color: "#E43700" },
+      { id: 3, name: "Avançado", slug: "advanced", color: "#8E1100" }
     ],
     skills: ["Animação", "Artes & Multimídia", "Negócios & Economia", "Análise de Dados", "Visualização de Dados", "Ciências da Terra", "Flora & Fauna", "Previsão", "Realidade Virtual", "Redação & Comunicações"],
     slug: "bloomwatch-an-earth-observation-application-for-global-flowering-phenology"
@@ -72,9 +72,9 @@ export const CHALLENGES_DATA: Challenge[] = [
       alt: "Space Apps 2025__Challenge 3"
     },
     categories: [
-      { id: 1, name: "Iniciante/Jovem", slug: "beginneryouth", color: "#07173F" },
-      { id: 2, name: "Intermediário", slug: "intermediate", color: "#FF580A" },
-      { id: 3, name: "Avançado", slug: "advanced", color: "#8B0A03" }
+      { id: 1, name: "Iniciante/Jovem", slug: "beginneryouth", color: "#2E96F5" },
+      { id: 2, name: "Intermediário", slug: "intermediate", color: "#E43700" },
+      { id: 3, name: "Avançado", slug: "advanced", color: "#8E1100" }
     ],
     skills: ["Inteligência Artificial & Aprendizado de Máquina", "Gestão de Dados", "Educação", "Flora & Fauna", "Software", "Redação & Comunicações"],
     slug: "build-a-space-biology-knowledge-engine"
@@ -88,8 +88,8 @@ export const CHALLENGES_DATA: Challenge[] = [
       alt: "NASA Space Apps 2025_Challenge 10"
     },
     categories: [
-      { id: 2, name: "Intermediário", slug: "intermediate", color: "#FF580A" },
-      { id: 3, name: "Avançado", slug: "advanced", color: "#8B0A03" }
+      { id: 2, name: "Intermediário", slug: "intermediate", color: "#E43700" },
+      { id: 3, name: "Avançado", slug: "advanced", color: "#8E1100" }
     ],
     skills: ["Negócios & Economia", "Design", "Órbita Terrestre", "Ergonomia & Fatores Humanos", "Habitats", "Hardware", "Satélites Artificiais"],
     slug: "commercializing-low-earth-orbit-leo"
@@ -103,7 +103,7 @@ export const CHALLENGES_DATA: Challenge[] = [
       alt: "Astronaut Woody Hoburg takes an out-of-this-world space-selfie"
     },
     categories: [
-      { id: 1, name: "Iniciante/Jovem", slug: "beginneryouth", color: "#07173F" }
+      { id: 1, name: "Iniciante/Jovem", slug: "beginneryouth", color: "#2E96F5" }
     ],
     skills: [],
     slug: "create-your-own-challenge"
@@ -117,8 +117,8 @@ export const CHALLENGES_DATA: Challenge[] = [
       alt: "NASA Space Apps 2025_Challenge 7"
     },
     categories: [
-      { id: 2, name: "Intermediário", slug: "intermediate", color: "#FF580A" },
-      { id: 3, name: "Avançado", slug: "advanced", color: "#8B0A03" }
+      { id: 2, name: "Intermediário", slug: "intermediate", color: "#E43700" },
+      { id: 3, name: "Avançado", slug: "advanced", color: "#8E1100" }
     ],
     skills: ["Negócios & Economia", "Análise de Dados", "Design", "Ciências da Terra", "Ergonomia & Fatores Humanos", "Habitats", "Poluição", "Resíduos & Recursos"],
     slug: "data-pathways-to-healthy-cities-and-human-settlements"
@@ -132,8 +132,8 @@ export const CHALLENGES_DATA: Challenge[] = [
       alt: "NASA Space Apps 2025_Challenge 16"
     },
     categories: [
-      { id: 2, name: "Intermediário", slug: "intermediate", color: "#FF580A" },
-      { id: 3, name: "Avançado", slug: "advanced", color: "#8B0A03" }
+      { id: 2, name: "Intermediário", slug: "intermediate", color: "#E43700" },
+      { id: 3, name: "Avançado", slug: "advanced", color: "#8E1100" }
     ],
     skills: ["Animação", "Artes & Multimídia", "Análise de Dados", "Gestão de Dados", "Visualização de Dados", "Ciências da Terra", "Habitats", "Satélites", "Exploração Espacial", "Narrativa", "Realidade Virtual", "Redação & Comunicações"],
     slug: "deep-dive-immersive-data-stories-from-ocean-to-sky"
@@ -147,7 +147,7 @@ export const CHALLENGES_DATA: Challenge[] = [
       alt: "NASA Space Apps 2025_Challenge 4"
     },
     categories: [
-      { id: 2, name: "Intermediário", slug: "intermediate", color: "#FF580A" }
+      { id: 2, name: "Intermediário", slug: "intermediate", color: "#E43700" }
     ],
     skills: ["Programação", "Análise de Dados", "Gestão de Dados", "Visualização de Dados", "Objetos Extrasolares", "Software", "Exploração Espacial", "Videografia/Fotografia", "Desenvolvimento Web"],
     slug: "embiggen-your-eyes"
@@ -161,8 +161,8 @@ export const CHALLENGES_DATA: Challenge[] = [
       alt: "NASA Space Apps 2025_Challenge 15"
     },
     categories: [
-      { id: 2, name: "Intermediário", slug: "intermediate", color: "#FF580A" },
-      { id: 3, name: "Avançado", slug: "advanced", color: "#8B0A03" }
+      { id: 2, name: "Intermediário", slug: "intermediate", color: "#E43700" },
+      { id: 3, name: "Avançado", slug: "advanced", color: "#8E1100" }
     ],
     skills: ["Inteligência Artificial & Aprendizado de Máquina", "Negócios & Economia", "Análise de Dados", "Ciências da Terra", "Previsão", "Poluição", "Clima", "Desenvolvimento Web"],
     slug: "from-earthdata-to-action-cloud-computing-with-earth-observation-data-for-predicting-cleaner-safer-skies"
@@ -176,8 +176,8 @@ export const CHALLENGES_DATA: Challenge[] = [
       alt: "NASA Space Apps 2025_Challenge 6"
     },
     categories: [
-      { id: 2, name: "Intermediário", slug: "intermediate", color: "#FF580A" },
-      { id: 3, name: "Avançado", slug: "advanced", color: "#8B0A03" }
+      { id: 2, name: "Intermediário", slug: "intermediate", color: "#E43700" },
+      { id: 3, name: "Avançado", slug: "advanced", color: "#8E1100" }
     ],
     skills: ["Design", "Órbita Terrestre", "Educação", "Ergonomia & Fatores Humanos", "Jogos", "Design Gráfico", "Habitats", "Satélites Artificiais", "Exploração Espacial"],
     slug: "international-space-station-25th-anniversary-apps"
@@ -191,9 +191,9 @@ export const CHALLENGES_DATA: Challenge[] = [
       alt: "Space Apps 2025_Challenge 1"
     },
     categories: [
-      { id: 1, name: "Iniciante/Jovem", slug: "beginneryouth", color: "#07173F" },
-      { id: 2, name: "Intermediário", slug: "intermediate", color: "#FF580A" },
-      { id: 3, name: "Avançado", slug: "advanced", color: "#8B0A03" }
+      { id: 1, name: "Iniciante/Jovem", slug: "beginneryouth", color: "#2E96F5" },
+      { id: 2, name: "Intermediário", slug: "intermediate", color: "#E43700" },
+      { id: 3, name: "Avançado", slug: "advanced", color: "#8E1100" }
     ],
     skills: ["Astrofísica", "Programação", "Análise de Dados", "Visualização de Dados", "Resposta a Desastres", "Objetos Extrasolares", "Previsão", "Exploração Espacial", "Estatística"],
     slug: "meteor-madness"
@@ -207,8 +207,8 @@ export const CHALLENGES_DATA: Challenge[] = [
       alt: "NASA Space Apps 2025_Challenge 18"
     },
     categories: [
-      { id: 2, name: "Intermediário", slug: "intermediate", color: "#FF580A" },
-      { id: 3, name: "Avançado", slug: "advanced", color: "#8B0A03" }
+      { id: 2, name: "Intermediário", slug: "intermediate", color: "#E43700" },
+      { id: 3, name: "Avançado", slug: "advanced", color: "#8E1100" }
     ],
     skills: ["Agricultura", "Negócios & Economia", "Análise de Dados", "Visualização de Dados", "Ciências da Terra", "Educação", "Flora & Fauna", "Jogos", "Poluição", "Narrativa"],
     slug: "nasa-farm-navigators-using-nasa-data-exploration-in-agriculture"
@@ -222,7 +222,7 @@ export const CHALLENGES_DATA: Challenge[] = [
       alt: "NASA Space Apps 2025_Challenge 13"
     },
     categories: [
-      { id: 3, name: "Avançado", slug: "advanced", color: "#8B0A03" }
+      { id: 3, name: "Avançado", slug: "advanced", color: "#8E1100" }
     ],
     skills: ["Animação", "Análise de Dados", "Visualização de Dados", "Design", "Ciências da Terra", "Flora & Fauna", "Previsão", "Hardware"],
     slug: "sharks-from-space"
@@ -236,8 +236,8 @@ export const CHALLENGES_DATA: Challenge[] = [
       alt: "NASA Space Apps 2025_Challenge 8"
     },
     categories: [
-      { id: 2, name: "Intermediário", slug: "intermediate", color: "#FF580A" },
-      { id: 3, name: "Avançado", slug: "advanced", color: "#8B0A03" }
+      { id: 2, name: "Intermediário", slug: "intermediate", color: "#E43700" },
+      { id: 3, name: "Avançado", slug: "advanced", color: "#8E1100" }
     ],
     skills: ["Design", "Ergonomia & Fatores Humanos", "Habitats", "Planetas & Luas", "Exploração Espacial", "Resíduos & Recursos"],
     slug: "spacetrash-hack-revolutionizing-recycling-on-mars"
@@ -251,9 +251,9 @@ export const CHALLENGES_DATA: Challenge[] = [
       alt: "NASA Space Apps 2025_Challenge 14"
     },
     categories: [
-      { id: 1, name: "Iniciante/Jovem", slug: "beginneryouth", color: "#07173F" },
-      { id: 2, name: "Intermediário", slug: "intermediate", color: "#FF580A" },
-      { id: 3, name: "Avançado", slug: "advanced", color: "#8B0A03" }
+      { id: 1, name: "Iniciante/Jovem", slug: "beginneryouth", color: "#2E96F5" },
+      { id: 2, name: "Intermediário", slug: "intermediate", color: "#E43700" },
+      { id: 3, name: "Avançado", slug: "advanced", color: "#8E1100" }
     ],
     skills: ["Animação", "Artes & Multimídia", "Resposta a Desastres", "Educação", "Clima Espacial", "Narrativa", "Sol", "Clima"],
     slug: "stellar-stories-space-weather-through-the-eyes-of-earthlings"
@@ -267,8 +267,8 @@ export const CHALLENGES_DATA: Challenge[] = [
       alt: "NASA Space Apps 2025_Challenge 11"
     },
     categories: [
-      { id: 2, name: "Intermediário", slug: "intermediate", color: "#FF580A" },
-      { id: 3, name: "Avançado", slug: "advanced", color: "#8B0A03" }
+      { id: 2, name: "Intermediário", slug: "intermediate", color: "#E43700" },
+      { id: 3, name: "Avançado", slug: "advanced", color: "#8E1100" }
     ],
     skills: ["Animação", "Análise de Dados", "Visualização de Dados", "Ciências da Terra", "Satélites Artificiais", "Narrativa"],
     slug: "through-the-radar-looking-glass-revealing-earth-processes-with-sar"
@@ -282,7 +282,7 @@ export const CHALLENGES_DATA: Challenge[] = [
       alt: "NASA Space Apps 2025_Challenge 19"
     },
     categories: [
-      { id: 2, name: "Intermediário", slug: "intermediate", color: "#FF580A" }
+      { id: 2, name: "Intermediário", slug: "intermediate", color: "#E43700" }
     ],
     skills: ["Programação", "Análise de Dados", "Visualização de Dados", "Previsão", "Software", "Clima", "Desenvolvimento Web"],
     slug: "will-it-rain-on-my-parade"
@@ -296,7 +296,7 @@ export const CHALLENGES_DATA: Challenge[] = [
       alt: "NASA Space Apps 2025_Challenge 5"
     },
     categories: [
-      { id: 2, name: "Intermediário", slug: "intermediate", color: "#FF580A" }
+      { id: 2, name: "Intermediário", slug: "intermediate", color: "#E43700" }
     ],
     skills: ["Design", "Órbita Terrestre", "Ergonomia & Fatores Humanos", "Jogos", "Design Gráfico", "Habitats", "Satélites Artificiais", "Exploração Espacial", "Resíduos & Recursos"],
     slug: "your-home-in-space-the-habitat-layout-creator"

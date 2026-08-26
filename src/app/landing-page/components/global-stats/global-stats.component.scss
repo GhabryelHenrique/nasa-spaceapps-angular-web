@@ -1,5 +1,5 @@
 .global-stats-wrapper {
-  background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+  background: linear-gradient(135deg, #07173F 0%, #07173F 50%, #0042A6 100%);
   padding: 80px 0;
   color: #fff;
   position: relative;
@@ -46,7 +46,7 @@
     font-size: 2.5rem;
     font-weight: 700;
     margin-bottom: 16px;
-    background: linear-gradient(135deg, #4ecdc4, #45b7d1, #5865F2);
+    background: linear-gradient(135deg, #2E96F5, #2E96F5, #5865F2);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
@@ -81,8 +81,8 @@
 
   &:hover {
     transform: translateY(-5px);
-    box-shadow: 0 10px 30px rgba(78, 205, 196, 0.3);
-    border-color: rgba(78, 205, 196, 0.5);
+    box-shadow: 0 10px 30px rgba(46, 150, 245, 0.3);
+    border-color: rgba(46, 150, 245, 0.5);
   }
 
   .highlight-icon {
@@ -105,7 +105,7 @@
     font-size: 1.8rem;
     font-weight: 700;
     margin-bottom: 4px;
-    background: linear-gradient(135deg, #4ecdc4, #45b7d1);
+    background: linear-gradient(135deg, #2E96F5, #2E96F5);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
@@ -180,8 +180,8 @@
 #tab-world:checked ~ .tabs-header label[for="tab-world"],
 #tab-brazil:checked ~ .tabs-header label[for="tab-brazil"],
 #tab-countries:checked ~ .tabs-header label[for="tab-countries"] {
-  background: linear-gradient(135deg, rgba(78, 205, 196, 0.2), rgba(69, 183, 209, 0.2));
-  border-color: rgba(78, 205, 196, 0.5);
+  background: linear-gradient(135deg, rgba(46, 150, 245, 0.2), rgba(46, 150, 245, 0.2));
+  border-color: rgba(46, 150, 245, 0.5);
   color: #fff;
 }
 
@@ -228,7 +228,7 @@
   font-weight: 600;
   font-size: 0.9rem;
   color: rgba(255, 255, 255, 0.9);
-  border-bottom: 2px solid rgba(78, 205, 196, 0.3);
+  border-bottom: 2px solid rgba(46, 150, 245, 0.3);
 }
 
 .table-body {
@@ -320,13 +320,13 @@
   text-align: center;
 
   .nominations-badge {
-    background: linear-gradient(135deg, rgba(78, 205, 196, 0.3), rgba(69, 183, 209, 0.3));
-    border: 1px solid rgba(78, 205, 196, 0.5);
+    background: linear-gradient(135deg, rgba(46, 150, 245, 0.3), rgba(46, 150, 245, 0.3));
+    border: 1px solid rgba(46, 150, 245, 0.5);
     padding: 6px 16px;
     border-radius: 20px;
     font-weight: 600;
     display: inline-block;
-    color: #4ecdc4;
+    color: #2E96F5;
   }
 }
 
@@ -340,9 +340,9 @@
 .ranking-footer {
   margin-top: 24px;
   padding: 16px;
-  background: rgba(78, 205, 196, 0.1);
+  background: rgba(46, 150, 245, 0.1);
   border-radius: 8px;
-  border-left: 4px solid rgba(78, 205, 196, 0.5);
+  border-left: 4px solid rgba(46, 150, 245, 0.5);
 
   p {
     margin: 0;
@@ -350,7 +350,7 @@
     font-size: 0.95rem;
 
     strong {
-      color: #4ecdc4;
+      color: #2E96F5;
     }
   }
 }

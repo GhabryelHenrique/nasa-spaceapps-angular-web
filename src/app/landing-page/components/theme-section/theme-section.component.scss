@@ -1,0 +1,232 @@
+@use '../../../../styles/variables' as *;
+
+// Seção do tema 2026 — "The Next Frontier".
+// Fundo Deep Blue, padrão de órbitas a 25%, arte dentro de holding shape
+// circular com anéis concêntricos (Brand Guide 2026, pág. 10, 12 e 19).
+.theme-section {
+  position: relative;
+  isolation: isolate;
+  padding: 110px 0;
+  background: $sa-deep-blue;
+  overflow: hidden;
+}
+
+.theme-pattern {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background-image: url('/assets/patterns/Orbits.png');
+  background-size: 720px 720px;
+  background-repeat: repeat;
+  opacity: 0.25;
+  mix-blend-mode: soft-light;
+  pointer-events: none;
+}
+
+.theme-inner {
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  display: grid;
+  grid-template-columns: minmax(0, 0.85fr) minmax(0, 1.15fr);
+  align-items: center;
+  gap: 4rem;
+}
+
+// ─── Arte ───────────────────────────────────────
+.theme-art {
+  position: relative;
+  display: grid;
+  place-items: center;
+  aspect-ratio: 1;
+  width: 100%;
+  max-width: 400px;
+  margin-inline: auto;
+}
+
+.art-shape {
+  position: relative;
+  z-index: 2;
+  width: 76%;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 2px solid rgba($sa-blue-yonder, 0.32);
+  box-shadow:
+    0 0 0 12px rgba($sa-electric-blue, 0.18),
+    0 20px 60px rgba(2, 8, 24, 0.5);
+
+  img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+.art-ring {
+  position: absolute;
+  border-radius: 50%;
+  border: 1px solid rgba($sa-blue-yonder, 0.25);
+  pointer-events: none;
+
+  &.art-ring-1 {
+    inset: 4%;
+    animation: art-spin 34s linear infinite;
+
+    &::after {
+      content: '';
+      position: absolute;
+      top: 50%;
+      right: -4px;
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: $sa-neon-yellow;
+      box-shadow: 0 0 10px rgba($sa-neon-yellow, 0.75);
+      transform: translateY(-50%);
+    }
+  }
+
+  &.art-ring-2 {
+    inset: 0;
+    border-style: dashed;
+    border-color: rgba($sa-blue-yonder, 0.16);
+    animation: art-spin 52s linear infinite reverse;
+  }
+}
+
+@keyframes art-spin {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(360deg); }
+}
+
+// ─── Texto ──────────────────────────────────────
+.theme-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.6);
+  margin: 0 0 0.9rem;
+}
+
+.eyebrow-mark {
+  width: 9px;
+  height: 9px;
+  background: $sa-neon-yellow;
+  transform: rotate(45deg);
+  box-shadow: 0 0 10px rgba($sa-neon-yellow, 0.7);
+}
+
+// H2 = Overpass Regular (pág. 13). O nome do tema é a exceção de peso:
+// funciona como marca, não como headline de hierarquia.
+.theme-title {
+  font-family: 'Fira Sans', sans-serif;
+  font-size: clamp(2.1rem, 4.6vw, 3.4rem);
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  line-height: 1.15;
+  color: $sa-white;
+  margin: 0;
+}
+
+.theme-title-pt {
+  font-size: clamp(1.05rem, 2vw, 1.35rem);
+  font-weight: 300;
+  font-style: italic;
+  letter-spacing: 0.04em;
+  color: rgba(255, 255, 255, 0.6);
+  margin: 0.35rem 0 1.8rem;
+}
+
+.theme-lead {
+  font-size: clamp(1.05rem, 1.8vw, 1.3rem);
+  font-weight: 400;
+  line-height: 1.55;
+  margin: 0 0 2.4rem;
+  max-width: 640px;
+}
+
+// ─── Pilares ────────────────────────────────────
+.theme-pillars {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 1.1rem;
+  margin-bottom: 2.4rem;
+}
+
+.pillar {
+  padding: 1.4rem 1.3rem;
+  border-radius: 16px;
+  background: var(--bg-surface);
+  border: 1px solid var(--border-subtle);
+  backdrop-filter: blur(8px);
+
+  i {
+    display: block;
+    font-size: 32px; // tamanho de ícone "redondo" (pág. 17)
+    line-height: 1;
+    color: $sa-blue-yonder;
+    margin-bottom: 0.75rem;
+  }
+
+  h3 {
+    font-family: 'Overpass', sans-serif;
+    font-size: 0.85rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: $sa-white;
+    margin: 0 0 0.45rem;
+  }
+
+  p {
+    font-size: 0.92rem;
+    font-weight: 300;
+    line-height: 1.55;
+    color: var(--text-secondary);
+    margin: 0;
+  }
+}
+
+// ─── Ações ──────────────────────────────────────
+.theme-actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.9rem;
+
+  i { font-size: 20px; }
+}
+
+// ─── Responsivo ─────────────────────────────────
+@media (max-width: 980px) {
+  .theme-section { padding: 80px 0; }
+
+  .theme-inner {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+    text-align: center;
+  }
+
+  .theme-art { order: 1; max-width: 300px; }
+  .theme-copy { order: 2; }
+
+  .theme-lead { margin-inline: auto; }
+  .theme-actions { justify-content: center; }
+}
+
+@media (max-width: 600px) {
+  .theme-inner { padding: 0 1.25rem; }
+  .theme-art { max-width: 230px; }
+  .theme-pillars { grid-template-columns: 1fr; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .art-ring { animation: none !important; }
+}

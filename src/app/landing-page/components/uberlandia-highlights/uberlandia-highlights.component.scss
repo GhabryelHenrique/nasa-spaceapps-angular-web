@@ -57,24 +57,24 @@
       }
 
       .team-highlight {
-        color: var(--nasa-blue);
+        color: var(--sa-blue-yonder);
         font-weight: 600;
-        background: rgba(11, 61, 145, 0.2);
+        background: rgba(0, 66, 166, 0.2);
         padding: 0.2rem 0.5rem;
         border-radius: 4px;
       }
     }
 
     .hackathon-stats {
-      background: rgba(11, 61, 145, 0.15);
-      border: 1px solid rgba(11, 61, 145, 0.3);
+      background: rgba(0, 66, 166, 0.15);
+      border: 1px solid rgba(0, 66, 166, 0.3);
       border-radius: 15px;
       padding: 2rem;
       margin-top: 2rem;
-      border-left: 4px solid #00b894;
+      border-left: 4px solid #3DD68C;
 
       h3 {
-        color: #00b894;
+        color: #3DD68C;
         font-size: 1.5rem;
         margin-bottom: 1.5rem;
         font-weight: 700;
@@ -101,13 +101,13 @@
           &:hover {
             transform: translateY(-5px);
             box-shadow: 0 10px 30px rgba(0, 184, 148, 0.3);
-            border-color: #00b894;
+            border-color: #3DD68C;
           }
 
           .stat-number {
             font-size: 2.5rem;
             font-weight: 800;
-            background: linear-gradient(135deg, #00b894, #55efc4);
+            background: linear-gradient(135deg, #3DD68C, #3DD68C);
             background-clip: text;
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
@@ -149,8 +149,8 @@
     }
 
     .winners-info {
-      background: rgba(11, 61, 145, 0.15);
-      border: 1px solid rgba(11, 61, 145, 0.3);
+      background: rgba(0, 66, 166, 0.15);
+      border: 1px solid rgba(0, 66, 166, 0.3);
       border-radius: 15px;
       padding: 2rem;
       margin-top: 2rem;
@@ -170,7 +170,7 @@
         margin-bottom: 1rem;
 
         strong {
-          color: var(--nasa-blue);
+          color: var(--sa-blue-yonder);
         }
       }
 
@@ -179,7 +179,7 @@
         line-height: 1.7;
         color: var(--nasa-red);
         font-weight: 500;
-        background: rgba(252, 61, 33, 0.1);
+        background: rgba(228, 55, 0, 0.1);
         padding: 1rem;
         border-radius: 8px;
         border-left: 3px solid var(--nasa-red);
@@ -241,7 +241,7 @@
 
     .achievement-card {
       background: rgba(255, 255, 255, 0.05);
-      border: 1px solid rgba(11, 61, 145, 0.3);
+      border: 1px solid rgba(0, 66, 166, 0.3);
       border-radius: 20px;
       padding: 2rem;
       text-align: center;
@@ -252,11 +252,11 @@
         transform: translateY(-10px);
         box-shadow: var(--shadow-nasa-blue);
         border-color: var(--nasa-blue);
-        background: rgba(11, 61, 145, 0.1);
+        background: rgba(0, 66, 166, 0.1);
       }
 
       &:nth-child(1) {
-        border-left: 4px solid #00b894;
+        border-left: 4px solid #3DD68C;
 
         &:hover {
           box-shadow: 0 15px 40px rgba(0, 184, 148, 0.3);
@@ -294,7 +294,7 @@
 
       h4 {
         font-size: 1.4rem;
-        color: var(--nasa-blue);
+        color: var(--sa-blue-yonder);
         margin-bottom: 0.8rem;
         font-weight: 700;
       }

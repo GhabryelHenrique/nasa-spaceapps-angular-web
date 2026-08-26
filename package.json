@@ -9,7 +9,7 @@
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
     "deploy": "npm run commitAndPush && npm run build-deploy",
-    "commitAndPush": "git add . && git commit -m \"[Auto] Update teams and Events\" && git push",
+    "commitAndPush": "git add . && git commit -m \"Update visual site\" && git push",
     "build-deploy": "ng build --configuration production && ngh --dir=dist/nasa-spaceapps-angular-web/browser"
   },
   "private": true,
@@ -22,6 +22,7 @@
     "@angular/localize": "^22.0.0",
     "@angular/platform-browser": "^22.0.0",
     "@angular/router": "^22.0.0",
+    "@phosphor-icons/web": "^2.1.2",
     "@types/leaflet": "^1.9.20",
     "chart.js": "^4.5.0",
     "leaflet": "^1.9.4",
