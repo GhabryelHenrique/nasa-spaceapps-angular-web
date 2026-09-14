@@ -1,0 +1,628 @@
+{
+  "data": [
+    {
+      "locationId": "aWQ6NTUwNTg=",
+      "locationName": "ARACAJU",
+      "teams": {
+        "pageInfo": {
+          "hasPreviousPage": false,
+          "hasNextPage": false,
+          "startCursor": "",
+          "endCursor": "",
+          "__typename": "PageInfo"
+        },
+        "totalCount": 0,
+        "edges": [],
+        "__typename": "TeamPageConnection"
+      }
+    },
+    {
+      "locationId": "aWQ6NTUwMzQ=",
+      "locationName": "balneário camboriú",
+      "teams": {
+        "pageInfo": {
+          "hasPreviousPage": false,
+          "hasNextPage": false,
+          "startCursor": "",
+          "endCursor": "",
+          "__typename": "PageInfo"
+        },
+        "totalCount": 0,
+        "edges": [],
+        "__typename": "TeamPageConnection"
+      }
+    },
+    {
+      "locationId": "aWQ6NTUwMjE=",
+      "locationName": "Belém",
+      "teams": {
+        "pageInfo": {
+          "hasPreviousPage": false,
+          "hasNextPage": false,
+          "startCursor": "",
+          "endCursor": "",
+          "__typename": "PageInfo"
+        },
+        "totalCount": 0,
+        "edges": [],
+        "__typename": "TeamPageConnection"
+      }
+    },
+    {
+      "locationId": "aWQ6NTUwMDE=",
+      "locationName": "Boa Vista",
+      "teams": {
+        "pageInfo": {
+          "hasPreviousPage": false,
+          "hasNextPage": false,
+          "startCursor": "",
+          "endCursor": "",
+          "__typename": "PageInfo"
+        },
+        "totalCount": 0,
+        "edges": [],
+        "__typename": "TeamPageConnection"
+      }
+    },
+    {
+      "locationId": "aWQ6NTQ5NzE=",
+      "locationName": "CAMPINA GRANDE",
+      "teams": {
+        "pageInfo": {
+          "hasPreviousPage": false,
+          "hasNextPage": false,
+          "startCursor": "",
+          "endCursor": "",
+          "__typename": "PageInfo"
+        },
+        "totalCount": 0,
+        "edges": [],
+        "__typename": "TeamPageConnection"
+      }
+    },
+    {
+      "locationId": "aWQ6NTQ5NzA=",
+      "locationName": "Campinas",
+      "teams": {
+        "pageInfo": {
+          "hasPreviousPage": false,
+          "hasNextPage": false,
+          "startCursor": "",
+          "endCursor": "",
+          "__typename": "PageInfo"
+        },
+        "totalCount": 0,
+        "edges": [],
+        "__typename": "TeamPageConnection"
+      }
+    },
+    {
+      "locationId": "aWQ6NTQ5Njk=",
+      "locationName": "Campo Mourão",
+      "teams": {
+        "pageInfo": {
+          "hasPreviousPage": false,
+          "hasNextPage": false,
+          "startCursor": "",
+          "endCursor": "",
+          "__typename": "PageInfo"
+        },
+        "totalCount": 0,
+        "edges": [],
+        "__typename": "TeamPageConnection"
+      }
+    },
+    {
+      "locationId": "aWQ6NTQ5NTk=",
+      "locationName": "Caxias do Sul",
+      "teams": {
+        "pageInfo": {
+          "hasPreviousPage": false,
+          "hasNextPage": false,
+          "startCursor": "",
+          "endCursor": "",
+          "__typename": "PageInfo"
+        },
+        "totalCount": 0,
+        "edges": [],
+        "__typename": "TeamPageConnection"
+      }
+    },
+    {
+      "locationId": "aWQ6NTQ5NDA=",
+      "locationName": "Cianorte",
+      "teams": {
+        "pageInfo": {
+          "hasPreviousPage": false,
+          "hasNextPage": false,
+          "startCursor": "",
+          "endCursor": "",
+          "__typename": "PageInfo"
+        },
+        "totalCount": 0,
+        "edges": [],
+        "__typename": "TeamPageConnection"
+      }
+    },
+    {
+      "locationId": "aWQ6NTQ5MjA=",
+      "locationName": "Cuiaba",
+      "teams": {
+        "pageInfo": {
+          "hasPreviousPage": false,
+          "hasNextPage": false,
+          "startCursor": "",
+          "endCursor": "",
+          "__typename": "PageInfo"
+        },
+        "totalCount": 0,
+        "edges": [],
+        "__typename": "TeamPageConnection"
+      }
+    },
+    {
+      "locationId": "aWQ6NTQ4NzM=",
+      "locationName": "Fortaleza",
+      "teams": {
+        "pageInfo": {
+          "hasPreviousPage": false,
+          "hasNextPage": false,
+          "startCursor": "",
+          "endCursor": "",
+          "__typename": "PageInfo"
+        },
+        "totalCount": 0,
+        "edges": [],
+        "__typename": "TeamPageConnection"
+      }
+    },
+    {
+      "locationId": "aWQ6NTQ4NTg=",
+      "locationName": "Goiânia",
+      "teams": {
+        "pageInfo": {
+          "hasPreviousPage": false,
+          "hasNextPage": false,
+          "startCursor": "",
+          "endCursor": "",
+          "__typename": "PageInfo"
+        },
+        "totalCount": 0,
+        "edges": [],
+        "__typename": "TeamPageConnection"
+      }
+    },
+    {
+      "locationId": "aWQ6NTQ4NDg=",
+      "locationName": "Guarulhos",
+      "teams": {
+        "pageInfo": {
+          "hasPreviousPage": false,
+          "hasNextPage": false,
+          "startCursor": "",
+          "endCursor": "",
+          "__typename": "PageInfo"
+        },
+        "totalCount": 0,
+        "edges": [],
+        "__typename": "TeamPageConnection"
+      }
+    },
+    {
+      "locationId": "aWQ6NTQ4MDE=",
+      "locationName": "Jaguariúna",
+      "teams": {
+        "pageInfo": {
+          "hasPreviousPage": false,
+          "hasNextPage": false,
+          "startCursor": "",
+          "endCursor": "",
+          "__typename": "PageInfo"
+        },
+        "totalCount": 0,
+        "edges": [],
+        "__typename": "TeamPageConnection"
+      }
+    },
+    {
+      "locationId": "aWQ6NTQ3ODc=",
+      "locationName": "Juazeiro do Norte",
+      "teams": {
+        "pageInfo": {
+          "hasPreviousPage": false,
+          "hasNextPage": false,
+          "startCursor": "",
+          "endCursor": "",
+          "__typename": "PageInfo"
+        },
+        "totalCount": 0,
+        "edges": [],
+        "__typename": "TeamPageConnection"
+      }
+    },
+    {
+      "locationId": "aWQ6NTQ3Mzk=",
+      "locationName": "Lajeado",
+      "teams": {
+        "pageInfo": {
+          "hasPreviousPage": false,
+          "hasNextPage": false,
+          "startCursor": "",
+          "endCursor": "",
+          "__typename": "PageInfo"
+        },
+        "totalCount": 0,
+        "edges": [],
+        "__typename": "TeamPageConnection"
+      }
+    },
+    {
+      "locationId": "aWQ6NTQ3MzA=",
+      "locationName": "Limeira",
+      "teams": {
+        "pageInfo": {
+          "hasPreviousPage": false,
+          "hasNextPage": false,
+          "startCursor": "",
+          "endCursor": "",
+          "__typename": "PageInfo"
+        },
+        "totalCount": 0,
+        "edges": [],
+        "__typename": "TeamPageConnection"
+      }
+    },
+    {
+      "locationId": "aWQ6NTQ3MjU=",
+      "locationName": "Londrina",
+      "teams": {
+        "pageInfo": {
+          "hasPreviousPage": false,
+          "hasNextPage": false,
+          "startCursor": "",
+          "endCursor": "",
+          "__typename": "PageInfo"
+        },
+        "totalCount": 0,
+        "edges": [],
+        "__typename": "TeamPageConnection"
+      }
+    },
+    {
+      "locationId": "aWQ6NTQ3MDc=",
+      "locationName": "Manaus",
+      "teams": {
+        "pageInfo": {
+          "hasPreviousPage": false,
+          "hasNextPage": false,
+          "startCursor": "",
+          "endCursor": "",
+          "__typename": "PageInfo"
+        },
+        "totalCount": 0,
+        "edges": [],
+        "__typename": "TeamPageConnection"
+      }
+    },
+    {
+      "locationId": "aWQ6NTQ2MDQ=",
+      "locationName": "Pouso Alegre",
+      "teams": {
+        "pageInfo": {
+          "hasPreviousPage": false,
+          "hasNextPage": false,
+          "startCursor": "",
+          "endCursor": "",
+          "__typename": "PageInfo"
+        },
+        "totalCount": 0,
+        "edges": [],
+        "__typename": "TeamPageConnection"
+      }
+    },
+    {
+      "locationId": "aWQ6NTQ1NzY=",
+      "locationName": "Recife",
+      "teams": {
+        "pageInfo": {
+          "hasPreviousPage": false,
+          "hasNextPage": false,
+          "startCursor": "",
+          "endCursor": "",
+          "__typename": "PageInfo"
+        },
+        "totalCount": 0,
+        "edges": [],
+        "__typename": "TeamPageConnection"
+      }
+    },
+    {
+      "locationId": "aWQ6NTQ1NzM=",
+      "locationName": "Ribeirao Preto",
+      "teams": {
+        "pageInfo": {
+          "hasPreviousPage": false,
+          "hasNextPage": false,
+          "startCursor": "",
+          "endCursor": "",
+          "__typename": "PageInfo"
+        },
+        "totalCount": 0,
+        "edges": [],
+        "__typename": "TeamPageConnection"
+      }
+    },
+    {
+      "locationId": "aWQ6NTQ1NDg=",
+      "locationName": "Salvador",
+      "teams": {
+        "pageInfo": {
+          "hasPreviousPage": false,
+          "hasNextPage": false,
+          "startCursor": "",
+          "endCursor": "",
+          "__typename": "PageInfo"
+        },
+        "totalCount": 0,
+        "edges": [],
+        "__typename": "TeamPageConnection"
+      }
+    },
+    {
+      "locationId": "aWQ6NTQ1MzQ=",
+      "locationName": "Santa Cruz das Palmeiras",
+      "teams": {
+        "pageInfo": {
+          "hasPreviousPage": false,
+          "hasNextPage": false,
+          "startCursor": "",
+          "endCursor": "",
+          "__typename": "PageInfo"
+        },
+        "totalCount": 0,
+        "edges": [],
+        "__typename": "TeamPageConnection"
+      }
+    },
+    {
+      "locationId": "aWQ6NTQ1Mjk=",
+      "locationName": "Santo André",
+      "teams": {
+        "pageInfo": {
+          "hasPreviousPage": false,
+          "hasNextPage": false,
+          "startCursor": "",
+          "endCursor": "",
+          "__typename": "PageInfo"
+        },
+        "totalCount": 0,
+        "edges": [],
+        "__typename": "TeamPageConnection"
+      }
+    },
+    {
+      "locationId": "aWQ6NTQ1MDM=",
+      "locationName": "Sorocaba",
+      "teams": {
+        "pageInfo": {
+          "hasPreviousPage": false,
+          "hasNextPage": false,
+          "startCursor": "",
+          "endCursor": "",
+          "__typename": "PageInfo"
+        },
+        "totalCount": 0,
+        "edges": [],
+        "__typename": "TeamPageConnection"
+      }
+    },
+    {
+      "locationId": "aWQ6NTQ0ODg=",
+      "locationName": "São Gonçalo",
+      "teams": {
+        "pageInfo": {
+          "hasPreviousPage": false,
+          "hasNextPage": false,
+          "startCursor": "",
+          "endCursor": "",
+          "__typename": "PageInfo"
+        },
+        "totalCount": 0,
+        "edges": [],
+        "__typename": "TeamPageConnection"
+      }
+    },
+    {
+      "locationId": "aWQ6NTQ0ODc=",
+      "locationName": "São José dos Campos",
+      "teams": {
+        "pageInfo": {
+          "hasPreviousPage": false,
+          "hasNextPage": false,
+          "startCursor": "",
+          "endCursor": "",
+          "__typename": "PageInfo"
+        },
+        "totalCount": 0,
+        "edges": [],
+        "__typename": "TeamPageConnection"
+      }
+    },
+    {
+      "locationId": "aWQ6NTQ0ODY=",
+      "locationName": "São Paulo",
+      "teams": {
+        "pageInfo": {
+          "hasPreviousPage": false,
+          "hasNextPage": false,
+          "startCursor": "",
+          "endCursor": "",
+          "__typename": "PageInfo"
+        },
+        "totalCount": 0,
+        "edges": [],
+        "__typename": "TeamPageConnection"
+      }
+    },
+    {
+      "locationId": "aWQ6NTQ0MzI=",
+      "locationName": "Vilhena",
+      "teams": {
+        "pageInfo": {
+          "hasPreviousPage": false,
+          "hasNextPage": false,
+          "startCursor": "",
+          "endCursor": "",
+          "__typename": "PageInfo"
+        },
+        "totalCount": 0,
+        "edges": [],
+        "__typename": "TeamPageConnection"
+      }
+    },
+    {
+      "locationId": "aWQ6NTQ4MzI=",
+      "locationName": "Harohalli",
+      "teams": {
+        "pageInfo": {
+          "hasPreviousPage": false,
+          "hasNextPage": false,
+          "startCursor": "",
+          "endCursor": "",
+          "__typename": "PageInfo"
+        },
+        "totalCount": 0,
+        "edges": [],
+        "__typename": "TeamPageConnection"
+      }
+    },
+    {
+      "locationId": "aWQ6NTQ5ODE=",
+      "locationName": "Cairo",
+      "teams": {
+        "pageInfo": {
+          "hasPreviousPage": false,
+          "hasNextPage": false,
+          "startCursor": "",
+          "endCursor": "",
+          "__typename": "PageInfo"
+        },
+        "totalCount": 0,
+        "edges": [],
+        "__typename": "TeamPageConnection"
+      }
+    },
+    {
+      "locationId": "aWQ6NTQ3Nzg=",
+      "locationName": "Kanjirappally",
+      "teams": {
+        "pageInfo": {
+          "hasPreviousPage": false,
+          "hasNextPage": false,
+          "startCursor": "",
+          "endCursor": "",
+          "__typename": "PageInfo"
+        },
+        "totalCount": 0,
+        "edges": [],
+        "__typename": "TeamPageConnection"
+      }
+    },
+    {
+      "locationId": "aWQ6NTUwODk=",
+      "locationName": "Abu Dhabi",
+      "teams": {
+        "pageInfo": {
+          "hasPreviousPage": false,
+          "hasNextPage": false,
+          "startCursor": "",
+          "endCursor": "",
+          "__typename": "PageInfo"
+        },
+        "totalCount": 0,
+        "edges": [],
+        "__typename": "TeamPageConnection"
+      }
+    },
+    {
+      "locationId": "aWQ6NTQ5MzE=",
+      "locationName": "Coimbatore",
+      "teams": {
+        "pageInfo": {
+          "hasPreviousPage": false,
+          "hasNextPage": false,
+          "startCursor": "",
+          "endCursor": "",
+          "__typename": "PageInfo"
+        },
+        "totalCount": 0,
+        "edges": [],
+        "__typename": "TeamPageConnection"
+      }
+    },
+    {
+      "locationId": "aWQ6NTQ5NDU=",
+      "locationName": "Chikkamagaluru",
+      "teams": {
+        "pageInfo": {
+          "hasPreviousPage": false,
+          "hasNextPage": false,
+          "startCursor": "",
+          "endCursor": "",
+          "__typename": "PageInfo"
+        },
+        "totalCount": 0,
+        "edges": [],
+        "__typename": "TeamPageConnection"
+      }
+    },
+    {
+      "locationId": "aWQ6NTQ3NTk=",
+      "locationName": "Kochi",
+      "teams": {
+        "pageInfo": {
+          "hasPreviousPage": false,
+          "hasNextPage": false,
+          "startCursor": "",
+          "endCursor": "",
+          "__typename": "PageInfo"
+        },
+        "totalCount": 0,
+        "edges": [],
+        "__typename": "TeamPageConnection"
+      }
+    },
+    {
+      "locationId": "aWQ6NTQ0NjU=",
+      "locationName": "Thrissur",
+      "teams": {
+        "pageInfo": {
+          "hasPreviousPage": false,
+          "hasNextPage": false,
+          "startCursor": "",
+          "endCursor": "",
+          "__typename": "PageInfo"
+        },
+        "totalCount": 0,
+        "edges": [],
+        "__typename": "TeamPageConnection"
+      }
+    },
+    {
+      "locationId": "aWQ6NTQ2NTM=",
+      "locationName": "Nashik",
+      "teams": {
+        "pageInfo": {
+          "hasPreviousPage": false,
+          "hasNextPage": false,
+          "startCursor": "",
+          "endCursor": "",
+          "__typename": "PageInfo"
+        },
+        "totalCount": 0,
+        "edges": [],
+        "__typename": "TeamPageConnection"
+      }
+    }
+  ]
+}
