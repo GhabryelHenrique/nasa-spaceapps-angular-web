@@ -1,0 +1,67 @@
+<div class="modal-backdrop" (click)="close()">
+  <div
+    class="modal"
+    role="dialog"
+    aria-modal="true"
+    [attr.aria-label]="challenge().title"
+    (click)="$event.stopPropagation()">
+
+    <button type="button" class="modal-close" (click)="close()" aria-label="Fechar detalhes do desafio">
+      <i class="ph ph-x" aria-hidden="true"></i>
+    </button>
+
+    <div class="modal-hero">
+      <img [src]="challenge().featuredImage.url" [alt]="challenge().featuredImage.alt">
+    </div>
+
+    <div class="modal-body">
+      <h2 class="modal-title">{{ challenge().title }}</h2>
+
+      <div class="modal-meta">
+        <div class="meta-group">
+          <h3>Dificuldade</h3>
+          <div class="chips">
+            @for (category of challenge().categories; track category.slug) {
+              <span class="chip difficulty" [style.border-color]="category.color">{{ category.name }}</span>
+            }
+          </div>
+        </div>
+
+        @if (challenge().tags.length > 0) {
+          <div class="meta-group">
+            <h3>{{ isCurrentEdition() ? 'Temas' : 'Habilidades sugeridas' }}</h3>
+            <div class="chips">
+              @for (tag of challenge().tags; track tag) {
+                <span class="chip">{{ tag }}</span>
+              }
+            </div>
+          </div>
+        }
+      </div>
+
+      <h3 class="section-label">Resumo do desafio</h3>
+      <p class="modal-excerpt">{{ challenge().excerpt }}</p>
+
+      @if (isCurrentEdition()) {
+        <p class="modal-hint">
+          Este é o resumo do desafio. O enunciado completo, com os conjuntos de dados da NASA que devem ser
+          usados, é publicado em <strong>28 de outubro</strong> — e o trabalho no projeto só pode começar no
+          hackathon, em <strong>14 e 15 de novembro</strong>.
+        </p>
+      } @else {
+        <p class="modal-hint archived">
+          Desafio da edição de <strong>{{ year() }}</strong>, mantido aqui apenas para consulta. Ele não está
+          mais disponível para inscrição.
+        </p>
+      }
+
+      <div class="modal-actions">
+        <a [href]="nasaUrl()" target="_blank" rel="noopener noreferrer" class="modal-btn primary">
+          Abrir no site da NASA
+          <span class="external-icon" aria-hidden="true">↗</span>
+        </a>
+        <button type="button" class="modal-btn secondary" (click)="close()">Fechar</button>
+      </div>
+    </div>
+  </div>
+</div>

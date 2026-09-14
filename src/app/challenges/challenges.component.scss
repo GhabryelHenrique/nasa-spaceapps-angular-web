@@ -69,8 +69,98 @@
       color: #C3D3EA;
       line-height: 1.6;
       max-width: 800px;
-      margin: 0 auto 3rem;
+      margin: 0 auto 2rem;
+
+      a {
+        color: #2E96F5;
+        text-decoration: underline;
+
+        &:hover { color: #6FB7F8; }
+      }
     }
+  }
+
+  // Alternância entre as edições (/desafios/2026, /desafios/2025).
+  .edition-switcher {
+    display: inline-flex;
+    gap: 0.35rem;
+    margin-bottom: 1.75rem;
+    padding: 0.35rem;
+    border-radius: 50px;
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.07);
+
+    .edition-btn {
+      padding: 0.45rem 1.35rem;
+      border-radius: 50px;
+      font-weight: 700;
+      font-size: 0.9rem;
+      color: #C3D3EA;
+      text-decoration: none;
+      transition: all 0.2s ease;
+
+      &:hover {
+        background: rgba(255, 255, 255, 0.07);
+        color: #ffffff;
+      }
+
+      &.active {
+        background: linear-gradient(135deg, #2E96F5 0%, #0960E1 100%);
+        color: #061027;
+      }
+
+      &:focus-visible {
+        outline: 3px solid #EAFE07;
+        outline-offset: 2px;
+      }
+    }
+  }
+
+  // Cronograma de liberação dos desafios: resumo → enunciado completo → hackathon.
+  .challenge-timeline {
+    list-style: none;
+    margin: 0 auto 1.5rem;
+    padding: 0;
+    max-width: 900px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1rem;
+
+    li {
+      background: rgba(255, 255, 255, 0.03);
+      border: 1px solid rgba(255, 255, 255, 0.07);
+      border-radius: 12px;
+      padding: 1rem 1.25rem;
+      text-align: left;
+
+      strong {
+        display: block;
+        color: #2E96F5;
+        font-size: 0.85rem;
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+        margin-bottom: 0.35rem;
+      }
+
+      span {
+        color: #C3D3EA;
+        font-size: 0.9rem;
+        line-height: 1.45;
+      }
+    }
+  }
+
+  .challenge-note {
+    max-width: 800px;
+    margin: 0 auto 3rem;
+    padding: 0.9rem 1.25rem;
+    border-radius: 12px;
+    border: 1px solid rgba(228, 55, 0, 0.35);
+    background: rgba(228, 55, 0, 0.08);
+    color: #FFD9CC;
+    font-size: 0.9rem;
+    line-height: 1.55;
+    text-align: left;
   }
 }
 
@@ -267,6 +357,7 @@
         padding: 0.15rem 0.5rem;
         border-radius: 4px;
 
+        // Só aparece em 2025, cujas listas de habilidades passam de 5 itens.
         &.more-skills {
           background: rgba(46, 150, 245, 0.1);
           color: #2E96F5;
@@ -276,7 +367,11 @@
     }
   }
 
+  // `margin-top: auto` também aqui: o desafio "Harmonization" não tem tags de
+  // tema, e sem isso o botão dele subiria enquanto o dos vizinhos fica no rodapé.
   .challenge-actions {
+    margin-top: auto;
+
     .challenge-link {
       display: flex;
       align-items: center;
@@ -286,11 +381,13 @@
       padding: 0.75rem;
       border-radius: 8px;
       font-size: 0.9rem;
+      font-family: inherit;
       font-weight: 600;
       text-decoration: none;
       background: rgba(255, 255, 255, 0.04);
       border: 1px solid rgba(255, 255, 255, 0.08);
       color: #ffffff;
+      cursor: pointer;
       transition: all 0.2s ease;
 
       .external-icon {

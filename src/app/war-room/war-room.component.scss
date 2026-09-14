@@ -24,6 +24,43 @@
     -webkit-text-fill-color: transparent;
   }
 
+  // Alternância entre as edições (/sala-de-guerra/2026, /2025).
+  .edition-switcher {
+    display: inline-flex;
+    gap: 0.35rem;
+    margin: 0 0 1.1rem;
+    padding: 0.3rem;
+    border-radius: 50px;
+    background: rgba(7, 23, 63, 0.55);
+    border: 1px solid rgba(46, 150, 245, 0.2);
+
+    .edition-btn {
+      padding: 0.4rem 1.25rem;
+      border-radius: 50px;
+      font-family: 'Fira Sans', sans-serif;
+      font-weight: 700;
+      font-size: 0.88rem;
+      color: var(--text-secondary, #B8B8B8);
+      text-decoration: none;
+      transition: all 0.2s ease;
+
+      &:hover {
+        background: rgba(46, 150, 245, 0.14);
+        color: #FFFFFF;
+      }
+
+      &.active {
+        background: linear-gradient(135deg, #2E96F5 0%, #0960E1 100%);
+        color: #061027;
+      }
+
+      &:focus-visible {
+        outline: 3px solid var(--sa-neon-yellow, #EAFE07);
+        outline-offset: 2px;
+      }
+    }
+  }
+
   .tagline {
     max-width: 720px;
     margin: 0 auto 0.4rem;

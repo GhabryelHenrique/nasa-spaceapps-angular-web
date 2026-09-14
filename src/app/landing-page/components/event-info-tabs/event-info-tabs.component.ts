@@ -1,6 +1,7 @@
 import { Component, HostListener, signal } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
+import { CHALLENGES_DATA } from '../../../shared/data/challenges.data';
 
 type TabId = 'evento' | 'hackathon' | 'desafios' | 'premios';
 
@@ -78,32 +79,35 @@ export class EventInfoTabsComponent {
   ];
 
   // ── Tab: Desafios ─────────────────────────────────────────
+  /** Total de desafios da edição — some as tags e passa de 14, pois um desafio pode ter mais de um nível. */
+  readonly challengeCount = CHALLENGES_DATA.length;
+
   readonly tiers: DifficultyTier[] = [
     {
       slug: 'beginneryouth',
       label: 'Iniciante/Jovem',
-      count: '6 desafios',
+      count: this.tierCount('beginneryouth'),
       description: 'Para quem está começando ou para participantes mais jovens. Focam em criatividade, narrativa e conceitos fundamentais.'
     },
     {
       slug: 'intermediate',
       label: 'Intermediário',
-      count: '12 desafios',
+      count: this.tierCount('intermediate'),
       description: 'Pedem conhecimento técnico moderado e habilidade de desenvolvimento. Envolvem análise de dados e prototipagem.'
     },
     {
       slug: 'advanced',
       label: 'Avançado',
-      count: '11 desafios',
+      count: this.tierCount('advanced'),
       description: 'Desafios complexos que exigem expertise avançada, incluindo IA, machine learning e modelagem científica.'
     }
   ];
 
   readonly highlights: Topic[] = [
-    { icon: 'ph ph-planet', title: 'Exoplanetas com IA', description: 'Use inteligência artificial para descobrir novos mundos além do sistema solar.' },
-    { icon: 'ph ph-globe-hemisphere-west', title: 'Dados Terra de 25 anos', description: 'Crie animações com o histórico do satélite Terra da NASA.' },
-    { icon: 'ph ph-house-line', title: 'Habitats espaciais', description: 'Projete moradias no espaço para futuras missões à Lua e a Marte.' },
-    { icon: 'ph ph-flower-lotus', title: 'Floração global', description: 'Monitore padrões de floração pelo mundo usando dados de satélite.' }
+    { icon: 'ph ph-planet', title: 'Planeta X e SPHEREx', description: 'Crie uma ferramenta pública para explorar o céu inteiro mapeado em infravermelho.' },
+    { icon: 'ph ph-fire', title: 'Focos de calor', description: 'Harmonize duas décadas de detecções de queimadas em um calendário de alerta.' },
+    { icon: 'ph ph-plant', title: 'Fazendas adaptadas', description: 'Ajude agricultores a escolher rotações de culturas com observações da Terra.' },
+    { icon: 'ph ph-music-notes', title: 'Jukebox da Terra', description: 'Traduza visualizações de ciência da Terra em som, em tempo real.' }
   ];
 
   // ── Tab: Modalidades e Prêmios ────────────────────────────
@@ -178,6 +182,12 @@ export class EventInfoTabsComponent {
       fullDescription: 'Reconhece o projeto que mais inspira e motiva a comunidade. Valoriza-se a capacidade de despertar paixão pela ciência e tecnologia, motivar outros a inovar e criar esperança para o futuro através de soluções criativas.'
     }
   };
+
+  /** Quantos desafios da edição carregam a tag de dificuldade — derivado de CHALLENGES_DATA. */
+  private tierCount(slug: DifficultyTier['slug']): string {
+    const total = CHALLENGES_DATA.filter(c => c.categories.some(cat => cat.slug === slug)).length;
+    return `${total} ${total === 1 ? 'desafio' : 'desafios'}`;
+  }
 
   setActiveTab(tab: TabId): void {
     this.activeTab.set(tab);

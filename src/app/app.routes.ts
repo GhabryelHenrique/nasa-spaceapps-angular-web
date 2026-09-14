@@ -5,8 +5,21 @@ export const routes: Routes = [
     path: '',
     loadComponent: () => import('./landing-page/landing-page.component').then(m => m.LandingPageComponent)
   },
+  // `/desafios` continua válido (links antigos, menu, sitemap) e cai na edição
+  // corrente; cada ano tem a sua própria URL, servida pelo mesmo componente.
   {
     path: 'desafios',
+    pathMatch: 'full',
+    redirectTo: 'desafios/2026'
+  },
+  {
+    path: 'desafios/2026',
+    data: { year: 2026 },
+    loadComponent: () => import('./challenges/challenges.component').then(m => m.ChallengesComponent)
+  },
+  {
+    path: 'desafios/2025',
+    data: { year: 2025 },
     loadComponent: () => import('./challenges/challenges.component').then(m => m.ChallengesComponent)
   },
   {
@@ -23,6 +36,17 @@ export const routes: Routes = [
   },
   {
     path: 'sala-de-guerra',
+    pathMatch: 'full',
+    redirectTo: 'sala-de-guerra/2026'
+  },
+  {
+    path: 'sala-de-guerra/2026',
+    data: { year: 2026 },
+    loadComponent: () => import('./war-room/war-room.component').then(m => m.WarRoomComponent)
+  },
+  {
+    path: 'sala-de-guerra/2025',
+    data: { year: 2025 },
     loadComponent: () => import('./war-room/war-room.component').then(m => m.WarRoomComponent)
   },
   {

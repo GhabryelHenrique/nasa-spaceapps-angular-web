@@ -104,9 +104,10 @@
           <div class="prose">
             <h3>Níveis de dificuldade</h3>
             <p>
-              Na edição de 2025 a NASA lançou 19 desafios, cada um partindo de um problema real
-              enfrentado pela agência e pela humanidade, distribuídos em três níveis de dificuldade.
-              Os desafios de 2026 são divulgados mais perto do evento.
+              Em 2026 a NASA lançou {{ challengeCount }} desafios, cada um partindo de um problema real
+              enfrentado pela agência e pela humanidade, marcados com três níveis de dificuldade — um
+              mesmo desafio pode carregar mais de um nível. As tags servem de guia, não de restrição:
+              você pode escolher qualquer desafio.
             </p>
           </div>
 
@@ -122,7 +123,7 @@
             }
           </div>
 
-          <h4 class="subhead">Destaques de 2025</h4>
+          <h4 class="subhead">Destaques de 2026</h4>
           <div class="topic-grid">
             @for (item of highlights; track item.title) {
               <article class="topic-card">

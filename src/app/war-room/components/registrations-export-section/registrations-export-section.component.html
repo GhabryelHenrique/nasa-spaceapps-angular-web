@@ -1,0 +1,69 @@
+<section class="wr-section">
+  <h2 class="section-title"><span class="title-icon">📈</span>Inscrições</h2>
+  <p class="section-subtitle">
+    Export oficial da plataforma da NASA ({{ fmt(stats.total) }} inscrições, de
+    {{ fmtDate(stats.firstRegistration) }} a {{ fmtDate(stats.lastRegistration) }}).
+    Em 2026 a inscrição acontece no site da NASA, então o export traz apenas modalidade e data —
+    não há recorte por cidade, idade, gênero ou escolaridade como na edição de 2025.
+  </p>
+
+  <div class="tiles">
+    <app-stat-tile
+      label="Total de inscritos"
+      [value]="fmt(stats.total)"
+      [accent]="true">
+    </app-stat-tile>
+    <app-stat-tile
+      label="Presencial"
+      [value]="fmt(stats.inPerson)"
+      [detail]="inPersonPct + '% do total'">
+    </app-stat-tile>
+    <app-stat-tile
+      label="Virtual"
+      [value]="fmt(stats.virtual)"
+      [detail]="virtualPct + '% do total'">
+    </app-stat-tile>
+    <app-stat-tile
+      label="Média por dia"
+      [value]="fmt(stats.averagePerDay)"
+      [detail]="stats.daily.length + ' dias com inscrição'">
+    </app-stat-tile>
+    @if (stats.busiestDay) {
+      <app-stat-tile
+        label="Pico de inscrições"
+        [value]="fmt(stats.busiestDay.count)"
+        [detail]="'em ' + stats.busiestDay.label">
+      </app-stat-tile>
+    }
+    @if (platformTotal !== null) {
+      <app-stat-tile
+        label="Na plataforma"
+        [value]="fmt(platformTotal)"
+        [detail]="platformGap === 0 ? 'export em dia' : (platformGap! > 0 ? '+' + platformGap + ' desde o export' : platformGap + ' vs. export')">
+      </app-stat-tile>
+    }
+  </div>
+
+  <div class="chart-grid">
+    <div class="card">
+      <h3>Inscrições por dia</h3>
+      @if (dailyConfig) {
+        <app-insight-chart [config]="dailyConfig" [height]="260"></app-insight-chart>
+      }
+    </div>
+
+    <div class="card">
+      <h3>Total acumulado</h3>
+      @if (cumulativeConfig) {
+        <app-insight-chart [config]="cumulativeConfig" [height]="260"></app-insight-chart>
+      }
+    </div>
+
+    <div class="card">
+      <h3>Modalidade de participação</h3>
+      @if (modeConfig) {
+        <app-insight-chart [config]="modeConfig" [height]="260"></app-insight-chart>
+      }
+    </div>
+  </div>
+</section>

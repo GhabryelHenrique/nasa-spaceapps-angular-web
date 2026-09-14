@@ -1,0 +1,316 @@
+Team Formation (NASA Space Apps Challenge)
+seg., 14 de set. de 2026
+
+0:00 - Falante não identificado
+and challenges. We've made it to this exciting milestone and we're excited to share with you today all about how teams can form on the website and the sneak preview of challenges that participants will be working on this year. Welcome to the call. So excited to be with everyone today. As always, in the chat, you can introduce yourself. You are in the company of local leads from all over the world.
+
+ So we'd love to hear where you're calling in from So, if you'd like to put your city and your country in the chat, we'd love to say hello and see the wide range of locations that are on the call with us today. Also, this is a great opportunity for you to meet other local leads. So, if you see someone that you'd like to connect with, be sure to message them and maybe pick up the conversation later in Slack.
+
+ We're all one NASA Space Apps community. Here to support one another. So grateful for your time today. Thank you for being on this call live. We're just going give about one more minute for people to join. But again, thank you for joining us today. We're excited to discuss team formation and challenges, which is a very exciting milestone in our program. Welcome, welcome. Welcome in. Seeing a lot of different countries.
+
+ And cities represented in the chat. Hello, everyone. Thank you so much for being with us here this morning, this afternoon, or this evening, depending on where you're calling in from
+
+1:36 - Jamal Seaforth
+We'll give just one more minute and then we'll get into content.
+
+1:39 - Falante não identificado
+We have so much to talk to you about today. Hello, and welcome.
+
+1:47 - Jamal Seaforth
+All right, let's go ahead and advance.
+
+1:51 - Falante não identificado
+So if you have been seeing these calls before, please stay on mute unless otherwise directed. I did see a hand raised here or there. If you do have a question, you can always ask in the chat throughout this training. So please do put your questions in the chat. The Go team is here to assist you. And if we can't answer your question live during the training, we will follow up in Slack so that everyone can benefit from that answer.
+
+ These training calls are required, so hopefully, this is not the first one you're seeing. But thank you so much for being here with us today. If you need to catch up to other training calls, all of them are always available via email, post-training, and in our shared folder. So you're able to connect with past content and make sure you're current with where we are in the program. And we encourage you to participate and engage.
+
+ I'm already seeing so much activity in the chat. Thank you so much for. Your attention. Again, we want you to connect and to really benefit from this rich community. So please do chat with us. We are so glad you're here. Next slide. So today we're going to be reviewing a few things about two important topics: team formation and challenges. We'll define what is team formation, what that looks like on the website, and what your participants will soon be doing to form their teams.
+
+ How to form a team, we'll go into the functionality of the website and how to actually create those teams for the hackathon. And we'll give suggestions on team formation activities. As local lead, although you are not forming the teams yourself, you're there to help facilitate others to form their teams. And we have some suggested activities on how that might look at your event. Then we'll discuss challenges.
+
+ So what are the challenges? What does a challenge mean? And what are the challenges for this year? And we'll review the challenge summaries, which will soon be posted publicly, but you're getting a first look as local lead. At the end, as always, we'll have reminders and resources. And at the end of the call, we'll take a group photo. So if you'd like to join us for the photo, you can be camera ready by the end of the hour.
+
+ Next slide. All right, I will turn it over to Jamal from the Go team to discuss team formation. Thanks, Awesome.
+
+4:11 - Jamal Seaforth
+And good morning, good afternoon, and good evening, everyone. So first, I'll cover team formation and then get into defining it and how do you form a team and discuss team formation activities. So first team formation is the process that kicks off September 17th. And it's a process where participants find other participants in order to form a hackathon team. Key details from this slide to remember teams can consist of one to six individuals.
+
+ And even if someone is forming a team by themselves, they still need to create a team on the website. Participants have to be registered for the same local event, and then they can request to join a team together. And any member of a team can leave a team at Create teams that include individuals with diverse skills and backgrounds. Later on in the presentation, Allison will go over the challenges and you'll kind of get a sneak peek into what they look like, So it would be a good opportunity to start thinking through what different skill sets would be needed and how you can create a balance of skills on your team.
+
+ But the key thing from here, remember, one to six people per team and solo participants still need to create a team, even if they're going to be by themselves. And making sure everyone is registered. For the same event to be able to join the team together. Next, team owners. So, who are they and what is their role in the team formation process? So, team owners are participants who create the team.
+
+ They include their contact info on the about page team. So, there's no like chat or communication on the website, but the team owner would be able to manage and see everyone who has requested to join their team or who is attempting to. Join the local event and that team. So the owners can change the team's challenges if they would like on the team details tab. So all of this will be available for participants to see information about a team before they request to join.
+
+ And the team owners are the ones who can approve or deny team requests. They can remove members or delete the team. So not to be confused with the local leads, but the team owners are the ones who are managing. The actual team process and adding and removing folks as they wish. You can always reach out to the team owners to and let them know, hey, there a backlog or I noticed you haven't accepted or denied anyone, but there is a waitlist for your team.
+
+ So as a local lead, you'll be able to see all of the teams for your events. So your role is to just make sure you're reminding them to accept and deny a request as they come through on the website. And also share their contact information with other team members so participants can get in touch with them if they have any questions about their team or exactly how they plan to, what their team plans to do for the hackathon.
+
+ The team's default local event is automatically assigned to the local event of the team owner. So the participant who creates the team, they set the zone for that team. And that's important because obviously project submission is due November 15th at 1159 p.m. Local time. So whoever creates the team, they'll set zone for that team. And team owners must be a confirmed participant. You must be registered and enrolled at the local event in order for your team's project to be eligible for its local awards.
+
+ So making sure all of your participants who are be on your team are registered and in the system. For your team to be able to have the opportunity to be eligible for awards is very important. So team owners are the ones who are really going to be managing the whole process of your team accepting, denying people, being the point of contact for any questions on your team. And as a local lead, it's your role to help facilitate this, help the team owners if they're having any issues.
+
+ Or help participants kind of direct them to team owners as well on your local event page.
+
+8:11 - Jamal Seaforth
+Now I'll get into how exactly do a team. We understand what a team is and you know how we define team formation, the different roles, participants versus team owners. I'll talk a bit about how do you form a team. So on September 17th is when team formation launches and opens. So participants can form teams and the challenge summaries are released, which is what Allison will cover later on in the presentation.
+
+ So as a local lead, you can manage the participant list and remove any participants from your local event. You know, if someone who is not local to your event and is hundreds of miles away, you notice they join your event, you know, you can reach out to them and let them know the map covers all of the events and they can search for an event that's more local to them. And only participants in your local event are able to form a team together.
+
+ So that's very important as you have, as you're managing your participants and managing the team formation process, making sure everyone is registered for your local event. Now, with the universal event, participants can join teams across countries if they are registered for the universal event. This is the global event that has participants from all across the world. And in that event, participants can join regardless of country.
+
+ Now, again, I would like to reiterate that participants must be registered on the site and officially in a team with a challenge chosen in order to submit a project and be eligible for global judging. You all can be on Discord, on Slack, or WhatsApp, or however you communicate, but in terms of the actual hackathon and being eligible for awards and global judging, you all need to be registered on the Space Apps website and in a team together.
+
+
+
+10:00 - Jamal Seaforth
+Now, local leads, you guys will have access to the team formation guide and video, and I will play the video here shortly. And use this to help familiarize yourself with the online process of forming a team. When team formation opens on the 17th, you will have a lot of folks reaching out asking you, hey, how do I form a team? What's the process? Even though the video and the guide will be released to everyone on the 17th, you guys will be facing a lot of questions.
+
+ So it's very important that you familiarize yourself with how the process works on the website, making sure your local event page. Has all the details that it needs and everything is set up for smooth and easy access for everyone. Do not share the documents in the video you're about to see before September 17th. Like I mentioned, the released versions will be published on the website under the resources page on September 17th.
+
+ And then you can gladly share it out to all of your participants. But between today and September 17th, it's very crucial and important. That you are familiar familiarize yourself with the process on how do you form a team and just know the ins and outs of how it works so when participants reach out to you on the 17th and they will you're able to assist them so now we're going to watch a video on team formation hi welcome nasa space apps challenge In this video, we'll show you how to explore our challenges and form or join a team.
+
+ As part of the NASA Space Apps Challenge, participants must submit a project in response to one of the challenges as part of a team. Challenges are created by NASA and Space Agency Partner subject matter experts and cover a variety of science and technology disciplines for everyone at all skill levels. You can find the challenges here under Explore the Hackathon. Once there, you can sort through the available challenges by clicking the filter icon near the search bar and selecting the ties that interest you.
+
+ Once you've found a challenge that you're interested in, click the challenge for more details. Space Apps releases challenge summaries first, followed by the full challenge statement closer to the hackathon. The full include all of the NASA and Space Agency partner data you'll use to develop your project. Participants should not begin work on their projects until the hackathon begins to keep it fair for everyone.
+
+ Space Apps Challenge participants must be part of a team to submit a project. You can either create your own or join an existing one. Teams can range from one to six members, but we recommend four to five people to balance your skill sets. Teams cannot exceed six members and all team members must be registered for the same local event. There are three ways to find teams. You can visit your chosen challenge page and navigate to the teams tab.
+
+ There you can either join a team that has also chosen that challenge or create your own. Own. You can also go to the Find a Team page found under Explore the Hackathon on the main menu. Here you can explore all existing teams or filter by challenge and desired skills. This will bring up teams that are still looking for members. You can choose to join an existing team or click the blue Create a Team button above the search bar.
+
+ You can also find teams on your local event page. Under the event tab. Here you can join an existing team or again click the blue create a team button top of the page. To join an existing team look for teams that have the seeking members note on their tab or use the filter button and scroll to the bottom to only find teams looking for members. You can also search for a team name if you know what team you'd like to join.
+
+ Once you found a team that you are interested in joining, visit the Teams page. Here you can learn more about the team, the project they are working on, and the team members. If you would like to join a team, click on the yellow Request to Join a Team button under the team name. Fill out the form and explain why you'd like to join the team. Team owners can approve or deny all pending requests. Team owners will receive an email notifying them of pending requests and they will also find pending requests on their team page.
+
+ If you have requested to join a team, you will receive an email indicating whether your request was denied or approved. Once approved, you can find the team owner's contact information on the members page. It is up to you to reach out to your team owner so they can contact you and connect you with the rest of the team. If you would like to leave the team, click the Leave Team button in the members tab of your team page.
+
+ You can also cancel pending requests at any point in time. If you'd like to create a team, click the Create a Team button on the Teams tab of your selected challenge or from the Find a Team page. Fill out the required information on the Create a Team form and be sure to include your contact information. So that team members can communicate with you once you've added them to your team. As the team owner, you'll receive an email when someone requests to join your team.
+
+ Please respond as soon as possible upon receiving that request. You can approve or deny requests from the members tab on the page. You can also remove members from the team from this tab. A team has the option to change the challenge they are working on. To change your team's chosen challenge, go to the About tab and click the blue Edit Details button. From there, you can change your challenge. Just click the X and then search for a new challenge.
+
+ Be sure to click Save Changes. For further information about choosing a challenge, joining a team, or forming a team, please refer to the Team Formation Guide on the Resources page. Where you can also watch all of our navigating the hackathon videos and see other participant guides to support you throughout the NASA Space Apps Challenge. Good luck on choosing your challenge and forming your team. Don't forget to follow us on X, Facebook, and Instagram for the latest updates and to connect with the global NASA Space Apps community.
+
+
+
+16:37 - Jamal Seaforth
+Just reshare really quick. I think messed up screen with me.
+
+16:52 - Falante não identificado
+Reshare.
+
+17:04 - Jamal Seaforth
+video is very helpful and feel free to watch it as many times as you need to know all the ins and out of where to click on the website to create a team, learning where the challenge are, understanding what the banners mean, you know, who's looking for a team, and then all the challenge difficulties as well. So in this slide, I'm going to cover joining or forming a team. There's three different methods as Jess went over in the video.
+
+ So, first, the dropdown, you can just select it under the explore hackathon. If you simply click find a team, from that tab, you'll be able to create a team or search for a team as well. Or if you go to the challenges page from the same explore the hackathon main banner, a dropdown as well, you can go to the challenges page, and then you'll see all the challenges listed. And then in the top right, you can see create a team.
+
+ And if you click that again, you'll be able to explore teams as well. Or the third option is from your local event page. So if you navigate to under your profile and go to your local event, you'll be able to see your local event. And then, same concept: navigate to the Teams tab and click the blue create a team button. So there are many different ways to get to finding teams and joining teams and creating teams.
+
+ So whatever works for you and it just again, I'd like to reiterate how important it is for you all as a local leads to know this so you can let your participants know. You know, if they're not as familiar with the website, I know all of you are familiar as you did, your local event page, but participants may not be as familiar with the site as you. So, different options and many different ways to find and join a team.
+
+ And obviously, if you have any issues as you go through this process or one of them doesn't work, with the Go team, we're here to help. So, feel free to reach out. If you have any trouble. Now creating a team. I talked earlier about the team owner. So once you choose a method from the previous slide to create your team, you know, you'll be able to fill out the required fields to complete the create a team form and you are now officially the team owner.
+
+ So when you create a team, you're going to be prompted to have a team name, select a challenge, and then if you have a team photo. And you can also add desired skills. What skills are you looking for to be on your team? You know, are you looking for coders, people with software experience, gamers, design, any non-technical skills? So, that'll be good for people who are looking to join a team to be able to understand what this team needs and what skills do I have.
+
+ So, it's a good way to assess or have participants assess if it'll be team for them to join. Key distinction: the team owners are not the leaders during the project creation. It's just an administrative tool on the website to allow you to form the team. So you're just going to be managing who's in and who's out of the team, but by no means are they the leader of the project that you all create. And now as local lead, just to reiterate, some of your support to the team owners is reminding them to accept and deny requests to join the team.
+
+ Just keeping an eye out if there's any team that has like 10 requests that have gone unanswered for an extended period of time. Being able to share their email addresses to communicate with the other team members and remind them of the preferred communications channels with one another. And that's going to look different based on your local event. So, whether that's WhatsApp, Telegram, Discord, any other that you all use.
+
+ And then support participants to find a new team if the owner deleted the team. Sometimes teams may just go away so participants are back to the drawing board and have to start over to find a new team. So as a local lead, you know, always keep that in mind and have the foresight to be able to continue to guide your participants if a team later on down the road gets dissolved or is no longer around.
+
+ And then only the team owners can reassign the role to another owner. So, if a team owner is not responsive, other members should just join a new team. And as a local lead, keep an eye out for this. Like I mentioned, if team, certain teams are being unresponsive or they're just not accepting or denying anyone, other members can just create or join a new team as well. Joining an existing team. So, this is a search for a specific team or browse the list of teams.
+
+ In the video, you would have remembered there is the yellow tab that says seeking members. So look for teams with the seeking members tab. And then if you click on it on a team, you can learn more about that team. And that team owner would have completed the creation process. So you can learn where the team is, what challenge are they interested in, and what are their desired skills and interests.
+
+ So then as a participant, they would be able to analyze if this is a good team for them to join. And then you would have seen the form to fill out when you're going to request to join a team. Just write a short summary about the reasons for joining a team and remind participants not to share any private information like age, address, and anything sensitive that doesn't need to be included in the request.
+
+ And then when you're joining an existing team, you will receive an email letting you know that the request was approved or denied by the team owner. This slide is just important to communicate to your participants what the process is and how what communication they will be responding to throughout joining an existing team. And key note here: participants may see multiple teams that they want to join.
+
+ You can only have one pending request at a time. So if I join a team, like on the screen, if I try to join Earth Researchers and then I'm like, oh, actually I like the lunar meatball team. If I try to join the lunar meatball team, my request to Earth Researchers will go away. You can only have one request at a time and any existing pending request will be automatically canceled if I try to have a new request.
+
+ And just to reiterate again, you must be registered in the same local event to join a team together. I know that's a lot of information, but just take some time to Read through it, watch the video. We'll always hear if questions about anything throughout the process. And finally, on my end, the team formation activities. I'll just cover this before I turn it over to Allison on the challenges. So, before the event, during the event, and all what the communications look like, First, all pre-event activities, it's important not to start working on any solutions.
+
+ That is only reserved for the hackathon dates, the 14th and 15th of November. But before the event, you can create your communications channels, whatever you use in your respective countries, whether it's WhatsApp, Discord, Slack. And this is a space for all your participants to meet each other, get to know a bit about each other. And it's important that these spaces are moderated and making sure nothing that shouldn't be going on in these channels early is occurring.
+
+ Space Apps Connect will be available one week before the hackathon and this is mostly used for the universal event but more information will be coming out on that later on the closer we get to the hackathon dates. You can always send out a survey in advance to understand the participants preferred choices. For the hackathon, any challenge choices they have, and assign groups before the hackathon and share participant emails with each other.
+
+ Essentially, what you're doing is lining up your team to be fully ready and ready to go on the dates of the hackathon. You're just doing internal surveying of your team. Hey, who's in my event? What skills do we have? You know, kind of aligning people who have the same interests or want to tackle the same challenge. Like let me get them in contact with each other. That's essentially what this is doing, establishing internal communications and internal like alignment and based on skills and interests.
+
+ And then you're always welcome to have an informal pre-event meetup to gather together or virtually. And again, it's just brainstorming about the challenges and networking with each other. But no work is to be started on the solutions prior to the actual hackathon dates. Now, during the event, if it's, you know, we broke it down here to challenge-based versus skill-based. And as I'm going through these, just keep in mind some teams will have formed already prior to the event.
+
+ So you can design an activity that already formed teams can do while you're going through this. But if it's during the during your local event, you can print out the challenges and place them in different corners of the room. And you can have individuals stand next to what challenge they're interested in working. If they don't already have a team and you're still working on forming teams like the day of the hackathon, this is a good method to help form groups based on folks' interests and what challenge they would like to tackle.
+
+ And if it's a skill-based same thing, you can have their top three skills and paste it up around the room or the venue that you're in and allow participants to interact with each other. And you can form groups based on what skill set is needed for what teams. So these are just team formation activities during the local event if someone has not joined a team as yet. And you're always welcome to try other things as well, but these are just some of the recommended.
+
+ Team formation activities. And then communicating expectations. So, regardless if it's whatever method you choose, whether you formed a team before the event or you're now forming it the day of, be sure to plan an email communication or message to everyone on September 17th when team formation and challenges are live. So participants know what to expect, know what the process is. Let them know how to join a team and/or team.
+
+ And that's also when all of the resources, the video I just showed you, and the team formation guide will be live on the website under the resources tab. So you'll be able to link them to that and they can watch as well. And finally, on to you guys, we'll discuss or we'll hear from you guys on what. Ideas you have for team formation, how might you help participants form teams at your event? So, go ahead and type your answer in the chat, but don't send it just yet.
+
+ We'll flood the chat together with everyone's ideas on the count of three, and then Go Team member, my colleague Rachael, will Read them out. So, is everyone ready? Give us, just prepare to start typing, and I'll give us a couple seconds, but don't send it as yet.
+
+27:53 - Jamal Seaforth
+Cool. Jamal, can you remind us?
+
+27:56 - Falante não identificado
+Oh, sorry. Can you go back one second? Can you remind us what we're thinking about?
+
+28:00 - Jamal Seaforth
+So with your ideas on team formation, so I in the previous slide here, we covered how to form teams with pasting skill sets around the room or having the different challenges and having folks go to whatever corner. So we'd like to hear from the local leads on what ideas they have. About team formation and what other creative mechanisms and creative ways they have to forming teams that we haven't already discussed.
+
+
+
+28:30 - Jamal Seaforth
+Everyone ready?
+
+28:35 - Jamal Seaforth
+Three, two, one, and click send. And then Rachael, I believe you will come off of mute and Read the chat.
+
+28:46 - Falante não identificado
+Yeah, we have a lot coming in. Let's see. I'm seeing Discord messages before the event to registered participants. That's a great way to communicate with everyone who's registered. That's great. Another Discord channel for the purpose of participants finding each other and creating teams. That's great. Hosting a virtual session or office hours, that's great too. You can field questions that you will be getting from participants or potential participants.
+
+ Let's see, prepare the year ahead, work with place-based projects. We have one local event who made a Google form where participants can tell us whether they have a team or they need to have a team, and then they can play connecting roles and matchmaking roles there. That's great. Another Google form, that's great. Lots of ideas here. Awesome.
+
+29:44 - Jamal Seaforth
+Thank you everyone for participating. And yes, if you're ever in doubt, feel free to reach out or talk with other local leads on what they're doing for their event and ideas that, you know, we can share ideas and try different things for our events. So thank you all for listening to me. And I believe I pass it now over to Allison.
+
+30:03 - Jamal Seaforth
+Thanks, Jamal, and thank you all for your ideas.
+
+30:06 - Falante não identificado
+Very exciting to hear about all of these unique ways to form teams.
+
+30:11 - Allison James
+And if you have any questions that remain about team formation on the website or any technical issues, please post those in chat or in Slack or email us. We're always here for you. So let's talk about challenges. What is a challenge? A challenge is an open-ended problem statement or prompt. Written by NASA scientists and subject matter experts. This is the coolest thing about our program. These challenges are new every single year and they come from the minds of NASA subject matter experts that connect to real world problems.
+
+ I mean, where are you going to find that elsewhere? Very exciting. Please share that information with your participants. I think it's very exciting and inspiring to know that these challenges were written in conjunction, in collaboration with NASA professionals. And so your participants will be solving things that NASA scientists are also wondering about. Very amazing. I think challenges being freshly generated each year is also exciting.
+
+ So it allows your participants to think creatively about different topics each year. Year. And all of this is designed to spark creativity to help them use NASA's open data with each challenge. So each challenge will have a data set or resource connected with it that is officially from NASA data that must be used when solving each challenge. There are other data sets like space agency partner data or other data that your participants just know about or want to use.
+
+ That can also be applied to the challenge, but there is a specific data set from NASA that we'd like them to engage with. And those challenges are related to our planet, our universe, our problems on Earth, but also in space and kind of this year looking to moon to Mars and beyond. So we're solving problems that are relevant. To today's space science community. And the challenges are really content that participants will be engaging with deeply during the two-day event.
+
+ Next slide.
+
+32:23 - Allison James
+So the challenge has different pieces to it. And I'm going to break down what those pieces are. When you see a challenge, these are some things on the screen that you'll need to help participants identify. So, for example, a challenge has a title. This is a way that participants can quickly see what the challenge will be, and the information is released in September so that they can think about it and get excited about it and help form their teams with other people who are interested in solving the same challenge.
+
+ So the titles are like the cover of a book. It really inspires you, catches your eye, makes you think, oh, this challenge is for me. This is something aligned with my interests. There are also difficulty tags associated with each challenge that help participants identify the appropriate level. So things that are beginner or youth-friendly, intermediate or advanced. I will note that you can choose any challenge you want.
+
+ So, regardless of your age or skill level, you're able to connect with the challenge that is most inspiring to you as a participant. So, these are not funneled in any way related to participant data. There's no restrictions on what participants can choose. We include these tags as a helpful guide. So that participants can self-select into things that might be the most appropriate for them. There are also tags for subjects.
+
+ So these subject tags are different categories or topics that are related to the challenge. So the tags emphasize STEAM and STEM, science, technology, engineering, arts, math. So, these are things that, if you're interested in a certain topic, you can actually click on one of these tags and find other associated challenges. As a reminder, these challenges will be shared with this information in September.
+
+ And then, these are kind of the main markers that participants can use to select the one that's most appropriate or interesting for them. And then come October. We will see the full statement, which includes those data sets and resources that I mentioned earlier. But for right now, this is the primary look or data that you'll be helping participants navigate as they choose their challenges. Next slide.
+
+
+
+35:09 - Allison James
+So as I mentioned, two phases for these challenges. First phase, September 17th. That's what we call a challenge summary, which is the brief overview of the challenge itself. Usually a paragraph, which we'll review later in this training. And then October 28th, that's where you'll see the full statement and the resources that include those NASA data sets. It's very important, and I will mention it many times.
+
+ So be prepared to hear this again. But even though participants see the full challenge statement on October 28th, they cannot start working on the challenge until the hackathon. I will say it again. The hackathon, November 14th and 15th, is the first time that participants can do work on these challenges. Why do we release it before? So that they can see the full scope of the challenge. So that you, as local leads, can maybe make connections to local collaborators who are relevant or to your communities, or to prepare to support the participants by recruiting appropriate mentors for your program, for your hackathon date.
+
+ So, for many reasons, it's helpful to see the full breadth and scope of the challenge on October 28th, but work cannot start. Until the hackathon. As local lead, you are the messenger of this message for your participants. So it's very exciting to see the statements. But again, please emphasize to them that if they start work early, they will be disqualified. The hackathon is a very exciting, rapid ideation experience.
+
+ And so while we do have the information ahead of time, the magic of the hackathon. Is beginning that work together on the 14th of November. Next slide.
+
+37:04 - Allison James
+So for 2026, we have 14 exciting challenges for you all to choose from I to highlight that this year, participants cannot select an option called Create Your Own Challenge. This was a historic part of our program and is now archived and no longer active in our program. So, create your own challenge is not an option. Participants will need to select one of the 14 challenges in order to submit a project this year.
+
+ I already talked about not starting early, so please do remind your participants that that may lead to disqualification and is discouraged. But you should encourage participants to engage with these challenge summaries and statements by reading all of them, learning about them, trying to see which one is the best fit before choosing one, selecting a challenge that excites them. So, again, it doesn't have to be a perfect fit for their job or for their usual interests.
+
+ The hackathon might be a place to explore other things and things that are very unique or interesting to them might be an option. And also, these challenges are used for participants to be able to form teams around shared interests or complementary skills. So, as Jamal mentioned in team formation, it's important that you think about, you know, help your participants think about who is in these teams.
+
+ If you have a team of say there's a challenge about Mars exploration, and every single person on the team is a data scientist that deals with Mars-related data. That's obviously a very apt and relevant challenge, but you're going to want to make sure you have other people on the team that could perhaps communicate the work, right? Like people who have skills in communication or presentation. Perhaps people who are in other fields like engineering or math, running the numbers, checking things, or people who are in completely non-STEM fields entirely.
+
+ So you want to make sure that your project is complemented. By all the skill sets for the folks that you have involved. Not everyone's trying to hit the same button or do the same thing in the project. And those the strongest interdisciplinary projects when your team is interdisciplinary. Challenges are a starting point, not a constraint. So, as we're about to see with these summaries, there's no single one-way to answer a challenge.
+
+ And so that's why a complementary skill set on your team is helpful because people are beginning to think about the challenge in different ways and different approaches, which is encouraged. You can have many different types of projects coming from a single challenge. Now, caveat, if the challenge indicates that there is a specific way to solve that challenge, like if it has a specific output, like you must create a video.
+
+ Or you must create an app. Then you must have that as the output for that specific challenge. If it does not say an output, there are many different ways that this can look. And that's part of the fun: how will the challenge not only be addressed, but what form will it take? What will this project look like, So we encourage your participants to think creatively about that as well. Next slide.
+
+40:40 - Allison James
+I believe we can skip over this because we just watched that video, but it's a great video and we're share it afterwards. So now let's take a look at the summaries themselves. Going to actually just Read through some of these. These are the first look at the summaries. Again, the NASA subject matter experts spent a long time kind of crafting these, and I want to make sure you get the full experience of the thoughts and the ideas that they're excited for your participants to engage with.
+
+ Again, 14 challenges, and this is the summary portion. So we're looking here at the paragraphs and then those components that we addressed. The first challenge I'll review abandoned but not forgotten storytelling about NASA's discarded equipment on the moon and Mars. Since the 1960s, NASA has left hardware across the solar system, on the moon, on Mars, and in deep space, from rovers and instruments that completed their science missions.
+
+ To probes still traveling far away from Earth. This hardware varies widely in both its purpose and current level of functionality. Your challenge is to tell the story of some or all of this equipment that introduces school-age space enthusiasts to the hardware and the science it made possible. This challenge is identified as an intermediate as well as a beginner or youth. So, again, appropriate for those ranges of experience.
+
+ And looking at people interested in astrophysics, planets, and moons, and space exploration. Next slide.
+
+42:16 - Allison James
+The second challenge: be an Earth system trend detective. Change is always occurring in the Earth's interconnected environmental system. And when it ruins, when it runs in a consistent direction, rising or falling, increasing or decreasing, thickening or thinning, measured variables reflect it. But a variable can trend one way in one region and the opposite way in another, even when the same process drives both.
+
+ Your challenge is to find and examine variables measured by NASA missions or produced by NASA models. Visualize how they change over time and determine what is changing, where it is changing, how much it is changing, and if these changes are what scientists call quote-unquote significant. So you can see here that this is an open-ended output. It has components for what they're interested in learning.
+
+ So, any type of response would need to address all of those different questions or inquiries that are posed here in the challenge. This is an advanced difficulty challenge, and it will reach folks who are interested in earth science and software. Next slide, please. Here we have build a junior astronaut mission trainer. This is an intermediate or beginner challenge, and it states: Space-themed STEM content often oversimplifies the engineering trade-offs that define a real mission or presents them at a level too complex to hold a young learner's attention.
+
+ Few tools make those trade-offs both tangible and fun. Your challenge is to design and build an interactive game or app that lets students run a lunar or Martian outpost, balancing competing demands like life support, radiation shielding, power, and food production. So they experience firsthand the decisions that determine whether a mission fails or succeeds. So here you do see a specific output noted, an interactive game or app.
+
+ So, in this particular challenge, those are the outputs or the types of projects that will be generated, but the content within is up to your participants. This is something that would appeal to folks who are interested in games, planets and moons, software, space exploration, and the sun. Next slide: CLPS Lunar Mission Browser. Missions to the moon's south pole face extreme lighting and communication constraints, and takes careful coordination between science and engineering teams.
+
+ Tools for determining sun and earth positions at candidate landing sites exist, but their complicated interfaces make it difficult to evaluate critical information with efficiency. Your challenge is to create an intuitive tool or application. Lets mission planners, educators, and the public compare landing sites and dates quickly, visualizing sun and earth positions relative to the horizon to assess power generation potential and direct-to-earth communication windows.
+
+ So here we're looking to see an output of a tool or application, and this one ranges from advanced, intermediate, to beginner. Folks who are interested in earth science would really enjoy this challenge. Next slide. Create health monitoring software for astronauts on space missions. Long duration missions expose astronauts to space radiation, isolation and confinement, altered gravity, and a hostile closed environment, which can bring immune changes, bone loss, cardiovascular events, and behavioral health problems.
+
+ On long missions, astronauts carry much of the responsibility for spotting these changes in themselves. Your challenge is to build a health monitoring software that gathers health indicators and enables astronauts to evaluate and act on the status of their health. So, this challenge, asking you to build that software, is deemed intermediate and appeals to subjects like software or space exploration.
+
+ And I will say, I see a lot of interest in this topic every year, and so I'm really excited to see this as a challenge this year. I'll pause here. We've been through a few challenges already. I'm hoping that in the chat you can put things that are exciting to you, things that you're already thinking about sharing with your participants so that they might become engaged or connected to some of these challenges.
+
+ Next slide.
+
+46:50 - Allison James
+Dancing with the SARS.
+
+46:54 - Allison James
+Earth's surface is an endless dance of natural processes and human activities, but these changes are often difficult to visualize, understand, and communicate. From wetland loss to forest wildfires, earthquakes, farming activities, glacier movement, and more, Earth is a constant waltz of surface changes. Your challenge is to build an interactive application that uses radar remote sensing data from the NASA ISRO Synthetic Aperture Radar or NISAR mission to track and visualize one or more types of surface change at locations around the world.
+
+ This challenge is advanced to intermediate, and Earth science lovers will very much appreciate this challenge. Next slide.
+
+47:45 - Allison James
+Field shift, adapting farms with NASA data. Again, agriculture, historically a very important topic in our hackathon, so excited to see this challenge. This will appeal to folks who have arts and multimedia interests, so right away for non-STEM backgrounds, earth science and software, and the difficulty is advanced to intermediate. Farmers around the world navigate shifting temperatures, changing rainfall patterns, water shortages, extreme weather, and declining soil health.
+
+ These pressures make it difficult to choose crop rotations that protect fields, conserve water, and support long-term resilience. Your challenge is to create a decision support tool that uses NASA Earth observations along with local soil information, crop characteristics, and farmer priorities. Help farmers explore rotation strategies that could strengthen soil health and adapt their farms to changing conditions.
+
+ So, here the decision-making decision support tool is the output, and the things they've identified here should address, including that soil information, crop characteristics, priorities. So, when the challenge statement lists important things to identify, the project should really focus and address all of those components. So, even though we're only looking at paragraphs here, these paragraphs have rich details that can help your participants craft an appropriate response that judges will note address all parts of the question or all parts of the problem that's being posed here.
+
+ Next slide.
+
+49:20 - Allison James
+Flame in Freefall, AI-powered fire safety insights from microgravity combustion data. For decades, NASA has studied how flames and fire behave in microgravity, gathering a trove of experimental data along the way. That knowledge matters more than ever as we gear up to return to the moon and press on to Mars. Yet the volume of results makes them hard to find, compare, and understand. Your challenge is to create an interactive AI-powered dashboard that summarizes, ranks, and interprets those findings to deliver fire safety insights for human space exploration.
+
+ Subjects here include space exploration, and this is an advanced to intermediate challenge. So, not one we might recommend for beginners, but again, if you have a very excited beginner that loves this topic, they might be able to produce something that addresses this challenge as well. Same goes for all of our difficulty guides. Next slide: harmonization of Modi's and Veer's hotspots. And apologies if I mispronounce the acronyms, I'm sure I'll hear about it in chat.
+
+ Understanding how burning activity is distributed across our planet over time, including wildfires and agricultural burns intense enough to be detected by satellite sensors, enables us to anticipate critical periods, guide monitoring efforts, and improve fire response. Satellites have tracked active fire hotspots for more than two decades, but the record is split across sensors whose data cannot be compared directly.
+
+ Leaving fire managers without a consistent picture of when the burning has occurred. Your challenge is to build a web application that's the output that harmonizes these records into a burning activity calendar based on active fire hotspots, enabling early warning and emergency responders, scientists, and land managers to examine historical fire patterns, unusual conditions, and critical periods within a selected area of interest.
+
+ So, this one does not have interest tags. Perhaps we're adding them later. So, check back on this. But the difficulty is advanced to intermediate. This prompt here has a lot of rich information as well. So, I already mentioned having your participants focus on the what, like those elements that should be represented in each challenge. This one also mentions a who, an audience for the use case of this.
+
+ This product. So here we're seeing different folks, emergency responders, scientists, and land managers. So helping them think through: does your project really speak to those different use cases that are mentioned here in the challenge? Again, the challenge summary itself is like a puzzle. You need to take the pieces of it to see what are you building? Who is it for? What should it be communicating or achieving?
+
+ So, even though it's a brief block of text, you can already kind of break it down to see what types of projects could potentially be output from this challenge. Next slide.
+
+52:37 - Allison James
+Identifying Earth locations that analog the permanent moon-based locations and bars. Selecting future landing sites and lunar-based locations depends on many factors, including topography, geology, environment, and available resources, to name a few. Places on Earth that have analogous characteristics to the Moon or Mars, the Atacama Desert, Houghton Crater, Death Valley, allow mission teams to test equipment and methods before they fly.
+
+ However, such terrestrial analog sites are not entirely well characterized. Your challenge is to use open Earth, Moon, and Mars data from NASA and other space agencies to identify and characterize new terrestrial analogs for future bases or landing sites, drawing on deserts, polar regions, volcanic and arid terrains, caves, and other environments that share conditions with the lunar or Martian surface.
+
+ Here, subjects include Earth science, planets and moons, software and space exploration. And this challenge runs the range from advanced all the way to beginner. So, quite a variety here. And I'm looking, and I feel like this one is a little bit more open, right? Your challenge is to use this data to identify and characterize, but we're not really seeing a specific output here. So, that's a wide range of types of projects that can be created from this challenge.
+
+ Next slide.
+
+54:09 - Allison James
+Interplanetary Survival Guide, Martian Map. Has explored Mars robotically for decades, studying its extreme environment, mapping its surface, and collecting many types of data. Far from home, the first NASA astronauts to set foot on Mars will want the best map possible with information on the details of their routes and destinations. Updates on current conditions, and the data needed to complete their mission quickly and safely.
+
+ Your challenge is to create a layered integrated view of a location or route on the Martian surface that pulls together data from multiple NASA science missions and could help a human explorer plan and carry out a successful Mars walk while conducting new and exciting science along the way. For all of the Mars fans, this is the one. Software and space exploration with an intermediate rating which can of course swing lower or higher depending on the skill level of your participants next slide planet x and sphere x since 2025 nasa's sphere x mission has been mapping the entire sky every six months in 102 bands of near infrared light returning images of more than a billion objects Comets, asteroids, stars, brown dwarfs, and even new planets reveal themselves by shifting positions between images, but no one person can sift through all that data alone.
+
+ Your challenge is to create a public-facing web tool to display images of the sky from Spherax Mission, making it easy for anyone to quickly see how they change over time. Here, the audience is anyone. So, encouraging your participants to think about how to scale this both to experts and to laymen. It's an advanced difficulty project, and it appeals to space exploration. Next slide. Space mission design game.
+
+ Designing a space mission requires careful consideration of competing demands, including mission objectives, spacecraft design, scientific instruments, launch vehicles. Budgets, power, mass communications, and orbital constraints. For students who rarely get to experiment with an entire mission from concept to operation, these trade-offs often remain abstract. Your challenge is to create an interactive game, that's the output.
+
+ That allows participants to design, manage, and simulate a complete space mission while making engineering decisions, managing limited resources, and evaluating how each choice shapes the success of their mission. Intermediate to beginner, and if you're interested in games. Next slide.
+
+56:47 - Allison James
+The Earth Information Jukebox. NASA's Earth Information Center produces stunning visualizations of our changing planet. But presenting Earth science through visualization alone limits who can reach it. We invite you to make this complex Earth science accessible, engaging, and multi-sensory by translating sight into sound. Your challenge is to build an Earth jukebox, an interface script or application that pairs Earth Information Center visual frames with dynamic sonifications generated in real time.
+
+ This is another one identified for arts and multimedia. So, for your STEAM folks or people out of the STEM field, great one to point them to. And it ranges from intermediate to youth, also appealing to earth science and software. Next slide.
+
+57:37 - Allison James
+Can you actually re-share?

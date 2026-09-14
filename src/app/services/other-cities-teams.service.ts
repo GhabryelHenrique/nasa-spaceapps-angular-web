@@ -1,8 +1,8 @@
 import { Injectable } from '@angular/core';
 import { Observable, of, forkJoin } from 'rxjs';
 import { delay, map } from 'rxjs/operators';
-import * as otherCitiesData from '../../assets/data/otherCitiesTeams.json';
-import * as uberlandiaData from '../../assets/data/teams.json';
+import * as otherCitiesData from '../../assets/data/2025/otherCitiesTeams.json';
+import * as uberlandiaData from '../../assets/data/2025/teams.json';
 
 export interface CityTeamStats {
   locationName: string;

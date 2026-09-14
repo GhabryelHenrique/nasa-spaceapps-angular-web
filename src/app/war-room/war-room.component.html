@@ -3,23 +3,53 @@
   <!-- Cabeçalho -->
   <header class="war-room-header">
     <h1>🛰️ Sala de Guerra</h1>
-    <p class="tagline">
-      Central de insights do NASA Space Apps Challenge Uberlândia 2025 —
-      inscrições, mentores, feedback, times e o cenário global, em um só lugar.
-    </p>
-    <p class="sources">
-      Fontes: planilhas de inscrição, mentoria e feedback (Google Sheets) +
-      dados oficiais da plataforma Space Apps.
-    </p>
+
+    <nav class="edition-switcher" aria-label="Edição da Sala de Guerra">
+      @for (editionYear of years; track editionYear) {
+        <a
+          class="edition-btn"
+          [class.active]="editionYear === year()"
+          [routerLink]="['/sala-de-guerra', editionYear]"
+          [attr.aria-current]="editionYear === year() ? 'page' : null">
+          {{ editionYear }}
+        </a>
+      }
+    </nav>
+
+    @if (isCurrentEdition()) {
+      <p class="tagline">
+        Central de insights do NASA Space Apps Challenge Uberlândia {{ year() }} —
+        inscrições, times e o cenário global, em tempo de preparação.
+      </p>
+      <p class="sources">
+        Fontes: export de inscrições da plataforma Space Apps + dados oficiais de times e sedes.
+        Mentores e feedback só entram depois do hackathon (14 e 15 de novembro).
+      </p>
+    } @else {
+      <p class="tagline">
+        Retrospectiva do NASA Space Apps Challenge Uberlândia {{ year() }} —
+        inscrições, mentores, feedback, times e o cenário global, em um só lugar.
+      </p>
+      <p class="sources">
+        Fontes: planilhas de inscrição, mentoria e feedback (Google Sheets) +
+        dados oficiais da plataforma Space Apps.
+      </p>
+    }
   </header>
 
   <!-- KPIs gerais do evento -->
   <div class="hero-tiles">
-    @if (inscritosStats()) {
+    @if (totalInscritos() !== null) {
       <app-stat-tile
         label="Inscritos"
-        [value]="fmt(inscritosStats()!.totalRegistrations)"
+        [value]="fmt(totalInscritos()!)"
         [accent]="true">
+      </app-stat-tile>
+    }
+    @if (exportStats(); as exp) {
+      <app-stat-tile
+        label="Presencial / Virtual"
+        [value]="fmt(exp.inPerson) + ' / ' + fmt(exp.virtual)">
       </app-stat-tile>
     }
     @if (teamsInsights()) {
@@ -63,49 +93,65 @@
   }
   @if (erroInscritos()) {
     <div class="error-banner">
-      ⚠️ Não foi possível carregar a planilha de inscrições. Verifique se ela continua pública.
+      @if (isCurrentEdition()) {
+        ⚠️ Não foi possível ler o export de inscrições
+        (<code>assets/data/{{ year() }}/registrations.csv</code>).
+      } @else {
+        ⚠️ Não foi possível carregar a planilha de inscrições. Verifique se ela continua pública.
+      }
     </div>
-  }
-  @if (inscritosStats() && inscritosExtras()) {
-    <app-inscritos-section
-      [stats]="inscritosStats()!"
-      [extras]="inscritosExtras()!">
-    </app-inscritos-section>
   }
 
-  <!-- Mentores -->
-  @if (loadingMentores()) {
-    <div class="loading-banner">
-      <span class="spinner"></span> Carregando dados de mentores…
-    </div>
-  }
-  @if (erroMentores()) {
-    <div class="error-banner">
-      ⚠️ Não foi possível carregar a planilha de mentores. Verifique se ela continua pública.
-    </div>
-  }
-  @if (mentores()) {
-    <app-mentores-section
-      [insights]="mentores()!"
-      [inscritosTotal]="inscritosStats()?.totalRegistrations || 0">
-    </app-mentores-section>
+  @if (isCurrentEdition()) {
+    @if (exportStats(); as exp) {
+      <app-registrations-export-section
+        [stats]="exp"
+        [platformTotal]="platformRegistrations()">
+      </app-registrations-export-section>
+    }
+  } @else {
+    @if (inscritosStats() && inscritosExtras()) {
+      <app-inscritos-section
+        [stats]="inscritosStats()!"
+        [extras]="inscritosExtras()!">
+      </app-inscritos-section>
+    }
   }
 
-  <!-- Feedback -->
-  @if (loadingFeedback()) {
-    <div class="loading-banner">
-      <span class="spinner"></span> Carregando feedback do evento…
-    </div>
-  }
-  @if (erroFeedback()) {
-    <div class="error-banner">
-      ⚠️ Não foi possível carregar a planilha de feedback. Verifique se ela continua pública.
-    </div>
-  }
-  @if (feedback()) {
-    <app-feedback-section
-      [insights]="feedback()!">
-    </app-feedback-section>
+  <!-- Mentores e feedback: só existem na edição já realizada -->
+  @if (!isCurrentEdition()) {
+    @if (loadingMentores()) {
+      <div class="loading-banner">
+        <span class="spinner"></span> Carregando dados de mentores…
+      </div>
+    }
+    @if (erroMentores()) {
+      <div class="error-banner">
+        ⚠️ Não foi possível carregar a planilha de mentores. Verifique se ela continua pública.
+      </div>
+    }
+    @if (mentores()) {
+      <app-mentores-section
+        [insights]="mentores()!"
+        [inscritosTotal]="totalInscritos() || 0">
+      </app-mentores-section>
+    }
+
+    @if (loadingFeedback()) {
+      <div class="loading-banner">
+        <span class="spinner"></span> Carregando feedback do evento…
+      </div>
+    }
+    @if (erroFeedback()) {
+      <div class="error-banner">
+        ⚠️ Não foi possível carregar a planilha de feedback. Verifique se ela continua pública.
+      </div>
+    }
+    @if (feedback()) {
+      <app-feedback-section
+        [insights]="feedback()!">
+      </app-feedback-section>
+    }
   }
 
   <!-- Times & Desafios -->
@@ -114,6 +160,15 @@
       [insights]="teamsInsights()!"
       [winners]="winners()">
     </app-teams-section>
+  } @else if (isCurrentEdition()) {
+    <section class="wr-section">
+      <h2 class="section-title"><span class="title-icon">👥</span>Times</h2>
+      <p class="section-subtitle">
+        A formação de equipes na plataforma da NASA abre em <strong>17 de setembro</strong>.
+        Assim que os primeiros times de Uberlândia forem criados, rode
+        <code>python update_teams.py</code> para trazê-los para cá.
+      </p>
+    </section>
   }
 
   <!-- Uberlândia no mundo -->
@@ -160,7 +215,8 @@
         </ol>
       </div>
 
-      @if (inscritosStats()) {
+      <!-- O mapa depende dos recortes por cidade, que só a planilha de 2025 tem -->
+      @if (!isCurrentEdition() && inscritosStats()) {
         <app-registration-map
           [registrationStats]="inscritosStats()!"
           [uberlandia]="uberlandia()">
@@ -169,7 +225,9 @@
 
       <app-participants-by-country-chart [cities]="cities()"></app-participants-by-country-chart>
 
-      <app-brazilian-cities-comparison></app-brazilian-cities-comparison>
+      @if (!isCurrentEdition()) {
+        <app-brazilian-cities-comparison></app-brazilian-cities-comparison>
+      }
     </section>
   }
 

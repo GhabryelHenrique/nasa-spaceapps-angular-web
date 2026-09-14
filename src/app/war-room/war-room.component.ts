@@ -1,9 +1,12 @@
 import { Component, OnInit, DestroyRef, inject, signal, computed } from '@angular/core';
-import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
+import { takeUntilDestroyed, toSignal } from '@angular/core/rxjs-interop';
 import { CommonModule } from '@angular/common';
+import { ActivatedRoute, RouterModule } from '@angular/router';
+import { map } from 'rxjs/operators';
 import { CityParticipation } from '../shared/interfaces/local-event.interface';
 import { GoogleSheetsService, InscritoRow } from '../services/google-sheets.service';
 import { RegistrationDataService, RegistrationStats } from '../services/registration-data.service';
+import { RegistrationExportService, RegistrationExportStats } from '../services/registration-export.service';
 import {
   WarRoomInsightsService,
   InscritosExtras,
@@ -14,7 +17,9 @@ import {
 import { NasaTeamsService } from '../services/nasa-teams.service';
 import { WinnerTeamsService } from '../services/winner-teams.service';
 import { WinnerTeam } from '../shared/data/winner-teams.data';
+import { CURRENT_CHALLENGE_YEAR } from '../shared/data/challenges.data';
 import { InscritosSectionComponent } from './components/inscritos-section/inscritos-section.component';
+import { RegistrationsExportSectionComponent } from './components/registrations-export-section/registrations-export-section.component';
 import { MentoresSectionComponent } from './components/mentores-section/mentores-section.component';
 import { FeedbackSectionComponent } from './components/feedback-section/feedback-section.component';
 import { TeamsSectionComponent } from './components/teams-section/teams-section.component';
@@ -23,11 +28,16 @@ import { RegistrationMapComponent } from './components/registration-map/registra
 import { ParticipantsByCountryChartComponent } from './components/participants-by-country-chart/participants-by-country-chart.component';
 import { BrazilianCitiesComparisonComponent } from './components/brazilian-cities-comparison/brazilian-cities-comparison.component';
 
+/** Edições com Sala de Guerra, da mais recente para a mais antiga. */
+export const WAR_ROOM_YEARS = [2026, 2025];
+
 @Component({
   selector: 'app-war-room',
   imports: [
     CommonModule,
+    RouterModule,
     InscritosSectionComponent,
+    RegistrationsExportSectionComponent,
     MentoresSectionComponent,
     FeedbackSectionComponent,
     TeamsSectionComponent,
@@ -40,9 +50,27 @@ import { BrazilianCitiesComparisonComponent } from './components/brazilian-citie
   styleUrl: './war-room.component.scss',
 })
 export class WarRoomComponent implements OnInit {
-  // Inscrições (Google Sheets)
+  private readonly route = inject(ActivatedRoute);
+
+  readonly years = WAR_ROOM_YEARS;
+
+  /**
+   * Ano da rota (/sala-de-guerra/2025 | /2026). Via observable, e não snapshot,
+   * porque o seletor de edição reusa a mesma instância do componente.
+   */
+  readonly year = toSignal(
+    this.route.data.pipe(map(d => (d['year'] as number) ?? CURRENT_CHALLENGE_YEAR)),
+    { initialValue: CURRENT_CHALLENGE_YEAR }
+  );
+
+  readonly isCurrentEdition = computed(() => this.year() === CURRENT_CHALLENGE_YEAR);
+
+  // ── Inscrições ────────────────────────────────────────────
+  // 2025 veio de formulário próprio (Google Sheets, com recortes demográficos);
+  // 2026 vem do export da plataforma da NASA, bem mais enxuto.
   inscritosStats = signal<RegistrationStats | null>(null);
   inscritosExtras = signal<InscritosExtras | null>(null);
+  exportStats = signal<RegistrationExportStats | null>(null);
   loadingInscritos = signal(true);
   erroInscritos = signal(false);
 
@@ -51,7 +79,7 @@ export class WarRoomComponent implements OnInit {
   loadingMentores = signal(true);
   erroMentores = signal(false);
 
-  // Feedback (Google Sheets)
+  // Feedback (Google Sheets) — só existe depois do evento
   feedback = signal<FeedbackInsights | null>(null);
   loadingFeedback = signal(true);
   erroFeedback = signal(false);
@@ -66,7 +94,9 @@ export class WarRoomComponent implements OnInit {
   totalCitiesWorld = signal(0);
   totalParticipantsWorld = signal(0);
 
-  // Computed properties
+  /** Total de inscritos na sede segundo a plataforma — serve de contraprova ao export. */
+  readonly platformRegistrations = computed(() => this.uberlandia()?.registrations ?? null);
+
   topCities = computed(() => this.cities().slice(0, 10));
   uberlandiaRank = computed(() => {
     const ube = this.uberlandia();
@@ -74,48 +104,65 @@ export class WarRoomComponent implements OnInit {
     return this.cities().indexOf(ube) + 1;
   });
 
+  /** Total de inscritos da edição, seja qual for a fonte. */
+  readonly totalInscritos = computed(() =>
+    this.isCurrentEdition()
+      ? this.exportStats()?.total ?? null
+      : this.inscritosStats()?.totalRegistrations ?? null
+  );
+
   private readonly destroyRef = inject(DestroyRef);
   private readonly sheets = inject(GoogleSheetsService);
   private readonly registrationData = inject(RegistrationDataService);
+  private readonly registrationExport = inject(RegistrationExportService);
   private readonly insights = inject(WarRoomInsightsService);
   private readonly nasaTeams = inject(NasaTeamsService);
   private readonly winnerTeams = inject(WinnerTeamsService);
 
   ngOnInit(): void {
-    console.log('[WarRoom] ngOnInit — iniciando carregamento de dados');
-    this.loadInscritos();
-    this.loadMentores();
-    this.loadFeedback();
+    this.nasaTeams.loadYear(this.year());
     this.subscribeTeams();
     this.subscribeLocalEvents();
-    this.loadWinners();
+
+    if (this.isCurrentEdition()) {
+      this.loadRegistrationExport();
+    } else {
+      this.loadInscritos();
+      this.loadMentores();
+      this.loadFeedback();
+      this.loadWinners();
+    }
   }
 
   fmt(n: number): string {
     return n.toLocaleString('pt-BR');
   }
 
+  /** 2026: export CSV da plataforma da NASA. */
+  private loadRegistrationExport(): void {
+    this.registrationExport.getStats(this.year()).subscribe({
+      next: stats => {
+        this.exportStats.set(stats);
+        this.loadingInscritos.set(false);
+      },
+      error: err => {
+        console.error('[WarRoom] export de inscrições — ERRO:', err);
+        this.erroInscritos.set(true);
+        this.loadingInscritos.set(false);
+      },
+    });
+  }
+
+  /** 2025: planilha do formulário próprio de inscrição. */
   private loadInscritos(): void {
-    console.log('[WarRoom] loadInscritos — chamando sheets.getInscritos()');
     this.sheets.getInscritos().subscribe({
       next: rows => {
-        console.log('[WarRoom] loadInscritos — recebeu', rows.length, 'linhas da planilha');
-        const mappedData = rows.map(row => this.toRegistrationData(row));
-        console.log('[WarRoom] loadInscritos — dados mapeados:', mappedData.length, 'registros');
-        this.registrationData.setRegistrationData(mappedData);
-        const stats = this.registrationData.getRegistrationStats();
-        this.inscritosStats.set(stats);
-        console.log('[WarRoom] loadInscritos — stats:', JSON.stringify({
-          total: stats?.totalRegistrations,
-          cities: stats?.cityStats?.length,
-          ageGroups: stats?.ageStats?.length,
-        }));
+        this.registrationData.setRegistrationData(rows.map(row => this.toRegistrationData(row)));
+        this.inscritosStats.set(this.registrationData.getRegistrationStats());
         this.inscritosExtras.set(this.insights.buildInscritosExtras(rows));
-        console.log('[WarRoom] loadInscritos — extras:', !!this.inscritosExtras());
         this.loadingInscritos.set(false);
-        console.log('[WarRoom] loadInscritos — CONCLUÍDO. loadingInscritos=false');
       },
-      error: (err) => {
+      error: err => {
         console.error('[WarRoom] loadInscritos — ERRO:', err);
         this.erroInscritos.set(true);
         this.loadingInscritos.set(false);
@@ -144,16 +191,12 @@ export class WarRoomComponent implements OnInit {
   }
 
   private loadMentores(): void {
-    console.log('[WarRoom] loadMentores — chamando sheets.getMentores()');
     this.sheets.getMentores().subscribe({
       next: rows => {
-        console.log('[WarRoom] loadMentores — recebeu', rows.length, 'linhas');
-        const insightsData = this.insights.buildMentoresInsights(rows);
-        this.mentores.set(insightsData);
-        console.log('[WarRoom] loadMentores — insights:', !!insightsData, 'total:', insightsData?.total);
+        this.mentores.set(this.insights.buildMentoresInsights(rows));
         this.loadingMentores.set(false);
       },
-      error: (err) => {
+      error: err => {
         console.error('[WarRoom] loadMentores — ERRO:', err);
         this.erroMentores.set(true);
         this.loadingMentores.set(false);
@@ -162,17 +205,12 @@ export class WarRoomComponent implements OnInit {
   }
 
   private loadFeedback(): void {
-    console.log('[WarRoom] loadFeedback — chamando sheets.getFeedback()');
     this.sheets.getFeedback().subscribe({
       next: rows => {
-        console.log('[WarRoom] loadFeedback — recebeu', rows.length, 'linhas');
-        const insightsData = this.insights.buildFeedbackInsights(rows);
-        this.feedback.set(insightsData);
-        console.log('[WarRoom] loadFeedback — insights:', !!insightsData, 'total:', insightsData);
-        console.log('[WarRoom] loadFeedback — NPS:', insightsData?.nps?.score, 'Satisfação:', insightsData?.overallAvg);
+        this.feedback.set(this.insights.buildFeedbackInsights(rows));
         this.loadingFeedback.set(false);
       },
-      error: (err) => {
+      error: err => {
         console.error('[WarRoom] loadFeedback — ERRO:', err);
         this.erroFeedback.set(true);
         this.loadingFeedback.set(false);
@@ -181,23 +219,17 @@ export class WarRoomComponent implements OnInit {
   }
 
   private subscribeTeams(): void {
-    console.log('[WarRoom] subscribeTeams — inscrevendo em nasaTeams.teams$');
     this.nasaTeams.teams$
       .pipe(takeUntilDestroyed(this.destroyRef))
       .subscribe(teams => {
-        console.log('[WarRoom] subscribeTeams — recebeu', teams.length, 'times');
-        const insightsData = teams.length ? this.insights.buildTeamsInsights(teams) : null;
-        this.teamsInsights.set(insightsData);
-        console.log('[WarRoom] subscribeTeams — insights:', !!insightsData);
+        this.teamsInsights.set(teams.length ? this.insights.buildTeamsInsights(teams) : null);
       });
   }
 
   private subscribeLocalEvents(): void {
-    console.log('[WarRoom] subscribeLocalEvents — inscrevendo em nasaTeams.localEvents$');
     this.nasaTeams.localEvents$
       .pipe(takeUntilDestroyed(this.destroyRef))
       .subscribe(events => {
-        console.log('[WarRoom] subscribeLocalEvents — recebeu', events.length, 'eventos');
         const mappedCities = events
           .map(event => ({
             city: event.properties.displayName,
@@ -221,11 +253,7 @@ export class WarRoomComponent implements OnInit {
   }
 
   private loadWinners(): void {
-    console.log('[WarRoom] loadWinners — chamando winnerTeams.getAllWinnerTeams()');
     this.winnerTeams.getAllWinnerTeams()
-      .subscribe(winners => {
-        console.log('[WarRoom] loadWinners — recebeu', winners.length, 'vencedores');
-        this.winners.set(winners);
-      });
+      .subscribe(winners => this.winners.set(winners));
   }
 }

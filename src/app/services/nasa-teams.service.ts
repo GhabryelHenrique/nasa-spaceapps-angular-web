@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable, BehaviorSubject, interval } from 'rxjs';
 import { map, catchError, tap, switchMap, startWith } from 'rxjs/operators';
+import { CURRENT_CHALLENGE_YEAR } from '../shared/data/challenges.data';
 
 export interface TeamData {
   id: string;
@@ -76,8 +77,20 @@ export interface NasaApiResponse {
   providedIn: 'root'
 })
 export class NasaTeamsService {
-  private readonly teamsJsonPath = '/assets/data/teams.json';
-  private readonly localEventsJsonPath = '/assets/data/localEvents.json';
+  /**
+   * Os JSONs são versionados por edição (`/assets/data/<ano>/`), gerados por
+   * `update_teams.py`. O ano corrente é carregado no boot; a Sala de Guerra
+   * troca de edição chamando `loadYear()`.
+   */
+  private currentYear = CURRENT_CHALLENGE_YEAR;
+
+  private teamsPath(year: number): string {
+    return `/assets/data/${year}/teams.json`;
+  }
+
+  private localEventsPath(year: number): string {
+    return `/assets/data/${year}/localEvents.json`;
+  }
 
   // BehaviorSubjects para dados em tempo real
   private teamsSubject = new BehaviorSubject<TeamData[]>([]);
@@ -95,12 +108,19 @@ export class NasaTeamsService {
     this.startAutoRefresh();
   }
 
+  /** Recarrega times e sedes de outra edição. Não faz nada se o ano já é o atual. */
+  loadYear(year: number): void {
+    if (year === this.currentYear) return;
+    this.currentYear = year;
+    this.fetchTeams().subscribe();
+    this.fetchLocalEvents().subscribe();
+  }
 
   fetchTeams(): Observable<TeamData[]> {
     this.loadingSubject.next(true);
     this.errorSubject.next(null);
 
-    return this.http.get<any>(this.teamsJsonPath).pipe(
+    return this.http.get<any>(this.teamsPath(this.currentYear)).pipe(
       map(response => {
         if (!response?.data?.[0]?.teams?.edges) {
           throw new Error('Dados dos times não encontrados no arquivo JSON');
@@ -135,7 +155,7 @@ export class NasaTeamsService {
   }
 
   fetchLocalEvents(): Observable<LocalEventData[]> {
-    return this.http.get<any>(this.localEventsJsonPath).pipe(
+    return this.http.get<any>(this.localEventsPath(this.currentYear)).pipe(
       map(response => {
         if (!response?.data) {
           throw new Error('Dados dos eventos não encontrados no arquivo JSON');

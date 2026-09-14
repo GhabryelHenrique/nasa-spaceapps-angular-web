@@ -1,0 +1,20 @@
+{
+  "data": [
+    {
+      "locationId": "aWQ6NTQ0NDY=",
+      "locationName": "Uberlândia",
+      "teams": {
+        "pageInfo": {
+          "hasPreviousPage": false,
+          "hasNextPage": false,
+          "startCursor": "",
+          "endCursor": "",
+          "__typename": "PageInfo"
+        },
+        "totalCount": 0,
+        "edges": [],
+        "__typename": "TeamPageConnection"
+      }
+    }
+  ]
+}

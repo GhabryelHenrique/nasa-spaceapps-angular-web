@@ -12,12 +12,64 @@
   <header class="page-header">
     <div class="container">
       <div class="header-content">
-        <h1>Desafios NASA Space Apps 2025</h1>
-        <p class="page-description">
-          Explore os 19 desafios oficiais da NASA disponíveis para o hackathon.
-          Cada desafio foi cuidadosamente elaborado pelos especialistas da NASA para abordar problemas reais
-          do espaço e da Terra, oferecendo oportunidades para inovação em diferentes níveis de dificuldade.
-        </p>
+        <h1>Desafios NASA Space Apps {{ year() }}</h1>
+
+        <!-- Seletor de edição -->
+        <nav class="edition-switcher" aria-label="Edição dos desafios">
+           <a
+              class="edition-btn"
+              [class.active]="true"
+              [routerLink]="['/desafios', 2025]"
+              [attr.aria-current]="true ? 'page' : null">
+              2025
+            </a>
+          <!-- @for (editionYear of years; track editionYear) {
+            <a
+              class="edition-btn"
+              [class.active]="editionYear === year()"
+              [routerLink]="['/desafios', editionYear]"
+              [attr.aria-current]="editionYear === year() ? 'page' : null">
+              {{ editionYear }}
+            </a>
+          } -->
+        </nav>
+
+        @if (isCurrentEdition()) {
+          <p class="page-description">
+            Explore os {{ edition().challenges.length }} desafios oficiais da NASA disponíveis para o hackathon.
+            Cada desafio foi escrito por cientistas e especialistas da NASA para abordar problemas reais
+            do espaço e da Terra, oferecendo oportunidades para inovação em diferentes níveis de dificuldade.
+            As tags de dificuldade são apenas um guia: você pode escolher qualquer desafio, independentemente
+            da sua idade ou experiência.
+          </p>
+
+          <ul class="challenge-timeline">
+            <li>
+              <strong>17 de setembro</strong>
+              <span>Resumos dos desafios publicados e formação de equipes liberada</span>
+            </li>
+            <li>
+              <strong>28 de outubro</strong>
+              <span>Enunciados completos, com os conjuntos de dados da NASA</span>
+            </li>
+            <li>
+              <strong>14 e 15 de novembro</strong>
+              <span>Hackathon — só aqui o trabalho no projeto pode começar</span>
+            </li>
+          </ul>
+
+          <p class="challenge-note">
+            Atenção: começar a desenvolver o projeto antes do hackathon leva à desclassificação. Em 2026 não
+            existe mais a opção "Crie Seu Próprio Desafio" — todo projeto precisa responder a um dos
+            {{ edition().challenges.length }} desafios para ser elegível à avaliação global.
+          </p>
+        } @else {
+          <p class="page-description">
+            Arquivo dos {{ edition().challenges.length }} desafios da edição de {{ year() }}, mantido para consulta.
+            Estes desafios já foram encerrados — use o seletor acima para ver os desafios de 2026,
+            que são os válidos para o hackathon deste ano.
+          </p>
+        }
       </div>
     </div>
   </header>
@@ -30,11 +82,11 @@
         @for (category of categories; track category.id) {
           <button
             class="category-btn"
-            [class.active]="selectedCategory === category.id"
+            [class.active]="selectedCategory() === category.id"
             [style.--category-color]="category.color"
             (click)="filterByCategory(category.id)"
             role="tab"
-            [attr.aria-selected]="selectedCategory === category.id"
+            [attr.aria-selected]="selectedCategory() === category.id"
             [attr.aria-controls]="'challenges-grid'">
             {{ category.name }}
             <span class="category-count">{{ getCategoryCount(category.id) }}</span>
@@ -44,7 +96,7 @@
 
       <!-- Challenges Grid -->
       <div class="challenges-grid" id="challenges-grid" role="tabpanel">
-        @for (challenge of filteredChallenges; track challenge.slug) {
+        @for (challenge of filteredChallenges(); track challenge.slug) {
           <article class="challenge-card">
 
             <div class="challenge-image">
@@ -71,18 +123,18 @@
 
               <p class="challenge-excerpt">{{ challenge.excerpt }}</p>
 
-              @if (getSkillsCount(challenge.skills) > 0) {
+              @if (challenge.tags.length > 0) {
                 <div class="challenge-skills">
-                  <h4>Habilidades Sugeridas:</h4>
+                  <h4>{{ edition().tagsLabel }}:</h4>
                   <div class="skills-tags">
-                    @for (skill of getSkillsToShow(challenge.skills); track skill) {
+                    @for (tag of getTagsToShow(challenge.tags); track tag) {
                       <span class="skill-tag">
-                        {{ skill }}
+                        {{ tag }}
                       </span>
                     }
-                    @if (getSkillsCount(challenge.skills) > 5) {
+                    @if (challenge.tags.length > 5) {
                       <span class="skill-tag more-skills">
-                        +{{ getRemainingSkillsCount(challenge.skills) }} mais
+                        +{{ getRemainingTagsCount(challenge.tags) }} mais
                       </span>
                     }
                   </div>
@@ -90,14 +142,13 @@
               }
 
               <div class="challenge-actions">
-                <a
-                  [href]="'https://www.spaceappschallenge.org/2025/challenges/' + challenge.slug"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  class="challenge-link">
+                <button
+                  type="button"
+                  class="challenge-link"
+                  (click)="openChallenge(challenge)">
                   Ver Detalhes
-                  <span class="external-icon" aria-hidden="true">↗</span>
-                </a>
+                  <span class="external-icon" aria-hidden="true">→</span>
+                </button>
               </div>
             </div>
           </article>
@@ -105,7 +156,7 @@
       </div>
 
       <!-- No Results Message -->
-      @if (filteredChallenges.length === 0) {
+      @if (filteredChallenges().length === 0) {
         <div class="no-results">
           <div class="no-results-icon">🔍</div>
           <h3>Nenhum desafio encontrado</h3>
@@ -119,29 +170,40 @@
       }
 
       <!-- Call to Action -->
-      <div class="challenges-cta">
-        <h3>Pronto para o Desafio?</h3>
-        <p>
-          Escolha seu desafio favorito e prepare-se para 48 horas de inovação intensa!
-          Lembre-se de que você pode formar equipes de 2 a 6 pessoas e que todas as idades são bem-vindas.
-        </p>
-        <div class="cta-buttons">
-          <a
-            href="https://2025.spaceappschallenge.org/locations/uberlandia"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="cta-btn primary">
-            Registrar-se Agora
-          </a>
-          <a
-            href="https://discord.gg/FT4Jsvj5vy"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="cta-btn secondary">
-            Discutir no Discord
-          </a>
+      @if (isCurrentEdition()) {
+        <div class="challenges-cta">
+          <h3>Pronto para o Desafio?</h3>
+          <p>
+            Escolha seu desafio favorito e prepare-se para 48 horas de inovação intensa!
+            Lembre-se de que as equipes têm de 1 a 6 pessoas (recomendamos 4 ou 5, para equilibrar
+            as habilidades) e que todas as idades são bem-vindas.
+          </p>
+          <div class="cta-buttons">
+            <a
+              [href]="registrationUrl"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="cta-btn primary">
+              Registrar-se Agora
+            </a>
+            <a
+              [href]="discordUrl"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="cta-btn secondary">
+              Discutir no Discord
+            </a>
+          </div>
         </div>
-      </div>
+      }
     </div>
   </section>
+
+  @if (selectedChallenge(); as challenge) {
+    <app-challenge-detail-modal
+      [challenge]="challenge"
+      [year]="year()"
+      [isCurrentEdition]="isCurrentEdition()"
+      (closed)="closeChallenge()" />
+  }
 </div>

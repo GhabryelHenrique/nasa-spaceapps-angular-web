@@ -1,11 +1,12 @@
 <section class="challenges-section" id="desafios" role="region" aria-labelledby="challenges-title">
   <div class="container">
     <div class="section-header">
-      <h2 id="challenges-title">Desafios NASA Space Apps 2025</h2>
+      <h2 id="challenges-title">Desafios NASA Space Apps 2026</h2>
       <p class="section-description">
-        Explore os 19 desafios oficiais da NASA que estarão disponíveis durante o hackathon.
-        Cada desafio foi cuidadosamente elaborado pelos especialistas da NASA para abordar problemas reais
+        Explore os {{ challenges.length }} desafios oficiais da NASA que estarão disponíveis durante o hackathon.
+        Cada desafio foi escrito por cientistas e especialistas da NASA para abordar problemas reais
         do espaço e da Terra, oferecendo oportunidades para inovação em diferentes níveis de dificuldade.
+        As tags de dificuldade são apenas um guia — você pode escolher qualquer desafio.
       </p>
     </div>
 
@@ -55,18 +56,13 @@
 
             <p class="challenge-excerpt">{{ challenge.excerpt }}</p>
 
-            @if (getSkillsCount(challenge.skills) > 0) {
+            @if (challenge.tags.length > 0) {
               <div class="challenge-skills">
-                <h4>Habilidades Sugeridas:</h4>
+                <h4>Temas:</h4>
                 <div class="skills-tags">
-                  @for (skill of getSkillsToShow(challenge.skills); track skill) {
+                  @for (tag of challenge.tags; track tag) {
                     <span class="skill-tag">
-                      {{ skill }}
-                    </span>
-                  }
-                  @if (getSkillsCount(challenge.skills) > 5) {
-                    <span class="skill-tag more-skills">
-                      +{{ getRemainingSkillsCount(challenge.skills) }} mais
+                      {{ tag }}
                     </span>
                   }
                 </div>
@@ -74,14 +70,13 @@
             }
 
             <div class="challenge-actions">
-              <a
-                [href]="'https://www.spaceappschallenge.org/2025/challenges/' + challenge.slug"
-                target="_blank"
-                rel="noopener noreferrer"
-                class="challenge-link">
+              <button
+                type="button"
+                class="challenge-link"
+                (click)="openChallenge(challenge)">
                 Ver Detalhes
-                <span class="external-icon" aria-hidden="true">↗</span>
-              </a>
+                <span class="external-icon" aria-hidden="true">→</span>
+              </button>
             </div>
           </div>
         </article>
@@ -107,18 +102,19 @@
       <h3>Pronto para o Desafio?</h3>
       <p>
         Escolha seu desafio favorito e prepare-se para 48 horas de inovação intensa!
-        Lembre-se de que você pode formar equipes de 2 a 6 pessoas e que todas as idades são bem-vindas.
+        Lembre-se de que as equipes têm de 1 a 6 pessoas (recomendamos 4 ou 5, para equilibrar
+        as habilidades) e que todas as idades são bem-vindas.
       </p>
       <div class="cta-buttons">
         <a
-          href="https://2025.spaceappschallenge.org/locations/uberlandia"
+          [href]="registrationUrl"
           target="_blank"
           rel="noopener noreferrer"
           class="cta-btn primary">
           Registrar-se Agora
         </a>
         <a
-          href="https://discord.gg/FT4Jsvj5vy"
+          [href]="discordUrl"
           target="_blank"
           rel="noopener noreferrer"
           class="cta-btn secondary">
@@ -127,4 +123,8 @@
       </div>
     </div>
   </div>
+
+  @if (selectedChallenge(); as challenge) {
+    <app-challenge-detail-modal [challenge]="challenge" (closed)="closeChallenge()" />
+  }
 </section>

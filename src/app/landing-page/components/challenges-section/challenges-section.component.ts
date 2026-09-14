@@ -1,10 +1,12 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, signal } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { Challenge, CHALLENGES_DATA } from '../../../shared/data/challenges.data';
+import { DISCORD_URL, REGISTRATION_URL } from '../../../shared/data/registration.data';
+import { ChallengeDetailModalComponent } from '../../../shared/challenge-detail-modal/challenge-detail-modal.component';
 
 @Component({
   selector: 'app-challenges-section',
-  imports: [CommonModule],
+  imports: [CommonModule, ChallengeDetailModalComponent],
   templateUrl: './challenges-section.component.html',
   styleUrl: './challenges-section.component.scss'
 })
@@ -12,7 +14,14 @@ export class ChallengesSectionComponent implements OnInit {
   challenges: Challenge[] = CHALLENGES_DATA;
   filteredChallenges: Challenge[] = CHALLENGES_DATA;
   selectedCategory: string = 'all';
-  
+
+  readonly registrationUrl = REGISTRATION_URL;
+  readonly discordUrl = DISCORD_URL;
+
+  /** Desafio aberto no modal de detalhes; `null` com o modal fechado. */
+  readonly selectedChallenge = signal<Challenge | null>(null);
+
+
   categories = [
     { id: 'all', name: 'Todos', color: '#2E96F5' },
     { id: 'beginneryouth', name: 'Iniciante/Jovem', color: '#2E96F5' },
@@ -57,16 +66,12 @@ export class ChallengesSectionComponent implements OnInit {
     return category ? category.color : '#2E96F5';
   }
 
-  getSkillsToShow(skills: string[]): string[] {
-    return skills.slice(0, 5);
+  openChallenge(challenge: Challenge): void {
+    this.selectedChallenge.set(challenge);
   }
 
-  getSkillsCount(skills: string[]): number {
-    return skills.length;
-  }
-
-  getRemainingSkillsCount(skills: string[]): number {
-    return skills.length - 5;
+  closeChallenge(): void {
+    this.selectedChallenge.set(null);
   }
 
   trackBySlug(index: number, challenge: Challenge): string {
