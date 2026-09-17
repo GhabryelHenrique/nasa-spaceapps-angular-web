@@ -26,10 +26,16 @@
       </div>
       <p class="hero-theme-pt reveal reveal-up delay-1">A Próxima Fronteira</p>
 
-      <p class="hero-live-badge reveal reveal-up delay-1">
-        <span class="live-dot" aria-hidden="true"></span>
-        Inscrições abertas
-      </p>
+      <div class="hero-flags reveal reveal-up delay-1">
+        <p class="hero-live-badge">
+          <span class="live-dot" aria-hidden="true"></span>
+          Inscrições abertas
+        </p>
+        <a routerLink="/desafios" class="hero-news-badge">
+          <i class="ph ph-flask" aria-hidden="true"></i>
+          {{ challengeCount }} desafios divulgados
+        </a>
+      </div>
 
       <h1 class="hero-title reveal reveal-up delay-1">
         O maior hackathon<br>

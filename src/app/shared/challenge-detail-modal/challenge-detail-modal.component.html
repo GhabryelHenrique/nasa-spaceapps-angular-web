@@ -60,6 +60,12 @@
           Abrir no site da NASA
           <span class="external-icon" aria-hidden="true">↗</span>
         </a>
+        @if (isCurrentEdition()) {
+          <button type="button" class="modal-btn secondary" (click)="share.emit()">
+            <i class="ph ph-instagram-logo" aria-hidden="true"></i>
+            Card para o Instagram
+          </button>
+        }
         <button type="button" class="modal-btn secondary" (click)="close()">Fechar</button>
       </div>
     </div>

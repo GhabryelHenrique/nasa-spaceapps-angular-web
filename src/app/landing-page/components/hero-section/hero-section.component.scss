@@ -155,13 +155,22 @@
   margin: 0 0 1.1rem;
 }
 
-// ─── Selo "inscrições abertas" ──────────────────
+// ─── Selos de estado ────────────────────────────
 // Neon Yellow como acento de estado, nunca como fundo cheio (pág. 13).
+// Dois selos lado a lado: inscrições abertas e desafios divulgados.
+.hero-flags {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.6rem;
+  margin: 0 0 1.4rem;
+}
+
 .hero-live-badge {
   display: inline-flex;
   align-items: center;
   gap: 0.55rem;
-  margin: 0 0 1.4rem;
+  margin: 0;
   padding: 0.4rem 1rem;
   border-radius: 100px;
   background: rgba($sa-neon-yellow, 0.08);
@@ -194,6 +203,36 @@
 @keyframes hero-live-pulse {
   from { transform: scale(1); opacity: 0.7; }
   to   { transform: scale(2.6); opacity: 0; }
+}
+
+// Selo clicável da novidade: leva direto para a lista de desafios.
+.hero-news-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.4rem 1rem;
+  border-radius: 100px;
+  background: rgba($sa-blue-yonder, 0.12);
+  border: 1px solid rgba($sa-blue-yonder, 0.45);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: $sa-blue-yonder;
+  transition: background 0.25s ease, border-color 0.25s ease, color 0.25s ease;
+
+  i { font-size: 0.95rem; }
+
+  &:hover {
+    background: rgba($sa-blue-yonder, 0.22);
+    border-color: $sa-blue-yonder;
+    color: $sa-white;
+  }
+
+  &:focus-visible {
+    outline: 3px solid var(--sa-neon-yellow);
+    outline-offset: 3px;
+  }
 }
 
 // ─── Título ─────────────────────────────────────

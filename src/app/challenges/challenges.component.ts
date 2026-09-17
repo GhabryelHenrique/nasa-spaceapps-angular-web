@@ -11,10 +11,18 @@ import {
 } from '../shared/data/challenges.data';
 import { DISCORD_URL, REGISTRATION_URL } from '../shared/data/registration.data';
 import { ChallengeDetailModalComponent } from '../shared/challenge-detail-modal/challenge-detail-modal.component';
+import { ChallengeShareModalComponent } from '../shared/challenge-share/challenge-share-modal.component';
+import { ChallengeBulkExportModalComponent } from '../shared/challenge-share/challenge-bulk-export-modal.component';
 
 @Component({
   selector: 'app-challenges',
-  imports: [CommonModule, RouterModule, ChallengeDetailModalComponent],
+  imports: [
+    CommonModule,
+    RouterModule,
+    ChallengeDetailModalComponent,
+    ChallengeShareModalComponent,
+    ChallengeBulkExportModalComponent
+  ],
   templateUrl: './challenges.component.html',
   styleUrl: './challenges.component.scss'
 })
@@ -42,6 +50,12 @@ export class ChallengesComponent {
 
   /** Desafio aberto no modal de detalhes; `null` com o modal fechado. */
   readonly selectedChallenge = signal<Challenge | null>(null);
+
+  /** Desafio aberto na exportação para o Instagram; `null` com o modal fechado. */
+  readonly sharedChallenge = signal<Challenge | null>(null);
+
+  /** Kit de divulgação (todos os desafios de uma vez). */
+  readonly bulkExportOpen = signal(false);
 
   readonly categories = [
     { id: 'all', name: 'Todos', color: '#2E96F5' },
@@ -91,5 +105,23 @@ export class ChallengesComponent {
 
   closeChallenge(): void {
     this.selectedChallenge.set(null);
+  }
+
+  /** Abre a exportação do card. O modal de detalhes sai de cena para não empilhar dois diálogos. */
+  openShare(challenge: Challenge): void {
+    this.selectedChallenge.set(null);
+    this.sharedChallenge.set(challenge);
+  }
+
+  closeShare(): void {
+    this.sharedChallenge.set(null);
+  }
+
+  openBulkExport(): void {
+    this.bulkExportOpen.set(true);
+  }
+
+  closeBulkExport(): void {
+    this.bulkExportOpen.set(false);
   }
 }

@@ -15,15 +15,9 @@
         <h1>Desafios NASA Space Apps {{ year() }}</h1>
 
         <!-- Seletor de edição -->
-        <nav class="edition-switcher" aria-label="Edição dos desafios">
-           <a
-              class="edition-btn"
-              [class.active]="true"
-              [routerLink]="['/desafios', 2025]"
-              [attr.aria-current]="true ? 'page' : null">
-              2025
-            </a>
-          <!-- @for (editionYear of years; track editionYear) {
+        <!-- <nav class="edition-switcher" aria-label="Edição dos desafios">
+
+          @for (editionYear of years; track editionYear) {
             <a
               class="edition-btn"
               [class.active]="editionYear === year()"
@@ -31,8 +25,8 @@
               [attr.aria-current]="editionYear === year() ? 'page' : null">
               {{ editionYear }}
             </a>
-          } -->
-        </nav>
+          }
+        </nav> -->
 
         @if (isCurrentEdition()) {
           <p class="page-description">
@@ -63,6 +57,21 @@
             existe mais a opção "Crie Seu Próprio Desafio" — todo projeto precisa responder a um dos
             {{ edition().challenges.length }} desafios para ser elegível à avaliação global.
           </p>
+
+          <!-- Atalho para quem cuida das redes: todos os cards de uma vez. -->
+          <div class="press-kit">
+            <div class="press-kit-copy">
+              <h2>Vai divulgar?</h2>
+              <p>
+                Baixe os {{ edition().challenges.length }} cards prontos para o Instagram — feed e stories —
+                com uma legenda única para o carrossel.
+              </p>
+            </div>
+            <button type="button" class="press-kit-btn" (click)="openBulkExport()">
+              <i class="ph ph-package" aria-hidden="true"></i>
+              Baixar kit de divulgação
+            </button>
+          </div>
         } @else {
           <p class="page-description">
             Arquivo dos {{ edition().challenges.length }} desafios da edição de {{ year() }}, mantido para consulta.
@@ -149,6 +158,17 @@
                   Ver Detalhes
                   <span class="external-icon" aria-hidden="true">→</span>
                 </button>
+
+                @if (isCurrentEdition()) {
+                  <button
+                    type="button"
+                    class="challenge-share"
+                    [attr.aria-label]="'Gerar card do Instagram para ' + challenge.title"
+                    title="Card para o Instagram"
+                    (click)="openShare(challenge)">
+                    <i class="ph ph-instagram-logo" aria-hidden="true"></i>
+                  </button>
+                }
               </div>
             </div>
           </article>
@@ -204,6 +224,21 @@
       [challenge]="challenge"
       [year]="year()"
       [isCurrentEdition]="isCurrentEdition()"
-      (closed)="closeChallenge()" />
+      (closed)="closeChallenge()"
+      (share)="openShare(challenge)" />
+  }
+
+  @if (sharedChallenge(); as challenge) {
+    <app-challenge-share-modal
+      [challenge]="challenge"
+      [year]="year()"
+      (closed)="closeShare()" />
+  }
+
+  @if (bulkExportOpen()) {
+    <app-challenge-bulk-export-modal
+      [challenges]="edition().challenges"
+      [year]="year()"
+      (closed)="closeBulkExport()" />
   }
 </div>

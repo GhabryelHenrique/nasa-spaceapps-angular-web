@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterLink } from '@angular/router';
+import { CHALLENGES_DATA } from '../../../shared/data/challenges.data';
 import {
   MENTOR_FORM_URL,
   REGISTRATION_URL,
@@ -25,4 +26,7 @@ export class HeroSectionComponent {
   readonly registrationUrl = REGISTRATION_URL;
   readonly mentorFormUrl = MENTOR_FORM_URL;
   readonly whatsappUrl = WHATSAPP_URL;
+
+  /** Quantos desafios a edição corrente tem — usado no selo "desafios divulgados". */
+  readonly challengeCount = CHALLENGES_DATA.length;
 }

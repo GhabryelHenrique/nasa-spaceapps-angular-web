@@ -19,6 +19,8 @@ export class ChallengeDetailModalComponent {
   /** Edições passadas não mostram o aviso de prazos nem o rótulo de tema atual. */
   readonly isCurrentEdition = input<boolean>(true);
   readonly closed = output<void>();
+  /** Pedido de exportação do card para o Instagram — quem abre o modal é que decide o que fazer. */
+  readonly share = output<void>();
 
   readonly nasaUrl = computed(() => challengeDetailUrl(this.year(), this.challenge().slug));
 

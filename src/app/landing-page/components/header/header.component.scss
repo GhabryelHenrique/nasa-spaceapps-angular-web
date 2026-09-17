@@ -106,6 +106,19 @@
   }
 }
 
+// Selo "novo" — marca o que acabou de sair (os desafios de 2026).
+.nav-tag {
+  padding: 0.12rem 0.45rem;
+  border-radius: 100px;
+  background: var(--sa-neon-yellow);
+  color: var(--sa-deep-blue);
+  font-size: 0.6rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  line-height: 1.5;
+}
+
 // Nav actions
 .nav-actions {
   display: flex;

@@ -1,0 +1,111 @@
+<div class="bulk-backdrop" (click)="close()">
+  <div class="bulk-modal" role="dialog" aria-modal="true" aria-labelledby="bulk-title"
+       (click)="$event.stopPropagation()">
+
+    <button type="button" class="bulk-close" (click)="close()" aria-label="Fechar kit de divulgação">
+      <i class="ph ph-x" aria-hidden="true"></i>
+    </button>
+
+    <header class="bulk-head">
+      <p class="bulk-eyebrow">
+        <i class="ph ph-package" aria-hidden="true"></i>
+        Kit de divulgação
+      </p>
+      <h2 id="bulk-title" class="bulk-title">
+        Carrossel completo dos {{ challenges().length }} desafios
+      </h2>
+      <p class="bulk-lead">
+        Capa, um card por desafio e o slide de encerramento, nos formatos marcados, mais
+        a legenda única em <code>legenda.txt</code>. Os arquivos saem numerados
+        (<code>00-capa</code> → <code>99-encerramento</code>), então é só subir na ordem.
+      </p>
+    </header>
+
+    <div class="bulk-body">
+
+      <!-- ─── Formatos ──────────────────────────────────── -->
+      <section class="bulk-formats" aria-label="Formatos do kit">
+        @for (option of formats; track option.id) {
+          <label class="format-option" [class.checked]="isSelected(option.id)">
+            <input type="checkbox"
+                   [checked]="isSelected(option.id)"
+                   [disabled]="state() === 'working'"
+                   (change)="toggleFormat(option.id)">
+            <span class="format-name">{{ option.label }}</span>
+            <span class="format-hint">{{ option.hint }} · {{ challenges().length + 2 }} imagens</span>
+          </label>
+        }
+      </section>
+
+      <!-- ─── Progresso / ação ──────────────────────────── -->
+      <section class="bulk-run">
+        @if (state() === 'working') {
+          <div class="bulk-progress" role="status">
+            <div class="progress-track">
+              <div class="progress-bar" [style.width.%]="percent()"></div>
+            </div>
+            <p class="progress-label">
+              Gerando {{ progress() }} de {{ total() }} — {{ currentLabel() }}
+            </p>
+          </div>
+        } @else {
+          <button type="button" class="bulk-btn primary"
+                  [disabled]="total() === 0"
+                  (click)="generate()">
+            <i class="ph ph-download-simple" aria-hidden="true"></i>
+            {{ state() === 'done' ? 'Gerar de novo' : 'Baixar kit' }}
+            ({{ total() }} imagens)
+          </button>
+
+          @if (total() === 0) {
+            <p class="bulk-note">Marque pelo menos um formato.</p>
+          } @else if (state() === 'done') {
+            <p class="bulk-note success">
+              <i class="ph ph-check-circle" aria-hidden="true"></i>
+              Kit baixado. Confira a pasta de downloads.
+            </p>
+          } @else {
+            <p class="bulk-note">
+              Leva alguns segundos — as imagens são geradas uma a uma, em 1080px.
+            </p>
+          }
+        }
+      </section>
+
+      <!-- ─── Legenda única ─────────────────────────────── -->
+      <section class="bulk-caption" aria-label="Legenda única">
+        <div class="caption-head">
+          <h3>Legenda única do carrossel</h3>
+          <span class="caption-count">{{ caption().length }} caracteres</span>
+        </div>
+
+        <textarea class="caption-text" rows="14" spellcheck="false"
+                  aria-label="Legenda única do carrossel"
+                  [value]="caption()"
+                  (input)="onCaptionInput($event)"></textarea>
+
+        <div class="caption-actions">
+          <button type="button" class="bulk-btn secondary" (click)="copyCaption()">
+            <i class="ph" [class.ph-copy]="!copied()" [class.ph-check]="copied()" aria-hidden="true"></i>
+            {{ copied() ? 'Legenda copiada!' : 'Copiar legenda' }}
+          </button>
+          <button type="button" class="bulk-btn ghost" (click)="resetCaption()">
+            <i class="ph ph-arrow-counter-clockwise" aria-hidden="true"></i>
+            Restaurar sugestão
+          </button>
+        </div>
+
+        <p class="caption-hint">
+          O que estiver aqui vai junto no <code>legenda.txt</code> do zip.
+        </p>
+      </section>
+    </div>
+
+    @if (error()) {
+      <p class="bulk-error" role="alert">
+        <i class="ph ph-warning-circle" aria-hidden="true"></i>
+        {{ error() }}
+      </p>
+    }
+  </div>
+</div>

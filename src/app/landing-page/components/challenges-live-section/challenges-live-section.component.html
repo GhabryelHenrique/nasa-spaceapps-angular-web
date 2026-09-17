@@ -1,0 +1,101 @@
+<section class="challenges-live" id="desafios-2026" aria-labelledby="desafios-2026-titulo">
+  <div class="challenges-live-pattern" aria-hidden="true"></div>
+
+  <div class="challenges-live-container">
+
+    <!-- ─── Cabeçalho ────────────────────────────────────── -->
+    <header class="challenges-live-head">
+      <p class="live-badge reveal reveal-up">
+        <span class="live-dot" aria-hidden="true"></span>
+        Novidade · Desafios divulgados
+      </p>
+
+      <h2 id="desafios-2026-titulo" class="challenges-live-title reveal reveal-up delay-1">
+        Os {{ challengeCount }} desafios de 2026<br><span class="accent">já estão no ar</span>
+      </h2>
+
+      <p class="challenges-live-lead reveal reveal-up delay-2">
+        A NASA publicou os resumos dos desafios da edição <strong>The Next Frontier</strong>.
+        Já dá para escolher o seu, montar a equipe e estudar o tema — os enunciados completos,
+        com os conjuntos de dados, saem em <strong>28 de outubro</strong>.
+      </p>
+    </header>
+
+    <!-- ─── Números da edição ────────────────────────────── -->
+    <ul class="challenges-live-facts reveal reveal-up delay-2">
+      <li>
+        <span class="fact-value">{{ challengeCount }}</span>
+        <span class="fact-label">Desafios oficiais</span>
+      </li>
+      <li>
+        <span class="fact-value">{{ areaCount }}</span>
+        <span class="fact-label">Áreas do conhecimento</span>
+      </li>
+      <li>
+        <span class="fact-value">28/10</span>
+        <span class="fact-label">Enunciados completos</span>
+      </li>
+    </ul>
+
+    <!-- ─── Prévia: um desafio de cada nível ─────────────── -->
+    <div class="challenges-live-grid reveal reveal-up delay-3">
+      @for (challenge of preview; track challenge.slug) {
+        <article class="preview-card">
+          <figure class="preview-photo">
+            <img [src]="challenge.featuredImage.url" [alt]="challenge.featuredImage.alt" loading="lazy">
+            <div class="preview-tags">
+              @for (area of challenge.tags.slice(0, 2); track area) {
+                <span class="preview-tag">{{ area }}</span>
+              }
+            </div>
+          </figure>
+
+          <div class="preview-body">
+            <h3 class="preview-title">{{ challenge.title }}</h3>
+            <p class="preview-excerpt">{{ challenge.excerpt }}</p>
+            <!-- O ::after do botão cobre o cartão inteiro — clique em qualquer
+                 lugar abre o modal, sem aninhar título dentro de <button>. -->
+            <button type="button" class="preview-link"
+                    [attr.aria-label]="'Ver resumo do desafio ' + challenge.title"
+                    (click)="openChallenge(challenge)">
+              Ver resumo
+              <i class="ph ph-arrow-right" aria-hidden="true"></i>
+            </button>
+          </div>
+        </article>
+      }
+    </div>
+
+    <!-- ─── Ações ────────────────────────────────────────── -->
+    <div class="challenges-live-actions reveal reveal-up delay-4">
+      <a routerLink="/desafios" class="btn-primary">
+        <i class="ph ph-list-magnifying-glass" aria-hidden="true"></i>
+        Ver os {{ challengeCount }} desafios
+      </a>
+      <a [href]="registrationUrl" class="btn-secondary" target="_blank" rel="noopener noreferrer">
+        <i class="ph ph-rocket-launch" aria-hidden="true"></i>
+        Inscreva-se para participar
+      </a>
+    </div>
+
+    <p class="challenges-live-note reveal reveal-up delay-4">
+      <i class="ph ph-warning-circle" aria-hidden="true"></i>
+      <span>
+        Escolher o desafio e formar a equipe já pode. Desenvolver o projeto, não: o trabalho
+        só começa no hackathon, em <strong>14 e 15 de novembro</strong> — começar antes desclassifica.
+      </span>
+    </p>
+
+  </div>
+
+  @if (selectedChallenge(); as challenge) {
+    <app-challenge-detail-modal
+      [challenge]="challenge"
+      (closed)="closeChallenge()"
+      (share)="openShare(challenge)" />
+  }
+
+  @if (sharedChallenge(); as challenge) {
+    <app-challenge-share-modal [challenge]="challenge" (closed)="closeShare()" />
+  }
+</section>

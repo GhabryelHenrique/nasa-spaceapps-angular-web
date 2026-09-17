@@ -12,8 +12,14 @@
 
     <!-- Desktop nav links -->
     <ul class="nav-links" role="list">
-      <li><a routerLink="/desafios" class="nav-link"><i class="ph ph-trophy"></i> Desafios</a></li>
-      <li><a routerLink="/times" class="nav-link"><i class="ph ph-users-three"></i> Times</a></li>
+      <li>
+        <a routerLink="/desafios" class="nav-link">
+          <i class="ph ph-trophy"></i> Desafios
+          <span class="nav-tag">novo</span>
+        </a>
+      </li>
+      <!-- "Times" escondido por enquanto: a listagem é a de 2025 e a formação de
+           equipes de 2026 já está aberta. Reative quando houver dados da edição. -->
       <li><a routerLink="/" fragment="cronograma" class="nav-link"><i class="ph ph-calendar-dots"></i> Cronograma</a></li>
       <li><a routerLink="/como-se-inscrever" class="nav-link"><i class="ph ph-list-numbers"></i> Como se inscrever</a></li>
     </ul>
@@ -86,8 +92,11 @@
 
       <div class="drawer-divider"></div>
 
-      <a routerLink="/desafios" class="drawer-link" (click)="closeMobileMenu()"><i class="ph ph-trophy"></i> Desafios</a>
-      <a routerLink="/times" class="drawer-link" (click)="closeMobileMenu()"><i class="ph ph-users-three"></i> Times</a>
+      <a routerLink="/desafios" class="drawer-link" (click)="closeMobileMenu()">
+        <i class="ph ph-trophy"></i> Desafios
+        <span class="nav-tag">novo</span>
+      </a>
+      <!-- "Times" escondido por enquanto — ver comentário na navegação desktop. -->
       <a routerLink="/" fragment="cronograma" class="drawer-link" (click)="closeMobileMenu()"><i class="ph ph-calendar-dots"></i> Cronograma</a>
 <!--
       <div class="drawer-divider"></div>

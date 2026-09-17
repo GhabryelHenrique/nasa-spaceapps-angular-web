@@ -152,7 +152,7 @@
 
   .challenge-note {
     max-width: 800px;
-    margin: 0 auto 3rem;
+    margin: 0 auto 1.5rem;
     padding: 0.9rem 1.25rem;
     border-radius: 12px;
     border: 1px solid rgba(228, 55, 0, 0.35);
@@ -161,6 +161,68 @@
     font-size: 0.9rem;
     line-height: 1.55;
     text-align: left;
+  }
+
+  /* Kit de divulgação — atalho para exportar todos os cards de uma vez. */
+  .press-kit {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1.25rem;
+    max-width: 800px;
+    margin: 0 auto 3rem;
+    padding: 1.15rem 1.35rem;
+    border-radius: 16px;
+    border: 1px dashed rgba(46, 150, 245, 0.42);
+    background: rgba(0, 66, 166, 0.14);
+    text-align: left;
+
+    h2 {
+      font-family: 'Fira Sans', sans-serif;
+      font-size: 1.05rem;
+      font-weight: 900;
+      letter-spacing: 0.02em;
+      color: #ffffff;
+      margin: 0 0 0.25rem;
+    }
+
+    p {
+      margin: 0;
+      font-size: 0.88rem;
+      line-height: 1.5;
+      color: #C3D3EA;
+    }
+  }
+
+  .press-kit-copy { flex: 1 1 340px; }
+
+  .press-kit-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.75rem 1.4rem;
+    border-radius: 100px;
+    border: 2px solid transparent;
+    background: #EAFE07;
+    color: #07173F;
+    font-family: 'Overpass', sans-serif;
+    font-size: 0.92rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background 0.2s ease, transform 0.2s ease;
+
+    i { font-size: 1.15rem; }
+
+    &:hover {
+      background: #ffffff;
+      transform: translateY(-2px);
+    }
+
+    &:focus-visible {
+      outline: 3px solid #EAFE07;
+      outline-offset: 3px;
+    }
   }
 }
 
@@ -371,13 +433,15 @@
   // tema, e sem isso o botão dele subiria enquanto o dos vizinhos fica no rodapé.
   .challenge-actions {
     margin-top: auto;
+    display: flex;
+    gap: 0.5rem;
 
     .challenge-link {
       display: flex;
       align-items: center;
       justify-content: center;
       gap: 0.5rem;
-      width: 100%;
+      flex: 1;
       padding: 0.75rem;
       border-radius: 8px;
       font-size: 0.9rem;
@@ -403,6 +467,33 @@
         .external-icon {
           transform: translate(2px, -2px);
         }
+      }
+    }
+
+    // Atalho para o card de divulgação, para quem cuida das redes não precisar
+    // abrir o detalhe de cada um dos 14 desafios.
+    .challenge-share {
+      display: grid;
+      place-items: center;
+      width: 44px;
+      flex-shrink: 0;
+      border-radius: 8px;
+      background: rgba(255, 255, 255, 0.04);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      color: #C3D3EA;
+      font-size: 1.2rem;
+      cursor: pointer;
+      transition: all 0.2s ease;
+
+      &:hover {
+        background: rgba(234, 254, 7, 0.14);
+        border-color: rgba(234, 254, 7, 0.5);
+        color: #EAFE07;
+      }
+
+      &:focus-visible {
+        outline: 3px solid #EAFE07;
+        outline-offset: 2px;
       }
     }
   }

@@ -1,0 +1,84 @@
+<div class="share-backdrop" (click)="close()">
+  <div class="share-modal" role="dialog" aria-modal="true" aria-labelledby="share-title"
+       (click)="$event.stopPropagation()">
+
+    <button type="button" class="share-close" (click)="close()" aria-label="Fechar exportação">
+      <i class="ph ph-x" aria-hidden="true"></i>
+    </button>
+
+    <header class="share-head">
+      <p class="share-eyebrow">
+        <i class="ph ph-instagram-logo" aria-hidden="true"></i>
+        Card para o Instagram
+      </p>
+      <h2 id="share-title" class="share-title">{{ challenge().title }}</h2>
+    </header>
+
+    <div class="share-body">
+
+      <!-- ─── Card ──────────────────────────────────────── -->
+      <section class="share-card" aria-label="Prévia do card">
+        <div class="format-switch" role="tablist" aria-label="Formato do card">
+          @for (option of formats; track option.id) {
+            <button type="button" role="tab"
+                    [class.active]="format().id === option.id"
+                    [attr.aria-selected]="format().id === option.id"
+                    (click)="selectFormat(option)">
+              {{ option.label }}
+              <small>{{ option.hint }}</small>
+            </button>
+          }
+        </div>
+
+        <div class="canvas-frame" [class.is-rendering]="rendering()">
+          <canvas #cardCanvas
+                  [attr.aria-label]="'Card do desafio ' + challenge().title"></canvas>
+          @if (rendering()) {
+            <p class="canvas-status">Gerando card…</p>
+          }
+        </div>
+
+        <button type="button" class="share-btn primary" (click)="download()" [disabled]="rendering()">
+          <i class="ph ph-download-simple" aria-hidden="true"></i>
+          Baixar PNG {{ format().hint }}
+        </button>
+      </section>
+
+      <!-- ─── Legenda ───────────────────────────────────── -->
+      <section class="share-caption" aria-label="Legenda sugerida">
+        <div class="caption-head">
+          <h3>Legenda sugerida</h3>
+          <span class="caption-count">{{ caption().length }} caracteres</span>
+        </div>
+
+        <textarea class="caption-text" rows="16" spellcheck="false"
+                  aria-label="Legenda sugerida para o post"
+                  [value]="caption()"
+                  (input)="onCaptionInput($event)"></textarea>
+
+        <div class="caption-actions">
+          <button type="button" class="share-btn primary" (click)="copyCaption()">
+            <i class="ph" [class.ph-copy]="!copied()" [class.ph-check]="copied()" aria-hidden="true"></i>
+            {{ copied() ? 'Legenda copiada!' : 'Copiar legenda' }}
+          </button>
+          <button type="button" class="share-btn ghost" (click)="resetCaption()">
+            <i class="ph ph-arrow-counter-clockwise" aria-hidden="true"></i>
+            Restaurar sugestão
+          </button>
+        </div>
+
+        <p class="caption-hint">
+          O Instagram aceita até 2.200 caracteres. As hashtags podem ir no primeiro
+          comentário se você preferir a legenda mais limpa.
+        </p>
+      </section>
+    </div>
+
+    @if (error()) {
+      <p class="share-error" role="alert">
+        <i class="ph ph-warning-circle" aria-hidden="true"></i>
+        {{ error() }}
+      </p>
+    }
+  </div>
+</div>
