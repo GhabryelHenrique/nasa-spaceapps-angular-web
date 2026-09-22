@@ -7,12 +7,387 @@
         "pageInfo": {
           "hasPreviousPage": false,
           "hasNextPage": false,
-          "startCursor": "",
-          "endCursor": "",
+          "startCursor": "b2Zmc2V0OjA=",
+          "endCursor": "b2Zmc2V0OjM=",
           "__typename": "PageInfo"
         },
-        "totalCount": 0,
-        "edges": [],
+        "totalCount": 4,
+        "edges": [
+          {
+            "__typename": "TeamPageEdge",
+            "cursor": "b2Zmc2V0OjA=",
+            "node": {
+              "__typename": "TeamPage",
+              "id": "aWQ6NTY1NzY=",
+              "title": "AstroUdi",
+              "meta": {
+                "type": "TEAM",
+                "slug": "astroudi",
+                "firstPublishedAt": null,
+                "lastPublishedAt": null,
+                "relativeUrl": "/2026/find-a-team/astroudi/",
+                "live": true,
+                "parent": null,
+                "__typename": "ExpandedPageMeta"
+              },
+              "owner": "aWQ6MzczMzM3ZjUtY2I0Yi00NDkyLThkZDQtZWRmMjViOTMyMDgz",
+              "ownerDetails": null,
+              "excerpt": "Apenas uma equipe de jovens estudantes programadores",
+              "project": "aWQ6NTI5Nzk=",
+              "projectDetails": {
+                "id": "aWQ6NTI5Nzk=",
+                "name": "Project AstroUdi",
+                "summary": "",
+                "demoLink": "",
+                "projectLink": "",
+                "details": "",
+                "solution": "",
+                "aiReferences": "",
+                "dataReferences": "",
+                "projectReferences": "",
+                "isSubmitted": false,
+                "savedAt": null,
+                "submittedAt": null,
+                "__typename": "Project"
+              },
+              "projectSubmitted": false,
+              "featuredImage": null,
+              "description": null,
+              "desiredSkills": null,
+              "languages": null,
+              "challenge": "aWQ6NTUxMjQ=",
+              "challengeDetails": {
+                "id": "aWQ6NTUxMjQ=",
+                "title": "Build a Junior Astronaut Mission Trainer",
+                "meta": {
+                  "type": "CHALLENGE",
+                  "slug": "build-a-junior-astronaut-mission-trainer",
+                  "firstPublishedAt": "2026-09-17T14:22:28.522299Z",
+                  "lastPublishedAt": "2026-09-17T14:22:28.522299Z",
+                  "relativeUrl": "/2026/challenges/build-a-junior-astronaut-mission-trainer/",
+                  "live": true,
+                  "parent": null,
+                  "__typename": "ExpandedPageMeta"
+                },
+                "excerpt": "Space-themed STEM content often oversimplifies the engineering trade-offs that define a real mission or presents them at a level too complex to hold a young learner's attention. Few tools make those trade-offs both tangible and fun. Your challenge is to design and build an interactive game or app that lets students run a lunar or Martian outpost, balancing competing demands like life support, radiation shielding, power, and food production, so they experience firsthand the decisions that determine whether a mission fails or succeeds.",
+                "__typename": "ChallengePage"
+              },
+              "location": "aWQ6NTQ0NDY=",
+              "locationDetails": {
+                "id": "aWQ6NTQ0NDY=",
+                "title": "Uberlândia",
+                "displayName": "",
+                "meta": {
+                  "type": "LOCATION",
+                  "slug": "uberlandia",
+                  "firstPublishedAt": "2026-08-20T13:11:16.191007Z",
+                  "lastPublishedAt": "2026-08-26T15:57:15.021223Z",
+                  "relativeUrl": "/2026/local-events/uberlandia/",
+                  "live": true,
+                  "parent": null,
+                  "__typename": "ExpandedPageMeta"
+                },
+                "country": "Brazil",
+                "__typename": "LocationPage"
+              },
+              "event": "aWQ6NA==",
+              "joinEnabled": true,
+              "memberships": null,
+              "nominationBadges": null,
+              "awardBadges": null
+            }
+          },
+          {
+            "__typename": "TeamPageEdge",
+            "cursor": "b2Zmc2V0OjE=",
+            "node": {
+              "__typename": "TeamPage",
+              "id": "aWQ6NTU1OTM=",
+              "title": "GURIS DA CATEQUESE 2026",
+              "meta": {
+                "type": "TEAM",
+                "slug": "guris-da-catequese-2026",
+                "firstPublishedAt": "2026-09-17T20:16:41.196000Z",
+                "lastPublishedAt": "2026-09-18T00:25:34.862421Z",
+                "relativeUrl": "/2026/find-a-team/guris-da-catequese-2026/",
+                "live": true,
+                "parent": null,
+                "__typename": "ExpandedPageMeta"
+              },
+              "owner": "aWQ6ZWM5ZTJiMmUtNjU0Ni00OWI4LTg3ZmUtOWFkZjE3YzU1ZmE0",
+              "ownerDetails": null,
+              "excerpt": "é os guri",
+              "project": "aWQ6NTE5OTY=",
+              "projectDetails": {
+                "id": "aWQ6NTE5OTY=",
+                "name": "Project GURIS DA CATEQUESE 2026",
+                "summary": "",
+                "demoLink": "",
+                "projectLink": "",
+                "details": "",
+                "solution": "",
+                "aiReferences": "",
+                "dataReferences": "",
+                "projectReferences": "",
+                "isSubmitted": false,
+                "savedAt": null,
+                "submittedAt": null,
+                "__typename": "Project"
+              },
+              "projectSubmitted": false,
+              "featuredImage": {
+                "id": "aWQ6NDIxMzIx",
+                "meta": {
+                  "type": "images.CustomImage",
+                  "downloadUrl": "https://assets.spaceappschallenge.org/media/original_images/4ad937bd9d75762aa6188ce4c8c14eab_1.jpg",
+                  "__typename": "ImageMeta"
+                },
+                "title": "team_image.19:11:29.581376",
+                "alt": "team_image.19:11:29.581376",
+                "caption": "team_image.19:11:29.581376",
+                "displaySize": "or",
+                "rendition": {
+                  "url": "https://assets.spaceappschallenge.org/media/images/4ad937bd9d75762aa6188ce4c8c14eab_1.2e16d0ba.fill-300x250.jpg",
+                  "fullUrl": "https://assets.spaceappschallenge.org/media/images/4ad937bd9d75762aa6188ce4c8c14eab_1.2e16d0ba.fill-300x250.jpg",
+                  "height": 250,
+                  "width": 300,
+                  "__typename": "BaseImage"
+                },
+                "__typename": "DefaultImage"
+              },
+              "description": null,
+              "desiredSkills": null,
+              "languages": null,
+              "challenge": "aWQ6NTUxMjQ=",
+              "challengeDetails": {
+                "id": "aWQ6NTUxMjQ=",
+                "title": "Build a Junior Astronaut Mission Trainer",
+                "meta": {
+                  "type": "CHALLENGE",
+                  "slug": "build-a-junior-astronaut-mission-trainer",
+                  "firstPublishedAt": "2026-09-17T14:22:28.522299Z",
+                  "lastPublishedAt": "2026-09-17T14:22:28.522299Z",
+                  "relativeUrl": "/2026/challenges/build-a-junior-astronaut-mission-trainer/",
+                  "live": true,
+                  "parent": null,
+                  "__typename": "ExpandedPageMeta"
+                },
+                "excerpt": "Space-themed STEM content often oversimplifies the engineering trade-offs that define a real mission or presents them at a level too complex to hold a young learner's attention. Few tools make those trade-offs both tangible and fun. Your challenge is to design and build an interactive game or app that lets students run a lunar or Martian outpost, balancing competing demands like life support, radiation shielding, power, and food production, so they experience firsthand the decisions that determine whether a mission fails or succeeds.",
+                "__typename": "ChallengePage"
+              },
+              "location": "aWQ6NTQ0NDY=",
+              "locationDetails": {
+                "id": "aWQ6NTQ0NDY=",
+                "title": "Uberlândia",
+                "displayName": "",
+                "meta": {
+                  "type": "LOCATION",
+                  "slug": "uberlandia",
+                  "firstPublishedAt": "2026-08-20T13:11:16.191007Z",
+                  "lastPublishedAt": "2026-08-26T15:57:15.021223Z",
+                  "relativeUrl": "/2026/local-events/uberlandia/",
+                  "live": true,
+                  "parent": null,
+                  "__typename": "ExpandedPageMeta"
+                },
+                "country": "Brazil",
+                "__typename": "LocationPage"
+              },
+              "event": "aWQ6NA==",
+              "joinEnabled": true,
+              "memberships": null,
+              "nominationBadges": null,
+              "awardBadges": null
+            }
+          },
+          {
+            "__typename": "TeamPageEdge",
+            "cursor": "b2Zmc2V0OjI=",
+            "node": {
+              "__typename": "TeamPage",
+              "id": "aWQ6NTU1ODA=",
+              "title": "Lumia",
+              "meta": {
+                "type": "TEAM",
+                "slug": "lumia",
+                "firstPublishedAt": "2026-09-18T00:47:10.805000Z",
+                "lastPublishedAt": "2026-09-18T01:40:31.178335Z",
+                "relativeUrl": "/2026/find-a-team/lumia/",
+                "live": true,
+                "parent": null,
+                "__typename": "ExpandedPageMeta"
+              },
+              "owner": "aWQ6YzNkNDI4MTctNzNkYi00YmFlLThkMGYtZWUxOGFlNzU1YTE0",
+              "ownerDetails": null,
+              "excerpt": "Entre na equipe",
+              "project": "aWQ6NTE5ODM=",
+              "projectDetails": {
+                "id": "aWQ6NTE5ODM=",
+                "name": "Project Lumia",
+                "summary": "",
+                "demoLink": "",
+                "projectLink": "",
+                "details": "",
+                "solution": "",
+                "aiReferences": "",
+                "dataReferences": "",
+                "projectReferences": "",
+                "isSubmitted": false,
+                "savedAt": null,
+                "submittedAt": null,
+                "__typename": "Project"
+              },
+              "projectSubmitted": false,
+              "featuredImage": null,
+              "description": null,
+              "desiredSkills": null,
+              "languages": null,
+              "challenge": "aWQ6NTUxMTg=",
+              "challengeDetails": {
+                "id": "aWQ6NTUxMTg=",
+                "title": "Interplanetary Survival Guide: Martian Map",
+                "meta": {
+                  "type": "CHALLENGE",
+                  "slug": "interplanetary-survival-guide-martian-map",
+                  "firstPublishedAt": "2026-09-17T14:21:03.079121Z",
+                  "lastPublishedAt": "2026-09-17T14:21:03.079121Z",
+                  "relativeUrl": "/2026/challenges/interplanetary-survival-guide-martian-map/",
+                  "live": true,
+                  "parent": null,
+                  "__typename": "ExpandedPageMeta"
+                },
+                "excerpt": "NASA has explored Mars robotically for decades, studying its extreme environment, mapping its surface, and collecting many types of data. Far from home, the first astronauts to set foot on Mars will want the best map possible, with information on the details of their routes and destinations, updates on current conditions, and the data needed to complete their mission quickly and safely. Your challenge is to create a layered, integrated view of a location or route on the Martian surface that pulls together data from multiple NASA science missions and could help a human explorer plan and carry out a successful Marswalk while conducting new and exciting science along the way.",
+                "__typename": "ChallengePage"
+              },
+              "location": "aWQ6NTQ0NDY=",
+              "locationDetails": {
+                "id": "aWQ6NTQ0NDY=",
+                "title": "Uberlândia",
+                "displayName": "",
+                "meta": {
+                  "type": "LOCATION",
+                  "slug": "uberlandia",
+                  "firstPublishedAt": "2026-08-20T13:11:16.191007Z",
+                  "lastPublishedAt": "2026-08-26T15:57:15.021223Z",
+                  "relativeUrl": "/2026/local-events/uberlandia/",
+                  "live": true,
+                  "parent": null,
+                  "__typename": "ExpandedPageMeta"
+                },
+                "country": "Brazil",
+                "__typename": "LocationPage"
+              },
+              "event": "aWQ6NA==",
+              "joinEnabled": true,
+              "memberships": null,
+              "nominationBadges": null,
+              "awardBadges": null
+            }
+          },
+          {
+            "__typename": "TeamPageEdge",
+            "cursor": "b2Zmc2V0OjM=",
+            "node": {
+              "__typename": "TeamPage",
+              "id": "aWQ6NTY5ODE=",
+              "title": "VoyIAger II",
+              "meta": {
+                "type": "TEAM",
+                "slug": "voyiager-ii",
+                "firstPublishedAt": "2026-09-19T18:03:57.932000Z",
+                "lastPublishedAt": "2026-09-20T14:00:49.594188Z",
+                "relativeUrl": "/2026/find-a-team/voyiager-ii/",
+                "live": true,
+                "parent": null,
+                "__typename": "ExpandedPageMeta"
+              },
+              "owner": "aWQ6ODZmMjYxOWYtMjVhNS00ODY5LWEyYmEtMDZiZjU5Y2Q3NTU4",
+              "ownerDetails": null,
+              "excerpt": "Somos a VoyIAger II, uma equipe de estudantes e entusiastas unidos pelo interesse em exploração espacial,robótica, programação, IA e ciência. No NASA Space Apps Challenge, buscamos transformar ideias em soluções criativas, aprender com novos desaf...",
+              "project": "aWQ6NTMzODQ=",
+              "projectDetails": {
+                "id": "aWQ6NTMzODQ=",
+                "name": "Project VoyIAger II",
+                "summary": "",
+                "demoLink": "",
+                "projectLink": "",
+                "details": "",
+                "solution": "",
+                "aiReferences": "",
+                "dataReferences": "",
+                "projectReferences": "",
+                "isSubmitted": false,
+                "savedAt": null,
+                "submittedAt": null,
+                "__typename": "Project"
+              },
+              "projectSubmitted": false,
+              "featuredImage": {
+                "id": "aWQ6NDI2NDEy",
+                "meta": {
+                  "type": "images.CustomImage",
+                  "downloadUrl": "https://assets.spaceappschallenge.org/media/original_images/VoyagerII_qI8VuRX.PNG",
+                  "__typename": "ImageMeta"
+                },
+                "title": "team_image.18:14:56.005485",
+                "alt": "team_image.18:14:56.005485",
+                "caption": "team_image.18:14:56.005485",
+                "displaySize": "or",
+                "rendition": {
+                  "url": "https://assets.spaceappschallenge.org/media/images/VoyagerII_qI8VuRX.2e16d0ba.fill-300x250.png",
+                  "fullUrl": "https://assets.spaceappschallenge.org/media/images/VoyagerII_qI8VuRX.2e16d0ba.fill-300x250.png",
+                  "height": 250,
+                  "width": 300,
+                  "__typename": "BaseImage"
+                },
+                "__typename": "DefaultImage"
+              },
+              "description": null,
+              "desiredSkills": null,
+              "languages": null,
+              "challenge": "aWQ6NTUxMjQ=",
+              "challengeDetails": {
+                "id": "aWQ6NTUxMjQ=",
+                "title": "Build a Junior Astronaut Mission Trainer",
+                "meta": {
+                  "type": "CHALLENGE",
+                  "slug": "build-a-junior-astronaut-mission-trainer",
+                  "firstPublishedAt": "2026-09-17T14:22:28.522299Z",
+                  "lastPublishedAt": "2026-09-17T14:22:28.522299Z",
+                  "relativeUrl": "/2026/challenges/build-a-junior-astronaut-mission-trainer/",
+                  "live": true,
+                  "parent": null,
+                  "__typename": "ExpandedPageMeta"
+                },
+                "excerpt": "Space-themed STEM content often oversimplifies the engineering trade-offs that define a real mission or presents them at a level too complex to hold a young learner's attention. Few tools make those trade-offs both tangible and fun. Your challenge is to design and build an interactive game or app that lets students run a lunar or Martian outpost, balancing competing demands like life support, radiation shielding, power, and food production, so they experience firsthand the decisions that determine whether a mission fails or succeeds.",
+                "__typename": "ChallengePage"
+              },
+              "location": "aWQ6NTQ0NDY=",
+              "locationDetails": {
+                "id": "aWQ6NTQ0NDY=",
+                "title": "Uberlândia",
+                "displayName": "",
+                "meta": {
+                  "type": "LOCATION",
+                  "slug": "uberlandia",
+                  "firstPublishedAt": "2026-08-20T13:11:16.191007Z",
+                  "lastPublishedAt": "2026-08-26T15:57:15.021223Z",
+                  "relativeUrl": "/2026/local-events/uberlandia/",
+                  "live": true,
+                  "parent": null,
+                  "__typename": "ExpandedPageMeta"
+                },
+                "country": "Brazil",
+                "__typename": "LocationPage"
+              },
+              "event": "aWQ6NA==",
+              "joinEnabled": true,
+              "memberships": null,
+              "nominationBadges": null,
+              "awardBadges": null
+            }
+          }
+        ],
         "__typename": "TeamPageConnection"
       }
     }
