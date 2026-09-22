@@ -8,14 +8,117 @@
           "hasPreviousPage": false,
           "hasNextPage": false,
           "startCursor": "b2Zmc2V0OjA=",
-          "endCursor": "b2Zmc2V0OjM=",
+          "endCursor": "b2Zmc2V0OjY=",
           "__typename": "PageInfo"
         },
-        "totalCount": 4,
+        "totalCount": 7,
         "edges": [
           {
             "__typename": "TeamPageEdge",
             "cursor": "b2Zmc2V0OjA=",
+            "node": {
+              "__typename": "TeamPage",
+              "id": "aWQ6NTgzMjU=",
+              "title": "Apollo Balboa",
+              "meta": {
+                "type": "TEAM",
+                "slug": "apollo-balboa",
+                "firstPublishedAt": null,
+                "lastPublishedAt": null,
+                "relativeUrl": "/2026/find-a-team/apollo-balboa/",
+                "live": true,
+                "parent": null,
+                "__typename": "ExpandedPageMeta"
+              },
+              "owner": "aWQ6NjY5MDc1ZmQtNmUwOC00NjJiLWI2ODItMWNiYmQzNjAxMjFj",
+              "ownerDetails": null,
+              "excerpt": "Apollo Balboa is an open,  team for professionals and curious minds. I’m passionate about challenges and driven by curiosity, creativity, and problem-solving. My goal is to keep it simple: constantly taking on challenges, keep learning across diff...",
+              "project": "aWQ6NTQ3Mjg=",
+              "projectDetails": {
+                "id": "aWQ6NTQ3Mjg=",
+                "name": "Project Apollo Balboa",
+                "summary": "",
+                "demoLink": "",
+                "projectLink": "",
+                "details": "",
+                "solution": "",
+                "aiReferences": "",
+                "dataReferences": "",
+                "projectReferences": "",
+                "isSubmitted": false,
+                "savedAt": null,
+                "submittedAt": null,
+                "__typename": "Project"
+              },
+              "projectSubmitted": false,
+              "featuredImage": {
+                "id": "aWQ6NDMyODE1",
+                "meta": {
+                  "type": "images.CustomImage",
+                  "downloadUrl": "https://assets.spaceappschallenge.org/media/original_images/IMG_0221_WUeCghT.jpeg",
+                  "__typename": "ImageMeta"
+                },
+                "title": "team_image.09:02:50.035842",
+                "alt": "team_image.09:02:50.035842",
+                "caption": "team_image.09:02:50.035842",
+                "displaySize": "or",
+                "rendition": {
+                  "url": "https://assets.spaceappschallenge.org/media/images/IMG_0221_WUeCghT.2e16d0ba.fill-300x250.jpg",
+                  "fullUrl": "https://assets.spaceappschallenge.org/media/images/IMG_0221_WUeCghT.2e16d0ba.fill-300x250.jpg",
+                  "height": 250,
+                  "width": 300,
+                  "__typename": "BaseImage"
+                },
+                "__typename": "DefaultImage"
+              },
+              "description": null,
+              "desiredSkills": null,
+              "languages": null,
+              "challenge": "aWQ6NTUxMTg=",
+              "challengeDetails": {
+                "id": "aWQ6NTUxMTg=",
+                "title": "Interplanetary Survival Guide: Martian Map",
+                "meta": {
+                  "type": "CHALLENGE",
+                  "slug": "interplanetary-survival-guide-martian-map",
+                  "firstPublishedAt": "2026-09-17T14:21:03.079121Z",
+                  "lastPublishedAt": "2026-09-17T14:21:03.079121Z",
+                  "relativeUrl": "/2026/challenges/interplanetary-survival-guide-martian-map/",
+                  "live": true,
+                  "parent": null,
+                  "__typename": "ExpandedPageMeta"
+                },
+                "excerpt": "NASA has explored Mars robotically for decades, studying its extreme environment, mapping its surface, and collecting many types of data. Far from home, the first astronauts to set foot on Mars will want the best map possible, with information on the details of their routes and destinations, updates on current conditions, and the data needed to complete their mission quickly and safely. Your challenge is to create a layered, integrated view of a location or route on the Martian surface that pulls together data from multiple NASA science missions and could help a human explorer plan and carry out a successful Marswalk while conducting new and exciting science along the way.",
+                "__typename": "ChallengePage"
+              },
+              "location": "aWQ6NTQ0NDY=",
+              "locationDetails": {
+                "id": "aWQ6NTQ0NDY=",
+                "title": "Uberlândia",
+                "displayName": "",
+                "meta": {
+                  "type": "LOCATION",
+                  "slug": "uberlandia",
+                  "firstPublishedAt": "2026-08-20T13:11:16.191007Z",
+                  "lastPublishedAt": "2026-08-26T15:57:15.021223Z",
+                  "relativeUrl": "/2026/local-events/uberlandia/",
+                  "live": true,
+                  "parent": null,
+                  "__typename": "ExpandedPageMeta"
+                },
+                "country": "Brazil",
+                "__typename": "LocationPage"
+              },
+              "event": "aWQ6NA==",
+              "joinEnabled": true,
+              "memberships": null,
+              "nominationBadges": null,
+              "awardBadges": null
+            }
+          },
+          {
+            "__typename": "TeamPageEdge",
+            "cursor": "b2Zmc2V0OjE=",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6NTY1NzY=",
@@ -99,7 +202,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjE=",
+            "cursor": "b2Zmc2V0OjI=",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6NTU1OTM=",
@@ -202,7 +305,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjI=",
+            "cursor": "b2Zmc2V0OjM=",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6NTU1ODA=",
@@ -286,7 +389,91 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjM=",
+            "cursor": "b2Zmc2V0OjQ=",
+            "node": {
+              "__typename": "TeamPage",
+              "id": "aWQ6NTg0NDE=",
+              "title": "Orbit Sentinel",
+              "meta": {
+                "type": "TEAM",
+                "slug": "orbit-sentinel",
+                "firstPublishedAt": "2026-09-22T14:31:05.892000Z",
+                "lastPublishedAt": "2026-09-22T16:39:36.234530Z",
+                "relativeUrl": "/2026/find-a-team/orbit-sentinel/",
+                "live": true,
+                "parent": null,
+                "__typename": "ExpandedPageMeta"
+              },
+              "owner": "aWQ6ZGVkMGM0NDgtZGMyOS00YTUxLTkzMDAtNjNmOWJmMTA0MzQ2",
+              "ownerDetails": null,
+              "excerpt": "Sou desenvolvedor de software e pesquisador na área de tecnologia e inovação, com experiência em desenvolvimento de sistemas, integração de dados e soluções aplicadas à saúde.",
+              "project": "aWQ6NTQ4NDQ=",
+              "projectDetails": {
+                "id": "aWQ6NTQ4NDQ=",
+                "name": "Project Orbit Sentinel",
+                "summary": "",
+                "demoLink": "",
+                "projectLink": "",
+                "details": "",
+                "solution": "",
+                "aiReferences": "",
+                "dataReferences": "",
+                "projectReferences": "",
+                "isSubmitted": false,
+                "savedAt": null,
+                "submittedAt": null,
+                "__typename": "Project"
+              },
+              "projectSubmitted": false,
+              "featuredImage": null,
+              "description": null,
+              "desiredSkills": null,
+              "languages": null,
+              "challenge": "aWQ6NTUxMzA=",
+              "challengeDetails": {
+                "id": "aWQ6NTUxMzA=",
+                "title": "Create Health Monitoring Software for Astronauts on Space Missions",
+                "meta": {
+                  "type": "CHALLENGE",
+                  "slug": "create-health-monitoring-software-for-astronauts-on-space-missions",
+                  "firstPublishedAt": "2026-09-17T14:21:16.942007Z",
+                  "lastPublishedAt": "2026-09-17T14:21:16.942007Z",
+                  "relativeUrl": "/2026/challenges/create-health-monitoring-software-for-astronauts-on-space-missions/",
+                  "live": true,
+                  "parent": null,
+                  "__typename": "ExpandedPageMeta"
+                },
+                "excerpt": "Long-duration missions expose astronauts to space radiation, isolation and confinement, altered gravity, and a hostile closed environment, which can bring immune changes, bone loss, cardiovascular events, and behavioral health problems. On long missions, astronauts carry much of the responsibility for spotting these changes in themselves. Your challenge is to build a health monitoring software that gathers health indicators and enables astronauts to evaluate and act on the status of their health.",
+                "__typename": "ChallengePage"
+              },
+              "location": "aWQ6NTQ0NDY=",
+              "locationDetails": {
+                "id": "aWQ6NTQ0NDY=",
+                "title": "Uberlândia",
+                "displayName": "",
+                "meta": {
+                  "type": "LOCATION",
+                  "slug": "uberlandia",
+                  "firstPublishedAt": "2026-08-20T13:11:16.191007Z",
+                  "lastPublishedAt": "2026-08-26T15:57:15.021223Z",
+                  "relativeUrl": "/2026/local-events/uberlandia/",
+                  "live": true,
+                  "parent": null,
+                  "__typename": "ExpandedPageMeta"
+                },
+                "country": "Brazil",
+                "__typename": "LocationPage"
+              },
+              "event": "aWQ6NA==",
+              "joinEnabled": false,
+              "memberships": null,
+              "nominationBadges": null,
+              "awardBadges": null
+            }
+          },
+          {
+            "__typename": "TeamPageEdge",
+            "cursor": "b2Zmc2V0OjU=",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6NTY5ODE=",
@@ -360,6 +547,109 @@
                   "__typename": "ExpandedPageMeta"
                 },
                 "excerpt": "Space-themed STEM content often oversimplifies the engineering trade-offs that define a real mission or presents them at a level too complex to hold a young learner's attention. Few tools make those trade-offs both tangible and fun. Your challenge is to design and build an interactive game or app that lets students run a lunar or Martian outpost, balancing competing demands like life support, radiation shielding, power, and food production, so they experience firsthand the decisions that determine whether a mission fails or succeeds.",
+                "__typename": "ChallengePage"
+              },
+              "location": "aWQ6NTQ0NDY=",
+              "locationDetails": {
+                "id": "aWQ6NTQ0NDY=",
+                "title": "Uberlândia",
+                "displayName": "",
+                "meta": {
+                  "type": "LOCATION",
+                  "slug": "uberlandia",
+                  "firstPublishedAt": "2026-08-20T13:11:16.191007Z",
+                  "lastPublishedAt": "2026-08-26T15:57:15.021223Z",
+                  "relativeUrl": "/2026/local-events/uberlandia/",
+                  "live": true,
+                  "parent": null,
+                  "__typename": "ExpandedPageMeta"
+                },
+                "country": "Brazil",
+                "__typename": "LocationPage"
+              },
+              "event": "aWQ6NA==",
+              "joinEnabled": true,
+              "memberships": null,
+              "nominationBadges": null,
+              "awardBadges": null
+            }
+          },
+          {
+            "__typename": "TeamPageEdge",
+            "cursor": "b2Zmc2V0OjY=",
+            "node": {
+              "__typename": "TeamPage",
+              "id": "aWQ6NTgyMTg=",
+              "title": "XBigDevs",
+              "meta": {
+                "type": "TEAM",
+                "slug": "xbigdevs1",
+                "firstPublishedAt": "2026-09-22T00:54:28.634000Z",
+                "lastPublishedAt": "2026-09-22T00:57:26.331015Z",
+                "relativeUrl": "/2026/find-a-team/xbigdevs1/",
+                "live": true,
+                "parent": null,
+                "__typename": "ExpandedPageMeta"
+              },
+              "owner": "aWQ6YzM0ZGZiZWMtOTk3Yy00ZmZmLTk2ZGMtYTkxOTU3OGQxNTJi",
+              "ownerDetails": null,
+              "excerpt": "We are amazing",
+              "project": "aWQ6NTQ2MjE=",
+              "projectDetails": {
+                "id": "aWQ6NTQ2MjE=",
+                "name": "Project XBigDevs",
+                "summary": "",
+                "demoLink": "",
+                "projectLink": "",
+                "details": "",
+                "solution": "",
+                "aiReferences": "",
+                "dataReferences": "",
+                "projectReferences": "",
+                "isSubmitted": false,
+                "savedAt": null,
+                "submittedAt": null,
+                "__typename": "Project"
+              },
+              "projectSubmitted": false,
+              "featuredImage": {
+                "id": "aWQ6NDMyMjMy",
+                "meta": {
+                  "type": "images.CustomImage",
+                  "downloadUrl": "https://assets.spaceappschallenge.org/media/original_images/Robots.jpg",
+                  "__typename": "ImageMeta"
+                },
+                "title": "team_image.00:55:07.226563",
+                "alt": "team_image.00:55:07.226563",
+                "caption": "team_image.00:55:07.226563",
+                "displaySize": "or",
+                "rendition": {
+                  "url": "https://assets.spaceappschallenge.org/media/images/Robots.2e16d0ba.fill-300x250.jpg",
+                  "fullUrl": "https://assets.spaceappschallenge.org/media/images/Robots.2e16d0ba.fill-300x250.jpg",
+                  "height": 250,
+                  "width": 300,
+                  "__typename": "BaseImage"
+                },
+                "__typename": "DefaultImage"
+              },
+              "description": null,
+              "desiredSkills": null,
+              "languages": null,
+              "challenge": "aWQ6NTUxMTg=",
+              "challengeDetails": {
+                "id": "aWQ6NTUxMTg=",
+                "title": "Interplanetary Survival Guide: Martian Map",
+                "meta": {
+                  "type": "CHALLENGE",
+                  "slug": "interplanetary-survival-guide-martian-map",
+                  "firstPublishedAt": "2026-09-17T14:21:03.079121Z",
+                  "lastPublishedAt": "2026-09-17T14:21:03.079121Z",
+                  "relativeUrl": "/2026/challenges/interplanetary-survival-guide-martian-map/",
+                  "live": true,
+                  "parent": null,
+                  "__typename": "ExpandedPageMeta"
+                },
+                "excerpt": "NASA has explored Mars robotically for decades, studying its extreme environment, mapping its surface, and collecting many types of data. Far from home, the first astronauts to set foot on Mars will want the best map possible, with information on the details of their routes and destinations, updates on current conditions, and the data needed to complete their mission quickly and safely. Your challenge is to create a layered, integrated view of a location or route on the Martian surface that pulls together data from multiple NASA science missions and could help a human explorer plan and carry out a successful Marswalk while conducting new and exciting science along the way.",
                 "__typename": "ChallengePage"
               },
               "location": "aWQ6NTQ0NDY=",
