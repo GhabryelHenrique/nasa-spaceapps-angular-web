@@ -1,383 +1,539 @@
-﻿Attended Event,Status,Type,Location,Created At
-No,Registered,In-Person,Brazil,"
+﻿"Attended Event","Status","Type","Email","Name","Location","Parent/Guardian Name","Parent/Guardian Email","Team Name","Project Submitted","Created At"
+"No","Registered","Virtual","bruno.engeletrica@hotmail.com","Bruno Sousa de Castro","Brazil","N/A","N/A","N/A","N/A","
+				22
+				September
+				2026
+				14:23
+			"
+"No","Registered","Virtual","denerrmj@gmail.com","Dener Reis Menezes","Brazil","N/A","N/A","N/A","N/A","
+				22
+				September
+				2026
+				13:37
+			"
+"No","Registered","Virtual","nicholas.ps1000@gmail.com","NICHOLAS BORGES DA SILVA PRADO","Brazil","N/A","N/A","N/A","N/A","
+				22
+				September
+				2026
+				13:34
+			"
+"No","Registered","Virtual","jhenifer.meneses10@gmail.com","Jhenifer Ferreira Meneses","Brazil","N/A","N/A","Orbit Sentinel","No","
+				22
+				September
+				2026
+				11:38
+			"
+"No","Registered","Virtual","leonardo.a.ribeiro.21@gmail.com","Leonardo Almeida Ribeiro","Brazil","N/A","N/A","Orbit Sentinel","No","
+				22
+				September
+				2026
+				11:19
+			"
+"No","Registered","In-Person","michaelvinhal23@hotmail.com","Dom Aço","Brazil","N/A","N/A","XBigDevs","No","
+				21
+				September
+				2026
+				21:56
+			"
+"No","Registered","In-Person","pr54582@gmail.com","O Grande Soldador","Brazil","N/A","N/A","XBigDevs","No","
+				21
+				September
+				2026
+				21:56
+			"
+"No","Registered","In-Person","lm159753456@gmail.com","Diesel","Brazil","N/A","N/A","XBigDevs","No","
+				21
+				September
+				2026
+				21:56
+			"
+"No","Registered","In-Person","phkourly@gmail.com","Tim","Brazil","N/A","N/A","XBigDevs","No","
+				21
+				September
+				2026
+				21:53
+			"
+"No","Registered","In-Person","cauacavalcante2021@gmail.com","Manivela","Brazil","N/A","N/A","XBigDevs","No","
+				21
+				September
+				2026
+				21:12
+			"
+"No","Registered","In-Person","isabeladesousa.rocha@gmail.com","Isabela de Sousa Faria Pereira Rocha","Brazil","N/A","N/A","N/A","N/A","
+				21
+				September
+				2026
+				10:08
+			"
+"No","Registered","In-Person","davimendes99775@gmail.com","Davi Mendes Borges","Brazil","N/A","N/A","N/A","N/A","
+				21
+				September
+				2026
+				08:08
+			"
+"No","Registered","In-Person","miguelsimamotolemes@gmail.com","Miguel Simamoto Lemes","Brazil","N/A","N/A","N/A","N/A","
+				17
+				September
+				2026
+				22:38
+			"
+"No","Registered","In-Person","raphaelsjunqueira@gmail.com","Raphael Sousa Santos Teodoro Junqueira","Brazil","N/A","N/A","Lumia","No","
+				17
+				September
+				2026
+				22:03
+			"
+"No","Registered","In-Person","leandroelias16020212@gmail.com","Leandro Elias Fontes Carrijo","Brazil","N/A","N/A","N/A","N/A","
+				17
+				September
+				2026
+				21:57
+			"
+"No","Registered","In-Person","falaaijoaozim2@gmail.com","Joao lucas silva reis","Brazil","Lorena reis","lorenareis8@gmail.com","Lumia","No","
+				17
+				September
+				2026
+				21:51
+			"
+"No","Registered","In-Person","manzanrafa@gmail.com","Rafael Duarte Manzan","Brazil","N/A","N/A","Lumia","No","
+				17
+				September
+				2026
+				21:42
+			"
+"No","Registered","In-Person","celinavieirasilva27@gmail.com","Celina Vieira Silva","Brazil","N/A","N/A","N/A","N/A","
+				17
+				September
+				2026
+				21:29
+			"
+"No","Registered","In-Person","thsan05mg@gmail.com","Thiago Alves Santana","Brazil","Alexandre Paraguassu Santana","aleparaguassumg@gmail.com","Lumia","No","
+				17
+				September
+				2026
+				21:21
+			"
+"No","Registered","In-Person","narval-ratos-2p@icloud.com","joao vitor claro","Brazil","N/A","N/A","N/A","N/A","
+				17
+				September
+				2026
+				20:32
+			"
+"No","Registered","In-Person","gregorfragiorge@gmail.com","Gregor Oliveira Fragiorge","Brazil","N/A","N/A","GURIS DA CATEQUESE 2026","No","
+				17
+				September
+				2026
+				20:17
+			"
+"No","Registered","Virtual","freitasgermano8@gmail.com","Germano Augusto Freitas Barbosa","Brazil","N/A","N/A","N/A","N/A","
+				17
+				September
+				2026
+				19:48
+			"
+"No","Registered","In-Person","matheusn06leite@gmail.com","Matheus Nascimento leite","Brazil","N/A","N/A","N/A","N/A","
+				17
+				September
+				2026
+				16:52
+			"
+"No","Registered","In-Person","brenodev777@gmail.com","Breno Souza Ramos","Brazil","N/A","N/A","GURIS DA CATEQUESE 2026","No","
+				17
+				September
+				2026
+				16:23
+			"
+"No","Registered","Virtual","morais.a.kaio@gmail.com","Kaio Alexandre de Morais","Brazil","N/A","N/A","Orbit Sentinel","No","
+				17
+				September
+				2026
+				14:27
+			"
+"No","Registered","Virtual","maria.luiza.m.m17@outlook.com","Maria Luiza Marques Martins","Brazil","N/A","N/A","N/A","N/A","
+				16
+				September
+				2026
+				12:23
+			"
+"No","Registered","In-Person","flavio_contato@outlook.com","Flavio Vezono Filho","Brazil","N/A","N/A","N/A","N/A","
 				14
 				September
 				2026
 				19:47
 			"
-No,Registered,In-Person,Brazil,"
+"No","Registered","In-Person","leandrospcampos@gmail.com","Leandro Silva Pina de Campos","Brazil","N/A","N/A","N/A","N/A","
 				14
 				September
 				2026
 				19:02
 			"
-No,Registered,In-Person,Brazil,"
+"No","Registered","In-Person","vg280350@gmail.com","Victor Gomes Faria","Brazil","N/A","N/A","N/A","N/A","
 				14
 				September
 				2026
 				16:37
 			"
-No,Registered,In-Person,Brazil,"
+"No","Registered","In-Person","caiosal777@gmail.com","Caio Salum","Brazil","N/A","N/A","N/A","N/A","
 				14
 				September
 				2026
 				16:23
 			"
-No,Registered,In-Person,Brazil,"
+"No","Registered","In-Person","morenoguerra18@gmail.com","Carlos Eduardo Moreno Nunes Guerra","Brazil","N/A","N/A","N/A","N/A","
 				14
 				September
 				2026
 				16:20
 			"
-No,Registered,In-Person,Brazil,"
+"No","Registered","In-Person","aquinojuniorjoel@gmail.com","Joel de Aquino Junior","Brazil","Joel de Aquino","joeldeaquino@yahoo.com.br","N/A","N/A","
 				13
 				September
 				2026
 				20:09
 			"
-No,Registered,Virtual,Brazil,"
+"No","Registered","Virtual","thailaneleticiameira@gmail.com","Thailane Leticia Meira","Brazil","Eilane Maria de Jesus Meira","eilanemeira19@gmail.com","N/A","N/A","
 				13
 				September
 				2026
 				10:19
 			"
-No,Registered,In-Person,Brazil,"
+"No","Registered","In-Person","gabrielesquivel1304@gmail.com","Gabriel Henrique Borges Esquivel","Brazil","N/A","N/A","N/A","N/A","
 				12
 				September
 				2026
 				16:56
 			"
-No,Registered,In-Person,Brazil,"
+"No","Registered","In-Person","grm1003@gmail.com","Gabriel Rezende Machado","Brazil","N/A","N/A","N/A","N/A","
 				11
 				September
 				2026
 				22:49
 			"
-No,Registered,In-Person,Brazil,"
+"No","Registered","In-Person","pedrohenriquekourly@hotmail.com","Pedro Henrique Assis Kourly","Brazil","N/A","N/A","N/A","N/A","
 				11
 				September
 				2026
 				11:52
 			"
-No,Registered,In-Person,Brazil,"
+"No","Registered","In-Person","gabrielrodrigues12oficial@gmail.com","Gabriel Rodrigues","Brazil","N/A","N/A","GURIS DA CATEQUESE 2026","No","
 				10
 				September
 				2026
 				22:35
 			"
-No,Registered,In-Person,Brazil,"
+"No","Registered","In-Person","paulohasantos10@hotmail.com","Paulo Henrique Alves Santos","Brazil","N/A","N/A","N/A","N/A","
 				10
 				September
 				2026
 				11:22
 			"
-No,Registered,Virtual,Brazil,"
+"No","Registered","Virtual","saldanhavitoria152@gmail.com","Vitoria Saldanha Salatiel Rodrigues","Brazil","N/A","N/A","N/A","N/A","
 				08
 				September
 				2026
 				22:50
 			"
-No,Registered,In-Person,Brazil,"
+"No","Registered","In-Person","lucas.cardoso.jabur@outlook.com","Lucas Cardoso Jabur","Brazil","N/A","N/A","N/A","N/A","
 				08
 				September
 				2026
 				14:16
 			"
-No,Registered,In-Person,Brazil,"
+"No","Registered","In-Person","lunasoft57@gmail.com","Alice Vieira Ayres de Oliveira","Brazil","Frederico Ayres de Oliveira Neto","frederico.ayres@gmail.com","N/A","N/A","
 				07
 				September
 				2026
 				18:25
 			"
-No,Registered,In-Person,Brazil,"
+"No","Registered","In-Person","abeldib@yahoo.com.br","ABEL DIB RAYASHI","Brazil","N/A","N/A","N/A","N/A","
 				07
 				September
 				2026
 				17:40
 			"
-No,Registered,In-Person,Brazil,"
+"No","Registered","In-Person","danielvitoramos@gmail.com","Daniel Vito Ramos","Brazil","Graziele Aparecida da Silva Ramos","graziramos.adv@gmail.com","N/A","N/A","
 				07
 				September
 				2026
 				16:49
 			"
-No,Registered,In-Person,Brazil,"
+"No","Registered","In-Person","layyanerodriguess@gmail.com","Layane Rodrigues Marques","Brazil","N/A","N/A","N/A","N/A","
 				07
 				September
 				2026
 				14:19
 			"
-No,Registered,In-Person,Brazil,"
+"No","Registered","In-Person","alexandremacedoalvarenga@hotmail.com","Alexandre Macedo Alvarenga","Brazil","N/A","N/A","N/A","N/A","
 				06
 				September
 				2026
 				22:11
 			"
-No,Registered,In-Person,Brazil,"
+"No","Registered","In-Person","sandrovictors@gmail.com","sandro Victor Souza Ipuchima","Brazil","N/A","N/A","N/A","N/A","
 				04
 				September
 				2026
 				15:46
 			"
-No,Registered,In-Person,Brazil,"
+"No","Registered","In-Person","anamska008@gmail.com","Ana Keller Segala Moraes Almeida","Brazil","N/A","N/A","N/A","N/A","
 				04
 				September
 				2026
 				13:14
 			"
-No,Registered,In-Person,Brazil,"
+"No","Registered","In-Person","piresat700@gmail.com","Tulio Pires de Queiroz Almeida","Brazil","N/A","N/A","N/A","N/A","
 				04
 				September
 				2026
 				13:06
 			"
-No,Registered,In-Person,Brazil,"
+"No","Registered","In-Person","luisaverly1@gmail.com","Luisa Verly de Souza","Brazil","N/A","N/A","N/A","N/A","
 				04
 				September
 				2026
 				10:39
 			"
-No,Registered,In-Person,Brazil,"
+"No","Registered","In-Person","fa1548795@gmail.com","Taylor Franco","Brazil","N/A","N/A","Apollo Balboa","No","
 				03
 				September
 				2026
 				13:25
 			"
-No,Registered,In-Person,Brazil,"
+"No","Registered","In-Person","alecio.programador@gmail.com","Alécio Vieira da Silva","Brazil","N/A","N/A","N/A","N/A","
 				03
 				September
 				2026
 				11:27
 			"
-No,Registered,In-Person,Brazil,"
+"No","Registered","In-Person","guilhermeaoyaguiide@gmail.com","Guilherme Aoyagui Ide","Brazil","N/A","N/A","N/A","N/A","
 				02
 				September
 				2026
 				21:26
 			"
-No,Registered,In-Person,Brazil,"
+"No","Registered","In-Person","thalesgabriel536@gmail.com","Thales Gabriel Moura","Brazil","N/A","N/A","N/A","N/A","
 				02
 				September
 				2026
 				21:05
 			"
-No,Registered,Virtual,Brazil,"
+"No","Registered","Virtual","jmtristao@edu.uniube.br","Júlia Mendes Tristão Silva","Brazil","N/A","N/A","VoyIAger II","No","
 				02
 				September
 				2026
 				19:49
 			"
-No,Registered,Virtual,Brazil,"
+"No","Registered","Virtual","lukinhas.spy6@gmail.com","Lucas Vieira Alves Nominato Santos","Brazil","N/A","N/A","N/A","N/A","
 				02
 				September
 				2026
 				17:17
 			"
-No,Registered,In-Person,Brazil,"
+"No","Registered","In-Person","karolainerm@hotmail.com","Karolaine Ribeiro Muniz","Brazil","N/A","N/A","N/A","N/A","
 				02
 				September
 				2026
 				16:58
 			"
-No,Registered,In-Person,Brazil,"
+"No","Registered","In-Person","vitorhnv@gmail.com","Vitor Hugo Neves Do Vale Camargos","Brazil","N/A","N/A","N/A","N/A","
 				02
 				September
 				2026
 				16:46
 			"
-No,Registered,Virtual,Brazil,"
+"No","Registered","Virtual","joaoricardomf2@gmail.com","joão Ricardo Machado Filho","Brazil","N/A","N/A","N/A","N/A","
 				02
 				September
 				2026
 				10:46
 			"
-No,Registered,In-Person,Brazil,"
+"No","Registered","In-Person","kevinlucas653@gmail.com","kevin lucas domingos pereira","Brazil","N/A","N/A","N/A","N/A","
 				01
 				September
 				2026
 				21:38
 			"
-No,Registered,In-Person,Brazil,"
+"No","Registered","In-Person","pietro.ponciano2023@gmail.com","Pietro Gonçalves Ponciano","Brazil","N/A","N/A","N/A","N/A","
 				01
 				September
 				2026
 				20:06
 			"
-No,Registered,Virtual,Brazil,"
+"No","Registered","Virtual","contato.vanessaeduarda@gmail.com","Vanessa Eduarda Silva Cunha","Brazil","N/A","N/A","VoyIAger II","No","
 				01
 				September
 				2026
 				18:09
 			"
-No,Registered,Virtual,Brazil,"
+"No","Registered","Virtual","belaine2828@gmail.com","Elaine Barbosa da Silva","Brazil","N/A","N/A","Orbit Sentinel","No","
 				01
 				September
 				2026
 				10:15
 			"
-No,Registered,Virtual,Brazil,"
+"No","Registered","Virtual","lucybaia2004@gmail.com","Marcela Lucy Baia de Jesus","Brazil","N/A","N/A","Orbit Sentinel","No","
 				01
 				September
 				2026
 				10:14
 			"
-No,Registered,In-Person,Brazil,"
+"No","Registered","In-Person","pso180807@gmail.com","Pedro santos oliveira","Brazil","N/A","N/A","N/A","N/A","
 				31
 				August
 				2026
 				22:50
 			"
-No,Registered,In-Person,Brazil,"
+"No","Registered","In-Person","belchior1100@gmail.com","Lucas Panonko Assis Belchior","Brazil","N/A","N/A","N/A","N/A","
 				31
 				August
 				2026
 				19:00
 			"
-No,Registered,In-Person,Brazil,"
+"No","Registered","In-Person","leandrojerse@gmail.com","Leandro Marques Gontijo Jersé","Brazil","N/A","N/A","N/A","N/A","
 				31
 				August
 				2026
 				17:26
 			"
-No,Registered,In-Person,Brazil,"
+"No","Registered","In-Person","acarolinnaestuda@gmail.com","Anna Carolinna Ferreira dos Santos","Brazil","Rita de Cássia Ferreira dos Anjos","cassia.pernambucana@hotmail.com","AstroUdi","No","
 				30
 				August
 				2026
 				21:50
 			"
-No,Registered,In-Person,Brazil,"
+"No","Registered","In-Person","joaoeduardorodrigues116@gmail.com","João Eduardo Rodrigues","Brazil","eduardo vicente rodrigues","vicente.eduardo@bol.com.br","N/A","N/A","
 				30
 				August
 				2026
 				11:23
 			"
-No,Registered,Virtual,Brazil,"
+"No","Registered","Virtual","kevinferreirarosa@yahoo.com","Kevin Ferreira Rosa","Brazil","N/A","N/A","VoyIAger II","No","
 				29
 				August
 				2026
 				16:42
 			"
-No,Registered,In-Person,Brazil,"
+"No","Registered","In-Person","gustavofernandesdasilva511@gmail.com","Gustavo Fernandes da Silva","Brazil","N/A","N/A","N/A","N/A","
 				28
 				August
 				2026
 				19:40
 			"
-No,Registered,In-Person,Brazil,"
+"No","Registered","In-Person","joaovitormdm@outlook.com","Joao Vitor Martins de Melo","Brazil","N/A","N/A","N/A","N/A","
 				28
 				August
 				2026
 				14:02
 			"
-No,Registered,In-Person,Brazil,"
+"No","Registered","In-Person","alicecorreagomes3m@gmail.com","Alice Corrêa Gomes","Brazil","Eliabe Alves Gomes","eliabe3m@gmail.com","N/A","N/A","
 				27
 				August
 				2026
 				21:21
 			"
-No,Registered,In-Person,Brazil,"
+"No","Registered","In-Person","max000.256.000@gmail.com","Mykaell Max B. P.","Brazil","N/A","N/A","N/A","N/A","
 				27
 				August
 				2026
 				16:47
 			"
-No,Registered,In-Person,Brazil,"
+"No","Registered","In-Person","francine.masselli31@gmail.com","Francine Machado Masselli","Brazil","N/A","N/A","N/A","N/A","
 				27
 				August
 				2026
 				13:16
 			"
-No,Registered,In-Person,Brazil,"
+"No","Registered","In-Person","neirylucia2@gmail.com","neiry lucia de oliveira parreira","Brazil","N/A","N/A","N/A","N/A","
 				27
 				August
 				2026
 				08:43
 			"
-No,Registered,In-Person,Brazil,"
+"No","Registered","In-Person","luizteixeirabelarmino@gmail.com","Luiz Fernando Teixeira Belarmino","Brazil","N/A","N/A","N/A","N/A","
 				27
 				August
 				2026
 				00:16
 			"
-No,Registered,Virtual,Brazil,"
+"No","Registered","Virtual","clecio.sousa34@gmail.com","Clécio Sousa Resende","Brazil","Maurício Sousa Resende","clecio_resende@hotmail.com","N/A","N/A","
 				26
 				August
 				2026
 				19:03
 			"
-No,Registered,In-Person,Brazil,"
+"No","Registered","In-Person","layaneoliveira629@gmail.com","Layane Oliveira Garzoni","Brazil","N/A","N/A","N/A","N/A","
 				26
 				August
 				2026
 				18:52
 			"
-No,Registered,In-Person,Brazil,"
+"No","Registered","In-Person","juliane.souza@ufu.br","Juliane Caixeta Ferreira de Souza","Brazil","Célia Regina Caixeta Ferreira","rclia77@yahoo.com","N/A","N/A","
 				26
 				August
 				2026
 				17:52
 			"
-No,Registered,In-Person,Brazil,"
+"No","Registered","In-Person","clarabuenorodrigues1204@gmail.com","Clara Bueno Rodrigues","Brazil","N/A","N/A","N/A","N/A","
 				26
 				August
 				2026
 				16:46
 			"
-No,Registered,In-Person,Brazil,"
+"No","Registered","In-Person","saradutra@ufu.br","Sara Dutra Costa","Brazil","N/A","N/A","N/A","N/A","
 				26
 				August
 				2026
 				16:36
 			"
-No,Registered,In-Person,Brazil,"
+"No","Registered","In-Person","srenzo762@gmail.com","Enzo lucas","Brazil","N/A","N/A","N/A","N/A","
 				26
 				August
 				2026
 				16:06
 			"
-No,Registered,In-Person,Brazil,"
+"No","Registered","In-Person","ecfgustavo@gmail.com","Crank","Brazil","N/A","N/A","XBigDevs","No","
 				26
 				August
 				2026
 				15:59
 			"
-No,Registered,In-Person,Brazil,"
+"No","Registered","In-Person","mariagabryellegaby@gmail.com","MARIA GABRYELLE BEZERRA DE OLIVEIRA","Brazil","N/A","N/A","N/A","N/A","
 				26
 				August
 				2026
 				15:27
 			"
-No,Registered,Virtual,Brazil,"
+"No","Registered","Virtual","mjdos.2014@gmail.com","Marcelo José de Oliveira Santos","Brazil","N/A","N/A","Orbit Sentinel","No","
 				26
 				August
 				2026
 				15:24
 			"
-No,Registered,In-Person,Brazil,"
+"No","Registered","In-Person","gabi.gomes.gr@gmail.com","Gabriella Gomes Alves Rodrigues","Brazil","N/A","N/A","N/A","N/A","
 				26
 				August
 				2026
 				15:20
 			"
-No,Registered,In-Person,Brazil,"
+"No","Registered","In-Person","mcprofissional12@gmail.com","Matheus César Pereira de Vasconcelos","Brazil","N/A","N/A","N/A","N/A","
 				26
 				August
 				2026
 				14:58
 			"
-No,Registered,In-Person,Brazil,"
+"No","Registered","In-Person","hashymonkurazaki@gmail.com","Gabriel Franzoi Oliveira","Brazil","Natalia Regina Franzoi","nataliafranzoi@yahoo.com.br","Lumia","No","
 				26
 				August
 				2026
 				14:36
 			"
-No,Registered,In-Person,Brazil,"
+"No","Registered","In-Person","thiagoalvessantana07@gmail.com","Thiago Alves Santana","Brazil","Alexandre Paraguassu Santana","aleparaguassumg@gmail.com","N/A","N/A","
 				26
 				August
 				2026
 				14:23
 			"
-No,Registered,In-Person,Brazil,"
+"No","Registered","In-Person","isabelacristinasilveira1@gmail.com","Isabela Cristina Silveira","Brazil","N/A","N/A","N/A","N/A","
 				26
 				August
 				2026
