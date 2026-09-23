@@ -32,12 +32,16 @@
         <p class="team-excerpt">{{ team.excerpt }}</p>
 
         <div class="team-meta">
-          <span class="meta-item">
-            <strong>Desafio:</strong> {{ team.challengeDetails.title }}
-          </span>
-          <span class="meta-item">
-            <strong>Local:</strong> {{ team.locationDetails.displayName }}
-          </span>
+          @if (team.challengeDetails?.title; as challengeTitle) {
+            <span class="meta-item">
+              <strong>Desafio:</strong> {{ challengeTitle }}
+            </span>
+          }
+          @if (team.locationDetails?.displayName; as locationName) {
+            <span class="meta-item">
+              <strong>Local:</strong> {{ locationName }}
+            </span>
+          }
         </div>
       </div>
       <div class="team-image" >

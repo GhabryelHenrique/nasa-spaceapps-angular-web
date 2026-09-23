@@ -46,9 +46,9 @@
             [routerLink]="['/times-vencedores', team.slug]">
             <span class="winner-award">{{ team.awardCategory }} · {{ team.awardYear }}</span>
             <span class="winner-name">{{ team.title }}</span>
-            @if (team.challengeDetails.title) {
+            @if (team.challengeDetails?.title; as challengeTitle) {
               <span class="winner-challenge">
-                {{ team.challengeDetails.title }}
+                {{ challengeTitle }}
               </span>
             }
             <span class="winner-link">Ver apresentação →</span>

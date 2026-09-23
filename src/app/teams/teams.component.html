@@ -10,8 +10,59 @@
 
   <header class="teams-header">
     <div class="container">
-      <h1 class="page-title">Times Cadastrados</h1>
-      <p class="page-subtitle">Conheça os times participantes do NASA Space Apps Challenge em Uberlândia</p>
+      <nav class="edition-switcher" aria-label="Edição dos times">
+        @for (editionYear of years; track editionYear) {
+          <a
+            class="edition-btn"
+            [class.active]="editionYear === year()"
+            [routerLink]="['/times', editionYear]"
+            [attr.aria-current]="editionYear === year() ? 'page' : null">
+            {{ editionYear }}
+          </a>
+        }
+      </nav>
+
+      <h1 class="page-title">Times {{ year() }}</h1>
+
+      @if (isCurrentEdition()) {
+        <p class="page-subtitle">
+          Os times já formados para o NASA Space Apps Challenge em Uberlândia. Ainda dá tempo
+          de criar o seu ou pedir para entrar em um time aberto — tudo pelo site da NASA.
+        </p>
+
+        <a [href]="registrationUrl" class="header-cta" target="_blank" rel="noopener noreferrer">
+          <i class="ph ph-rocket-launch" aria-hidden="true"></i>
+          Criar ou entrar em um time
+        </a>
+      } @else {
+        <p class="page-subtitle">
+          Os times que participaram do NASA Space Apps Challenge {{ year() }} em Uberlândia.
+          Esta edição já foi encerrada — use o seletor acima para ver os times de
+          {{ years[0] }}.
+        </p>
+      }
+
+      <!-- Resumo da edição -->
+      @if (!loading() && !error() && totalTeams() > 0) {
+        <div class="teams-summary">
+          <div class="summary-item">
+            <strong>{{ totalTeams() }}</strong>
+            <span>{{ totalTeams() === 1 ? 'time inscrito' : 'times inscritos' }}</span>
+          </div>
+          @if (hasOpenTeams()) {
+            <div class="summary-item">
+              <strong>{{ openTeamsCount() }}</strong>
+              <span>{{ openTeamsCount() === 1 ? 'aberto a novos membros' : 'abertos a novos membros' }}</span>
+            </div>
+          }
+          @if (hasSubmissions()) {
+            <div class="summary-item">
+              <strong>{{ submittedCount() }}</strong>
+              <span>{{ submittedCount() === 1 ? 'projeto submetido' : 'projetos submetidos' }}</span>
+            </div>
+          }
+        </div>
+      }
 
       <!-- Search Section -->
       <div class="search-section">
@@ -19,53 +70,68 @@
           <div class="search-bar">
             <input
               type="text"
-              [(ngModel)]="searchQuery"
+              [ngModel]="searchQuery()"
+              (ngModelChange)="searchQuery.set($event)"
               placeholder="Buscar times..."
               class="search-input"
-              (keyup)="onSearch()"
+              aria-label="Buscar times"
             >
-            <button class="search-button" (click)="onSearch()" [disabled]="loading()">
+            <span class="search-button" aria-hidden="true">
               <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M21 21L16.514 16.506M19 10.5C19 15.194 15.194 19 10.5 19S2 15.194 2 10.5 5.806 2 10.5 2 19 5.806 19 10.5Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
               </svg>
-            </button>
+            </span>
           </div>
 
           <!-- Challenge Filter -->
-          <div class="filter-section">
-            <select
-              [(ngModel)]="selectedChallenge"
-              (change)="onChallengeFilter()"
-              class="challenge-filter"
-              [disabled]="loading()">
-              <option value="">Todos os desafios</option>
-              @for (challenge of availableChallenges; track challenge.id) {
-                <option [value]="challenge.id">
-                  {{ challenge.title }}
-                </option>
-              }
-            </select>
-          </div>
+          @if (availableChallenges().length > 0) {
+            <div class="filter-section">
+              <select
+                [ngModel]="selectedChallenge()"
+                (ngModelChange)="selectedChallenge.set($event)"
+                class="challenge-filter"
+                aria-label="Filtrar por desafio">
+                <option value="">Todos os desafios</option>
+                @for (challenge of availableChallenges(); track challenge.id) {
+                  <option [value]="challenge.id">
+                    {{ challenge.title }}
+                  </option>
+                }
+              </select>
+            </div>
+          }
 
           <!-- Submission Status Filter -->
-          <div class="filter-section">
-            <select
-              [(ngModel)]="selectedSubmissionStatus"
-              (change)="onSubmissionStatusFilter()"
-              class="challenge-filter"
-              [disabled]="loading()">
-              <option value="">Todos os status</option>
-              <option value="submitted">Projeto submetido</option>
-              <option value="not-submitted">Projeto não submetido</option>
-            </select>
-          </div>
+          @if (hasSubmissions()) {
+            <div class="filter-section">
+              <select
+                [ngModel]="selectedSubmissionStatus()"
+                (ngModelChange)="selectedSubmissionStatus.set($event)"
+                class="challenge-filter"
+                aria-label="Filtrar por status do projeto">
+                <option value="">Todos os status</option>
+                <option value="submitted">Projeto submetido</option>
+                <option value="not-submitted">Projeto não submetido</option>
+              </select>
+            </div>
+          }
+
+          <!-- Times abertos -->
+          @if (hasOpenTeams()) {
+            <label class="open-toggle" [class.active]="onlyOpenTeams()">
+              <input
+                type="checkbox"
+                [ngModel]="onlyOpenTeams()"
+                (ngModelChange)="onlyOpenTeams.set($event)"
+              >
+              <i class="ph ph-user-plus" aria-hidden="true"></i>
+              Só times abertos
+            </label>
+          }
 
           <!-- Clear Filters Button -->
-          @if (selectedChallenge || searchQuery) {
-            <button
-              class="clear-filters-btn"
-              (click)="clearFilters()"
-              [disabled]="loading() || (!selectedChallenge && !searchQuery)">
+          @if (hasActiveFilters()) {
+            <button class="clear-filters-btn" (click)="clearFilters()">
               <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M18 6L6 18M6 6L18 18" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
               </svg>
@@ -74,17 +140,22 @@
           }
         </div>
 
-        @if (totalCount() > 0) {
+        @if (!loading() && !error()) {
           <div class="teams-count">
-            {{ getTotalCountLabel() }} time{{ totalCount() !== 1 ? 's' : '' }} encontrado{{ totalCount() !== 1 ? 's' : '' }}
-            @if (selectedChallenge) {
+            {{ teams().length }} time{{ teams().length !== 1 ? 's' : '' }} encontrado{{ teams().length !== 1 ? 's' : '' }}
+            @if (selectedChallenge()) {
               <span class="filter-info">
-                • Desafio: <strong>{{ getSelectedChallengeTitle() }}</strong>
+                • Desafio: <strong>{{ selectedChallengeTitle() }}</strong>
               </span>
             }
-            @if (selectedSubmissionStatus) {
+            @if (selectedSubmissionStatus()) {
               <span class="filter-info">
-                • Status: <strong>{{ getSubmissionStatusLabel() }}</strong>
+                • Status: <strong>{{ submissionStatusLabel() }}</strong>
+              </span>
+            }
+            @if (onlyOpenTeams()) {
+              <span class="filter-info">
+                • <strong>Abertos a novos membros</strong>
               </span>
             }
           </div>
@@ -96,7 +167,7 @@
   <main class="teams-main">
     <div class="container">
       <!-- Loading State -->
-      @if (loading() && teams().length === 0) {
+      @if (loading()) {
         <div class="loading-state">
           <div class="loading-spinner"></div>
           <p>Carregando times...</p>
@@ -111,12 +182,12 @@
           </svg>
           <h3>Erro ao carregar times</h3>
           <p>{{ error() }}</p>
-          <button class="retry-button" (click)="loadTeams()">Tentar novamente</button>
+          <button class="retry-button" (click)="retry()">Tentar novamente</button>
         </div>
       }
 
       <!-- Teams Grid -->
-      @if (teams().length > 0 && !error()) {
+      @if (!loading() && !error() && teams().length > 0) {
         <div class="teams-grid">
           @for (team of teams(); track team.id) {
             <div class="team-card">
@@ -126,6 +197,7 @@
                   [src]="getTeamImageUrl(team)"
                   [alt]="team.title"
                   class="team-image"
+                  loading="lazy"
                   onerror="this.src='/assets/nasa-spaceapps-logo.png'"
                 >
                 @if (team.awardBadges && team.awardBadges.length > 0) {
@@ -141,29 +213,37 @@
 
               <!-- Team Content -->
               <div class="team-content">
-                <h3 class="team-title">{{ team.title }}</h3>
+                <div class="team-heading">
+                  <h3 class="team-title">{{ team.title }}</h3>
+                  @if (team.joinEnabled && isCurrentEdition()) {
+                    <span class="open-chip" title="Este time aceita novos membros">
+                      <i class="ph ph-user-plus" aria-hidden="true"></i> Aberto
+                    </span>
+                  }
+                </div>
+
                 @if (team.excerpt) {
                   <p class="team-excerpt">{{ team.excerpt }}</p>
                 }
 
                 <!-- Team Info -->
                 <div class="team-info">
-                  @if (team.challengeDetails.title) {
+                  @if (team.challengeDetails?.title; as challengeTitle) {
                     <div class="info-item">
                       <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M9 12L11 14L15 10M21 12C21 16.971 16.971 21 12 21S3 16.971 3 12 7.029 3 12 3 21 7.029 21 12Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                       </svg>
-                      <span>{{ team.challengeDetails.title }}</span>
+                      <span>{{ challengeTitle }}</span>
                     </div>
                   }
 
-                  @if (team.locationDetails.displayName) {
+                  @if (getLocationLabel(team)) {
                     <div class="info-item">
                       <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M21 10C21 17 12 23 12 23S3 17 3 10C3 7.61305 3.94821 5.32387 5.63604 3.63604C7.32387 1.94821 9.61305 1 12 1C14.3869 1 16.6761 1.94821 18.3639 3.63604C20.0518 5.32387 21 7.61305 21 10Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                         <path d="M12 13C13.6569 13 15 11.6569 15 10C15 8.34315 13.6569 7 12 7C10.3431 7 9 8.34315 9 10C9 11.6569 10.3431 13 12 13Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                       </svg>
-                      <span>{{ team.locationDetails.displayName }}</span>
+                      <span>{{ getLocationLabel(team) }}</span>
                     </div>
                   }
                 </div>
@@ -201,16 +281,15 @@
                   </div>
                 }
 
-                <!-- Project Status -->
-                @if (team.projectDetails) {
+                <!-- Project Status — só depois que a submissão abre -->
+                @if (hasSubmissions()) {
                   <div class="project-status">
                     <div class="status-indicator" [class.submitted]="team.projectSubmitted">
                       @if (team.projectSubmitted) {
                         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                           <path d="M9 12L11 14L15 10M21 12C21 16.971 16.971 21 12 21S3 16.971 3 12 7.029 3 12 3 21 7.029 21 12Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                         </svg>
-                      }
-                      @if (!team.projectSubmitted) {
+                      } @else {
                         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                           <path d="M12 9V13M12 17H12.01M21 12C21 16.971 16.971 21 12 21S3 16.971 3 12 7.029 3 12 3 21 7.029 21 12Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                         </svg>
@@ -230,6 +309,7 @@
                           <img
                             [src]="member.userDetails.avatar?.rendition?.fullUrl || '/assets/organizers/placeholder.svg'"
                             [alt]="member.userDetails.fullName"
+                            loading="lazy"
                             onerror="this.src='/assets/organizers/placeholder.svg'"
                           >
                         </div>
@@ -246,15 +326,15 @@
                 <!-- Team Actions -->
                 <div class="team-actions">
                   <a
-                    [href]="'https://www.spaceappschallenge.org' + team.meta.relativeUrl"
+                    [href]="getOfficialUrl(team)"
                     target="_blank"
                     rel="noopener noreferrer"
                     class="nasa-btn"
-                    aria-label="Visitar o site oficial da NASA Space Apps Challenge">
+                    [attr.aria-label]="'Ver o time ' + team.title + ' no site oficial do NASA Space Apps Challenge'">
                     <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                       <path d="M18 13V6C18 5.46957 17.7893 4.96086 17.4142 4.58579C17.0391 4.21071 16.5304 4 16 4H8C7.46957 4 6.96086 4.21071 6.58579 4.58579C6.21071 4.96086 6 5.46957 6 6V13M18 13L22 9L18 13ZM18 13L14 9L18 13ZM2 20L22 20" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                     </svg>
-                    Ver no Site Oficial
+                    {{ team.joinEnabled && isCurrentEdition() ? 'Ver time e pedir para entrar' : 'Ver no Site Oficial' }}
                   </a>
                 </div>
               </div>
@@ -264,33 +344,26 @@
       }
 
       <!-- Empty State -->
-      @if (teams().length === 0 && !loading() && !error()) {
+      @if (!loading() && !error() && teams().length === 0) {
         <div class="empty-state">
           <svg width="64" height="64" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M16 21V19C16 17.9391 15.5786 16.9217 14.8284 16.1716C14.0783 15.4214 13.0609 15 12 15H5C3.93913 15 2.92172 15.4214 2.17157 16.1716C1.42143 16.9217 1 17.9391 1 19V21M12.5 7C12.5 9.20914 10.7091 11 8.5 11C6.29086 11 4.5 9.20914 4.5 7C4.5 4.79086 6.29086 3 8.5 3C10.7091 3 12.5 4.79086 12.5 7ZM20 8V14M23 11H17" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
           </svg>
-          <h3>Nenhum time encontrado</h3>
-          <p>Não encontramos times com os critérios de busca utilizados.</p>
-        </div>
-      }
-
-      <!-- Load More Button -->
-      @if (hasNextPage() && !loading()) {
-        <div class="load-more-section">
-          <button class="load-more-button" (click)="loadMore()">
-            Carregar mais times
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M19 14L12 21L5 14M12 21V3" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-            </svg>
-          </button>
-        </div>
-      }
-
-      <!-- Loading More -->
-      @if (loading() && teams().length > 0) {
-        <div class="loading-more">
-          <div class="loading-spinner small"></div>
-          <span>Carregando mais times...</span>
+          @if (hasActiveFilters()) {
+            <h3>Nenhum time encontrado</h3>
+            <p>Não encontramos times com os critérios de busca utilizados.</p>
+            <button class="retry-button" (click)="clearFilters()">Limpar filtros</button>
+          } @else {
+            <h3>Nenhum time inscrito ainda</h3>
+            <p>
+              Os times de {{ year() }} aparecem aqui assim que forem criados no site da NASA.
+            </p>
+            @if (isCurrentEdition()) {
+              <a [href]="registrationUrl" class="retry-button" target="_blank" rel="noopener noreferrer">
+                Criar o primeiro time
+              </a>
+            }
+          }
         </div>
       }
     </div>

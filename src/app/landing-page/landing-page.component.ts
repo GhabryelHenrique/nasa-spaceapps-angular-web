@@ -136,7 +136,9 @@ export class LandingPageComponent implements OnInit {
   }
 
   private loadTeamsStats(): void {
-    this.teamsService.getTeams(100).subscribe({
+    // Fixo em 2025: os números e os indicados globais desta seção são o retrospecto
+    // da edição passada. A listagem da edição corrente vive em /times.
+    this.teamsService.getTeams(2025).subscribe({
       next: (response) => {
         if (response.data && response.data[0] && response.data[0].teams) {
           const teamsData = response.data[0].teams;

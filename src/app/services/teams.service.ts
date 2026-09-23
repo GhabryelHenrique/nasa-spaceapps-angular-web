@@ -1,7 +1,7 @@
 import { Injectable, inject } from '@angular/core';
-import { Observable, delay, of } from 'rxjs';
+import { Observable, shareReplay, tap } from 'rxjs';
 import { TeamsResponse } from '../shared/data/teams.data';
-import * as realApiResponse from '../../assets/data/2025/teams.json';
+import { CURRENT_CHALLENGE_YEAR } from '../shared/data/challenges.data';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 
 export interface TeamQueryVariables {
@@ -54,13 +54,31 @@ export class TeamsService {
 
   private readonly http = inject(HttpClient);
 
-  getTeams(
-    first: number = 20,
-    after: string = '',
-    q: string = ''
-  ): Observable<TeamsResponse> {
-    // Usa dados reais da API com fallback para mock
-    return this.getRealTeamsData(first, after, q);
+  /**
+   * Times da sede já carregados, por edição. Os JSONs são versionados em
+   * `/assets/data/<ano>/teams.json` (gerados por `update_teams.py`), então o
+   * resultado é cacheado: alternar entre 2025 e 2026 não refaz o GET.
+   */
+  private readonly byYear = new Map<number, Observable<TeamsResponse>>();
+
+  /**
+   * Times de uma edição. Sem paginação nem busca no servidor — o arquivo traz a
+   * sede inteira de uma vez e quem consome filtra em memória.
+   */
+  getTeams(year: number = CURRENT_CHALLENGE_YEAR): Observable<TeamsResponse> {
+    let cached = this.byYear.get(year);
+
+    if (!cached) {
+      cached = this.http.get<TeamsResponse>(`/assets/data/${year}/teams.json`).pipe(
+        // Erro não pode ficar preso no shareReplay, senão o "Tentar novamente"
+        // reexibiria a falha para sempre; descartar deixa o próximo GET limpo.
+        tap({ error: () => this.byYear.delete(year) }),
+        shareReplay({ bufferSize: 1, refCount: false })
+      );
+      this.byYear.set(year, cached);
+    }
+
+    return cached;
   }
 
    private getCookies(): string {
@@ -310,44 +328,6 @@ export class TeamsService {
     };
 
     return this.getTeams1(variables);
-  }
-
-  getRealTeamsData(
-    first: number = 100,
-    after: string = '',
-    q: string = ''
-  ): Observable<TeamsResponse> {
-    // Usa apenas os dados de Uberlândia (primeiro elemento do array)
-    // O arquivo teams.json agora contém apenas Uberlândia
-    let filteredEdges = realApiResponse.data[0].teams.edges;
-
-    // Filtra teams baseado na query de busca se fornecida
-    if (q.trim()) {
-      filteredEdges = realApiResponse.data[0].teams.edges.filter(
-        (edge) =>
-          edge.node.title.toLowerCase().includes(q.toLowerCase()) ||
-          edge.node.excerpt?.toLowerCase().includes(q.toLowerCase()) ||
-          (edge.node.challengeDetails?.title &&
-            edge.node.challengeDetails.title
-              .toLowerCase()
-              .includes(q.toLowerCase()))
-      );
-    }
-
-    const response: TeamsResponse = {
-      data: [
-        {
-          teams: {
-            pageInfo: realApiResponse.data[0].teams.pageInfo,
-            totalCount: filteredEdges.length,
-            edges: filteredEdges as any,
-          },
-        },
-      ],
-    };
-
-    // Simula delay da API
-    return of(response).pipe(delay(500));
   }
 
 }

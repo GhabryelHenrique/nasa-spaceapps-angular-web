@@ -1,9 +1,18 @@
 import { CommonModule } from '@angular/common';
-import { Component, OnInit, signal } from '@angular/core';
+import { Component, computed, effect, inject, signal } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-import { RouterModule } from '@angular/router';
+import { ActivatedRoute, RouterModule } from '@angular/router';
+import { toSignal } from '@angular/core/rxjs-interop';
+import { map } from 'rxjs/operators';
 import { TeamsService } from '../services/teams.service';
 import { Team } from '../shared/data/teams.data';
+import { CURRENT_CHALLENGE_YEAR } from '../shared/data/challenges.data';
+import { REGISTRATION_URL } from '../shared/data/registration.data';
+
+/** Edições com listagem de times, da mais recente para a mais antiga. */
+export const TEAMS_YEARS = [2026, 2025];
+
+type SubmissionStatus = '' | 'submitted' | 'not-submitted';
 
 @Component({
   selector: 'app-teams',
@@ -11,149 +20,160 @@ import { Team } from '../shared/data/teams.data';
   templateUrl: './teams.component.html',
   styleUrl: './teams.component.scss'
 })
-export class TeamsComponent implements OnInit {
-  teams = signal<Team[]>([]);
-  loading = signal(false);
-  error = signal('');
-  searchQuery = '';
-  totalCount = signal(0);
-  hasNextPage = signal(false);
-  endCursor = signal('');
+export class TeamsComponent {
+  private readonly route = inject(ActivatedRoute);
+  private readonly teamsService = inject(TeamsService);
 
-  // Filter properties
-  selectedChallenge = '';
-  availableChallenges: { id: string, title: string }[] = [];
-  selectedSubmissionStatus = ''; // '' = todos, 'submitted' = submetidos, 'not-submitted' = não submetidos
+  readonly years = TEAMS_YEARS;
+  readonly registrationUrl = REGISTRATION_URL;
 
-  constructor(private teamsService: TeamsService) {}
+  /**
+   * Ano vem do `data` da rota (/times/2025 | /times/2026). Via observable, e não
+   * do snapshot, porque o seletor de edição troca de URL reusando a mesma
+   * instância do componente — com snapshot a página não atualizaria.
+   */
+  readonly year = toSignal(
+    this.route.data.pipe(map(d => (d['year'] as number) ?? CURRENT_CHALLENGE_YEAR)),
+    { initialValue: CURRENT_CHALLENGE_YEAR }
+  );
 
-  ngOnInit(): void {
-    this.loadTeams();
-    this.loadChallenges();
+  readonly isCurrentEdition = computed(() => this.year() === CURRENT_CHALLENGE_YEAR);
+
+  readonly loading = signal(true);
+  readonly error = signal('');
+
+  /** Times da edição sem nenhum filtro; a filtragem toda acontece em memória. */
+  private readonly allTeams = signal<Team[]>([]);
+
+  readonly searchQuery = signal('');
+  readonly selectedChallenge = signal('');
+  readonly selectedSubmissionStatus = signal<SubmissionStatus>('');
+  readonly onlyOpenTeams = signal(false);
+
+  constructor() {
+    effect(() => this.load(this.year()));
   }
 
-  loadTeams(after: string = ''): void {
+  // ── Dados derivados ───────────────────────────────────────
+
+  /** Desafios efetivamente escolhidos pelos times da edição. */
+  readonly availableChallenges = computed(() => {
+    const byId = new Map<string, string>();
+
+    for (const team of this.allTeams()) {
+      const challenge = team.challengeDetails;
+      if (challenge?.title) {
+        byId.set(challenge.id || team.challenge, challenge.title);
+      }
+    }
+
+    return [...byId.entries()]
+      .map(([id, title]) => ({ id, title }))
+      .sort((a, b) => a.title.localeCompare(b.title));
+  });
+
+  /**
+   * Antes do hackathon ninguém submeteu nada — o filtro de status só aparece
+   * quando existe ao menos um projeto entregue.
+   */
+  readonly hasSubmissions = computed(() => this.allTeams().some(t => t.projectSubmitted));
+
+  /** Idem para "aberto a novos membros", que só vale enquanto dá para entrar. */
+  readonly hasOpenTeams = computed(() => this.allTeams().some(t => t.joinEnabled));
+
+  readonly openTeamsCount = computed(() => this.allTeams().filter(t => t.joinEnabled).length);
+  readonly submittedCount = computed(() => this.allTeams().filter(t => t.projectSubmitted).length);
+  readonly totalTeams = computed(() => this.allTeams().length);
+
+  readonly teams = computed(() => {
+    const query = this.searchQuery().trim().toLowerCase();
+    const challengeId = this.selectedChallenge();
+    const status = this.selectedSubmissionStatus();
+    const openOnly = this.onlyOpenTeams();
+
+    return this.allTeams().filter(team => {
+      if (query) {
+        const haystack = [team.title, team.excerpt, team.challengeDetails?.title]
+          .filter(Boolean)
+          .join(' ')
+          .toLowerCase();
+        if (!haystack.includes(query)) return false;
+      }
+
+      if (challengeId && (team.challengeDetails?.id || team.challenge) !== challengeId) return false;
+      if (status === 'submitted' && !team.projectSubmitted) return false;
+      if (status === 'not-submitted' && team.projectSubmitted) return false;
+      if (openOnly && !team.joinEnabled) return false;
+
+      return true;
+    });
+  });
+
+  readonly hasActiveFilters = computed(
+    () =>
+      !!this.searchQuery() ||
+      !!this.selectedChallenge() ||
+      !!this.selectedSubmissionStatus() ||
+      this.onlyOpenTeams()
+  );
+
+  readonly selectedChallengeTitle = computed(
+    () => this.availableChallenges().find(c => c.id === this.selectedChallenge())?.title ?? ''
+  );
+
+  readonly submissionStatusLabel = computed(() => {
+    switch (this.selectedSubmissionStatus()) {
+      case 'submitted':
+        return 'Projeto submetido';
+      case 'not-submitted':
+        return 'Projeto não submetido';
+      default:
+        return '';
+    }
+  });
+
+  // ── Carregamento ──────────────────────────────────────────
+
+  private load(year: number): void {
     this.loading.set(true);
     this.error.set('');
 
-    this.teamsService.getTeams(100, after, this.searchQuery).subscribe({
-      next: (response) => {
-        if (response.data && response.data[0] && response.data[0].teams) {
-          const teamsData = response.data[0].teams;
-          let teamsList = teamsData.edges.map(edge => edge.node);
-
-          // Apply challenge filter
-          if (this.selectedChallenge) {
-            teamsList = teamsList.filter(team =>
-              team.challengeDetails?.id === this.selectedChallenge ||
-              team.challengeDetails?.title === this.selectedChallenge
-            );
-          }
-
-          // Apply submission status filter
-          if (this.selectedSubmissionStatus === 'submitted') {
-            teamsList = teamsList.filter(team => team.projectSubmitted === true);
-          } else if (this.selectedSubmissionStatus === 'not-submitted') {
-            teamsList = teamsList.filter(team => team.projectSubmitted === false);
-          }
-
-          if (after) {
-            this.teams.update(prev => [...prev, ...teamsList]);
-          } else {
-            this.teams.set(teamsList);
-          }
-          this.totalCount.set(this.selectedChallenge ? teamsList.length : teamsData.totalCount);
-          this.hasNextPage.set(teamsData.pageInfo.hasNextPage);
-          this.endCursor.set(teamsData.pageInfo.endCursor);
-        }
+    this.teamsService.getTeams(year).subscribe({
+      next: response => {
+        this.allTeams.set(response?.data?.[0]?.teams?.edges?.map(edge => edge.node) ?? []);
         this.loading.set(false);
       },
-      error: (error) => {
+      error: err => {
+        console.error('[Times] erro ao carregar times:', err);
         this.error.set('Erro ao carregar times. Tente novamente mais tarde.');
         this.loading.set(false);
-        console.error('Error loading teams:', error);
       }
     });
   }
 
-  onSearch(): void {
-    this.loadTeams();
+  retry(): void {
+    this.load(this.year());
   }
 
-  loadMore(): void {
-    if (this.hasNextPage() && !this.loading()) {
-      this.loadTeams(this.endCursor());
-    }
+  // ── Ações e helpers de template ───────────────────────────
+
+  clearFilters(): void {
+    this.searchQuery.set('');
+    this.selectedChallenge.set('');
+    this.selectedSubmissionStatus.set('');
+    this.onlyOpenTeams.set(false);
   }
 
   getTeamImageUrl(team: Team): string {
     return team.featuredImage?.rendition?.url || '/assets/nasa-spaceapps-logo.png';
   }
 
-  getMemberCount(team: Team): number {
-    return team.memberships ? team.memberships.length : 0;
+  /** 2026 vem com `displayName` vazio; o `title` ("Uberlândia") é o fallback. */
+  getLocationLabel(team: Team): string {
+    return team.locationDetails?.displayName || team.locationDetails?.title || '';
   }
 
-  loadChallenges(): void {
-    this.teamsService.getTeams(100, '', '').subscribe({
-      next: (response) => {
-        if (response.data && response.data[0] && response.data[0].teams) {
-          const teams = response.data[0].teams.edges.map(edge => edge.node);
-          const challengeMap = new Map<string, string>();
-
-          teams.forEach(team => {
-            if (team.challengeDetails && team.challengeDetails.title) {
-              challengeMap.set(team.challengeDetails.id || team.challenge, team.challengeDetails.title);
-            }
-          });
-
-          this.availableChallenges = Array.from(challengeMap.entries())
-            .map(([id, title]) => ({ id, title }))
-            .sort((a, b) => a.title.localeCompare(b.title));
-
-        }
-      },
-      error: (error) => {
-        console.error('Error loading challenges:', error);
-      }
-    });
-  }
-
-  onChallengeFilter(): void {
-    this.loadTeams();
-  }
-
-  onSubmissionStatusFilter(): void {
-    this.loadTeams();
-  }
-
-  clearFilters(): void {
-    this.selectedChallenge = '';
-    this.selectedSubmissionStatus = '';
-    this.searchQuery = '';
-    this.loadTeams();
-  }
-
-  getSelectedChallengeTitle(): string {
-    const challenge = this.availableChallenges.find(c => c.id === this.selectedChallenge);
-    return challenge ? challenge.title : '';
-  }
-
-  getSubmissionStatusLabel(): string {
-    if (this.selectedSubmissionStatus === 'submitted') {
-      return 'Projeto submetido';
-    } else if (this.selectedSubmissionStatus === 'not-submitted') {
-      return 'Projeto não submetido';
-    }
-    return '';
-  }
-
-  getTotalCountLabel(): string {
-    if (this.selectedSubmissionStatus === 'submitted') {
-      return this.teams().filter(team => team.projectSubmitted).length.toString();
-    } else if (this.selectedSubmissionStatus === 'not-submitted') {
-      return this.teams().filter(team => !team.projectSubmitted).length.toString();
-    }
-    return this.totalCount().toString();
+  getOfficialUrl(team: Team): string {
+    return `https://www.spaceappschallenge.org${team.meta.relativeUrl}`;
   }
 }

@@ -74,9 +74,10 @@ export interface Team {
     };
   };
   challenge: string;
-  challengeDetails: Challenge;
+  /** Nulo enquanto o time não escolhe um desafio. */
+  challengeDetails: Challenge | null;
   location: string;
-  locationDetails: Location;
+  locationDetails: Location | null;
   joinEnabled: boolean;
   memberships: TeamMember[] | null;
   nominationBadges: string[];

@@ -50,6 +50,41 @@
   padding: 3rem 0 2rem;
   text-align: center;
 
+  .edition-switcher {
+    display: inline-flex;
+    gap: 0.35rem;
+    margin-bottom: 1.75rem;
+    padding: 0.35rem;
+    border-radius: 50px;
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.07);
+
+    .edition-btn {
+      padding: 0.45rem 1.35rem;
+      border-radius: 50px;
+      font-weight: 700;
+      font-size: 0.9rem;
+      color: #C3D3EA;
+      text-decoration: none;
+      transition: all 0.2s ease;
+
+      &:hover {
+        background: rgba(255, 255, 255, 0.07);
+        color: #ffffff;
+      }
+
+      &.active {
+        background: linear-gradient(135deg, #2E96F5 0%, #0960E1 100%);
+        color: #061027;
+      }
+
+      &:focus-visible {
+        outline: 3px solid #EAFE07;
+        outline-offset: 2px;
+      }
+    }
+  }
+
   .page-title {
     font-size: clamp(2rem, 5vw, 3rem);
     font-weight: 800;
@@ -66,14 +101,69 @@
     color: #C3D3EA;
     line-height: 1.6;
     max-width: 700px;
-    margin: 0 auto 3rem;
+    margin: 0 auto 1.75rem;
+  }
+
+  .header-cta {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.6rem;
+    padding: 0.9rem 1.85rem;
+    border-radius: 50px;
+    background: linear-gradient(135deg, #2E96F5 0%, #0960E1 100%);
+    color: #061027;
+    font-weight: 700;
+    font-size: 1rem;
+    text-decoration: none;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+
+    &:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 10px 26px rgba(9, 96, 225, 0.35);
+    }
+
+    &:focus-visible {
+      outline: 3px solid #EAFE07;
+      outline-offset: 3px;
+    }
+  }
+
+  .teams-summary {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+    margin: 2.5rem auto 0;
+
+    .summary-item {
+      display: flex;
+      flex-direction: column;
+      gap: 0.15rem;
+      min-width: 150px;
+      padding: 1rem 1.5rem;
+      border-radius: 14px;
+      background: rgba(255, 255, 255, 0.02);
+      border: 1px solid rgba(255, 255, 255, 0.06);
+
+      strong {
+        font-size: 1.75rem;
+        font-weight: 800;
+        line-height: 1;
+        color: #2E96F5;
+      }
+
+      span {
+        font-size: 0.85rem;
+        color: #C3D3EA;
+      }
+    }
   }
 }
 
 /* Search Section */
 .search-section {
   max-width: 1200px;
-  margin: 0 auto;
+  margin: 2.5rem auto 0;
 
   .search-controls {
     display: flex;
@@ -116,20 +206,14 @@
       }
     }
 
+    /* Decorativo: a busca filtra enquanto se digita, não há botão a clicar. */
     .search-button {
-      background: transparent;
-      border: none;
-      color: #C3D3EA;
+      color: #8FA6C6;
       padding: 0 1.25rem;
-      cursor: pointer;
       display: flex;
       align-items: center;
       justify-content: center;
-      transition: color 0.2s ease;
-
-      &:hover {
-        color: #2E96F5;
-      }
+      pointer-events: none;
     }
   }
 
@@ -162,6 +246,48 @@
         background-color: #061027;
         color: #C3D3EA;
       }
+    }
+  }
+
+  .open-toggle {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.85rem 1.35rem;
+    background: rgba(0, 0, 0, 0.4);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 8px;
+    color: #C3D3EA;
+    font-size: 0.95rem;
+    font-weight: 600;
+    cursor: pointer;
+    white-space: nowrap;
+    transition: all 0.2s ease;
+
+    input {
+      accent-color: #2E96F5;
+      width: 1rem;
+      height: 1rem;
+      cursor: pointer;
+    }
+
+    i {
+      color: #2E96F5;
+    }
+
+    &:hover {
+      border-color: rgba(46, 150, 245, 0.35);
+      color: #ffffff;
+    }
+
+    &.active {
+      background: rgba(46, 150, 245, 0.12);
+      border-color: rgba(46, 150, 245, 0.4);
+      color: #ffffff;
+    }
+
+    &:focus-within {
+      border-color: rgba(46, 150, 245, 0.55);
     }
   }
 
@@ -271,6 +397,34 @@
     display: flex;
     flex-direction: column;
     flex-grow: 1;
+
+    .team-heading {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 0.75rem;
+      margin-bottom: 0.75rem;
+
+      .team-title {
+        margin-bottom: 0;
+      }
+
+      .open-chip {
+        flex-shrink: 0;
+        display: inline-flex;
+        align-items: center;
+        gap: 0.3rem;
+        padding: 0.25rem 0.6rem;
+        border-radius: 50px;
+        font-size: 0.7rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 0.03em;
+        background: rgba(46, 150, 245, 0.12);
+        color: #2E96F5;
+        border: 1px solid rgba(46, 150, 245, 0.3);
+      }
+    }
 
     .team-title {
       font-size: 1.25rem;
@@ -506,7 +660,9 @@
   to { transform: rotate(360deg); }
 }
 
+/* Serve ao <button> de "tentar novamente" e ao <a> dos CTAs do estado vazio. */
 .retry-button {
+  display: inline-block;
   margin-top: 1.5rem;
   padding: 0.75rem 1.75rem;
   // Electric Blue: branco sobre ele dá 9:1 (AAA). Rocket Red como fundo
@@ -516,54 +672,13 @@
   border-radius: 8px;
   color: white;
   font-weight: 600;
+  text-decoration: none;
   cursor: pointer;
   transition: opacity 0.2s;
 
   &:hover {
     opacity: 0.9;
   }
-}
-
-.load-more-section {
-  text-align: center;
-  margin-top: 4rem;
-}
-
-.load-more-button {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.5rem;
-  padding: 0.85rem 2rem;
-  background: rgba(255, 255, 255, 0.04);
-  border: 1px solid rgba(255, 255, 255, 0.08);
-  border-radius: 8px;
-  color: #ffffff;
-  font-weight: 600;
-  cursor: pointer;
-  transition: all 0.2s ease;
-
-  svg {
-    transition: transform 0.2s ease;
-  }
-
-  &:hover {
-    background: rgba(255, 255, 255, 0.08);
-    border-color: rgba(255, 255, 255, 0.15);
-
-    svg {
-      transform: translateY(2px);
-    }
-  }
-}
-
-.loading-more {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 0.75rem;
-  margin-top: 4rem;
-  color: #C3D3EA;
-  font-size: 0.95rem;
 }
 
 /* Responsive */
@@ -573,7 +688,16 @@
     align-items: stretch !important;
   }
 
-  .search-bar, .filter-section, .clear-filters-btn {
+  .search-bar, .filter-section, .clear-filters-btn, .open-toggle {
     width: 100%;
+  }
+
+  .open-toggle {
+    justify-content: center;
+  }
+
+  .teams-summary .summary-item {
+    flex: 1 1 40%;
+    min-width: 0;
   }
 }

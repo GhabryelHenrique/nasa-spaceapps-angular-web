@@ -48,8 +48,9 @@ export class BrazilianCitiesComparisonComponent implements OnInit {
     this.isLoading.set(true);
     console.log('[BrazilianCitiesComparison] Iniciando loadComparisonData...');
 
-    // Load Uberlândia data
-    this.teamsService.getTeams(100, '', '').subscribe({
+    // Load Uberlândia data — fixo em 2025 para casar com o otherCitiesTeams.json
+    // de 2025 usado na comparação entre cidades.
+    this.teamsService.getTeams(2025).subscribe({
       next: (response) => {
         console.log('[BrazilianCitiesComparison] Resposta getTeams recebida:', response);
         if (response && response.data && response.data[0]) {

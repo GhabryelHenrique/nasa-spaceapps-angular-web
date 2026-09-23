@@ -418,23 +418,229 @@
           "hasPreviousPage": false,
           "hasNextPage": false,
           "startCursor": "b2Zmc2V0OjA=",
-          "endCursor": "b2Zmc2V0OjA=",
+          "endCursor": "b2Zmc2V0OjI=",
           "__typename": "PageInfo"
         },
-        "totalCount": 1,
+        "totalCount": 3,
         "edges": [
           {
             "__typename": "TeamPageEdge",
             "cursor": "b2Zmc2V0OjA=",
             "node": {
               "__typename": "TeamPage",
+              "id": "aWQ6NTg2MjU=",
+              "title": "E.V.A. (Earth Variance Analytics)",
+              "meta": {
+                "type": "TEAM",
+                "slug": "eva-earth-variance-analytics",
+                "firstPublishedAt": null,
+                "lastPublishedAt": null,
+                "relativeUrl": "/2026/find-a-team/eva-earth-variance-analytics/",
+                "live": true,
+                "parent": null,
+                "__typename": "ExpandedPageMeta"
+              },
+              "owner": "aWQ6NDM1ZmIyMzQtNjQ1My00ZjQzLWI3NzctOGIyOWE2YjgwYTg1",
+              "ownerDetails": null,
+              "excerpt": "Building E.V.A. for the 'Trend Detective!' challenge—a climate intelligence platform using stats on NASA data. Our team is skilled in software, AI, and UX. We seek members with skills in Earth/data science, front-end, or business storytelling to t...",
+              "project": "aWQ6NTUwMjg=",
+              "projectDetails": {
+                "id": "aWQ6NTUwMjg=",
+                "name": "Project E.V.A. (Earth Variance Analytics)",
+                "summary": "",
+                "demoLink": "",
+                "projectLink": "",
+                "details": "",
+                "solution": "",
+                "aiReferences": "",
+                "dataReferences": "",
+                "projectReferences": "",
+                "isSubmitted": false,
+                "savedAt": null,
+                "submittedAt": null,
+                "__typename": "Project"
+              },
+              "projectSubmitted": false,
+              "featuredImage": {
+                "id": "aWQ6NDM0MjQz",
+                "meta": {
+                  "type": "images.CustomImage",
+                  "downloadUrl": "https://assets.spaceappschallenge.org/media/original_images/Gemini_Generated_Image_korxarkorxarkorx.jpeg",
+                  "__typename": "ImageMeta"
+                },
+                "title": "team_image.19:51:17.151386",
+                "alt": "team_image.19:51:17.151386",
+                "caption": "team_image.19:51:17.151386",
+                "displaySize": "or",
+                "rendition": {
+                  "url": "https://assets.spaceappschallenge.org/media/images/Gemini_Generated_Image_korxarkorxa.2e16d0ba.fill-300x250.jpg",
+                  "fullUrl": "https://assets.spaceappschallenge.org/media/images/Gemini_Generated_Image_korxarkorxa.2e16d0ba.fill-300x250.jpg",
+                  "height": 250,
+                  "width": 300,
+                  "__typename": "BaseImage"
+                },
+                "__typename": "DefaultImage"
+              },
+              "description": null,
+              "desiredSkills": null,
+              "languages": null,
+              "challenge": "aWQ6NTUxMjg=",
+              "challengeDetails": {
+                "id": "aWQ6NTUxMjg=",
+                "title": "Be An Earth System Trend Detective!",
+                "meta": {
+                  "type": "CHALLENGE",
+                  "slug": "be-an-earth-system-trend-detective",
+                  "firstPublishedAt": "2026-09-17T14:21:35.374512Z",
+                  "lastPublishedAt": "2026-09-17T14:21:35.374512Z",
+                  "relativeUrl": "/2026/challenges/be-an-earth-system-trend-detective/",
+                  "live": true,
+                  "parent": null,
+                  "__typename": "ExpandedPageMeta"
+                },
+                "excerpt": "Change is always occurring in the Earth’s interconnected environmental system, and when it  runs in a consistent direction – rising or falling, increasing or decreasing, thickening or thinning – measured variables reflect it. But a variable can trend one way in one region and the opposite way in another, even when the same process drives both.   Your challenge is to find and examine variables measured by NASA missions or produced by NASA models, visualize how they change over time, and determine what is changing, where it is changing, how much it is changing, and if these changes are what scientists call “significant.”",
+                "__typename": "ChallengePage"
+              },
+              "location": "aWQ6NTUwMzQ=",
+              "locationDetails": {
+                "id": "aWQ6NTUwMzQ=",
+                "title": "balneário camboriú",
+                "displayName": "",
+                "meta": {
+                  "type": "LOCATION",
+                  "slug": "balneario-camboriu",
+                  "firstPublishedAt": "2026-08-20T14:34:56.229000Z",
+                  "lastPublishedAt": "2026-08-28T15:12:48.444951Z",
+                  "relativeUrl": "/2026/local-events/balneario-camboriu/",
+                  "live": true,
+                  "parent": null,
+                  "__typename": "ExpandedPageMeta"
+                },
+                "country": "Brazil",
+                "__typename": "LocationPage"
+              },
+              "event": "aWQ6NA==",
+              "joinEnabled": true,
+              "memberships": null,
+              "nominationBadges": null,
+              "awardBadges": null
+            }
+          },
+          {
+            "__typename": "TeamPageEdge",
+            "cursor": "b2Zmc2V0OjE=",
+            "node": {
+              "__typename": "TeamPage",
+              "id": "aWQ6NTg2MjI=",
+              "title": "Naidon Space Crew",
+              "meta": {
+                "type": "TEAM",
+                "slug": "naidon-space-crew",
+                "firstPublishedAt": "2026-09-22T19:48:11.448000Z",
+                "lastPublishedAt": "2026-09-22T19:51:07.307577Z",
+                "relativeUrl": "/2026/find-a-team/naidon-space-crew/",
+                "live": true,
+                "parent": null,
+                "__typename": "ExpandedPageMeta"
+              },
+              "owner": "aWQ6NzNlNjczMGMtZDIyMS00ZGFlLTk4NDQtYWFiZmM3MzUxMWY5",
+              "ownerDetails": null,
+              "excerpt": "Family team from Brazil combining science, technology, strategy, and creativity. Rafa (12) loves astronomy and science communication; Luciano brings experience in management, innovation, and AI; Pietro (9) contributes with math, logic, chess, and ...",
+              "project": "aWQ6NTUwMjU=",
+              "projectDetails": {
+                "id": "aWQ6NTUwMjU=",
+                "name": "Project Naidon Space Crew",
+                "summary": "",
+                "demoLink": "",
+                "projectLink": "",
+                "details": "",
+                "solution": "",
+                "aiReferences": "",
+                "dataReferences": "",
+                "projectReferences": "",
+                "isSubmitted": false,
+                "savedAt": null,
+                "submittedAt": null,
+                "__typename": "Project"
+              },
+              "projectSubmitted": false,
+              "featuredImage": {
+                "id": "aWQ6NDM0MjI5",
+                "meta": {
+                  "type": "images.CustomImage",
+                  "downloadUrl": "https://assets.spaceappschallenge.org/media/original_images/ChatGPT_Image_22_de_set._de_2026_16_43_47.png",
+                  "__typename": "ImageMeta"
+                },
+                "title": "team_image.19:45:06.156141",
+                "alt": "team_image.19:45:06.156141",
+                "caption": "team_image.19:45:06.156141",
+                "displaySize": "or",
+                "rendition": {
+                  "url": "https://assets.spaceappschallenge.org/media/images/ChatGPT_Image_22_de_set._de_2026_1.2e16d0ba.fill-300x250.png",
+                  "fullUrl": "https://assets.spaceappschallenge.org/media/images/ChatGPT_Image_22_de_set._de_2026_1.2e16d0ba.fill-300x250.png",
+                  "height": 250,
+                  "width": 300,
+                  "__typename": "BaseImage"
+                },
+                "__typename": "DefaultImage"
+              },
+              "description": null,
+              "desiredSkills": null,
+              "languages": null,
+              "challenge": "aWQ6NTUxMjQ=",
+              "challengeDetails": {
+                "id": "aWQ6NTUxMjQ=",
+                "title": "Build a Junior Astronaut Mission Trainer",
+                "meta": {
+                  "type": "CHALLENGE",
+                  "slug": "build-a-junior-astronaut-mission-trainer",
+                  "firstPublishedAt": "2026-09-17T14:22:28.522299Z",
+                  "lastPublishedAt": "2026-09-17T14:22:28.522299Z",
+                  "relativeUrl": "/2026/challenges/build-a-junior-astronaut-mission-trainer/",
+                  "live": true,
+                  "parent": null,
+                  "__typename": "ExpandedPageMeta"
+                },
+                "excerpt": "Space-themed STEM content often oversimplifies the engineering trade-offs that define a real mission or presents them at a level too complex to hold a young learner's attention. Few tools make those trade-offs both tangible and fun. Your challenge is to design and build an interactive game or app that lets students run a lunar or Martian outpost, balancing competing demands like life support, radiation shielding, power, and food production, so they experience firsthand the decisions that determine whether a mission fails or succeeds.",
+                "__typename": "ChallengePage"
+              },
+              "location": "aWQ6NTUwMzQ=",
+              "locationDetails": {
+                "id": "aWQ6NTUwMzQ=",
+                "title": "balneário camboriú",
+                "displayName": "",
+                "meta": {
+                  "type": "LOCATION",
+                  "slug": "balneario-camboriu",
+                  "firstPublishedAt": "2026-08-20T14:34:56.229000Z",
+                  "lastPublishedAt": "2026-08-28T15:12:48.444951Z",
+                  "relativeUrl": "/2026/local-events/balneario-camboriu/",
+                  "live": true,
+                  "parent": null,
+                  "__typename": "ExpandedPageMeta"
+                },
+                "country": "Brazil",
+                "__typename": "LocationPage"
+              },
+              "event": "aWQ6NA==",
+              "joinEnabled": true,
+              "memberships": null,
+              "nominationBadges": null,
+              "awardBadges": null
+            }
+          },
+          {
+            "__typename": "TeamPageEdge",
+            "cursor": "b2Zmc2V0OjI=",
+            "node": {
+              "__typename": "TeamPage",
               "id": "aWQ6NTc5NzQ=",
-              "title": "SATURN N.E.X.U.S.",
+              "title": "SATURN NEXUS",
               "meta": {
                 "type": "TEAM",
                 "slug": "saturn-nexus",
-                "firstPublishedAt": null,
-                "lastPublishedAt": null,
+                "firstPublishedAt": "2026-09-22T23:47:09.826923Z",
+                "lastPublishedAt": "2026-09-22T23:47:09.826923Z",
                 "relativeUrl": "/2026/find-a-team/saturn-nexus/",
                 "live": true,
                 "parent": null,
@@ -462,19 +668,19 @@
               },
               "projectSubmitted": false,
               "featuredImage": {
-                "id": "aWQ6NDMxMTAx",
+                "id": "aWQ6NDM0NTQ2",
                 "meta": {
                   "type": "images.CustomImage",
-                  "downloadUrl": "https://assets.spaceappschallenge.org/media/original_images/174903_HJyLV6B.jpg",
+                  "downloadUrl": "https://assets.spaceappschallenge.org/media/original_images/Saturn_nexus.jpg",
                   "__typename": "ImageMeta"
                 },
-                "title": "team_image.15:06:17.811978",
-                "alt": "team_image.15:06:17.811978",
-                "caption": "team_image.15:06:17.811978",
+                "title": "team_image.23:47:08.729722",
+                "alt": "team_image.23:47:08.729722",
+                "caption": "team_image.23:47:08.729722",
                 "displaySize": "or",
                 "rendition": {
-                  "url": "https://assets.spaceappschallenge.org/media/images/174903_HJyLV6B.2e16d0ba.fill-300x250.jpg",
-                  "fullUrl": "https://assets.spaceappschallenge.org/media/images/174903_HJyLV6B.2e16d0ba.fill-300x250.jpg",
+                  "url": "https://assets.spaceappschallenge.org/media/images/Saturn_nexus.2e16d0ba.fill-300x250.jpg",
+                  "fullUrl": "https://assets.spaceappschallenge.org/media/images/Saturn_nexus.2e16d0ba.fill-300x250.jpg",
                   "height": 250,
                   "width": 300,
                   "__typename": "BaseImage"
@@ -1928,17 +2134,17 @@
           "hasPreviousPage": false,
           "hasNextPage": false,
           "startCursor": "b2Zmc2V0OjA=",
-          "endCursor": "b2Zmc2V0OjE=",
+          "endCursor": "b2Zmc2V0OjI=",
           "__typename": "PageInfo"
         },
-        "totalCount": 2,
+        "totalCount": 3,
         "edges": [
           {
             "__typename": "TeamPageEdge",
             "cursor": "b2Zmc2V0OjA=",
             "node": {
               "__typename": "TeamPage",
-              "id": "aWQ6NTgyMDg=",
+              "id": "aWQ6NTg1NzY=",
               "title": "Federação do pacífico",
               "meta": {
                 "type": "TEAM",
@@ -1952,10 +2158,10 @@
               },
               "owner": "aWQ6NTE5YWNiZTgtZTNiMC00YTNkLWI3YjUtZTNmNTdmZTJhYzk1",
               "ownerDetails": null,
-              "excerpt": "Todas as habilidades tem seu valor",
-              "project": "aWQ6NTQ2MTE=",
+              "excerpt": "Viva a federação do pacífico",
+              "project": "aWQ6NTQ5Nzk=",
               "projectDetails": {
-                "id": "aWQ6NTQ2MTE=",
+                "id": "aWQ6NTQ5Nzk=",
                 "name": "Project Federação do pacífico",
                 "summary": "",
                 "demoLink": "",
@@ -1972,19 +2178,19 @@
               },
               "projectSubmitted": false,
               "featuredImage": {
-                "id": "aWQ6NDMyMTc4",
+                "id": "aWQ6NDM0MDQ4",
                 "meta": {
                   "type": "images.CustomImage",
-                  "downloadUrl": "https://assets.spaceappschallenge.org/media/original_images/1000224838_q97LRCU.jpg",
+                  "downloadUrl": "https://assets.spaceappschallenge.org/media/original_images/1000224838_ioYShwb.jpg",
                   "__typename": "ImageMeta"
                 },
-                "title": "team_image.23:52:23.518787",
-                "alt": "team_image.23:52:23.518787",
-                "caption": "team_image.23:52:23.518787",
+                "title": "team_image.18:04:30.850207",
+                "alt": "team_image.18:04:30.850207",
+                "caption": "team_image.18:04:30.850207",
                 "displaySize": "or",
                 "rendition": {
-                  "url": "https://assets.spaceappschallenge.org/media/images/1000224838_q97LRCU.2e16d0ba.fill-300x250.jpg",
-                  "fullUrl": "https://assets.spaceappschallenge.org/media/images/1000224838_q97LRCU.2e16d0ba.fill-300x250.jpg",
+                  "url": "https://assets.spaceappschallenge.org/media/images/1000224838_ioYShwb.2e16d0ba.fill-300x250.jpg",
+                  "fullUrl": "https://assets.spaceappschallenge.org/media/images/1000224838_ioYShwb.2e16d0ba.fill-300x250.jpg",
                   "height": 250,
                   "width": 300,
                   "__typename": "BaseImage"
@@ -2030,7 +2236,7 @@
                 "__typename": "LocationPage"
               },
               "event": "aWQ6NA==",
-              "joinEnabled": false,
+              "joinEnabled": true,
               "memberships": null,
               "nominationBadges": null,
               "awardBadges": null
@@ -2119,6 +2325,109 @@
               "nominationBadges": null,
               "awardBadges": null
             }
+          },
+          {
+            "__typename": "TeamPageEdge",
+            "cursor": "b2Zmc2V0OjI=",
+            "node": {
+              "__typename": "TeamPage",
+              "id": "aWQ6NTg2NDQ=",
+              "title": "Turma do Balacobaco",
+              "meta": {
+                "type": "TEAM",
+                "slug": "turma-do-balacobaco",
+                "firstPublishedAt": "2026-09-22T23:52:23.232002Z",
+                "lastPublishedAt": "2026-09-22T23:52:23.232002Z",
+                "relativeUrl": "/2026/find-a-team/turma-do-balacobaco/",
+                "live": true,
+                "parent": null,
+                "__typename": "ExpandedPageMeta"
+              },
+              "owner": "aWQ6ZmFkYjdlNjItYTkzZC00NDI1LWE0MTYtOTg4OGI1NzUyYWQ0",
+              "ownerDetails": null,
+              "excerpt": "Group of Computer Science Students at the Centro Universitario Barão de Mauá. Our members include: Alice, Débora, Gabriel, Iara, Miguel, Samuel, Vitor.  We will work as developers, translators, researchers and interface designers.",
+              "project": "aWQ6NTUwNDc=",
+              "projectDetails": {
+                "id": "aWQ6NTUwNDc=",
+                "name": "Project Turma do Balacobaco",
+                "summary": "",
+                "demoLink": "",
+                "projectLink": "",
+                "details": "",
+                "solution": "",
+                "aiReferences": "",
+                "dataReferences": "",
+                "projectReferences": "",
+                "isSubmitted": false,
+                "savedAt": null,
+                "submittedAt": null,
+                "__typename": "Project"
+              },
+              "projectSubmitted": false,
+              "featuredImage": {
+                "id": "aWQ6NDM0MzQy",
+                "meta": {
+                  "type": "images.CustomImage",
+                  "downloadUrl": "https://assets.spaceappschallenge.org/media/original_images/Pingu_Debochado.avif",
+                  "__typename": "ImageMeta"
+                },
+                "title": "team_image.20:58:57.046253",
+                "alt": "team_image.20:58:57.046253",
+                "caption": "team_image.20:58:57.046253",
+                "displaySize": "or",
+                "rendition": {
+                  "url": "https://assets.spaceappschallenge.org/media/images/Pingu_Debochado.2e16d0ba.fill-300x250.png",
+                  "fullUrl": "https://assets.spaceappschallenge.org/media/images/Pingu_Debochado.2e16d0ba.fill-300x250.png",
+                  "height": 168,
+                  "width": 200,
+                  "__typename": "BaseImage"
+                },
+                "__typename": "DefaultImage"
+              },
+              "description": null,
+              "desiredSkills": null,
+              "languages": null,
+              "challenge": "aWQ6NTUxMTc=",
+              "challengeDetails": {
+                "id": "aWQ6NTUxMTc=",
+                "title": "The Earth Information Jukebox",
+                "meta": {
+                  "type": "CHALLENGE",
+                  "slug": "the-earth-information-jukebox",
+                  "firstPublishedAt": "2025-08-18T19:28:40.472000Z",
+                  "lastPublishedAt": "2026-09-17T14:20:45.869898Z",
+                  "relativeUrl": "/2026/challenges/the-earth-information-jukebox/",
+                  "live": true,
+                  "parent": null,
+                  "__typename": "ExpandedPageMeta"
+                },
+                "excerpt": "NASA’s Earth Information Center (EIC) produces stunning visualizations of our changing planet, but presenting Earth science through visualization alone limits who can reach it. We invite you to make this complex Earth science accessible, engaging, and multi-sensory by translating sight into sound. Your challenge is to build an \"Earth Jukebox\"—an interface, script, or application that pairs Earth Information Center (EIC) visual frames with dynamic sonifications generated in real time.",
+                "__typename": "ChallengePage"
+              },
+              "location": "aWQ6NTQ1NzM=",
+              "locationDetails": {
+                "id": "aWQ6NTQ1NzM=",
+                "title": "Ribeirao Preto",
+                "displayName": "",
+                "meta": {
+                  "type": "LOCATION",
+                  "slug": "ribeirao-preto",
+                  "firstPublishedAt": "2026-08-27T12:50:06.609427Z",
+                  "lastPublishedAt": "2026-08-27T12:50:06.609427Z",
+                  "relativeUrl": "/2026/local-events/ribeirao-preto/",
+                  "live": true,
+                  "parent": null,
+                  "__typename": "ExpandedPageMeta"
+                },
+                "country": "Brazil",
+                "__typename": "LocationPage"
+              },
+              "event": "aWQ6NA==",
+              "joinEnabled": true,
+              "memberships": null,
+              "nominationBadges": null,
+              "awardBadges": null
+            }
           }
         ],
         "__typename": "TeamPageConnection"
@@ -2132,10 +2441,10 @@
           "hasPreviousPage": false,
           "hasNextPage": false,
           "startCursor": "b2Zmc2V0OjA=",
-          "endCursor": "b2Zmc2V0Ojk=",
+          "endCursor": "b2Zmc2V0OjEw",
           "__typename": "PageInfo"
         },
-        "totalCount": 10,
+        "totalCount": 11,
         "edges": [
           {
             "__typename": "TeamPageEdge",
@@ -2722,6 +3031,109 @@
             "cursor": "b2Zmc2V0OjY=",
             "node": {
               "__typename": "TeamPage",
+              "id": "aWQ6NTU2NDY=",
+              "title": "Project Carcará",
+              "meta": {
+                "type": "TEAM",
+                "slug": "zalphas",
+                "firstPublishedAt": "2026-09-17T19:50:47.287000Z",
+                "lastPublishedAt": "2026-09-22T18:51:41.773352Z",
+                "relativeUrl": "/2026/find-a-team/zalphas/",
+                "live": true,
+                "parent": null,
+                "__typename": "ExpandedPageMeta"
+              },
+              "owner": "aWQ6NGUwZGEwZmEtMTlmNC00NDU4LTkzMWMtZTNlYzM4MGI3Mzcy",
+              "ownerDetails": null,
+              "excerpt": "Our team consists in 2 Brazilians who wanna do Engineering at college.Effort wins Talent every time.",
+              "project": "aWQ6NTIwNDk=",
+              "projectDetails": {
+                "id": "aWQ6NTIwNDk=",
+                "name": "Project Zalphas",
+                "summary": "",
+                "demoLink": "",
+                "projectLink": "",
+                "details": "",
+                "solution": "",
+                "aiReferences": "",
+                "dataReferences": "",
+                "projectReferences": "",
+                "isSubmitted": false,
+                "savedAt": null,
+                "submittedAt": null,
+                "__typename": "Project"
+              },
+              "projectSubmitted": false,
+              "featuredImage": {
+                "id": "aWQ6NDIxNDU3",
+                "meta": {
+                  "type": "images.CustomImage",
+                  "downloadUrl": "https://assets.spaceappschallenge.org/media/original_images/carcara.jpg",
+                  "__typename": "ImageMeta"
+                },
+                "title": "team_image.19:50:45.801614",
+                "alt": "team_image.19:50:45.801614",
+                "caption": "team_image.19:50:45.801614",
+                "displaySize": "or",
+                "rendition": {
+                  "url": "https://assets.spaceappschallenge.org/media/images/carcara.2e16d0ba.fill-300x250.jpg",
+                  "fullUrl": "https://assets.spaceappschallenge.org/media/images/carcara.2e16d0ba.fill-300x250.jpg",
+                  "height": 250,
+                  "width": 300,
+                  "__typename": "BaseImage"
+                },
+                "__typename": "DefaultImage"
+              },
+              "description": null,
+              "desiredSkills": null,
+              "languages": null,
+              "challenge": "aWQ6NTUxMjE=",
+              "challengeDetails": {
+                "id": "aWQ6NTUxMjE=",
+                "title": "Flame in Freefall: AI-Powered Fire Safety Insights from Microgravity Combustion Data",
+                "meta": {
+                  "type": "CHALLENGE",
+                  "slug": "flame-in-freefall-ai-powered-fire-safety-insights-from-microgravity-combustion-data",
+                  "firstPublishedAt": "2026-09-17T14:20:54.577001Z",
+                  "lastPublishedAt": "2026-09-17T14:20:54.577001Z",
+                  "relativeUrl": "/2026/challenges/flame-in-freefall-ai-powered-fire-safety-insights-from-microgravity-combustion-data/",
+                  "live": true,
+                  "parent": null,
+                  "__typename": "ExpandedPageMeta"
+                },
+                "excerpt": "For decades, NASA has studied how flames and fire behave in microgravity, gathering a trove of experimental data along the way. That knowledge matters more than ever as humans gear up to return to the Moon and press on to Mars, yet the volume of results makes them hard to find, compare, and understand. Your challenge is to create an interactive, AI-powered dashboard that summarizes, ranks, and interprets those findings to deliver fire safety insights for human space exploration.",
+                "__typename": "ChallengePage"
+              },
+              "location": "aWQ6NTQ1NDg=",
+              "locationDetails": {
+                "id": "aWQ6NTQ1NDg=",
+                "title": "Salvador",
+                "displayName": "",
+                "meta": {
+                  "type": "LOCATION",
+                  "slug": "salvador",
+                  "firstPublishedAt": "2026-08-25T15:08:41.377383Z",
+                  "lastPublishedAt": "2026-08-26T15:58:10.979018Z",
+                  "relativeUrl": "/2026/local-events/salvador/",
+                  "live": true,
+                  "parent": null,
+                  "__typename": "ExpandedPageMeta"
+                },
+                "country": "Brazil",
+                "__typename": "LocationPage"
+              },
+              "event": "aWQ6NA==",
+              "joinEnabled": true,
+              "memberships": null,
+              "nominationBadges": null,
+              "awardBadges": null
+            }
+          },
+          {
+            "__typename": "TeamPageEdge",
+            "cursor": "b2Zmc2V0Ojc=",
+            "node": {
+              "__typename": "TeamPage",
               "id": "aWQ6NTU4NTE=",
               "title": "Sankofa",
               "meta": {
@@ -2803,7 +3215,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0Ojc=",
+            "cursor": "b2Zmc2V0Ojg=",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6NTU4NTA=",
@@ -2887,7 +3299,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0Ojg=",
+            "cursor": "b2Zmc2V0Ojk=",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6NTU3Mzg=",
@@ -2990,7 +3402,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0Ojk=",
+            "cursor": "b2Zmc2V0OjEw",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6NTU4NDQ=",
@@ -3249,10 +3661,10 @@
           "hasPreviousPage": false,
           "hasNextPage": false,
           "startCursor": "b2Zmc2V0OjA=",
-          "endCursor": "b2Zmc2V0OjY=",
+          "endCursor": "b2Zmc2V0Ojc=",
           "__typename": "PageInfo"
         },
-        "totalCount": 7,
+        "totalCount": 8,
         "edges": [
           {
             "__typename": "TeamPageEdge",
@@ -3367,8 +3779,8 @@
               "meta": {
                 "type": "TEAM",
                 "slug": "matheus-de-nigris",
-                "firstPublishedAt": "2026-09-22T16:30:13.312773Z",
-                "lastPublishedAt": "2026-09-22T16:30:13.312773Z",
+                "firstPublishedAt": "2026-09-22T16:30:13.312000Z",
+                "lastPublishedAt": "2026-09-23T00:06:51.276934Z",
                 "relativeUrl": "/2026/find-a-team/matheus-de-nigris/",
                 "live": true,
                 "parent": null,
@@ -3930,6 +4342,109 @@
               "nominationBadges": null,
               "awardBadges": null
             }
+          },
+          {
+            "__typename": "TeamPageEdge",
+            "cursor": "b2Zmc2V0Ojc=",
+            "node": {
+              "__typename": "TeamPage",
+              "id": "aWQ6NTg3MzI=",
+              "title": "Vocaid Voyager",
+              "meta": {
+                "type": "TEAM",
+                "slug": "vocaid-voyager",
+                "firstPublishedAt": null,
+                "lastPublishedAt": null,
+                "relativeUrl": "/2026/find-a-team/vocaid-voyager/",
+                "live": true,
+                "parent": null,
+                "__typename": "ExpandedPageMeta"
+              },
+              "owner": "aWQ6ZGJkOGU0ODAtZTBkOC00MGFkLWE0MjctNmQ3YTA4MzlhYmQx",
+              "ownerDetails": null,
+              "excerpt": "Every fitness tracker confuses two different things: energy spent and load applied. On Earth gravity keeps them in step; in orbit it doesn't — 45 minutes on the ISS cycle ergometer burns real calories and loads the skeleton essentially not at all....",
+              "project": "aWQ6NTUxMzU=",
+              "projectDetails": {
+                "id": "aWQ6NTUxMzU=",
+                "name": "Project Vocaid Voyager",
+                "summary": "",
+                "demoLink": "",
+                "projectLink": "",
+                "details": "",
+                "solution": "",
+                "aiReferences": "",
+                "dataReferences": "",
+                "projectReferences": "",
+                "isSubmitted": false,
+                "savedAt": null,
+                "submittedAt": null,
+                "__typename": "Project"
+              },
+              "projectSubmitted": false,
+              "featuredImage": {
+                "id": "aWQ6NDM0NzQw",
+                "meta": {
+                  "type": "images.CustomImage",
+                  "downloadUrl": "https://assets.spaceappschallenge.org/media/original_images/black-favicon.PNG",
+                  "__typename": "ImageMeta"
+                },
+                "title": "team_image.03:53:36.537004",
+                "alt": "team_image.03:53:36.537004",
+                "caption": "team_image.03:53:36.537004",
+                "displaySize": "or",
+                "rendition": {
+                  "url": "https://assets.spaceappschallenge.org/media/images/black-favicon.2e16d0ba.fill-300x250.png",
+                  "fullUrl": "https://assets.spaceappschallenge.org/media/images/black-favicon.2e16d0ba.fill-300x250.png",
+                  "height": 250,
+                  "width": 300,
+                  "__typename": "BaseImage"
+                },
+                "__typename": "DefaultImage"
+              },
+              "description": null,
+              "desiredSkills": null,
+              "languages": null,
+              "challenge": "aWQ6NTUxMzA=",
+              "challengeDetails": {
+                "id": "aWQ6NTUxMzA=",
+                "title": "Create Health Monitoring Software for Astronauts on Space Missions",
+                "meta": {
+                  "type": "CHALLENGE",
+                  "slug": "create-health-monitoring-software-for-astronauts-on-space-missions",
+                  "firstPublishedAt": "2026-09-17T14:21:16.942007Z",
+                  "lastPublishedAt": "2026-09-17T14:21:16.942007Z",
+                  "relativeUrl": "/2026/challenges/create-health-monitoring-software-for-astronauts-on-space-missions/",
+                  "live": true,
+                  "parent": null,
+                  "__typename": "ExpandedPageMeta"
+                },
+                "excerpt": "Long-duration missions expose astronauts to space radiation, isolation and confinement, altered gravity, and a hostile closed environment, which can bring immune changes, bone loss, cardiovascular events, and behavioral health problems. On long missions, astronauts carry much of the responsibility for spotting these changes in themselves. Your challenge is to build a health monitoring software that gathers health indicators and enables astronauts to evaluate and act on the status of their health.",
+                "__typename": "ChallengePage"
+              },
+              "location": "aWQ6NTQ0ODY=",
+              "locationDetails": {
+                "id": "aWQ6NTQ0ODY=",
+                "title": "São Paulo",
+                "displayName": "",
+                "meta": {
+                  "type": "LOCATION",
+                  "slug": "sao-paulo",
+                  "firstPublishedAt": "2026-08-26T13:50:54.025364Z",
+                  "lastPublishedAt": "2026-08-26T15:57:38.635477Z",
+                  "relativeUrl": "/2026/local-events/sao-paulo/",
+                  "live": true,
+                  "parent": null,
+                  "__typename": "ExpandedPageMeta"
+                },
+                "country": "Brazil",
+                "__typename": "LocationPage"
+              },
+              "event": "aWQ6NA==",
+              "joinEnabled": true,
+              "memberships": null,
+              "nominationBadges": null,
+              "awardBadges": null
+            }
           }
         ],
         "__typename": "TeamPageConnection"
@@ -3943,14 +4458,117 @@
           "hasPreviousPage": false,
           "hasNextPage": false,
           "startCursor": "b2Zmc2V0OjA=",
-          "endCursor": "b2Zmc2V0Ojc=",
+          "endCursor": "b2Zmc2V0Ojg=",
           "__typename": "PageInfo"
         },
-        "totalCount": 8,
+        "totalCount": 9,
         "edges": [
           {
             "__typename": "TeamPageEdge",
             "cursor": "b2Zmc2V0OjA=",
+            "node": {
+              "__typename": "TeamPage",
+              "id": "aWQ6NTg2NTk=",
+              "title": "AgroSat",
+              "meta": {
+                "type": "TEAM",
+                "slug": "agrosat2",
+                "firstPublishedAt": "2026-09-22T21:38:21.156000Z",
+                "lastPublishedAt": "2026-09-22T21:57:14.120580Z",
+                "relativeUrl": "/2026/find-a-team/agrosat2/",
+                "live": true,
+                "parent": null,
+                "__typename": "ExpandedPageMeta"
+              },
+              "owner": "aWQ6YWU2MTg4MzItMWRmZC00MjQ1LTljZmEtODczMDlkNWM1Mzlm",
+              "ownerDetails": null,
+              "excerpt": "Equipe formada por acadêmicos do IFRO!",
+              "project": "aWQ6NTUwNjI=",
+              "projectDetails": {
+                "id": "aWQ6NTUwNjI=",
+                "name": "Project AgroSat",
+                "summary": "",
+                "demoLink": "",
+                "projectLink": "",
+                "details": "",
+                "solution": "",
+                "aiReferences": "",
+                "dataReferences": "",
+                "projectReferences": "",
+                "isSubmitted": false,
+                "savedAt": null,
+                "submittedAt": null,
+                "__typename": "Project"
+              },
+              "projectSubmitted": false,
+              "featuredImage": {
+                "id": "aWQ6NDM0Mzk5",
+                "meta": {
+                  "type": "images.CustomImage",
+                  "downloadUrl": "https://assets.spaceappschallenge.org/media/original_images/Gemini_Generated_Image_fhbfhyfhbfhyfhbf.jpg",
+                  "__typename": "ImageMeta"
+                },
+                "title": "team_image.21:37:26.577869",
+                "alt": "team_image.21:37:26.577869",
+                "caption": "team_image.21:37:26.577869",
+                "displaySize": "or",
+                "rendition": {
+                  "url": "https://assets.spaceappschallenge.org/media/images/Gemini_Generated_Image_fhbfhyfhbfh.2e16d0ba.fill-300x250.jpg",
+                  "fullUrl": "https://assets.spaceappschallenge.org/media/images/Gemini_Generated_Image_fhbfhyfhbfh.2e16d0ba.fill-300x250.jpg",
+                  "height": 250,
+                  "width": 300,
+                  "__typename": "BaseImage"
+                },
+                "__typename": "DefaultImage"
+              },
+              "description": null,
+              "desiredSkills": null,
+              "languages": null,
+              "challenge": "aWQ6NTUxMjY=",
+              "challengeDetails": {
+                "id": "aWQ6NTUxMjY=",
+                "title": "Field Shift: Adapting Farms with NASA Data",
+                "meta": {
+                  "type": "CHALLENGE",
+                  "slug": "field-shift-adapting-farms-with-nasa-data",
+                  "firstPublishedAt": "2026-09-17T14:22:15.778779Z",
+                  "lastPublishedAt": "2026-09-17T14:22:15.778779Z",
+                  "relativeUrl": "/2026/challenges/field-shift-adapting-farms-with-nasa-data/",
+                  "live": true,
+                  "parent": null,
+                  "__typename": "ExpandedPageMeta"
+                },
+                "excerpt": "Farmers around the world navigate shifting temperatures, changing rainfall patterns, water shortages, extreme weather, and declining soil health. These pressures make it difficult to choose crop rotations that protect fields, conserve water, and support long‑term resilience. Your challenge is to create a decision‑support tool that uses NASA Earth observations along with local soil information, crop characteristics, and farmer priorities to help farmers explore rotation strategies that could strengthen soil health and adapt their farms to changing conditions.",
+                "__typename": "ChallengePage"
+              },
+              "location": "aWQ6NTQ0MzI=",
+              "locationDetails": {
+                "id": "aWQ6NTQ0MzI=",
+                "title": "Vilhena",
+                "displayName": "",
+                "meta": {
+                  "type": "LOCATION",
+                  "slug": "vilhena",
+                  "firstPublishedAt": "2026-08-29T04:34:40.321000Z",
+                  "lastPublishedAt": "2026-08-31T13:41:36.130202Z",
+                  "relativeUrl": "/2026/local-events/vilhena/",
+                  "live": true,
+                  "parent": null,
+                  "__typename": "ExpandedPageMeta"
+                },
+                "country": "Brazil",
+                "__typename": "LocationPage"
+              },
+              "event": "aWQ6NA==",
+              "joinEnabled": true,
+              "memberships": null,
+              "nominationBadges": null,
+              "awardBadges": null
+            }
+          },
+          {
+            "__typename": "TeamPageEdge",
+            "cursor": "b2Zmc2V0OjE=",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6NTgwNDc=",
@@ -4053,7 +4671,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjE=",
+            "cursor": "b2Zmc2V0OjI=",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6NTg0MzI=",
@@ -4137,7 +4755,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjI=",
+            "cursor": "b2Zmc2V0OjM=",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6NTY2MjY=",
@@ -4221,7 +4839,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjM=",
+            "cursor": "b2Zmc2V0OjQ=",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6NTgxNzM=",
@@ -4230,7 +4848,7 @@
                 "type": "TEAM",
                 "slug": "gigtech",
                 "firstPublishedAt": "2026-09-21T21:57:05.513000Z",
-                "lastPublishedAt": "2026-09-21T22:05:13.871083Z",
+                "lastPublishedAt": "2026-09-22T18:29:50.027709Z",
                 "relativeUrl": "/2026/find-a-team/gigtech/",
                 "live": true,
                 "parent": null,
@@ -4324,7 +4942,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjQ=",
+            "cursor": "b2Zmc2V0OjU=",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6NTg0Njk=",
@@ -4333,7 +4951,7 @@
                 "type": "TEAM",
                 "slug": "interplarios",
                 "firstPublishedAt": "2026-09-22T15:09:40.795000Z",
-                "lastPublishedAt": "2026-09-22T17:27:12.459708Z",
+                "lastPublishedAt": "2026-09-22T18:29:25.718468Z",
                 "relativeUrl": "/2026/find-a-team/interplarios/",
                 "live": true,
                 "parent": null,
@@ -4341,7 +4959,7 @@
               },
               "owner": "aWQ6Yjk3YmQ3ZjYtNjBjZS00MTQwLWE3NzUtM2QxODY2NDQ2NjQ3",
               "ownerDetails": null,
-              "excerpt": "Contribuo com arquitetura de software, desenvolvimento, modelagem de dados, visão de produto e organização. Busco pessoas de agronomia, ciência de dados, geoprocessamento, observação da Terra, design, comunicação ou desenvolvimento.",
+              "excerpt": "Reunimos diferentes habilidades e perspectivas com um objetivo em comum: explorar ideias, analisar dados e desenvolver soluções inovadoras capazes de gerar impacto na Terra e além dela. Inspirados no espírito dos templários, carregamos valores com...",
               "project": "aWQ6NTQ4NzI=",
               "projectDetails": {
                 "id": "aWQ6NTQ4NzI=",
@@ -4427,7 +5045,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjU=",
+            "cursor": "b2Zmc2V0OjY=",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6NTUxODM=",
@@ -4530,7 +5148,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjY=",
+            "cursor": "b2Zmc2V0Ojc=",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6NTU2MzU=",
@@ -4633,7 +5251,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0Ojc=",
+            "cursor": "b2Zmc2V0Ojg=",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6NTYzOTM=",
@@ -5575,7 +6193,7 @@
                 "type": "TEAM",
                 "slug": "sixth-sense",
                 "firstPublishedAt": "2026-09-19T07:35:12.213000Z",
-                "lastPublishedAt": "2026-09-22T07:05:04.724139Z",
+                "lastPublishedAt": "2026-09-23T02:56:53.271431Z",
                 "relativeUrl": "/2026/find-a-team/sixth-sense/",
                 "live": true,
                 "parent": null,
@@ -5854,7 +6472,7 @@
                 "type": "TEAM",
                 "slug": "uranus7",
                 "firstPublishedAt": "2026-09-22T07:36:08.364000Z",
-                "lastPublishedAt": "2026-09-22T17:25:12.570466Z",
+                "lastPublishedAt": "2026-09-22T17:55:35.749756Z",
                 "relativeUrl": "/2026/find-a-team/uranus7/",
                 "live": true,
                 "parent": null,
@@ -6061,10 +6679,10 @@
           "hasPreviousPage": false,
           "hasNextPage": false,
           "startCursor": "b2Zmc2V0OjA=",
-          "endCursor": "b2Zmc2V0Ojg1",
+          "endCursor": "b2Zmc2V0Ojk0",
           "__typename": "PageInfo"
         },
-        "totalCount": 86,
+        "totalCount": 95,
         "edges": [
           {
             "__typename": "TeamPageEdge",
@@ -6201,7 +6819,7 @@
                 "type": "TEAM",
                 "slug": "4-on-an-offical-mission-team",
                 "firstPublishedAt": "2026-09-19T13:27:25.481000Z",
-                "lastPublishedAt": "2026-09-22T16:54:42.521883Z",
+                "lastPublishedAt": "2026-09-22T21:13:44.301312Z",
                 "relativeUrl": "/2026/find-a-team/4-on-an-offical-mission-team/",
                 "live": true,
                 "parent": null,
@@ -6249,8 +6867,23 @@
                 "__typename": "DefaultImage"
               },
               "description": null,
-              "desiredSkills": null,
-              "languages": null,
+              "desiredSkills": [
+                "Agriculture",
+                "Business & Economics",
+                "Coding",
+                "Data Management",
+                "Data Visualization",
+                "Graphic Design",
+                "Hardware",
+                "Satellites",
+                "Software",
+                "Statistics",
+                "Design"
+              ],
+              "languages": [
+                "Arabic",
+                "English"
+              ],
               "challenge": "aWQ6NTUxMjY=",
               "challengeDetails": {
                 "id": "aWQ6NTUxMjY=",
@@ -6915,7 +7548,7 @@
                 "type": "TEAM",
                 "slug": "egyptian-freedom-team",
                 "firstPublishedAt": "2026-09-17T16:22:52.125000Z",
-                "lastPublishedAt": "2026-09-21T16:39:23.899144Z",
+                "lastPublishedAt": "2026-09-22T20:56:04.551894Z",
                 "relativeUrl": "/2026/find-a-team/egyptian-freedom-team/",
                 "live": true,
                 "parent": null,
@@ -7110,6 +7743,90 @@
             "cursor": "b2Zmc2V0OjEw",
             "node": {
               "__typename": "TeamPage",
+              "id": "aWQ6NTg2MzY=",
+              "title": "AstrooCaree",
+              "meta": {
+                "type": "TEAM",
+                "slug": "astroocaree",
+                "firstPublishedAt": "2026-09-22T20:43:22.615000Z",
+                "lastPublishedAt": "2026-09-23T07:51:23.400457Z",
+                "relativeUrl": "/2026/find-a-team/astroocaree/",
+                "live": true,
+                "parent": null,
+                "__typename": "ExpandedPageMeta"
+              },
+              "owner": "aWQ6ZDhkYzE3MmQtYWRjZi00NTlkLTkzNzYtZGM5Njc2MTBkODFh",
+              "ownerDetails": null,
+              "excerpt": "We’re a student team passionate about space, engineering, data, and technology. Our skills cover data engineering, data analysis, web development, embedded systems, CAD, and testing. We’re working on an astronaut health monitoring solution for lon...",
+              "project": "aWQ6NTUwMzk=",
+              "projectDetails": {
+                "id": "aWQ6NTUwMzk=",
+                "name": "Project AstrooCaree",
+                "summary": "",
+                "demoLink": "",
+                "projectLink": "",
+                "details": "",
+                "solution": "",
+                "aiReferences": "",
+                "dataReferences": "",
+                "projectReferences": "",
+                "isSubmitted": false,
+                "savedAt": null,
+                "submittedAt": null,
+                "__typename": "Project"
+              },
+              "projectSubmitted": false,
+              "featuredImage": null,
+              "description": null,
+              "desiredSkills": null,
+              "languages": null,
+              "challenge": "aWQ6NTUxMzA=",
+              "challengeDetails": {
+                "id": "aWQ6NTUxMzA=",
+                "title": "Create Health Monitoring Software for Astronauts on Space Missions",
+                "meta": {
+                  "type": "CHALLENGE",
+                  "slug": "create-health-monitoring-software-for-astronauts-on-space-missions",
+                  "firstPublishedAt": "2026-09-17T14:21:16.942007Z",
+                  "lastPublishedAt": "2026-09-17T14:21:16.942007Z",
+                  "relativeUrl": "/2026/challenges/create-health-monitoring-software-for-astronauts-on-space-missions/",
+                  "live": true,
+                  "parent": null,
+                  "__typename": "ExpandedPageMeta"
+                },
+                "excerpt": "Long-duration missions expose astronauts to space radiation, isolation and confinement, altered gravity, and a hostile closed environment, which can bring immune changes, bone loss, cardiovascular events, and behavioral health problems. On long missions, astronauts carry much of the responsibility for spotting these changes in themselves. Your challenge is to build a health monitoring software that gathers health indicators and enables astronauts to evaluate and act on the status of their health.",
+                "__typename": "ChallengePage"
+              },
+              "location": "aWQ6NTQ5ODE=",
+              "locationDetails": {
+                "id": "aWQ6NTQ5ODE=",
+                "title": "Cairo",
+                "displayName": "",
+                "meta": {
+                  "type": "LOCATION",
+                  "slug": "cairo",
+                  "firstPublishedAt": "2026-08-25T17:13:33.831000Z",
+                  "lastPublishedAt": "2026-09-18T19:11:30.268308Z",
+                  "relativeUrl": "/2026/local-events/cairo/",
+                  "live": true,
+                  "parent": null,
+                  "__typename": "ExpandedPageMeta"
+                },
+                "country": "Egypt",
+                "__typename": "LocationPage"
+              },
+              "event": "aWQ6NA==",
+              "joinEnabled": true,
+              "memberships": null,
+              "nominationBadges": null,
+              "awardBadges": null
+            }
+          },
+          {
+            "__typename": "TeamPageEdge",
+            "cursor": "b2Zmc2V0OjEx",
+            "node": {
+              "__typename": "TeamPage",
               "id": "aWQ6NTYzNjA=",
               "title": "Astroware",
               "meta": {
@@ -7191,7 +7908,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjEx",
+            "cursor": "b2Zmc2V0OjEy",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6NTY1NTE=",
@@ -7200,7 +7917,7 @@
                 "type": "TEAM",
                 "slug": "astro-x",
                 "firstPublishedAt": "2026-09-18T22:33:26.899000Z",
-                "lastPublishedAt": "2026-09-19T21:07:28.573027Z",
+                "lastPublishedAt": "2026-09-23T09:39:09.225468Z",
                 "relativeUrl": "/2026/find-a-team/astro-x/",
                 "live": true,
                 "parent": null,
@@ -7294,7 +8011,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjEy",
+            "cursor": "b2Zmc2V0OjEz",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6NTc4NTY=",
@@ -7397,7 +8114,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjEz",
+            "cursor": "b2Zmc2V0OjE0",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6NTgyNDg=",
@@ -7500,7 +8217,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjE0",
+            "cursor": "b2Zmc2V0OjE1",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6NTY3ODE=",
@@ -7603,7 +8320,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjE1",
+            "cursor": "b2Zmc2V0OjE2",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6NTY4MzQ=",
@@ -7706,7 +8423,110 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjE2",
+            "cursor": "b2Zmc2V0OjE3",
+            "node": {
+              "__typename": "TeamPage",
+              "id": "aWQ6NTg2MTE=",
+              "title": "Binary Star",
+              "meta": {
+                "type": "TEAM",
+                "slug": "binary-star3",
+                "firstPublishedAt": null,
+                "lastPublishedAt": null,
+                "relativeUrl": "/2026/find-a-team/binary-star3/",
+                "live": true,
+                "parent": null,
+                "__typename": "ExpandedPageMeta"
+              },
+              "owner": "aWQ6NmNiMTI3NjgtNWIyYS00N2ExLWI5MWUtNDdkOTBhNmE1N2Jl",
+              "ownerDetails": null,
+              "excerpt": ".",
+              "project": "aWQ6NTUwMTQ=",
+              "projectDetails": {
+                "id": "aWQ6NTUwMTQ=",
+                "name": "Project Binary Star",
+                "summary": "",
+                "demoLink": "",
+                "projectLink": "",
+                "details": "",
+                "solution": "",
+                "aiReferences": "",
+                "dataReferences": "",
+                "projectReferences": "",
+                "isSubmitted": false,
+                "savedAt": null,
+                "submittedAt": null,
+                "__typename": "Project"
+              },
+              "projectSubmitted": false,
+              "featuredImage": {
+                "id": "aWQ6NDM0MjEw",
+                "meta": {
+                  "type": "images.CustomImage",
+                  "downloadUrl": "https://assets.spaceappschallenge.org/media/original_images/IMG_2348_4DB9MWC.jpeg",
+                  "__typename": "ImageMeta"
+                },
+                "title": "team_image.19:33:31.362868",
+                "alt": "team_image.19:33:31.362868",
+                "caption": "team_image.19:33:31.362868",
+                "displaySize": "or",
+                "rendition": {
+                  "url": "https://assets.spaceappschallenge.org/media/images/IMG_2348_4DB9MWC.2e16d0ba.fill-300x250.jpg",
+                  "fullUrl": "https://assets.spaceappschallenge.org/media/images/IMG_2348_4DB9MWC.2e16d0ba.fill-300x250.jpg",
+                  "height": 250,
+                  "width": 300,
+                  "__typename": "BaseImage"
+                },
+                "__typename": "DefaultImage"
+              },
+              "description": null,
+              "desiredSkills": null,
+              "languages": null,
+              "challenge": "aWQ6NTUxMjU=",
+              "challengeDetails": {
+                "id": "aWQ6NTUxMjU=",
+                "title": "Abandoned but not Forgotten: Storytelling about NASA's Discarded Equipment on the Moon and Mars",
+                "meta": {
+                  "type": "CHALLENGE",
+                  "slug": "abandoned-but-not-forgotten-storytelling-about-nasas-discarded-equipment-on-the-moon-and-mars",
+                  "firstPublishedAt": "2026-09-17T14:22:22.961784Z",
+                  "lastPublishedAt": "2026-09-17T14:22:22.961784Z",
+                  "relativeUrl": "/2026/challenges/abandoned-but-not-forgotten-storytelling-about-nasas-discarded-equipment-on-the-moon-and-mars/",
+                  "live": true,
+                  "parent": null,
+                  "__typename": "ExpandedPageMeta"
+                },
+                "excerpt": "Since the 1960s, NASA has left hardware across the solar system–on the Moon, on Mars, and in deep space. From rovers and instruments that completed their science missions to probes still traveling away from Earth this hardware varies widely in both its purpose and current level of functionality. Your challenge is to tell the story of some or all of this equipment that introduces school-age space enthusiasts to the hardware and the science it made possible.",
+                "__typename": "ChallengePage"
+              },
+              "location": "aWQ6NTQ5ODE=",
+              "locationDetails": {
+                "id": "aWQ6NTQ5ODE=",
+                "title": "Cairo",
+                "displayName": "",
+                "meta": {
+                  "type": "LOCATION",
+                  "slug": "cairo",
+                  "firstPublishedAt": "2026-08-25T17:13:33.831000Z",
+                  "lastPublishedAt": "2026-09-18T19:11:30.268308Z",
+                  "relativeUrl": "/2026/local-events/cairo/",
+                  "live": true,
+                  "parent": null,
+                  "__typename": "ExpandedPageMeta"
+                },
+                "country": "Egypt",
+                "__typename": "LocationPage"
+              },
+              "event": "aWQ6NA==",
+              "joinEnabled": false,
+              "memberships": null,
+              "nominationBadges": null,
+              "awardBadges": null
+            }
+          },
+          {
+            "__typename": "TeamPageEdge",
+            "cursor": "b2Zmc2V0OjE4",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6NTcwMzU=",
@@ -7809,7 +8629,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjE3",
+            "cursor": "b2Zmc2V0OjE5",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6NTgxOTI=",
@@ -7923,7 +8743,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjE4",
+            "cursor": "b2Zmc2V0OjIw",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6NTc1Mzc=",
@@ -8026,7 +8846,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjE5",
+            "cursor": "b2Zmc2V0OjIx",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6NTYxNDg=",
@@ -8142,7 +8962,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjIw",
+            "cursor": "b2Zmc2V0OjIy",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6NTgzMDA=",
@@ -8226,7 +9046,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjIx",
+            "cursor": "b2Zmc2V0OjIz",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6NTc2MDg=",
@@ -8329,7 +9149,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjIy",
+            "cursor": "b2Zmc2V0OjI0",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6NTczMDU=",
@@ -8432,7 +9252,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjIz",
+            "cursor": "b2Zmc2V0OjI1",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6NTcwODI=",
@@ -8535,7 +9355,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjI0",
+            "cursor": "b2Zmc2V0OjI2",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6NTcxMDY=",
@@ -8638,7 +9458,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjI1",
+            "cursor": "b2Zmc2V0OjI3",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6NTY3MTA=",
@@ -8749,7 +9569,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjI2",
+            "cursor": "b2Zmc2V0OjI4",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6NTc3MjY=",
@@ -8833,7 +9653,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjI3",
+            "cursor": "b2Zmc2V0OjI5",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6NTc1MTk=",
@@ -8917,7 +9737,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjI4",
+            "cursor": "b2Zmc2V0OjMw",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6NTY1NTM=",
@@ -9001,7 +9821,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjI5",
+            "cursor": "b2Zmc2V0OjMx",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6NTcwMDE=",
@@ -9104,7 +9924,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjMw",
+            "cursor": "b2Zmc2V0OjMy",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6NTgzMjk=",
@@ -9207,7 +10027,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjMx",
+            "cursor": "b2Zmc2V0OjMz",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6NTcwMjE=",
@@ -9216,7 +10036,7 @@
                 "type": "TEAM",
                 "slug": "earth-guardian-ai",
                 "firstPublishedAt": "2026-09-19T19:09:55.311000Z",
-                "lastPublishedAt": "2026-09-20T18:26:41.319371Z",
+                "lastPublishedAt": "2026-09-23T07:28:53.764429Z",
                 "relativeUrl": "/2026/find-a-team/earth-guardian-ai/",
                 "live": true,
                 "parent": null,
@@ -9244,19 +10064,19 @@
               },
               "projectSubmitted": false,
               "featuredImage": {
-                "id": "aWQ6NDI2NTQy",
+                "id": "aWQ6NDM0OTk4",
                 "meta": {
                   "type": "images.CustomImage",
-                  "downloadUrl": "https://assets.spaceappschallenge.org/media/original_images/photo_2026-09-19_22-088-41_BnJ9Mo2.jpg",
+                  "downloadUrl": "https://assets.spaceappschallenge.org/media/original_images/ChatGPT_Image_Sep_23_2026_10_28_14_AM.png",
                   "__typename": "ImageMeta"
                 },
-                "title": "team_image.19:16:41.037569",
-                "alt": "team_image.19:16:41.037569",
-                "caption": "team_image.19:16:41.037569",
+                "title": "team_image.07:28:52.759037",
+                "alt": "team_image.07:28:52.759037",
+                "caption": "team_image.07:28:52.759037",
                 "displaySize": "or",
                 "rendition": {
-                  "url": "https://assets.spaceappschallenge.org/media/images/photo_2026-09-19_22-088-41_BnJ9Mo2.2e16d0ba.fill-300x250.jpg",
-                  "fullUrl": "https://assets.spaceappschallenge.org/media/images/photo_2026-09-19_22-088-41_BnJ9Mo2.2e16d0ba.fill-300x250.jpg",
+                  "url": "https://assets.spaceappschallenge.org/media/images/ChatGPT_Image_Sep_23_2026_10_28_14.2e16d0ba.fill-300x250.png",
+                  "fullUrl": "https://assets.spaceappschallenge.org/media/images/ChatGPT_Image_Sep_23_2026_10_28_14.2e16d0ba.fill-300x250.png",
                   "height": 250,
                   "width": 300,
                   "__typename": "BaseImage"
@@ -9302,7 +10122,7 @@
                 "__typename": "LocationPage"
               },
               "event": "aWQ6NA==",
-              "joinEnabled": false,
+              "joinEnabled": true,
               "memberships": null,
               "nominationBadges": null,
               "awardBadges": null
@@ -9310,7 +10130,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjMy",
+            "cursor": "b2Zmc2V0OjM0",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6NTcwOTY=",
@@ -9413,7 +10233,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjMz",
+            "cursor": "b2Zmc2V0OjM1",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6NTYyMzg=",
@@ -9497,7 +10317,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjM0",
+            "cursor": "b2Zmc2V0OjM2",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6NTcwNDI=",
@@ -9600,7 +10420,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjM1",
+            "cursor": "b2Zmc2V0OjM3",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6NTcwNjI=",
@@ -9703,7 +10523,110 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjM2",
+            "cursor": "b2Zmc2V0OjM4",
+            "node": {
+              "__typename": "TeamPage",
+              "id": "aWQ6NTg2NTU=",
+              "title": "ELYAN X",
+              "meta": {
+                "type": "TEAM",
+                "slug": "elyan-x",
+                "firstPublishedAt": null,
+                "lastPublishedAt": null,
+                "relativeUrl": "/2026/find-a-team/elyan-x/",
+                "live": true,
+                "parent": null,
+                "__typename": "ExpandedPageMeta"
+              },
+              "owner": "aWQ6MzA0NjBkODAtZWMzYy00ZWJkLTlhMGItNmQ0NzdmZTNhYWI2",
+              "ownerDetails": null,
+              "excerpt": "انا يوسف اقدر ان العمل الجماعي افضل من الفوز ، فعلينا الاستمتاع بهذه المسابقة وبأجواءها",
+              "project": "aWQ6NTUwNTg=",
+              "projectDetails": {
+                "id": "aWQ6NTUwNTg=",
+                "name": "Project ELYAN X",
+                "summary": "",
+                "demoLink": "",
+                "projectLink": "",
+                "details": "",
+                "solution": "",
+                "aiReferences": "",
+                "dataReferences": "",
+                "projectReferences": "",
+                "isSubmitted": false,
+                "savedAt": null,
+                "submittedAt": null,
+                "__typename": "Project"
+              },
+              "projectSubmitted": false,
+              "featuredImage": {
+                "id": "aWQ6NDM0Mzg1",
+                "meta": {
+                  "type": "images.CustomImage",
+                  "downloadUrl": "https://assets.spaceappschallenge.org/media/original_images/IMG_20260923_001649.jpg",
+                  "__typename": "ImageMeta"
+                },
+                "title": "team_image.21:24:17.033289",
+                "alt": "team_image.21:24:17.033289",
+                "caption": "team_image.21:24:17.033289",
+                "displaySize": "or",
+                "rendition": {
+                  "url": "https://assets.spaceappschallenge.org/media/images/IMG_20260923_001649.2e16d0ba.fill-300x250.jpg",
+                  "fullUrl": "https://assets.spaceappschallenge.org/media/images/IMG_20260923_001649.2e16d0ba.fill-300x250.jpg",
+                  "height": 250,
+                  "width": 300,
+                  "__typename": "BaseImage"
+                },
+                "__typename": "DefaultImage"
+              },
+              "description": null,
+              "desiredSkills": null,
+              "languages": null,
+              "challenge": "aWQ6NTUxMjY=",
+              "challengeDetails": {
+                "id": "aWQ6NTUxMjY=",
+                "title": "Field Shift: Adapting Farms with NASA Data",
+                "meta": {
+                  "type": "CHALLENGE",
+                  "slug": "field-shift-adapting-farms-with-nasa-data",
+                  "firstPublishedAt": "2026-09-17T14:22:15.778779Z",
+                  "lastPublishedAt": "2026-09-17T14:22:15.778779Z",
+                  "relativeUrl": "/2026/challenges/field-shift-adapting-farms-with-nasa-data/",
+                  "live": true,
+                  "parent": null,
+                  "__typename": "ExpandedPageMeta"
+                },
+                "excerpt": "Farmers around the world navigate shifting temperatures, changing rainfall patterns, water shortages, extreme weather, and declining soil health. These pressures make it difficult to choose crop rotations that protect fields, conserve water, and support long‑term resilience. Your challenge is to create a decision‑support tool that uses NASA Earth observations along with local soil information, crop characteristics, and farmer priorities to help farmers explore rotation strategies that could strengthen soil health and adapt their farms to changing conditions.",
+                "__typename": "ChallengePage"
+              },
+              "location": "aWQ6NTQ5ODE=",
+              "locationDetails": {
+                "id": "aWQ6NTQ5ODE=",
+                "title": "Cairo",
+                "displayName": "",
+                "meta": {
+                  "type": "LOCATION",
+                  "slug": "cairo",
+                  "firstPublishedAt": "2026-08-25T17:13:33.831000Z",
+                  "lastPublishedAt": "2026-09-18T19:11:30.268308Z",
+                  "relativeUrl": "/2026/local-events/cairo/",
+                  "live": true,
+                  "parent": null,
+                  "__typename": "ExpandedPageMeta"
+                },
+                "country": "Egypt",
+                "__typename": "LocationPage"
+              },
+              "event": "aWQ6NA==",
+              "joinEnabled": true,
+              "memberships": null,
+              "nominationBadges": null,
+              "awardBadges": null
+            }
+          },
+          {
+            "__typename": "TeamPageEdge",
+            "cursor": "b2Zmc2V0OjM5",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6NTU4NzA=",
@@ -9806,7 +10729,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjM3",
+            "cursor": "b2Zmc2V0OjQw",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6NTc1MDQ=",
@@ -9909,7 +10832,91 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjM4",
+            "cursor": "b2Zmc2V0OjQx",
+            "node": {
+              "__typename": "TeamPage",
+              "id": "aWQ6NTg2MTc=",
+              "title": "Future girls",
+              "meta": {
+                "type": "TEAM",
+                "slug": "future-girls",
+                "firstPublishedAt": null,
+                "lastPublishedAt": null,
+                "relativeUrl": "/2026/find-a-team/future-girls/",
+                "live": true,
+                "parent": null,
+                "__typename": "ExpandedPageMeta"
+              },
+              "owner": "aWQ6ZDdkMzczNzQtNGFmNC00ZjUxLWFkOWQtZWQ4YWQyMmUwMWFh",
+              "ownerDetails": null,
+              "excerpt": "​هلو يا بنات! ♥️\nبكون تيم (بنات فقط) لمسابقة NASA Space Apps Challenge 🚀\n​مش شرط يكون عندك كل المهارات عشان تكوني في التيم، كفاية تكوني متميزة في مهارة واحدة أو اتنين، والباقي بنكمل بعض فيه كفريق! 🤝✨\n​المهارات المطلوب وجودها معنا:\n🔍 البحث العلمي و...",
+              "project": "aWQ6NTUwMjA=",
+              "projectDetails": {
+                "id": "aWQ6NTUwMjA=",
+                "name": "Project Future girls",
+                "summary": "",
+                "demoLink": "",
+                "projectLink": "",
+                "details": "",
+                "solution": "",
+                "aiReferences": "",
+                "dataReferences": "",
+                "projectReferences": "",
+                "isSubmitted": false,
+                "savedAt": null,
+                "submittedAt": null,
+                "__typename": "Project"
+              },
+              "projectSubmitted": false,
+              "featuredImage": null,
+              "description": null,
+              "desiredSkills": null,
+              "languages": null,
+              "challenge": "aWQ6NTUxMjU=",
+              "challengeDetails": {
+                "id": "aWQ6NTUxMjU=",
+                "title": "Abandoned but not Forgotten: Storytelling about NASA's Discarded Equipment on the Moon and Mars",
+                "meta": {
+                  "type": "CHALLENGE",
+                  "slug": "abandoned-but-not-forgotten-storytelling-about-nasas-discarded-equipment-on-the-moon-and-mars",
+                  "firstPublishedAt": "2026-09-17T14:22:22.961784Z",
+                  "lastPublishedAt": "2026-09-17T14:22:22.961784Z",
+                  "relativeUrl": "/2026/challenges/abandoned-but-not-forgotten-storytelling-about-nasas-discarded-equipment-on-the-moon-and-mars/",
+                  "live": true,
+                  "parent": null,
+                  "__typename": "ExpandedPageMeta"
+                },
+                "excerpt": "Since the 1960s, NASA has left hardware across the solar system–on the Moon, on Mars, and in deep space. From rovers and instruments that completed their science missions to probes still traveling away from Earth this hardware varies widely in both its purpose and current level of functionality. Your challenge is to tell the story of some or all of this equipment that introduces school-age space enthusiasts to the hardware and the science it made possible.",
+                "__typename": "ChallengePage"
+              },
+              "location": "aWQ6NTQ5ODE=",
+              "locationDetails": {
+                "id": "aWQ6NTQ5ODE=",
+                "title": "Cairo",
+                "displayName": "",
+                "meta": {
+                  "type": "LOCATION",
+                  "slug": "cairo",
+                  "firstPublishedAt": "2026-08-25T17:13:33.831000Z",
+                  "lastPublishedAt": "2026-09-18T19:11:30.268308Z",
+                  "relativeUrl": "/2026/local-events/cairo/",
+                  "live": true,
+                  "parent": null,
+                  "__typename": "ExpandedPageMeta"
+                },
+                "country": "Egypt",
+                "__typename": "LocationPage"
+              },
+              "event": "aWQ6NA==",
+              "joinEnabled": true,
+              "memberships": null,
+              "nominationBadges": null,
+              "awardBadges": null
+            }
+          },
+          {
+            "__typename": "TeamPageEdge",
+            "cursor": "b2Zmc2V0OjQy",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6NTUyOTc=",
@@ -10012,7 +11019,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjM5",
+            "cursor": "b2Zmc2V0OjQz",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6NTYwNzA=",
@@ -10096,7 +11103,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjQw",
+            "cursor": "b2Zmc2V0OjQ0",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6NTY0MTM=",
@@ -10184,7 +11191,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjQx",
+            "cursor": "b2Zmc2V0OjQ1",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6NTY1NDA=",
@@ -10287,7 +11294,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjQy",
+            "cursor": "b2Zmc2V0OjQ2",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6NTgxMzM=",
@@ -10402,7 +11409,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjQz",
+            "cursor": "b2Zmc2V0OjQ3",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6NTgzMjQ=",
@@ -10486,7 +11493,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjQ0",
+            "cursor": "b2Zmc2V0OjQ4",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6NTYxMzc=",
@@ -10570,7 +11577,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjQ1",
+            "cursor": "b2Zmc2V0OjQ5",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6NTg0NjM=",
@@ -10673,7 +11680,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjQ2",
+            "cursor": "b2Zmc2V0OjUw",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6NTg0Mjc=",
@@ -10776,7 +11783,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjQ3",
+            "cursor": "b2Zmc2V0OjUx",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6NTc2MzY=",
@@ -10879,7 +11886,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjQ4",
+            "cursor": "b2Zmc2V0OjUy",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6NTY4MTI=",
@@ -10982,7 +11989,110 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjQ5",
+            "cursor": "b2Zmc2V0OjUz",
+            "node": {
+              "__typename": "TeamPage",
+              "id": "aWQ6NTg2ODg=",
+              "title": "Lunarse X",
+              "meta": {
+                "type": "TEAM",
+                "slug": "lunarse-x",
+                "firstPublishedAt": "2026-09-22T23:42:10.603000Z",
+                "lastPublishedAt": "2026-09-23T08:44:01.430706Z",
+                "relativeUrl": "/2026/find-a-team/lunarse-x/",
+                "live": true,
+                "parent": null,
+                "__typename": "ExpandedPageMeta"
+              },
+              "owner": "aWQ6ZWViMmNlMDItYWZlNS00ZDc3LWFmZDgtYjlkOGQ3YTQ2ZTM3",
+              "ownerDetails": null,
+              "excerpt": "Lunarse X is a multidisciplinary team passionate about Earth, space, and exploring other worlds. Our members bring skills in astronomy, planetary science, geology, remote sensing, programming, AI, data & image analysis",
+              "project": "aWQ6NTUwOTE=",
+              "projectDetails": {
+                "id": "aWQ6NTUwOTE=",
+                "name": "Project Lunarse X",
+                "summary": "",
+                "demoLink": "",
+                "projectLink": "",
+                "details": "",
+                "solution": "",
+                "aiReferences": "",
+                "dataReferences": "",
+                "projectReferences": "",
+                "isSubmitted": false,
+                "savedAt": null,
+                "submittedAt": null,
+                "__typename": "Project"
+              },
+              "projectSubmitted": false,
+              "featuredImage": {
+                "id": "aWQ6NDM0NTE1",
+                "meta": {
+                  "type": "images.CustomImage",
+                  "downloadUrl": "https://assets.spaceappschallenge.org/media/original_images/WhatsApp_Image_2026-09-23_at_01.40.48.jpeg",
+                  "__typename": "ImageMeta"
+                },
+                "title": "team_image.23:15:10.239552",
+                "alt": "team_image.23:15:10.239552",
+                "caption": "team_image.23:15:10.239552",
+                "displaySize": "or",
+                "rendition": {
+                  "url": "https://assets.spaceappschallenge.org/media/images/WhatsApp_Image_2026-09-23_at_01.40.2e16d0ba.fill-300x250.jpg",
+                  "fullUrl": "https://assets.spaceappschallenge.org/media/images/WhatsApp_Image_2026-09-23_at_01.40.2e16d0ba.fill-300x250.jpg",
+                  "height": 250,
+                  "width": 300,
+                  "__typename": "BaseImage"
+                },
+                "__typename": "DefaultImage"
+              },
+              "description": null,
+              "desiredSkills": null,
+              "languages": null,
+              "challenge": "aWQ6NTUxMjk=",
+              "challengeDetails": {
+                "id": "aWQ6NTUxMjk=",
+                "title": "Identify Earth Locations that Analog the Permanent Moon Base Locations and Mars",
+                "meta": {
+                  "type": "CHALLENGE",
+                  "slug": "identify-earth-locations-that-analog-the-permanent-moon-base-locations-and-mars",
+                  "firstPublishedAt": "2026-09-17T14:21:29.086757Z",
+                  "lastPublishedAt": "2026-09-17T14:21:29.086757Z",
+                  "relativeUrl": "/2026/challenges/identify-earth-locations-that-analog-the-permanent-moon-base-locations-and-mars/",
+                  "live": true,
+                  "parent": null,
+                  "__typename": "ExpandedPageMeta"
+                },
+                "excerpt": "Selecting future landing sites and lunar base locations depends on many factors, including topography, geology, environment, and available resources, to name a few. Places on Earth that have analogous characteristics to the Moon or Mars – the Atacama Desert, Haughton Crater, Death Valley – allow mission teams to test equipment and methods before they fly; however, such terrestrial analog sites are not entirely well characterized. Your challenge is to use open Earth, Moon, and Mars data from NASA and other space agencies to identify and characterize new terrestrial analogs for future bases or landing sites, drawing on deserts, polar regions, volcanic and arid terrains, caves, and other environments that share conditions with the lunar or Martian surface.",
+                "__typename": "ChallengePage"
+              },
+              "location": "aWQ6NTQ5ODE=",
+              "locationDetails": {
+                "id": "aWQ6NTQ5ODE=",
+                "title": "Cairo",
+                "displayName": "",
+                "meta": {
+                  "type": "LOCATION",
+                  "slug": "cairo",
+                  "firstPublishedAt": "2026-08-25T17:13:33.831000Z",
+                  "lastPublishedAt": "2026-09-18T19:11:30.268308Z",
+                  "relativeUrl": "/2026/local-events/cairo/",
+                  "live": true,
+                  "parent": null,
+                  "__typename": "ExpandedPageMeta"
+                },
+                "country": "Egypt",
+                "__typename": "LocationPage"
+              },
+              "event": "aWQ6NA==",
+              "joinEnabled": true,
+              "memberships": null,
+              "nominationBadges": null,
+              "awardBadges": null
+            }
+          },
+          {
+            "__typename": "TeamPageEdge",
+            "cursor": "b2Zmc2V0OjU0",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6NTU3NTY=",
@@ -11085,7 +12195,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjUw",
+            "cursor": "b2Zmc2V0OjU1",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6NTg1MzY=",
@@ -11188,7 +12298,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjUx",
+            "cursor": "b2Zmc2V0OjU2",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6NTc0Njk=",
@@ -11291,7 +12401,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjUy",
+            "cursor": "b2Zmc2V0OjU3",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6NTU2MTg=",
@@ -11375,7 +12485,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjUz",
+            "cursor": "b2Zmc2V0OjU4",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6NTc1MzY=",
@@ -11499,7 +12609,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjU0",
+            "cursor": "b2Zmc2V0OjU5",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6NTYyODU=",
@@ -11583,7 +12693,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjU1",
+            "cursor": "b2Zmc2V0OjYw",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6NTY5Njk=",
@@ -11686,7 +12796,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjU2",
+            "cursor": "b2Zmc2V0OjYx",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6NTY5ODU=",
@@ -11789,7 +12899,91 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjU3",
+            "cursor": "b2Zmc2V0OjYy",
+            "node": {
+              "__typename": "TeamPage",
+              "id": "aWQ6NTg1ODM=",
+              "title": "Nasa Cairo",
+              "meta": {
+                "type": "TEAM",
+                "slug": "nasa-cairo",
+                "firstPublishedAt": "2026-09-23T03:47:10.029000Z",
+                "lastPublishedAt": "2026-09-23T03:47:26.039901Z",
+                "relativeUrl": "/2026/find-a-team/nasa-cairo/",
+                "live": true,
+                "parent": null,
+                "__typename": "ExpandedPageMeta"
+              },
+              "owner": "aWQ6MzE2YTk1OTItNGNlZC00ODczLWE3NjAtMjI0ZGQ5MzY3ZjI2",
+              "ownerDetails": null,
+              "excerpt": "Team of .......",
+              "project": "aWQ6NTQ5ODY=",
+              "projectDetails": {
+                "id": "aWQ6NTQ5ODY=",
+                "name": "Project Nasa Cairo",
+                "summary": "",
+                "demoLink": "",
+                "projectLink": "",
+                "details": "",
+                "solution": "",
+                "aiReferences": "",
+                "dataReferences": "",
+                "projectReferences": "",
+                "isSubmitted": false,
+                "savedAt": null,
+                "submittedAt": null,
+                "__typename": "Project"
+              },
+              "projectSubmitted": false,
+              "featuredImage": null,
+              "description": null,
+              "desiredSkills": null,
+              "languages": null,
+              "challenge": "aWQ6NTUxMjc=",
+              "challengeDetails": {
+                "id": "aWQ6NTUxMjc=",
+                "title": "CLPS Lunar Mission Browser",
+                "meta": {
+                  "type": "CHALLENGE",
+                  "slug": "clps-lunar-mission-browser",
+                  "firstPublishedAt": "2026-09-17T14:21:09.928719Z",
+                  "lastPublishedAt": "2026-09-17T14:21:09.928719Z",
+                  "relativeUrl": "/2026/challenges/clps-lunar-mission-browser/",
+                  "live": true,
+                  "parent": null,
+                  "__typename": "ExpandedPageMeta"
+                },
+                "excerpt": "Missions to the Moon’s south pole face extreme lighting and communication constraints, and planning  them takes careful coordination between science and engineering teams. Tools for determining Sun and Earth positions at candidate landing sites exist, but their complicated interfaces make it difficult to evaluate critical information with efficiency. Your challenge is to create an intuitive tool or application that lets mission planners, educators, and the public compare landing sites and dates quickly, visualizing Sun and Earth positions relative to the horizon to assess power generation potential and direct-to-Earth communication windows.",
+                "__typename": "ChallengePage"
+              },
+              "location": "aWQ6NTQ5ODE=",
+              "locationDetails": {
+                "id": "aWQ6NTQ5ODE=",
+                "title": "Cairo",
+                "displayName": "",
+                "meta": {
+                  "type": "LOCATION",
+                  "slug": "cairo",
+                  "firstPublishedAt": "2026-08-25T17:13:33.831000Z",
+                  "lastPublishedAt": "2026-09-18T19:11:30.268308Z",
+                  "relativeUrl": "/2026/local-events/cairo/",
+                  "live": true,
+                  "parent": null,
+                  "__typename": "ExpandedPageMeta"
+                },
+                "country": "Egypt",
+                "__typename": "LocationPage"
+              },
+              "event": "aWQ6NA==",
+              "joinEnabled": true,
+              "memberships": null,
+              "nominationBadges": null,
+              "awardBadges": null
+            }
+          },
+          {
+            "__typename": "TeamPageEdge",
+            "cursor": "b2Zmc2V0OjYz",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6NTgxNDc=",
@@ -11892,7 +13086,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjU4",
+            "cursor": "b2Zmc2V0OjY0",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6NTg1MjY=",
@@ -11995,7 +13189,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjU5",
+            "cursor": "b2Zmc2V0OjY1",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6NTUxNDE=",
@@ -12079,7 +13273,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjYw",
+            "cursor": "b2Zmc2V0OjY2",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6NTg0OTA=",
@@ -12163,7 +13357,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjYx",
+            "cursor": "b2Zmc2V0OjY3",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6NTY1NDY=",
@@ -12266,7 +13460,110 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjYy",
+            "cursor": "b2Zmc2V0OjY4",
+            "node": {
+              "__typename": "TeamPage",
+              "id": "aWQ6NTg2NjQ=",
+              "title": "OrbitX Studio",
+              "meta": {
+                "type": "TEAM",
+                "slug": "orbitx-studio",
+                "firstPublishedAt": null,
+                "lastPublishedAt": null,
+                "relativeUrl": "/2026/find-a-team/orbitx-studio/",
+                "live": true,
+                "parent": null,
+                "__typename": "ExpandedPageMeta"
+              },
+              "owner": "aWQ6YjkyOTg0OTgtMThkMy00MThhLWI3NTctOTkyZTU2OTAyOGNm",
+              "ownerDetails": null,
+              "excerpt": "OrbitX is building a 2D Platformer for the Junior Astronaut challenge\nOrbitX is looking for passionate team members:\n1) 2D Lead Developer:(Godot or Unity).\n​2) 2D Artist/Animator.\n3)​ Level & UI Designer.\n4)​ Media & Video Creator.\n5) ​presenter a...",
+              "project": "aWQ6NTUwNjc=",
+              "projectDetails": {
+                "id": "aWQ6NTUwNjc=",
+                "name": "Project OrbitX Studio",
+                "summary": "",
+                "demoLink": "",
+                "projectLink": "",
+                "details": "",
+                "solution": "",
+                "aiReferences": "",
+                "dataReferences": "",
+                "projectReferences": "",
+                "isSubmitted": false,
+                "savedAt": null,
+                "submittedAt": null,
+                "__typename": "Project"
+              },
+              "projectSubmitted": false,
+              "featuredImage": {
+                "id": "aWQ6NDM0NDE3",
+                "meta": {
+                  "type": "images.CustomImage",
+                  "downloadUrl": "https://assets.spaceappschallenge.org/media/original_images/space_vRR5ddM.jpg",
+                  "__typename": "ImageMeta"
+                },
+                "title": "team_image.21:48:53.519082",
+                "alt": "team_image.21:48:53.519082",
+                "caption": "team_image.21:48:53.519082",
+                "displaySize": "or",
+                "rendition": {
+                  "url": "https://assets.spaceappschallenge.org/media/images/space_vRR5ddM.2e16d0ba.fill-300x250.jpg",
+                  "fullUrl": "https://assets.spaceappschallenge.org/media/images/space_vRR5ddM.2e16d0ba.fill-300x250.jpg",
+                  "height": 250,
+                  "width": 300,
+                  "__typename": "BaseImage"
+                },
+                "__typename": "DefaultImage"
+              },
+              "description": null,
+              "desiredSkills": null,
+              "languages": null,
+              "challenge": "aWQ6NTUxMjQ=",
+              "challengeDetails": {
+                "id": "aWQ6NTUxMjQ=",
+                "title": "Build a Junior Astronaut Mission Trainer",
+                "meta": {
+                  "type": "CHALLENGE",
+                  "slug": "build-a-junior-astronaut-mission-trainer",
+                  "firstPublishedAt": "2026-09-17T14:22:28.522299Z",
+                  "lastPublishedAt": "2026-09-17T14:22:28.522299Z",
+                  "relativeUrl": "/2026/challenges/build-a-junior-astronaut-mission-trainer/",
+                  "live": true,
+                  "parent": null,
+                  "__typename": "ExpandedPageMeta"
+                },
+                "excerpt": "Space-themed STEM content often oversimplifies the engineering trade-offs that define a real mission or presents them at a level too complex to hold a young learner's attention. Few tools make those trade-offs both tangible and fun. Your challenge is to design and build an interactive game or app that lets students run a lunar or Martian outpost, balancing competing demands like life support, radiation shielding, power, and food production, so they experience firsthand the decisions that determine whether a mission fails or succeeds.",
+                "__typename": "ChallengePage"
+              },
+              "location": "aWQ6NTQ5ODE=",
+              "locationDetails": {
+                "id": "aWQ6NTQ5ODE=",
+                "title": "Cairo",
+                "displayName": "",
+                "meta": {
+                  "type": "LOCATION",
+                  "slug": "cairo",
+                  "firstPublishedAt": "2026-08-25T17:13:33.831000Z",
+                  "lastPublishedAt": "2026-09-18T19:11:30.268308Z",
+                  "relativeUrl": "/2026/local-events/cairo/",
+                  "live": true,
+                  "parent": null,
+                  "__typename": "ExpandedPageMeta"
+                },
+                "country": "Egypt",
+                "__typename": "LocationPage"
+              },
+              "event": "aWQ6NA==",
+              "joinEnabled": true,
+              "memberships": null,
+              "nominationBadges": null,
+              "awardBadges": null
+            }
+          },
+          {
+            "__typename": "TeamPageEdge",
+            "cursor": "b2Zmc2V0OjY5",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6NTczODA=",
@@ -12350,7 +13647,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjYz",
+            "cursor": "b2Zmc2V0Ojcw",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6NTY1MzM=",
@@ -12453,7 +13750,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjY0",
+            "cursor": "b2Zmc2V0Ojcx",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6NTg0ODU=",
@@ -12461,8 +13758,8 @@
               "meta": {
                 "type": "TEAM",
                 "slug": "plutos-revenge2",
-                "firstPublishedAt": null,
-                "lastPublishedAt": null,
+                "firstPublishedAt": "2026-09-23T07:17:46.977000Z",
+                "lastPublishedAt": "2026-09-23T07:18:04.647733Z",
                 "relativeUrl": "/2026/find-a-team/plutos-revenge2/",
                 "live": true,
                 "parent": null,
@@ -12556,7 +13853,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjY1",
+            "cursor": "b2Zmc2V0Ojcy",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6NTc2Mjg=",
@@ -12564,8 +13861,8 @@
               "meta": {
                 "type": "TEAM",
                 "slug": "project-ethos",
-                "firstPublishedAt": "2026-09-20T20:32:16.324808Z",
-                "lastPublishedAt": "2026-09-20T20:32:16.324808Z",
+                "firstPublishedAt": "2026-09-20T20:32:16.324000Z",
+                "lastPublishedAt": "2026-09-22T19:29:09.938171Z",
                 "relativeUrl": "/2026/find-a-team/project-ethos/",
                 "live": true,
                 "parent": null,
@@ -12640,7 +13937,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjY2",
+            "cursor": "b2Zmc2V0Ojcz",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6NTc5NDM=",
@@ -12724,7 +14021,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjY3",
+            "cursor": "b2Zmc2V0Ojc0",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6NTcwMTk=",
@@ -12808,7 +14105,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjY4",
+            "cursor": "b2Zmc2V0Ojc1",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6NTc4OTI=",
@@ -12892,7 +14189,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjY5",
+            "cursor": "b2Zmc2V0Ojc2",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6NTU4MDg=",
@@ -13006,7 +14303,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0Ojcw",
+            "cursor": "b2Zmc2V0Ojc3",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6NTc2MTM=",
@@ -13109,7 +14406,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0Ojcx",
+            "cursor": "b2Zmc2V0Ojc4",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6NTYzNzM=",
@@ -13212,7 +14509,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0Ojcy",
+            "cursor": "b2Zmc2V0Ojc5",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6NTU2ODI=",
@@ -13324,7 +14621,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0Ojcz",
+            "cursor": "b2Zmc2V0Ojgw",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6NTY5ODk=",
@@ -13427,7 +14724,91 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0Ojc0",
+            "cursor": "b2Zmc2V0Ojgx",
+            "node": {
+              "__typename": "TeamPage",
+              "id": "aWQ6NTg1ODQ=",
+              "title": "Tennysons",
+              "meta": {
+                "type": "TEAM",
+                "slug": "tennysons",
+                "firstPublishedAt": "2026-09-22T18:18:47.485000Z",
+                "lastPublishedAt": "2026-09-22T18:20:51.500825Z",
+                "relativeUrl": "/2026/find-a-team/tennysons/",
+                "live": true,
+                "parent": null,
+                "__typename": "ExpandedPageMeta"
+              },
+              "owner": "aWQ6ZGQ3ZDQ3ZjMtZjJhZC00NWM3LWIyN2EtNjU4MzMyNDU5YzRm",
+              "ownerDetails": null,
+              "excerpt": "We are a brother duo built on a strong STEM foundation. One of us brings a background in biophysics and interdisciplinary science, while the other combines a sharp eye for detail with creative computer science, logic, and data analysis. Grounded i...",
+              "project": "aWQ6NTQ5ODc=",
+              "projectDetails": {
+                "id": "aWQ6NTQ5ODc=",
+                "name": "Project Tennysons",
+                "summary": "",
+                "demoLink": "",
+                "projectLink": "",
+                "details": "",
+                "solution": "",
+                "aiReferences": "",
+                "dataReferences": "",
+                "projectReferences": "",
+                "isSubmitted": false,
+                "savedAt": null,
+                "submittedAt": null,
+                "__typename": "Project"
+              },
+              "projectSubmitted": false,
+              "featuredImage": null,
+              "description": null,
+              "desiredSkills": null,
+              "languages": null,
+              "challenge": "aWQ6NTUxMzA=",
+              "challengeDetails": {
+                "id": "aWQ6NTUxMzA=",
+                "title": "Create Health Monitoring Software for Astronauts on Space Missions",
+                "meta": {
+                  "type": "CHALLENGE",
+                  "slug": "create-health-monitoring-software-for-astronauts-on-space-missions",
+                  "firstPublishedAt": "2026-09-17T14:21:16.942007Z",
+                  "lastPublishedAt": "2026-09-17T14:21:16.942007Z",
+                  "relativeUrl": "/2026/challenges/create-health-monitoring-software-for-astronauts-on-space-missions/",
+                  "live": true,
+                  "parent": null,
+                  "__typename": "ExpandedPageMeta"
+                },
+                "excerpt": "Long-duration missions expose astronauts to space radiation, isolation and confinement, altered gravity, and a hostile closed environment, which can bring immune changes, bone loss, cardiovascular events, and behavioral health problems. On long missions, astronauts carry much of the responsibility for spotting these changes in themselves. Your challenge is to build a health monitoring software that gathers health indicators and enables astronauts to evaluate and act on the status of their health.",
+                "__typename": "ChallengePage"
+              },
+              "location": "aWQ6NTQ5ODE=",
+              "locationDetails": {
+                "id": "aWQ6NTQ5ODE=",
+                "title": "Cairo",
+                "displayName": "",
+                "meta": {
+                  "type": "LOCATION",
+                  "slug": "cairo",
+                  "firstPublishedAt": "2026-08-25T17:13:33.831000Z",
+                  "lastPublishedAt": "2026-09-18T19:11:30.268308Z",
+                  "relativeUrl": "/2026/local-events/cairo/",
+                  "live": true,
+                  "parent": null,
+                  "__typename": "ExpandedPageMeta"
+                },
+                "country": "Egypt",
+                "__typename": "LocationPage"
+              },
+              "event": "aWQ6NA==",
+              "joinEnabled": false,
+              "memberships": null,
+              "nominationBadges": null,
+              "awardBadges": null
+            }
+          },
+          {
+            "__typename": "TeamPageEdge",
+            "cursor": "b2Zmc2V0Ojgy",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6NTc0MzA=",
@@ -13530,7 +14911,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0Ojc1",
+            "cursor": "b2Zmc2V0Ojgz",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6NTc0NzE=",
@@ -13614,7 +14995,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0Ojc2",
+            "cursor": "b2Zmc2V0Ojg0",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6NTYyNDc=",
@@ -13740,7 +15121,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0Ojc3",
+            "cursor": "b2Zmc2V0Ojg1",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6NTgwMDk=",
@@ -13843,7 +15224,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0Ojc4",
+            "cursor": "b2Zmc2V0Ojg2",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6NTcyODg=",
@@ -13956,7 +15337,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0Ojc5",
+            "cursor": "b2Zmc2V0Ojg3",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6NTc1ODc=",
@@ -14040,7 +15421,91 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0Ojgw",
+            "cursor": "b2Zmc2V0Ojg4",
+            "node": {
+              "__typename": "TeamPage",
+              "id": "aWQ6NTg1NzA=",
+              "title": "vervgervg",
+              "meta": {
+                "type": "TEAM",
+                "slug": "vervgervg",
+                "firstPublishedAt": null,
+                "lastPublishedAt": null,
+                "relativeUrl": "/2026/find-a-team/vervgervg/",
+                "live": true,
+                "parent": null,
+                "__typename": "ExpandedPageMeta"
+              },
+              "owner": "aWQ6OTg2ZjI1ZDgtMjJiNC00M2I3LTkxYTAtZWNmNmE2YzIxNmJh",
+              "ownerDetails": null,
+              "excerpt": "vbertbtrb",
+              "project": "aWQ6NTQ5NzM=",
+              "projectDetails": {
+                "id": "aWQ6NTQ5NzM=",
+                "name": "Project vervgervg",
+                "summary": "",
+                "demoLink": "",
+                "projectLink": "",
+                "details": "",
+                "solution": "",
+                "aiReferences": "",
+                "dataReferences": "",
+                "projectReferences": "",
+                "isSubmitted": false,
+                "savedAt": null,
+                "submittedAt": null,
+                "__typename": "Project"
+              },
+              "projectSubmitted": false,
+              "featuredImage": null,
+              "description": null,
+              "desiredSkills": null,
+              "languages": null,
+              "challenge": "aWQ6NTUxMjU=",
+              "challengeDetails": {
+                "id": "aWQ6NTUxMjU=",
+                "title": "Abandoned but not Forgotten: Storytelling about NASA's Discarded Equipment on the Moon and Mars",
+                "meta": {
+                  "type": "CHALLENGE",
+                  "slug": "abandoned-but-not-forgotten-storytelling-about-nasas-discarded-equipment-on-the-moon-and-mars",
+                  "firstPublishedAt": "2026-09-17T14:22:22.961784Z",
+                  "lastPublishedAt": "2026-09-17T14:22:22.961784Z",
+                  "relativeUrl": "/2026/challenges/abandoned-but-not-forgotten-storytelling-about-nasas-discarded-equipment-on-the-moon-and-mars/",
+                  "live": true,
+                  "parent": null,
+                  "__typename": "ExpandedPageMeta"
+                },
+                "excerpt": "Since the 1960s, NASA has left hardware across the solar system–on the Moon, on Mars, and in deep space. From rovers and instruments that completed their science missions to probes still traveling away from Earth this hardware varies widely in both its purpose and current level of functionality. Your challenge is to tell the story of some or all of this equipment that introduces school-age space enthusiasts to the hardware and the science it made possible.",
+                "__typename": "ChallengePage"
+              },
+              "location": "aWQ6NTQ5ODE=",
+              "locationDetails": {
+                "id": "aWQ6NTQ5ODE=",
+                "title": "Cairo",
+                "displayName": "",
+                "meta": {
+                  "type": "LOCATION",
+                  "slug": "cairo",
+                  "firstPublishedAt": "2026-08-25T17:13:33.831000Z",
+                  "lastPublishedAt": "2026-09-18T19:11:30.268308Z",
+                  "relativeUrl": "/2026/local-events/cairo/",
+                  "live": true,
+                  "parent": null,
+                  "__typename": "ExpandedPageMeta"
+                },
+                "country": "Egypt",
+                "__typename": "LocationPage"
+              },
+              "event": "aWQ6NA==",
+              "joinEnabled": false,
+              "memberships": null,
+              "nominationBadges": null,
+              "awardBadges": null
+            }
+          },
+          {
+            "__typename": "TeamPageEdge",
+            "cursor": "b2Zmc2V0Ojg5",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6NTU2OTY=",
@@ -14154,7 +15619,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0Ojgx",
+            "cursor": "b2Zmc2V0Ojkw",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6NTYyOTE=",
@@ -14238,7 +15703,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0Ojgy",
+            "cursor": "b2Zmc2V0Ojkx",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6NTYzMTg=",
@@ -14322,7 +15787,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0Ojgz",
+            "cursor": "b2Zmc2V0Ojky",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6NTc5MTM=",
@@ -14425,7 +15890,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0Ojg0",
+            "cursor": "b2Zmc2V0Ojkz",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6NTc1ODM=",
@@ -14434,7 +15899,7 @@
                 "type": "TEAM",
                 "slug": "zorgons",
                 "firstPublishedAt": "2026-09-20T19:01:37.179000Z",
-                "lastPublishedAt": "2026-09-20T19:01:43.089058Z",
+                "lastPublishedAt": "2026-09-22T21:42:29.784367Z",
                 "relativeUrl": "/2026/find-a-team/zorgons/",
                 "live": true,
                 "parent": null,
@@ -14442,7 +15907,7 @@
               },
               "owner": "aWQ6ODI2ZTM2MjUtNTJjNy00M2EzLTllNzMtYzJlNGQwNGVhZWQy",
               "ownerDetails": null,
-              "excerpt": ".",
+              "excerpt": "Forming a multidisciplinary team for NASA Space Apps 2026.Already on the team: • Backend — C#/.NET, APIs • Data Engineer — data processing & pipelines • Support/Generalist — integration, testing & helping across rolesLooking for: • Frontend — web ...",
               "project": "aWQ6NTM5ODY=",
               "projectDetails": {
                 "id": "aWQ6NTM5ODY=",
@@ -14482,8 +15947,20 @@
                 "__typename": "DefaultImage"
               },
               "description": null,
-              "desiredSkills": null,
-              "languages": null,
+              "desiredSkills": [
+                "Business & Economics",
+                "Coding",
+                "Data Analysis",
+                "Data Visualization",
+                "Design",
+                "Software",
+                "Storytelling",
+                "Web Development"
+              ],
+              "languages": [
+                "Arabic",
+                "English"
+              ],
               "challenge": "aWQ6NTUxMzI=",
               "challengeDetails": {
                 "id": "aWQ6NTUxMzI=",
@@ -14528,7 +16005,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0Ojg1",
+            "cursor": "b2Zmc2V0Ojk0",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6NTcwNDg=",
@@ -15983,10 +17460,10 @@
           "hasPreviousPage": false,
           "hasNextPage": false,
           "startCursor": "b2Zmc2V0OjA=",
-          "endCursor": "b2Zmc2V0OjE1",
+          "endCursor": "b2Zmc2V0OjE4",
           "__typename": "PageInfo"
         },
-        "totalCount": 16,
+        "totalCount": 19,
         "edges": [
           {
             "__typename": "TeamPageEdge",
@@ -15999,7 +17476,7 @@
                 "type": "TEAM",
                 "slug": "help-to",
                 "firstPublishedAt": "2026-09-17T15:55:46.708000Z",
-                "lastPublishedAt": "2026-09-22T16:03:46.549392Z",
+                "lastPublishedAt": "2026-09-23T01:58:39.288473Z",
                 "relativeUrl": "/2026/find-a-team/help-to/",
                 "live": true,
                 "parent": null,
@@ -16007,7 +17484,7 @@
               },
               "owner": "aWQ6M2I3MzljYzctOGIzYy00NmUzLTgyY2MtYjFiMmUxODQzOWMx",
               "ownerDetails": null,
-              "excerpt": "At astron, I am student so simply but highly complex join here to win,learn, enjoy,Ready for a science trip🛩️🥼@infotainment-t9f  my channel to refer to join my teamExperience: already attend the 24hrs hackathon Astron is an open-source orbital int...",
+              "excerpt": "At astron, I am student so simply but highly complex join here to win,learn, enjoy,Ready for a science trip🛩️🥼Team communication: https://t.me/+xYo7RWLHeWk1NjI1 (telegram link)Experience: already attend the 24hrs hackathon Astron is an open-source...",
               "project": "aWQ6NTE2MDE=",
               "projectDetails": {
                 "id": "aWQ6NTE2MDE=",
@@ -16344,6 +17821,90 @@
             "cursor": "b2Zmc2V0OjM=",
             "node": {
               "__typename": "TeamPage",
+              "id": "aWQ6NTg3Nzk=",
+              "title": "Astronyx",
+              "meta": {
+                "type": "TEAM",
+                "slug": "astronyx1",
+                "firstPublishedAt": "2026-09-23T07:23:17.497025Z",
+                "lastPublishedAt": "2026-09-23T07:23:17.497025Z",
+                "relativeUrl": "/2026/find-a-team/astronyx1/",
+                "live": true,
+                "parent": null,
+                "__typename": "ExpandedPageMeta"
+              },
+              "owner": "aWQ6YjMzNGNmMGItNDY2MC00Y2Q5LWEzOWUtNzZjYzE5ZmI1Yzc0",
+              "ownerDetails": null,
+              "excerpt": "Hi, we are Team Astronyx. We are a group of passionate and curious individuals who enjoy learning, building, and working together !!.",
+              "project": "aWQ6NTUxODI=",
+              "projectDetails": {
+                "id": "aWQ6NTUxODI=",
+                "name": "Project Astronyx",
+                "summary": "",
+                "demoLink": "",
+                "projectLink": "",
+                "details": "",
+                "solution": "",
+                "aiReferences": "",
+                "dataReferences": "",
+                "projectReferences": "",
+                "isSubmitted": false,
+                "savedAt": null,
+                "submittedAt": null,
+                "__typename": "Project"
+              },
+              "projectSubmitted": false,
+              "featuredImage": null,
+              "description": null,
+              "desiredSkills": null,
+              "languages": null,
+              "challenge": "aWQ6NTUxMjE=",
+              "challengeDetails": {
+                "id": "aWQ6NTUxMjE=",
+                "title": "Flame in Freefall: AI-Powered Fire Safety Insights from Microgravity Combustion Data",
+                "meta": {
+                  "type": "CHALLENGE",
+                  "slug": "flame-in-freefall-ai-powered-fire-safety-insights-from-microgravity-combustion-data",
+                  "firstPublishedAt": "2026-09-17T14:20:54.577001Z",
+                  "lastPublishedAt": "2026-09-17T14:20:54.577001Z",
+                  "relativeUrl": "/2026/challenges/flame-in-freefall-ai-powered-fire-safety-insights-from-microgravity-combustion-data/",
+                  "live": true,
+                  "parent": null,
+                  "__typename": "ExpandedPageMeta"
+                },
+                "excerpt": "For decades, NASA has studied how flames and fire behave in microgravity, gathering a trove of experimental data along the way. That knowledge matters more than ever as humans gear up to return to the Moon and press on to Mars, yet the volume of results makes them hard to find, compare, and understand. Your challenge is to create an interactive, AI-powered dashboard that summarizes, ranks, and interprets those findings to deliver fire safety insights for human space exploration.",
+                "__typename": "ChallengePage"
+              },
+              "location": "aWQ6NTQ5MzE=",
+              "locationDetails": {
+                "id": "aWQ6NTQ5MzE=",
+                "title": "Coimbatore",
+                "displayName": "",
+                "meta": {
+                  "type": "LOCATION",
+                  "slug": "coimbatore",
+                  "firstPublishedAt": "2026-08-25T16:47:58.789048Z",
+                  "lastPublishedAt": "2026-08-26T16:02:42.041911Z",
+                  "relativeUrl": "/2026/local-events/coimbatore/",
+                  "live": true,
+                  "parent": null,
+                  "__typename": "ExpandedPageMeta"
+                },
+                "country": "India",
+                "__typename": "LocationPage"
+              },
+              "event": "aWQ6NA==",
+              "joinEnabled": true,
+              "memberships": null,
+              "nominationBadges": null,
+              "awardBadges": null
+            }
+          },
+          {
+            "__typename": "TeamPageEdge",
+            "cursor": "b2Zmc2V0OjQ=",
+            "node": {
+              "__typename": "TeamPage",
               "id": "aWQ6NTc4ODk=",
               "title": "Beyond Gravity",
               "meta": {
@@ -16444,7 +18005,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjQ=",
+            "cursor": "b2Zmc2V0OjU=",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6NTgzNDU=",
@@ -16547,7 +18108,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjU=",
+            "cursor": "b2Zmc2V0OjY=",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6NTU1ODk=",
@@ -16631,7 +18192,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjY=",
+            "cursor": "b2Zmc2V0Ojc=",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6NTc5MTA=",
@@ -16734,7 +18295,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0Ojc=",
+            "cursor": "b2Zmc2V0Ojg=",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6NTc3ODQ=",
@@ -16837,7 +18398,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0Ojg=",
+            "cursor": "b2Zmc2V0Ojk=",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6NTY2MDY=",
@@ -16846,7 +18407,7 @@
                 "type": "TEAM",
                 "slug": "marsnexus",
                 "firstPublishedAt": "2026-09-19T02:18:39.799000Z",
-                "lastPublishedAt": "2026-09-22T03:16:26.627598Z",
+                "lastPublishedAt": "2026-09-23T07:43:47.401425Z",
                 "relativeUrl": "/2026/find-a-team/marsnexus/",
                 "live": true,
                 "parent": null,
@@ -16940,7 +18501,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0Ojk=",
+            "cursor": "b2Zmc2V0OjEw",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6NTc3OTE=",
@@ -17024,7 +18585,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjEw",
+            "cursor": "b2Zmc2V0OjEx",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6NTc3NzA=",
@@ -17127,7 +18688,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjEx",
+            "cursor": "b2Zmc2V0OjEy",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6NTY3MjY=",
@@ -17211,7 +18772,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjEy",
+            "cursor": "b2Zmc2V0OjEz",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6NTc3Mzk=",
@@ -17295,7 +18856,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjEz",
+            "cursor": "b2Zmc2V0OjE0",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6NTY2NDM=",
@@ -17398,7 +18959,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjE0",
+            "cursor": "b2Zmc2V0OjE1",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6NTc3OTY=",
@@ -17501,7 +19062,91 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjE1",
+            "cursor": "b2Zmc2V0OjE2",
+            "node": {
+              "__typename": "TeamPage",
+              "id": "aWQ6NTg3NTA=",
+              "title": "Team Kernels",
+              "meta": {
+                "type": "TEAM",
+                "slug": "team-kernels",
+                "firstPublishedAt": "2026-09-23T05:51:20.641000Z",
+                "lastPublishedAt": "2026-09-23T05:55:32.380037Z",
+                "relativeUrl": "/2026/find-a-team/team-kernels/",
+                "live": true,
+                "parent": null,
+                "__typename": "ExpandedPageMeta"
+              },
+              "owner": "aWQ6N2ZlNTRjNWMtM2IxNy00ZjljLWFlZWQtNTgwYzA4MWQyYzYw",
+              "ownerDetails": null,
+              "excerpt": "A Data Science Enthusiast who is interested in Space exploration and Creating Impactfull insights for Real Word Problems. Inrested in Machine Learning , Computer Vision and Cryptocurrency related stuffs.",
+              "project": "aWQ6NTUxNTM=",
+              "projectDetails": {
+                "id": "aWQ6NTUxNTM=",
+                "name": "Project Team Kernels",
+                "summary": "",
+                "demoLink": "",
+                "projectLink": "",
+                "details": "",
+                "solution": "",
+                "aiReferences": "",
+                "dataReferences": "",
+                "projectReferences": "",
+                "isSubmitted": false,
+                "savedAt": null,
+                "submittedAt": null,
+                "__typename": "Project"
+              },
+              "projectSubmitted": false,
+              "featuredImage": null,
+              "description": null,
+              "desiredSkills": null,
+              "languages": null,
+              "challenge": "aWQ6NTUxMjY=",
+              "challengeDetails": {
+                "id": "aWQ6NTUxMjY=",
+                "title": "Field Shift: Adapting Farms with NASA Data",
+                "meta": {
+                  "type": "CHALLENGE",
+                  "slug": "field-shift-adapting-farms-with-nasa-data",
+                  "firstPublishedAt": "2026-09-17T14:22:15.778779Z",
+                  "lastPublishedAt": "2026-09-17T14:22:15.778779Z",
+                  "relativeUrl": "/2026/challenges/field-shift-adapting-farms-with-nasa-data/",
+                  "live": true,
+                  "parent": null,
+                  "__typename": "ExpandedPageMeta"
+                },
+                "excerpt": "Farmers around the world navigate shifting temperatures, changing rainfall patterns, water shortages, extreme weather, and declining soil health. These pressures make it difficult to choose crop rotations that protect fields, conserve water, and support long‑term resilience. Your challenge is to create a decision‑support tool that uses NASA Earth observations along with local soil information, crop characteristics, and farmer priorities to help farmers explore rotation strategies that could strengthen soil health and adapt their farms to changing conditions.",
+                "__typename": "ChallengePage"
+              },
+              "location": "aWQ6NTQ5MzE=",
+              "locationDetails": {
+                "id": "aWQ6NTQ5MzE=",
+                "title": "Coimbatore",
+                "displayName": "",
+                "meta": {
+                  "type": "LOCATION",
+                  "slug": "coimbatore",
+                  "firstPublishedAt": "2026-08-25T16:47:58.789048Z",
+                  "lastPublishedAt": "2026-08-26T16:02:42.041911Z",
+                  "relativeUrl": "/2026/local-events/coimbatore/",
+                  "live": true,
+                  "parent": null,
+                  "__typename": "ExpandedPageMeta"
+                },
+                "country": "India",
+                "__typename": "LocationPage"
+              },
+              "event": "aWQ6NA==",
+              "joinEnabled": true,
+              "memberships": null,
+              "nominationBadges": null,
+              "awardBadges": null
+            }
+          },
+          {
+            "__typename": "TeamPageEdge",
+            "cursor": "b2Zmc2V0OjE3",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6NTUzNjU=",
@@ -17523,6 +19168,90 @@
               "projectDetails": {
                 "id": "aWQ6NTE3Njg=",
                 "name": "Project Tech star",
+                "summary": "",
+                "demoLink": "",
+                "projectLink": "",
+                "details": "",
+                "solution": "",
+                "aiReferences": "",
+                "dataReferences": "",
+                "projectReferences": "",
+                "isSubmitted": false,
+                "savedAt": null,
+                "submittedAt": null,
+                "__typename": "Project"
+              },
+              "projectSubmitted": false,
+              "featuredImage": null,
+              "description": null,
+              "desiredSkills": null,
+              "languages": null,
+              "challenge": "aWQ6NTUxMzE=",
+              "challengeDetails": {
+                "id": "aWQ6NTUxMzE=",
+                "title": "Space Mission Design Game",
+                "meta": {
+                  "type": "CHALLENGE",
+                  "slug": "space-mission-design-game",
+                  "firstPublishedAt": "2026-09-17T14:22:08.317266Z",
+                  "lastPublishedAt": "2026-09-17T14:22:08.317266Z",
+                  "relativeUrl": "/2026/challenges/space-mission-design-game/",
+                  "live": true,
+                  "parent": null,
+                  "__typename": "ExpandedPageMeta"
+                },
+                "excerpt": "Designing a space mission requires careful consideration of competing demands, including mission objectives, spacecraft design, scientific instruments, launch vehicles, budgets, power, mass, communications, and orbital constraints. For students who  rarely get to experiment with an entire mission from concept to operation, these trade-offs often remain abstract. Your challenge is to create an interactive game that allows participants to design, manage, and simulate a complete space mission while making engineering decisions, managing limited resources, and evaluating how each choice shapes the success of their mission.",
+                "__typename": "ChallengePage"
+              },
+              "location": "aWQ6NTQ5MzE=",
+              "locationDetails": {
+                "id": "aWQ6NTQ5MzE=",
+                "title": "Coimbatore",
+                "displayName": "",
+                "meta": {
+                  "type": "LOCATION",
+                  "slug": "coimbatore",
+                  "firstPublishedAt": "2026-08-25T16:47:58.789048Z",
+                  "lastPublishedAt": "2026-08-26T16:02:42.041911Z",
+                  "relativeUrl": "/2026/local-events/coimbatore/",
+                  "live": true,
+                  "parent": null,
+                  "__typename": "ExpandedPageMeta"
+                },
+                "country": "India",
+                "__typename": "LocationPage"
+              },
+              "event": "aWQ6NA==",
+              "joinEnabled": true,
+              "memberships": null,
+              "nominationBadges": null,
+              "awardBadges": null
+            }
+          },
+          {
+            "__typename": "TeamPageEdge",
+            "cursor": "b2Zmc2V0OjE4",
+            "node": {
+              "__typename": "TeamPage",
+              "id": "aWQ6NTg3NTU=",
+              "title": "Tholaivizhi Optiks",
+              "meta": {
+                "type": "TEAM",
+                "slug": "tholaivizhi-optiks",
+                "firstPublishedAt": "2026-09-23T06:14:44.590701Z",
+                "lastPublishedAt": "2026-09-23T06:14:44.590701Z",
+                "relativeUrl": "/2026/find-a-team/tholaivizhi-optiks/",
+                "live": true,
+                "parent": null,
+                "__typename": "ExpandedPageMeta"
+              },
+              "owner": "aWQ6YTJmYzEwMTItOTE2MC00N2JiLTlhYzUtYzNhZDJkNTU4NDc4",
+              "ownerDetails": null,
+              "excerpt": "A structured, goal-oriented team for the NASA Space Apps Challenge, focusing on data organization and collaborative execution. Recruiting skilled members in advanced Python/Data Science, Full-Stack Development, or UI/UX Design. DM with your skills...",
+              "project": "aWQ6NTUxNTg=",
+              "projectDetails": {
+                "id": "aWQ6NTUxNTg=",
+                "name": "Project Tholaivizhi Optiks",
                 "summary": "",
                 "demoLink": "",
                 "projectLink": "",
@@ -17902,10 +19631,10 @@
           "hasPreviousPage": false,
           "hasNextPage": false,
           "startCursor": "b2Zmc2V0OjA=",
-          "endCursor": "b2Zmc2V0OjEx",
+          "endCursor": "b2Zmc2V0OjEy",
           "__typename": "PageInfo"
         },
-        "totalCount": 12,
+        "totalCount": 13,
         "edges": [
           {
             "__typename": "TeamPageEdge",
@@ -18286,6 +20015,90 @@
             "cursor": "b2Zmc2V0OjQ=",
             "node": {
               "__typename": "TeamPage",
+              "id": "aWQ6NTg3NDQ=",
+              "title": "Pluto_Planet",
+              "meta": {
+                "type": "TEAM",
+                "slug": "pluto_planet",
+                "firstPublishedAt": "2026-09-23T05:09:13.234000Z",
+                "lastPublishedAt": "2026-09-23T05:21:58.158446Z",
+                "relativeUrl": "/2026/find-a-team/pluto_planet/",
+                "live": true,
+                "parent": null,
+                "__typename": "ExpandedPageMeta"
+              },
+              "owner": "aWQ6ZTlmYThhNGItZWI1Zi00NGQ4LTg2ZGQtOWNlYjEyZWEyYjA0",
+              "ownerDetails": null,
+              "excerpt": "Student",
+              "project": "aWQ6NTUxNDc=",
+              "projectDetails": {
+                "id": "aWQ6NTUxNDc=",
+                "name": "Project Pluto_Planet",
+                "summary": "",
+                "demoLink": "",
+                "projectLink": "",
+                "details": "",
+                "solution": "",
+                "aiReferences": "",
+                "dataReferences": "",
+                "projectReferences": "",
+                "isSubmitted": false,
+                "savedAt": null,
+                "submittedAt": null,
+                "__typename": "Project"
+              },
+              "projectSubmitted": false,
+              "featuredImage": null,
+              "description": null,
+              "desiredSkills": null,
+              "languages": null,
+              "challenge": "aWQ6NTUxMzA=",
+              "challengeDetails": {
+                "id": "aWQ6NTUxMzA=",
+                "title": "Create Health Monitoring Software for Astronauts on Space Missions",
+                "meta": {
+                  "type": "CHALLENGE",
+                  "slug": "create-health-monitoring-software-for-astronauts-on-space-missions",
+                  "firstPublishedAt": "2026-09-17T14:21:16.942007Z",
+                  "lastPublishedAt": "2026-09-17T14:21:16.942007Z",
+                  "relativeUrl": "/2026/challenges/create-health-monitoring-software-for-astronauts-on-space-missions/",
+                  "live": true,
+                  "parent": null,
+                  "__typename": "ExpandedPageMeta"
+                },
+                "excerpt": "Long-duration missions expose astronauts to space radiation, isolation and confinement, altered gravity, and a hostile closed environment, which can bring immune changes, bone loss, cardiovascular events, and behavioral health problems. On long missions, astronauts carry much of the responsibility for spotting these changes in themselves. Your challenge is to build a health monitoring software that gathers health indicators and enables astronauts to evaluate and act on the status of their health.",
+                "__typename": "ChallengePage"
+              },
+              "location": "aWQ6NTQ3NTk=",
+              "locationDetails": {
+                "id": "aWQ6NTQ3NTk=",
+                "title": "Kochi",
+                "displayName": "",
+                "meta": {
+                  "type": "LOCATION",
+                  "slug": "kochi",
+                  "firstPublishedAt": "2026-08-24T18:55:19.247000Z",
+                  "lastPublishedAt": "2026-09-17T15:14:47.773491Z",
+                  "relativeUrl": "/2026/local-events/kochi/",
+                  "live": true,
+                  "parent": null,
+                  "__typename": "ExpandedPageMeta"
+                },
+                "country": "India",
+                "__typename": "LocationPage"
+              },
+              "event": "aWQ6NA==",
+              "joinEnabled": false,
+              "memberships": null,
+              "nominationBadges": null,
+              "awardBadges": null
+            }
+          },
+          {
+            "__typename": "TeamPageEdge",
+            "cursor": "b2Zmc2V0OjU=",
+            "node": {
+              "__typename": "TeamPage",
               "id": "aWQ6NTYzNjQ=",
               "title": "Praful's grandkids",
               "meta": {
@@ -18386,7 +20199,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjU=",
+            "cursor": "b2Zmc2V0OjY=",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6NTcyMzQ=",
@@ -18489,7 +20302,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjY=",
+            "cursor": "b2Zmc2V0Ojc=",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6NTc5MDY=",
@@ -18573,7 +20386,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0Ojc=",
+            "cursor": "b2Zmc2V0Ojg=",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6NTc1MTE=",
@@ -18676,7 +20489,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0Ojg=",
+            "cursor": "b2Zmc2V0Ojk=",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6NTcyNTk=",
@@ -18760,7 +20573,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0Ojk=",
+            "cursor": "b2Zmc2V0OjEw",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6NTY4Nzg=",
@@ -18844,7 +20657,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjEw",
+            "cursor": "b2Zmc2V0OjEx",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6NTg0NTQ=",
@@ -18947,7 +20760,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjEx",
+            "cursor": "b2Zmc2V0OjEy",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6NTU4Njg=",
@@ -19041,10 +20854,10 @@
           "hasPreviousPage": false,
           "hasNextPage": false,
           "startCursor": "b2Zmc2V0OjA=",
-          "endCursor": "b2Zmc2V0OjE=",
+          "endCursor": "b2Zmc2V0OjI=",
           "__typename": "PageInfo"
         },
-        "totalCount": 2,
+        "totalCount": 3,
         "edges": [
           {
             "__typename": "TeamPageEdge",
@@ -19297,6 +21110,123 @@
               "nominationBadges": null,
               "awardBadges": null
             }
+          },
+          {
+            "__typename": "TeamPageEdge",
+            "cursor": "b2Zmc2V0OjI=",
+            "node": {
+              "__typename": "TeamPage",
+              "id": "aWQ6NTg1NjY=",
+              "title": "E=mc²",
+              "meta": {
+                "type": "TEAM",
+                "slug": "emc22",
+                "firstPublishedAt": "2026-09-22T17:54:30.643000Z",
+                "lastPublishedAt": "2026-09-22T19:04:30.872120Z",
+                "relativeUrl": "/2026/find-a-team/emc22/",
+                "live": true,
+                "parent": null,
+                "__typename": "ExpandedPageMeta"
+              },
+              "owner": "aWQ6NWUwNDVlMTgtODU5NS00MWM0LWExZmItNTM4OGE4YTY1ZWEz",
+              "ownerDetails": null,
+              "excerpt": "We’re a team of web developers and tech enthusiasts passionate about space, coding, design, games, animation, and VR. We love turning creative ideas into interactive experiences and solving real-world challenges with technology. We’re looking for ...",
+              "project": "aWQ6NTQ5Njk=",
+              "projectDetails": {
+                "id": "aWQ6NTQ5Njk=",
+                "name": "Project E=mc²",
+                "summary": "",
+                "demoLink": "",
+                "projectLink": "",
+                "details": "",
+                "solution": "",
+                "aiReferences": "",
+                "dataReferences": "",
+                "projectReferences": "",
+                "isSubmitted": false,
+                "savedAt": null,
+                "submittedAt": null,
+                "__typename": "Project"
+              },
+              "projectSubmitted": false,
+              "featuredImage": {
+                "id": "aWQ6NDM0MTU2",
+                "meta": {
+                  "type": "images.CustomImage",
+                  "downloadUrl": "https://assets.spaceappschallenge.org/media/original_images/113421.png",
+                  "__typename": "ImageMeta"
+                },
+                "title": "team_image.19:04:29.652699",
+                "alt": "team_image.19:04:29.652699",
+                "caption": "team_image.19:04:29.652699",
+                "displaySize": "or",
+                "rendition": {
+                  "url": "https://assets.spaceappschallenge.org/media/images/113421.2e16d0ba.fill-300x250.png",
+                  "fullUrl": "https://assets.spaceappschallenge.org/media/images/113421.2e16d0ba.fill-300x250.png",
+                  "height": 250,
+                  "width": 300,
+                  "__typename": "BaseImage"
+                },
+                "__typename": "DefaultImage"
+              },
+              "description": null,
+              "desiredSkills": [
+                "Animation",
+                "Arts & Multimedia",
+                "Design",
+                "Games",
+                "Graphic Design",
+                "Hardware",
+                "Software",
+                "Space Exploration",
+                "Videography/Photography",
+                "Web Development",
+                "Writing & Communications"
+              ],
+              "languages": [
+                "English"
+              ],
+              "challenge": "aWQ6NTUxMjQ=",
+              "challengeDetails": {
+                "id": "aWQ6NTUxMjQ=",
+                "title": "Build a Junior Astronaut Mission Trainer",
+                "meta": {
+                  "type": "CHALLENGE",
+                  "slug": "build-a-junior-astronaut-mission-trainer",
+                  "firstPublishedAt": "2026-09-17T14:22:28.522299Z",
+                  "lastPublishedAt": "2026-09-17T14:22:28.522299Z",
+                  "relativeUrl": "/2026/challenges/build-a-junior-astronaut-mission-trainer/",
+                  "live": true,
+                  "parent": null,
+                  "__typename": "ExpandedPageMeta"
+                },
+                "excerpt": "Space-themed STEM content often oversimplifies the engineering trade-offs that define a real mission or presents them at a level too complex to hold a young learner's attention. Few tools make those trade-offs both tangible and fun. Your challenge is to design and build an interactive game or app that lets students run a lunar or Martian outpost, balancing competing demands like life support, radiation shielding, power, and food production, so they experience firsthand the decisions that determine whether a mission fails or succeeds.",
+                "__typename": "ChallengePage"
+              },
+              "location": "aWQ6NTQ0NjU=",
+              "locationDetails": {
+                "id": "aWQ6NTQ0NjU=",
+                "title": "Thrissur",
+                "displayName": "",
+                "meta": {
+                  "type": "LOCATION",
+                  "slug": "thrissur",
+                  "firstPublishedAt": "2026-08-25T17:08:13.607000Z",
+                  "lastPublishedAt": "2026-09-17T15:04:41.938403Z",
+                  "relativeUrl": "/2026/local-events/thrissur/",
+                  "live": true,
+                  "parent": null,
+                  "__typename": "ExpandedPageMeta"
+                },
+                "country": "India",
+                "__typename": "LocationPage"
+              },
+              "event": "aWQ6NA==",
+              "joinEnabled": true,
+              "memberships": null,
+              "nominationBadges": null,
+              "awardBadges": null
+            }
           }
         ],
         "__typename": "TeamPageConnection"
@@ -19310,10 +21240,10 @@
           "hasPreviousPage": false,
           "hasNextPage": false,
           "startCursor": "b2Zmc2V0OjA=",
-          "endCursor": "b2Zmc2V0OjI=",
+          "endCursor": "b2Zmc2V0OjM=",
           "__typename": "PageInfo"
         },
-        "totalCount": 3,
+        "totalCount": 4,
         "edges": [
           {
             "__typename": "TeamPageEdge",
@@ -19486,6 +21416,90 @@
           {
             "__typename": "TeamPageEdge",
             "cursor": "b2Zmc2V0OjI=",
+            "node": {
+              "__typename": "TeamPage",
+              "id": "aWQ6NTg3MzE=",
+              "title": "TechFlow",
+              "meta": {
+                "type": "TEAM",
+                "slug": "techflow1",
+                "firstPublishedAt": null,
+                "lastPublishedAt": null,
+                "relativeUrl": "/2026/find-a-team/techflow1/",
+                "live": true,
+                "parent": null,
+                "__typename": "ExpandedPageMeta"
+              },
+              "owner": "aWQ6Y2E3MjRhZWQtODY4Ny00YjI1LTgwMTktNWZhYmE2NjE3MGI0",
+              "ownerDetails": null,
+              "excerpt": "We are a team representing Wisdom High International School at the NASA Space Apps Challenge. We are passionate about coding and web development, taking genuine interest in any opportunity that could lead to learning or just fun in general.",
+              "project": "aWQ6NTUxMzQ=",
+              "projectDetails": {
+                "id": "aWQ6NTUxMzQ=",
+                "name": "Project TechFlow",
+                "summary": "",
+                "demoLink": "",
+                "projectLink": "",
+                "details": "",
+                "solution": "",
+                "aiReferences": "",
+                "dataReferences": "",
+                "projectReferences": "",
+                "isSubmitted": false,
+                "savedAt": null,
+                "submittedAt": null,
+                "__typename": "Project"
+              },
+              "projectSubmitted": false,
+              "featuredImage": null,
+              "description": null,
+              "desiredSkills": null,
+              "languages": null,
+              "challenge": "aWQ6NTUxMjY=",
+              "challengeDetails": {
+                "id": "aWQ6NTUxMjY=",
+                "title": "Field Shift: Adapting Farms with NASA Data",
+                "meta": {
+                  "type": "CHALLENGE",
+                  "slug": "field-shift-adapting-farms-with-nasa-data",
+                  "firstPublishedAt": "2026-09-17T14:22:15.778779Z",
+                  "lastPublishedAt": "2026-09-17T14:22:15.778779Z",
+                  "relativeUrl": "/2026/challenges/field-shift-adapting-farms-with-nasa-data/",
+                  "live": true,
+                  "parent": null,
+                  "__typename": "ExpandedPageMeta"
+                },
+                "excerpt": "Farmers around the world navigate shifting temperatures, changing rainfall patterns, water shortages, extreme weather, and declining soil health. These pressures make it difficult to choose crop rotations that protect fields, conserve water, and support long‑term resilience. Your challenge is to create a decision‑support tool that uses NASA Earth observations along with local soil information, crop characteristics, and farmer priorities to help farmers explore rotation strategies that could strengthen soil health and adapt their farms to changing conditions.",
+                "__typename": "ChallengePage"
+              },
+              "location": "aWQ6NTQ2NTM=",
+              "locationDetails": {
+                "id": "aWQ6NTQ2NTM=",
+                "title": "Nashik",
+                "displayName": "",
+                "meta": {
+                  "type": "LOCATION",
+                  "slug": "nashik",
+                  "firstPublishedAt": "2026-08-25T15:47:49.362000Z",
+                  "lastPublishedAt": "2026-08-26T15:25:02.835723Z",
+                  "relativeUrl": "/2026/local-events/nashik/",
+                  "live": true,
+                  "parent": null,
+                  "__typename": "ExpandedPageMeta"
+                },
+                "country": "India",
+                "__typename": "LocationPage"
+              },
+              "event": "aWQ6NA==",
+              "joinEnabled": true,
+              "memberships": null,
+              "nominationBadges": null,
+              "awardBadges": null
+            }
+          },
+          {
+            "__typename": "TeamPageEdge",
+            "cursor": "b2Zmc2V0OjM=",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6NTUyNDU=",
