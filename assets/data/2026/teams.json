@@ -205,6 +205,109 @@
             "cursor": "b2Zmc2V0OjI=",
             "node": {
               "__typename": "TeamPage",
+              "id": "aWQ6NTg2NDg=",
+              "title": "Binary Stars",
+              "meta": {
+                "type": "TEAM",
+                "slug": "nullcrew",
+                "firstPublishedAt": "2026-09-22T21:12:18.553000Z",
+                "lastPublishedAt": "2026-09-24T23:53:54.495522Z",
+                "relativeUrl": "/2026/find-a-team/nullcrew/",
+                "live": true,
+                "parent": null,
+                "__typename": "ExpandedPageMeta"
+              },
+              "owner": "aWQ6ODQ2MDMyODEtMjllNC00ZjIzLThmOTAtNDZhNGYxOTViNDA1",
+              "ownerDetails": null,
+              "excerpt": "Hi! I’m a solo developer and creator of NullCrew, passionate about technology, software development, space exploration, and interactive experiences. My main skills include React, Next.js, TypeScript, UI/UX, and game logic. I’m looking for teammate...",
+              "project": "aWQ6NTUwNTE=",
+              "projectDetails": {
+                "id": "aWQ6NTUwNTE=",
+                "name": "Project NullCrew",
+                "summary": "",
+                "demoLink": "",
+                "projectLink": "",
+                "details": "",
+                "solution": "",
+                "aiReferences": "",
+                "dataReferences": "",
+                "projectReferences": "",
+                "isSubmitted": false,
+                "savedAt": null,
+                "submittedAt": null,
+                "__typename": "Project"
+              },
+              "projectSubmitted": false,
+              "featuredImage": {
+                "id": "aWQ6NDM0MzU3",
+                "meta": {
+                  "type": "images.CustomImage",
+                  "downloadUrl": "https://assets.spaceappschallenge.org/media/original_images/NullCrewLogo.png",
+                  "__typename": "ImageMeta"
+                },
+                "title": "team_image.21:04:24.512649",
+                "alt": "team_image.21:04:24.512649",
+                "caption": "team_image.21:04:24.512649",
+                "displaySize": "or",
+                "rendition": {
+                  "url": "https://assets.spaceappschallenge.org/media/images/NullCrewLogo.2e16d0ba.fill-300x250.png",
+                  "fullUrl": "https://assets.spaceappschallenge.org/media/images/NullCrewLogo.2e16d0ba.fill-300x250.png",
+                  "height": 250,
+                  "width": 300,
+                  "__typename": "BaseImage"
+                },
+                "__typename": "DefaultImage"
+              },
+              "description": null,
+              "desiredSkills": null,
+              "languages": null,
+              "challenge": "aWQ6NTUxMjQ=",
+              "challengeDetails": {
+                "id": "aWQ6NTUxMjQ=",
+                "title": "Build a Junior Astronaut Mission Trainer",
+                "meta": {
+                  "type": "CHALLENGE",
+                  "slug": "build-a-junior-astronaut-mission-trainer",
+                  "firstPublishedAt": "2026-09-17T14:22:28.522299Z",
+                  "lastPublishedAt": "2026-09-17T14:22:28.522299Z",
+                  "relativeUrl": "/2026/challenges/build-a-junior-astronaut-mission-trainer/",
+                  "live": true,
+                  "parent": null,
+                  "__typename": "ExpandedPageMeta"
+                },
+                "excerpt": "Space-themed STEM content often oversimplifies the engineering trade-offs that define a real mission or presents them at a level too complex to hold a young learner's attention. Few tools make those trade-offs both tangible and fun. Your challenge is to design and build an interactive game or app that lets students run a lunar or Martian outpost, balancing competing demands like life support, radiation shielding, power, and food production, so they experience firsthand the decisions that determine whether a mission fails or succeeds.",
+                "__typename": "ChallengePage"
+              },
+              "location": "aWQ6NTQ0NDY=",
+              "locationDetails": {
+                "id": "aWQ6NTQ0NDY=",
+                "title": "Uberlândia",
+                "displayName": "",
+                "meta": {
+                  "type": "LOCATION",
+                  "slug": "uberlandia",
+                  "firstPublishedAt": "2026-08-20T13:11:16.191007Z",
+                  "lastPublishedAt": "2026-08-26T15:57:15.021223Z",
+                  "relativeUrl": "/2026/local-events/uberlandia/",
+                  "live": true,
+                  "parent": null,
+                  "__typename": "ExpandedPageMeta"
+                },
+                "country": "Brazil",
+                "__typename": "LocationPage"
+              },
+              "event": "aWQ6NA==",
+              "joinEnabled": true,
+              "memberships": null,
+              "nominationBadges": null,
+              "awardBadges": null
+            }
+          },
+          {
+            "__typename": "TeamPageEdge",
+            "cursor": "b2Zmc2V0OjM=",
+            "node": {
+              "__typename": "TeamPage",
               "id": "aWQ6NTU1OTM=",
               "title": "GURIS DA CATEQUESE 2026",
               "meta": {
@@ -305,7 +408,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjM=",
+            "cursor": "b2Zmc2V0OjQ=",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6NTU1ODA=",
@@ -314,7 +417,7 @@
                 "type": "TEAM",
                 "slug": "lumia",
                 "firstPublishedAt": "2026-09-18T00:47:10.805000Z",
-                "lastPublishedAt": "2026-09-18T01:40:31.178335Z",
+                "lastPublishedAt": "2026-09-25T18:36:10.842101Z",
                 "relativeUrl": "/2026/find-a-team/lumia/",
                 "live": true,
                 "parent": null,
@@ -341,7 +444,26 @@
                 "__typename": "Project"
               },
               "projectSubmitted": false,
-              "featuredImage": null,
+              "featuredImage": {
+                "id": "aWQ6NDM5Nzkw",
+                "meta": {
+                  "type": "images.CustomImage",
+                  "downloadUrl": "https://assets.spaceappschallenge.org/media/original_images/1000021914.jpg",
+                  "__typename": "ImageMeta"
+                },
+                "title": "team_image.18:36:09.778863",
+                "alt": "team_image.18:36:09.778863",
+                "caption": "team_image.18:36:09.778863",
+                "displaySize": "or",
+                "rendition": {
+                  "url": "https://assets.spaceappschallenge.org/media/images/1000021914.2e16d0ba.fill-300x250.jpg",
+                  "fullUrl": "https://assets.spaceappschallenge.org/media/images/1000021914.2e16d0ba.fill-300x250.jpg",
+                  "height": 250,
+                  "width": 300,
+                  "__typename": "BaseImage"
+                },
+                "__typename": "DefaultImage"
+              },
               "description": null,
               "desiredSkills": null,
               "languages": null,
@@ -360,109 +482,6 @@
                   "__typename": "ExpandedPageMeta"
                 },
                 "excerpt": "NASA has explored Mars robotically for decades, studying its extreme environment, mapping its surface, and collecting many types of data. Far from home, the first astronauts to set foot on Mars will want the best map possible, with information on the details of their routes and destinations, updates on current conditions, and the data needed to complete their mission quickly and safely. Your challenge is to create a layered, integrated view of a location or route on the Martian surface that pulls together data from multiple NASA science missions and could help a human explorer plan and carry out a successful Marswalk while conducting new and exciting science along the way.",
-                "__typename": "ChallengePage"
-              },
-              "location": "aWQ6NTQ0NDY=",
-              "locationDetails": {
-                "id": "aWQ6NTQ0NDY=",
-                "title": "Uberlândia",
-                "displayName": "",
-                "meta": {
-                  "type": "LOCATION",
-                  "slug": "uberlandia",
-                  "firstPublishedAt": "2026-08-20T13:11:16.191007Z",
-                  "lastPublishedAt": "2026-08-26T15:57:15.021223Z",
-                  "relativeUrl": "/2026/local-events/uberlandia/",
-                  "live": true,
-                  "parent": null,
-                  "__typename": "ExpandedPageMeta"
-                },
-                "country": "Brazil",
-                "__typename": "LocationPage"
-              },
-              "event": "aWQ6NA==",
-              "joinEnabled": true,
-              "memberships": null,
-              "nominationBadges": null,
-              "awardBadges": null
-            }
-          },
-          {
-            "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjQ=",
-            "node": {
-              "__typename": "TeamPage",
-              "id": "aWQ6NTg2NDg=",
-              "title": "NullCrew",
-              "meta": {
-                "type": "TEAM",
-                "slug": "nullcrew",
-                "firstPublishedAt": "2026-09-22T21:12:18.553637Z",
-                "lastPublishedAt": "2026-09-22T21:12:18.553637Z",
-                "relativeUrl": "/2026/find-a-team/nullcrew/",
-                "live": true,
-                "parent": null,
-                "__typename": "ExpandedPageMeta"
-              },
-              "owner": "aWQ6ODQ2MDMyODEtMjllNC00ZjIzLThmOTAtNDZhNGYxOTViNDA1",
-              "ownerDetails": null,
-              "excerpt": "Hi! I’m a solo developer and creator of NullCrew, passionate about technology, software development, space exploration, and interactive experiences. My main skills include React, Next.js, TypeScript, UI/UX, and game logic. I’m looking for teammate...",
-              "project": "aWQ6NTUwNTE=",
-              "projectDetails": {
-                "id": "aWQ6NTUwNTE=",
-                "name": "Project NullCrew",
-                "summary": "",
-                "demoLink": "",
-                "projectLink": "",
-                "details": "",
-                "solution": "",
-                "aiReferences": "",
-                "dataReferences": "",
-                "projectReferences": "",
-                "isSubmitted": false,
-                "savedAt": null,
-                "submittedAt": null,
-                "__typename": "Project"
-              },
-              "projectSubmitted": false,
-              "featuredImage": {
-                "id": "aWQ6NDM0MzU3",
-                "meta": {
-                  "type": "images.CustomImage",
-                  "downloadUrl": "https://assets.spaceappschallenge.org/media/original_images/NullCrewLogo.png",
-                  "__typename": "ImageMeta"
-                },
-                "title": "team_image.21:04:24.512649",
-                "alt": "team_image.21:04:24.512649",
-                "caption": "team_image.21:04:24.512649",
-                "displaySize": "or",
-                "rendition": {
-                  "url": "https://assets.spaceappschallenge.org/media/images/NullCrewLogo.2e16d0ba.fill-300x250.png",
-                  "fullUrl": "https://assets.spaceappschallenge.org/media/images/NullCrewLogo.2e16d0ba.fill-300x250.png",
-                  "height": 250,
-                  "width": 300,
-                  "__typename": "BaseImage"
-                },
-                "__typename": "DefaultImage"
-              },
-              "description": null,
-              "desiredSkills": null,
-              "languages": null,
-              "challenge": "aWQ6NTUxMjQ=",
-              "challengeDetails": {
-                "id": "aWQ6NTUxMjQ=",
-                "title": "Build a Junior Astronaut Mission Trainer",
-                "meta": {
-                  "type": "CHALLENGE",
-                  "slug": "build-a-junior-astronaut-mission-trainer",
-                  "firstPublishedAt": "2026-09-17T14:22:28.522299Z",
-                  "lastPublishedAt": "2026-09-17T14:22:28.522299Z",
-                  "relativeUrl": "/2026/challenges/build-a-junior-astronaut-mission-trainer/",
-                  "live": true,
-                  "parent": null,
-                  "__typename": "ExpandedPageMeta"
-                },
-                "excerpt": "Space-themed STEM content often oversimplifies the engineering trade-offs that define a real mission or presents them at a level too complex to hold a young learner's attention. Few tools make those trade-offs both tangible and fun. Your challenge is to design and build an interactive game or app that lets students run a lunar or Martian outpost, balancing competing demands like life support, radiation shielding, power, and food production, so they experience firsthand the decisions that determine whether a mission fails or succeeds.",
                 "__typename": "ChallengePage"
               },
               "location": "aWQ6NTQ0NDY=",
@@ -585,7 +604,7 @@
                 "type": "TEAM",
                 "slug": "voyiager-ii",
                 "firstPublishedAt": "2026-09-19T18:03:57.932000Z",
-                "lastPublishedAt": "2026-09-20T14:00:49.594188Z",
+                "lastPublishedAt": "2026-09-24T02:08:02.104563Z",
                 "relativeUrl": "/2026/find-a-team/voyiager-ii/",
                 "live": true,
                 "parent": null,
