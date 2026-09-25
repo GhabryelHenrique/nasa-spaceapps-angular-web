@@ -5,152 +5,181 @@
       Comparação: Cidades Brasileiras
     </h2>
     <p class="section-description">
-      Análise comparativa entre Uberlândia e outras cidades do Brasil participantes do Space Apps Challenge
+      Onde Uberlândia está entre as sedes brasileiras do Space Apps Challenge {{ year() }}.
+      O ranking usa inscritos na plataforma; times e projetos entram conforme a edição avança.
     </p>
   </div>
 
-  <!-- Loading State -->
-  @if (isLoading()) {
-    <div class="loading-state">
-      <div class="spinner"></div>
-      <p>Carregando dados de comparação...</p>
-    </div>
-  }
-
-  <!-- Content -->
-  @if (!isLoading() && uberlandia()) {
+  @if (uberlandia(); as ube) {
     <div class="comparison-content">
 
-      <!-- Uberlândia Highlights -->
+      <!-- Destaques de Uberlândia -->
       <div class="uberlandia-highlights">
         <h3 class="highlights-title">🏆 Desempenho de Uberlândia</h3>
 
         <div class="highlights-grid">
           <div class="highlight-card rank-card">
-            <div class="highlight-icon">📊</div>
+            <div class="highlight-icon">🎟️</div>
             <div class="highlight-content">
-              <h4>Ranking por Times</h4>
+              <h4>Ranking por Inscritos</h4>
               <div class="rank-display">
-                <span class="rank-emoji">{{ getRankEmoji(uberlandiaTeamsRank()) }}</span>
-                <span class="rank-position">#{{ uberlandiaTeamsRank() }}</span>
-                <span class="rank-total">de {{ citiesComparison().length }}</span>
-              </div>
-            </div>
-          </div>
-
-          <div class="highlight-card rank-card">
-            <div class="highlight-icon">✅</div>
-            <div class="highlight-content">
-              <h4>Ranking por Taxa de Submissão</h4>
-              <div class="rank-display">
-                <span class="rank-emoji">{{ getRankEmoji(uberlandiaSubmissionRank()) }}</span>
-                <span class="rank-position">#{{ uberlandiaSubmissionRank() }}</span>
-                <span class="rank-total">de {{ citiesComparison().length }}</span>
+                <span class="rank-emoji">{{ getRankEmoji(registrationsRank()) }}</span>
+                <span class="rank-position">#{{ registrationsRank() }}</span>
+                <span class="rank-total">de {{ totalCities() }}</span>
               </div>
             </div>
           </div>
 
           <div class="highlight-card stats-card">
-            <div class="highlight-icon">🚀</div>
+            <div class="highlight-icon">👥</div>
             <div class="highlight-content">
-              <h4>Contribuição em Times</h4>
+              <h4>Inscritos em Uberlândia</h4>
               <div class="stats-display">
-                <span class="stats-value">{{ uberlandia()!.totalTeams }}</span>
-                <span class="stats-label">times</span>
+                <span class="stats-value">{{ fmt(ube.registrations) }}</span>
+                <span class="stats-label">pessoas</span>
               </div>
               <div class="percentage-bar">
-                <div class="percentage-fill" [style.width.%]="getUberlandiaPercentage('teams')"></div>
+                <div class="percentage-fill" [style.width.%]="registrationsShare()"></div>
               </div>
-              <span class="percentage-text">{{ getUberlandiaPercentage('teams').toFixed(1) }}% do Brasil</span>
+              <span class="percentage-text">{{ registrationsShare().toFixed(1) }}% do Brasil</span>
             </div>
           </div>
 
-          <div class="highlight-card stats-card">
-            <div class="highlight-icon">📝</div>
-            <div class="highlight-content">
-              <h4>Projetos Submetidos</h4>
-              <div class="stats-display">
-                <span class="stats-value">{{ uberlandia()!.submittedProjects }}</span>
-                <span class="stats-label">projetos</span>
-              </div>
-              <div class="percentage-bar">
-                <div class="percentage-fill" [style.width.%]="getUberlandiaPercentage('submitted')"></div>
-              </div>
-              <span class="percentage-text">{{ getUberlandiaPercentage('submitted').toFixed(1) }}% do Brasil</span>
-            </div>
-          </div>
-
-          <div class="highlight-card comparison-card" [ngClass]="getComparisonClass(uberlandia()!.submissionRate, averageSubmissionRate())">
-            <div class="highlight-icon">📈</div>
-            <div class="highlight-content">
-              <h4>Taxa de Submissão</h4>
-              <div class="comparison-display">
-                <div class="comparison-values">
-                  <span class="city-value">{{ uberlandia()!.submissionRate.toFixed(1) }}%</span>
-                  <span class="vs-text">vs</span>
-                  <span class="avg-value">{{ averageSubmissionRate().toFixed(1) }}%</span>
+          @if (hasTeams()) {
+            <div class="highlight-card rank-card">
+              <div class="highlight-icon">📊</div>
+              <div class="highlight-content">
+                <h4>Ranking por Times</h4>
+                <div class="rank-display">
+                  <span class="rank-emoji">{{ getRankEmoji(teamsRank()) }}</span>
+                  <span class="rank-position">#{{ teamsRank() }}</span>
+                  <span class="rank-total">de {{ totalCities() }}</span>
                 </div>
-                <span class="comparison-label">Uberlândia vs Média Brasil</span>
               </div>
             </div>
-          </div>
+
+            <div class="highlight-card stats-card">
+              <div class="highlight-icon">🚀</div>
+              <div class="highlight-content">
+                <h4>Contribuição em Times</h4>
+                <div class="stats-display">
+                  <span class="stats-value">{{ fmt(ube.totalTeams) }}</span>
+                  <span class="stats-label">times</span>
+                </div>
+                <div class="percentage-bar">
+                  <div class="percentage-fill" [style.width.%]="teamsShare()"></div>
+                </div>
+                <span class="percentage-text">{{ teamsShare().toFixed(1) }}% do Brasil</span>
+              </div>
+            </div>
+          }
+
+          @if (hasSubmissions()) {
+            <div class="highlight-card rank-card">
+              <div class="highlight-icon">✅</div>
+              <div class="highlight-content">
+                <h4>Ranking por Taxa de Submissão</h4>
+                <div class="rank-display">
+                  <span class="rank-emoji">{{ getRankEmoji(submissionRank()) }}</span>
+                  <span class="rank-position">#{{ submissionRank() }}</span>
+                  <span class="rank-total">de {{ totalCities() }}</span>
+                </div>
+              </div>
+            </div>
+
+            <div
+              class="highlight-card comparison-card"
+              [ngClass]="getComparisonClass(ube.submissionRate, averageSubmissionRate())">
+              <div class="highlight-icon">📈</div>
+              <div class="highlight-content">
+                <h4>Taxa de Submissão</h4>
+                <div class="comparison-display">
+                  <div class="comparison-values">
+                    <span class="city-value">{{ ube.submissionRate.toFixed(1) }}%</span>
+                    <span class="vs-text">vs</span>
+                    <span class="avg-value">{{ averageSubmissionRate().toFixed(1) }}%</span>
+                  </div>
+                  <span class="comparison-label">Uberlândia vs média do Brasil</span>
+                </div>
+              </div>
+            </div>
+          }
         </div>
       </div>
 
-      <!-- Brazil Summary Stats -->
+      <!-- Panorama do Brasil -->
       <div class="brazil-summary">
         <h3 class="summary-title">📊 Estatísticas Gerais do Brasil</h3>
 
         <div class="summary-grid">
           <div class="summary-card">
             <div class="summary-icon">🌆</div>
-            <div class="summary-value">{{ citiesComparison().length }}</div>
-            <div class="summary-label">Cidades Participantes</div>
+            <div class="summary-value">{{ fmt(totalCities()) }}</div>
+            <div class="summary-label">Sedes Brasileiras</div>
           </div>
 
           <div class="summary-card">
-            <div class="summary-icon">🚀</div>
-            <div class="summary-value">{{ totalTeamsBrazil() }}</div>
-            <div class="summary-label">Total de Times</div>
+            <div class="summary-icon">🎟️</div>
+            <div class="summary-value">{{ fmt(totalRegistrations()) }}</div>
+            <div class="summary-label">Inscritos no Brasil</div>
           </div>
 
-          <div class="summary-card">
-            <div class="summary-icon">✅</div>
-            <div class="summary-value">{{ totalSubmittedBrazil() }}</div>
-            <div class="summary-label">Projetos Submetidos</div>
-          </div>
+          @if (hasTeams()) {
+            <div class="summary-card">
+              <div class="summary-icon">🚀</div>
+              <div class="summary-value">{{ fmt(totalTeams()) }}</div>
+              <div class="summary-label">Total de Times</div>
+            </div>
+          }
 
-          <div class="summary-card">
-            <div class="summary-icon">📈</div>
-            <div class="summary-value">{{ averageSubmissionRate().toFixed(1) }}%</div>
-            <div class="summary-label">Taxa Média Submissão</div>
-          </div>
+          @if (hasSubmissions()) {
+            <div class="summary-card">
+              <div class="summary-icon">✅</div>
+              <div class="summary-value">{{ fmt(totalSubmitted()) }}</div>
+              <div class="summary-label">Projetos Submetidos</div>
+            </div>
+
+            <div class="summary-card">
+              <div class="summary-icon">📈</div>
+              <div class="summary-value">{{ averageSubmissionRate().toFixed(1) }}%</div>
+              <div class="summary-label">Taxa Média Submissão</div>
+            </div>
+          }
         </div>
       </div>
 
-      <!-- Detailed Comparison Table -->
+      <!-- Ranking detalhado -->
       <div class="comparison-table-container">
         <h3 class="table-title">🏅 Ranking Detalhado</h3>
 
-        <div class="comparison-table">
+        <div
+          class="comparison-table"
+          [class.has-teams]="hasTeams()"
+          [class.has-submissions]="hasSubmissions()">
+
           <div class="table-header">
             <div class="table-cell rank-cell">Pos</div>
             <div class="table-cell city-cell">Cidade</div>
-            <div class="table-cell teams-cell">Times</div>
-            <div class="table-cell submitted-cell">Submetidos</div>
-            <div class="table-cell rate-cell">Taxa</div>
+            <div class="table-cell registrations-cell">Inscritos</div>
+            @if (hasTeams()) {
+              <div class="table-cell teams-cell">Times</div>
+            }
+            @if (hasSubmissions()) {
+              <div class="table-cell submitted-cell">Submetidos</div>
+              <div class="table-cell rate-cell">Taxa</div>
+            }
           </div>
 
-          @for (city of citiesComparison(); track city.cityName; let i = $index) {
+          @for (city of rows(); track city.cityName) {
             <div
               class="table-row"
               [class.uberlandia-row]="city.isUberlandia"
-              [class.top-three]="i < 3">
+              [class.top-three]="city.rank <= 3">
 
               <div class="table-cell rank-cell">
                 <span class="rank-number">{{ city.rank }}</span>
-                @if (i < 3) {
-                  <span class="rank-emoji">{{ getRankEmoji(city.rank || 0) }}</span>
+                @if (city.rank <= 3) {
+                  <span class="rank-emoji">{{ getRankEmoji(city.rank) }}</span>
                 }
               </div>
 
@@ -161,86 +190,151 @@
                 }
               </div>
 
-              <div class="table-cell teams-cell">
-                <span class="cell-value">{{ city.totalTeams }}</span>
-              </div>
-
-              <div class="table-cell submitted-cell">
-                <span class="cell-value">{{ city.submittedProjects }}</span>
-                <span class="cell-detail">/ {{ city.totalTeams }}</span>
-              </div>
-
-              <div class="table-cell rate-cell">
-                <div class="rate-container">
-                  <div class="rate-bar-container">
+              <div class="table-cell registrations-cell">
+                <div class="count-container">
+                  <div class="count-bar-container">
                     <div
-                      class="rate-bar"
-                      [style.width.%]="city.submissionRate"
-                      [ngClass]="getSubmissionRateClass(city.submissionRate)">
+                      class="count-bar"
+                      [style.width.%]="getRegistrationsWidth(city.registrations)">
                     </div>
                   </div>
-                  <span class="rate-value">{{ city.submissionRate.toFixed(1) }}%</span>
+                  <span class="count-value">{{ fmt(city.registrations) }}</span>
                 </div>
               </div>
+
+              @if (hasTeams()) {
+                <div class="table-cell teams-cell">
+                  <span class="cell-value">{{ city.totalTeams }}</span>
+                </div>
+              }
+
+              @if (hasSubmissions()) {
+                <div class="table-cell submitted-cell">
+                  <span class="cell-value">{{ city.submittedProjects }}</span>
+                  <span class="cell-detail">/ {{ city.totalTeams }}</span>
+                </div>
+
+                <div class="table-cell rate-cell">
+                  <div class="rate-container">
+                    <div class="rate-bar-container">
+                      <div
+                        class="rate-bar"
+                        [style.width.%]="city.submissionRate"
+                        [ngClass]="getSubmissionRateClass(city.submissionRate)">
+                      </div>
+                    </div>
+                    <span class="rate-value">{{ city.submissionRate.toFixed(1) }}%</span>
+                  </div>
+                </div>
+              }
             </div>
           }
         </div>
+
+        @if (loadingTeams()) {
+          <p class="table-note"><span class="spinner-inline"></span> Carregando times por sede…</p>
+        } @else if (teamsUnavailable()) {
+          <p class="table-note">
+            ⚠️ Não foi possível carregar os times por sede desta edição —
+            o ranking abaixo considera apenas inscritos.
+          </p>
+        } @else if (hasTeams()) {
+          <p class="table-note">
+            Times contabilizados a partir das sedes já mapeadas na plataforma;
+            sedes ainda não varridas aparecem com zero.
+          </p>
+        }
       </div>
 
-      <!-- Performance Insights -->
-      @if (uberlandia()) {
-        <div class="performance-insights">
-          <h3 class="insights-title">💡 Insights de Desempenho</h3>
+      <!-- Insights -->
+      <div class="performance-insights">
+        <h3 class="insights-title">💡 Insights de Desempenho</h3>
 
-          <div class="insights-list">
-            @if (uberlandiaTeamsRank() <= 3) {
+        <div class="insights-list">
+          @if (registrationsNeighbor(); as neighbor) {
+            @if (neighbor.isLeading) {
               <div class="insight-item">
                 <span class="insight-icon success">🎉</span>
                 <p class="insight-text">
-                  <strong>Excelente!</strong> Uberlândia está entre as top 3 cidades brasileiras em número de times!
+                  <strong>Uberlândia lidera o Brasil em inscritos!</strong>
+                  São <strong>{{ fmt(neighbor.gap) }}</strong>
+                  {{ neighbor.gap === 1 ? 'inscrito' : 'inscritos' }} de vantagem sobre
+                  {{ neighbor.city }}, a segunda colocada.
+                </p>
+              </div>
+            } @else {
+              <div class="insight-item">
+                <span class="insight-icon info">🎯</span>
+                <p class="insight-text">
+                  Uberlândia é a <strong>#{{ registrationsRank() }}</strong> sede brasileira
+                  em inscritos. Faltam <strong>{{ fmt(neighbor.gap) }}</strong>
+                  {{ neighbor.gap === 1 ? 'inscrito' : 'inscritos' }} para alcançar
+                  {{ neighbor.city }}.
                 </p>
               </div>
             }
+          }
 
-            @if (uberlandia()!.submissionRate > averageSubmissionRate()) {
+          <div class="insight-item">
+            <span class="insight-icon info">📊</span>
+            <p class="insight-text">
+              Uberlândia concentra <strong>{{ registrationsShare().toFixed(1) }}%</strong>
+              de todos os inscritos brasileiros, entre {{ fmt(totalCities()) }} sedes.
+            </p>
+          </div>
+
+          @if (hasTeams()) {
+            @if (teamsRank() <= 3) {
+              <div class="insight-item">
+                <span class="insight-icon success">🚀</span>
+                <p class="insight-text">
+                  <strong>Top 3 em times!</strong> Uberlândia é a #{{ teamsRank() }} sede
+                  brasileira em número de equipes formadas
+                  ({{ registrationsShare().toFixed(1) }}% dos inscritos geram
+                  {{ teamsShare().toFixed(1) }}% dos times).
+                </p>
+              </div>
+            } @else {
+              <div class="insight-item">
+                <span class="insight-icon warning">⚠️</span>
+                <p class="insight-text">
+                  Em times, Uberlândia aparece em <strong>#{{ teamsRank() }}</strong> —
+                  atrás da sua posição em inscritos (#{{ registrationsRank() }}).
+                  Vale empurrar a formação de equipes na plataforma.
+                </p>
+              </div>
+            }
+          }
+
+          @if (hasSubmissions()) {
+            @if (ube.submissionRate > averageSubmissionRate()) {
               <div class="insight-item">
                 <span class="insight-icon success">✨</span>
                 <p class="insight-text">
                   <strong>Acima da média!</strong> A taxa de submissão de Uberlândia está
-                  {{ (uberlandia()!.submissionRate - averageSubmissionRate()).toFixed(1) }}% acima da média brasileira.
+                  {{ (ube.submissionRate - averageSubmissionRate()).toFixed(1) }}
+                  pontos acima da média brasileira.
                 </p>
               </div>
-            }
-
-            @if (uberlandia()!.submissionRate <= averageSubmissionRate()) {
+            } @else {
               <div class="insight-item">
                 <span class="insight-icon warning">⚠️</span>
                 <p class="insight-text">
-                  <strong>Oportunidade de melhoria:</strong> A taxa de submissão está
-                  {{ (averageSubmissionRate() - uberlandia()!.submissionRate).toFixed(1) }}% abaixo da média brasileira.
+                  <strong>Oportunidade de melhoria:</strong> a taxa de submissão está
+                  {{ (averageSubmissionRate() - ube.submissionRate).toFixed(1) }}
+                  pontos abaixo da média brasileira.
                   Vamos incentivar mais times a submeter seus projetos!
                 </p>
               </div>
             }
-
-            <div class="insight-item">
-              <span class="insight-icon info">📊</span>
-              <p class="insight-text">
-                Uberlândia representa <strong>{{ getUberlandiaPercentage('teams').toFixed(1) }}%</strong>
-                de todos os times brasileiros no Space Apps Challenge.
-              </p>
-            </div>
-          </div>
+          }
         </div>
-      }
+      </div>
     </div>
-  }
-
-  <!-- Empty State -->
-  @if (!isLoading() && !uberlandia()) {
+  } @else {
     <div class="empty-state">
       <div class="empty-icon">📊</div>
-      <p>Nenhum dado disponível para comparação.</p>
+      <p>Uberlândia ainda não aparece entre as sedes brasileiras desta edição.</p>
     </div>
   }
 

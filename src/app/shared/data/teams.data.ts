@@ -87,6 +87,9 @@ export interface Team {
 export interface TeamsResponse {
   data: [
     {
+      /** Sede do arquivo — gravada por `update_teams.py`, ausente nos mocks antigos. */
+      locationId?: string;
+      locationName?: string;
       teams: {
         pageInfo: {
           hasPreviousPage: boolean;

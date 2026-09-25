@@ -1,16 +1,31 @@
-import { Component, OnInit, signal } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { TeamsService } from '../../../services/teams.service';
-import { OtherCitiesTeamsService } from '../../../services/other-cities-teams.service';
+import { Component, DestroyRef, computed, inject, input, signal } from '@angular/core';
+import { takeUntilDestroyed, toObservable } from '@angular/core/rxjs-interop';
+import { of } from 'rxjs';
+import { catchError, switchMap, tap } from 'rxjs/operators';
+import { CityParticipation } from '../../../shared/interfaces/local-event.interface';
+import { CityTeamStats, OtherCitiesTeamsService } from '../../../services/other-cities-teams.service';
 
-interface CityComparison {
+/** Uma sede brasileira na comparação, com as duas fontes já cruzadas. */
+export interface BrazilCityRow {
   cityName: string;
+  registrations: number;
   totalTeams: number;
   submittedProjects: number;
   submissionRate: number;
-  members: number;
   isUberlandia: boolean;
-  rank?: number;
+  rank: number;
+}
+
+/** Conectivos que não recebem maiúscula ao recompor um nome em caixa uniforme. */
+const MINOR_WORDS = new Set(['de', 'da', 'do', 'das', 'dos', 'e']);
+
+function normalize(value: string): string {
+  return value
+    .normalize('NFD')
+    .replace(/[\u0300-\u036f]/g, '')
+    .toLowerCase()
+    .trim();
 }
 
 @Component({
@@ -20,148 +35,135 @@ interface CityComparison {
   templateUrl: './brazilian-cities-comparison.component.html',
   styleUrl: './brazilian-cities-comparison.component.scss'
 })
-export class BrazilianCitiesComparisonComponent implements OnInit {
-  citiesComparison = signal<CityComparison[]>([]);
-  uberlandia = signal<CityComparison | null>(null);
-  otherCities = signal<CityComparison[]>([]);
-  isLoading = signal(true);
+export class BrazilianCitiesComparisonComponent {
+  /** Sedes do mundo inteiro (localEvents); o filtro por Brasil acontece aqui. */
+  readonly cities = input.required<CityParticipation[]>();
+  readonly year = input.required<number>();
 
-  // Rankings
-  uberlandiaTeamsRank = signal<number>(0);
-  uberlandiaSubmissionRank = signal<number>(0);
+  private readonly otherCities = inject(OtherCitiesTeamsService);
+  private readonly destroyRef = inject(DestroyRef);
 
-  // Statistics
-  totalTeamsBrazil = signal(0);
-  totalSubmittedBrazil = signal(0);
-  averageSubmissionRate = signal(0);
+  private readonly teamStats = signal<CityTeamStats[]>([]);
+  readonly loadingTeams = signal(true);
+  /** Os inscritos continuam de pé mesmo sem os JSONs de times. */
+  readonly teamsUnavailable = signal(false);
 
-  constructor(
-    private teamsService: TeamsService,
-    private otherCitiesTeamsService: OtherCitiesTeamsService
-  ) {}
-
-  ngOnInit() {
-    this.loadComparisonData();
+  constructor() {
+    // A Sala de Guerra reusa a instância ao trocar de edição, então o ano é
+    // acompanhado continuamente — não basta carregar uma vez no init.
+    toObservable(this.year)
+      .pipe(
+        tap(() => {
+          this.loadingTeams.set(true);
+          this.teamsUnavailable.set(false);
+        }),
+        switchMap(year =>
+          this.otherCities.getTeamStatsByCity(year).pipe(
+            catchError(error => {
+              console.error('[BrazilianCitiesComparison] times por sede — ERRO:', error);
+              this.teamsUnavailable.set(true);
+              return of([] as CityTeamStats[]);
+            })
+          )
+        ),
+        takeUntilDestroyed(this.destroyRef)
+      )
+      .subscribe(stats => {
+        this.teamStats.set(stats);
+        this.loadingTeams.set(false);
+      });
   }
 
-  private loadComparisonData() {
-    this.isLoading.set(true);
-    console.log('[BrazilianCitiesComparison] Iniciando loadComparisonData...');
+  /**
+   * Sedes brasileiras ordenadas por inscritos. Inscritos vêm da plataforma
+   * (localEvents) e existem desde o primeiro dia; times vêm do crawler e podem
+   * faltar em sedes ainda não mapeadas — daí o `?? 0` em vez de descartar a linha.
+   */
+  readonly rows = computed<BrazilCityRow[]>(() => {
+    const teamsByCity = new Map(
+      this.teamStats().map(stats => [normalize(stats.locationName), stats])
+    );
 
-    // Load Uberlândia data — fixo em 2025 para casar com o otherCitiesTeams.json
-    // de 2025 usado na comparação entre cidades.
-    this.teamsService.getTeams(2025).subscribe({
-      next: (response) => {
-        console.log('[BrazilianCitiesComparison] Resposta getTeams recebida:', response);
-        if (response && response.data && response.data[0]) {
-          const uberlandiaData = response.data[0];
-          const teams = uberlandiaData.teams.edges.map(edge => edge.node);
-          console.log('[BrazilianCitiesComparison] Uberlândia times mapeados:', teams.length);
+    return this.cities()
+      .filter(city => ['brazil', 'brasil'].includes(normalize(city.country)))
+      .map(city => {
+        const stats = teamsByCity.get(normalize(city.city));
+        return {
+          cityName: this.prettifyCityName(city.city),
+          registrations: city.registrations,
+          totalTeams: stats?.totalTeams ?? 0,
+          submittedProjects: stats?.submittedProjects ?? 0,
+          submissionRate: stats?.submissionRate ?? 0,
+          isUberlandia: normalize(city.city).includes('uberlandia'),
+          rank: 0,
+        };
+      })
+      .sort((a, b) => b.registrations - a.registrations)
+      .map((row, index) => ({ ...row, rank: index + 1 }));
+  });
 
-          const ubeData = {
-            cityName: 'Uberlândia',
-            totalTeams: teams.length,
-            submittedProjects: teams.filter(t => t.projectSubmitted).length,
-            submissionRate: teams.length > 0
-              ? (teams.filter(t => t.projectSubmitted).length / teams.length) * 100
-              : 0,
-            members: teams.reduce((sum, t) => sum + (t.memberships?.length || 0), 0),
-            isUberlandia: true
-          };
-          this.uberlandia.set(ubeData);
-          console.log('[BrazilianCitiesComparison] Uberlândia stats criadas:', ubeData);
+  readonly uberlandia = computed(() => this.rows().find(row => row.isUberlandia) ?? null);
+  readonly totalCities = computed(() => this.rows().length);
 
-          this.loadOtherCitiesData();
-        } else {
-          console.warn('[BrazilianCitiesComparison] Resposta getTeams inválida ou vazia:', response);
-          this.isLoading.set(false);
-        }
-      },
-      error: (error) => {
-        console.error('[BrazilianCitiesComparison] Erro ao carregar dados de Uberlândia:', error);
-        this.isLoading.set(false);
-      }
-    });
-  }
+  readonly totalRegistrations = computed(() =>
+    this.rows().reduce((sum, row) => sum + row.registrations, 0)
+  );
+  readonly totalTeams = computed(() =>
+    this.rows().reduce((sum, row) => sum + row.totalTeams, 0)
+  );
+  readonly totalSubmitted = computed(() =>
+    this.rows().reduce((sum, row) => sum + row.submittedProjects, 0)
+  );
 
-  private loadOtherCitiesData() {
-    console.log('[BrazilianCitiesComparison] Iniciando loadOtherCitiesData...');
-    this.otherCitiesTeamsService.getBrazilianCitiesStats().subscribe({
-      next: (stats) => {
-        console.log('[BrazilianCitiesComparison] Estatísticas de outras cidades recebidas:', stats.length, stats);
-        // Filtra Uberlândia para não duplicar
-        const other = stats
-          .filter(city => {
-            const name = city.locationName.toLowerCase();
-            return name !== 'uberlandia' && name !== 'uberlândia';
-          })
-          .map(city => ({
-            cityName: city.locationName,
-            totalTeams: city.totalTeams,
-            submittedProjects: city.submittedProjects,
-            submissionRate: city.submissionRate,
-            members: 0,
-            isUberlandia: false
-          }));
-        this.otherCities.set(other);
-        console.log('[BrazilianCitiesComparison] Outras cidades mapeadas:', other.length);
+  /** Antes do hackathon ninguém submeteu — as colunas de projeto só fazem sentido depois. */
+  readonly hasSubmissions = computed(() => this.totalSubmitted() > 0);
+  /** Idem para times, que só existem depois que a formação de equipes abre. */
+  readonly hasTeams = computed(() => this.totalTeams() > 0);
 
-        this.buildComparison();
-        this.isLoading.set(false);
-      },
-      error: (error) => {
-        console.error('[BrazilianCitiesComparison] Erro ao carregar dados de outras cidades brasileiras:', error);
-        this.isLoading.set(false);
-      }
-    });
-  }
+  readonly registrationsRank = computed(() => this.uberlandia()?.rank ?? 0);
+  readonly teamsRank = computed(() => this.rankBy(row => row.totalTeams));
+  readonly submissionRank = computed(() => this.rankBy(row => row.submissionRate));
 
-  private buildComparison() {
+  /** Escala das barras da coluna de inscritos. */
+  readonly maxRegistrations = computed(() =>
+    Math.max(...this.rows().map(row => row.registrations), 1)
+  );
+
+  readonly averageSubmissionRate = computed(() => {
+    const withTeams = this.rows().filter(row => row.totalTeams > 0);
+    if (!withTeams.length) return 0;
+    return withTeams.reduce((sum, row) => sum + row.submissionRate, 0) / withTeams.length;
+  });
+
+  readonly registrationsShare = computed(() =>
+    this.share(this.uberlandia()?.registrations, this.totalRegistrations())
+  );
+  readonly teamsShare = computed(() =>
+    this.share(this.uberlandia()?.totalTeams, this.totalTeams())
+  );
+
+  /**
+   * A sede logo acima de Uberlândia em inscritos — ou a logo abaixo, quando
+   * Uberlândia lidera. É o número que a organização usa para saber o fôlego
+   * que falta (ou a folga que tem).
+   */
+  readonly registrationsNeighbor = computed(() => {
     const ube = this.uberlandia();
-    if (!ube) return;
+    const rows = this.rows();
+    if (!ube || rows.length < 2) return null;
 
-    // Combine all cities
-    const list = [ube, ...this.otherCities()];
+    const neighbor = ube.rank === 1 ? rows[1] : rows[ube.rank - 2];
+    if (!neighbor) return null;
 
-    // Sort by total teams
-    const sortedByTeams = [...list].sort((a, b) => b.totalTeams - a.totalTeams);
-    sortedByTeams.forEach((city, index) => {
-      city.rank = index + 1;
-      if (city.isUberlandia) {
-        this.uberlandiaTeamsRank.set(index + 1);
-      }
-    });
+    return {
+      city: neighbor.cityName,
+      gap: Math.abs(ube.registrations - neighbor.registrations),
+      isLeading: ube.rank === 1,
+    };
+  });
 
-    // Sort by submission rate for ranking
-    const sortedBySubmission = [...list].sort((a, b) => b.submissionRate - a.submissionRate);
-    const uberlandiaSubmissionIndex = sortedBySubmission.findIndex(c => c.isUberlandia);
-    this.uberlandiaSubmissionRank.set(uberlandiaSubmissionIndex + 1);
-
-    // Calculate statistics
-    this.totalTeamsBrazil.set(list.reduce((sum, c) => sum + c.totalTeams, 0));
-    this.totalSubmittedBrazil.set(list.reduce((sum, c) => sum + c.submittedProjects, 0));
-    this.averageSubmissionRate.set(list.length > 0
-      ? list.reduce((sum, c) => sum + c.submissionRate, 0) / list.length
-      : 0);
-
-    // Sort final list by total teams for display
-    list.sort((a, b) => b.totalTeams - a.totalTeams);
-    this.citiesComparison.set(list);
-  }
-
-  getUberlandiaPercentage(metric: 'teams' | 'submitted'): number {
-    const ube = this.uberlandia();
-    if (!ube) return 0;
-
-    if (metric === 'teams' && this.totalTeamsBrazil() > 0) {
-      return (ube.totalTeams / this.totalTeamsBrazil()) * 100;
-    }
-
-    if (metric === 'submitted' && this.totalSubmittedBrazil() > 0) {
-      return (ube.submittedProjects / this.totalSubmittedBrazil()) * 100;
-    }
-
-    return 0;
+  fmt(value: number): string {
+    return value.toLocaleString('pt-BR');
   }
 
   getRankEmoji(rank: number): string {
@@ -182,5 +184,40 @@ export class BrazilianCitiesComparisonComponent implements OnInit {
     if (rate >= 60) return 'good';
     if (rate >= 40) return 'average';
     return 'needs-improvement';
+  }
+
+  /** Largura da barra de inscritos, relativa à maior sede. */
+  getRegistrationsWidth(registrations: number): number {
+    return (registrations / this.maxRegistrations()) * 100;
+  }
+
+  private share(value: number | undefined, total: number): number {
+    if (value === undefined || total <= 0) return 0;
+    return (value / total) * 100;
+  }
+
+  private rankBy(metric: (row: BrazilCityRow) => number): number {
+    const ordered = [...this.rows()].sort((a, b) => metric(b) - metric(a));
+    const index = ordered.findIndex(row => row.isUberlandia);
+    return index === -1 ? 0 : index + 1;
+  }
+
+  /**
+   * A plataforma aceita o nome da sede como o organizador digitou, então a lista
+   * mistura `ARACAJU` e `balneário camboriú`. Só reescreve o que veio em caixa
+   * uniforme; nomes já capitalizados ficam como estão.
+   */
+  private prettifyCityName(name: string): string {
+    const trimmed = name.trim();
+    const isUniformCase = trimmed === trimmed.toUpperCase() || trimmed === trimmed.toLowerCase();
+    if (!isUniformCase) return trimmed;
+
+    return trimmed
+      .toLowerCase()
+      .split(/\s+/)
+      .map((word, index) =>
+        index > 0 && MINOR_WORDS.has(word) ? word : word.charAt(0).toUpperCase() + word.slice(1)
+      )
+      .join(' ');
   }
 }

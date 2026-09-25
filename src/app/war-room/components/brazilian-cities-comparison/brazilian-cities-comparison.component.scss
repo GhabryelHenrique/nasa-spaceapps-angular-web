@@ -30,31 +30,7 @@
     }
   }
 
-  // Loading State
-  .loading-state {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding: 3rem;
-    gap: 1rem;
-
-    .spinner {
-      width: 50px;
-      height: 50px;
-      border: 4px solid rgba(255, 255, 255, 0.1);
-      border-top-color: #2E96F5;
-      border-radius: 50%;
-      animation: spin 1s linear infinite;
-    }
-
-    p {
-      color: #a0aec0;
-      font-size: 1rem;
-    }
-  }
-
-  // Uberlândia Highlights
+  // Uberlï¿½ndia Highlights
   .uberlandia-highlights {
     margin-bottom: 2rem;
 
@@ -286,13 +262,29 @@
       overflow: hidden;
       border: 1px solid rgba(255, 255, 255, 0.1);
 
+      // As colunas de times e submissï¿½es sï¿½ aparecem quando hï¿½ dado real na
+      // ediï¿½ï¿½o, entï¿½o o grid tem uma variante por combinaï¿½ï¿½o possï¿½vel.
       .table-header,
       .table-row {
         display: grid;
-        grid-template-columns: 80px 1fr 100px 120px 180px;
+        grid-template-columns: 80px 1fr 220px;
         gap: 1rem;
         padding: 1rem 1.5rem;
         align-items: center;
+      }
+
+      &.has-teams {
+        .table-header,
+        .table-row {
+          grid-template-columns: 80px 1fr 220px 100px;
+        }
+      }
+
+      &.has-submissions {
+        .table-header,
+        .table-row {
+          grid-template-columns: 70px 1fr 190px 90px 110px 160px;
+        }
       }
 
       .table-header {
@@ -358,6 +350,38 @@
             }
           }
 
+          &.registrations-cell {
+            .count-container {
+              display: flex;
+              align-items: center;
+              gap: 0.75rem;
+
+              .count-bar-container {
+                flex: 1;
+                height: 8px;
+                background: rgba(255, 255, 255, 0.1);
+                border-radius: 4px;
+                overflow: hidden;
+
+                .count-bar {
+                  height: 100%;
+                  border-radius: 4px;
+                  background: linear-gradient(90deg, #2E96F5, #0960E1);
+                  transition: width 0.5s ease;
+                }
+              }
+
+              .count-value {
+                font-size: 1rem;
+                font-weight: 600;
+                color: #ffffff;
+                min-width: 52px;
+                text-align: right;
+                font-variant-numeric: tabular-nums;
+              }
+            }
+          }
+
           &.teams-cell,
           &.submitted-cell {
             .cell-value {
@@ -420,6 +444,26 @@
           }
         }
       }
+    }
+
+    .table-note {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      margin: 0.85rem 0 0;
+      font-size: 0.82rem;
+      line-height: 1.5;
+      color: #718096;
+    }
+
+    .spinner-inline {
+      width: 13px;
+      height: 13px;
+      flex-shrink: 0;
+      border: 2px solid rgba(255, 255, 255, 0.15);
+      border-top-color: #2E96F5;
+      border-radius: 50%;
+      animation: spin 1s linear infinite;
     }
   }
 
@@ -526,10 +570,24 @@
       .comparison-table {
         .table-header,
         .table-row {
-          grid-template-columns: 60px 1fr 80px 100px 140px;
+          grid-template-columns: 60px 1fr 170px;
           gap: 0.75rem;
           padding: 0.75rem 1rem;
           font-size: 0.9rem;
+        }
+
+        &.has-teams {
+          .table-header,
+          .table-row {
+            grid-template-columns: 60px 1fr 170px 80px;
+          }
+        }
+
+        &.has-submissions {
+          .table-header,
+          .table-row {
+            grid-template-columns: 55px 1fr 150px 70px 90px 130px;
+          }
         }
       }
     }
@@ -557,7 +615,15 @@
       overflow-x: auto;
 
       .comparison-table {
-        min-width: 600px;
+        min-width: 420px;
+
+        &.has-teams {
+          min-width: 500px;
+        }
+
+        &.has-submissions {
+          min-width: 620px;
+        }
       }
     }
 

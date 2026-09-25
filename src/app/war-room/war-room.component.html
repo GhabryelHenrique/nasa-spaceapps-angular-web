@@ -225,9 +225,10 @@
 
       <app-participants-by-country-chart [cities]="cities()"></app-participants-by-country-chart>
 
-      @if (!isCurrentEdition()) {
-        <app-brazilian-cities-comparison></app-brazilian-cities-comparison>
-      }
+      <app-brazilian-cities-comparison
+        [cities]="cities()"
+        [year]="year()">
+      </app-brazilian-cities-comparison>
     </section>
   }
 

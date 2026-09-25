@@ -1,230 +1,91 @@
-import { Injectable } from '@angular/core';
-import { Observable, of, forkJoin } from 'rxjs';
-import { delay, map } from 'rxjs/operators';
-import * as otherCitiesData from '../../assets/data/2025/otherCitiesTeams.json';
-import * as uberlandiaData from '../../assets/data/2025/teams.json';
+import { Injectable, inject } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
+import { Observable, forkJoin } from 'rxjs';
+import { map, shareReplay, tap } from 'rxjs/operators';
+import { TeamsService } from './teams.service';
 
+/** Times de uma sede, já agregados. */
 export interface CityTeamStats {
   locationName: string;
   locationId: string;
   totalTeams: number;
   submittedProjects: number;
   submissionRate: number;
-  country?: string;
-  isBrazilian?: boolean;
+}
+
+/** Uma sede dentro de `otherCitiesTeams.json` / `teams.json`. */
+interface CityTeamsEntry {
+  locationId?: string;
+  locationName?: string;
+  teams?: {
+    totalCount?: number;
+    edges?: Array<{ node?: { projectSubmitted?: boolean } }>;
+  };
+}
+
+interface OtherCitiesFile {
+  data?: CityTeamsEntry[];
 }
 
 @Injectable({
   providedIn: 'root',
 })
 export class OtherCitiesTeamsService {
-  // Lista completa de todas as cidades brasileiras participantes do NASA Space Apps Challenge 2025
-  private readonly brazilianCities = [
-    'Aracaju',
-    'Balneário Camboriú',
-    'Belém',
-    'Bento Gonçalves',
-    'Boa Vista',
-    'Botucatu',
-    'Campina Grande',
-    'Campinas',
-    'Campo Mourão',
-    'Campos dos Goytacazes',
-    'Caxias do Sul',
-    'Cianorte',
-    'Contagem',
-    'Cuiaba',
-    'Florianopolis',
-    'Fortaleza',
-    'Goiânia',
-    'Guarulhos',
-    'Itajubá',
-    'Jaguariúna',
-    'João Pessoa',
-    'Juazeiro do Norte',
-    'Juiz de Fora',
-    'Lajeado',
-    'Limeira',
-    'Londrina',
-    'Maceió',
-    'Manaus',
-    'Mariana',
-    'Maringá',
-    'Marília',
-    'Niterói',
-    'Petrolina',
-    'Pouso Alegre',
-    'Poços de Caldas',
-    'Recife',
-    'Ribeirao Preto',
-    'Rio de Janeiro',
-    'Salvador',
-    'Santa Cruz das Palmeiras',
-    'Santo André',
-    'Sorocaba',
-    'São Gonçalo',
-    'São José do Rio Preto',
-    'São José dos Campos',
-    'São João da Boa Vista',
-    'São Luis',
-    'São Paulo',
-    'Tefé',
-    'Uberlândia',
-    'Vilhena',
-    'Vitória da Conquista',
-  ];
+  private readonly http = inject(HttpClient);
+  private readonly teams = inject(TeamsService);
 
   /**
-   * Retorna estatísticas de times por cidade (incluindo Uberlândia e outras cidades)
+   * Agregado por sede, por edição. Os JSONs são versionados em
+   * `/assets/data/<ano>/` (gerados por `update_teams.py`), então o resultado é
+   * cacheado: alternar entre 2025 e 2026 na Sala de Guerra não refaz o GET.
    */
-  getTeamStatsByCity(): Observable<CityTeamStats[]> {
-    const cityStats: CityTeamStats[] = [];
-
-    // Adiciona dados de Uberlândia
-    if (
-      uberlandiaData.data &&
-      Array.isArray(uberlandiaData.data) &&
-      uberlandiaData.data.length > 0
-    ) {
-      const uberlandiaCityData = uberlandiaData.data[0];
-      if (uberlandiaCityData.teams && uberlandiaCityData.teams.edges) {
-        const totalTeams =
-          uberlandiaCityData.teams.totalCount ||
-          uberlandiaCityData.teams.edges.length;
-        const submittedProjects = uberlandiaCityData.teams.edges.filter(
-          (edge: any) => edge.node.projectSubmitted === true
-        ).length;
-
-        cityStats.push({
-          locationName: uberlandiaCityData.locationName || 'Uberlândia',
-          locationId: uberlandiaCityData.locationId || '',
-          totalTeams,
-          submittedProjects,
-          submissionRate:
-            totalTeams > 0 ? (submittedProjects / totalTeams) * 100 : 0,
-        });
-      }
-    }
-
-    // Adiciona dados das outras cidades
-    if (otherCitiesData.data && Array.isArray(otherCitiesData.data)) {
-      otherCitiesData.data.forEach((cityData: any) => {
-        if (cityData.teams && cityData.teams.edges) {
-          const totalTeams =
-            cityData.teams.totalCount || cityData.teams.edges.length;
-          const submittedProjects = cityData.teams.edges.filter(
-            (edge: any) => edge.node.projectSubmitted === true
-          ).length;
-
-          cityStats.push({
-            locationName: cityData.locationName || 'Unknown',
-            locationId: cityData.locationId || '',
-            totalTeams,
-            submittedProjects,
-            submissionRate:
-              totalTeams > 0 ? (submittedProjects / totalTeams) * 100 : 0,
-          });
-        }
-      });
-    }
-
-    // Ordena por quantidade de times (descendente)
-    cityStats.sort((a, b) => b.totalTeams - a.totalTeams);
-
-    return of(cityStats).pipe(delay(100));
-  }
+  private readonly byYear = new Map<number, Observable<CityTeamStats[]>>();
 
   /**
-   * Retorna todos os times de todas as outras cidades
+   * Times por sede de uma edição, da maior para a menor.
+   *
+   * `otherCitiesTeams.json` traz as sedes crawleadas *menos* Uberlândia — a sede
+   * da casa mora em `teams.json` —, então as duas fontes são unidas aqui. A lista
+   * mistura países; filtrar por Brasil é responsabilidade de quem consome.
    */
-  getAllTeams(): Observable<any[]> {
-    let allTeams: any[] = [];
+  getTeamStatsByCity(year: number): Observable<CityTeamStats[]> {
+    let cached = this.byYear.get(year);
 
-    if (otherCitiesData.data && Array.isArray(otherCitiesData.data)) {
-      otherCitiesData.data.forEach((cityData: any) => {
-        if (cityData.teams && cityData.teams.edges) {
-          allTeams = allTeams.concat(
-            cityData.teams.edges.map((edge: any) => ({
-              ...edge.node,
-              cityName: cityData.locationName,
-            }))
-          );
-        }
-      });
-    }
-
-    return of(allTeams).pipe(delay(100));
-  }
-
-  /**
-   * Retorna times de uma cidade específica
-   */
-  getTeamsByCity(cityName: string): Observable<any[]> {
-    let cityTeams: any[] = [];
-
-    if (otherCitiesData.data && Array.isArray(otherCitiesData.data)) {
-      const cityData = otherCitiesData.data.find(
-        (city: any) =>
-          city.locationName?.toLowerCase() === cityName.toLowerCase()
+    if (!cached) {
+      cached = forkJoin({
+        home: this.teams.getTeams(year),
+        others: this.http.get<OtherCitiesFile>(`/assets/data/${year}/otherCitiesTeams.json`),
+      }).pipe(
+        map(({ home, others }) =>
+          [...(home?.data ?? []), ...(others?.data ?? [])]
+            .map(entry => this.toStats(entry))
+            .filter((stats): stats is CityTeamStats => stats !== null)
+            .sort((a, b) => b.totalTeams - a.totalTeams)
+        ),
+        // Mesmo motivo do TeamsService: erro preso no shareReplay tornaria a
+        // falha permanente; descartar deixa o próximo GET limpo.
+        tap({ error: () => this.byYear.delete(year) }),
+        shareReplay({ bufferSize: 1, refCount: false })
       );
-
-      if (cityData && cityData.teams && cityData.teams.edges) {
-        cityTeams = cityData.teams.edges.map((edge: any) => edge.node);
-      }
+      this.byYear.set(year, cached);
     }
 
-    return of(cityTeams).pipe(delay(100));
+    return cached;
   }
 
-  private normalizeString(str: string): string {
-    if (!str) return '';
-    return str
-      .normalize('NFD')
-      .replace(/[\u0300-\u036f]/g, '')
-      .toLowerCase()
-      .trim();
-  }
+  private toStats(entry: CityTeamsEntry): CityTeamStats | null {
+    const edges = entry.teams?.edges;
+    if (!entry.locationName || !edges) return null;
 
-  /**
-   * Verifica se uma cidade é brasileira
-   */
-  private isBrazilianCity(cityName: string): boolean {
-    const normalizedTarget = this.normalizeString(cityName);
-    return this.brazilianCities.some(
-      (city) => this.normalizeString(city) === normalizedTarget
-    );
-  }
+    const totalTeams = entry.teams?.totalCount ?? edges.length;
+    const submittedProjects = edges.filter(edge => edge.node?.projectSubmitted === true).length;
 
-  /**
-   * Retorna apenas cidades brasileiras
-   */
-  getBrazilianCitiesStats(): Observable<CityTeamStats[]> {
-    return this.getTeamStatsByCity().pipe(
-      map((cities) =>
-        cities
-          .filter((city) => this.isBrazilianCity(city.locationName))
-          .map((city) => ({
-            ...city,
-            isBrazilian: true,
-            country: 'Brasil',
-          }))
-      )
-    );
-  }
-
-  /**
-   * Retorna apenas cidades internacionais (não brasileiras)
-   */
-  getWorldCitiesStats(): Observable<CityTeamStats[]> {
-    return this.getTeamStatsByCity().pipe(
-      map((cities) =>
-        cities
-          .filter((city) => !this.isBrazilianCity(city.locationName))
-          .map((city) => ({
-            ...city,
-            isBrazilian: false,
-          }))
-      )
-    );
+    return {
+      locationName: entry.locationName,
+      locationId: entry.locationId ?? '',
+      totalTeams,
+      submittedProjects,
+      submissionRate: totalTeams > 0 ? (submittedProjects / totalTeams) * 100 : 0,
+    };
   }
 }
