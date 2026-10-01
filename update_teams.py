@@ -491,18 +491,17 @@ def write_local_events_file(year: int, events: Dict[str, Any]) -> None:
 
 HOME_CITY = ["Uberlândia"]
 
+# Só sedes confirmadas na edição corrente. Cidades que sediaram em anos
+# anteriores mas não nesta edição foram removidas para evitar o ruído de
+# "[AVISO] sem sede nesta edição" a cada execução.
 BRAZILIAN_CITIES = [
-    "Aracaju", "Balneário Camboriú", "Belém", "Bento Gonçalves", "Boa Vista",
-    "Botucatu", "Campina Grande", "Campinas", "Campo Mourão",
-    "Campos dos Goytacazes", "Caxias do Sul", "Cianorte", "Contagem", "Cuiaba",
-    "Florianopolis", "Fortaleza", "Goiânia", "Guarulhos", "Itajubá",
-    "Jaguariúna", "João Pessoa", "Juazeiro do Norte", "Juiz de Fora", "Lajeado",
-    "Limeira", "Londrina", "Maceió", "Manaus", "Mariana", "Maringá", "Marília",
-    "Niterói", "Petrolina", "Pouso Alegre", "Poços de Caldas", "Recife",
-    "Ribeirao Preto", "Rio de Janeiro", "Salvador", "Santa Cruz das Palmeiras",
-    "Santo André", "Sorocaba", "São Gonçalo", "São José do Rio Preto",
-    "São José dos Campos", "São João da Boa Vista", "São Luis", "São Paulo",
-    "Tefé", "Vilhena", "Vitória da Conquista",
+    "Aracaju", "Balneário Camboriú", "Belém", "Boa Vista", "Campina Grande",
+    "Campinas", "Campo Mourão", "Caxias do Sul", "Cianorte", "Cuiaba",
+    "Fortaleza", "Goiânia", "Guarulhos", "Jaguariúna", "Juazeiro do Norte",
+    "Lajeado", "Limeira", "Londrina", "Manaus", "Pouso Alegre", "Recife",
+    "Ribeirao Preto", "Salvador", "Santa Cruz das Palmeiras", "Santo André",
+    "Sorocaba", "São Gonçalo", "São José dos Campos", "São Paulo", "Vilhena",
+    "Vitória da Conquista",
 ]
 
 INTERNATIONAL_CITIES = [
