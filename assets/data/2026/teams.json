@@ -8,10 +8,10 @@
           "hasPreviousPage": false,
           "hasNextPage": false,
           "startCursor": "b2Zmc2V0OjA=",
-          "endCursor": "b2Zmc2V0Ojc=",
+          "endCursor": "b2Zmc2V0Ojg=",
           "__typename": "PageInfo"
         },
-        "totalCount": 8,
+        "totalCount": 9,
         "edges": [
           {
             "__typename": "TeamPageEdge",
@@ -99,8 +99,8 @@
                 "meta": {
                   "type": "LOCATION",
                   "slug": "uberlandia",
-                  "firstPublishedAt": "2026-08-20T13:11:16.191007Z",
-                  "lastPublishedAt": "2026-08-26T15:57:15.021223Z",
+                  "firstPublishedAt": "2026-08-20T13:11:16.191000Z",
+                  "lastPublishedAt": "2026-09-30T20:15:37.658859Z",
                   "relativeUrl": "/2026/local-events/uberlandia/",
                   "live": true,
                   "parent": null,
@@ -183,8 +183,8 @@
                 "meta": {
                   "type": "LOCATION",
                   "slug": "uberlandia",
-                  "firstPublishedAt": "2026-08-20T13:11:16.191007Z",
-                  "lastPublishedAt": "2026-08-26T15:57:15.021223Z",
+                  "firstPublishedAt": "2026-08-20T13:11:16.191000Z",
+                  "lastPublishedAt": "2026-09-30T20:15:37.658859Z",
                   "relativeUrl": "/2026/local-events/uberlandia/",
                   "live": true,
                   "parent": null,
@@ -286,8 +286,8 @@
                 "meta": {
                   "type": "LOCATION",
                   "slug": "uberlandia",
-                  "firstPublishedAt": "2026-08-20T13:11:16.191007Z",
-                  "lastPublishedAt": "2026-08-26T15:57:15.021223Z",
+                  "firstPublishedAt": "2026-08-20T13:11:16.191000Z",
+                  "lastPublishedAt": "2026-09-30T20:15:37.658859Z",
                   "relativeUrl": "/2026/local-events/uberlandia/",
                   "live": true,
                   "parent": null,
@@ -389,8 +389,8 @@
                 "meta": {
                   "type": "LOCATION",
                   "slug": "uberlandia",
-                  "firstPublishedAt": "2026-08-20T13:11:16.191007Z",
-                  "lastPublishedAt": "2026-08-26T15:57:15.021223Z",
+                  "firstPublishedAt": "2026-08-20T13:11:16.191000Z",
+                  "lastPublishedAt": "2026-09-30T20:15:37.658859Z",
                   "relativeUrl": "/2026/local-events/uberlandia/",
                   "live": true,
                   "parent": null,
@@ -409,6 +409,109 @@
           {
             "__typename": "TeamPageEdge",
             "cursor": "b2Zmc2V0OjQ=",
+            "node": {
+              "__typename": "TeamPage",
+              "id": "aWQ6NjEwMjA=",
+              "title": "H.E.L.I.O.S",
+              "meta": {
+                "type": "TEAM",
+                "slug": "helios20",
+                "firstPublishedAt": "2026-09-30T03:03:54.368926Z",
+                "lastPublishedAt": "2026-09-30T03:03:54.368926Z",
+                "relativeUrl": "/2026/find-a-team/helios20/",
+                "live": true,
+                "parent": null,
+                "__typename": "ExpandedPageMeta"
+              },
+              "owner": "aWQ6M2VlZjlhYmUtYTc5My00YTUwLWFjMmMtZjgyYTc4YmUwNTNm",
+              "ownerDetails": null,
+              "excerpt": "Junte-se  à minha equipe para este desafio genial, que é criar um software de monitoramento para a saúde dos astronautas! Dentre os membros temos cientistas, fullstack, entusiastas e apenas uma regra clara: fazer destas 48horas de hackathon as mai...",
+              "project": "aWQ6NTc0MjM=",
+              "projectDetails": {
+                "id": "aWQ6NTc0MjM=",
+                "name": "Project H.E.L.I.O.S",
+                "summary": "",
+                "demoLink": "",
+                "projectLink": "",
+                "details": "",
+                "solution": "",
+                "aiReferences": "",
+                "dataReferences": "",
+                "projectReferences": "",
+                "isSubmitted": false,
+                "savedAt": null,
+                "submittedAt": null,
+                "__typename": "Project"
+              },
+              "projectSubmitted": false,
+              "featuredImage": {
+                "id": "aWQ6NDQ1ODY3",
+                "meta": {
+                  "type": "images.CustomImage",
+                  "downloadUrl": "https://assets.spaceappschallenge.org/media/original_images/IMG_1893_TSi41ge.jpeg",
+                  "__typename": "ImageMeta"
+                },
+                "title": "team_image.02:03:03.131081",
+                "alt": "team_image.02:03:03.131081",
+                "caption": "team_image.02:03:03.131081",
+                "displaySize": "or",
+                "rendition": {
+                  "url": "https://assets.spaceappschallenge.org/media/images/IMG_1893_TSi41ge.2e16d0ba.fill-300x250.jpg",
+                  "fullUrl": "https://assets.spaceappschallenge.org/media/images/IMG_1893_TSi41ge.2e16d0ba.fill-300x250.jpg",
+                  "height": 250,
+                  "width": 300,
+                  "__typename": "BaseImage"
+                },
+                "__typename": "DefaultImage"
+              },
+              "description": null,
+              "desiredSkills": null,
+              "languages": null,
+              "challenge": "aWQ6NTUxMzA=",
+              "challengeDetails": {
+                "id": "aWQ6NTUxMzA=",
+                "title": "Create Health Monitoring Software for Astronauts on Space Missions",
+                "meta": {
+                  "type": "CHALLENGE",
+                  "slug": "create-health-monitoring-software-for-astronauts-on-space-missions",
+                  "firstPublishedAt": "2026-09-17T14:21:16.942007Z",
+                  "lastPublishedAt": "2026-09-17T14:21:16.942007Z",
+                  "relativeUrl": "/2026/challenges/create-health-monitoring-software-for-astronauts-on-space-missions/",
+                  "live": true,
+                  "parent": null,
+                  "__typename": "ExpandedPageMeta"
+                },
+                "excerpt": "Long-duration missions expose astronauts to space radiation, isolation and confinement, altered gravity, and a hostile closed environment, which can bring immune changes, bone loss, cardiovascular events, and behavioral health problems. On long missions, astronauts carry much of the responsibility for spotting these changes in themselves. Your challenge is to build a health monitoring software that gathers health indicators and enables astronauts to evaluate and act on the status of their health.",
+                "__typename": "ChallengePage"
+              },
+              "location": "aWQ6NTQ0NDY=",
+              "locationDetails": {
+                "id": "aWQ6NTQ0NDY=",
+                "title": "Uberlândia",
+                "displayName": "",
+                "meta": {
+                  "type": "LOCATION",
+                  "slug": "uberlandia",
+                  "firstPublishedAt": "2026-08-20T13:11:16.191000Z",
+                  "lastPublishedAt": "2026-09-30T20:15:37.658859Z",
+                  "relativeUrl": "/2026/local-events/uberlandia/",
+                  "live": true,
+                  "parent": null,
+                  "__typename": "ExpandedPageMeta"
+                },
+                "country": "Brazil",
+                "__typename": "LocationPage"
+              },
+              "event": "aWQ6NA==",
+              "joinEnabled": true,
+              "memberships": null,
+              "nominationBadges": null,
+              "awardBadges": null
+            }
+          },
+          {
+            "__typename": "TeamPageEdge",
+            "cursor": "b2Zmc2V0OjU=",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6NTU1ODA=",
@@ -492,8 +595,8 @@
                 "meta": {
                   "type": "LOCATION",
                   "slug": "uberlandia",
-                  "firstPublishedAt": "2026-08-20T13:11:16.191007Z",
-                  "lastPublishedAt": "2026-08-26T15:57:15.021223Z",
+                  "firstPublishedAt": "2026-08-20T13:11:16.191000Z",
+                  "lastPublishedAt": "2026-09-30T20:15:37.658859Z",
                   "relativeUrl": "/2026/local-events/uberlandia/",
                   "live": true,
                   "parent": null,
@@ -511,7 +614,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjU=",
+            "cursor": "b2Zmc2V0OjY=",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6NTg0NDE=",
@@ -520,7 +623,7 @@
                 "type": "TEAM",
                 "slug": "orbit-sentinel",
                 "firstPublishedAt": "2026-09-22T14:31:05.892000Z",
-                "lastPublishedAt": "2026-09-22T16:39:36.234530Z",
+                "lastPublishedAt": "2026-09-27T01:04:38.518301Z",
                 "relativeUrl": "/2026/find-a-team/orbit-sentinel/",
                 "live": true,
                 "parent": null,
@@ -576,8 +679,8 @@
                 "meta": {
                   "type": "LOCATION",
                   "slug": "uberlandia",
-                  "firstPublishedAt": "2026-08-20T13:11:16.191007Z",
-                  "lastPublishedAt": "2026-08-26T15:57:15.021223Z",
+                  "firstPublishedAt": "2026-08-20T13:11:16.191000Z",
+                  "lastPublishedAt": "2026-09-30T20:15:37.658859Z",
                   "relativeUrl": "/2026/local-events/uberlandia/",
                   "live": true,
                   "parent": null,
@@ -595,7 +698,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjY=",
+            "cursor": "b2Zmc2V0Ojc=",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6NTY5ODE=",
@@ -679,8 +782,8 @@
                 "meta": {
                   "type": "LOCATION",
                   "slug": "uberlandia",
-                  "firstPublishedAt": "2026-08-20T13:11:16.191007Z",
-                  "lastPublishedAt": "2026-08-26T15:57:15.021223Z",
+                  "firstPublishedAt": "2026-08-20T13:11:16.191000Z",
+                  "lastPublishedAt": "2026-09-30T20:15:37.658859Z",
                   "relativeUrl": "/2026/local-events/uberlandia/",
                   "live": true,
                   "parent": null,
@@ -698,7 +801,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0Ojc=",
+            "cursor": "b2Zmc2V0Ojg=",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6NTgyMTg=",
@@ -782,8 +885,8 @@
                 "meta": {
                   "type": "LOCATION",
                   "slug": "uberlandia",
-                  "firstPublishedAt": "2026-08-20T13:11:16.191007Z",
-                  "lastPublishedAt": "2026-08-26T15:57:15.021223Z",
+                  "firstPublishedAt": "2026-08-20T13:11:16.191000Z",
+                  "lastPublishedAt": "2026-09-30T20:15:37.658859Z",
                   "relativeUrl": "/2026/local-events/uberlandia/",
                   "live": true,
                   "parent": null,
