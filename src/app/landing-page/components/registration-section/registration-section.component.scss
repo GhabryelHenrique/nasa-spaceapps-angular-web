@@ -4,7 +4,7 @@
 // Inscrições abertas
 // Primeiro bloco depois do hero. Separa os dois públicos que se
 // inscrevem por caminhos diferentes: participante (site da NASA)
-// e mentor/jurado/voluntário (formulário da organização local).
+// e mentor/voluntário/palestrante (formulários da organização local).
 // ─────────────────────────────────────────────────────────────
 
 .registration-section {
@@ -75,6 +75,9 @@
 
   strong { color: $sa-white; font-weight: 600; }
 }
+
+// ─── Vídeo ────────────────────────────────────────────────
+.registration-video { margin-bottom: 3rem; }
 
 // ─── Dois caminhos ────────────────────────────────────────
 .tracks {
@@ -167,10 +170,15 @@
   }
 }
 
-// Empurra o botão para a base, alinhando os dois cartões.
-.track-cta {
+// Empurra os botões para a base, alinhando os dois cartões.
+.track-ctas {
   margin-top: auto;
-  align-self: flex-start;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.65rem;
+}
+
+.track-cta {
   font-size: 0.95rem;
   text-align: left;
 }
@@ -232,12 +240,15 @@
 @media (max-width: 768px) {
   .registration-section { padding: 68px 0; }
 
+  .registration-video { margin-bottom: 2rem; }
+
   .tracks { grid-template-columns: 1fr; }
 
   .track { padding: 1.7rem 1.35rem; }
 
+  .track-ctas { flex-direction: column; }
+
   .track-cta {
-    align-self: stretch;
     justify-content: center;
     text-align: center;
   }

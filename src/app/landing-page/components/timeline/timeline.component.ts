@@ -1,7 +1,12 @@
 import { Component, signal } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterLink } from '@angular/router';
-import { MENTOR_FORM_URL, REGISTRATION_URL } from '../../../shared/data/registration.data';
+import {
+  MENTOR_FORM_URL,
+  REGISTRATION_URL,
+  SPEAKER_FORM_URL,
+  VOLUNTEER_FORM_URL,
+} from '../../../shared/data/registration.data';
 
 interface Milestone {
   /** ISO date used to derive the milestone status */
@@ -32,6 +37,8 @@ export class TimelineComponent {
   private readonly now = signal(new Date());
   readonly registrationUrl = REGISTRATION_URL;
   readonly mentorFormUrl = MENTOR_FORM_URL;
+  readonly volunteerFormUrl = VOLUNTEER_FORM_URL;
+  readonly speakerFormUrl = SPEAKER_FORM_URL;
 
   readonly mainMilestones: Milestone[] = [
     {

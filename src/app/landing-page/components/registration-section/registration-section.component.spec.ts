@@ -1,5 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { provideRouter } from '@angular/router';
+import { SUPPORT_FORMS } from '../../../shared/data/registration.data';
 import { RegistrationSectionComponent } from './registration-section.component';
 
 describe('RegistrationSectionComponent', () => {
@@ -33,14 +34,21 @@ describe('RegistrationSectionComponent', () => {
   it('should send the participant to the official NASA page', () => {
     const participant = component.tracks.find(t => t.primary);
 
-    expect(participant?.ctaUrl).toBe(component.registrationUrl);
-    expect(participant?.ctaUrl).toContain('spaceappschallenge.org');
+    expect(participant?.ctas.map(c => c.url)).toEqual([component.registrationUrl]);
+    expect(component.registrationUrl).toContain('spaceappschallenge.org');
+  });
+
+  it('should offer one form per support role', () => {
+    const support = component.tracks.find(t => !t.primary);
+
+    expect(support?.ctas.map(c => c.url)).toEqual(SUPPORT_FORMS.map(f => f.url));
   });
 
   it('should open every external CTA safely in a new tab', () => {
     const ctas = compiled().querySelectorAll<HTMLAnchorElement>('.track-cta');
+    const expected = component.tracks.reduce((sum, t) => sum + t.ctas.length, 0);
 
-    expect(ctas.length).toBe(component.tracks.length);
+    expect(ctas.length).toBe(expected);
     for (const cta of Array.from(ctas)) {
       expect(cta.target).toBe('_blank');
       expect(cta.rel).toContain('noopener');

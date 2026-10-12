@@ -60,10 +60,16 @@ describe('HeroSectionComponent', () => {
     expect(badge.textContent?.trim()).toBe('Inscrições abertas');
   });
 
-  it('should offer the mentor form as a secondary path', () => {
-    const link = fixture.nativeElement.querySelector('.hero-mentor-note a') as HTMLAnchorElement;
+  it('should offer the mentor, volunteer and speaker forms as secondary paths', () => {
+    const links = [...fixture.nativeElement.querySelectorAll('.hero-mentor-note a')] as HTMLAnchorElement[];
 
-    expect(link.getAttribute('href')).toBe(component.mentorFormUrl);
-    expect(link.target).toBe('_blank');
+    expect(links.map(a => a.getAttribute('href'))).toEqual([
+      component.mentorFormUrl,
+      component.volunteerFormUrl,
+      component.speakerFormUrl,
+    ]);
+    for (const link of links) {
+      expect(link.target).toBe('_blank');
+    }
   });
 });

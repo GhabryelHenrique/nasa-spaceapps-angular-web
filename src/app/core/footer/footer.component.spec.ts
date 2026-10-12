@@ -29,13 +29,15 @@ describe('FooterComponent', () => {
     expect(component).toBeTruthy();
   });
 
-  it('should expose both registration paths', () => {
+  it('should expose the participant registration and every support form', () => {
     const links = fixture.debugElement
       .queryAll(By.css('.footer-links a'))
       .map((el: DebugElement) => (el.nativeElement as HTMLAnchorElement).getAttribute('href'));
 
     expect(links).toContain(component.registrationUrl);
-    expect(links).toContain(component.mentorFormUrl);
+    for (const form of component.supportForms) {
+      expect(links).toContain(form.url);
+    }
   });
 
   it('should route to the step-by-step guide', () => {

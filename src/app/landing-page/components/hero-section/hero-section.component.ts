@@ -5,6 +5,8 @@ import { CHALLENGES_DATA } from '../../../shared/data/challenges.data';
 import {
   MENTOR_FORM_URL,
   REGISTRATION_URL,
+  SPEAKER_FORM_URL,
+  VOLUNTEER_FORM_URL,
   WHATSAPP_URL,
 } from '../../../shared/data/registration.data';
 
@@ -25,6 +27,8 @@ export class HeroSectionComponent {
 
   readonly registrationUrl = REGISTRATION_URL;
   readonly mentorFormUrl = MENTOR_FORM_URL;
+  readonly volunteerFormUrl = VOLUNTEER_FORM_URL;
+  readonly speakerFormUrl = SPEAKER_FORM_URL;
   readonly whatsappUrl = WHATSAPP_URL;
 
   /** Quantos desafios a edição corrente tem — usado no selo "desafios divulgados". */

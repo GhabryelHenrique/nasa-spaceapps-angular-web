@@ -21,6 +21,11 @@
       </p>
     </header>
 
+    <!-- ─── Vídeo ────────────────────────────────────────── -->
+    <app-youtube-embed class="registration-video reveal reveal-up delay-3"
+                       [videoId]="videoId"
+                       title="NASA Space Apps Uberlândia 2026" />
+
     <!-- ─── Dois caminhos: participante e mentoria ───────── -->
     <div class="tracks reveal reveal-up delay-3">
       @for (item of tracks; track item.title) {
@@ -36,14 +41,18 @@
             }
           </ul>
 
-          <a [href]="item.ctaUrl"
-             class="track-cta"
-             [class.btn-primary]="item.primary"
-             [class.btn-secondary]="!item.primary"
-             target="_blank" rel="noopener noreferrer">
-            <i [class]="item.ctaIcon" aria-hidden="true"></i>
-            {{ item.ctaLabel }}
-          </a>
+          <div class="track-ctas">
+            @for (cta of item.ctas; track cta.url) {
+              <a [href]="cta.url"
+                 class="track-cta"
+                 [class.btn-primary]="item.primary"
+                 [class.btn-secondary]="!item.primary"
+                 target="_blank" rel="noopener noreferrer">
+                <i [class]="cta.icon" aria-hidden="true"></i>
+                {{ cta.label }}
+              </a>
+            }
+          </div>
         </article>
       }
     </div>

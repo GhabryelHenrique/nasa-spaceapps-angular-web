@@ -24,9 +24,9 @@
           <i class="ph ph-rocket-launch" aria-hidden="true"></i>
           Inscrever-se no site da NASA
         </a>
-        <a href="#mentores" class="btn-secondary">
-          <i class="ph ph-chalkboard-teacher" aria-hidden="true"></i>
-          Quero ser mentor ou voluntário
+        <a routerLink="/como-se-inscrever" fragment="apoie" class="btn-secondary">
+          <i class="ph ph-hand-heart" aria-hidden="true"></i>
+          Mentores, voluntários e palestrantes
         </a>
       </div>
 
@@ -36,6 +36,10 @@
         <li><i class="ph ph-calendar-dots" aria-hidden="true"></i> 14 e 15 de novembro</li>
         <li><i class="ph ph-map-pin" aria-hidden="true"></i> Uberlândia · presencial</li>
       </ul>
+
+      <app-youtube-embed class="guide-video reveal reveal-up delay-4"
+                         [videoId]="videoId"
+                         title="NASA Space Apps Uberlândia 2026" />
 
     </div>
   </section>
@@ -112,38 +116,40 @@
     </div>
   </section>
 
-  <!-- ─── Mentores, jurados e voluntários ────────────────── -->
-  <section class="guide-section guide-section--deep" id="mentores">
+  <!-- ─── Mentores, voluntários e palestrantes ───────────── -->
+  <section class="guide-section guide-section--deep" id="apoie">
     <div class="guide-pattern guide-pattern--fiduciaries" aria-hidden="true"></div>
     <div class="guide-container">
 
       <header class="guide-head reveal reveal-up">
         <p class="guide-eyebrow">Outro caminho</p>
-        <h2 class="guide-section-title">Seja <span class="accent">mentor</span>, jurado ou voluntário</h2>
+        <h2 class="guide-section-title">Seja <span class="accent">mentor</span>, voluntário ou palestrante</h2>
         <p class="guide-section-lead">
-          Quem orienta não compete. A seleção é feita pela organização local de
-          Uberlândia, por um formulário separado da inscrição de participante.
+          Quem apoia não compete. A seleção é feita pela organização local de
+          Uberlândia, com um formulário para cada papel — separado da inscrição de participante.
         </p>
       </header>
 
       <div class="mentor-card reveal reveal-up delay-1">
         <ol class="mentor-steps">
-          @for (mentorStep of mentorSteps; track mentorStep; let i = $index) {
+          @for (supportStep of supportSteps; track supportStep; let i = $index) {
             <li>
               <span class="mentor-step-number">{{ i + 1 }}</span>
-              <span>{{ mentorStep }}</span>
+              <span>{{ supportStep }}</span>
             </li>
           }
         </ol>
 
         <div class="mentor-cta">
-          <a [href]="mentorFormUrl" class="btn-primary" target="_blank" rel="noopener noreferrer">
-            <i class="ph ph-clipboard-text" aria-hidden="true"></i>
-            Abrir formulário de mentoria
-          </a>
+          @for (form of supportForms; track form.url) {
+            <a [href]="form.url" class="btn-secondary" target="_blank" rel="noopener noreferrer">
+              <i [class]="form.icon" aria-hidden="true"></i>
+              {{ form.ctaLabel }}
+            </a>
+          }
           <p class="mentor-note">
             <i class="ph ph-info" aria-hidden="true"></i>
-            O formulário é hospedado no Google Forms e leva cerca de 5 minutos.
+            Os formulários são da organização local, hospedados no Google Forms.
           </p>
         </div>
       </div>

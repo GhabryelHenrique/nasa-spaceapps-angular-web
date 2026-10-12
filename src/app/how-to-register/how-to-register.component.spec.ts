@@ -34,12 +34,14 @@ describe('HowToRegisterComponent', () => {
     expect(component.registrationUrl).toContain('spaceappschallenge.org');
   });
 
-  it('should expose the mentor form on the mentor section', () => {
-    const cta = compiled().querySelector<HTMLAnchorElement>('#mentores .btn-primary');
+  it('should expose one form per support role on the support section', () => {
+    const ctas = [...compiled().querySelectorAll<HTMLAnchorElement>('#apoie .mentor-cta a')];
 
-    expect(cta?.getAttribute('href')).toBe(component.mentorFormUrl);
-    expect(cta?.target).toBe('_blank');
-    expect(cta?.rel).toContain('noopener');
+    expect(ctas.map(a => a.getAttribute('href'))).toEqual(component.supportForms.map(f => f.url));
+    for (const cta of ctas) {
+      expect(cta.target).toBe('_blank');
+      expect(cta.rel).toContain('noopener');
+    }
   });
 
   it('should route internal step actions instead of leaving the app', () => {

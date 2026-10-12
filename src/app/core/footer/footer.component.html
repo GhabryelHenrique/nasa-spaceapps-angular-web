@@ -15,10 +15,12 @@
               <a [href]="registrationUrl" target="_blank" rel="noopener noreferrer"
                  aria-label="Inscrever-se no site oficial da NASA">Inscrição de participante</a>
             </li>
-            <li>
-              <a [href]="mentorFormUrl" target="_blank" rel="noopener noreferrer"
-                 aria-label="Formulário de mentores, jurados e voluntários">Mentores e voluntários</a>
-            </li>
+            @for (form of supportForms; track form.url) {
+              <li>
+                <a [href]="form.url" target="_blank" rel="noopener noreferrer"
+                   [attr.aria-label]="'Formulário de inscrição de ' + form.role.toLowerCase()">{{ form.role }}</a>
+              </li>
+            }
             <li><a routerLink="/como-se-inscrever">Como se inscrever</a></li>
           </ul>
         </nav>

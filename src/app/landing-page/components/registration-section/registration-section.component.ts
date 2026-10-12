@@ -1,10 +1,12 @@
 import { Component } from '@angular/core';
 import { RouterLink } from '@angular/router';
 import {
-  MENTOR_FORM_URL,
   REGISTRATION_URL,
+  REGISTRATION_VIDEO_ID,
+  SUPPORT_FORMS,
   WHATSAPP_URL,
 } from '../../../shared/data/registration.data';
+import { YoutubeEmbedComponent } from '../../../shared/youtube-embed/youtube-embed.component';
 
 interface RegistrationTrack {
   icon: string;
@@ -12,22 +14,22 @@ interface RegistrationTrack {
   title: string;
   description: string;
   bullets: string[];
-  ctaLabel: string;
-  ctaUrl: string;
-  ctaIcon: string;
+  /** Participante tem um só caminho; o apoio tem um formulário por papel. */
+  ctas: { label: string; url: string; icon: string }[];
   /** O cartão do participante é o caminho principal e ganha o destaque. */
   primary?: boolean;
 }
 
 @Component({
   selector: 'app-registration-section',
-  imports: [RouterLink],
+  imports: [RouterLink, YoutubeEmbedComponent],
   templateUrl: './registration-section.component.html',
   styleUrl: './registration-section.component.scss',
 })
 export class RegistrationSectionComponent {
   readonly registrationUrl = REGISTRATION_URL;
   readonly whatsappUrl = WHATSAPP_URL;
+  readonly videoId = REGISTRATION_VIDEO_ID;
 
   readonly tracks: RegistrationTrack[] = [
     {
@@ -41,25 +43,23 @@ export class RegistrationSectionComponent {
         'Escolha Uberlândia como sua sede',
         'Monte ou entre em um time de até 6 pessoas',
       ],
-      ctaLabel: 'Inscrever-se no site da NASA',
-      ctaUrl: REGISTRATION_URL,
-      ctaIcon: 'ph ph-rocket-launch',
+      ctas: [
+        { label: 'Inscrever-se no site da NASA', url: REGISTRATION_URL, icon: 'ph ph-rocket-launch' },
+      ],
       primary: true,
     },
     {
-      icon: 'ph ph-chalkboard-teacher',
+      icon: 'ph ph-hand-heart',
       eyebrow: 'Quero apoiar',
-      title: 'Mentores, jurados e voluntários',
+      title: 'Mentores, voluntários e palestrantes',
       description:
-        'A organização local seleciona quem vai orientar, avaliar e sustentar as 48 horas de hackathon. A inscrição é por formulário próprio.',
+        'A organização local seleciona quem vai orientar os times, sustentar as 48 horas de hackathon e subir ao palco. Cada papel tem seu próprio formulário.',
       bullets: [
         'Mentoria técnica, de negócios ou de ciência',
-        'Avaliação de projetos na banca',
         'Voluntariado na operação do evento',
+        'Palestras na programação do hackathon',
       ],
-      ctaLabel: 'Preencher formulário de mentoria',
-      ctaUrl: MENTOR_FORM_URL,
-      ctaIcon: 'ph ph-clipboard-text',
+      ctas: SUPPORT_FORMS.map(form => ({ label: form.role, url: form.url, icon: form.icon })),
     },
   ];
 }

@@ -1,7 +1,7 @@
 import { CommonModule } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
 import { RouterLink } from '@angular/router';
-import { MENTOR_FORM_URL, REGISTRATION_URL } from '../../shared/data/registration.data';
+import { REGISTRATION_URL, SUPPORT_FORMS } from '../../shared/data/registration.data';
 
 @Component({
   selector: 'app-footer',
@@ -13,7 +13,7 @@ import { MENTOR_FORM_URL, REGISTRATION_URL } from '../../shared/data/registratio
 export class FooterComponent implements OnInit {
 
   readonly registrationUrl = REGISTRATION_URL;
-  readonly mentorFormUrl = MENTOR_FORM_URL;
+  readonly supportForms = SUPPORT_FORMS;
 
   constructor() { }
 

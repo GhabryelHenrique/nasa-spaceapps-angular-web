@@ -2,10 +2,12 @@ import { Component, signal } from '@angular/core';
 import { RouterLink } from '@angular/router';
 import {
   DISCORD_URL,
-  MENTOR_FORM_URL,
   REGISTRATION_URL,
+  REGISTRATION_VIDEO_ID,
+  SUPPORT_FORMS,
   WHATSAPP_URL,
 } from '../shared/data/registration.data';
+import { YoutubeEmbedComponent } from '../shared/youtube-embed/youtube-embed.component';
 
 interface Step {
   icon: string;
@@ -26,15 +28,16 @@ interface Faq {
 
 @Component({
   selector: 'app-how-to-register',
-  imports: [RouterLink],
+  imports: [RouterLink, YoutubeEmbedComponent],
   templateUrl: './how-to-register.component.html',
   styleUrl: './how-to-register.component.scss',
 })
 export class HowToRegisterComponent {
   readonly registrationUrl = REGISTRATION_URL;
-  readonly mentorFormUrl = MENTOR_FORM_URL;
+  readonly supportForms = SUPPORT_FORMS;
   readonly whatsappUrl = WHATSAPP_URL;
   readonly discordUrl = DISCORD_URL;
+  readonly videoId = REGISTRATION_VIDEO_ID;
 
   /** Índice da pergunta aberta no acordeão; `null` = todas fechadas. */
   readonly openFaq = signal<number | null>(0);
@@ -149,11 +152,11 @@ export class HowToRegisterComponent {
     },
   ];
 
-  readonly mentorSteps: string[] = [
-    'Preencha o formulário com sua área de atuação e experiência',
+  readonly supportSteps: string[] = [
+    'Escolha o formulário do seu papel: mentoria, voluntariado ou palestra',
+    'Preencha com sua área de atuação e experiência',
     'A organização local avalia as inscrições e entra em contato por e-mail ou WhatsApp',
-    'Você recebe o briefing com horários, formato da mentoria e canal de comunicação',
-    'No evento, você orienta os times na sua área — presencialmente, por turnos',
+    'Você recebe o briefing com horários, formato da atuação e canal de comunicação',
   ];
 
   readonly faqs: Faq[] = [
@@ -188,9 +191,9 @@ export class HowToRegisterComponent {
         'Confira a caixa de spam e a lixeira. Se não encontrar, tente fazer login no site do Space Apps: se a conta entrar normalmente, o cadastro foi criado. Persistindo o problema, chame a organização no WhatsApp que a gente ajuda.',
     },
     {
-      question: 'Qual a diferença entre a inscrição no site da NASA e o formulário de mentoria?',
+      question: 'Qual a diferença entre a inscrição no site da NASA e os formulários de mentoria, voluntariado e palestras?',
       answer:
-        'A inscrição no site da NASA é para quem vai participar do hackathon como competidor. O formulário de mentoria é da organização de Uberlândia e serve para quem quer atuar como mentor, jurado ou voluntário — nesse caso você não compete.',
+        'A inscrição no site da NASA é para quem vai participar do hackathon como competidor. Os formulários de mentoria, voluntariado e palestras são da organização de Uberlândia e servem para quem quer atuar como mentor, voluntário ou palestrante — nesse caso você não compete.',
     },
     {
       question: 'Posso participar de outra cidade?',

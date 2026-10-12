@@ -58,7 +58,7 @@ Public: `''` (landing), `desafios`, `como-se-inscrever`, `times`, `times-vencedo
 - `proxy.conf.json` - proxies `/api/*` to api.spaceappschallenge.org (NASA global stats only; the local API is called directly via absolute URL + CORS)
 
 ## Important Notes
-- **Inscrições 2026**: participantes se inscrevem no site da NASA (não há formulário próprio); mentores/jurados/voluntários usam um Google Form da organização local. Ambas as URLs (mais WhatsApp/Discord/Instagram) ficam centralizadas em `src/app/shared/data/registration.data.ts` — altere lá, não nos templates
+- **Inscrições 2026**: participantes se inscrevem no site da NASA (não há formulário próprio); mentores, voluntários e palestrantes usam um Google Form cada, da organização local (`SUPPORT_FORMS`). Todas as URLs (mais WhatsApp/Discord/Instagram e o vídeo do YouTube) ficam centralizadas em `src/app/shared/data/registration.data.ts` — altere lá, não nos templates
 - Angular 22, standalone components, signals for state; no NgModules
 - No SSR (client-only build, deployed to GitHub Pages via `npm run build-deploy`)
 - Portuguese-first UI; API error messages are already in Portuguese and are displayed verbatim

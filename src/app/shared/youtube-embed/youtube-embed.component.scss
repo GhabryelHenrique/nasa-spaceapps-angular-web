@@ -1,0 +1,29 @@
+@use '../../../styles/section' as *;
+
+:host {
+  display: block;
+  max-width: 880px;
+  margin-inline: auto;
+}
+
+.video-frame {
+  position: relative;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  border-radius: 20px;
+  background: $tone-sunken;
+  border: 1px solid rgba($sa-blue-yonder, 0.35);
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.45);
+
+  iframe {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .video-frame { border-radius: 14px; }
+}

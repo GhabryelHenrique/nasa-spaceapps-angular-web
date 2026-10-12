@@ -8,10 +8,10 @@
           "hasPreviousPage": false,
           "hasNextPage": false,
           "startCursor": "b2Zmc2V0OjA=",
-          "endCursor": "b2Zmc2V0Ojg=",
+          "endCursor": "b2Zmc2V0OjEx",
           "__typename": "PageInfo"
         },
-        "totalCount": 9,
+        "totalCount": 12,
         "edges": [
           {
             "__typename": "TeamPageEdge",
@@ -100,7 +100,7 @@
                   "type": "LOCATION",
                   "slug": "uberlandia",
                   "firstPublishedAt": "2026-08-20T13:11:16.191000Z",
-                  "lastPublishedAt": "2026-09-30T20:15:37.658859Z",
+                  "lastPublishedAt": "2026-10-06T14:56:48.248144Z",
                   "relativeUrl": "/2026/local-events/uberlandia/",
                   "live": true,
                   "parent": null,
@@ -184,7 +184,7 @@
                   "type": "LOCATION",
                   "slug": "uberlandia",
                   "firstPublishedAt": "2026-08-20T13:11:16.191000Z",
-                  "lastPublishedAt": "2026-09-30T20:15:37.658859Z",
+                  "lastPublishedAt": "2026-10-06T14:56:48.248144Z",
                   "relativeUrl": "/2026/local-events/uberlandia/",
                   "live": true,
                   "parent": null,
@@ -287,7 +287,7 @@
                   "type": "LOCATION",
                   "slug": "uberlandia",
                   "firstPublishedAt": "2026-08-20T13:11:16.191000Z",
-                  "lastPublishedAt": "2026-09-30T20:15:37.658859Z",
+                  "lastPublishedAt": "2026-10-06T14:56:48.248144Z",
                   "relativeUrl": "/2026/local-events/uberlandia/",
                   "live": true,
                   "parent": null,
@@ -308,13 +308,116 @@
             "cursor": "b2Zmc2V0OjM=",
             "node": {
               "__typename": "TeamPage",
+              "id": "aWQ6NjM5OTI=",
+              "title": "Gaiapus",
+              "meta": {
+                "type": "TEAM",
+                "slug": "gaiapus",
+                "firstPublishedAt": "2026-10-07T03:09:06.821000Z",
+                "lastPublishedAt": "2026-10-07T18:07:41.400211Z",
+                "relativeUrl": "/2026/find-a-team/gaiapus/",
+                "live": true,
+                "parent": null,
+                "__typename": "ExpandedPageMeta"
+              },
+              "owner": "aWQ6ZDhlZjg3ODgtM2U4ZS00M2I2LWJlOTItOGI4Mzc0MTU1Zjc3",
+              "ownerDetails": null,
+              "excerpt": "We are a multidisciplinary team of three Computer Scientists, one Computer Engineer, one Mechanical Engineer, and one Mechatronics Engineer. Our expertise spans software development, AI and machine learning, data analysis, IoT, and hardware-softwa...",
+              "project": "aWQ6NjAzOTQ=",
+              "projectDetails": {
+                "id": "aWQ6NjAzOTQ=",
+                "name": "Project Gaiapus",
+                "summary": "",
+                "demoLink": "",
+                "projectLink": "",
+                "details": "",
+                "solution": "",
+                "aiReferences": "",
+                "dataReferences": "",
+                "projectReferences": "",
+                "isSubmitted": false,
+                "savedAt": null,
+                "submittedAt": null,
+                "__typename": "Project"
+              },
+              "projectSubmitted": false,
+              "featuredImage": {
+                "id": "aWQ6NDU5NTc0",
+                "meta": {
+                  "type": "images.CustomImage",
+                  "downloadUrl": "https://assets.spaceappschallenge.org/media/original_images/gaiapus.png",
+                  "__typename": "ImageMeta"
+                },
+                "title": "team_image.02:41:09.406996",
+                "alt": "team_image.02:41:09.406996",
+                "caption": "team_image.02:41:09.406996",
+                "displaySize": "or",
+                "rendition": {
+                  "url": "https://assets.spaceappschallenge.org/media/images/gaiapus.2e16d0ba.fill-300x250.png",
+                  "fullUrl": "https://assets.spaceappschallenge.org/media/images/gaiapus.2e16d0ba.fill-300x250.png",
+                  "height": 250,
+                  "width": 300,
+                  "__typename": "BaseImage"
+                },
+                "__typename": "DefaultImage"
+              },
+              "description": null,
+              "desiredSkills": null,
+              "languages": null,
+              "challenge": "aWQ6NTUxMjY=",
+              "challengeDetails": {
+                "id": "aWQ6NTUxMjY=",
+                "title": "Field Shift: Adapting Farms with NASA Data",
+                "meta": {
+                  "type": "CHALLENGE",
+                  "slug": "field-shift-adapting-farms-with-nasa-data",
+                  "firstPublishedAt": "2026-09-17T14:22:15.778779Z",
+                  "lastPublishedAt": "2026-09-17T14:22:15.778779Z",
+                  "relativeUrl": "/2026/challenges/field-shift-adapting-farms-with-nasa-data/",
+                  "live": true,
+                  "parent": null,
+                  "__typename": "ExpandedPageMeta"
+                },
+                "excerpt": "Farmers around the world navigate shifting temperatures, changing rainfall patterns, water shortages, extreme weather, and declining soil health. These pressures make it difficult to choose crop rotations that protect fields, conserve water, and support long‑term resilience. Your challenge is to create a decision‑support tool that uses NASA Earth observations along with local soil information, crop characteristics, and farmer priorities to help farmers explore rotation strategies that could strengthen soil health and adapt their farms to changing conditions.",
+                "__typename": "ChallengePage"
+              },
+              "location": "aWQ6NTQ0NDY=",
+              "locationDetails": {
+                "id": "aWQ6NTQ0NDY=",
+                "title": "Uberlândia",
+                "displayName": "",
+                "meta": {
+                  "type": "LOCATION",
+                  "slug": "uberlandia",
+                  "firstPublishedAt": "2026-08-20T13:11:16.191000Z",
+                  "lastPublishedAt": "2026-10-06T14:56:48.248144Z",
+                  "relativeUrl": "/2026/local-events/uberlandia/",
+                  "live": true,
+                  "parent": null,
+                  "__typename": "ExpandedPageMeta"
+                },
+                "country": "Brazil",
+                "__typename": "LocationPage"
+              },
+              "event": "aWQ6NA==",
+              "joinEnabled": true,
+              "memberships": null,
+              "nominationBadges": null,
+              "awardBadges": null
+            }
+          },
+          {
+            "__typename": "TeamPageEdge",
+            "cursor": "b2Zmc2V0OjQ=",
+            "node": {
+              "__typename": "TeamPage",
               "id": "aWQ6NTU1OTM=",
               "title": "GURIS DA CATEQUESE 2026",
               "meta": {
                 "type": "TEAM",
                 "slug": "guris-da-catequese-2026",
                 "firstPublishedAt": "2026-09-17T20:16:41.196000Z",
-                "lastPublishedAt": "2026-09-22T21:17:43.765510Z",
+                "lastPublishedAt": "2026-10-05T18:28:38.900896Z",
                 "relativeUrl": "/2026/find-a-team/guris-da-catequese-2026/",
                 "live": true,
                 "parent": null,
@@ -390,7 +493,7 @@
                   "type": "LOCATION",
                   "slug": "uberlandia",
                   "firstPublishedAt": "2026-08-20T13:11:16.191000Z",
-                  "lastPublishedAt": "2026-09-30T20:15:37.658859Z",
+                  "lastPublishedAt": "2026-10-06T14:56:48.248144Z",
                   "relativeUrl": "/2026/local-events/uberlandia/",
                   "live": true,
                   "parent": null,
@@ -408,7 +511,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjQ=",
+            "cursor": "b2Zmc2V0OjU=",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6NjEwMjA=",
@@ -493,7 +596,7 @@
                   "type": "LOCATION",
                   "slug": "uberlandia",
                   "firstPublishedAt": "2026-08-20T13:11:16.191000Z",
-                  "lastPublishedAt": "2026-09-30T20:15:37.658859Z",
+                  "lastPublishedAt": "2026-10-06T14:56:48.248144Z",
                   "relativeUrl": "/2026/local-events/uberlandia/",
                   "live": true,
                   "parent": null,
@@ -511,7 +614,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjU=",
+            "cursor": "b2Zmc2V0OjY=",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6NTU1ODA=",
@@ -596,7 +699,7 @@
                   "type": "LOCATION",
                   "slug": "uberlandia",
                   "firstPublishedAt": "2026-08-20T13:11:16.191000Z",
-                  "lastPublishedAt": "2026-09-30T20:15:37.658859Z",
+                  "lastPublishedAt": "2026-10-06T14:56:48.248144Z",
                   "relativeUrl": "/2026/local-events/uberlandia/",
                   "live": true,
                   "parent": null,
@@ -614,7 +717,110 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjY=",
+            "cursor": "b2Zmc2V0Ojc=",
+            "node": {
+              "__typename": "TeamPage",
+              "id": "aWQ6NjI0Njg=",
+              "title": "MFLAB_TEAM",
+              "meta": {
+                "type": "TEAM",
+                "slug": "mflab_team",
+                "firstPublishedAt": "2026-10-02T17:10:10.220000Z",
+                "lastPublishedAt": "2026-10-02T18:52:38.618475Z",
+                "relativeUrl": "/2026/find-a-team/mflab_team/",
+                "live": true,
+                "parent": null,
+                "__typename": "ExpandedPageMeta"
+              },
+              "owner": "aWQ6ODkxNDNmMWMtZTNmYS00MThmLWI2NjctZDVlMzU1YWU2OGE4",
+              "ownerDetails": null,
+              "excerpt": "Time composto por membros do Laboratório de Mecânica dos Fluidos da UFU",
+              "project": "aWQ6NTg4Njk=",
+              "projectDetails": {
+                "id": "aWQ6NTg4Njk=",
+                "name": "Project MFLAB_TEAM",
+                "summary": "",
+                "demoLink": "",
+                "projectLink": "",
+                "details": "",
+                "solution": "",
+                "aiReferences": "",
+                "dataReferences": "",
+                "projectReferences": "",
+                "isSubmitted": false,
+                "savedAt": null,
+                "submittedAt": null,
+                "__typename": "Project"
+              },
+              "projectSubmitted": false,
+              "featuredImage": {
+                "id": "aWQ6NDUyNDM3",
+                "meta": {
+                  "type": "images.CustomImage",
+                  "downloadUrl": "https://assets.spaceappschallenge.org/media/original_images/imagem_2026-10-02_134736972.png",
+                  "__typename": "ImageMeta"
+                },
+                "title": "team_image.16:49:53.993870",
+                "alt": "team_image.16:49:53.993870",
+                "caption": "team_image.16:49:53.993870",
+                "displaySize": "or",
+                "rendition": {
+                  "url": "https://assets.spaceappschallenge.org/media/images/imagem_2026-10-02_134736972.2e16d0ba.fill-300x250.png",
+                  "fullUrl": "https://assets.spaceappschallenge.org/media/images/imagem_2026-10-02_134736972.2e16d0ba.fill-300x250.png",
+                  "height": 250,
+                  "width": 300,
+                  "__typename": "BaseImage"
+                },
+                "__typename": "DefaultImage"
+              },
+              "description": null,
+              "desiredSkills": null,
+              "languages": null,
+              "challenge": "aWQ6NTUxMjE=",
+              "challengeDetails": {
+                "id": "aWQ6NTUxMjE=",
+                "title": "Flame in Freefall: AI-Powered Fire Safety Insights from Microgravity Combustion Data",
+                "meta": {
+                  "type": "CHALLENGE",
+                  "slug": "flame-in-freefall-ai-powered-fire-safety-insights-from-microgravity-combustion-data",
+                  "firstPublishedAt": "2026-09-17T14:20:54.577001Z",
+                  "lastPublishedAt": "2026-09-17T14:20:54.577001Z",
+                  "relativeUrl": "/2026/challenges/flame-in-freefall-ai-powered-fire-safety-insights-from-microgravity-combustion-data/",
+                  "live": true,
+                  "parent": null,
+                  "__typename": "ExpandedPageMeta"
+                },
+                "excerpt": "For decades, NASA has studied how flames and fire behave in microgravity, gathering a trove of experimental data along the way. That knowledge matters more than ever as humans gear up to return to the Moon and press on to Mars, yet the volume of results makes them hard to find, compare, and understand. Your challenge is to create an interactive, AI-powered dashboard that summarizes, ranks, and interprets those findings to deliver fire safety insights for human space exploration.",
+                "__typename": "ChallengePage"
+              },
+              "location": "aWQ6NTQ0NDY=",
+              "locationDetails": {
+                "id": "aWQ6NTQ0NDY=",
+                "title": "Uberlândia",
+                "displayName": "",
+                "meta": {
+                  "type": "LOCATION",
+                  "slug": "uberlandia",
+                  "firstPublishedAt": "2026-08-20T13:11:16.191000Z",
+                  "lastPublishedAt": "2026-10-06T14:56:48.248144Z",
+                  "relativeUrl": "/2026/local-events/uberlandia/",
+                  "live": true,
+                  "parent": null,
+                  "__typename": "ExpandedPageMeta"
+                },
+                "country": "Brazil",
+                "__typename": "LocationPage"
+              },
+              "event": "aWQ6NA==",
+              "joinEnabled": true,
+              "memberships": null,
+              "nominationBadges": null,
+              "awardBadges": null
+            }
+          },
+          {
+            "__typename": "TeamPageEdge",
+            "cursor": "b2Zmc2V0Ojg=",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6NTg0NDE=",
@@ -680,7 +886,7 @@
                   "type": "LOCATION",
                   "slug": "uberlandia",
                   "firstPublishedAt": "2026-08-20T13:11:16.191000Z",
-                  "lastPublishedAt": "2026-09-30T20:15:37.658859Z",
+                  "lastPublishedAt": "2026-10-06T14:56:48.248144Z",
                   "relativeUrl": "/2026/local-events/uberlandia/",
                   "live": true,
                   "parent": null,
@@ -698,7 +904,110 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0Ojc=",
+            "cursor": "b2Zmc2V0Ojk=",
+            "node": {
+              "__typename": "TeamPage",
+              "id": "aWQ6NjQ3Mjg=",
+              "title": "Overclockeds",
+              "meta": {
+                "type": "TEAM",
+                "slug": "overclockeds",
+                "firstPublishedAt": "2026-10-09T22:24:02.596182Z",
+                "lastPublishedAt": "2026-10-09T22:24:02.596182Z",
+                "relativeUrl": "/2026/find-a-team/overclockeds/",
+                "live": true,
+                "parent": null,
+                "__typename": "ExpandedPageMeta"
+              },
+              "owner": "aWQ6YmU2MWU4OTYtNTNhZS00ODc4LTgzNDgtYzM0MmUyN2VlN2Ix",
+              "ownerDetails": null,
+              "excerpt": "Students who like technology",
+              "project": "aWQ6NjExMzA=",
+              "projectDetails": {
+                "id": "aWQ6NjExMzA=",
+                "name": "Project Overclockeds",
+                "summary": "",
+                "demoLink": "",
+                "projectLink": "",
+                "details": "",
+                "solution": "",
+                "aiReferences": "",
+                "dataReferences": "",
+                "projectReferences": "",
+                "isSubmitted": false,
+                "savedAt": null,
+                "submittedAt": null,
+                "__typename": "Project"
+              },
+              "projectSubmitted": false,
+              "featuredImage": {
+                "id": "aWQ6NDYzMTMx",
+                "meta": {
+                  "type": "images.CustomImage",
+                  "downloadUrl": "https://assets.spaceappschallenge.org/media/original_images/WhatsApp_Image_2026-09-28_at_7.54.43_PM.jpeg",
+                  "__typename": "ImageMeta"
+                },
+                "title": "team_image.23:58:09.864499",
+                "alt": "team_image.23:58:09.864499",
+                "caption": "team_image.23:58:09.864499",
+                "displaySize": "or",
+                "rendition": {
+                  "url": "https://assets.spaceappschallenge.org/media/images/WhatsApp_Image_2026-09-28_at_7.54..2e16d0ba.fill-300x250.jpg",
+                  "fullUrl": "https://assets.spaceappschallenge.org/media/images/WhatsApp_Image_2026-09-28_at_7.54..2e16d0ba.fill-300x250.jpg",
+                  "height": 250,
+                  "width": 300,
+                  "__typename": "BaseImage"
+                },
+                "__typename": "DefaultImage"
+              },
+              "description": null,
+              "desiredSkills": null,
+              "languages": null,
+              "challenge": "aWQ6NTUxMjE=",
+              "challengeDetails": {
+                "id": "aWQ6NTUxMjE=",
+                "title": "Flame in Freefall: AI-Powered Fire Safety Insights from Microgravity Combustion Data",
+                "meta": {
+                  "type": "CHALLENGE",
+                  "slug": "flame-in-freefall-ai-powered-fire-safety-insights-from-microgravity-combustion-data",
+                  "firstPublishedAt": "2026-09-17T14:20:54.577001Z",
+                  "lastPublishedAt": "2026-09-17T14:20:54.577001Z",
+                  "relativeUrl": "/2026/challenges/flame-in-freefall-ai-powered-fire-safety-insights-from-microgravity-combustion-data/",
+                  "live": true,
+                  "parent": null,
+                  "__typename": "ExpandedPageMeta"
+                },
+                "excerpt": "For decades, NASA has studied how flames and fire behave in microgravity, gathering a trove of experimental data along the way. That knowledge matters more than ever as humans gear up to return to the Moon and press on to Mars, yet the volume of results makes them hard to find, compare, and understand. Your challenge is to create an interactive, AI-powered dashboard that summarizes, ranks, and interprets those findings to deliver fire safety insights for human space exploration.",
+                "__typename": "ChallengePage"
+              },
+              "location": "aWQ6NTQ0NDY=",
+              "locationDetails": {
+                "id": "aWQ6NTQ0NDY=",
+                "title": "Uberlândia",
+                "displayName": "",
+                "meta": {
+                  "type": "LOCATION",
+                  "slug": "uberlandia",
+                  "firstPublishedAt": "2026-08-20T13:11:16.191000Z",
+                  "lastPublishedAt": "2026-10-06T14:56:48.248144Z",
+                  "relativeUrl": "/2026/local-events/uberlandia/",
+                  "live": true,
+                  "parent": null,
+                  "__typename": "ExpandedPageMeta"
+                },
+                "country": "Brazil",
+                "__typename": "LocationPage"
+              },
+              "event": "aWQ6NA==",
+              "joinEnabled": true,
+              "memberships": null,
+              "nominationBadges": null,
+              "awardBadges": null
+            }
+          },
+          {
+            "__typename": "TeamPageEdge",
+            "cursor": "b2Zmc2V0OjEw",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6NTY5ODE=",
@@ -783,7 +1092,7 @@
                   "type": "LOCATION",
                   "slug": "uberlandia",
                   "firstPublishedAt": "2026-08-20T13:11:16.191000Z",
-                  "lastPublishedAt": "2026-09-30T20:15:37.658859Z",
+                  "lastPublishedAt": "2026-10-06T14:56:48.248144Z",
                   "relativeUrl": "/2026/local-events/uberlandia/",
                   "live": true,
                   "parent": null,
@@ -801,7 +1110,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0Ojg=",
+            "cursor": "b2Zmc2V0OjEx",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6NTgyMTg=",
@@ -886,7 +1195,7 @@
                   "type": "LOCATION",
                   "slug": "uberlandia",
                   "firstPublishedAt": "2026-08-20T13:11:16.191000Z",
-                  "lastPublishedAt": "2026-09-30T20:15:37.658859Z",
+                  "lastPublishedAt": "2026-10-06T14:56:48.248144Z",
                   "relativeUrl": "/2026/local-events/uberlandia/",
                   "live": true,
                   "parent": null,

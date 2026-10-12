@@ -1,7 +1,7 @@
 import { isPlatformBrowser } from '@angular/common';
 import { Component, HostListener, PLATFORM_ID, computed, inject, signal } from '@angular/core';
 import { RouterLink } from '@angular/router';
-import { MENTOR_FORM_URL, REGISTRATION_URL } from '../../../shared/data/registration.data';
+import { REGISTRATION_URL } from '../../../shared/data/registration.data';
 
 @Component({
   selector: 'app-header',
@@ -14,7 +14,6 @@ export class HeaderComponent {
   mobileMenuOpen = false;
 
   readonly registrationUrl = REGISTRATION_URL;
-  readonly mentorFormUrl = MENTOR_FORM_URL;
 
   readonly userMenuOpen = signal(false);
 
