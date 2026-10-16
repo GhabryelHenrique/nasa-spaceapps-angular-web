@@ -26,6 +26,10 @@ export const routes: Routes = [
     path: 'como-se-inscrever',
     loadComponent: () => import('./how-to-register/how-to-register.component').then(m => m.HowToRegisterComponent)
   },
+  {
+    path: 'palestras',
+    loadComponent: () => import('./talks/talks.component').then(m => m.TalksComponent)
+  },
   // Mesma lógica de `/desafios`: `/times` segue válido e cai na edição corrente.
   {
     path: 'times',

@@ -1,0 +1,698 @@
+@use '../../styles/section' as *;
+
+// ─────────────────────────────────────────────────────────────
+// Semana de palestras
+// Programação, palestrantes e parceria com o GDG. Usa o mesmo
+// sistema de seção da home e de /como-se-inscrever.
+// ─────────────────────────────────────────────────────────────
+
+.talks-page {
+  position: relative;
+  z-index: 1;
+  color: var(--text-primary);
+  overflow-x: hidden;
+}
+
+.talks-section {
+  // O header é fixo — evita que o alvo do link âncora fique escondido atrás dele.
+  scroll-margin-top: 84px;
+
+  &--deep   { @include section-shell(deep, 92px); }
+  &--sunken { @include section-shell(sunken, 92px); }
+}
+
+.talks-pattern {
+  &--orbits      { @include section-pattern('Orbits.png', 760px, 0.22); }
+  &--waves       { @include section-pattern('Waves.png', 760px, 0.2); }
+  &--rosette     { @include section-pattern('Rosette.png', 720px, 0.22); }
+  &--fiduciaries { @include section-pattern('Fiduciaries.png', 680px, 0.2); }
+}
+
+.talks-container {
+  @include section-container(1040px);
+
+  &--narrow { max-width: 820px; }
+}
+
+.talks-head { @include section-head; }
+.talks-eyebrow { @include section-eyebrow; }
+.talks-section-title { @include section-title(clamp(1.7rem, 3.4vw, 2.5rem)); }
+.talks-section-lead { @include section-lead(620px); }
+
+// ─────────────────────────────────────────────────────────────
+// Hero
+// ─────────────────────────────────────────────────────────────
+.talks-hero {
+  @include section-shell(deep, 0);
+  // O header é fixo: reserva espaço para o título não passar por baixo dele.
+  padding: 130px 0 80px;
+  text-align: center;
+}
+
+.hero-partner { margin-bottom: 1.75rem; }
+
+.talks-title {
+  @include section-title(clamp(2rem, 4.4vw, 3rem));
+  max-width: 18ch;
+  margin-inline: auto;
+}
+
+.talks-lead {
+  @include section-lead(680px);
+  margin-bottom: 2rem;
+
+  strong { color: $sa-white; font-weight: 600; }
+}
+
+.talks-facts {
+  list-style: none;
+  margin: 0 0 2.25rem;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.65rem;
+
+  li {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem 1rem;
+    border-radius: 100px;
+    background: rgba(0, 66, 166, 0.2);
+    border: 1px solid var(--border-subtle);
+    font-family: 'Overpass', sans-serif;
+    font-size: 0.82rem;
+    font-weight: 600;
+    color: var(--text-secondary);
+  }
+
+  i {
+    font-size: 17px;
+    color: $sa-blue-yonder;
+  }
+
+  // Selo de palestra internacional: mesmo chip, com contorno Neon Yellow.
+  .fact-international {
+    border-color: rgba($sa-neon-yellow, 0.55);
+    background: rgba($sa-neon-yellow, 0.08);
+    color: $sa-white;
+  }
+}
+
+.talks-actions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.9rem;
+
+  i { font-size: 1.1rem; }
+}
+
+// ─────────────────────────────────────────────────────────────
+// Programação
+// ─────────────────────────────────────────────────────────────
+.day-label {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin: 0 0 1.75rem;
+}
+
+.day-line {
+  flex: 1;
+  height: 1px;
+  background: var(--border-strong);
+}
+
+.day-text {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-family: 'Fira Sans', sans-serif;
+  font-size: 0.95rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: $sa-white;
+
+  i { color: $sa-neon-yellow; font-size: 1.1rem; }
+}
+
+.talk-card {
+  display: grid;
+  grid-template-columns: minmax(0, 320px) minmax(0, 1fr);
+  overflow: hidden;
+  margin-bottom: 2.5rem;
+  border-radius: 24px;
+  background: rgba(0, 66, 166, 0.16);
+  border: 1px solid var(--border-subtle);
+  scroll-margin-top: 100px;
+
+  &:last-child { margin-bottom: 0; }
+
+  // Palestra internacional: contorno e brilho Neon Yellow para se destacar.
+  &--international {
+    border-color: rgba($sa-neon-yellow, 0.55);
+    box-shadow: 0 0 0 1px rgba($sa-neon-yellow, 0.18), 0 18px 48px rgba($sa-neon-yellow, 0.08);
+  }
+}
+
+.talk-photo {
+  position: relative;
+  margin: 0;
+  min-height: 100%;
+
+  // Classe própria: a bandeira também é um <img> dentro da figura.
+  .talk-photo-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    // Fotos de palco costumam ser verticais: prioriza o rosto, não o chão.
+    object-position: 50% 18%;
+    display: block;
+  }
+}
+
+.talk-time {
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.4rem 0.85rem;
+  border-radius: 100px;
+  background: var(--sa-neon-yellow);
+  font-family: 'Fira Sans', sans-serif;
+  font-size: 1rem;
+  font-weight: 900;
+  color: var(--sa-deep-blue);
+}
+
+// Bandeiras sempre circulares: o recorte central mantém a cruz da bandeira.
+.flag-dot,
+.talk-flag {
+  flex-shrink: 0;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: 0 0 0 1.5px rgba(255, 255, 255, 0.75);
+}
+
+// Bandeira do país de origem, no canto oposto ao horário.
+.talk-flag {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  width: 36px;
+  height: 36px;
+  box-shadow: 0 0 0 2px $sa-white, 0 4px 12px rgba(0, 0, 0, 0.35);
+}
+
+.talk-body {
+  padding: 2rem 2rem 2.1rem;
+}
+
+.talk-international {
+  display: inline-flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.45rem;
+  margin: 0 0 1rem;
+  padding: 0.4rem 0.95rem;
+  border: 1px solid rgba($sa-neon-yellow, 0.55);
+  border-radius: 100px;
+  background: rgba($sa-neon-yellow, 0.08);
+  font-family: 'Overpass', sans-serif;
+  font-size: 0.74rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: $sa-neon-yellow;
+
+  i { font-size: 1rem; }
+
+  span {
+    font-weight: 600;
+    letter-spacing: 0.06em;
+    color: $sa-white;
+  }
+}
+
+.talk-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45rem;
+  margin-bottom: 1rem;
+}
+
+.talk-status,
+.talk-chip {
+  padding: 0.26rem 0.7rem;
+  border-radius: 100px;
+  font-family: 'Overpass', sans-serif;
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.talk-chip {
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  color: var(--text-secondary);
+}
+
+.talk-status {
+  border: 1px solid rgba($sa-neon-yellow, 0.6);
+  color: $sa-neon-yellow;
+
+  &[data-status='done'] {
+    border-color: rgba($sa-blue-yonder, 0.45);
+    color: $sa-blue-yonder;
+  }
+}
+
+.talk-chip--partner {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  border-color: rgba($sa-blue-yonder, 0.5);
+  color: $sa-white;
+
+  i { font-size: 0.9rem; color: $sa-blue-yonder; }
+}
+
+// Selos de tema em contorno Rocket Red, como no card de divulgação. Texto em
+// branco: vermelho sobre Deep Blue não passa no contraste em letra pequena.
+.talk-tags {
+  list-style: none;
+  margin: 0 0 0.85rem;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45rem;
+
+  li {
+    padding: 0.22rem 0.75rem;
+    border: 1.5px solid $sa-rocket-red;
+    border-radius: 100px;
+    font-family: 'Overpass', sans-serif;
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: $sa-white;
+  }
+}
+
+.talk-title {
+  font-family: 'Fira Sans', sans-serif;
+  font-size: clamp(1.3rem, 2.4vw, 1.65rem);
+  font-weight: 900;
+  line-height: 1.2;
+  letter-spacing: 0.02em;
+  color: $sa-white;
+  margin: 0 0 0.5rem;
+}
+
+.talk-speaker {
+  margin: 0 0 1.1rem;
+  font-size: 0.98rem;
+  color: var(--text-secondary);
+
+  strong { color: $sa-white; font-weight: 700; }
+}
+
+.talk-alias {
+  margin-left: 0.25rem;
+  color: $sa-blue-yonder;
+  font-weight: 600;
+}
+
+.talk-summary {
+  margin: 0 0 1.5rem;
+  font-size: 0.98rem;
+  font-weight: 300;
+  line-height: 1.65;
+  color: var(--text-secondary);
+}
+
+.talk-columns {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.25rem 1.75rem;
+}
+
+.talk-subtitle {
+  margin: 0 0 0.7rem;
+  font-family: 'Overpass', sans-serif;
+  font-size: 0.74rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+}
+
+.talk-takeaways {
+  list-style: none;
+  margin: 0 0 1.5rem;
+  padding: 0;
+  display: grid;
+  gap: 0.55rem;
+
+  li {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.55rem;
+    font-size: 0.92rem;
+    line-height: 1.45;
+    color: var(--text-primary);
+  }
+
+  i {
+    flex-shrink: 0;
+    margin-top: 0.1rem;
+    font-size: 1.1rem;
+    color: $sa-blue-yonder;
+  }
+}
+
+.talk-stack {
+  list-style: none;
+  margin: 0 0 1.5rem;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45rem;
+
+  li {
+    padding: 0.32rem 0.8rem;
+    border-radius: 8px;
+    background: rgba(0, 66, 166, 0.35);
+    border: 1px solid var(--border-subtle);
+    font-family: 'Fira Code', monospace;
+    font-size: 0.78rem;
+    color: $sa-white;
+  }
+}
+
+.talk-challenges {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 0.75rem;
+  margin-bottom: 1.75rem;
+}
+
+.challenge-chip {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.5rem 0.85rem 0.5rem 0.5rem;
+  border-radius: 14px;
+  background: rgba(7, 23, 63, 0.6);
+  border: 1px solid var(--border-subtle);
+  cursor: pointer;
+  text-align: left;
+  font-family: 'Overpass', sans-serif;
+  font-size: 0.85rem;
+  font-weight: 600;
+  line-height: 1.3;
+  color: $sa-white;
+  transition: border-color 0.2s ease, background 0.2s ease;
+
+  img {
+    width: 52px;
+    height: 52px;
+    flex-shrink: 0;
+    border-radius: 10px;
+    object-fit: cover;
+  }
+
+  span { flex: 1; }
+
+  i {
+    flex-shrink: 0;
+    color: $sa-blue-yonder;
+    transition: color 0.2s ease, transform 0.2s ease;
+  }
+
+  &:hover {
+    background: rgba(0, 66, 166, 0.3);
+    border-color: rgba($sa-blue-yonder, 0.45);
+
+    i { color: $sa-neon-yellow; transform: translateX(3px); }
+  }
+
+  &:focus-visible {
+    outline: 3px solid var(--sa-neon-yellow);
+    outline-offset: 3px;
+  }
+}
+
+.talk-footer {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 1rem 1.25rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--border-subtle);
+}
+
+.talk-calendar { font-size: 0.95rem; }
+
+.talk-venue {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  margin: 0;
+  font-size: 0.88rem;
+  color: var(--text-muted);
+
+  i { font-size: 1.05rem; color: $sa-blue-yonder; }
+}
+
+// ─────────────────────────────────────────────────────────────
+// Palestrantes
+// ─────────────────────────────────────────────────────────────
+.speaker-card {
+  display: grid;
+  grid-template-columns: 220px minmax(0, 1fr);
+  gap: 2rem;
+  align-items: start;
+  margin-bottom: 2rem;
+  padding: 2rem;
+  border-radius: 24px;
+  background: rgba(0, 66, 166, 0.16);
+  border: 1px solid var(--border-subtle);
+
+  &:last-child { margin-bottom: 0; }
+}
+
+.speaker-photo {
+  margin: 0;
+  aspect-ratio: 1;
+  overflow: hidden;
+  border-radius: 50%;
+  border: 3px solid rgba($sa-blue-yonder, 0.5);
+  box-shadow: 0 0 0 6px rgba(0, 66, 166, 0.25);
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: 50% 12%;
+    display: block;
+  }
+}
+
+.speaker-alias {
+  margin: 0 0 0.3rem;
+  font-family: 'Overpass', sans-serif;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: $sa-neon-yellow;
+}
+
+.speaker-name {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 0.6rem;
+  margin: 0 0 0.35rem;
+  font-family: 'Fira Sans', sans-serif;
+  font-size: clamp(1.5rem, 3vw, 1.9rem);
+  font-weight: 900;
+  color: $sa-white;
+}
+
+.speaker-pronouns {
+  padding: 0.15rem 0.6rem;
+  border-radius: 100px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  font-family: 'Overpass', sans-serif;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+}
+
+.speaker-role {
+  margin: 0 0 1rem;
+  font-size: 0.95rem;
+  color: var(--text-muted);
+}
+
+.speaker-origin {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin: -0.4rem 0 1rem;
+  font-family: 'Overpass', sans-serif;
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: $sa-white;
+}
+
+.speaker-credentials {
+  list-style: none;
+  margin: 0 0 1.25rem;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45rem;
+
+  li {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    padding: 0.32rem 0.75rem;
+    border-radius: 100px;
+    background: rgba($sa-blue-yonder, 0.12);
+    border: 1px solid rgba($sa-blue-yonder, 0.35);
+    font-family: 'Overpass', sans-serif;
+    font-size: 0.78rem;
+    font-weight: 600;
+    color: $sa-white;
+  }
+
+  i { color: $sa-blue-yonder; font-size: 0.95rem; }
+}
+
+.speaker-bio {
+  margin: 0 0 1.25rem;
+  font-size: 0.95rem;
+  font-weight: 300;
+  line-height: 1.7;
+  color: var(--text-secondary);
+
+  &:last-child { margin-bottom: 0; }
+}
+
+.speaker-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+
+  a {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.45rem;
+    padding: 0.45rem 0.95rem;
+    border-radius: 100px;
+    border: 1px solid var(--border-strong);
+    font-family: 'Overpass', sans-serif;
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: $sa-white;
+    transition: border-color 0.2s ease, background 0.2s ease;
+
+    &:hover {
+      background: var(--bg-surface-hover);
+      border-color: $sa-blue-yonder;
+    }
+
+    &:focus-visible {
+      outline: 3px solid var(--sa-neon-yellow);
+      outline-offset: 3px;
+    }
+  }
+}
+
+// ─────────────────────────────────────────────────────────────
+// Parceria
+// ─────────────────────────────────────────────────────────────
+.partner-card {
+  padding: 2.75rem 2rem;
+  border-radius: 24px;
+  background: rgba(0, 66, 166, 0.18);
+  border: 1px solid var(--border-strong);
+  text-align: center;
+
+  .talks-section-lead { margin-bottom: 2rem; }
+}
+
+.partner-card-logo { margin-bottom: 1.75rem; }
+
+.partner-note {
+  margin: 1.75rem 0 0;
+  font-size: 0.9rem;
+  color: var(--text-muted);
+
+  a {
+    color: var(--text-link);
+    font-weight: 600;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+  }
+}
+
+// ─────────────────────────────────────────────────────────────
+// Responsivo
+// ─────────────────────────────────────────────────────────────
+@media (max-width: 860px) {
+  .talk-card { grid-template-columns: 1fr; }
+
+  .talk-photo {
+    aspect-ratio: 4 / 3;
+    min-height: 0;
+  }
+
+  .speaker-card {
+    grid-template-columns: 1fr;
+    justify-items: center;
+    text-align: center;
+  }
+
+  .speaker-photo { width: 180px; }
+
+  .speaker-name { justify-content: center; }
+
+  .speaker-credentials,
+  .speaker-links { justify-content: center; }
+}
+
+@media (max-width: 768px) {
+  .talks-section--deep,
+  .talks-section--sunken { padding: 68px 0; }
+
+  .talks-hero { padding: 110px 0 64px; }
+
+  .talk-body { padding: 1.5rem 1.25rem 1.6rem; }
+
+  .talk-columns { grid-template-columns: 1fr; gap: 0; }
+
+  .speaker-card { padding: 1.75rem 1.25rem; }
+
+  .partner-card { padding: 2.25rem 1.25rem; }
+
+  .talks-actions,
+  .talk-footer {
+    flex-direction: column;
+    align-items: stretch;
+
+    .btn-primary,
+    .btn-secondary { justify-content: center; }
+  }
+}

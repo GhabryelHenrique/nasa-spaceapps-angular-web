@@ -53,10 +53,17 @@
             <h3 class="tl-heading">{{ item.title }}</h3>
             <p class="tl-desc">{{ item.description }}</p>
             @if (item.action; as action) {
-              <a [href]="action.url" class="tl-action" target="_blank" rel="noopener noreferrer">
-                {{ action.label }}
-                <i class="ph ph-arrow-up-right" aria-hidden="true"></i>
-              </a>
+              @if (action.internal) {
+                <a [routerLink]="action.url" class="tl-action">
+                  {{ action.label }}
+                  <i class="ph ph-arrow-right" aria-hidden="true"></i>
+                </a>
+              } @else {
+                <a [href]="action.url" class="tl-action" target="_blank" rel="noopener noreferrer">
+                  {{ action.label }}
+                  <i class="ph ph-arrow-up-right" aria-hidden="true"></i>
+                </a>
+              }
             }
           </div>
         </li>

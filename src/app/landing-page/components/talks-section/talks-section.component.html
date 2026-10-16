@@ -1,0 +1,100 @@
+@if (cards.length > 0) {
+  <section class="talks-teaser" id="palestras" aria-labelledby="palestras-titulo">
+    <div class="talks-teaser-pattern" aria-hidden="true"></div>
+
+    <div class="talks-teaser-container">
+
+      <!-- ─── Cabeçalho ────────────────────────────────────── -->
+      <header class="talks-teaser-head">
+        <p class="talks-badge reveal reveal-up">
+          <i class="ph ph-microphone-stage" aria-hidden="true"></i>
+          Semana de palestras
+        </p>
+
+        <h2 id="palestras-titulo" class="talks-teaser-title reveal reveal-up delay-1">
+          O esquenta do <span class="accent">hackathon</span>
+        </h2>
+
+        <p class="talks-teaser-lead reveal reveal-up delay-2">
+          Antes das 48 horas de hackathon, o Space Apps Uberlândia e o
+          <strong>{{ partner.name }}</strong> abrem o palco para quem constrói tecnologia de verdade.
+          Conteúdo para você chegar ao dia 14 com ferramentas novas na mochila.
+        </p>
+
+        <app-partner-logo class="talks-teaser-partner reveal reveal-up delay-2" />
+      </header>
+
+      <!-- ─── Palestras ────────────────────────────────────── -->
+      <div class="talks-teaser-list reveal reveal-up delay-3">
+        @for (card of cards; track card.talk.slug) {
+          <article class="teaser-card" [class.teaser-card--international]="!!card.talk.speaker.origin">
+            <div class="teaser-date" aria-hidden="true">
+              <span class="teaser-day">{{ card.day }}</span>
+              <span class="teaser-month">{{ card.month }}</span>
+              <span class="teaser-time">{{ card.talk.timeLabel }}</span>
+            </div>
+
+            <figure class="teaser-photo">
+              <img [src]="card.talk.speaker.photo" [alt]="'Foto de ' + card.talk.speaker.name" loading="lazy"
+                   [style.object-position]="card.talk.speaker.photoPosition"
+                   onerror="this.src='assets/organizers/placeholder.svg'">
+            </figure>
+
+            <div class="teaser-body">
+              @if (card.talk.speaker.origin; as origin) {
+                <p class="teaser-international">
+                  <img [src]="origin.flag" alt="" width="18" height="18">
+                  Palestra internacional
+                  <span>· direto de {{ origin.label }}</span>
+                </p>
+              }
+              <p class="teaser-when">
+                {{ card.talk.dayLabel }} · {{ card.talk.timeLabel }} · {{ card.talk.mode }}
+              </p>
+              <h3 class="teaser-title">{{ card.talk.title }}</h3>
+              <p class="teaser-speaker">
+                <strong>{{ card.talk.speaker.name }}</strong>
+                @if (card.talk.speaker.alias) { · {{ card.talk.speaker.alias }} }
+              </p>
+              <p class="teaser-credentials">{{ card.headline }}</p>
+
+              @if (card.talk.tags.length > 0 || card.talk.withPartner) {
+                <ul class="teaser-tags">
+                  @for (tag of card.talk.tags; track tag) {
+                    <li>{{ tag }}</li>
+                  }
+                  @if (card.talk.withPartner) {
+                    <li class="teaser-tag--partner">
+                      <i class="ph ph-handshake" aria-hidden="true"></i>
+                      Com o {{ partner.shortName }}
+                    </li>
+                  }
+                </ul>
+              }
+
+              <div class="teaser-links">
+                <a routerLink="/palestras" [fragment]="card.talk.slug" class="teaser-link">
+                  Ver detalhes
+                  <i class="ph ph-arrow-right" aria-hidden="true"></i>
+                </a>
+                <a [href]="card.calendarUrl" class="teaser-link" target="_blank" rel="noopener noreferrer">
+                  <i class="ph ph-calendar-plus" aria-hidden="true"></i>
+                  Adicionar à agenda
+                </a>
+              </div>
+            </div>
+          </article>
+        }
+      </div>
+
+      <!-- ─── Ações ────────────────────────────────────────── -->
+      <div class="talks-teaser-actions reveal reveal-up delay-4">
+        <a routerLink="/palestras" class="btn-primary">
+          <i class="ph ph-microphone-stage" aria-hidden="true"></i>
+          Ver a programação
+        </a>
+      </div>
+
+    </div>
+  </section>
+}

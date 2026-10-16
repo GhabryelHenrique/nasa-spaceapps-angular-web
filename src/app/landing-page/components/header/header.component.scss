@@ -89,6 +89,7 @@
     font-weight: 600;
     color: rgba(255, 255, 255, 0.75);
     text-decoration: none;
+    white-space: nowrap;
     transition: color 0.2s ease, background 0.2s ease;
     letter-spacing: 0.02em;
 
@@ -435,6 +436,14 @@
 }
 
 // Responsive
+// Marca + 5 links + ações pedem ~1230px; abaixo disso os links quebravam linha
+// e empurravam o "Inscreva-se" para fora da tela. Os links vão para o menu
+// lateral, mas o CTA e as redes continuam visíveis até o breakpoint de celular.
+@media (max-width: 1240px) {
+  .nav-links { display: none; }
+  .hamburger { display: flex; }
+}
+
 @media (max-width: 768px) {
   .nav-links { display: none; }
   .hamburger { display: flex; }

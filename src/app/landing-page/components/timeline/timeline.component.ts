@@ -20,8 +20,8 @@ interface Milestone {
   description: string;
   /** Destaca o marco principal (o hackathon) */
   highlight?: boolean;
-  /** Link externo do marco, quando já existe algo para fazer agora */
-  action?: { label: string; url: string };
+  /** Link do marco, quando já existe algo para fazer agora. `internal` = rota do próprio site. */
+  action?: { label: string; url: string; internal?: boolean };
 }
 
 type MilestoneStatus = 'done' | 'live' | 'upcoming';
@@ -76,6 +76,20 @@ export class TimelineComponent {
       title: 'Abertura do Space Apps Connect',
       description:
         'Abertura do Space Apps Connect e lançamento do guia da plataforma para conectar participantes do mundo todo.',
+    },
+    {
+      date: '2026-11-09T00:00:00-03:00',
+      endDate: '2026-11-10T23:59:59-03:00',
+      label: '9 e 10 de Novembro',
+      icon: 'ph ph-microphone-stage',
+      title: 'Semana de Palestras',
+      description:
+        'Esquenta presencial em Uberlândia, com palestra internacional: IA segura e acessível nas escolas com Mel Tranfield, direto de Londres, e agentes de IA com ADK, Gemini e Kubernetes com Camilla Martins, em parceria com o GDG Uberlândia.',
+      action: {
+        label: 'Ver programação',
+        url: '/palestras',
+        internal: true,
+      },
     },
     {
       date: '2026-11-13T00:00:00-03:00',

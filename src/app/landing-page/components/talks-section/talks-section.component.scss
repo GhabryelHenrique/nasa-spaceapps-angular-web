@@ -1,0 +1,290 @@
+@use '../../../../styles/section' as *;
+
+// ─────────────────────────────────────────────────────────────
+// Semana de palestras (home)
+// Chamada curta para /palestras: só as palestras que ainda vão
+// acontecer, com data em destaque e atalho para a agenda.
+// ─────────────────────────────────────────────────────────────
+
+.talks-teaser {
+  @include section-shell(sunken, 96px);
+  // O header é fixo — evita que o alvo do link âncora fique escondido atrás dele.
+  scroll-margin-top: 84px;
+}
+
+.talks-teaser-pattern { @include section-pattern('Waves.png', 760px, 0.2); }
+
+.talks-teaser-container { @include section-container(1000px); }
+
+.talks-teaser-head { @include section-head; }
+
+// Selo Blue Yonder, para não competir com o "inscrições abertas" logo acima.
+.talks-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.55rem;
+  margin: 0 0 1rem;
+  padding: 0.4rem 1rem;
+  border: 1px solid rgba($sa-blue-yonder, 0.5);
+  border-radius: 100px;
+  background: rgba($sa-blue-yonder, 0.1);
+  font-family: 'Overpass', sans-serif;
+  font-size: 0.74rem;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: $sa-white;
+
+  i {
+    font-size: 0.95rem;
+    color: $sa-blue-yonder;
+  }
+}
+
+.talks-teaser-title { @include section-title; }
+
+.talks-teaser-lead {
+  @include section-lead(660px);
+
+  strong { color: $sa-white; font-weight: 600; }
+}
+
+.talks-teaser-partner { margin-top: 1.75rem; }
+
+// ─── Cartões ──────────────────────────────────────────────
+.talks-teaser-list {
+  display: grid;
+  gap: 1.25rem;
+  margin-bottom: 2.5rem;
+}
+
+.teaser-card {
+  display: grid;
+  grid-template-columns: 96px 150px minmax(0, 1fr);
+  overflow: hidden;
+  border-radius: 20px;
+  background: rgba(0, 66, 166, 0.16);
+  border: 1px solid var(--border-subtle);
+  transition: background 0.25s ease, border-color 0.25s ease;
+
+  &:hover {
+    background: rgba(0, 66, 166, 0.26);
+    border-color: rgba($sa-blue-yonder, 0.45);
+
+    .teaser-photo img { transform: scale(1.04); }
+  }
+
+  // Palestra internacional: contorno e brilho Neon Yellow para se destacar.
+  &--international,
+  &--international:hover {
+    border-color: rgba($sa-neon-yellow, 0.55);
+    box-shadow: 0 0 0 1px rgba($sa-neon-yellow, 0.18), 0 14px 40px rgba($sa-neon-yellow, 0.08);
+  }
+}
+
+.teaser-international {
+  display: inline-flex;
+  flex-wrap: wrap;
+  align-items: center;
+  align-self: flex-start;
+  gap: 0.45rem;
+  margin: 0 0 0.75rem;
+  padding: 0.3rem 0.85rem;
+  border: 1px solid rgba($sa-neon-yellow, 0.55);
+  border-radius: 100px;
+  background: rgba($sa-neon-yellow, 0.08);
+  font-family: 'Overpass', sans-serif;
+  font-size: 0.7rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: $sa-neon-yellow;
+
+  // Bandeira circular: o recorte central mantém a cruz da bandeira.
+  img {
+    flex-shrink: 0;
+    border-radius: 50%;
+    object-fit: cover;
+    box-shadow: 0 0 0 1.5px rgba(255, 255, 255, 0.75);
+  }
+
+  span {
+    font-weight: 600;
+    letter-spacing: 0.06em;
+    color: $sa-white;
+  }
+}
+
+.teaser-date {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.15rem;
+  padding: 1rem 0.5rem;
+  background: var(--sa-neon-yellow);
+  color: var(--sa-deep-blue);
+  text-align: center;
+}
+
+.teaser-day {
+  font-family: 'Fira Sans', sans-serif;
+  font-size: 2.4rem;
+  font-weight: 900;
+  line-height: 1;
+}
+
+.teaser-month {
+  font-family: 'Overpass', sans-serif;
+  font-size: 0.85rem;
+  font-weight: 800;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.teaser-time {
+  margin-top: 0.45rem;
+  padding: 0.12rem 0.55rem;
+  border-radius: 100px;
+  background: var(--sa-deep-blue);
+  color: var(--sa-neon-yellow);
+  font-family: 'Overpass', sans-serif;
+  font-size: 0.78rem;
+  font-weight: 800;
+}
+
+.teaser-photo {
+  margin: 0;
+  overflow: hidden;
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    // Fotos de palco costumam ser verticais: prioriza o rosto, não o chão.
+    object-position: 50% 18%;
+    display: block;
+    transition: transform 0.35s ease;
+  }
+}
+
+.teaser-body {
+  display: flex;
+  flex-direction: column;
+  padding: 1.35rem 1.5rem 1.4rem;
+}
+
+.teaser-when {
+  margin: 0 0 0.45rem;
+  font-family: 'Overpass', sans-serif;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: $sa-blue-yonder;
+}
+
+.teaser-title {
+  margin: 0 0 0.5rem;
+  font-family: 'Fira Sans', sans-serif;
+  font-size: 1.2rem;
+  font-weight: 900;
+  line-height: 1.25;
+  letter-spacing: 0.02em;
+  color: $sa-white;
+}
+
+.teaser-speaker {
+  margin: 0 0 0.2rem;
+  font-size: 0.95rem;
+  color: var(--text-secondary);
+
+  strong { color: $sa-white; font-weight: 700; }
+}
+
+.teaser-credentials {
+  margin: 0 0 0.9rem;
+  font-size: 0.82rem;
+  color: var(--text-muted);
+}
+
+// Selos de tema em contorno Rocket Red, como no card de divulgação. Texto em
+// branco: vermelho sobre Deep Blue não passa no contraste em letra pequena.
+.teaser-tags {
+  list-style: none;
+  margin: 0 0 1rem;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+
+  li {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+    padding: 0.2rem 0.7rem;
+    border: 1.5px solid $sa-rocket-red;
+    border-radius: 100px;
+    font-family: 'Overpass', sans-serif;
+    font-size: 0.68rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: $sa-white;
+  }
+
+  .teaser-tag--partner {
+    border-color: rgba($sa-blue-yonder, 0.5);
+
+    i { font-size: 0.85rem; color: $sa-blue-yonder; }
+  }
+}
+
+.teaser-links {
+  margin-top: auto;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem 1.5rem;
+}
+
+.teaser-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-family: 'Overpass', sans-serif;
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: $sa-blue-yonder;
+  transition: color 0.2s ease;
+
+  &:hover { color: $sa-neon-yellow; }
+
+  &:focus-visible {
+    outline: 3px solid var(--sa-neon-yellow);
+    outline-offset: 3px;
+  }
+}
+
+// ─── Ações ────────────────────────────────────────────────
+.talks-teaser-actions {
+  display: flex;
+  justify-content: center;
+}
+
+// ─── Responsivo ───────────────────────────────────────────
+@media (max-width: 768px) {
+  .talks-teaser { padding: 68px 0; }
+
+  // Data e foto lado a lado no topo; o texto desce para a linha de baixo.
+  .teaser-card {
+    grid-template-columns: 88px minmax(0, 1fr);
+    grid-template-rows: 150px auto;
+  }
+
+  .teaser-body { grid-column: 1 / -1; }
+
+  .talks-teaser-actions .btn-primary {
+    width: 100%;
+    justify-content: center;
+  }
+}

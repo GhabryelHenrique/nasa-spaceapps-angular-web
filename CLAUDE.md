@@ -39,7 +39,7 @@ NASA Space Apps Challenge web app built with Angular 22 (standalone components).
 Participant belongs to max 1 team; team max 6 members; only leader invites/approves/removes/selects challenges; mentors can't join/be invited to teams. No leave-team/delete-team/cancel-invite/edit-profile in API v1. No refresh token — 401 requires re-login.
 
 ### Routing (`app.routes.ts`)
-Public: `''` (landing), `desafios`, `como-se-inscrever`, `times`, `times-vencedores/:slug`, `sala-de-guerra`, `participantes`, `patrocinio`, `politica-privacidade`. Auth: `login`, `cadastro` (guestGuard). Portal: `/app/**` (authGuard; `minha-equipe`/`convites` PARTICIPANT-only, `mentor` MENTOR-only via roleGuard). All lazy `loadComponent`.
+Public: `''` (landing), `desafios`, `como-se-inscrever`, `palestras`, `times`, `times-vencedores/:slug`, `sala-de-guerra`, `participantes`, `patrocinio`, `politica-privacidade`. Auth: `login`, `cadastro` (guestGuard). Portal: `/app/**` (authGuard; `minha-equipe`/`convites` PARTICIPANT-only, `mentor` MENTOR-only via roleGuard). All lazy `loadComponent`.
 
 ### Test users (API seed)
 - `ana@spaceapps.local` / `ana12345` (PARTICIPANT, leader of "Equipe Estelar")
@@ -59,6 +59,7 @@ Public: `''` (landing), `desafios`, `como-se-inscrever`, `times`, `times-vencedo
 
 ## Important Notes
 - **Inscrições 2026**: participantes se inscrevem no site da NASA (não há formulário próprio); mentores, voluntários e palestrantes usam um Google Form cada, da organização local (`SUPPORT_FORMS`). Todas as URLs (mais WhatsApp/Discord/Instagram e o vídeo do YouTube) ficam centralizadas em `src/app/shared/data/registration.data.ts` — altere lá, não nos templates
+- **Semana de palestras** (parceria com o Google Developer Groups): palestras, palestrantes e o link "Adicionar à agenda" vêm de `TALKS` em `src/app/shared/data/talks.data.ts` — `/palestras` e a seção da home (`talks-section`, que só mostra palestras futuras) se montam a partir dessa lista. Fotos ficam em `src/assets/speakers/`. Só publique dados públicos do formulário de palestrantes (nunca e-mail/telefone)
 - Angular 22, standalone components, signals for state; no NgModules
 - No SSR (client-only build, deployed to GitHub Pages via `npm run build-deploy`)
 - Portuguese-first UI; API error messages are already in Portuguese and are displayed verbatim

@@ -1,0 +1,52 @@
+:host { display: block; }
+
+.lockup {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.6rem;
+  text-decoration: none;
+
+  &:hover .lockup-plate {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 24px rgba(46, 150, 245, 0.3);
+  }
+
+  &:focus-visible {
+    outline: 3px solid var(--sa-neon-yellow);
+    outline-offset: 4px;
+    border-radius: 14px;
+  }
+}
+
+.lockup-label {
+  font-family: 'Overpass', sans-serif;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+}
+
+.lockup-plate {
+  display: block;
+  padding: 0.7rem 1.1rem;
+  border-radius: 12px;
+  background: var(--sa-white);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+img {
+  display: block;
+  width: min(260px, 70vw);
+  height: auto;
+}
+
+.lockup--lg {
+  .lockup-plate {
+    padding: 1rem 1.5rem;
+    border-radius: 16px;
+  }
+
+  img { width: min(340px, 72vw); }
+}

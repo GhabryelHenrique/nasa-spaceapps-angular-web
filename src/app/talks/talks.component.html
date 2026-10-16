@@ -1,0 +1,318 @@
+<div class="talks-page">
+
+  <!-- ─── Hero ───────────────────────────────────────────── -->
+  <section class="talks-hero">
+    <div class="talks-pattern talks-pattern--orbits" aria-hidden="true"></div>
+    <div class="talks-container">
+
+      <app-partner-logo class="hero-partner reveal reveal-up" />
+
+      <h1 class="talks-title reveal reveal-up delay-1">
+        Semana de <span class="accent">palestras</span>
+      </h1>
+
+      <p class="talks-lead reveal reveal-up delay-2">
+        O esquenta do hackathon: encontros com quem constrói tecnologia de verdade, para você
+        chegar a <strong>14 e 15 de novembro</strong> com repertório, ferramentas e ideias.
+        Uma realização do NASA Space Apps Uberlândia com o {{ partner.name }} ({{ partner.shortName }}).
+      </p>
+
+      <ul class="talks-facts reveal reveal-up delay-3">
+        @for (day of dayLabels; track day) {
+          <li><i class="ph ph-calendar-dots" aria-hidden="true"></i> {{ day }}</li>
+        }
+        <li><i class="ph ph-map-pin" aria-hidden="true"></i> Uberlândia · presencial</li>
+        @if (internationalOrigin; as origin) {
+          <li class="fact-international">
+            <img class="flag-dot" [src]="origin.flag" alt="" width="18" height="18">
+            Palestra internacional
+          </li>
+        }
+        <li><i class="ph ph-microphone-stage" aria-hidden="true"></i>
+          {{ talks.length }} {{ talks.length === 1 ? 'palestra' : 'palestras' }}
+        </li>
+      </ul>
+
+      <div class="talks-actions reveal reveal-up delay-4">
+        <a routerLink="/palestras" fragment="programacao" class="btn-primary">
+          <i class="ph ph-list-bullets" aria-hidden="true"></i>
+          Ver programação
+        </a>
+        <a [href]="whatsappUrl" class="btn-secondary" target="_blank" rel="noopener noreferrer">
+          <i class="fa-brands fa-whatsapp" aria-hidden="true"></i>
+          Receber avisos no WhatsApp
+        </a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ─── Programação ────────────────────────────────────── -->
+  <section class="talks-section talks-section--sunken" id="programacao">
+    <div class="talks-pattern talks-pattern--waves" aria-hidden="true"></div>
+    <div class="talks-container">
+
+      <header class="talks-head reveal reveal-up">
+        <p class="talks-eyebrow">Programação</p>
+        <h2 class="talks-section-title">Anota na <span class="accent">agenda</span></h2>
+        <p class="talks-section-lead">
+          Atividades presenciais em Uberlândia. O endereço e qualquer mudança de horário saem
+          primeiro no WhatsApp e no Discord da sede.
+        </p>
+      </header>
+
+      @for (day of schedule; track day.label) {
+        <div class="day-label reveal reveal-up">
+          <span class="day-line" aria-hidden="true"></span>
+          <span class="day-text">
+            <i class="ph ph-calendar-dots" aria-hidden="true"></i>
+            {{ day.label }}
+          </span>
+          <span class="day-line" aria-hidden="true"></span>
+        </div>
+
+        @for (talk of day.talks; track talk.slug) {
+          <article class="talk-card reveal reveal-up" [id]="talk.slug"
+                   [class.talk-card--international]="isInternational(talk)">
+
+            <figure class="talk-photo">
+              <img class="talk-photo-img" [src]="talk.speaker.photo" [alt]="'Foto de ' + talk.speaker.name" loading="lazy"
+                   [style.object-position]="talk.speaker.photoPosition"
+                   onerror="this.src='assets/organizers/placeholder.svg'">
+              <span class="talk-time">
+                <i class="ph ph-clock" aria-hidden="true"></i>
+                {{ talk.timeLabel }}
+              </span>
+              @if (talk.speaker.origin; as origin) {
+                <img class="talk-flag" [src]="origin.flag" [alt]="'Bandeira — ' + origin.label" width="36" height="36">
+              }
+            </figure>
+
+            <div class="talk-body">
+              @if (talk.speaker.origin; as origin) {
+                <p class="talk-international">
+                  <i class="ph ph-globe-hemisphere-east" aria-hidden="true"></i>
+                  Palestra internacional
+                  <span>· direto de {{ origin.label }}</span>
+                </p>
+              }
+
+              <div class="talk-meta">
+                <span class="talk-status" [attr.data-status]="status(talk)">{{ statusText(talk) }}</span>
+                <span class="talk-chip">{{ talk.format }}</span>
+                <span class="talk-chip">{{ talk.mode }}</span>
+                @if (talk.level) {
+                  <span class="talk-chip">Nível {{ talk.level.toLowerCase() }}</span>
+                }
+                @if (talk.withPartner) {
+                  <span class="talk-chip talk-chip--partner">
+                    <i class="ph ph-handshake" aria-hidden="true"></i>
+                    Com o {{ partner.shortName }}
+                  </span>
+                }
+              </div>
+
+              @if (talk.tags.length > 0) {
+                <ul class="talk-tags" aria-label="Temas">
+                  @for (tag of talk.tags; track tag) {
+                    <li>{{ tag }}</li>
+                  }
+                </ul>
+              }
+
+              <h3 class="talk-title">{{ talk.title }}</h3>
+
+              <p class="talk-speaker">
+                com <strong>{{ talk.speaker.name }}</strong>
+                @if (talk.speaker.alias) { <span class="talk-alias">· {{ talk.speaker.alias }}</span> }
+              </p>
+
+              <p class="talk-summary">{{ talk.summary }}</p>
+
+              @if (talk.takeaways.length > 0 || talk.topics.length > 0) {
+                <div class="talk-columns">
+                  @if (talk.takeaways.length > 0) {
+                    <div class="talk-block">
+                      <h4 class="talk-subtitle">O que você leva</h4>
+                      <ul class="talk-takeaways">
+                        @for (item of talk.takeaways; track item) {
+                          <li><i class="ph ph-check-circle" aria-hidden="true"></i>{{ item }}</li>
+                        }
+                      </ul>
+                    </div>
+                  }
+
+                  @if (talk.topics.length > 0) {
+                    <div class="talk-block">
+                      <h4 class="talk-subtitle">Útil para o hackathon</h4>
+                      <ul class="talk-takeaways">
+                        @for (topic of talk.topics; track topic) {
+                          <li><i class="ph ph-lightbulb" aria-hidden="true"></i>{{ topic }}</li>
+                        }
+                      </ul>
+                    </div>
+                  }
+                </div>
+              }
+
+              @if (talk.stack.length > 0) {
+                <h4 class="talk-subtitle">Ferramentas</h4>
+                <ul class="talk-stack">
+                  @for (tool of talk.stack; track tool) {
+                    <li>{{ tool }}</li>
+                  }
+                </ul>
+              }
+
+              @let challenges = relatedChallenges(talk);
+              @if (challenges.length > 0) {
+                <h4 class="talk-subtitle">Desafios de 2026 relacionados</h4>
+                <div class="talk-challenges">
+                  @for (challenge of challenges; track challenge.slug) {
+                    <button type="button" class="challenge-chip"
+                            [attr.aria-label]="'Ver resumo do desafio ' + challenge.title"
+                            (click)="openChallenge(challenge)">
+                      <img [src]="challenge.featuredImage.url" alt="" loading="lazy">
+                      <span>{{ challenge.title }}</span>
+                      <i class="ph ph-arrow-right" aria-hidden="true"></i>
+                    </button>
+                  }
+                </div>
+              }
+
+              <div class="talk-footer">
+                @if (status(talk) !== 'done') {
+                  <a [href]="calendarUrl(talk)" class="btn-primary talk-calendar" target="_blank" rel="noopener noreferrer">
+                    <i class="ph ph-calendar-plus" aria-hidden="true"></i>
+                    Adicionar à agenda
+                  </a>
+                }
+                <p class="talk-venue">
+                  <i class="ph ph-map-pin" aria-hidden="true"></i>
+                  @if (talk.venue) {
+                    {{ talk.venue }}
+                  } @else {
+                    Local divulgado em breve no WhatsApp e no Discord
+                  }
+                </p>
+              </div>
+            </div>
+
+          </article>
+        }
+      }
+
+    </div>
+  </section>
+
+  <!-- ─── Palestrantes ───────────────────────────────────── -->
+  <section class="talks-section talks-section--deep" id="palestrantes">
+    <div class="talks-pattern talks-pattern--rosette" aria-hidden="true"></div>
+    <div class="talks-container">
+
+      <header class="talks-head reveal reveal-up">
+        <p class="talks-eyebrow">Palestrantes</p>
+        <h2 class="talks-section-title">Quem sobe ao <span class="accent">palco</span></h2>
+      </header>
+
+      @for (speaker of speakers; track speaker.name) {
+        <article class="speaker-card reveal reveal-up">
+          <figure class="speaker-photo">
+            <img [src]="speaker.photo" [alt]="'Foto de ' + speaker.name" loading="lazy"
+                 [style.object-position]="speaker.photoPosition"
+                 onerror="this.src='assets/organizers/placeholder.svg'">
+          </figure>
+
+          <div class="speaker-body">
+            @if (speaker.alias) {
+              <p class="speaker-alias">{{ speaker.alias }}</p>
+            }
+            <h3 class="speaker-name">
+              {{ speaker.name }}
+              @if (speaker.pronouns) { <span class="speaker-pronouns">{{ speaker.pronouns }}</span> }
+            </h3>
+            <p class="speaker-role">{{ speakerLine(speaker) }}</p>
+
+            @if (speaker.origin; as origin) {
+              <p class="speaker-origin">
+                <img class="flag-dot" [src]="origin.flag" alt="" width="20" height="20">
+                {{ origin.label }}
+              </p>
+            }
+
+            @if (speaker.credentials.length > 0) {
+              <ul class="speaker-credentials">
+                @for (credential of speaker.credentials; track credential) {
+                  <li><i class="ph ph-seal-check" aria-hidden="true"></i>{{ credential }}</li>
+                }
+              </ul>
+            }
+
+            <p class="speaker-bio">{{ speaker.bio }}</p>
+
+            @if (speaker.links.length > 0) {
+              <div class="speaker-links">
+                @for (link of speaker.links; track link.url) {
+                  <a [href]="link.url" target="_blank" rel="noopener noreferrer"
+                     [attr.aria-label]="link.label + ' de ' + speaker.name">
+                    <i [class]="link.icon" aria-hidden="true"></i>
+                    {{ link.label }}
+                  </a>
+                }
+              </div>
+            }
+          </div>
+        </article>
+      }
+
+    </div>
+  </section>
+
+  <!-- ─── Parceria GDG ───────────────────────────────────── -->
+  <section class="talks-section talks-section--sunken" id="parceria">
+    <div class="talks-pattern talks-pattern--fiduciaries" aria-hidden="true"></div>
+    <div class="talks-container talks-container--narrow">
+
+      <div class="partner-card reveal reveal-up">
+        <app-partner-logo class="partner-card-logo" size="lg" label="" />
+        <p class="talks-eyebrow">Parceria</p>
+        <h2 class="talks-section-title">Nasa Space Apps <span class="accent">×</span> {{ partner.shortName }}</h2>
+        <p class="talks-section-lead">
+          Os {{ partner.name }} são comunidades locais de pessoas desenvolvedoras, apoiadas pelo
+          Google, que organizam encontros, workshops e eventos técnicos abertos no mundo todo.
+          Nesta edição, o {{ partner.shortName }} soma forças com a sede de Uberlândia para levar
+          conteúdo técnico ao público antes do hackathon.
+        </p>
+
+        <div class="talks-actions">
+          <a [href]="partner.url" class="btn-secondary" target="_blank" rel="noopener noreferrer">
+            <i class="ph ph-arrow-up-right" aria-hidden="true"></i>
+            Conhecer o {{ partner.shortName }}
+          </a>
+          <a [href]="speakerFormUrl" class="btn-secondary" target="_blank" rel="noopener noreferrer">
+            <i class="ph ph-microphone-stage" aria-hidden="true"></i>
+            Quero palestrar
+          </a>
+        </div>
+
+        <p class="partner-note">
+          Avisos de horário e local saem no
+          <a [href]="whatsappUrl" target="_blank" rel="noopener noreferrer">WhatsApp</a> e no
+          <a [href]="discordUrl" target="_blank" rel="noopener noreferrer">Discord</a> da sede.
+        </p>
+      </div>
+
+    </div>
+  </section>
+
+  @if (selectedChallenge(); as challenge) {
+    <app-challenge-detail-modal
+      [challenge]="challenge"
+      (closed)="closeChallenge()"
+      (share)="openShare(challenge)" />
+  }
+
+  @if (sharedChallenge(); as challenge) {
+    <app-challenge-share-modal [challenge]="challenge" (closed)="closeShare()" />
+  }
+</div>
