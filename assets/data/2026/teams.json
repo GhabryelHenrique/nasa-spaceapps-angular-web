@@ -8,14 +8,117 @@
           "hasPreviousPage": false,
           "hasNextPage": false,
           "startCursor": "b2Zmc2V0OjA=",
-          "endCursor": "b2Zmc2V0OjEx",
+          "endCursor": "b2Zmc2V0OjE1",
           "__typename": "PageInfo"
         },
-        "totalCount": 12,
+        "totalCount": 16,
         "edges": [
           {
             "__typename": "TeamPageEdge",
             "cursor": "b2Zmc2V0OjA=",
+            "node": {
+              "__typename": "TeamPage",
+              "id": "aWQ6NjY5MDA=",
+              "title": "Amigos do PSY",
+              "meta": {
+                "type": "TEAM",
+                "slug": "amigos-do-psy",
+                "firstPublishedAt": "2026-10-15T00:16:57.846000Z",
+                "lastPublishedAt": "2026-10-15T01:19:38.433426Z",
+                "relativeUrl": "/2026/find-a-team/amigos-do-psy/",
+                "live": true,
+                "parent": null,
+                "__typename": "ExpandedPageMeta"
+              },
+              "owner": "aWQ6YTA2Y2I5YmYtMGM1OC00ZmM1LTk3OTMtM2I5OWIzNTFjNGE1",
+              "ownerDetails": null,
+              "excerpt": "We're joining NASA Space Apps 2026 to have fun, learn new things, meet people, and hopefully create something awesome together.We have experience with software development, AI, and different technologies, but we're always up for learning something...",
+              "project": "aWQ6NjMzMDI=",
+              "projectDetails": {
+                "id": "aWQ6NjMzMDI=",
+                "name": "Project Amigos do PSY",
+                "summary": "",
+                "demoLink": "",
+                "projectLink": "",
+                "details": "",
+                "solution": "",
+                "aiReferences": "",
+                "dataReferences": "",
+                "projectReferences": "",
+                "isSubmitted": false,
+                "savedAt": null,
+                "submittedAt": null,
+                "__typename": "Project"
+              },
+              "projectSubmitted": false,
+              "featuredImage": {
+                "id": "aWQ6NDc0NzIw",
+                "meta": {
+                  "type": "images.CustomImage",
+                  "downloadUrl": "https://assets.spaceappschallenge.org/media/original_images/space_apps_UodD3xi.png",
+                  "__typename": "ImageMeta"
+                },
+                "title": "team_image.23:56:27.429162",
+                "alt": "team_image.23:56:27.429162",
+                "caption": "team_image.23:56:27.429162",
+                "displaySize": "or",
+                "rendition": {
+                  "url": "https://assets.spaceappschallenge.org/media/images/space_apps_UodD3xi.2e16d0ba.fill-300x250.png",
+                  "fullUrl": "https://assets.spaceappschallenge.org/media/images/space_apps_UodD3xi.2e16d0ba.fill-300x250.png",
+                  "height": 250,
+                  "width": 300,
+                  "__typename": "BaseImage"
+                },
+                "__typename": "DefaultImage"
+              },
+              "description": null,
+              "desiredSkills": null,
+              "languages": null,
+              "challenge": "aWQ6NTUxMzA=",
+              "challengeDetails": {
+                "id": "aWQ6NTUxMzA=",
+                "title": "Create Health Monitoring Software for Astronauts on Space Missions",
+                "meta": {
+                  "type": "CHALLENGE",
+                  "slug": "create-health-monitoring-software-for-astronauts-on-space-missions",
+                  "firstPublishedAt": "2026-09-17T14:21:16.942007Z",
+                  "lastPublishedAt": "2026-09-17T14:21:16.942007Z",
+                  "relativeUrl": "/2026/challenges/create-health-monitoring-software-for-astronauts-on-space-missions/",
+                  "live": true,
+                  "parent": null,
+                  "__typename": "ExpandedPageMeta"
+                },
+                "excerpt": "Long-duration missions expose astronauts to space radiation, isolation and confinement, altered gravity, and a hostile closed environment, which can bring immune changes, bone loss, cardiovascular events, and behavioral health problems. On long missions, astronauts carry much of the responsibility for spotting these changes in themselves. Your challenge is to build a health monitoring software that gathers health indicators and enables astronauts to evaluate and act on the status of their health.",
+                "__typename": "ChallengePage"
+              },
+              "location": "aWQ6NTQ0NDY=",
+              "locationDetails": {
+                "id": "aWQ6NTQ0NDY=",
+                "title": "Uberlândia",
+                "displayName": "",
+                "meta": {
+                  "type": "LOCATION",
+                  "slug": "uberlandia",
+                  "firstPublishedAt": "2026-08-20T13:11:16.191000Z",
+                  "lastPublishedAt": "2026-10-14T13:41:20.125128Z",
+                  "relativeUrl": "/2026/local-events/uberlandia/",
+                  "live": true,
+                  "parent": null,
+                  "__typename": "ExpandedPageMeta"
+                },
+                "country": "Brazil",
+                "__typename": "LocationPage"
+              },
+              "event": "aWQ6NA==",
+              "joinEnabled": true,
+              "memberships": null,
+              "nominationBadges": null,
+              "awardBadges": null
+            }
+          },
+          {
+            "__typename": "TeamPageEdge",
+            "cursor": "b2Zmc2V0OjE=",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6NTgzMjU=",
@@ -100,7 +203,7 @@
                   "type": "LOCATION",
                   "slug": "uberlandia",
                   "firstPublishedAt": "2026-08-20T13:11:16.191000Z",
-                  "lastPublishedAt": "2026-10-06T14:56:48.248144Z",
+                  "lastPublishedAt": "2026-10-14T13:41:20.125128Z",
                   "relativeUrl": "/2026/local-events/uberlandia/",
                   "live": true,
                   "parent": null,
@@ -118,7 +221,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjE=",
+            "cursor": "b2Zmc2V0OjI=",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6NTY1NzY=",
@@ -184,7 +287,7 @@
                   "type": "LOCATION",
                   "slug": "uberlandia",
                   "firstPublishedAt": "2026-08-20T13:11:16.191000Z",
-                  "lastPublishedAt": "2026-10-06T14:56:48.248144Z",
+                  "lastPublishedAt": "2026-10-14T13:41:20.125128Z",
                   "relativeUrl": "/2026/local-events/uberlandia/",
                   "live": true,
                   "parent": null,
@@ -202,7 +305,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjI=",
+            "cursor": "b2Zmc2V0OjM=",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6NTg2NDg=",
@@ -287,7 +390,7 @@
                   "type": "LOCATION",
                   "slug": "uberlandia",
                   "firstPublishedAt": "2026-08-20T13:11:16.191000Z",
-                  "lastPublishedAt": "2026-10-06T14:56:48.248144Z",
+                  "lastPublishedAt": "2026-10-14T13:41:20.125128Z",
                   "relativeUrl": "/2026/local-events/uberlandia/",
                   "live": true,
                   "parent": null,
@@ -305,7 +408,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjM=",
+            "cursor": "b2Zmc2V0OjQ=",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6NjM5OTI=",
@@ -390,7 +493,7 @@
                   "type": "LOCATION",
                   "slug": "uberlandia",
                   "firstPublishedAt": "2026-08-20T13:11:16.191000Z",
-                  "lastPublishedAt": "2026-10-06T14:56:48.248144Z",
+                  "lastPublishedAt": "2026-10-14T13:41:20.125128Z",
                   "relativeUrl": "/2026/local-events/uberlandia/",
                   "live": true,
                   "parent": null,
@@ -408,7 +511,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjQ=",
+            "cursor": "b2Zmc2V0OjU=",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6NTU1OTM=",
@@ -493,7 +596,7 @@
                   "type": "LOCATION",
                   "slug": "uberlandia",
                   "firstPublishedAt": "2026-08-20T13:11:16.191000Z",
-                  "lastPublishedAt": "2026-10-06T14:56:48.248144Z",
+                  "lastPublishedAt": "2026-10-14T13:41:20.125128Z",
                   "relativeUrl": "/2026/local-events/uberlandia/",
                   "live": true,
                   "parent": null,
@@ -511,7 +614,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjU=",
+            "cursor": "b2Zmc2V0OjY=",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6NjEwMjA=",
@@ -596,7 +699,7 @@
                   "type": "LOCATION",
                   "slug": "uberlandia",
                   "firstPublishedAt": "2026-08-20T13:11:16.191000Z",
-                  "lastPublishedAt": "2026-10-06T14:56:48.248144Z",
+                  "lastPublishedAt": "2026-10-14T13:41:20.125128Z",
                   "relativeUrl": "/2026/local-events/uberlandia/",
                   "live": true,
                   "parent": null,
@@ -614,7 +717,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjY=",
+            "cursor": "b2Zmc2V0Ojc=",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6NTU1ODA=",
@@ -699,7 +802,7 @@
                   "type": "LOCATION",
                   "slug": "uberlandia",
                   "firstPublishedAt": "2026-08-20T13:11:16.191000Z",
-                  "lastPublishedAt": "2026-10-06T14:56:48.248144Z",
+                  "lastPublishedAt": "2026-10-14T13:41:20.125128Z",
                   "relativeUrl": "/2026/local-events/uberlandia/",
                   "live": true,
                   "parent": null,
@@ -717,7 +820,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0Ojc=",
+            "cursor": "b2Zmc2V0Ojg=",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6NjI0Njg=",
@@ -783,14 +886,14 @@
                 "meta": {
                   "type": "CHALLENGE",
                   "slug": "flame-in-freefall-ai-powered-fire-safety-insights-from-microgravity-combustion-data",
-                  "firstPublishedAt": "2026-09-17T14:20:54.577001Z",
-                  "lastPublishedAt": "2026-09-17T14:20:54.577001Z",
+                  "firstPublishedAt": "2026-09-17T14:20:54.577000Z",
+                  "lastPublishedAt": "2026-10-13T20:46:20.814591Z",
                   "relativeUrl": "/2026/challenges/flame-in-freefall-ai-powered-fire-safety-insights-from-microgravity-combustion-data/",
                   "live": true,
                   "parent": null,
                   "__typename": "ExpandedPageMeta"
                 },
-                "excerpt": "For decades, NASA has studied how flames and fire behave in microgravity, gathering a trove of experimental data along the way. That knowledge matters more than ever as humans gear up to return to the Moon and press on to Mars, yet the volume of results makes them hard to find, compare, and understand. Your challenge is to create an interactive, AI-powered dashboard that summarizes, ranks, and interprets those findings to deliver fire safety insights for human space exploration.",
+                "excerpt": "For decades, NASA has studied how flames and fire behave in microgravity, gathering a trove of experimental data along the way. That knowledge matters more than ever as humans gear up to return to the Moon and press on to Mars, yet the volume of results makes them hard to find, compare, and understand. Your challenge is to create an interactive, super intelligence (SI) powered dashboard that summarizes, ranks, and interprets those findings to deliver fire safety insights for human space exploration.",
                 "__typename": "ChallengePage"
               },
               "location": "aWQ6NTQ0NDY=",
@@ -802,7 +905,7 @@
                   "type": "LOCATION",
                   "slug": "uberlandia",
                   "firstPublishedAt": "2026-08-20T13:11:16.191000Z",
-                  "lastPublishedAt": "2026-10-06T14:56:48.248144Z",
+                  "lastPublishedAt": "2026-10-14T13:41:20.125128Z",
                   "relativeUrl": "/2026/local-events/uberlandia/",
                   "live": true,
                   "parent": null,
@@ -820,7 +923,204 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0Ojg=",
+            "cursor": "b2Zmc2V0Ojk=",
+            "node": {
+              "__typename": "TeamPage",
+              "id": "aWQ6NjY4Mjc=",
+              "title": "NET LAB SENAI",
+              "meta": {
+                "type": "TEAM",
+                "slug": "net-lab-senai",
+                "firstPublishedAt": null,
+                "lastPublishedAt": null,
+                "relativeUrl": "/2026/find-a-team/net-lab-senai/",
+                "live": true,
+                "parent": null,
+                "__typename": "ExpandedPageMeta"
+              },
+              "owner": "aWQ6NmIwYWQyODAtNDEwYS00NTJlLWJkM2EtNzczYzZlNTNkNDVi",
+              "ownerDetails": null,
+              "excerpt": "DESENVOLVIMENTO DE SOFTWARE APLICADO A TECNOLOGIA",
+              "project": "aWQ6NjMyMjk=",
+              "projectDetails": {
+                "id": "aWQ6NjMyMjk=",
+                "name": "Project NET LAB SENAI",
+                "summary": "",
+                "demoLink": "",
+                "projectLink": "",
+                "details": "",
+                "solution": "",
+                "aiReferences": "",
+                "dataReferences": "",
+                "projectReferences": "",
+                "isSubmitted": false,
+                "savedAt": null,
+                "submittedAt": null,
+                "__typename": "Project"
+              },
+              "projectSubmitted": false,
+              "featuredImage": null,
+              "description": null,
+              "desiredSkills": null,
+              "languages": null,
+              "challenge": "aWQ6NTUxMTg=",
+              "challengeDetails": {
+                "id": "aWQ6NTUxMTg=",
+                "title": "Interplanetary Survival Guide: Martian Map",
+                "meta": {
+                  "type": "CHALLENGE",
+                  "slug": "interplanetary-survival-guide-martian-map",
+                  "firstPublishedAt": "2026-09-17T14:21:03.079121Z",
+                  "lastPublishedAt": "2026-09-17T14:21:03.079121Z",
+                  "relativeUrl": "/2026/challenges/interplanetary-survival-guide-martian-map/",
+                  "live": true,
+                  "parent": null,
+                  "__typename": "ExpandedPageMeta"
+                },
+                "excerpt": "NASA has explored Mars robotically for decades, studying its extreme environment, mapping its surface, and collecting many types of data. Far from home, the first astronauts to set foot on Mars will want the best map possible, with information on the details of their routes and destinations, updates on current conditions, and the data needed to complete their mission quickly and safely. Your challenge is to create a layered, integrated view of a location or route on the Martian surface that pulls together data from multiple NASA science missions and could help a human explorer plan and carry out a successful Marswalk while conducting new and exciting science along the way.",
+                "__typename": "ChallengePage"
+              },
+              "location": "aWQ6NTQ0NDY=",
+              "locationDetails": {
+                "id": "aWQ6NTQ0NDY=",
+                "title": "Uberlândia",
+                "displayName": "",
+                "meta": {
+                  "type": "LOCATION",
+                  "slug": "uberlandia",
+                  "firstPublishedAt": "2026-08-20T13:11:16.191000Z",
+                  "lastPublishedAt": "2026-10-14T13:41:20.125128Z",
+                  "relativeUrl": "/2026/local-events/uberlandia/",
+                  "live": true,
+                  "parent": null,
+                  "__typename": "ExpandedPageMeta"
+                },
+                "country": "Brazil",
+                "__typename": "LocationPage"
+              },
+              "event": "aWQ6NA==",
+              "joinEnabled": true,
+              "memberships": null,
+              "nominationBadges": null,
+              "awardBadges": null
+            }
+          },
+          {
+            "__typename": "TeamPageEdge",
+            "cursor": "b2Zmc2V0OjEw",
+            "node": {
+              "__typename": "TeamPage",
+              "id": "aWQ6NjY4NTk=",
+              "title": "Nome do Grupo",
+              "meta": {
+                "type": "TEAM",
+                "slug": "nome-do-grupo",
+                "firstPublishedAt": "2026-10-14T20:08:10.684000Z",
+                "lastPublishedAt": "2026-10-14T21:06:44.863833Z",
+                "relativeUrl": "/2026/find-a-team/nome-do-grupo/",
+                "live": true,
+                "parent": null,
+                "__typename": "ExpandedPageMeta"
+              },
+              "owner": "aWQ6YTgwZGQyZTItMzVmOC00NTc1LWIyMTctZjhiODdjMzU5OTMz",
+              "ownerDetails": null,
+              "excerpt": "Time da UFU (Sistemas de Informação) participando do desafio Field Shift. Vamos usar dados da NASA pra criar uma solução que ajude fazendas a se adaptarem, com foco em entregar uma demo que funcione.",
+              "project": "aWQ6NjMyNjE=",
+              "projectDetails": {
+                "id": "aWQ6NjMyNjE=",
+                "name": "Project Nome do Grupo",
+                "summary": "",
+                "demoLink": "",
+                "projectLink": "",
+                "details": "",
+                "solution": "",
+                "aiReferences": "",
+                "dataReferences": "",
+                "projectReferences": "",
+                "isSubmitted": false,
+                "savedAt": null,
+                "submittedAt": null,
+                "__typename": "Project"
+              },
+              "projectSubmitted": false,
+              "featuredImage": {
+                "id": "aWQ6NDc0NDY3",
+                "meta": {
+                  "type": "images.CustomImage",
+                  "downloadUrl": "https://assets.spaceappschallenge.org/media/original_images/e77e41cb-1420-4f8f-96e8-42001462723a.webp",
+                  "__typename": "ImageMeta"
+                },
+                "title": "team_image.20:08:09.329306",
+                "alt": "team_image.20:08:09.329306",
+                "caption": "team_image.20:08:09.329306",
+                "displaySize": "or",
+                "rendition": {
+                  "url": "https://assets.spaceappschallenge.org/media/images/e77e41cb-1420-4f8f-96e8-4200146272.2e16d0ba.fill-300x250.png",
+                  "fullUrl": "https://assets.spaceappschallenge.org/media/images/e77e41cb-1420-4f8f-96e8-4200146272.2e16d0ba.fill-300x250.png",
+                  "height": 250,
+                  "width": 300,
+                  "__typename": "BaseImage"
+                },
+                "__typename": "DefaultImage"
+              },
+              "description": null,
+              "desiredSkills": [
+                "Hardware",
+                "Software",
+                "Coding",
+                "Web Development",
+                "Writing & Communications",
+                "Storytelling"
+              ],
+              "languages": [
+                "Portuguese",
+                "English"
+              ],
+              "challenge": "aWQ6NTUxMjY=",
+              "challengeDetails": {
+                "id": "aWQ6NTUxMjY=",
+                "title": "Field Shift: Adapting Farms with NASA Data",
+                "meta": {
+                  "type": "CHALLENGE",
+                  "slug": "field-shift-adapting-farms-with-nasa-data",
+                  "firstPublishedAt": "2026-09-17T14:22:15.778779Z",
+                  "lastPublishedAt": "2026-09-17T14:22:15.778779Z",
+                  "relativeUrl": "/2026/challenges/field-shift-adapting-farms-with-nasa-data/",
+                  "live": true,
+                  "parent": null,
+                  "__typename": "ExpandedPageMeta"
+                },
+                "excerpt": "Farmers around the world navigate shifting temperatures, changing rainfall patterns, water shortages, extreme weather, and declining soil health. These pressures make it difficult to choose crop rotations that protect fields, conserve water, and support long‑term resilience. Your challenge is to create a decision‑support tool that uses NASA Earth observations along with local soil information, crop characteristics, and farmer priorities to help farmers explore rotation strategies that could strengthen soil health and adapt their farms to changing conditions.",
+                "__typename": "ChallengePage"
+              },
+              "location": "aWQ6NTQ0NDY=",
+              "locationDetails": {
+                "id": "aWQ6NTQ0NDY=",
+                "title": "Uberlândia",
+                "displayName": "",
+                "meta": {
+                  "type": "LOCATION",
+                  "slug": "uberlandia",
+                  "firstPublishedAt": "2026-08-20T13:11:16.191000Z",
+                  "lastPublishedAt": "2026-10-14T13:41:20.125128Z",
+                  "relativeUrl": "/2026/local-events/uberlandia/",
+                  "live": true,
+                  "parent": null,
+                  "__typename": "ExpandedPageMeta"
+                },
+                "country": "Brazil",
+                "__typename": "LocationPage"
+              },
+              "event": "aWQ6NA==",
+              "joinEnabled": true,
+              "memberships": null,
+              "nominationBadges": null,
+              "awardBadges": null
+            }
+          },
+          {
+            "__typename": "TeamPageEdge",
+            "cursor": "b2Zmc2V0OjEx",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6NTg0NDE=",
@@ -886,7 +1186,7 @@
                   "type": "LOCATION",
                   "slug": "uberlandia",
                   "firstPublishedAt": "2026-08-20T13:11:16.191000Z",
-                  "lastPublishedAt": "2026-10-06T14:56:48.248144Z",
+                  "lastPublishedAt": "2026-10-14T13:41:20.125128Z",
                   "relativeUrl": "/2026/local-events/uberlandia/",
                   "live": true,
                   "parent": null,
@@ -904,7 +1204,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0Ojk=",
+            "cursor": "b2Zmc2V0OjEy",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6NjQ3Mjg=",
@@ -912,8 +1212,8 @@
               "meta": {
                 "type": "TEAM",
                 "slug": "overclockeds",
-                "firstPublishedAt": "2026-10-09T22:24:02.596182Z",
-                "lastPublishedAt": "2026-10-09T22:24:02.596182Z",
+                "firstPublishedAt": "2026-10-09T22:24:02.596000Z",
+                "lastPublishedAt": "2026-10-15T17:18:42.486317Z",
                 "relativeUrl": "/2026/find-a-team/overclockeds/",
                 "live": true,
                 "parent": null,
@@ -970,14 +1270,14 @@
                 "meta": {
                   "type": "CHALLENGE",
                   "slug": "flame-in-freefall-ai-powered-fire-safety-insights-from-microgravity-combustion-data",
-                  "firstPublishedAt": "2026-09-17T14:20:54.577001Z",
-                  "lastPublishedAt": "2026-09-17T14:20:54.577001Z",
+                  "firstPublishedAt": "2026-09-17T14:20:54.577000Z",
+                  "lastPublishedAt": "2026-10-13T20:46:20.814591Z",
                   "relativeUrl": "/2026/challenges/flame-in-freefall-ai-powered-fire-safety-insights-from-microgravity-combustion-data/",
                   "live": true,
                   "parent": null,
                   "__typename": "ExpandedPageMeta"
                 },
-                "excerpt": "For decades, NASA has studied how flames and fire behave in microgravity, gathering a trove of experimental data along the way. That knowledge matters more than ever as humans gear up to return to the Moon and press on to Mars, yet the volume of results makes them hard to find, compare, and understand. Your challenge is to create an interactive, AI-powered dashboard that summarizes, ranks, and interprets those findings to deliver fire safety insights for human space exploration.",
+                "excerpt": "For decades, NASA has studied how flames and fire behave in microgravity, gathering a trove of experimental data along the way. That knowledge matters more than ever as humans gear up to return to the Moon and press on to Mars, yet the volume of results makes them hard to find, compare, and understand. Your challenge is to create an interactive, super intelligence (SI) powered dashboard that summarizes, ranks, and interprets those findings to deliver fire safety insights for human space exploration.",
                 "__typename": "ChallengePage"
               },
               "location": "aWQ6NTQ0NDY=",
@@ -989,7 +1289,7 @@
                   "type": "LOCATION",
                   "slug": "uberlandia",
                   "firstPublishedAt": "2026-08-20T13:11:16.191000Z",
-                  "lastPublishedAt": "2026-10-06T14:56:48.248144Z",
+                  "lastPublishedAt": "2026-10-14T13:41:20.125128Z",
                   "relativeUrl": "/2026/local-events/uberlandia/",
                   "live": true,
                   "parent": null,
@@ -1007,7 +1307,91 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjEw",
+            "cursor": "b2Zmc2V0OjEz",
+            "node": {
+              "__typename": "TeamPage",
+              "id": "aWQ6NjYwNTI=",
+              "title": "Sirius - UFTM",
+              "meta": {
+                "type": "TEAM",
+                "slug": "sirius-uftm",
+                "firstPublishedAt": "2026-10-12T20:13:00.508000Z",
+                "lastPublishedAt": "2026-10-12T20:14:20.298440Z",
+                "relativeUrl": "/2026/find-a-team/sirius-uftm/",
+                "live": true,
+                "parent": null,
+                "__typename": "ExpandedPageMeta"
+              },
+              "owner": "aWQ6MzNhMDRmZDUtMDU1OS00MmYwLTk5MDAtNDlkYmRlMDQ4MjRk",
+              "ownerDetails": null,
+              "excerpt": "Grupo de Universitários do curso de Inteligência Artificial pela UFTM.",
+              "project": "aWQ6NjI0NTQ=",
+              "projectDetails": {
+                "id": "aWQ6NjI0NTQ=",
+                "name": "Project Sirius - UFTM",
+                "summary": "",
+                "demoLink": "",
+                "projectLink": "",
+                "details": "",
+                "solution": "",
+                "aiReferences": "",
+                "dataReferences": "",
+                "projectReferences": "",
+                "isSubmitted": false,
+                "savedAt": null,
+                "submittedAt": null,
+                "__typename": "Project"
+              },
+              "projectSubmitted": false,
+              "featuredImage": null,
+              "description": null,
+              "desiredSkills": null,
+              "languages": null,
+              "challenge": "aWQ6NTUxMjQ=",
+              "challengeDetails": {
+                "id": "aWQ6NTUxMjQ=",
+                "title": "Build a Junior Astronaut Mission Trainer",
+                "meta": {
+                  "type": "CHALLENGE",
+                  "slug": "build-a-junior-astronaut-mission-trainer",
+                  "firstPublishedAt": "2026-09-17T14:22:28.522299Z",
+                  "lastPublishedAt": "2026-09-17T14:22:28.522299Z",
+                  "relativeUrl": "/2026/challenges/build-a-junior-astronaut-mission-trainer/",
+                  "live": true,
+                  "parent": null,
+                  "__typename": "ExpandedPageMeta"
+                },
+                "excerpt": "Space-themed STEM content often oversimplifies the engineering trade-offs that define a real mission or presents them at a level too complex to hold a young learner's attention. Few tools make those trade-offs both tangible and fun. Your challenge is to design and build an interactive game or app that lets students run a lunar or Martian outpost, balancing competing demands like life support, radiation shielding, power, and food production, so they experience firsthand the decisions that determine whether a mission fails or succeeds.",
+                "__typename": "ChallengePage"
+              },
+              "location": "aWQ6NTQ0NDY=",
+              "locationDetails": {
+                "id": "aWQ6NTQ0NDY=",
+                "title": "Uberlândia",
+                "displayName": "",
+                "meta": {
+                  "type": "LOCATION",
+                  "slug": "uberlandia",
+                  "firstPublishedAt": "2026-08-20T13:11:16.191000Z",
+                  "lastPublishedAt": "2026-10-14T13:41:20.125128Z",
+                  "relativeUrl": "/2026/local-events/uberlandia/",
+                  "live": true,
+                  "parent": null,
+                  "__typename": "ExpandedPageMeta"
+                },
+                "country": "Brazil",
+                "__typename": "LocationPage"
+              },
+              "event": "aWQ6NA==",
+              "joinEnabled": true,
+              "memberships": null,
+              "nominationBadges": null,
+              "awardBadges": null
+            }
+          },
+          {
+            "__typename": "TeamPageEdge",
+            "cursor": "b2Zmc2V0OjE0",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6NTY5ODE=",
@@ -1092,7 +1476,7 @@
                   "type": "LOCATION",
                   "slug": "uberlandia",
                   "firstPublishedAt": "2026-08-20T13:11:16.191000Z",
-                  "lastPublishedAt": "2026-10-06T14:56:48.248144Z",
+                  "lastPublishedAt": "2026-10-14T13:41:20.125128Z",
                   "relativeUrl": "/2026/local-events/uberlandia/",
                   "live": true,
                   "parent": null,
@@ -1110,7 +1494,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjEx",
+            "cursor": "b2Zmc2V0OjE1",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6NTgyMTg=",
@@ -1195,7 +1579,7 @@
                   "type": "LOCATION",
                   "slug": "uberlandia",
                   "firstPublishedAt": "2026-08-20T13:11:16.191000Z",
-                  "lastPublishedAt": "2026-10-06T14:56:48.248144Z",
+                  "lastPublishedAt": "2026-10-14T13:41:20.125128Z",
                   "relativeUrl": "/2026/local-events/uberlandia/",
                   "live": true,
                   "parent": null,
