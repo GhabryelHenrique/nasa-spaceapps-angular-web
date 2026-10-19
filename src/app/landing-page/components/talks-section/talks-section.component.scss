@@ -263,6 +263,13 @@
     outline: 3px solid var(--sa-neon-yellow);
     outline-offset: 3px;
   }
+
+  // O ingresso é a ação principal do cartão: Neon Yellow desde o início.
+  &--ticket {
+    color: $sa-neon-yellow;
+
+    &:hover { color: $sa-white; }
+  }
 }
 
 // ─── Ações ────────────────────────────────────────────────

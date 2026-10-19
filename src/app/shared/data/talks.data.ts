@@ -64,6 +64,8 @@ export interface Talk {
   withPartner?: boolean;
   /** Endereço do local; enquanto não houver, a página avisa que sai nos canais. */
   venue?: string;
+  /** Página do evento no Sympla, onde o ingresso (gratuito) é emitido. */
+  ticketUrl?: string;
   speaker: Speaker;
 }
 
@@ -94,6 +96,8 @@ export const TALKS: Talk[] = [
     stack: [],
     topics: [],
     challengeSlugs: [],
+    ticketUrl:
+      'https://www.sympla.com.br/evento/nasa-space-apps-warmup-ia-segura-e-acessivel-construindo-um-futuro-mais-justo/3606886',
     speaker: {
       name: 'Mel Tranfield',
       role: 'Vice-curadora e engenheira',
@@ -141,6 +145,8 @@ export const TALKS: Talk[] = [
       'create-health-monitoring-software-for-astronauts-on-space-missions',
       'the-earth-information-jukebox',
     ],
+    ticketUrl:
+      'https://www.sympla.com.br/evento/nasa-space-apps-warmup-agentes-adk-em-kubernetes-com-gemini-gcp-e-muito-devops/3624155',
     speaker: {
       name: 'Camilla Martins',
       alias: 'Punk do DevOps',

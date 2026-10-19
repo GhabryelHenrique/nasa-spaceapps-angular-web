@@ -56,8 +56,8 @@
         <p class="talks-eyebrow">Programação</p>
         <h2 class="talks-section-title">Anota na <span class="accent">agenda</span></h2>
         <p class="talks-section-lead">
-          Atividades presenciais em Uberlândia. O endereço e qualquer mudança de horário saem
-          primeiro no WhatsApp e no Discord da sede.
+          Atividades presenciais em Uberlândia, com entrada gratuita — garanta seu ingresso no
+          Sympla. Qualquer mudança de horário ou local sai primeiro no WhatsApp e no Discord da sede.
         </p>
       </header>
 
@@ -182,7 +182,14 @@
 
               <div class="talk-footer">
                 @if (status(talk) !== 'done') {
-                  <a [href]="calendarUrl(talk)" class="btn-primary talk-calendar" target="_blank" rel="noopener noreferrer">
+                  @if (talk.ticketUrl) {
+                    <a [href]="talk.ticketUrl" class="btn-primary talk-calendar" target="_blank" rel="noopener noreferrer">
+                      <i class="ph ph-ticket" aria-hidden="true"></i>
+                      Garantir ingresso grátis
+                    </a>
+                  }
+                  <a [href]="calendarUrl(talk)" class="talk-calendar" target="_blank" rel="noopener noreferrer"
+                     [class.btn-primary]="!talk.ticketUrl" [class.btn-secondary]="!!talk.ticketUrl">
                     <i class="ph ph-calendar-plus" aria-hidden="true"></i>
                     Adicionar à agenda
                   </a>

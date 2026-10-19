@@ -73,6 +73,12 @@
               }
 
               <div class="teaser-links">
+                @if (card.talk.ticketUrl) {
+                  <a [href]="card.talk.ticketUrl" class="teaser-link teaser-link--ticket" target="_blank" rel="noopener noreferrer">
+                    <i class="ph ph-ticket" aria-hidden="true"></i>
+                    Garantir ingresso grátis
+                  </a>
+                }
                 <a routerLink="/palestras" [fragment]="card.talk.slug" class="teaser-link">
                   Ver detalhes
                   <i class="ph ph-arrow-right" aria-hidden="true"></i>
