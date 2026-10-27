@@ -595,7 +595,8 @@
   flex-wrap: wrap;
   gap: 0.6rem;
 
-  a {
+  a,
+  .speaker-share {
     display: inline-flex;
     align-items: center;
     gap: 0.45rem;
@@ -607,6 +608,8 @@
     font-weight: 600;
     color: $sa-white;
     transition: border-color 0.2s ease, background 0.2s ease;
+    background: transparent;
+    cursor: pointer;
 
     &:hover {
       background: var(--bg-surface-hover);

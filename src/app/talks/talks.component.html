@@ -194,10 +194,14 @@
                     Adicionar à agenda
                   </a>
                 }
+                <button type="button" class="btn-secondary talk-calendar" (click)="openTalkShare(talk, 'talk')">
+                  <i class="ph ph-instagram-logo" aria-hidden="true"></i>
+                  Post para o Instagram
+                </button>
                 <p class="talk-venue">
                   <i class="ph ph-map-pin" aria-hidden="true"></i>
                   @if (talk.venue) {
-                    {{ talk.venue }}
+                    {{ talk.venue }}@if (talk.venueAddress) {, {{ talk.venueAddress }}}
                   } @else {
                     Local divulgado em breve no WhatsApp e no Discord
                   }
@@ -257,17 +261,23 @@
 
             <p class="speaker-bio">{{ speaker.bio }}</p>
 
-            @if (speaker.links.length > 0) {
-              <div class="speaker-links">
-                @for (link of speaker.links; track link.url) {
-                  <a [href]="link.url" target="_blank" rel="noopener noreferrer"
-                     [attr.aria-label]="link.label + ' de ' + speaker.name">
-                    <i [class]="link.icon" aria-hidden="true"></i>
-                    {{ link.label }}
-                  </a>
-                }
-              </div>
-            }
+            <div class="speaker-links">
+              @for (link of speaker.links; track link.url) {
+                <a [href]="link.url" target="_blank" rel="noopener noreferrer"
+                   [attr.aria-label]="link.label + ' de ' + speaker.name">
+                  <i [class]="link.icon" aria-hidden="true"></i>
+                  {{ link.label }}
+                </a>
+              }
+              <!-- @if (talkOf(speaker); as talk) {
+                <button type="button" class="speaker-share"
+                        [attr.aria-label]="'Gerar post do Instagram sobre ' + speaker.name"
+                        (click)="openTalkShare(talk, 'speaker')">
+                  <i class="ph ph-instagram-logo" aria-hidden="true"></i>
+                  Post para o Instagram
+                </button>
+              } -->
+            </div>
           </div>
         </article>
       }
@@ -321,5 +331,9 @@
 
   @if (sharedChallenge(); as challenge) {
     <app-challenge-share-modal [challenge]="challenge" (closed)="closeShare()" />
+  }
+
+  @if (sharedTalk(); as shared) {
+    <app-talk-share-modal [talk]="shared.talk" [initialKind]="shared.kind" (closed)="closeTalkShare()" />
   }
 </div>

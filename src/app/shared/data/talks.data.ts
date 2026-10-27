@@ -62,8 +62,10 @@ export interface Talk {
   challengeSlugs: string[];
   /** Palestra feita em parceria com o `TALKS_PARTNER` (GDG). */
   withPartner?: boolean;
-  /** Endereço do local; enquanto não houver, a página avisa que sai nos canais. */
+  /** Local; enquanto não houver, a página avisa que sai nos canais. */
   venue?: string;
+  /** Endereço completo do local, para o card de divulgação e o link de agenda. */
+  venueAddress?: string;
   /** Página do evento no Sympla, onde o ingresso (gratuito) é emitido. */
   ticketUrl?: string;
   speaker: Speaker;
@@ -80,18 +82,22 @@ export const TALKS_PARTNER = {
 export const TALKS: Talk[] = [
   {
     slug: 'ia-segura-acessivel-escolas',
-    title: 'IA Segura e Acessível nas Escolas: Construindo um Futuro Mais Justo',
+    title:
+      'IA Segura e Acessível nas Escolas: Construindo um Futuro Mais Justo',
     startsAt: '2026-11-09T14:00:00-03:00',
     // Duração ainda não confirmada — só define o fim no status e no link de agenda.
     durationMinutes: 60,
     dayLabel: 'Segunda, 9 de novembro',
+    venue: 'UFU FEELT',
+    venueAddress:
+      'Av. João Naves de Ávila, 2121 - Direção FEELT - Bairro Santa Mônica',
     timeLabel: '19h',
     format: 'Palestra',
     mode: 'Presencial',
     tags: ['IA', 'Acessibilidade', 'Segurança'],
     summary:
-      'Como levar a inteligência artificial para dentro das escolas de forma segura e acessível — e por ' +
-      'que isso é decisivo para um futuro mais justo, sobretudo em países onde a segurança da IA ainda é menor.',
+      'Como levar a inteligência artificial para dentro das escolas de forma segura e acessível -' +
+      'e por que isso é decisivo para um futuro mais justo, sobretudo em países onde a segurança da IA ainda é menor. Nessa sessão, partimos de exemplos locais, como o Pix e as eleições, e de casos reais de pagamentos para praticar como detectar, limitar e se recuperar de falhas e usos indevidos da IA, e como usamos com segurança nos nossos projetos',
     takeaways: [],
     stack: [],
     topics: [],
@@ -102,7 +108,10 @@ export const TALKS: Talk[] = [
       name: 'Mel Tranfield',
       role: 'Vice-curadora e engenheira',
       organization: 'Londres Hub II',
-      origin: { label: 'Londres, Reino Unido', flag: 'assets/flags/reino-unido.svg' },
+      origin: {
+        label: 'Londres, Reino Unido',
+        flag: 'assets/flags/reino-unido.svg',
+      },
       photo: 'assets/speakers/mel-tranfield.jpeg',
       photoPosition: '50% 35%',
       bio:
@@ -110,14 +119,27 @@ export const TALKS: Talk[] = [
         'escolas e é responsável pela acessibilidade e segurança de IA, particularmente em países onde a ' +
         'segurança da IA é menor.',
       credentials: [],
-      links: [],
+      links: [
+        {
+          label: 'Instagram',
+          icon: 'fa-brands fa-instagram',
+          url: 'https://www.instagram.com/meltranfield/',
+        },
+        {
+          label: 'LinkedIn',
+          icon: 'fa-brands fa-linkedin',
+          url: 'https://www.linkedin.com/in/melissa-tranfield/',
+        },
+      ],
     },
   },
   {
     slug: 'agentes-adk-kubernetes-gemini',
     title: 'Agentes ADK em Kubernetes com Gemini, GCP e muito DevOps!',
     startsAt: '2026-11-10T19:00:00-03:00',
-    venue: "UFU",
+    venue: 'UFU FEELT',
+    venueAddress:
+      'Av. João Naves de Ávila, 2121 - Direção FEELT - Bairro Santa Mônica',
     durationMinutes: 50,
     dayLabel: 'Terça, 10 de novembro',
     timeLabel: '19h',
@@ -163,11 +185,28 @@ export const TALKS: Talk[] = [
         'Cloud, IBM Champion, KCD/CNCF organizer, organizadora de eventos no Rio de DevOps e palestrante de ' +
         'eventos de DevOps pelo mundo. Nas horas vagas, estou curtindo a vida viajando por aí (já viajei 30 ' +
         'países e contando) e afofando meus gatinhos pretos <3',
-      credentials: ['Google Developer Expert em Cloud', 'Docker Captain', 'IBM Champion', 'DevOpsDays Core Organizer'],
+      credentials: [
+        'Google Developer Expert em Cloud',
+        'Docker Captain',
+        'IBM Champion',
+        'DevOpsDays Core Organizer',
+      ],
       links: [
-        { label: 'Instagram', icon: 'fa-brands fa-instagram', url: 'https://www.instagram.com/punkdodevops' },
-        { label: 'GitHub', icon: 'fa-brands fa-github', url: 'https://github.com/camilla-m' },
-        { label: 'punkdodevops.com', icon: 'ph ph-globe', url: 'https://punkdodevops.com' },
+        {
+          label: 'Instagram',
+          icon: 'fa-brands fa-instagram',
+          url: 'https://www.instagram.com/punkdodevops',
+        },
+        {
+          label: 'GitHub',
+          icon: 'fa-brands fa-github',
+          url: 'https://github.com/camilla-m',
+        },
+        {
+          label: 'punkdodevops.com',
+          icon: 'ph ph-globe',
+          url: 'https://punkdodevops.com',
+        },
       ],
     },
   },
@@ -187,9 +226,18 @@ export function talkStatus(talk: Talk, now: Date = new Date()): TalkStatus {
   return current <= end ? 'live' : 'done';
 }
 
+/** "10 de novembro" — o `dayLabel` sem o dia da semana. */
+export function talkDateLabel(talk: Talk): string {
+  return talk.dayLabel.split(', ').pop() ?? talk.dayLabel;
+}
+
 /** Link "Adicionar ao Google Agenda" com data, horário e descrição da palestra. */
 export function talkCalendarUrl(talk: Talk): string {
-  const toUtcStamp = (date: Date) => date.toISOString().replace(/[-:]/g, '').replace(/\.\d{3}/, '');
+  const toUtcStamp = (date: Date) =>
+    date
+      .toISOString()
+      .replace(/[-:]/g, '')
+      .replace(/\.\d{3}/, '');
   const start = new Date(talk.startsAt);
   const end = new Date(start.getTime() + talk.durationMinutes * 60_000);
 
@@ -200,7 +248,11 @@ export function talkCalendarUrl(talk: Talk): string {
     details:
       `Palestra com ${talk.speaker.name} na semana de palestras do NASA Space Apps Uberlândia 2026` +
       `${talk.withPartner ? `, em parceria com o ${TALKS_PARTNER.shortName}` : ''}.\n\n${talk.summary}`,
-    location: talk.venue ?? 'Uberlândia, MG',
+    location: talk.venue
+      ? [talk.venue, talk.venueAddress, 'Uberlândia, MG']
+          .filter(Boolean)
+          .join(', ')
+      : 'Uberlândia, MG',
   });
 
   return `https://calendar.google.com/calendar/render?${params}`;

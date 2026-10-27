@@ -15,6 +15,8 @@ import {
 import { ChallengeDetailModalComponent } from '../shared/challenge-detail-modal/challenge-detail-modal.component';
 import { ChallengeShareModalComponent } from '../shared/challenge-share/challenge-share-modal.component';
 import { PartnerLogoComponent } from '../shared/partner-logo/partner-logo.component';
+import { TalkShareModalComponent } from '../shared/talk-share/talk-share-modal.component';
+import { TalkPostKind } from '../shared/talk-share/talk-share.model';
 
 interface ScheduleDay {
   label: string;
@@ -27,7 +29,13 @@ interface ScheduleDay {
  */
 @Component({
   selector: 'app-talks',
-  imports: [RouterLink, ChallengeDetailModalComponent, ChallengeShareModalComponent, PartnerLogoComponent],
+  imports: [
+    RouterLink,
+    ChallengeDetailModalComponent,
+    ChallengeShareModalComponent,
+    PartnerLogoComponent,
+    TalkShareModalComponent,
+  ],
   templateUrl: './talks.component.html',
   styleUrl: './talks.component.scss',
 })
@@ -57,6 +65,9 @@ export class TalksComponent {
 
   /** Desafio aberto na exportação para o Instagram; `null` com o modal fechado. */
   readonly sharedChallenge = signal<Challenge | null>(null);
+
+  /** Palestra aberta na exportação dos posts; `null` com o modal fechado. */
+  readonly sharedTalk = signal<{ talk: Talk; kind: TalkPostKind } | null>(null);
 
   status(talk: Talk): TalkStatus {
     return talkStatus(talk);
@@ -103,6 +114,19 @@ export class TalksComponent {
 
   closeShare(): void {
     this.sharedChallenge.set(null);
+  }
+
+  /** Primeira palestra da pessoa — é ela que vai no post de quem fala. */
+  talkOf(speaker: Speaker): Talk | undefined {
+    return this.talks.find(talk => talk.speaker.name === speaker.name);
+  }
+
+  openTalkShare(talk: Talk, kind: TalkPostKind): void {
+    this.sharedTalk.set({ talk, kind });
+  }
+
+  closeTalkShare(): void {
+    this.sharedTalk.set(null);
   }
 
   private groupByDay(talks: Talk[]): ScheduleDay[] {
