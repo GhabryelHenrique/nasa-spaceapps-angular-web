@@ -8,10 +8,10 @@
           "hasPreviousPage": false,
           "hasNextPage": false,
           "startCursor": "b2Zmc2V0OjA=",
-          "endCursor": "b2Zmc2V0OjE1",
+          "endCursor": "b2Zmc2V0OjE4",
           "__typename": "PageInfo"
         },
-        "totalCount": 16,
+        "totalCount": 19,
         "edges": [
           {
             "__typename": "TeamPageEdge",
@@ -80,10 +80,10 @@
                 "title": "Create Health Monitoring Software for Astronauts on Space Missions",
                 "meta": {
                   "type": "CHALLENGE",
-                  "slug": "create-health-monitoring-software-for-astronauts-on-space-missions",
-                  "firstPublishedAt": "2026-09-17T14:21:16.942007Z",
-                  "lastPublishedAt": "2026-09-17T14:21:16.942007Z",
-                  "relativeUrl": "/2026/challenges/create-health-monitoring-software-for-astronauts-on-space-missions/",
+                  "slug": "health-monitoring-software",
+                  "firstPublishedAt": "2026-09-17T14:21:16.942000Z",
+                  "lastPublishedAt": "2026-10-23T21:32:27.126494Z",
+                  "relativeUrl": "/2026/challenges/health-monitoring-software/",
                   "live": true,
                   "parent": null,
                   "__typename": "ExpandedPageMeta"
@@ -185,7 +185,7 @@
                   "type": "CHALLENGE",
                   "slug": "interplanetary-survival-guide-martian-map",
                   "firstPublishedAt": "2026-09-17T14:21:03.079121Z",
-                  "lastPublishedAt": "2026-09-17T14:21:03.079121Z",
+                  "lastPublishedAt": "2026-10-20T21:06:45.154985Z",
                   "relativeUrl": "/2026/challenges/interplanetary-survival-guide-martian-map/",
                   "live": true,
                   "parent": null,
@@ -268,8 +268,8 @@
                 "meta": {
                   "type": "CHALLENGE",
                   "slug": "build-a-junior-astronaut-mission-trainer",
-                  "firstPublishedAt": "2026-09-17T14:22:28.522299Z",
-                  "lastPublishedAt": "2026-09-17T14:22:28.522299Z",
+                  "firstPublishedAt": "2026-09-17T14:22:28.522000Z",
+                  "lastPublishedAt": "2026-10-20T21:04:54.331522Z",
                   "relativeUrl": "/2026/challenges/build-a-junior-astronaut-mission-trainer/",
                   "live": true,
                   "parent": null,
@@ -371,8 +371,8 @@
                 "meta": {
                   "type": "CHALLENGE",
                   "slug": "build-a-junior-astronaut-mission-trainer",
-                  "firstPublishedAt": "2026-09-17T14:22:28.522299Z",
-                  "lastPublishedAt": "2026-09-17T14:22:28.522299Z",
+                  "firstPublishedAt": "2026-09-17T14:22:28.522000Z",
+                  "lastPublishedAt": "2026-10-20T21:04:54.331522Z",
                   "relativeUrl": "/2026/challenges/build-a-junior-astronaut-mission-trainer/",
                   "live": true,
                   "parent": null,
@@ -409,6 +409,193 @@
           {
             "__typename": "TeamPageEdge",
             "cursor": "b2Zmc2V0OjQ=",
+            "node": {
+              "__typename": "TeamPage",
+              "id": "aWQ6Njg3MzU=",
+              "title": "Blue Marble Records",
+              "meta": {
+                "type": "TEAM",
+                "slug": "blue-marble-records",
+                "firstPublishedAt": "2026-10-20T03:00:02.536000Z",
+                "lastPublishedAt": "2026-10-20T03:13:02.307529Z",
+                "relativeUrl": "/2026/find-a-team/blue-marble-records/",
+                "live": true,
+                "parent": null,
+                "__typename": "ExpandedPageMeta"
+              },
+              "owner": "aWQ6MzM4YTRmNjktYzA2OS00YjEyLThkYTQtOTk3OTlhYWE3NDM3",
+              "ownerDetails": null,
+              "excerpt": "Ganharemos esse hackathon!",
+              "project": "aWQ6NjUxMzc=",
+              "projectDetails": {
+                "id": "aWQ6NjUxMzc=",
+                "name": "Project Blue Marble Records",
+                "summary": "",
+                "demoLink": "",
+                "projectLink": "",
+                "details": "",
+                "solution": "",
+                "aiReferences": "",
+                "dataReferences": "",
+                "projectReferences": "",
+                "isSubmitted": false,
+                "savedAt": null,
+                "submittedAt": null,
+                "__typename": "Project"
+              },
+              "projectSubmitted": false,
+              "featuredImage": {
+                "id": "aWQ6NDgzNTE2",
+                "meta": {
+                  "type": "images.CustomImage",
+                  "downloadUrl": "https://assets.spaceappschallenge.org/media/original_images/Logotipo_Planeta_Azul_em_Vinil.png",
+                  "__typename": "ImageMeta"
+                },
+                "title": "team_image.00:44:06.431150",
+                "alt": "team_image.00:44:06.431150",
+                "caption": "team_image.00:44:06.431150",
+                "displaySize": "or",
+                "rendition": {
+                  "url": "https://assets.spaceappschallenge.org/media/images/Logotipo_Planeta_Azul_em_Vinil.2e16d0ba.fill-300x250.png",
+                  "fullUrl": "https://assets.spaceappschallenge.org/media/images/Logotipo_Planeta_Azul_em_Vinil.2e16d0ba.fill-300x250.png",
+                  "height": 250,
+                  "width": 300,
+                  "__typename": "BaseImage"
+                },
+                "__typename": "DefaultImage"
+              },
+              "description": null,
+              "desiredSkills": null,
+              "languages": null,
+              "challenge": "aWQ6NTUxMTc=",
+              "challengeDetails": {
+                "id": "aWQ6NTUxMTc=",
+                "title": "The Earth Information Jukebox",
+                "meta": {
+                  "type": "CHALLENGE",
+                  "slug": "the-earth-information-jukebox",
+                  "firstPublishedAt": "2025-08-18T19:28:40.472000Z",
+                  "lastPublishedAt": "2026-10-20T20:59:45.653798Z",
+                  "relativeUrl": "/2026/challenges/the-earth-information-jukebox/",
+                  "live": true,
+                  "parent": null,
+                  "__typename": "ExpandedPageMeta"
+                },
+                "excerpt": "NASA’s Earth Information Center (EIC) produces stunning visualizations of our changing planet, but presenting Earth science through visualization alone limits who can reach it. We invite you to make this complex Earth science accessible, engaging, and multi-sensory by translating sight into sound. Your challenge is to build an \"Earth Jukebox\"—an interface, script, or application that pairs EIC visual frames with dynamic sonifications generated in real time.",
+                "__typename": "ChallengePage"
+              },
+              "location": "aWQ6NTQ0NDY=",
+              "locationDetails": {
+                "id": "aWQ6NTQ0NDY=",
+                "title": "Uberlândia",
+                "displayName": "",
+                "meta": {
+                  "type": "LOCATION",
+                  "slug": "uberlandia",
+                  "firstPublishedAt": "2026-08-20T13:11:16.191000Z",
+                  "lastPublishedAt": "2026-10-14T13:41:20.125128Z",
+                  "relativeUrl": "/2026/local-events/uberlandia/",
+                  "live": true,
+                  "parent": null,
+                  "__typename": "ExpandedPageMeta"
+                },
+                "country": "Brazil",
+                "__typename": "LocationPage"
+              },
+              "event": "aWQ6NA==",
+              "joinEnabled": true,
+              "memberships": null,
+              "nominationBadges": null,
+              "awardBadges": null
+            }
+          },
+          {
+            "__typename": "TeamPageEdge",
+            "cursor": "b2Zmc2V0OjU=",
+            "node": {
+              "__typename": "TeamPage",
+              "id": "aWQ6Njk3NDk=",
+              "title": "Code and cheese",
+              "meta": {
+                "type": "TEAM",
+                "slug": "code-and-cheese",
+                "firstPublishedAt": "2026-10-22T14:42:09.166067Z",
+                "lastPublishedAt": "2026-10-22T14:42:09.166067Z",
+                "relativeUrl": "/2026/find-a-team/code-and-cheese/",
+                "live": true,
+                "parent": null,
+                "__typename": "ExpandedPageMeta"
+              },
+              "owner": "aWQ6NTIzMTNiOGYtOTQxZC00MWY2LTgwODUtMjkzMzRlODU2MTgx",
+              "ownerDetails": null,
+              "excerpt": "We are a Brazilian team from the field of Computer Science, passionate about space, programming, and innovation. With expertise in full-stack development, AI/machine learning, and computer vision, we transform NASA data into creative, high-impact ...",
+              "project": "aWQ6NjYxNTE=",
+              "projectDetails": {
+                "id": "aWQ6NjYxNTE=",
+                "name": "Project Code and cheese",
+                "summary": "",
+                "demoLink": "",
+                "projectLink": "",
+                "details": "",
+                "solution": "",
+                "aiReferences": "",
+                "dataReferences": "",
+                "projectReferences": "",
+                "isSubmitted": false,
+                "savedAt": null,
+                "submittedAt": null,
+                "__typename": "Project"
+              },
+              "projectSubmitted": false,
+              "featuredImage": null,
+              "description": null,
+              "desiredSkills": null,
+              "languages": null,
+              "challenge": "aWQ6NTUxMjQ=",
+              "challengeDetails": {
+                "id": "aWQ6NTUxMjQ=",
+                "title": "Build a Junior Astronaut Mission Trainer",
+                "meta": {
+                  "type": "CHALLENGE",
+                  "slug": "build-a-junior-astronaut-mission-trainer",
+                  "firstPublishedAt": "2026-09-17T14:22:28.522000Z",
+                  "lastPublishedAt": "2026-10-20T21:04:54.331522Z",
+                  "relativeUrl": "/2026/challenges/build-a-junior-astronaut-mission-trainer/",
+                  "live": true,
+                  "parent": null,
+                  "__typename": "ExpandedPageMeta"
+                },
+                "excerpt": "Space-themed STEM content often oversimplifies the engineering trade-offs that define a real mission or presents them at a level too complex to hold a young learner's attention. Few tools make those trade-offs both tangible and fun. Your challenge is to design and build an interactive game or app that lets students run a lunar or Martian outpost, balancing competing demands like life support, radiation shielding, power, and food production, so they experience firsthand the decisions that determine whether a mission fails or succeeds.",
+                "__typename": "ChallengePage"
+              },
+              "location": "aWQ6NTQ0NDY=",
+              "locationDetails": {
+                "id": "aWQ6NTQ0NDY=",
+                "title": "Uberlândia",
+                "displayName": "",
+                "meta": {
+                  "type": "LOCATION",
+                  "slug": "uberlandia",
+                  "firstPublishedAt": "2026-08-20T13:11:16.191000Z",
+                  "lastPublishedAt": "2026-10-14T13:41:20.125128Z",
+                  "relativeUrl": "/2026/local-events/uberlandia/",
+                  "live": true,
+                  "parent": null,
+                  "__typename": "ExpandedPageMeta"
+                },
+                "country": "Brazil",
+                "__typename": "LocationPage"
+              },
+              "event": "aWQ6NA==",
+              "joinEnabled": true,
+              "memberships": null,
+              "nominationBadges": null,
+              "awardBadges": null
+            }
+          },
+          {
+            "__typename": "TeamPageEdge",
+            "cursor": "b2Zmc2V0OjY=",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6NjM5OTI=",
@@ -473,10 +660,10 @@
                 "title": "Field Shift: Adapting Farms with NASA Data",
                 "meta": {
                   "type": "CHALLENGE",
-                  "slug": "field-shift-adapting-farms-with-nasa-data",
-                  "firstPublishedAt": "2026-09-17T14:22:15.778779Z",
-                  "lastPublishedAt": "2026-09-17T14:22:15.778779Z",
-                  "relativeUrl": "/2026/challenges/field-shift-adapting-farms-with-nasa-data/",
+                  "slug": "adapting-farms-with-nasa-data",
+                  "firstPublishedAt": "2026-09-17T14:22:15.778000Z",
+                  "lastPublishedAt": "2026-10-21T22:33:03.051585Z",
+                  "relativeUrl": "/2026/challenges/adapting-farms-with-nasa-data/",
                   "live": true,
                   "parent": null,
                   "__typename": "ExpandedPageMeta"
@@ -511,7 +698,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjU=",
+            "cursor": "b2Zmc2V0Ojc=",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6NTU1OTM=",
@@ -577,8 +764,8 @@
                 "meta": {
                   "type": "CHALLENGE",
                   "slug": "build-a-junior-astronaut-mission-trainer",
-                  "firstPublishedAt": "2026-09-17T14:22:28.522299Z",
-                  "lastPublishedAt": "2026-09-17T14:22:28.522299Z",
+                  "firstPublishedAt": "2026-09-17T14:22:28.522000Z",
+                  "lastPublishedAt": "2026-10-20T21:04:54.331522Z",
                   "relativeUrl": "/2026/challenges/build-a-junior-astronaut-mission-trainer/",
                   "live": true,
                   "parent": null,
@@ -614,7 +801,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjY=",
+            "cursor": "b2Zmc2V0Ojg=",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6NjEwMjA=",
@@ -679,10 +866,10 @@
                 "title": "Create Health Monitoring Software for Astronauts on Space Missions",
                 "meta": {
                   "type": "CHALLENGE",
-                  "slug": "create-health-monitoring-software-for-astronauts-on-space-missions",
-                  "firstPublishedAt": "2026-09-17T14:21:16.942007Z",
-                  "lastPublishedAt": "2026-09-17T14:21:16.942007Z",
-                  "relativeUrl": "/2026/challenges/create-health-monitoring-software-for-astronauts-on-space-missions/",
+                  "slug": "health-monitoring-software",
+                  "firstPublishedAt": "2026-09-17T14:21:16.942000Z",
+                  "lastPublishedAt": "2026-10-23T21:32:27.126494Z",
+                  "relativeUrl": "/2026/challenges/health-monitoring-software/",
                   "live": true,
                   "parent": null,
                   "__typename": "ExpandedPageMeta"
@@ -717,7 +904,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0Ojc=",
+            "cursor": "b2Zmc2V0Ojk=",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6NTU1ODA=",
@@ -784,7 +971,7 @@
                   "type": "CHALLENGE",
                   "slug": "interplanetary-survival-guide-martian-map",
                   "firstPublishedAt": "2026-09-17T14:21:03.079121Z",
-                  "lastPublishedAt": "2026-09-17T14:21:03.079121Z",
+                  "lastPublishedAt": "2026-10-20T21:06:45.154985Z",
                   "relativeUrl": "/2026/challenges/interplanetary-survival-guide-martian-map/",
                   "live": true,
                   "parent": null,
@@ -820,7 +1007,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0Ojg=",
+            "cursor": "b2Zmc2V0OjEw",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6NjI0Njg=",
@@ -885,10 +1072,10 @@
                 "title": "Flame in Freefall: AI-Powered Fire Safety Insights from Microgravity Combustion Data",
                 "meta": {
                   "type": "CHALLENGE",
-                  "slug": "flame-in-freefall-ai-powered-fire-safety-insights-from-microgravity-combustion-data",
+                  "slug": "flame-in-freefall",
                   "firstPublishedAt": "2026-09-17T14:20:54.577000Z",
-                  "lastPublishedAt": "2026-10-13T20:46:20.814591Z",
-                  "relativeUrl": "/2026/challenges/flame-in-freefall-ai-powered-fire-safety-insights-from-microgravity-combustion-data/",
+                  "lastPublishedAt": "2026-10-20T23:02:22.896993Z",
+                  "relativeUrl": "/2026/challenges/flame-in-freefall/",
                   "live": true,
                   "parent": null,
                   "__typename": "ExpandedPageMeta"
@@ -923,7 +1110,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0Ojk=",
+            "cursor": "b2Zmc2V0OjEx",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6NjY4Mjc=",
@@ -971,7 +1158,7 @@
                   "type": "CHALLENGE",
                   "slug": "interplanetary-survival-guide-martian-map",
                   "firstPublishedAt": "2026-09-17T14:21:03.079121Z",
-                  "lastPublishedAt": "2026-09-17T14:21:03.079121Z",
+                  "lastPublishedAt": "2026-10-20T21:06:45.154985Z",
                   "relativeUrl": "/2026/challenges/interplanetary-survival-guide-martian-map/",
                   "live": true,
                   "parent": null,
@@ -1007,7 +1194,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjEw",
+            "cursor": "b2Zmc2V0OjEy",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6NjY4NTk=",
@@ -1016,7 +1203,7 @@
                 "type": "TEAM",
                 "slug": "nome-do-grupo",
                 "firstPublishedAt": "2026-10-14T20:08:10.684000Z",
-                "lastPublishedAt": "2026-10-14T21:06:44.863833Z",
+                "lastPublishedAt": "2026-10-20T00:37:22.503268Z",
                 "relativeUrl": "/2026/find-a-team/nome-do-grupo/",
                 "live": true,
                 "parent": null,
@@ -1082,10 +1269,10 @@
                 "title": "Field Shift: Adapting Farms with NASA Data",
                 "meta": {
                   "type": "CHALLENGE",
-                  "slug": "field-shift-adapting-farms-with-nasa-data",
-                  "firstPublishedAt": "2026-09-17T14:22:15.778779Z",
-                  "lastPublishedAt": "2026-09-17T14:22:15.778779Z",
-                  "relativeUrl": "/2026/challenges/field-shift-adapting-farms-with-nasa-data/",
+                  "slug": "adapting-farms-with-nasa-data",
+                  "firstPublishedAt": "2026-09-17T14:22:15.778000Z",
+                  "lastPublishedAt": "2026-10-21T22:33:03.051585Z",
+                  "relativeUrl": "/2026/challenges/adapting-farms-with-nasa-data/",
                   "live": true,
                   "parent": null,
                   "__typename": "ExpandedPageMeta"
@@ -1120,7 +1307,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjEx",
+            "cursor": "b2Zmc2V0OjEz",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6NTg0NDE=",
@@ -1166,10 +1353,10 @@
                 "title": "Create Health Monitoring Software for Astronauts on Space Missions",
                 "meta": {
                   "type": "CHALLENGE",
-                  "slug": "create-health-monitoring-software-for-astronauts-on-space-missions",
-                  "firstPublishedAt": "2026-09-17T14:21:16.942007Z",
-                  "lastPublishedAt": "2026-09-17T14:21:16.942007Z",
-                  "relativeUrl": "/2026/challenges/create-health-monitoring-software-for-astronauts-on-space-missions/",
+                  "slug": "health-monitoring-software",
+                  "firstPublishedAt": "2026-09-17T14:21:16.942000Z",
+                  "lastPublishedAt": "2026-10-23T21:32:27.126494Z",
+                  "relativeUrl": "/2026/challenges/health-monitoring-software/",
                   "live": true,
                   "parent": null,
                   "__typename": "ExpandedPageMeta"
@@ -1204,7 +1391,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjEy",
+            "cursor": "b2Zmc2V0OjE0",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6NjQ3Mjg=",
@@ -1269,10 +1456,10 @@
                 "title": "Flame in Freefall: AI-Powered Fire Safety Insights from Microgravity Combustion Data",
                 "meta": {
                   "type": "CHALLENGE",
-                  "slug": "flame-in-freefall-ai-powered-fire-safety-insights-from-microgravity-combustion-data",
+                  "slug": "flame-in-freefall",
                   "firstPublishedAt": "2026-09-17T14:20:54.577000Z",
-                  "lastPublishedAt": "2026-10-13T20:46:20.814591Z",
-                  "relativeUrl": "/2026/challenges/flame-in-freefall-ai-powered-fire-safety-insights-from-microgravity-combustion-data/",
+                  "lastPublishedAt": "2026-10-20T23:02:22.896993Z",
+                  "relativeUrl": "/2026/challenges/flame-in-freefall/",
                   "live": true,
                   "parent": null,
                   "__typename": "ExpandedPageMeta"
@@ -1307,7 +1494,110 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjEz",
+            "cursor": "b2Zmc2V0OjE1",
+            "node": {
+              "__typename": "TeamPage",
+              "id": "aWQ6NzE1NjU=",
+              "title": "Polo",
+              "meta": {
+                "type": "TEAM",
+                "slug": "polo",
+                "firstPublishedAt": null,
+                "lastPublishedAt": null,
+                "relativeUrl": "/2026/find-a-team/polo/",
+                "live": true,
+                "parent": null,
+                "__typename": "ExpandedPageMeta"
+              },
+              "owner": "aWQ6ZDAyYTdlYzAtOTI4Zi00ZDMwLWE5OTQtYmUzNTY4Y2ViMzhk",
+              "ownerDetails": null,
+              "excerpt": "Caí de paraquedas aqui, o que custa tentar né?",
+              "project": "aWQ6Njc5Njc=",
+              "projectDetails": {
+                "id": "aWQ6Njc5Njc=",
+                "name": "Project Polo",
+                "summary": "",
+                "demoLink": "",
+                "projectLink": "",
+                "details": "",
+                "solution": "",
+                "aiReferences": "",
+                "dataReferences": "",
+                "projectReferences": "",
+                "isSubmitted": false,
+                "savedAt": null,
+                "submittedAt": null,
+                "__typename": "Project"
+              },
+              "projectSubmitted": false,
+              "featuredImage": {
+                "id": "aWQ6NDk2MDc1",
+                "meta": {
+                  "type": "images.CustomImage",
+                  "downloadUrl": "https://assets.spaceappschallenge.org/media/original_images/1000084112_sTYHdUJ.jpg",
+                  "__typename": "ImageMeta"
+                },
+                "title": "team_image.03:34:43.878160",
+                "alt": "team_image.03:34:43.878160",
+                "caption": "team_image.03:34:43.878160",
+                "displaySize": "or",
+                "rendition": {
+                  "url": "https://assets.spaceappschallenge.org/media/images/1000084112_sTYHdUJ.2e16d0ba.fill-300x250.jpg",
+                  "fullUrl": "https://assets.spaceappschallenge.org/media/images/1000084112_sTYHdUJ.2e16d0ba.fill-300x250.jpg",
+                  "height": 250,
+                  "width": 300,
+                  "__typename": "BaseImage"
+                },
+                "__typename": "DefaultImage"
+              },
+              "description": null,
+              "desiredSkills": null,
+              "languages": null,
+              "challenge": "aWQ6NTUxMTg=",
+              "challengeDetails": {
+                "id": "aWQ6NTUxMTg=",
+                "title": "Interplanetary Survival Guide: Martian Map",
+                "meta": {
+                  "type": "CHALLENGE",
+                  "slug": "interplanetary-survival-guide-martian-map",
+                  "firstPublishedAt": "2026-09-17T14:21:03.079121Z",
+                  "lastPublishedAt": "2026-10-20T21:06:45.154985Z",
+                  "relativeUrl": "/2026/challenges/interplanetary-survival-guide-martian-map/",
+                  "live": true,
+                  "parent": null,
+                  "__typename": "ExpandedPageMeta"
+                },
+                "excerpt": "NASA has explored Mars robotically for decades, studying its extreme environment, mapping its surface, and collecting many types of data. Far from home, the first astronauts to set foot on Mars will want the best map possible, with information on the details of their routes and destinations, updates on current conditions, and the data needed to complete their mission quickly and safely. Your challenge is to create a layered, integrated view of a location or route on the Martian surface that pulls together data from multiple NASA science missions and could help a human explorer plan and carry out a successful Marswalk while conducting new and exciting science along the way.",
+                "__typename": "ChallengePage"
+              },
+              "location": "aWQ6NTQ0NDY=",
+              "locationDetails": {
+                "id": "aWQ6NTQ0NDY=",
+                "title": "Uberlândia",
+                "displayName": "",
+                "meta": {
+                  "type": "LOCATION",
+                  "slug": "uberlandia",
+                  "firstPublishedAt": "2026-08-20T13:11:16.191000Z",
+                  "lastPublishedAt": "2026-10-14T13:41:20.125128Z",
+                  "relativeUrl": "/2026/local-events/uberlandia/",
+                  "live": true,
+                  "parent": null,
+                  "__typename": "ExpandedPageMeta"
+                },
+                "country": "Brazil",
+                "__typename": "LocationPage"
+              },
+              "event": "aWQ6NA==",
+              "joinEnabled": true,
+              "memberships": null,
+              "nominationBadges": null,
+              "awardBadges": null
+            }
+          },
+          {
+            "__typename": "TeamPageEdge",
+            "cursor": "b2Zmc2V0OjE2",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6NjYwNTI=",
@@ -1354,8 +1644,8 @@
                 "meta": {
                   "type": "CHALLENGE",
                   "slug": "build-a-junior-astronaut-mission-trainer",
-                  "firstPublishedAt": "2026-09-17T14:22:28.522299Z",
-                  "lastPublishedAt": "2026-09-17T14:22:28.522299Z",
+                  "firstPublishedAt": "2026-09-17T14:22:28.522000Z",
+                  "lastPublishedAt": "2026-10-20T21:04:54.331522Z",
                   "relativeUrl": "/2026/challenges/build-a-junior-astronaut-mission-trainer/",
                   "live": true,
                   "parent": null,
@@ -1391,7 +1681,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjE0",
+            "cursor": "b2Zmc2V0OjE3",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6NTY5ODE=",
@@ -1457,8 +1747,8 @@
                 "meta": {
                   "type": "CHALLENGE",
                   "slug": "build-a-junior-astronaut-mission-trainer",
-                  "firstPublishedAt": "2026-09-17T14:22:28.522299Z",
-                  "lastPublishedAt": "2026-09-17T14:22:28.522299Z",
+                  "firstPublishedAt": "2026-09-17T14:22:28.522000Z",
+                  "lastPublishedAt": "2026-10-20T21:04:54.331522Z",
                   "relativeUrl": "/2026/challenges/build-a-junior-astronaut-mission-trainer/",
                   "live": true,
                   "parent": null,
@@ -1494,7 +1784,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjE1",
+            "cursor": "b2Zmc2V0OjE4",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6NTgyMTg=",
@@ -1561,7 +1851,7 @@
                   "type": "CHALLENGE",
                   "slug": "interplanetary-survival-guide-martian-map",
                   "firstPublishedAt": "2026-09-17T14:21:03.079121Z",
-                  "lastPublishedAt": "2026-09-17T14:21:03.079121Z",
+                  "lastPublishedAt": "2026-10-20T21:06:45.154985Z",
                   "relativeUrl": "/2026/challenges/interplanetary-survival-guide-martian-map/",
                   "live": true,
                   "parent": null,
