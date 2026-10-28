@@ -60,6 +60,7 @@ Public: `''` (landing), `desafios`, `como-se-inscrever`, `palestras`, `times`, `
 ## Important Notes
 - **Inscrições 2026**: participantes se inscrevem no site da NASA (não há formulário próprio); mentores, voluntários e palestrantes usam um Google Form cada, da organização local (`SUPPORT_FORMS`). Todas as URLs (mais WhatsApp/Discord/Instagram e o vídeo do YouTube) ficam centralizadas em `src/app/shared/data/registration.data.ts` — altere lá, não nos templates
 - **Semana de palestras** (parceria com o Google Developer Groups): palestras, palestrantes e o link "Adicionar à agenda" vêm de `TALKS` em `src/app/shared/data/talks.data.ts` — `/palestras` e a seção da home (`talks-section`, que só mostra palestras futuras) se montam a partir dessa lista. Fotos ficam em `src/assets/speakers/`. Só publique dados públicos do formulário de palestrantes (nunca e-mail/telefone)
+- **Desafios 2026**: título/resumo/tags em `src/app/shared/data/challenges-2026.data.ts`; os enunciados completos traduzidos (contexto, objetivos, considerações) ficam em `src/app/shared/data/statements-2026/` numa marcação mínima (`## ` subtítulo, `- ` item, `  - ` subitem) lida por `challenge-statement.ts`. O modal de detalhes e o post do Instagram (carrossel paginado automaticamente no canvas) se montam a partir desses textos
 - Angular 22, standalone components, signals for state; no NgModules
 - No SSR (client-only build, deployed to GitHub Pages via `npm run build-deploy`)
 - Portuguese-first UI; API error messages are already in Portuguese and are displayed verbatim

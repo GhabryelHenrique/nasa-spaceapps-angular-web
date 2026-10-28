@@ -1,11 +1,15 @@
 import { Component, HostListener, computed, input, output } from '@angular/core';
-import { Challenge, CURRENT_CHALLENGE_YEAR, challengeDetailUrl } from '../data/challenges.data';
+import {
+  Challenge,
+  CURRENT_CHALLENGE_YEAR,
+  StatementSectionId,
+  challengeDetailUrl,
+  statementSections
+} from '../data/challenges.data';
 
 /**
- * Modal com o detalhamento de um desafio.
- *
- * Enquanto o site da NASA não publica as páginas de 2026, o "Ver Detalhes" abre
- * este modal em vez de mandar o participante para um link que ainda dá 404.
+ * Modal com o detalhamento de um desafio: resumo e, quando a NASA já publicou,
+ * o enunciado completo traduzido (contexto, objetivos e considerações).
  */
 @Component({
   selector: 'app-challenge-detail-modal',
@@ -23,6 +27,20 @@ export class ChallengeDetailModalComponent {
   readonly share = output<void>();
 
   readonly nasaUrl = computed(() => challengeDetailUrl(this.year(), this.challenge().slug));
+
+  readonly sections = computed(() => {
+    const statement = this.challenge().statement;
+    return statement ? statementSections(statement) : [];
+  });
+
+  /** Atalhos do topo do enunciado: rola o modal até a seção, sem mexer na URL. */
+  scrollTo(id: StatementSectionId): void {
+    document.getElementById(this.sectionAnchor(id))?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  }
+
+  sectionAnchor(id: StatementSectionId): string {
+    return `challenge-${this.challenge().id}-${id}`;
+  }
 
   close(): void {
     this.closed.emit();

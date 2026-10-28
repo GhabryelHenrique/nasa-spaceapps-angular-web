@@ -4,8 +4,9 @@ import { Challenge, CHALLENGES_DATA, CURRENT_CHALLENGE_YEAR } from '../data/chal
  * Legenda sugerida para o post do desafio no Instagram.
  *
  * É um ponto de partida editável, não um texto fechado: a ideia é o pessoal de
- * comunicação ajustar o tom e manter o bloco final (datas, regra do enunciado e
- * hashtags), que é o que se repete em todos os posts da série.
+ * comunicação ajustar o tom e manter o bloco final (datas, regra do hackathon e
+ * hashtags), que é o que se repete em todos os posts da série. O enunciado
+ * completo vai nos slides do carrossel — a legenda só aponta para ele.
  */
 
 const HASHTAGS = [
@@ -36,6 +37,13 @@ export function buildInstagramCaption(
     challenge.excerpt
   ];
 
+  if (challenge.statement) {
+    blocks.push(
+      '👉 Arrasta pro lado: o enunciado completo, traduzido, está no carrossel — contexto, ' +
+        'objetivos e considerações da NASA.'
+    );
+  }
+
   if (areas) blocks.push(`🧭 Áreas: ${areas}`);
   if (levels) blocks.push(`🎯 Nível sugerido: ${levels} (é só um guia — qualquer pessoa pode encarar)`);
 
@@ -43,7 +51,7 @@ export function buildInstagramCaption(
     `Os ${CHALLENGES_DATA.length} desafios do NASA Space Apps Challenge ${year} já estão no ar! ` +
       'Escolha o seu, monte uma equipe de até 6 pessoas e prepare-se para 48 horas de maratona ' +
       'nos dias 14 e 15 de novembro, aqui em Uberlândia.',
-    '📄 Enunciado completo, com os conjuntos de dados da NASA: 28 de outubro\n' +
+    '📄 Conjuntos de dados e recursos da NASA: na página oficial do desafio\n' +
       '✍️ Inscrição gratuita no site da NASA — link na bio\n' +
       '⚠️ Vale escolher o desafio e formar a equipe agora; desenvolver o projeto, só no hackathon',
     HASHTAGS.join(' ')
@@ -61,15 +69,15 @@ export function buildCollectionCaption(year: number = CURRENT_CHALLENGE_YEAR): s
 
   return [
     `🚀 OS ${CHALLENGES_DATA.length} DESAFIOS DO NASA SPACE APPS CHALLENGE ${year} JÁ ESTÃO NO AR!`,
-    'A NASA divulgou os resumos dos desafios da edição The Next Frontier — e tem missão ' +
-      `para todo tipo de gente: ${areas}.`,
+    'A NASA publicou os enunciados completos dos desafios da edição The Next Frontier — e tem ' +
+      `missão para todo tipo de gente: ${areas}.`,
     'Arrasta pro lado e escolhe o teu 👉',
     'Como entrar nessa:\n' +
       `1️⃣ Escolha um dos ${CHALLENGES_DATA.length} desafios\n` +
       '2️⃣ Monte uma equipe de até 6 pessoas\n' +
       '3️⃣ Faça a inscrição gratuita no site da NASA — link na bio',
     '📅 14 e 15 de novembro · Uberlândia (MG)\n' +
-      '📄 Enunciados completos, com os conjuntos de dados da NASA: 28 de outubro\n' +
+      '📄 Enunciados completos, traduzidos, no nosso site — link na bio\n' +
       '⚠️ Escolher desafio e formar equipe pode ser agora; desenvolver o projeto, só no hackathon',
     'Em 2025 Uberlândia foi a maior sede do Hemisfério Ocidental, com 1400+ participantes ' +
       'e 10 Global Nominees. Em 2026 a missão recomeça — e pode ter você nela.',

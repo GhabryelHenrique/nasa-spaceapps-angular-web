@@ -1,10 +1,11 @@
 /**
  * Desafios oficiais do NASA Space Apps Challenge 2026.
  *
- * Fonte: resumos ("challenge summaries") apresentados no treinamento de Local
- * Leads "Team Formation & Challenges" (14/09/2026) — ver `src/assets/desafios/`.
- * Títulos e resumos foram traduzidos para português; dificuldades e tags de tema
- * reproduzem exatamente o que a NASA exibe.
+ * Fonte: páginas oficiais em spaceappschallenge.org/2026/challenges (enunciados
+ * completos publicados em 28/10/2026). Títulos, resumos e enunciados foram
+ * traduzidos para português; dificuldades e tags de tema reproduzem exatamente o
+ * que a NASA exibe. Os enunciados ficam em `statements-2026/`, um arquivo por
+ * bloco de desafios, e são anexados aqui pelo `id`.
  *
  * Duas mudanças em relação a 2025: são 14 desafios (não 19) e o
  * "Crie Seu Próprio Desafio" foi arquivado — todo projeto precisa responder a
@@ -12,8 +13,13 @@
  */
 
 import { ADVANCED, BEGINNER, Challenge, INTERMEDIATE } from './challenge.model';
+import { STATEMENTS_2026_A } from './statements-2026/statements-a';
+import { STATEMENTS_2026_B } from './statements-2026/statements-b';
+import { STATEMENTS_2026_C } from './statements-2026/statements-c';
 
-export const CHALLENGES_2026: Challenge[] = [
+const STATEMENTS_2026 = { ...STATEMENTS_2026_A, ...STATEMENTS_2026_B, ...STATEMENTS_2026_C };
+
+const SUMMARIES_2026: Challenge[] = [
   {
     id: '2026-01',
     title: 'Abandonados, mas Não Esquecidos: Contando a História dos Equipamentos Descartados da NASA na Lua e em Marte',
@@ -24,7 +30,7 @@ export const CHALLENGES_2026: Challenge[] = [
     },
     categories: [INTERMEDIATE, BEGINNER],
     tags: ['Astrofísica', 'Planetas & Luas', 'Exploração Espacial'],
-    slug: 'abandoned-but-not-forgotten-storytelling-about-nasas-discarded-equipment-on-the-moon-and-mars'
+    slug: 'nasas-discarded-equipment-storytelling'
   },
   {
     id: '2026-02',
@@ -36,7 +42,7 @@ export const CHALLENGES_2026: Challenge[] = [
     },
     categories: [ADVANCED],
     tags: ['Ciências da Terra', 'Software'],
-    slug: 'be-an-earth-system-trend-detective'
+    slug: 'earth-system-trend-detective'
   },
   {
     id: '2026-03',
@@ -48,19 +54,19 @@ export const CHALLENGES_2026: Challenge[] = [
     },
     categories: [INTERMEDIATE, BEGINNER],
     tags: ['Jogos', 'Planetas & Luas', 'Software', 'Exploração Espacial', 'Sol'],
-    slug: 'build-a-junior-astronaut-mission-trainer'
+    slug: 'junior-astronaut-mission-trainer'
   },
   {
     id: '2026-04',
-    title: 'Navegador de Missões Lunares CLPS',
+    title: 'Navegador de Locais de Pouso Lunar',
     excerpt: 'Missões ao polo sul da Lua enfrentam restrições extremas de iluminação e comunicação, e planejá-las exige coordenação cuidadosa entre as equipes de ciência e de engenharia. Já existem ferramentas para determinar as posições do Sol e da Terra em locais candidatos a pouso, mas suas interfaces complicadas dificultam avaliar informações críticas com eficiência. Seu desafio é criar uma ferramenta ou aplicação intuitiva que permita a planejadores de missão, educadores e ao público comparar rapidamente locais e datas de pouso, visualizando as posições do Sol e da Terra em relação ao horizonte para avaliar o potencial de geração de energia e as janelas de comunicação direta com a Terra.',
     featuredImage: {
       url: 'assets/desafios/2026/clps-lunar-mission-browser.jpg',
       alt: 'Superfície craterada do polo sul da Lua'
     },
-    categories: [ADVANCED, INTERMEDIATE, BEGINNER],
-    tags: ['Ciências da Terra'],
-    slug: 'clps-lunar-mission-browser'
+    categories: [ADVANCED, INTERMEDIATE],
+    tags: ['Exploração Humana', 'Lua', 'Software', 'Exploração Espacial'],
+    slug: 'lunar-landing-site-navigator'
   },
   {
     id: '2026-05',
@@ -71,8 +77,8 @@ export const CHALLENGES_2026: Challenge[] = [
       alt: 'Astronauta se exercitando na Estação Espacial Internacional ao lado de um painel de sinais vitais'
     },
     categories: [INTERMEDIATE],
-    tags: ['Software', 'Exploração Espacial'],
-    slug: 'create-health-monitoring-software-for-astronauts-on-space-missions'
+    tags: ['Exploração Humana', 'Software', 'Exploração Espacial'],
+    slug: 'health-monitoring-software'
   },
   {
     id: '2026-06',
@@ -96,19 +102,19 @@ export const CHALLENGES_2026: Challenge[] = [
     },
     categories: [ADVANCED, INTERMEDIATE],
     tags: ['Artes & Multimídia', 'Ciências da Terra', 'Software'],
-    slug: 'field-shift-adapting-farms-with-nasa-data'
+    slug: 'adapting-farms-with-nasa-data'
   },
   {
     id: '2026-08',
     title: 'Chama em Queda Livre: Segurança contra Incêndio com IA a partir de Dados de Combustão em Microgravidade',
-    excerpt: 'Há décadas a NASA estuda como chamas e incêndios se comportam em microgravidade, acumulando no caminho um vasto acervo de dados experimentais. Esse conhecimento importa mais do que nunca enquanto nos preparamos para voltar à Lua e seguir rumo a Marte, mas o volume de resultados os torna difíceis de encontrar, comparar e entender. Seu desafio é criar um painel interativo movido a inteligência artificial que resuma, classifique e interprete esses achados para entregar insights de segurança contra incêndio para a exploração espacial humana.',
+    excerpt: 'Há décadas a NASA estuda como chamas e incêndios se comportam em microgravidade, acumulando no caminho um vasto acervo de dados experimentais. Esse conhecimento importa mais do que nunca enquanto nos preparamos para voltar à Lua e seguir rumo a Marte, mas o volume de resultados os torna difíceis de encontrar, comparar e entender. Seu desafio é criar um painel interativo movido a superinteligência (SI) que resuma, classifique e interprete esses achados para entregar insights de segurança contra incêndio para a exploração espacial humana.',
     featuredImage: {
       url: 'assets/desafios/2026/flame-in-freefall.jpg',
       alt: 'Chama esférica queimando em microgravidade durante experimento da NASA'
     },
     categories: [ADVANCED, INTERMEDIATE],
     tags: ['Exploração Espacial'],
-    slug: 'flame-in-freefall-ai-powered-fire-safety-insights-from-microgravity-combustion-data'
+    slug: 'flame-in-freefall'
   },
   {
     id: '2026-09',
@@ -119,20 +125,20 @@ export const CHALLENGES_2026: Challenge[] = [
       alt: 'Imagem de satélite em falsas cores mostrando cicatriz de incêndio e foco de calor ativo'
     },
     categories: [ADVANCED, INTERMEDIATE],
-    tags: [],
-    slug: 'harmonization-of-modis-and-viirs-hot-spots'
+    tags: ['Ciências da Terra', 'Software'],
+    slug: 'modis-and-viirs-hot-spots'
   },
   {
     id: '2026-10',
     title: 'Identifique Locais na Terra Análogos às Futuras Bases Permanentes na Lua e em Marte',
-    excerpt: 'A escolha de futuros locais de pouso e de bases lunares depende de muitos fatores, entre eles topografia, geologia, ambiente e recursos disponíveis. Lugares na Terra com características análogas às da Lua ou de Marte — o Deserto do Atacama, a Cratera Haughton, o Vale da Morte — permitem que equipes de missão testem equipamentos e métodos antes do voo; no entanto, esses sítios análogos terrestres não estão totalmente caracterizados. Seu desafio é usar dados abertos da Terra, da Lua e de Marte da NASA e de outras agências espaciais para identificar e caracterizar novos análogos terrestres para futuras bases ou locais de pouso, recorrendo a desertos, regiões polares, terrenos vulcânicos e áridos, cavernas e outros ambientes que compartilhem condições com a superfície lunar ou marciana.',
+    excerpt: 'A escolha de futuros locais de pouso e de bases lunares depende de muitos fatores, entre eles topografia, geologia, ambiente e recursos disponíveis. Lugares na Terra com características análogas às da Lua ou de Marte — o Deserto do Atacama, a Cratera Haughton, o Vale da Morte — permitem que equipes de missão testem equipamentos e métodos antes do voo; no entanto, esses sítios análogos terrestres não estão totalmente caracterizados. Seu desafio é usar dados abertos da Terra, da Lua e de Marte da NASA e de outras agências espaciais para identificar e caracterizar novos análogos terrestres para futuras bases ou locais de pouso, recorrendo a desertos, regiões polares, terrenos vulcânicos e áridos, cavernas e outros ambientes que compartilhem condições com a superfície lunar ou marciana, e então apresentar suas descobertas em um mapa, uma visualização ou outra ferramenta.',
     featuredImage: {
       url: 'assets/desafios/2026/identify-earth-locations-analog.jpg',
       alt: 'Nascer da Terra visto acima do horizonte lunar'
     },
     categories: [ADVANCED, INTERMEDIATE, BEGINNER],
     tags: ['Ciências da Terra', 'Planetas & Luas', 'Software', 'Exploração Espacial'],
-    slug: 'identify-earth-locations-that-analog-the-permanent-moon-base-locations-and-mars'
+    slug: 'permanent-moon-base-locations-and-mars'
   },
   {
     id: '2026-11',
@@ -143,7 +149,7 @@ export const CHALLENGES_2026: Challenge[] = [
       alt: 'Concepção artística de astronautas e um módulo de pouso na superfície de Marte'
     },
     categories: [INTERMEDIATE],
-    tags: ['Software', 'Exploração Espacial'],
+    tags: ['Exploração Humana', 'Marte', 'Planetas & Luas', 'Software', 'Exploração Espacial'],
     slug: 'interplanetary-survival-guide-martian-map'
   },
   {
@@ -155,7 +161,7 @@ export const CHALLENGES_2026: Challenge[] = [
       alt: 'Concepção artística do observatório espacial SPHEREx em órbita da Terra'
     },
     categories: [ADVANCED],
-    tags: ['Exploração Espacial'],
+    tags: ['Astrofísica', 'Planetas & Luas', 'Software'],
     slug: 'planet-x-and-spherex'
   },
   {
@@ -183,3 +189,8 @@ export const CHALLENGES_2026: Challenge[] = [
     slug: 'the-earth-information-jukebox'
   }
 ];
+
+export const CHALLENGES_2026: Challenge[] = SUMMARIES_2026.map(challenge => ({
+  ...challenge,
+  statement: STATEMENTS_2026[challenge.id]
+}));

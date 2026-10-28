@@ -4,8 +4,8 @@
  * `/desafios` redireciona para a edição corrente; `/desafios/2025` e
  * `/desafios/2026` renderizam o mesmo componente, trocando só a edição.
  *
- * Calendário de 2026: os resumos saem em 17/09 e o enunciado completo (com os
- * conjuntos de dados da NASA) só em 28/10. Nenhuma equipe pode começar a
+ * Calendário de 2026: os resumos saíram em 17/09 e o enunciado completo (com os
+ * conjuntos de dados da NASA) em 28/10. Nenhuma equipe pode começar a
  * trabalhar antes do hackathon (14 e 15/11) — começar antes desclassifica.
  */
 
@@ -14,6 +14,7 @@ import { CHALLENGES_2025 } from './challenges-2025.data';
 import { CHALLENGES_2026 } from './challenges-2026.data';
 
 export * from './challenge.model';
+export * from './challenge-statement';
 
 /** Edição corrente — é para onde `/desafios` aponta. */
 export const CURRENT_CHALLENGE_YEAR = 2026;

@@ -27,6 +27,21 @@ export interface Challenge {
   /** Habilidades (2025) ou temas (2026), conforme o `tagsLabel` da edição. */
   tags: string[];
   slug: string;
+  /** Enunciado completo, quando a NASA já publicou (em 2026, a partir de 28/10). */
+  statement?: ChallengeStatement;
+}
+
+/**
+ * As três seções do enunciado oficial, já traduzidas.
+ *
+ * Cada campo usa uma marcação mínima que `parseStatement()` entende: parágrafos
+ * separados por linha em branco, `## ` para subtítulo, `- ` para item de lista
+ * e `  - ` (dois espaços) para subitem.
+ */
+export interface ChallengeStatement {
+  background: string;
+  objectives: string;
+  considerations: string;
 }
 
 export interface ChallengeEdition {

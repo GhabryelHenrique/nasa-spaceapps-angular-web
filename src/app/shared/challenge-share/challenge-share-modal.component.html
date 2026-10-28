@@ -9,16 +9,16 @@
     <header class="share-head">
       <p class="share-eyebrow">
         <i class="ph ph-instagram-logo" aria-hidden="true"></i>
-        Card para o Instagram
+        Post para o Instagram
       </p>
       <h2 id="share-title" class="share-title">{{ challenge().title }}</h2>
     </header>
 
     <div class="share-body">
 
-      <!-- ─── Card ──────────────────────────────────────── -->
-      <section class="share-card" aria-label="Prévia do card">
-        <div class="format-switch" role="tablist" aria-label="Formato do card">
+      <!-- ─── Carrossel ─────────────────────────────────── -->
+      <section class="share-card" aria-label="Prévia do carrossel">
+        <div class="format-switch" role="tablist" aria-label="Formato do post">
           @for (option of formats; track option.id) {
             <button type="button" role="tab"
                     [class.active]="format().id === option.id"
@@ -30,18 +30,63 @@
           }
         </div>
 
-        <div class="canvas-frame" [class.is-rendering]="rendering()">
-          <canvas #cardCanvas
-                  [attr.aria-label]="'Card do desafio ' + challenge().title"></canvas>
-          @if (rendering()) {
-            <p class="canvas-status">Gerando card…</p>
+        <div class="canvas-frame" [style.aspect-ratio]="format().width + ' / ' + format().height">
+          @if (current(); as slide) {
+            <img [src]="slide.url" [alt]="'Slide ' + (selected() + 1) + ': ' + slide.label">
+          } @else {
+            <p class="canvas-status">Gerando post…</p>
+          }
+
+          @if (slides().length > 1) {
+            <button type="button" class="slide-nav prev" (click)="select(selected() - 1)"
+                    [disabled]="selected() === 0" aria-label="Slide anterior">
+              <i class="ph ph-caret-left" aria-hidden="true"></i>
+            </button>
+            <button type="button" class="slide-nav next" (click)="select(selected() + 1)"
+                    [disabled]="selected() === slides().length - 1" aria-label="Próximo slide">
+              <i class="ph ph-caret-right" aria-hidden="true"></i>
+            </button>
           }
         </div>
 
-        <button type="button" class="share-btn primary" (click)="download()" [disabled]="rendering()">
-          <i class="ph ph-download-simple" aria-hidden="true"></i>
-          Baixar PNG {{ format().hint }}
-        </button>
+        <p class="slide-counter" aria-live="polite">
+          @if (current(); as slide) {
+            Slide {{ selected() + 1 }} de {{ slides().length }}{{ rendering() ? '…' : '' }}
+            · <strong>{{ slide.label }}</strong>
+          }
+        </p>
+
+        <div class="slide-strip" role="tablist" aria-label="Slides do carrossel">
+          @for (slide of slides(); track slide.fileStem; let i = $index) {
+            <button type="button" role="tab"
+                    [class.active]="i === selected()"
+                    [attr.aria-selected]="i === selected()"
+                    [attr.aria-label]="'Slide ' + (i + 1) + ': ' + slide.label"
+                    (click)="select(i)">
+              <img [src]="slide.url" alt="">
+            </button>
+          }
+        </div>
+
+        @if (!rendering() && slides().length > carouselLimit) {
+          <p class="share-warning">
+            <i class="ph ph-warning" aria-hidden="true"></i>
+            São {{ slides().length }} slides, e o Instagram aceita até {{ carouselLimit }} por carrossel.
+            Divida em dois posts.
+          </p>
+        }
+
+        <div class="download-actions">
+          <button type="button" class="share-btn primary" (click)="downloadAll()"
+                  [disabled]="rendering() || !slides().length">
+            <i class="ph ph-file-zip" aria-hidden="true"></i>
+            {{ rendering() ? 'Gerando slides…' : 'Baixar post completo (.zip)' }}
+          </button>
+          <button type="button" class="share-btn ghost" (click)="downloadCurrent()" [disabled]="!current()">
+            <i class="ph ph-download-simple" aria-hidden="true"></i>
+            Baixar só este slide
+          </button>
+        </div>
       </section>
 
       <!-- ─── Legenda ───────────────────────────────────── -->
@@ -68,8 +113,9 @@
         </div>
 
         <p class="caption-hint">
-          O Instagram aceita até 2.200 caracteres. As hashtags podem ir no primeiro
-          comentário se você preferir a legenda mais limpa.
+          O carrossel traz o enunciado completo: resumo, contexto, objetivos e considerações, seguidos do
+          slide de inscrição. O .zip já vem com os slides numerados na ordem certa e com a legenda.
+          O Instagram aceita até 2.200 caracteres na legenda; as hashtags podem ir no primeiro comentário.
         </p>
       </section>
     </div>

@@ -44,7 +44,7 @@
             </li>
             <li>
               <strong>28 de outubro</strong>
-              <span>Enunciados completos, com os conjuntos de dados da NASA</span>
+              <span>Enunciados completos publicados — traduzidos aqui: clique em "Ver Detalhes"</span>
             </li>
             <li>
               <strong>14 e 15 de novembro</strong>
@@ -64,7 +64,8 @@
               <h2>Vai divulgar?</h2>
               <p>
                 Baixe os {{ edition().challenges.length }} cards prontos para o Instagram — feed e stories —
-                com uma legenda única para o carrossel.
+                com uma legenda única para o carrossel. Para o post de um desafio com o enunciado completo,
+                use o botão do Instagram no card dele.
               </p>
             </div>
             <button type="button" class="press-kit-btn" (click)="openBulkExport()">
@@ -163,8 +164,8 @@
                   <button
                     type="button"
                     class="challenge-share"
-                    [attr.aria-label]="'Gerar card do Instagram para ' + challenge.title"
-                    title="Card para o Instagram"
+                    [attr.aria-label]="'Gerar post do Instagram para ' + challenge.title"
+                    title="Post para o Instagram"
                     (click)="openShare(challenge)">
                     <i class="ph ph-instagram-logo" aria-hidden="true"></i>
                   </button>

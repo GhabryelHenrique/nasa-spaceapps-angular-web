@@ -42,11 +42,57 @@
       <h3 class="section-label">Resumo do desafio</h3>
       <p class="modal-excerpt">{{ challenge().excerpt }}</p>
 
+      @if (sections().length) {
+        <nav class="statement-nav" aria-label="Seções do enunciado">
+          @for (section of sections(); track section.id) {
+            <button type="button" (click)="scrollTo(section.id)">{{ section.title }}</button>
+          }
+        </nav>
+
+        @for (section of sections(); track section.id) {
+          <section class="statement-section" [id]="sectionAnchor(section.id)">
+            <h3 class="statement-title">{{ section.title }}</h3>
+
+            @for (block of section.blocks; track $index) {
+              @switch (block.kind) {
+                @case ('heading') {
+                  <h4 class="statement-subtitle">{{ block.text }}</h4>
+                }
+                @case ('paragraph') {
+                  <p>{{ block.text }}</p>
+                }
+                @case ('list') {
+                  <ul>
+                    @for (item of block.items; track $index) {
+                      <li>
+                        {{ item.text }}
+                        @if (item.children.length) {
+                          <ul>
+                            @for (child of item.children; track $index) {
+                              <li>{{ child }}</li>
+                            }
+                          </ul>
+                        }
+                      </li>
+                    }
+                  </ul>
+                }
+              }
+            }
+          </section>
+        }
+      }
+
       @if (isCurrentEdition()) {
         <p class="modal-hint">
-          Este é o resumo do desafio. O enunciado completo, com os conjuntos de dados da NASA que devem ser
-          usados, é publicado em <strong>28 de outubro</strong> — e o trabalho no projeto só pode começar no
-          hackathon, em <strong>14 e 15 de novembro</strong>.
+          @if (sections().length) {
+            Os conjuntos de dados e recursos indicados pela NASA para este desafio estão na aba
+            <strong>Resources</strong> da página oficial. Lembre-se: o trabalho no projeto só pode começar no
+            hackathon, em <strong>14 e 15 de novembro</strong>.
+          } @else {
+            O enunciado completo, com os conjuntos de dados da NASA, está na página oficial do desafio — e o
+            trabalho no projeto só pode começar no hackathon, em <strong>14 e 15 de novembro</strong>.
+          }
         </p>
       } @else {
         <p class="modal-hint archived">
@@ -63,7 +109,7 @@
         @if (isCurrentEdition()) {
           <button type="button" class="modal-btn secondary" (click)="share.emit()">
             <i class="ph ph-instagram-logo" aria-hidden="true"></i>
-            Card para o Instagram
+            Post para o Instagram
           </button>
         }
         <button type="button" class="modal-btn secondary" (click)="close()">Fechar</button>

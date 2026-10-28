@@ -127,7 +127,7 @@ export class HowToRegisterComponent {
       icon: 'ph ph-target',
       title: 'Escolha seu desafio',
       description:
-        'As declarações oficiais dos desafios saem em 28 de outubro. Até lá, use os resumos para ir estudando os temas que combinam com o time.',
+        'Os enunciados oficiais dos desafios foram publicados em 28 de outubro — e estão traduzidos aqui no site. Estude os que combinam com o time.',
       details: [
         'São dezenas de desafios, de dados de satélite a educação e clima',
         'A escolha final pode ser feita no próprio dia do evento',

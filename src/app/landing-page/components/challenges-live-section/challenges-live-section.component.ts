@@ -9,8 +9,8 @@ import { ChallengeShareModalComponent } from '../../../shared/challenge-share/ch
  * "Os desafios saíram" — bloco logo abaixo do hero.
  *
  * Os resumos da edição 2026 foram publicados em 17/09, junto com a liberação da
- * formação de equipes; os enunciados completos (com os conjuntos de dados) só
- * saem em 28/10. A seção anuncia isso e leva para `/desafios`, mostrando uma
+ * formação de equipes, e os enunciados completos em 28/10 (traduzidos no modal
+ * de detalhes). A seção anuncia isso e leva para `/desafios`, mostrando uma
  * prévia de três desafios — um de cada nível — em vez de repetir a lista inteira.
  */
 @Component({

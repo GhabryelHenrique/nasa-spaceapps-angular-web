@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { Challenge } from '../data/challenges.data';
+import { Challenge, StatementBlock, statementSections } from '../data/challenges.data';
 import { ShareFormat } from './challenge-share.model';
 import {
   canvasToPng,
@@ -42,6 +42,15 @@ const TITLE_GAP = 26;
 /** Altura da caixa de destaque do slide de encerramento. */
 const HIGHLIGHT_HEIGHT = 176;
 
+/** Corpo dos slides de enunciado — um pouco menor que o resumo, porque o texto é longo. */
+const STATEMENT_SIZE = 30;
+const STATEMENT_LINE_HEIGHT = 43;
+/** Recuo do texto dos itens de lista e dos subitens, a partir da margem. */
+const BULLET_INDENT = 38;
+const CHILD_INDENT = 76;
+/** Título do desafio no topo dos slides de enunciado: sempre reserva duas linhas. */
+const STATEMENT_TITLE_LINE_HEIGHT = 40;
+
 /** Fontes da marca que precisam estar carregadas antes do primeiro `fillText`. */
 const REQUIRED_FONTS = [
   '900 64px "Fira Sans"',
@@ -53,6 +62,27 @@ interface Box {
   x: number;
   y: number;
   width: number;
+}
+
+/** Uma linha já quebrada do enunciado, pronta para ir para o canvas. */
+interface StatementLine {
+  text: string;
+  indent: number;
+  style: 'body' | 'heading';
+  /** Só a primeira linha de cada item leva o marcador. */
+  marker?: 'bullet' | 'child';
+  gapBefore: number;
+  /** Subtítulo não pode ficar sozinho no pé do slide. */
+  keepWithNext?: boolean;
+}
+
+/** Um slide de texto do carrossel: um pedaço de uma das seções do enunciado. */
+export interface StatementSlide {
+  sectionTitle: string;
+  /** Página dentro da seção, começando em 1. */
+  page: number;
+  pages: number;
+  lines: StatementLine[];
 }
 
 @Injectable({ providedIn: 'root' })
@@ -207,6 +237,76 @@ export class ChallengeCardImageService {
     );
   }
 
+  /**
+   * Quebra o enunciado em slides de texto para o formato informado. Cada seção
+   * (contexto, objetivos, considerações) começa num slide novo e se estende por
+   * quantos forem precisos — nada do texto é cortado.
+   */
+  async planStatementSlides(challenge: Challenge, format: ShareFormat): Promise<StatementSlide[]> {
+    if (!challenge.statement) return [];
+
+    await loadFonts(REQUIRED_FONTS);
+    const ctx = prepareCanvas(document.createElement('canvas'), 1, 1);
+    const pad = 76;
+    const { contentTop, contentBottom } = this.statementBounds(format);
+
+    return statementSections(challenge.statement).flatMap(section => {
+      const lines = this.layoutStatement(ctx, section.blocks, format.width - pad * 2);
+      const pages = this.paginate(lines, contentBottom - contentTop);
+
+      return pages.map((pageLines, index) => ({
+        sectionTitle: section.title,
+        page: index + 1,
+        pages: pages.length,
+        lines: pageLines
+      }));
+    });
+  }
+
+  /** Desenha um slide de texto planejado por `planStatementSlides()`. */
+  async renderStatement(
+    canvas: HTMLCanvasElement,
+    challenge: Challenge,
+    slide: StatementSlide,
+    format: ShareFormat
+  ): Promise<void> {
+    const ctx = prepareCanvas(canvas, format.width, format.height);
+    const [logo, pattern] = await Promise.all([
+      loadImage(LOGO_SRC),
+      loadImage(PATTERN_SRC),
+      loadFonts(REQUIRED_FONTS)
+    ]);
+
+    const pad = 76;
+    const width = format.width - pad * 2;
+    const bounds = this.statementBounds(format);
+    const { top: footerTop, bottom: footerBottom } = this.footerBounds(format);
+
+    this.drawBackground(ctx, format, pattern);
+
+    const counter = slide.pages > 1 ? `  ·  ${slide.page}/${slide.pages}` : '';
+    this.drawEyebrow(ctx, { x: pad, y: bounds.top, width }, `${slide.sectionTitle.toUpperCase()}${counter}`);
+
+    // O título do desafio vai pequeno no topo: o slide pode circular sozinho.
+    ctx.save();
+    setLetterSpacing(ctx, '0.5px');
+    ctx.font = '900 32px "Fira Sans", sans-serif';
+    ctx.fillStyle = WHITE;
+    ctx.textBaseline = 'top';
+    clampLines(ctx, wrapText(ctx, challenge.title.toUpperCase(), width), 2, width).forEach((line, i) =>
+      ctx.fillText(line, pad, bounds.titleY + i * STATEMENT_TITLE_LINE_HEIGHT)
+    );
+    ctx.restore();
+
+    ctx.fillStyle = 'rgba(255, 255, 255, 0.12)';
+    ctx.fillRect(pad, bounds.dividerY, width, 2);
+    ctx.fillStyle = BLUE_YONDER;
+    ctx.fillRect(pad, bounds.dividerY, 120, 2);
+
+    this.drawStatementLines(ctx, slide.lines, pad, bounds.contentTop);
+    this.drawFooter(ctx, logo, format, footerTop, footerBottom, pad);
+  }
+
   /** PNG do card, pronto para download. */
   async toBlob(canvas: HTMLCanvasElement): Promise<Blob> {
     return canvasToPng(canvas);
@@ -228,6 +328,152 @@ export class ChallengeCardImageService {
 
     const cut = slug.lastIndexOf('-', max);
     return slug.slice(0, cut > 12 ? cut : max);
+  }
+
+  // ─── Slides do enunciado ────────────────────────────────────
+
+  /** Faixas verticais do slide de texto. No story, o topo desce para fugir da barra do Instagram. */
+  private statementBounds(format: ShareFormat): {
+    top: number;
+    titleY: number;
+    dividerY: number;
+    contentTop: number;
+    contentBottom: number;
+  } {
+    const top = format.id === 'feed' ? 92 : 210;
+    const titleY = top + 58;
+    const dividerY = titleY + STATEMENT_TITLE_LINE_HEIGHT * 2 + 22;
+    return {
+      top,
+      titleY,
+      dividerY,
+      contentTop: dividerY + 40,
+      contentBottom: this.footerBounds(format).top - 44
+    };
+  }
+
+  private statementFont(style: StatementLine['style']): string {
+    return style === 'heading'
+      ? `700 ${STATEMENT_SIZE}px "Overpass", sans-serif`
+      : `300 ${STATEMENT_SIZE}px "Overpass", sans-serif`;
+  }
+
+  /** Transforma os blocos de uma seção em linhas já quebradas na largura útil. */
+  private layoutStatement(
+    ctx: CanvasRenderingContext2D,
+    blocks: StatementBlock[],
+    width: number
+  ): StatementLine[] {
+    const lines: StatementLine[] = [];
+    const blockGap = 22;
+
+    const push = (
+      text: string,
+      style: StatementLine['style'],
+      indent: number,
+      gapBefore: number,
+      marker?: StatementLine['marker']
+    ): void => {
+      ctx.font = this.statementFont(style);
+      wrapText(ctx, text, width - indent).forEach((line, i) =>
+        lines.push({
+          text: line,
+          indent,
+          style,
+          marker: i === 0 ? marker : undefined,
+          gapBefore: i === 0 ? gapBefore : 0,
+          keepWithNext: style === 'heading'
+        })
+      );
+    };
+
+    blocks.forEach((block, index) => {
+      const gap = index === 0 ? 0 : blockGap;
+
+      switch (block.kind) {
+        case 'heading':
+          push(block.text, 'heading', 0, index === 0 ? 0 : 34);
+          break;
+        case 'paragraph':
+          push(block.text, 'body', 0, gap);
+          break;
+        case 'list':
+          block.items.forEach((item, itemIndex) => {
+            push(item.text, 'body', BULLET_INDENT, itemIndex === 0 ? gap : 14, 'bullet');
+            item.children.forEach(child => push(child, 'body', CHILD_INDENT, 8, 'child'));
+          });
+          break;
+      }
+    });
+
+    return lines;
+  }
+
+  /** Distribui as linhas em páginas da altura dada; o espaço antes do bloco some no topo da página. */
+  private paginate(lines: StatementLine[], height: number): StatementLine[][] {
+    const pages: StatementLine[][] = [[]];
+    let used = 0;
+
+    lines.forEach((line, index) => {
+      const page = pages[pages.length - 1];
+      const gap = page.length ? line.gapBefore : 0;
+      let needed = gap + STATEMENT_LINE_HEIGHT;
+
+      const next = lines[index + 1];
+      if (line.keepWithNext && next && !next.keepWithNext) {
+        needed += next.gapBefore + STATEMENT_LINE_HEIGHT;
+      }
+
+      if (page.length && used + needed > height) {
+        pages.push([line]);
+        used = STATEMENT_LINE_HEIGHT;
+      } else {
+        page.push(line);
+        used += gap + STATEMENT_LINE_HEIGHT;
+      }
+    });
+
+    return pages;
+  }
+
+  private drawStatementLines(
+    ctx: CanvasRenderingContext2D,
+    lines: StatementLine[],
+    x: number,
+    top: number
+  ): void {
+    let y = top;
+
+    lines.forEach((line, index) => {
+      if (index > 0) y += line.gapBefore;
+      const middle = y + STATEMENT_LINE_HEIGHT / 2;
+
+      if (line.marker === 'bullet') {
+        ctx.save();
+        ctx.translate(x + 9, middle);
+        ctx.rotate(Math.PI / 4);
+        ctx.fillStyle = NEON_YELLOW;
+        ctx.fillRect(-5, -5, 10, 10);
+        ctx.restore();
+      } else if (line.marker === 'child') {
+        ctx.save();
+        ctx.beginPath();
+        ctx.arc(x + BULLET_INDENT + 10, middle, 5, 0, Math.PI * 2);
+        ctx.strokeStyle = BLUE_YONDER;
+        ctx.lineWidth = 2;
+        ctx.stroke();
+        ctx.restore();
+      }
+
+      ctx.save();
+      ctx.font = this.statementFont(line.style);
+      ctx.fillStyle = line.style === 'heading' ? WHITE : TEXT_SECONDARY;
+      ctx.textBaseline = 'middle';
+      ctx.fillText(line.text, x + line.indent, middle + 1);
+      ctx.restore();
+
+      y += STATEMENT_LINE_HEIGHT;
+    });
   }
 
   // ─── Blocos do card ─────────────────────────────────────────
