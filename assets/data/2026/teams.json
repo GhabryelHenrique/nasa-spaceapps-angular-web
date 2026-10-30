@@ -8,14 +8,117 @@
           "hasPreviousPage": false,
           "hasNextPage": false,
           "startCursor": "b2Zmc2V0OjA=",
-          "endCursor": "b2Zmc2V0OjIw",
+          "endCursor": "b2Zmc2V0OjIz",
           "__typename": "PageInfo"
         },
-        "totalCount": 21,
+        "totalCount": 24,
         "edges": [
           {
             "__typename": "TeamPageEdge",
             "cursor": "b2Zmc2V0OjA=",
+            "node": {
+              "__typename": "TeamPage",
+              "id": "aWQ6NzI5ODA=",
+              "title": "27 Threads",
+              "meta": {
+                "type": "TEAM",
+                "slug": "27-threads-uberlandia",
+                "firstPublishedAt": "2026-10-29T16:40:57.458000Z",
+                "lastPublishedAt": "2026-10-29T16:59:31.557406Z",
+                "relativeUrl": "/2026/find-a-team/27-threads-uberlandia/",
+                "live": true,
+                "parent": null,
+                "__typename": "ExpandedPageMeta"
+              },
+              "owner": "aWQ6YWZiYzk2OTctZTU5MC00M2U4LTg3OWUtMzMxZTBjNmQyMDll",
+              "ownerDetails": null,
+              "excerpt": "Turma 27 de Sistemas de Informação da UFU - Universidade Federal de UberlândIA. Disparando 27 threads em paralelo para processar a realidade, quebrar barreiras lógicas e codificar soluções de outro mundo na órbita da NASA. 🚀🌌",
+              "project": "aWQ6NjkzODI=",
+              "projectDetails": {
+                "id": "aWQ6NjkzODI=",
+                "name": "Project 27 Threads - UberlandIA",
+                "summary": "",
+                "demoLink": "",
+                "projectLink": "",
+                "details": "",
+                "solution": "",
+                "aiReferences": "",
+                "dataReferences": "",
+                "projectReferences": "",
+                "isSubmitted": false,
+                "savedAt": null,
+                "submittedAt": null,
+                "__typename": "Project"
+              },
+              "projectSubmitted": false,
+              "featuredImage": {
+                "id": "aWQ6NTAyNzQw",
+                "meta": {
+                  "type": "images.CustomImage",
+                  "downloadUrl": "https://assets.spaceappschallenge.org/media/original_images/27_NYHegZb.png",
+                  "__typename": "ImageMeta"
+                },
+                "title": "team_image.15:35:25.152863",
+                "alt": "team_image.15:35:25.152863",
+                "caption": "team_image.15:35:25.152863",
+                "displaySize": "or",
+                "rendition": {
+                  "url": "https://assets.spaceappschallenge.org/media/images/27_NYHegZb.2e16d0ba.fill-300x250.png",
+                  "fullUrl": "https://assets.spaceappschallenge.org/media/images/27_NYHegZb.2e16d0ba.fill-300x250.png",
+                  "height": 250,
+                  "width": 300,
+                  "__typename": "BaseImage"
+                },
+                "__typename": "DefaultImage"
+              },
+              "description": null,
+              "desiredSkills": null,
+              "languages": null,
+              "challenge": "aWQ6NTUxMzI=",
+              "challengeDetails": {
+                "id": "aWQ6NTUxMzI=",
+                "title": "Harmonization of MODIS and VIIRS Hot Spots",
+                "meta": {
+                  "type": "CHALLENGE",
+                  "slug": "modis-and-viirs-hot-spots",
+                  "firstPublishedAt": "2026-09-17T14:22:01.787000Z",
+                  "lastPublishedAt": "2026-10-29T19:57:38.006643Z",
+                  "relativeUrl": "/2026/challenges/modis-and-viirs-hot-spots/",
+                  "live": true,
+                  "parent": null,
+                  "__typename": "ExpandedPageMeta"
+                },
+                "excerpt": "Understanding how burning activity is distributed across our planet over time, including wildfires and agricultural burns intense enough to be detected by satellite sensors, enables us to anticipate critical periods, guide monitoring efforts, and improve fire response.  Satellites have tracked active fire hotspots for more than two decades, but the record is split across sensors whose data cannot be compared directly, leaving fire managers without a consistent picture of when and where burning has occurred. Your challenge is to build a web application that harmonizes these records into a burning activity calendar based on active fire hotspots,  enabling early warning and emergency responders, scientists, and land managers to examine historical fire patterns, unusual conditions, and critical periods within a selected area of interest.",
+                "__typename": "ChallengePage"
+              },
+              "location": "aWQ6NTQ0NDY=",
+              "locationDetails": {
+                "id": "aWQ6NTQ0NDY=",
+                "title": "Uberlândia",
+                "displayName": "",
+                "meta": {
+                  "type": "LOCATION",
+                  "slug": "uberlandia",
+                  "firstPublishedAt": "2026-08-20T13:11:16.191000Z",
+                  "lastPublishedAt": "2026-10-14T13:41:20.125128Z",
+                  "relativeUrl": "/2026/local-events/uberlandia/",
+                  "live": true,
+                  "parent": null,
+                  "__typename": "ExpandedPageMeta"
+                },
+                "country": "Brazil",
+                "__typename": "LocationPage"
+              },
+              "event": "aWQ6NA==",
+              "joinEnabled": true,
+              "memberships": null,
+              "nominationBadges": null,
+              "awardBadges": null
+            }
+          },
+          {
+            "__typename": "TeamPageEdge",
+            "cursor": "b2Zmc2V0OjE=",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6NjY5MDA=",
@@ -82,7 +185,7 @@
                   "type": "CHALLENGE",
                   "slug": "health-monitoring-software",
                   "firstPublishedAt": "2026-09-17T14:21:16.942000Z",
-                  "lastPublishedAt": "2026-10-28T14:47:24.331400Z",
+                  "lastPublishedAt": "2026-10-29T19:54:08.931893Z",
                   "relativeUrl": "/2026/challenges/health-monitoring-software/",
                   "live": true,
                   "parent": null,
@@ -118,7 +221,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjE=",
+            "cursor": "b2Zmc2V0OjI=",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6NTgzMjU=",
@@ -221,7 +324,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjI=",
+            "cursor": "b2Zmc2V0OjM=",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6NTY1NzY=",
@@ -269,7 +372,7 @@
                   "type": "CHALLENGE",
                   "slug": "junior-astronaut-mission-trainer",
                   "firstPublishedAt": "2026-09-17T14:22:28.522000Z",
-                  "lastPublishedAt": "2026-10-28T14:17:54.600221Z",
+                  "lastPublishedAt": "2026-10-29T19:51:43.256733Z",
                   "relativeUrl": "/2026/challenges/junior-astronaut-mission-trainer/",
                   "live": true,
                   "parent": null,
@@ -305,7 +408,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjM=",
+            "cursor": "b2Zmc2V0OjQ=",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6NTg2NDg=",
@@ -372,7 +475,7 @@
                   "type": "CHALLENGE",
                   "slug": "junior-astronaut-mission-trainer",
                   "firstPublishedAt": "2026-09-17T14:22:28.522000Z",
-                  "lastPublishedAt": "2026-10-28T14:17:54.600221Z",
+                  "lastPublishedAt": "2026-10-29T19:51:43.256733Z",
                   "relativeUrl": "/2026/challenges/junior-astronaut-mission-trainer/",
                   "live": true,
                   "parent": null,
@@ -408,7 +511,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjQ=",
+            "cursor": "b2Zmc2V0OjU=",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6Njg3MzU=",
@@ -511,7 +614,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjU=",
+            "cursor": "b2Zmc2V0OjY=",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6Njk3NDk=",
@@ -519,8 +622,8 @@
               "meta": {
                 "type": "TEAM",
                 "slug": "code-and-cheese",
-                "firstPublishedAt": "2026-10-22T14:42:09.166067Z",
-                "lastPublishedAt": "2026-10-22T14:42:09.166067Z",
+                "firstPublishedAt": "2026-10-22T14:42:09.166000Z",
+                "lastPublishedAt": "2026-10-29T14:55:50.657766Z",
                 "relativeUrl": "/2026/find-a-team/code-and-cheese/",
                 "live": true,
                 "parent": null,
@@ -551,21 +654,21 @@
               "description": null,
               "desiredSkills": null,
               "languages": null,
-              "challenge": "aWQ6NTUxMjQ=",
+              "challenge": "aWQ6NTUxMzA=",
               "challengeDetails": {
-                "id": "aWQ6NTUxMjQ=",
-                "title": "Build a Junior Astronaut Mission Trainer",
+                "id": "aWQ6NTUxMzA=",
+                "title": "Create Health Monitoring Software for Astronauts on Space Missions",
                 "meta": {
                   "type": "CHALLENGE",
-                  "slug": "junior-astronaut-mission-trainer",
-                  "firstPublishedAt": "2026-09-17T14:22:28.522000Z",
-                  "lastPublishedAt": "2026-10-28T14:17:54.600221Z",
-                  "relativeUrl": "/2026/challenges/junior-astronaut-mission-trainer/",
+                  "slug": "health-monitoring-software",
+                  "firstPublishedAt": "2026-09-17T14:21:16.942000Z",
+                  "lastPublishedAt": "2026-10-29T19:54:08.931893Z",
+                  "relativeUrl": "/2026/challenges/health-monitoring-software/",
                   "live": true,
                   "parent": null,
                   "__typename": "ExpandedPageMeta"
                 },
-                "excerpt": "Space-themed STEM content often oversimplifies the engineering trade-offs that define a real mission or presents them at a level too complex to hold a young learner's attention. Few tools make those trade-offs both tangible and fun. Your challenge is to design and build an interactive game or app that lets students run a lunar or Martian outpost, balancing competing demands like life support, radiation shielding, power, and food production, so they experience firsthand the decisions that determine whether a mission fails or succeeds.",
+                "excerpt": "Long-duration missions expose astronauts to space radiation, isolation and confinement, altered gravity, and a hostile closed environment, which can bring immune changes, bone loss, cardiovascular events, and behavioral health problems. On long missions, astronauts carry much of the responsibility for spotting these changes in themselves. Your challenge is to build a health monitoring software that gathers health indicators and enables astronauts to evaluate and act on the status of their health.",
                 "__typename": "ChallengePage"
               },
               "location": "aWQ6NTQ0NDY=",
@@ -595,7 +698,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjY=",
+            "cursor": "b2Zmc2V0Ojc=",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6NjM5OTI=",
@@ -662,7 +765,7 @@
                   "type": "CHALLENGE",
                   "slug": "adapting-farms-with-nasa-data",
                   "firstPublishedAt": "2026-09-17T14:22:15.778000Z",
-                  "lastPublishedAt": "2026-10-28T15:00:14.935291Z",
+                  "lastPublishedAt": "2026-10-29T19:53:18.539274Z",
                   "relativeUrl": "/2026/challenges/adapting-farms-with-nasa-data/",
                   "live": true,
                   "parent": null,
@@ -698,7 +801,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0Ojc=",
+            "cursor": "b2Zmc2V0Ojg=",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6NTU1OTM=",
@@ -765,7 +868,7 @@
                   "type": "CHALLENGE",
                   "slug": "junior-astronaut-mission-trainer",
                   "firstPublishedAt": "2026-09-17T14:22:28.522000Z",
-                  "lastPublishedAt": "2026-10-28T14:17:54.600221Z",
+                  "lastPublishedAt": "2026-10-29T19:51:43.256733Z",
                   "relativeUrl": "/2026/challenges/junior-astronaut-mission-trainer/",
                   "live": true,
                   "parent": null,
@@ -801,7 +904,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0Ojg=",
+            "cursor": "b2Zmc2V0Ojk=",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6NzIwNTg=",
@@ -868,7 +971,7 @@
                   "type": "CHALLENGE",
                   "slug": "adapting-farms-with-nasa-data",
                   "firstPublishedAt": "2026-09-17T14:22:15.778000Z",
-                  "lastPublishedAt": "2026-10-28T15:00:14.935291Z",
+                  "lastPublishedAt": "2026-10-29T19:53:18.539274Z",
                   "relativeUrl": "/2026/challenges/adapting-farms-with-nasa-data/",
                   "live": true,
                   "parent": null,
@@ -904,7 +1007,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0Ojk=",
+            "cursor": "b2Zmc2V0OjEw",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6NjEwMjA=",
@@ -971,7 +1074,7 @@
                   "type": "CHALLENGE",
                   "slug": "health-monitoring-software",
                   "firstPublishedAt": "2026-09-17T14:21:16.942000Z",
-                  "lastPublishedAt": "2026-10-28T14:47:24.331400Z",
+                  "lastPublishedAt": "2026-10-29T19:54:08.931893Z",
                   "relativeUrl": "/2026/challenges/health-monitoring-software/",
                   "live": true,
                   "parent": null,
@@ -1007,7 +1110,110 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjEw",
+            "cursor": "b2Zmc2V0OjEx",
+            "node": {
+              "__typename": "TeamPage",
+              "id": "aWQ6NzMyMDY=",
+              "title": "Histórias nossas histórias",
+              "meta": {
+                "type": "TEAM",
+                "slug": "historias-nossas-historias",
+                "firstPublishedAt": null,
+                "lastPublishedAt": null,
+                "relativeUrl": "/2026/find-a-team/historias-nossas-historias/",
+                "live": true,
+                "parent": null,
+                "__typename": "ExpandedPageMeta"
+              },
+              "owner": "aWQ6NDZhYjhmMjYtNGEzYy00ZGZmLThhNDQtMGEzODk2MGEzOTc1",
+              "ownerDetails": null,
+              "excerpt": "Procuro uma equipe Quero muito fazer o desafio de contar as histórias dos robôs e equipamentos abandonados no espaço (Marte/Lua). Não sei programar e não quero liderar o grupo, mas sou ótima pesquisando e quero ajudar a escrever a história e monta...",
+              "project": "aWQ6Njk2MDQ=",
+              "projectDetails": {
+                "id": "aWQ6Njk2MDQ=",
+                "name": "Project Histórias nossas histórias",
+                "summary": "",
+                "demoLink": "",
+                "projectLink": "",
+                "details": "",
+                "solution": "",
+                "aiReferences": "",
+                "dataReferences": "",
+                "projectReferences": "",
+                "isSubmitted": false,
+                "savedAt": null,
+                "submittedAt": null,
+                "__typename": "Project"
+              },
+              "projectSubmitted": false,
+              "featuredImage": {
+                "id": "aWQ6NTAzNjk3",
+                "meta": {
+                  "type": "images.CustomImage",
+                  "downloadUrl": "https://assets.spaceappschallenge.org/media/original_images/1000963254.jpg",
+                  "__typename": "ImageMeta"
+                },
+                "title": "team_image.23:27:06.001740",
+                "alt": "team_image.23:27:06.001740",
+                "caption": "team_image.23:27:06.001740",
+                "displaySize": "or",
+                "rendition": {
+                  "url": "https://assets.spaceappschallenge.org/media/images/1000963254.2e16d0ba.fill-300x250.jpg",
+                  "fullUrl": "https://assets.spaceappschallenge.org/media/images/1000963254.2e16d0ba.fill-300x250.jpg",
+                  "height": 250,
+                  "width": 300,
+                  "__typename": "BaseImage"
+                },
+                "__typename": "DefaultImage"
+              },
+              "description": null,
+              "desiredSkills": null,
+              "languages": null,
+              "challenge": "aWQ6NTUxMjU=",
+              "challengeDetails": {
+                "id": "aWQ6NTUxMjU=",
+                "title": "Abandoned but not Forgotten: Storytelling about NASA's Discarded Equipment on the Moon and Mars",
+                "meta": {
+                  "type": "CHALLENGE",
+                  "slug": "nasas-discarded-equipment-storytelling",
+                  "firstPublishedAt": "2026-09-17T14:22:22.961000Z",
+                  "lastPublishedAt": "2026-10-28T14:17:50.381615Z",
+                  "relativeUrl": "/2026/challenges/nasas-discarded-equipment-storytelling/",
+                  "live": true,
+                  "parent": null,
+                  "__typename": "ExpandedPageMeta"
+                },
+                "excerpt": "Since the 1960s, NASA has left hardware across the solar system–on the Moon, on Mars, and in deep space. From rovers and instruments that completed their science missions to probes still traveling away from Earth this hardware varies widely in both its purpose and current level of functionality. Your challenge is to tell the story of some or all of this equipment that introduces school-age space enthusiasts to the hardware and the science it made possible.",
+                "__typename": "ChallengePage"
+              },
+              "location": "aWQ6NTQ0NDY=",
+              "locationDetails": {
+                "id": "aWQ6NTQ0NDY=",
+                "title": "Uberlândia",
+                "displayName": "",
+                "meta": {
+                  "type": "LOCATION",
+                  "slug": "uberlandia",
+                  "firstPublishedAt": "2026-08-20T13:11:16.191000Z",
+                  "lastPublishedAt": "2026-10-14T13:41:20.125128Z",
+                  "relativeUrl": "/2026/local-events/uberlandia/",
+                  "live": true,
+                  "parent": null,
+                  "__typename": "ExpandedPageMeta"
+                },
+                "country": "Brazil",
+                "__typename": "LocationPage"
+              },
+              "event": "aWQ6NA==",
+              "joinEnabled": true,
+              "memberships": null,
+              "nominationBadges": null,
+              "awardBadges": null
+            }
+          },
+          {
+            "__typename": "TeamPageEdge",
+            "cursor": "b2Zmc2V0OjEy",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6NzE4NzQ=",
@@ -1016,7 +1222,7 @@
                 "type": "TEAM",
                 "slug": "love-mode",
                 "firstPublishedAt": "2026-10-27T17:18:53.547000Z",
-                "lastPublishedAt": "2026-10-27T17:36:50.109797Z",
+                "lastPublishedAt": "2026-10-29T00:40:31.678429Z",
                 "relativeUrl": "/2026/find-a-team/love-mode/",
                 "live": true,
                 "parent": null,
@@ -1086,7 +1292,7 @@
                   "type": "CHALLENGE",
                   "slug": "health-monitoring-software",
                   "firstPublishedAt": "2026-09-17T14:21:16.942000Z",
-                  "lastPublishedAt": "2026-10-28T14:47:24.331400Z",
+                  "lastPublishedAt": "2026-10-29T19:54:08.931893Z",
                   "relativeUrl": "/2026/challenges/health-monitoring-software/",
                   "live": true,
                   "parent": null,
@@ -1122,7 +1328,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjEx",
+            "cursor": "b2Zmc2V0OjEz",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6NTU1ODA=",
@@ -1225,7 +1431,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjEy",
+            "cursor": "b2Zmc2V0OjE0",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6NjI0Njg=",
@@ -1328,7 +1534,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjEz",
+            "cursor": "b2Zmc2V0OjE1",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6NjY4Mjc=",
@@ -1412,7 +1618,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjE0",
+            "cursor": "b2Zmc2V0OjE2",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6NjY4NTk=",
@@ -1489,7 +1695,7 @@
                   "type": "CHALLENGE",
                   "slug": "adapting-farms-with-nasa-data",
                   "firstPublishedAt": "2026-09-17T14:22:15.778000Z",
-                  "lastPublishedAt": "2026-10-28T15:00:14.935291Z",
+                  "lastPublishedAt": "2026-10-29T19:53:18.539274Z",
                   "relativeUrl": "/2026/challenges/adapting-farms-with-nasa-data/",
                   "live": true,
                   "parent": null,
@@ -1525,7 +1731,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjE1",
+            "cursor": "b2Zmc2V0OjE3",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6NTg0NDE=",
@@ -1573,7 +1779,7 @@
                   "type": "CHALLENGE",
                   "slug": "health-monitoring-software",
                   "firstPublishedAt": "2026-09-17T14:21:16.942000Z",
-                  "lastPublishedAt": "2026-10-28T14:47:24.331400Z",
+                  "lastPublishedAt": "2026-10-29T19:54:08.931893Z",
                   "relativeUrl": "/2026/challenges/health-monitoring-software/",
                   "live": true,
                   "parent": null,
@@ -1609,7 +1815,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjE2",
+            "cursor": "b2Zmc2V0OjE4",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6NjQ3Mjg=",
@@ -1712,7 +1918,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjE3",
+            "cursor": "b2Zmc2V0OjE5",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6NzE1NjU=",
@@ -1815,7 +2021,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjE4",
+            "cursor": "b2Zmc2V0OjIw",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6NjYwNTI=",
@@ -1863,7 +2069,7 @@
                   "type": "CHALLENGE",
                   "slug": "junior-astronaut-mission-trainer",
                   "firstPublishedAt": "2026-09-17T14:22:28.522000Z",
-                  "lastPublishedAt": "2026-10-28T14:17:54.600221Z",
+                  "lastPublishedAt": "2026-10-29T19:51:43.256733Z",
                   "relativeUrl": "/2026/challenges/junior-astronaut-mission-trainer/",
                   "live": true,
                   "parent": null,
@@ -1899,7 +2105,110 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjE5",
+            "cursor": "b2Zmc2V0OjIx",
+            "node": {
+              "__typename": "TeamPage",
+              "id": "aWQ6NzI5OTE=",
+              "title": "Stardust Analytics",
+              "meta": {
+                "type": "TEAM",
+                "slug": "stardust-analytics",
+                "firstPublishedAt": null,
+                "lastPublishedAt": null,
+                "relativeUrl": "/2026/find-a-team/stardust-analytics/",
+                "live": true,
+                "parent": null,
+                "__typename": "ExpandedPageMeta"
+              },
+              "owner": "aWQ6ZjUwYmMwMTYtYjM0Mi00MzA3LTlkZWMtNDE1YWQ4YjRkZWU0",
+              "ownerDetails": null,
+              "excerpt": "Stardust Analytics is a one-person team: an Information Systems student from Uberlândia, Brazil, focused on data analysis. For the “Be an Earth System Trend Detective” challenge, the goal is to explore NASA open data to identify environmental chan...",
+              "project": "aWQ6NjkzOTM=",
+              "projectDetails": {
+                "id": "aWQ6NjkzOTM=",
+                "name": "Project Stardust Analytics",
+                "summary": "",
+                "demoLink": "",
+                "projectLink": "",
+                "details": "",
+                "solution": "",
+                "aiReferences": "",
+                "dataReferences": "",
+                "projectReferences": "",
+                "isSubmitted": false,
+                "savedAt": null,
+                "submittedAt": null,
+                "__typename": "Project"
+              },
+              "projectSubmitted": false,
+              "featuredImage": {
+                "id": "aWQ6NTAyNzYy",
+                "meta": {
+                  "type": "images.CustomImage",
+                  "downloadUrl": "https://assets.spaceappschallenge.org/media/original_images/stardust_analytics_logo.jpg",
+                  "__typename": "ImageMeta"
+                },
+                "title": "team_image.15:44:58.770319",
+                "alt": "team_image.15:44:58.770319",
+                "caption": "team_image.15:44:58.770319",
+                "displaySize": "or",
+                "rendition": {
+                  "url": "https://assets.spaceappschallenge.org/media/images/stardust_analytics_logo.2e16d0ba.fill-300x250.jpg",
+                  "fullUrl": "https://assets.spaceappschallenge.org/media/images/stardust_analytics_logo.2e16d0ba.fill-300x250.jpg",
+                  "height": 250,
+                  "width": 300,
+                  "__typename": "BaseImage"
+                },
+                "__typename": "DefaultImage"
+              },
+              "description": null,
+              "desiredSkills": null,
+              "languages": null,
+              "challenge": "aWQ6NTUxMjg=",
+              "challengeDetails": {
+                "id": "aWQ6NTUxMjg=",
+                "title": "Be An Earth System Trend Detective!",
+                "meta": {
+                  "type": "CHALLENGE",
+                  "slug": "earth-system-trend-detective",
+                  "firstPublishedAt": "2026-09-17T14:21:35.374000Z",
+                  "lastPublishedAt": "2026-10-29T19:54:47.118391Z",
+                  "relativeUrl": "/2026/challenges/earth-system-trend-detective/",
+                  "live": true,
+                  "parent": null,
+                  "__typename": "ExpandedPageMeta"
+                },
+                "excerpt": "Change is always occurring in the Earth’s interconnected environmental system, and when it runs in a consistent direction – rising or falling, increasing or decreasing, thickening or thinning – measured variables reflect it. But a measured Earth science data variable can trend one way in one region and the opposite way in another, even when the same process drives both. The multitude of Earth science data variables makes it difficult to select variables that could indicate change, and to then perform an analysis on the selected variables.  Your challenge is to create a tool that can select variables measured by Earth science missions or produced by Earth science models, visualize how they change over time, and determine what is changing, where it is changing, how much it is changing, and if these changes are what scientists call “significant.”",
+                "__typename": "ChallengePage"
+              },
+              "location": "aWQ6NTQ0NDY=",
+              "locationDetails": {
+                "id": "aWQ6NTQ0NDY=",
+                "title": "Uberlândia",
+                "displayName": "",
+                "meta": {
+                  "type": "LOCATION",
+                  "slug": "uberlandia",
+                  "firstPublishedAt": "2026-08-20T13:11:16.191000Z",
+                  "lastPublishedAt": "2026-10-14T13:41:20.125128Z",
+                  "relativeUrl": "/2026/local-events/uberlandia/",
+                  "live": true,
+                  "parent": null,
+                  "__typename": "ExpandedPageMeta"
+                },
+                "country": "Brazil",
+                "__typename": "LocationPage"
+              },
+              "event": "aWQ6NA==",
+              "joinEnabled": false,
+              "memberships": null,
+              "nominationBadges": null,
+              "awardBadges": null
+            }
+          },
+          {
+            "__typename": "TeamPageEdge",
+            "cursor": "b2Zmc2V0OjIy",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6NTY5ODE=",
@@ -1966,7 +2275,7 @@
                   "type": "CHALLENGE",
                   "slug": "junior-astronaut-mission-trainer",
                   "firstPublishedAt": "2026-09-17T14:22:28.522000Z",
-                  "lastPublishedAt": "2026-10-28T14:17:54.600221Z",
+                  "lastPublishedAt": "2026-10-29T19:51:43.256733Z",
                   "relativeUrl": "/2026/challenges/junior-astronaut-mission-trainer/",
                   "live": true,
                   "parent": null,
@@ -2002,7 +2311,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjIw",
+            "cursor": "b2Zmc2V0OjIz",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6NTgyMTg=",
