@@ -210,6 +210,63 @@ export const TALKS: Talk[] = [
       ],
     },
   },
+  {
+    slug: 'software-defined-automation-industria',
+    title:
+      'Software-Defined Automation: como atualizar uma fábrica que não pode desligar, e por que a indústria precisa de quem vem de TI',
+    startsAt: '2026-11-10T20:00:00-03:00',
+    venue: 'UFU FEELT',
+    ticketUrl:
+      'https://www.sympla.com.br/evento/nasa-space-apps-warmup-agentes-adk-em-kubernetes-com-gemini-gcp-e-muito-devops/3624155',
+    venueAddress:
+      'Av. João Naves de Ávila, 2121 - Direção FEELT - Bairro Santa Mônica',
+    durationMinutes: 50,
+    dayLabel: 'Terça, 10 de novembro',
+    timeLabel: '20h',
+    format: 'Palestra · 40–50 min',
+    mode: 'Presencial',
+    level: 'Todos os níveis',
+    tags: ['Indústria 4.0', 'Automação', 'Carreira'],
+    summary:
+      'As diferenças críticas entre a TI tradicional e o chão de fábrica, onde os sistemas exigem 99,999% ' +
+      'de disponibilidade e uma falha de código pode virar um acidente físico, como o desligamento de uma ' +
+      'caldeira. A palestra apresenta a Software-Defined Automation (SDA), que desacopla o hardware da ' +
+      'lógica de controle e leva práticas modernas de desenvolvimento para a indústria, e mostra como ' +
+      'padrões abertos (IEC 61499), Edge Computing e contêineres resolvem o "pesadelo do legado" ' +
+      'industrial e permitem atualizar processos contínuos. Por fim, faz a ponte entre o que se aprende ' +
+      'na faculdade (redes, Docker, ML e sistemas distribuídos) e a automação na prática, com as ' +
+      'oportunidades de carreira para quem domina software e quer atuar na indústria.',
+    takeaways: [
+      'Na fábrica, disponibilidade e segurança física (safety) vêm antes de tudo: um erro de software vira um evento físico',
+      'A Software-Defined Automation leva práticas modernas de software (deploy controlado, virtualização) para a fábrica sem parar a produção',
+      'A indústria precisa de quem vem de TI: contêineres, sistemas distribuídos e redes são a chave para modernizar o chão de fábrica',
+    ],
+    stack: ['IEC 61499', 'Edge Computing', 'Docker', 'Sistemas distribuídos', 'Redes'],
+    topics: [],
+    challengeSlugs: [],
+    speaker: {
+      name: 'Marcos Antônio Souza Júnior',
+      alias: 'Marcos Souza',
+      role: 'Coordenador de Indústria 4.0',
+      organization: 'Aimirim',
+      city: 'Uberlândia',
+      photo: 'assets/speakers/marcos-souza.jpeg',
+      photoPosition: '50% 35%',
+      bio:
+        'Marcos Antônio Souza é Engenheiro Mecânico (UFU) e Coordenador de Indústria 4.0 na Aimirim. ' +
+        'Especialista em digitalização, automação e controle avançado de processos, lidera equipes ' +
+        'multidisciplinares na criação de sistemas inteligentes orientados a dados para gerar eficiência ' +
+        'e impacto nos negócios.',
+      credentials: [],
+      links: [
+        {
+          label: 'Instagram',
+          icon: 'fa-brands fa-instagram',
+          url: 'https://www.instagram.com/marcos.ant.souza/',
+        },
+      ],
+    },
+  },
 ];
 
 export type TalkStatus = 'upcoming' | 'live' | 'done';

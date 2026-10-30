@@ -75,18 +75,45 @@
           <article class="talk-card reveal reveal-up" [id]="talk.slug"
                    [class.talk-card--international]="isInternational(talk)">
 
-            <figure class="talk-photo">
-              <img class="talk-photo-img" [src]="talk.speaker.photo" [alt]="'Foto de ' + talk.speaker.name" loading="lazy"
-                   [style.object-position]="talk.speaker.photoPosition"
-                   onerror="this.src='assets/organizers/placeholder.svg'">
-              <span class="talk-time">
-                <i class="ph ph-clock" aria-hidden="true"></i>
-                {{ talk.timeLabel }}
-              </span>
-              @if (talk.speaker.origin; as origin) {
-                <img class="talk-flag" [src]="origin.flag" [alt]="'Bandeira — ' + origin.label" width="36" height="36">
+            <aside class="talk-aside">
+              <figure class="talk-photo">
+                <div class="talk-photo-frame">
+                  <img class="talk-photo-img" [src]="talk.speaker.photo" [alt]="'Foto de ' + talk.speaker.name" loading="lazy"
+                       [style.object-position]="talk.speaker.photoPosition"
+                       onerror="this.src='assets/organizers/placeholder.svg'">
+                </div>
+                <span class="talk-time">
+                  <i class="ph ph-clock" aria-hidden="true"></i>
+                  {{ talk.timeLabel }}
+                </span>
+                @if (talk.speaker.origin; as origin) {
+                  <img class="talk-flag" [src]="origin.flag" [alt]="'Bandeira — ' + origin.label" width="36" height="36">
+                }
+              </figure>
+
+              <p class="talk-aside-name">{{ talk.speaker.name }}</p>
+              <p class="talk-aside-role">{{ speakerLine(talk.speaker) }}</p>
+
+              <ul class="talk-facts">
+                <li><i class="ph ph-calendar-dots" aria-hidden="true"></i>{{ talk.dayLabel }}</li>
+                <li><i class="ph ph-clock" aria-hidden="true"></i>{{ talk.timeLabel }} · {{ talk.durationMinutes }} min</li>
+                <li><i class="ph ph-map-pin" aria-hidden="true"></i>{{ talk.venue ?? 'Local em breve' }}</li>
+                <li><i class="ph ph-users-three" aria-hidden="true"></i>{{ talk.mode }}</li>
+              </ul>
+
+              @if (talk.speaker.links.length > 0) {
+                <ul class="talk-aside-links">
+                  @for (link of talk.speaker.links; track link.url) {
+                    <li>
+                      <a [href]="link.url" target="_blank" rel="noopener noreferrer"
+                         [attr.aria-label]="link.label + ' de ' + talk.speaker.name" [title]="link.label">
+                        <i [class]="link.icon" aria-hidden="true"></i>
+                      </a>
+                    </li>
+                  }
+                </ul>
               }
-            </figure>
+            </aside>
 
             <div class="talk-body">
               @if (talk.speaker.origin; as origin) {

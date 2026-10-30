@@ -158,10 +158,30 @@
   }
 }
 
+// Coluna lateral: foto redonda (mesmo estilo do card de palestrante) e, embaixo,
+// um resumo rápido para a coluna não ficar vazia quando o texto é longo.
+.talk-aside {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem 1.5rem;
+  text-align: center;
+  background: rgba(7, 23, 63, 0.45);
+  border-right: 1px solid var(--border-subtle);
+}
+
 .talk-photo {
   position: relative;
-  margin: 0;
-  min-height: 100%;
+  width: min(100%, 200px);
+  margin: 0 0 1.6rem;
+}
+
+.talk-photo-frame {
+  aspect-ratio: 1;
+  overflow: hidden;
+  border-radius: 50%;
+  border: 3px solid rgba($sa-blue-yonder, 0.5);
+  box-shadow: 0 0 0 6px rgba(0, 66, 166, 0.25);
 
   // Classe própria: a bandeira também é um <img> dentro da figura.
   .talk-photo-img {
@@ -174,10 +194,13 @@
   }
 }
 
+// Horário sobre a borda inferior da foto.
 .talk-time {
   position: absolute;
-  top: 1rem;
-  left: 1rem;
+  bottom: -0.9rem;
+  left: 50%;
+  transform: translateX(-50%);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.35);
   display: inline-flex;
   align-items: center;
   gap: 0.4rem;
@@ -202,11 +225,84 @@
 // Bandeira do país de origem, no canto oposto ao horário.
 .talk-flag {
   position: absolute;
-  top: 1rem;
-  right: 1rem;
+  top: 0.4rem;
+  right: 0.4rem;
   width: 36px;
   height: 36px;
   box-shadow: 0 0 0 2px $sa-white, 0 4px 12px rgba(0, 0, 0, 0.35);
+}
+
+.talk-aside-name {
+  margin: 0 0 0.3rem;
+  font-family: 'Fira Sans', sans-serif;
+  font-size: 1.15rem;
+  font-weight: 900;
+  line-height: 1.25;
+  color: $sa-white;
+}
+
+.talk-aside-role {
+  margin: 0 0 1.25rem;
+  font-size: 0.85rem;
+  line-height: 1.45;
+  color: var(--text-secondary);
+}
+
+.talk-facts {
+  list-style: none;
+  width: 100%;
+  margin: 0 0 1.25rem;
+  padding: 1.1rem 0 0;
+  border-top: 1px solid var(--border-subtle);
+  display: grid;
+  gap: 0.6rem;
+  text-align: left;
+
+  li {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.55rem;
+    font-size: 0.88rem;
+    line-height: 1.4;
+    color: var(--text-primary);
+  }
+
+  i {
+    flex-shrink: 0;
+    margin-top: 0.05rem;
+    font-size: 1.05rem;
+    color: $sa-blue-yonder;
+  }
+}
+
+.talk-aside-links {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.5rem;
+
+  a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    border: 1px solid rgba($sa-blue-yonder, 0.45);
+    font-size: 1.05rem;
+    color: $sa-white;
+    transition: border-color 0.2s ease, color 0.2s ease;
+
+    &:hover { border-color: $sa-neon-yellow; color: $sa-neon-yellow; }
+
+    &:focus-visible {
+      outline: 3px solid var(--sa-neon-yellow);
+      outline-offset: 3px;
+    }
+  }
 }
 
 .talk-body {
@@ -657,10 +753,14 @@
 @media (max-width: 860px) {
   .talk-card { grid-template-columns: 1fr; }
 
-  .talk-photo {
-    aspect-ratio: 4 / 3;
-    min-height: 0;
+  .talk-aside {
+    border-right: 0;
+    border-bottom: 1px solid var(--border-subtle);
   }
+
+  .talk-photo { width: 160px; }
+
+  .talk-facts { max-width: 320px; }
 
   .speaker-card {
     grid-template-columns: 1fr;
