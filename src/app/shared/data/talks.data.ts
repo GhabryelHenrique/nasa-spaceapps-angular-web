@@ -267,12 +267,70 @@ export const TALKS: Talk[] = [
       ],
     },
   },
+  {
+    slug: 'robotica-google-gemini',
+    title: 'Navegando no universo da robótica com Google Gemini',
+    startsAt: '2026-11-11T19:00:00-03:00',
+    durationMinutes: 50,
+    dayLabel: 'Quarta, 11 de novembro',
+    timeLabel: '19h',
+    format: 'Palestra · 40–50 min',
+    mode: 'Online',
+    level: 'Iniciante',
+    tags: ['IA', 'Robótica', 'Machine Learning'],
+    withPartner: true,
+    summary:
+      'Como a IA multimodal do Google Gemini está dando "olhos" e "cérebro" para robôs navegarem no ' +
+      'mundo real, revolucionando a autonomia, o processamento visual e a tomada de decisão no mundo ' +
+      'físico. A sessão traz uma introdução ao Gemini Robotics, a reprodução de um tutorial e um olhar ' +
+      'para novas atividades.',
+    takeaways: [
+      'Como o Gemini interpreta ambientes complexos em tempo real',
+      'A tradução de comandos em linguagem natural para ações robóticas',
+      'Onde a robótica autônoma vai impactar o mercado nos próximos anos',
+    ],
+    stack: ['Gemini', 'Gemini Robotics'],
+    topics: [],
+    challengeSlugs: ['lunar-landing-site-navigator'],
+    speaker: {
+      name: 'Victor Ulisses Pugliese',
+      alias: 'Victor Pugliese',
+      role: 'Doutorando em Ciência da Computação',
+      organization: 'Unifesp',
+      city: 'Caraguatatuba',
+      photo: 'assets/speakers/victor-pugliese.jpeg',
+      bio:
+        'Formado pelo IFSP-Caraguatatuba, Victor é doutorando em Ciência da Computação pela UNIFESP, ' +
+        'mestre pelo ITA e reconhecido como Google Developer Expert (GDE) em AI & Cloud. Organizador do ' +
+        'GDG Caraguatatuba, acumula mais de 10 anos de experiência na indústria e dezenas de publicações ' +
+        'científicas internacionais, com passagem como pesquisador visitante no Instituto Superior Técnico ' +
+        'da Universidade de Lisboa. Victor une o melhor dos dois mundos: a profundidade da pesquisa ' +
+        'acadêmica com a aplicação prática da tecnologia no ecossistema de inovação 🚀',
+      credentials: [
+        'Google Developer Expert em AI & Cloud',
+        'Organizador do GDG Caraguatatuba',
+        'Mestre pelo ITA',
+      ],
+      links: [
+        {
+          label: 'Instagram',
+          icon: 'fa-brands fa-instagram',
+          url: 'https://www.instagram.com/victorpug.exe/',
+        },
+      ],
+    },
+  },
 ];
 
 export type TalkStatus = 'upcoming' | 'live' | 'done';
 
 export function isInternationalTalk(talk: Talk): boolean {
   return talk.speaker.origin !== undefined;
+}
+
+/** Palestra só online, sem local físico: no lugar do endereço, avisa do link da transmissão. */
+export function isOnlineTalk(talk: Talk): boolean {
+  return talk.mode === 'Online' && !talk.venue;
 }
 
 export function talkStatus(talk: Talk, now: Date = new Date()): TalkStatus {
@@ -309,7 +367,9 @@ export function talkCalendarUrl(talk: Talk): string {
       ? [talk.venue, talk.venueAddress, 'Uberlândia, MG']
           .filter(Boolean)
           .join(', ')
-      : 'Uberlândia, MG',
+      : isOnlineTalk(talk)
+        ? 'Online'
+        : 'Uberlândia, MG',
   });
 
   return `https://calendar.google.com/calendar/render?${params}`;

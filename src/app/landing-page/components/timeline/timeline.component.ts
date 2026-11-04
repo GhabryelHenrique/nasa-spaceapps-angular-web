@@ -84,7 +84,7 @@ export class TimelineComponent {
       icon: 'ph ph-microphone-stage',
       title: 'Semana de Palestras',
       description:
-        'Esquenta presencial em Uberlândia, com palestra internacional: IA segura e acessível nas escolas com Mel Tranfield, direto de Londres, e agentes de IA com ADK, Gemini e Kubernetes com Camilla Martins, em parceria com o GDG Uberlândia.',
+        'Esquenta presencial em Uberlândia, com palestra internacional: IA segura e acessível nas escolas com Mel Tranfield, direto de Londres, agentes de IA com ADK, Gemini e Kubernetes com Camilla Martins, em parceria com o GDG Uberlândia, e Software-Defined Automation na indústria com Marcos Souza, da Aimirim.',
       action: {
         label: 'Ver programação',
         url: '/palestras',

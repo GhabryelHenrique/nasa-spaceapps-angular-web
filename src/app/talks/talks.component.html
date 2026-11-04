@@ -97,7 +97,7 @@
               <ul class="talk-facts">
                 <li><i class="ph ph-calendar-dots" aria-hidden="true"></i>{{ talk.dayLabel }}</li>
                 <li><i class="ph ph-clock" aria-hidden="true"></i>{{ talk.timeLabel }} · {{ talk.durationMinutes }} min</li>
-                <li><i class="ph ph-map-pin" aria-hidden="true"></i>{{ talk.venue ?? 'Local em breve' }}</li>
+                <li><i class="ph ph-map-pin" aria-hidden="true"></i>{{ talk.venue ?? (isOnline(talk) ? 'Transmissão online' : 'Local em breve') }}</li>
                 <li><i class="ph ph-users-three" aria-hidden="true"></i>{{ talk.mode }}</li>
               </ul>
 
@@ -229,6 +229,8 @@
                   <i class="ph ph-map-pin" aria-hidden="true"></i>
                   @if (talk.venue) {
                     {{ talk.venue }}@if (talk.venueAddress) {, {{ talk.venueAddress }}}
+                  } @else if (isOnline(talk)) {
+                    Online — link da transmissão divulgado no WhatsApp e no Discord
                   } @else {
                     Local divulgado em breve no WhatsApp e no Discord
                   }

@@ -1,5 +1,5 @@
 import { CURRENT_CHALLENGE_YEAR } from '../data/challenges.data';
-import { Speaker, TALKS_PARTNER, Talk } from '../data/talks.data';
+import { Speaker, TALKS_PARTNER, Talk, isOnlineTalk } from '../data/talks.data';
 import { TalkPostKind, confirmedSpeakerLabel } from './talk-share.model';
 
 /**
@@ -100,7 +100,9 @@ function scheduleBlock(talk: Talk): string {
     .join(' · ');
   const venue = talk.venue
     ? [talk.venue, talk.venueAddress, 'Uberlândia (MG)'].filter(Boolean).join(' - ')
-    : 'Local divulgado em breve no WhatsApp e no Discord da sede';
+    : isOnlineTalk(talk)
+      ? 'Online — link da transmissão no WhatsApp e no Discord da sede'
+      : 'Local divulgado em breve no WhatsApp e no Discord da sede';
 
   const lines = [`📅 ${talk.dayLabel} · ${talk.timeLabel}`, `📍 ${venue}`, `🗣️ ${details}`];
   lines.push(

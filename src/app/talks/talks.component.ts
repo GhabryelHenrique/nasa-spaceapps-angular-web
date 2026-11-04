@@ -9,6 +9,7 @@ import {
   Talk,
   TalkStatus,
   isInternationalTalk,
+  isOnlineTalk,
   talkCalendarUrl,
   talkStatus,
 } from '../shared/data/talks.data';
@@ -87,6 +88,10 @@ export class TalksComponent {
 
   isInternational(talk: Talk): boolean {
     return isInternationalTalk(talk);
+  }
+
+  isOnline(talk: Talk): boolean {
+    return isOnlineTalk(talk);
   }
 
   /** "Cargo · Organização · Cidade", pulando o que não foi informado. */

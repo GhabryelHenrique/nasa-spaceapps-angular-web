@@ -13,7 +13,7 @@ import {
   setLetterSpacing,
   wrapText
 } from '../challenge-share/canvas-kit';
-import { Speaker, TALKS_PARTNER, Talk, talkDateLabel } from '../data/talks.data';
+import { Speaker, TALKS_PARTNER, Talk, isOnlineTalk, talkDateLabel } from '../data/talks.data';
 import { TalkPostKind, confirmedSpeakerLabel } from './talk-share.model';
 
 /**
@@ -615,11 +615,15 @@ export class TalkCardImageService {
     const textX = iconX + iconSize + 34;
     const maxWidth = l.width - textX - l.pad;
     const when = `${talkDateLabel(talk)} · ${talk.timeLabel}`;
+    const online = isOnlineTalk(talk);
     const where = talk.venue
       ? talk.venueAddress ?? 'Uberlândia (MG)'
-      : separated(['Local divulgado em breve', 'Uberlândia (MG)']);
+      : online
+        ? 'Link da transmissão no WhatsApp e no Discord'
+        : separated(['Local divulgado em breve', 'Uberlândia (MG)']);
+    const place = talk.venue ?? (online ? 'Online' : undefined);
 
-    this.drawFittedLine(ctx, talk.venue ? `${when} - ${talk.venue}` : when, textX, y, maxWidth,
+    this.drawFittedLine(ctx, place ? `${when} - ${place}` : when, textX, y, maxWidth,
       size => `700 ${size}px "Fira Sans", sans-serif`, 36, 24, WHITE);
     this.drawFittedLine(ctx, where, textX, y + 46, maxWidth,
       size => `700 ${size}px "Overpass", sans-serif`, 25, 16, BLUE_YONDER);
