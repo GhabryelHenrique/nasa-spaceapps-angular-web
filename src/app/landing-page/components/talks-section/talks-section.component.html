@@ -27,7 +27,9 @@
       <!-- ─── Palestras ────────────────────────────────────── -->
       <div class="talks-teaser-list reveal reveal-up delay-3">
         @for (card of cards; track card.talk.slug) {
-          <article class="teaser-card" [class.teaser-card--international]="!!card.talk.speaker.origin">
+          <article class="teaser-card"
+                   [class.teaser-card--international]="!!card.talk.speaker.origin"
+                   [class.teaser-card--award]="!!card.talk.speaker.award">
             <div class="teaser-date" aria-hidden="true">
               <span class="teaser-day">{{ card.day }}</span>
               <span class="teaser-month">{{ card.month }}</span>
@@ -48,6 +50,12 @@
                   <span>· direto de {{ origin.label }}</span>
                 </p>
               }
+              @if (card.talk.speaker.award; as award) {
+                <p class="teaser-award">
+                  <i class="ph ph-trophy" aria-hidden="true"></i>
+                  {{ award.title }}
+                </p>
+              }
               <p class="teaser-when">
                 {{ card.talk.dayLabel }} · {{ card.talk.timeLabel }} · {{ card.talk.mode }}
               </p>
@@ -57,6 +65,9 @@
                 @if (card.talk.speaker.alias) { · {{ card.talk.speaker.alias }} }
               </p>
               <p class="teaser-credentials">{{ card.headline }}</p>
+              @if (card.talk.brand; as brand) {
+                <img class="teaser-brand" [src]="brand.logo" [alt]="brand.name" loading="lazy">
+              }
 
               @if (card.talk.tags.length > 0 || card.talk.withPartner) {
                 <ul class="teaser-tags">

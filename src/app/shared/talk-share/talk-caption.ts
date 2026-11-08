@@ -36,6 +36,9 @@ function buildSpeakerCaption(talk: Talk, year: number): string {
 
   const blocks = [`🎤 ${confirmedSpeakerLabel(speaker)}: ${speaker.name.toUpperCase()}${alias}`];
 
+  const award = awardLine(speaker);
+  if (award) blocks.push(award);
+
   const profile = [speakerLine(speaker), ...speaker.credentials.map(credential => `⭐ ${credential}`)];
   blocks.push(profile.join('\n'));
 
@@ -73,8 +76,9 @@ function buildTalkCaption(talk: Talk, year: number): string {
   }
 
   const alias = speaker.alias ? ` (${speaker.alias})` : '';
+  const award = awardLine(speaker);
   blocks.push(
-    `👤 Com ${speaker.name}${alias} — ${speakerLine(speaker)}`,
+    `👤 Com ${speaker.name}${alias} — ${speakerLine(speaker)}${award ? `\n${award}` : ''}`,
     `Uma realização do NASA Space Apps Uberlândia ${year}${partnerSuffix(talk)}: ` +
       'o esquenta para o hackathon de 14 e 15 de novembro.',
     scheduleBlock(talk),
@@ -88,6 +92,13 @@ function speakerLine(speaker: Speaker): string {
   return [speaker.role, speaker.organization, speaker.origin?.label ?? speaker.city]
     .filter(Boolean)
     .join(' · ');
+}
+
+/** "🏆 Vencedora global do NASA Space Apps 2025 — Best Mission Concept…", ou `null` sem prêmio. */
+function awardLine(speaker: Speaker): string | null {
+  if (!speaker.award) return null;
+  const detail = speaker.award.detail ? ` — ${speaker.award.detail}` : '';
+  return `🏆 ${speaker.award.title}${detail}`;
 }
 
 function partnerSuffix(talk: Talk): string {

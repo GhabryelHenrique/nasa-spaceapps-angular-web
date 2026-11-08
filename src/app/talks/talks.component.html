@@ -28,6 +28,12 @@
             Palestra internacional
           </li>
         }
+        @if (highlightedAward; as award) {
+          <li class="fact-international">
+            <i class="ph ph-trophy" aria-hidden="true"></i>
+            {{ award.title }}
+          </li>
+        }
         <li><i class="ph ph-microphone-stage" aria-hidden="true"></i>
           {{ talks.length }} {{ talks.length === 1 ? 'palestra' : 'palestras' }}
         </li>
@@ -73,7 +79,8 @@
 
         @for (talk of day.talks; track talk.slug) {
           <article class="talk-card reveal reveal-up" [id]="talk.slug"
-                   [class.talk-card--international]="isInternational(talk)">
+                   [class.talk-card--international]="isInternational(talk)"
+                   [class.talk-card--award]="!!talk.speaker.award">
 
             <aside class="talk-aside">
               <figure class="talk-photo">
@@ -89,10 +96,21 @@
                 @if (talk.speaker.origin; as origin) {
                   <img class="talk-flag" [src]="origin.flag" [alt]="'Bandeira — ' + origin.label" width="36" height="36">
                 }
+                @if (talk.speaker.award; as award) {
+                  <span class="talk-trophy" [title]="award.title">
+                    <i class="ph ph-trophy" aria-hidden="true"></i>
+                  </span>
+                }
               </figure>
 
               <p class="talk-aside-name">{{ talk.speaker.name }}</p>
               <p class="talk-aside-role">{{ speakerLine(talk.speaker) }}</p>
+
+              @if (talk.brand; as brand) {
+                <a class="talk-brand" [href]="brand.url" target="_blank" rel="noopener noreferrer" [title]="brand.name">
+                  <img [src]="brand.logo" [alt]="brand.name" loading="lazy">
+                </a>
+              }
 
               <ul class="talk-facts">
                 <li><i class="ph ph-calendar-dots" aria-hidden="true"></i>{{ talk.dayLabel }}</li>
@@ -121,6 +139,12 @@
                   <i class="ph ph-globe-hemisphere-east" aria-hidden="true"></i>
                   Palestra internacional
                   <span>· direto de {{ origin.label }}</span>
+                </p>
+              }
+              @if (talk.speaker.award; as award) {
+                <p class="talk-international talk-award">
+                  <i class="ph ph-trophy" aria-hidden="true"></i>
+                  {{ award.title }}
                 </p>
               }
 
@@ -277,6 +301,16 @@
               <p class="speaker-origin">
                 <img class="flag-dot" [src]="origin.flag" alt="" width="20" height="20">
                 {{ origin.label }}
+              </p>
+            }
+
+            @if (speaker.award; as award) {
+              <p class="speaker-award">
+                <i class="ph ph-trophy" aria-hidden="true"></i>
+                <span>
+                  <strong>{{ award.title }}</strong>
+                  @if (award.detail) { · {{ award.detail }} }
+                </span>
               </p>
             }
 

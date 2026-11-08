@@ -53,6 +53,9 @@ export class TalksComponent {
   /** Origem da primeira palestra internacional, para o selo do hero. */
   readonly internationalOrigin = TALKS.find(isInternationalTalk)?.speaker.origin;
 
+  /** Prêmio da primeira pessoa premiada da programação, para o selo do hero. */
+  readonly highlightedAward = TALKS.find(talk => talk.speaker.award)?.speaker.award;
+
   /**
    * Na ordem da programação. Uma pessoa pode dar mais de uma palestra — aparece
    * uma vez só na seção de palestrantes.

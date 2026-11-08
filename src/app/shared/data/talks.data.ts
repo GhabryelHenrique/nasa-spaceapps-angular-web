@@ -14,6 +14,13 @@ export interface SpeakerLink {
   url: string;
 }
 
+export interface SpeakerAward {
+  /** Selo curto, em destaque: "Vencedora global do NASA Space Apps 2025". */
+  title: string;
+  /** Complemento do selo: o prêmio e a equipe. */
+  detail?: string;
+}
+
 export interface Speaker {
   name: string;
   /** Como a pessoa pediu para ser anunciada na divulgação. */
@@ -27,6 +34,11 @@ export interface Speaker {
    * (selo com bandeira na home e em `/palestras`).
    */
   origin?: { label: string; flag: string };
+  /**
+   * Prêmio de destaque (ex.: vencedora global do Space Apps): ganha selo próprio
+   * na home, em `/palestras`, nos posts e nas legendas.
+   */
+  award?: SpeakerAward;
   photo: string;
   /** `object-position` da foto quando o rosto não fica no alto (padrão do CSS: ~18%). */
   photoPosition?: string;
@@ -35,6 +47,13 @@ export interface Speaker {
   /** Credenciais curtas para os selos do cartão — vazio esconde os selos. */
   credentials: string[];
   links: SpeakerLink[];
+}
+
+export interface TalkBrand {
+  name: string;
+  /** Versão para fundo escuro (texto branco): vai direto no Deep Blue, sem placa. */
+  logo: string;
+  url: string;
 }
 
 export interface Talk {
@@ -62,6 +81,8 @@ export interface Talk {
   challengeSlugs: string[];
   /** Palestra feita em parceria com o `TALKS_PARTNER` (GDG). */
   withPartner?: boolean;
+  /** Empresa que a pessoa representa: o logo vai no card da palestra e no post. */
+  brand?: TalkBrand;
   /** Local; enquanto não houver, a página avisa que sai nos canais. */
   venue?: string;
   /** Endereço completo do local, para o card de divulgação e o link de agenda. */
@@ -244,6 +265,11 @@ export const TALKS: Talk[] = [
     stack: ['IEC 61499', 'Edge Computing', 'Docker', 'Sistemas distribuídos', 'Redes'],
     topics: [],
     challengeSlugs: [],
+    brand: {
+      name: 'Aimirim',
+      logo: 'assets/sponsors/aimirim.png',
+      url: 'https://www.aimirimsti.com.br',
+    },
     speaker: {
       name: 'Marcos Antônio Souza Júnior',
       alias: 'Marcos Souza',
@@ -316,6 +342,128 @@ export const TALKS: Talk[] = [
           label: 'Instagram',
           icon: 'fa-brands fa-instagram',
           url: 'https://www.instagram.com/victorpug.exe/',
+        },
+      ],
+    },
+  },
+  {
+    slug: 'pureflow-da-participacao-ao-premio-global',
+    title:
+      'Da Participação ao Prêmio Global: A Experiência da Pureflow no NASA Space Apps 2025',
+    startsAt: '2026-11-13T19:00:00-03:00',
+    durationMinutes: 50,
+    dayLabel: 'Sexta, 13 de novembro',
+    timeLabel: '19h',
+    format: 'Palestra · 40–50 min',
+    mode: 'Online',
+    level: 'Todos os níveis',
+    tags: ['Hackathon', 'Design de Produto', 'Colaboração'],
+    summary:
+      'Do desafio local ao reconhecimento global: a experiência de participar do NASA Space Apps Challenge ' +
+      'e os aprendizados de três edições do evento, a partir da trajetória da equipe Pureflow, vencedora ' +
+      'do prêmio Global Best Mission Concept em 2025. A palestra aborda a colaboração entre diferentes ' +
+      'áreas, a compreensão do desafio, a definição de uma proposta de valor e a prototipagem de uma ' +
+      'solução com tempo limitado, mostrando que a participação em um hackathon vai além do resultado ' +
+      'final. O objetivo é inspirar novos participantes a trabalhar de forma colaborativa e a enxergar os ' +
+      'desafios como oportunidades para aprender, experimentar e criar soluções com potencial de impacto.',
+    takeaways: [
+      'Como transformar um desafio complexo em uma ideia de solução clara e viável dentro do tempo limitado de um hackathon',
+      'A importância da colaboração multidisciplinar e de combinar diferentes habilidades para construir um projeto mais completo',
+      'Aprendizados e estratégias da jornada da Pureflow, do NASA Space Apps ao prêmio Global Best Mission Concept em 2025',
+    ],
+    stack: [],
+    topics: [
+      'Como acessar e usar os dados abertos da NASA (Earthdata, APIs, catálogos)',
+      'Prototipagem rápida: do zero ao MVP em 48h',
+      'Critérios de avaliação do Space Apps e o que a NASA valoriza',
+    ],
+    challengeSlugs: [],
+    speaker: {
+      name: 'Laiza Leal de Souza',
+      role: 'Estudante de Ciência da Computação e UI/UX Designer',
+      organization: 'Universidade Tiradentes',
+      city: 'Aracaju',
+      award: {
+        title: 'Vencedora global do NASA Space Apps 2025',
+        detail: 'Best Mission Concept com a equipe Pureflow',
+      },
+      photo: 'assets/speakers/laiza-leal.jpeg',
+      photoPosition: '55% 40%',
+      bio:
+        'Laiza Leal é estudante de Ciência da Computação, formada em Design Gráfico e atua com UI/UX Design ' +
+        'e interfaces para produtos digitais. Participou do NASA Space Apps Challenge por três anos ' +
+        'consecutivos e, em 2025, integrou a equipe Pureflow, vencedora do prêmio Global Best Mission ' +
+        'Concept. Tem interesse em tecnologia, inovação e design centrado nas pessoas.',
+      // O prêmio já tem selo próprio (`award`): aqui só o que complementa.
+      credentials: ['3 edições do NASA Space Apps', 'Formada em Design Gráfico'],
+      links: [
+        {
+          label: 'LinkedIn',
+          icon: 'fa-brands fa-linkedin',
+          url: 'https://www.linkedin.com/in/laiza-leal-de-souza-0947b9282',
+        },
+      ],
+    },
+  },
+  {
+    slug: 'lovable-do-prompt-ao-deploy',
+    title: 'Do prompt ao deploy: um app full-stack com Lovable em 48 horas',
+    // Horário e duração ainda não confirmados — 9h é o início do hackathon.
+    startsAt: '2026-11-14T09:00:00-03:00',
+    durationMinutes: 40,
+    dayLabel: 'Sábado, 14 de novembro',
+    venue: 'ESAMC Uberlândia',
+    venueAddress: 'Av. Vasconcelos Costa, 270 - Bairro Martins',
+    timeLabel: '9h',
+    format: 'Palestra de abertura',
+    mode: 'Presencial',
+    level: 'Intermediário',
+    tags: ['IA', 'Vibe Coding', 'Full-stack'],
+    summary:
+      'A abertura do hackathon com a mão no código: uma demonstração técnica de como sair de uma ideia ' +
+      'para um app full-stack funcionando com o Lovable, a plataforma que gera e edita código a partir de ' +
+      'conversas em linguagem natural. Ao vivo, construímos um protótipo que consome dados abertos da NASA, ' +
+      'com front-end em React e TypeScript e banco de dados, autenticação e funções de backend no Supabase, ' +
+      'e sincronizamos tudo com o GitHub para o time seguir no editor que preferir. A sessão mostra ainda ' +
+      'como escrever prompts que mantêm o código consistente, como depurar quando a IA erra e como publicar ' +
+      'o projeto com um link pronto para a submissão.',
+    takeaways: [
+      'Como planejar e escrever prompts que mantêm o código gerado consistente do começo ao fim do projeto',
+      'Backend sem sair do Lovable: banco de dados, autenticação e funções no Supabase',
+      'Fluxo de time no hackathon: sincronização com o GitHub, depuração e publicação com link para a submissão',
+    ],
+    stack: ['Lovable', 'React', 'TypeScript', 'Tailwind CSS', 'Supabase', 'GitHub'],
+    topics: [
+      'IA generativa como copiloto durante o hackathon',
+      'Do protótipo ao link publicado para a submissão',
+    ],
+    challengeSlugs: [],
+    brand: {
+      name: 'Lovable',
+      logo: 'assets/sponsors/lovable.svg',
+      url: 'https://lovable.dev',
+    },
+    speaker: {
+      name: 'Lucio Amorim',
+      role: 'Partner no Brasil',
+      organization: 'Lovable',
+      photo: 'assets/speakers/lucio-amorim.png',
+      photoPosition: '50% 30%',
+      bio:
+        'Lucio Amorim é Lovable Partner no Brasil, atuando na expansão da plataforma junto a empresas, ' +
+        'instituições e comunidades. Pioneiro na realização de hackathons da Lovable no país, acumula mais ' +
+        'de 20 anos de experiência em GTM e estratégia de negócios em startups e grandes empresas como ' +
+        'Shell e Petrobras.',
+      credentials: [
+        'Lovable Partner no Brasil',
+        'Pioneiro nos hackathons da Lovable no país',
+        '20+ anos em GTM e estratégia',
+      ],
+      links: [
+        {
+          label: 'Instagram',
+          icon: 'fa-brands fa-instagram',
+          url: 'https://www.instagram.com/lucioamorim.ai/',
         },
       ],
     },

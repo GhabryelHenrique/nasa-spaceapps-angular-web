@@ -14,6 +14,23 @@
   <!-- Semana de palestras (parceria GDG) -->
   <app-talks-section></app-talks-section>
 
+  <!-- ─── Patrocinadores 2026 ────────────────────────────── -->
+  <section class="sa-section sa-section--sunken sponsors-strip" aria-labelledby="patrocinadores-titulo">
+    <div class="sa-container">
+      <p id="patrocinadores-titulo" class="sa-eyebrow sponsors-strip-title">Patrocínio 2026</p>
+      <ul class="sponsors-strip-list">
+        @for (sponsor of sponsors2026; track sponsor.name) {
+          <li>
+            <a class="sponsors-strip-logo" [href]="sponsor.url" target="_blank" rel="noopener noreferrer"
+               [title]="sponsor.name" [attr.aria-label]="'Visitar site de ' + sponsor.name">
+              <img [src]="sponsor.logo" [alt]="sponsor.name" loading="lazy">
+            </a>
+          </li>
+        }
+      </ul>
+    </div>
+  </section>
+
   <!-- Tema 2026: The Next Frontier -->
   <app-theme-section></app-theme-section>
 

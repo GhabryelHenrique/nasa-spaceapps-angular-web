@@ -9,7 +9,10 @@ interface TalkCard {
   day: string;
   month: string;
   calendarUrl: string;
-  /** Duas credenciais principais ou, sem elas, cargo e organização. */
+  /**
+   * Detalhe do prêmio (o título já vai no selo) e as credenciais principais,
+   * até duas no total; sem nada disso, cargo e organização.
+   */
   headline: string;
 }
 
@@ -35,10 +38,20 @@ export class TalksSectionComponent {
       talk,
       ...this.dateParts(talk),
       calendarUrl: talkCalendarUrl(talk),
-      headline: talk.speaker.credentials.length > 0
-        ? talk.speaker.credentials.slice(0, 2).join(' · ')
-        : `${talk.speaker.role} · ${talk.speaker.organization}`,
+      headline: this.headline(talk),
     }));
+
+  private headline(talk: Talk): string {
+    const { speaker } = talk;
+    const highlights = [
+      ...(speaker.award?.detail ? [speaker.award.detail] : []),
+      ...speaker.credentials,
+    ].slice(0, 2);
+
+    return highlights.length > 0
+      ? highlights.join(' · ')
+      : `${speaker.role} · ${speaker.organization}`;
+  }
 
   private dateParts(talk: Talk): { day: string; month: string } {
     const date = new Date(talk.startsAt);
