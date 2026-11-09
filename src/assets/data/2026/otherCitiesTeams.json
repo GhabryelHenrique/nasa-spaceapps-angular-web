@@ -12341,6 +12341,121 @@
             "cursor": "b2Zmc2V0OjI=",
             "node": {
               "__typename": "TeamPage",
+              "id": "aWQ6NzY4MzI=",
+              "title": "ANOVAS",
+              "meta": {
+                "type": "TEAM",
+                "slug": "anovas",
+                "firstPublishedAt": "2026-11-05T02:00:11.540000Z",
+                "lastPublishedAt": "2026-11-06T22:07:23.752720Z",
+                "relativeUrl": "/2026/find-a-team/anovas/",
+                "live": true,
+                "parent": null,
+                "__typename": "ExpandedPageMeta"
+              },
+              "owner": "aWQ6MzcwZjYwZmYtYmE4OC00NjYwLTkxOTctZjNmODdhNDdhYTJj",
+              "ownerDetails": null,
+              "excerpt": "We are a team of Applied and Computational Mathematics students focused on turning complex data and optimization problems into scalable solutions. With strong skills in Python, algorithms, mathematical modeling, and data analysis, we build data-dr...",
+              "project": "aWQ6NzMyMzA=",
+              "projectDetails": {
+                "id": "aWQ6NzMyMzA=",
+                "name": "Project ANOVAS",
+                "summary": "",
+                "demoLink": "",
+                "projectLink": "",
+                "details": "",
+                "solution": "",
+                "aiReferences": "",
+                "dataReferences": "",
+                "projectReferences": "",
+                "isSubmitted": false,
+                "savedAt": null,
+                "submittedAt": null,
+                "__typename": "Project"
+              },
+              "projectSubmitted": false,
+              "featuredImage": {
+                "id": "aWQ6NTE4MzM0",
+                "meta": {
+                  "type": "images.CustomImage",
+                  "downloadUrl": "https://assets.spaceappschallenge.org/media/original_images/ANOVAS.jpg",
+                  "__typename": "ImageMeta"
+                },
+                "title": "team_image.01:57:25.487863",
+                "alt": "team_image.01:57:25.487863",
+                "caption": "team_image.01:57:25.487863",
+                "displaySize": "or",
+                "rendition": {
+                  "url": "https://assets.spaceappschallenge.org/media/images/ANOVAS.2e16d0ba.fill-300x250.jpg",
+                  "fullUrl": "https://assets.spaceappschallenge.org/media/images/ANOVAS.2e16d0ba.fill-300x250.jpg",
+                  "height": 250,
+                  "width": 300,
+                  "__typename": "BaseImage"
+                },
+                "__typename": "DefaultImage"
+              },
+              "description": null,
+              "desiredSkills": [
+                "Software",
+                "Space Exploration",
+                "Coding",
+                "Data Analysis",
+                "Data Visualization",
+                "Statistics",
+                "Artificial Intelligence & Machine Learning",
+                "Data Management"
+              ],
+              "languages": [
+                "English",
+                "Portuguese"
+              ],
+              "challenge": "aWQ6NTUxMjg=",
+              "challengeDetails": {
+                "id": "aWQ6NTUxMjg=",
+                "title": "Be An Earth System Trend Detective!",
+                "meta": {
+                  "type": "CHALLENGE",
+                  "slug": "earth-system-trend-detective",
+                  "firstPublishedAt": "2026-09-17T14:21:35.374000Z",
+                  "lastPublishedAt": "2026-10-29T19:54:47.118391Z",
+                  "relativeUrl": "/2026/challenges/earth-system-trend-detective/",
+                  "live": true,
+                  "parent": null,
+                  "__typename": "ExpandedPageMeta"
+                },
+                "excerpt": "Change is always occurring in the Earth’s interconnected environmental system, and when it runs in a consistent direction – rising or falling, increasing or decreasing, thickening or thinning – measured variables reflect it. But a measured Earth science data variable can trend one way in one region and the opposite way in another, even when the same process drives both. The multitude of Earth science data variables makes it difficult to select variables that could indicate change, and to then perform an analysis on the selected variables.  Your challenge is to create a tool that can select variables measured by Earth science missions or produced by Earth science models, visualize how they change over time, and determine what is changing, where it is changing, how much it is changing, and if these changes are what scientists call “significant.”",
+                "__typename": "ChallengePage"
+              },
+              "location": "aWQ6NTQ4NTg=",
+              "locationDetails": {
+                "id": "aWQ6NTQ4NTg=",
+                "title": "Goiânia",
+                "displayName": "",
+                "meta": {
+                  "type": "LOCATION",
+                  "slug": "goiania",
+                  "firstPublishedAt": "2026-08-25T15:43:09.880000Z",
+                  "lastPublishedAt": "2026-10-15T15:21:02.254280Z",
+                  "relativeUrl": "/2026/local-events/goiania/",
+                  "live": true,
+                  "parent": null,
+                  "__typename": "ExpandedPageMeta"
+                },
+                "country": "Brazil",
+                "__typename": "LocationPage"
+              },
+              "event": "aWQ6NA==",
+              "joinEnabled": true,
+              "memberships": null,
+              "nominationBadges": null,
+              "awardBadges": null
+            }
+          },
+          {
+            "__typename": "TeamPageEdge",
+            "cursor": "b2Zmc2V0OjM=",
+            "node": {
+              "__typename": "TeamPage",
               "id": "aWQ6NjA5NDk=",
               "title": "Astra GYN",
               "meta": {
@@ -12436,7 +12551,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjM=",
+            "cursor": "b2Zmc2V0OjQ=",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6NzM3NTc=",
@@ -12520,7 +12635,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjQ=",
+            "cursor": "b2Zmc2V0OjU=",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6NjEzMjI=",
@@ -12604,7 +12719,91 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjU=",
+            "cursor": "b2Zmc2V0OjY=",
+            "node": {
+              "__typename": "TeamPage",
+              "id": "aWQ6Nzk2MDI=",
+              "title": "Celesti",
+              "meta": {
+                "type": "TEAM",
+                "slug": "celesti219",
+                "firstPublishedAt": null,
+                "lastPublishedAt": null,
+                "relativeUrl": "/2026/find-a-team/celesti219/",
+                "live": true,
+                "parent": null,
+                "__typename": "ExpandedPageMeta"
+              },
+              "owner": "aWQ6NTdhYTNhNWMtYTQxNC00OGMwLTg0NTktNDEyZjM2NDY2ZTdm",
+              "ownerDetails": null,
+              "excerpt": ".",
+              "project": "aWQ6NzYwMDA=",
+              "projectDetails": {
+                "id": "aWQ6NzYwMDA=",
+                "name": "Project Celesti",
+                "summary": "",
+                "demoLink": "",
+                "projectLink": "",
+                "details": "",
+                "solution": "",
+                "aiReferences": "",
+                "dataReferences": "",
+                "projectReferences": "",
+                "isSubmitted": false,
+                "savedAt": null,
+                "submittedAt": null,
+                "__typename": "Project"
+              },
+              "projectSubmitted": false,
+              "featuredImage": null,
+              "description": null,
+              "desiredSkills": null,
+              "languages": null,
+              "challenge": "aWQ6NTUxMzA=",
+              "challengeDetails": {
+                "id": "aWQ6NTUxMzA=",
+                "title": "Create Health Monitoring Software for Astronauts on Space Missions",
+                "meta": {
+                  "type": "CHALLENGE",
+                  "slug": "health-monitoring-software",
+                  "firstPublishedAt": "2026-09-17T14:21:16.942000Z",
+                  "lastPublishedAt": "2026-10-29T19:54:08.931893Z",
+                  "relativeUrl": "/2026/challenges/health-monitoring-software/",
+                  "live": true,
+                  "parent": null,
+                  "__typename": "ExpandedPageMeta"
+                },
+                "excerpt": "Long-duration missions expose astronauts to space radiation, isolation and confinement, altered gravity, and a hostile closed environment, which can bring immune changes, bone loss, cardiovascular events, and behavioral health problems. On long missions, astronauts carry much of the responsibility for spotting these changes in themselves. Your challenge is to build a health monitoring software that gathers health indicators and enables astronauts to evaluate and act on the status of their health.",
+                "__typename": "ChallengePage"
+              },
+              "location": "aWQ6NTQ4NTg=",
+              "locationDetails": {
+                "id": "aWQ6NTQ4NTg=",
+                "title": "Goiânia",
+                "displayName": "",
+                "meta": {
+                  "type": "LOCATION",
+                  "slug": "goiania",
+                  "firstPublishedAt": "2026-08-25T15:43:09.880000Z",
+                  "lastPublishedAt": "2026-10-15T15:21:02.254280Z",
+                  "relativeUrl": "/2026/local-events/goiania/",
+                  "live": true,
+                  "parent": null,
+                  "__typename": "ExpandedPageMeta"
+                },
+                "country": "Brazil",
+                "__typename": "LocationPage"
+              },
+              "event": "aWQ6NA==",
+              "joinEnabled": true,
+              "memberships": null,
+              "nominationBadges": null,
+              "awardBadges": null
+            }
+          },
+          {
+            "__typename": "TeamPageEdge",
+            "cursor": "b2Zmc2V0Ojc=",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6Nzk2MDI=",
@@ -16195,6 +16394,109 @@
           {
             "__typename": "TeamPageEdge",
             "cursor": "b2Zmc2V0Ojc=",
+            "node": {
+              "__typename": "TeamPage",
+              "id": "aWQ6NzY4MTY=",
+              "title": "Pálido Ponto Vermelho",
+              "meta": {
+                "type": "TEAM",
+                "slug": "palido-ponto-vermelho",
+                "firstPublishedAt": "2026-11-05T01:19:07.102000Z",
+                "lastPublishedAt": "2026-11-07T16:55:01.377871Z",
+                "relativeUrl": "/2026/find-a-team/palido-ponto-vermelho/",
+                "live": true,
+                "parent": null,
+                "__typename": "ExpandedPageMeta"
+              },
+              "owner": "aWQ6MjZhN2ZhN2YtYTc3NC00ZTdjLTliM2MtZDYzOWU3MTM5NTll",
+              "ownerDetails": null,
+              "excerpt": "Somos uma equipe de estudantes movidos pela curiosidade e pela paixão pela ciência e exploração espacial. Acreditamos que grandes descobertas começam com perguntas e que a colaboração é uma das ferramentas mais poderosas para transformar ideias em...",
+              "project": "aWQ6NzMyMTQ=",
+              "projectDetails": {
+                "id": "aWQ6NzMyMTQ=",
+                "name": "Project Pálido Ponto Vermelho",
+                "summary": "",
+                "demoLink": "",
+                "projectLink": "",
+                "details": "",
+                "solution": "",
+                "aiReferences": "",
+                "dataReferences": "",
+                "projectReferences": "",
+                "isSubmitted": false,
+                "savedAt": null,
+                "submittedAt": null,
+                "__typename": "Project"
+              },
+              "projectSubmitted": false,
+              "featuredImage": {
+                "id": "aWQ6NTE4Mjg4",
+                "meta": {
+                  "type": "images.CustomImage",
+                  "downloadUrl": "https://assets.spaceappschallenge.org/media/original_images/WhatsApp_Image_2026-11-04_at_22.22.50.jpeg",
+                  "__typename": "ImageMeta"
+                },
+                "title": "team_image.01:25:20.504592",
+                "alt": "team_image.01:25:20.504592",
+                "caption": "team_image.01:25:20.504592",
+                "displaySize": "or",
+                "rendition": {
+                  "url": "https://assets.spaceappschallenge.org/media/images/WhatsApp_Image_2026-11-04_at_22.22.2e16d0ba.fill-300x250.jpg",
+                  "fullUrl": "https://assets.spaceappschallenge.org/media/images/WhatsApp_Image_2026-11-04_at_22.22.2e16d0ba.fill-300x250.jpg",
+                  "height": 250,
+                  "width": 300,
+                  "__typename": "BaseImage"
+                },
+                "__typename": "DefaultImage"
+              },
+              "description": null,
+              "desiredSkills": null,
+              "languages": null,
+              "challenge": "aWQ6NTUxMjk=",
+              "challengeDetails": {
+                "id": "aWQ6NTUxMjk=",
+                "title": "Identify Earth Locations that Analog the Permanent Moon Base Locations and Mars",
+                "meta": {
+                  "type": "CHALLENGE",
+                  "slug": "permanent-moon-base-locations-and-mars",
+                  "firstPublishedAt": "2026-09-17T14:21:29.086000Z",
+                  "lastPublishedAt": "2026-10-29T19:56:20.753650Z",
+                  "relativeUrl": "/2026/challenges/permanent-moon-base-locations-and-mars/",
+                  "live": true,
+                  "parent": null,
+                  "__typename": "ExpandedPageMeta"
+                },
+                "excerpt": "Selecting future landing sites and lunar base locations depends on many factors, including topography, geology, environment, and available resources, to name a few. Places on Earth that have analogous characteristics to the Moon or Mars – the Atacama Desert, Haughton Crater, Death Valley – allow mission teams to test equipment and methods before they fly; however, such terrestrial analog sites are not entirely well characterized. Your challenge is to use open Earth, Moon, and Mars data from NASA and other space agencies to identify and characterize new terrestrial analogs for future bases or landing sites, drawing on deserts, polar regions, volcanic and arid terrains, caves, and other environments that share conditions with the lunar or Martian surface, then present your findings as a map, visualization, or other tool.",
+                "__typename": "ChallengePage"
+              },
+              "location": "aWQ6NTQ3Mzk=",
+              "locationDetails": {
+                "id": "aWQ6NTQ3Mzk=",
+                "title": "Lajeado",
+                "displayName": "",
+                "meta": {
+                  "type": "LOCATION",
+                  "slug": "lajeado",
+                  "firstPublishedAt": "2026-08-12T15:11:11.096000Z",
+                  "lastPublishedAt": "2026-11-07T18:14:13.844338Z",
+                  "relativeUrl": "/2026/local-events/lajeado/",
+                  "live": true,
+                  "parent": null,
+                  "__typename": "ExpandedPageMeta"
+                },
+                "country": "Brazil",
+                "__typename": "LocationPage"
+              },
+              "event": "aWQ6NA==",
+              "joinEnabled": true,
+              "memberships": null,
+              "nominationBadges": null,
+              "awardBadges": null
+            }
+          },
+          {
+            "__typename": "TeamPageEdge",
+            "cursor": "b2Zmc2V0OjY=",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6NzE5MDk=",
@@ -22242,6 +22544,109 @@
           {
             "__typename": "TeamPageEdge",
             "cursor": "b2Zmc2V0OjQ=",
+            "node": {
+              "__typename": "TeamPage",
+              "id": "aWQ6NzczOTI=",
+              "title": "Bahia Beyond",
+              "meta": {
+                "type": "TEAM",
+                "slug": "bahia-beyond",
+                "firstPublishedAt": "2026-11-05T18:48:40.962000Z",
+                "lastPublishedAt": "2026-11-07T02:21:33.642733Z",
+                "relativeUrl": "/2026/find-a-team/bahia-beyond/",
+                "live": true,
+                "parent": null,
+                "__typename": "ExpandedPageMeta"
+              },
+              "owner": "aWQ6MTFhMGVjMWEtNTgzNC00ZWFkLWJlMWItYWE0MjNhOTU2NWRm",
+              "ownerDetails": null,
+              "excerpt": "Bahia Beyond is a Brazilian team from Bahia, driven by curiosity and a passion for science, technology, and space exploration. We bring diverse perspectives together to create innovative solutions to global challenges. We welcome curious and creat...",
+              "project": "aWQ6NzM3OTA=",
+              "projectDetails": {
+                "id": "aWQ6NzM3OTA=",
+                "name": "Project Bahia Beyond",
+                "summary": "",
+                "demoLink": "",
+                "projectLink": "",
+                "details": "",
+                "solution": "",
+                "aiReferences": "",
+                "dataReferences": "",
+                "projectReferences": "",
+                "isSubmitted": false,
+                "savedAt": null,
+                "submittedAt": null,
+                "__typename": "Project"
+              },
+              "projectSubmitted": false,
+              "featuredImage": {
+                "id": "aWQ6NTIwNjYy",
+                "meta": {
+                  "type": "images.CustomImage",
+                  "downloadUrl": "https://assets.spaceappschallenge.org/media/original_images/WhatsApp_Image_2026-11-05_at_15.39.35.jpeg",
+                  "__typename": "ImageMeta"
+                },
+                "title": "team_image.18:40:25.445728",
+                "alt": "team_image.18:40:25.445728",
+                "caption": "team_image.18:40:25.445728",
+                "displaySize": "or",
+                "rendition": {
+                  "url": "https://assets.spaceappschallenge.org/media/images/WhatsApp_Image_2026-11-05_at_15.39.2e16d0ba.fill-300x250.jpg",
+                  "fullUrl": "https://assets.spaceappschallenge.org/media/images/WhatsApp_Image_2026-11-05_at_15.39.2e16d0ba.fill-300x250.jpg",
+                  "height": 250,
+                  "width": 300,
+                  "__typename": "BaseImage"
+                },
+                "__typename": "DefaultImage"
+              },
+              "description": null,
+              "desiredSkills": null,
+              "languages": null,
+              "challenge": "aWQ6NTUxMjU=",
+              "challengeDetails": {
+                "id": "aWQ6NTUxMjU=",
+                "title": "Abandoned but not Forgotten: Storytelling about NASA's Discarded Equipment on the Moon and Mars",
+                "meta": {
+                  "type": "CHALLENGE",
+                  "slug": "nasas-discarded-equipment-storytelling",
+                  "firstPublishedAt": "2026-09-17T14:22:22.961000Z",
+                  "lastPublishedAt": "2026-10-28T14:17:50.381615Z",
+                  "relativeUrl": "/2026/challenges/nasas-discarded-equipment-storytelling/",
+                  "live": true,
+                  "parent": null,
+                  "__typename": "ExpandedPageMeta"
+                },
+                "excerpt": "Since the 1960s, NASA has left hardware across the solar system–on the Moon, on Mars, and in deep space. From rovers and instruments that completed their science missions to probes still traveling away from Earth this hardware varies widely in both its purpose and current level of functionality. Your challenge is to tell the story of some or all of this equipment that introduces school-age space enthusiasts to the hardware and the science it made possible.",
+                "__typename": "ChallengePage"
+              },
+              "location": "aWQ6NTQ1NDg=",
+              "locationDetails": {
+                "id": "aWQ6NTQ1NDg=",
+                "title": "Salvador",
+                "displayName": "",
+                "meta": {
+                  "type": "LOCATION",
+                  "slug": "salvador",
+                  "firstPublishedAt": "2026-08-25T15:08:41.377000Z",
+                  "lastPublishedAt": "2026-11-07T20:34:29.791834Z",
+                  "relativeUrl": "/2026/local-events/salvador/",
+                  "live": true,
+                  "parent": null,
+                  "__typename": "ExpandedPageMeta"
+                },
+                "country": "Brazil",
+                "__typename": "LocationPage"
+              },
+              "event": "aWQ6NA==",
+              "joinEnabled": true,
+              "memberships": null,
+              "nominationBadges": null,
+              "awardBadges": null
+            }
+          },
+          {
+            "__typename": "TeamPageEdge",
+            "cursor": "b2Zmc2V0OjM=",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6NTc0ODQ=",
@@ -162502,7 +162907,7 @@
                 "__typename": "LocationPage"
               },
               "event": "aWQ6NA==",
-              "joinEnabled": true,
+              "joinEnabled": false,
               "memberships": null,
               "nominationBadges": null,
               "awardBadges": null

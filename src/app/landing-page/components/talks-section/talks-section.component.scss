@@ -74,15 +74,21 @@
     .teaser-photo img { transform: scale(1.04); }
   }
 
-  // Palestra internacional: contorno e brilho Neon Yellow para se destacar.
+  // Palestra internacional ou de quem venceu o Space Apps: contorno e brilho
+  // Neon Yellow para se destacar.
   &--international,
-  &--international:hover {
+  &--international:hover,
+  &--award,
+  &--award:hover {
     border-color: rgba($sa-neon-yellow, 0.55);
     box-shadow: 0 0 0 1px rgba($sa-neon-yellow, 0.18), 0 14px 40px rgba($sa-neon-yellow, 0.08);
   }
 }
 
-.teaser-international {
+.teaser-award i { font-size: 1rem; }
+
+.teaser-international,
+.teaser-award {
   display: inline-flex;
   flex-wrap: wrap;
   align-items: center;
@@ -206,6 +212,14 @@
   margin: 0 0 0.9rem;
   font-size: 0.82rem;
   color: var(--text-muted);
+}
+
+// Logo da empresa de quem fala. `align-self` evita que o flex estique a imagem.
+.teaser-brand {
+  align-self: flex-start;
+  height: 20px;
+  width: auto;
+  margin: -0.35rem 0 0.9rem;
 }
 
 // Selos de tema em contorno Rocket Red, como no card de divulgação. Texto em

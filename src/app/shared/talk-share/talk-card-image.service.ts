@@ -35,6 +35,8 @@ const TEXT_SECONDARY = '#C3D3EA';
 const LOGO_SRC = 'assets/nasa-spaceapps-logo-removebg-preview.png';
 /** Largura do logo do GDG no card — o SVG é desenhado direto nesse tamanho. */
 const PARTNER_LOGO_WIDTH = 430;
+/** Largura do logo da empresa de quem fala (`talk.brand`), no mesmo lugar do GDG. */
+const BRAND_LOGO_WIDTH = 300;
 const PHOTO_FALLBACK = 'assets/organizers/placeholder.svg';
 /** Mesmo enquadramento padrão das fotos em `/palestras`. */
 const DEFAULT_PHOTO_FOCUS: Focus = { x: 0.5, y: 0.18 };
@@ -77,6 +79,7 @@ interface Layout {
 
 interface Assets {
   logo: HTMLImageElement;
+  /** Logo abaixo do da sede: o do GDG nas palestras em parceria, senão o de `talk.brand`. */
   partner: HTMLCanvasElement | null;
   photo: HTMLImageElement;
 }
@@ -107,7 +110,11 @@ export class TalkCardImageService {
 
     const [logo, partner, photo] = await Promise.all([
       loadImage(LOGO_SRC),
-      talk.withPartner ? this.partnerLogo() : Promise.resolve(null),
+      talk.withPartner
+        ? this.partnerLogo()
+        : talk.brand
+          ? this.brandLogo(talk.brand.logo)
+          : Promise.resolve(null),
       loadImage(talk.speaker.photo).catch(() => loadImage(PHOTO_FALLBACK)),
       loadFonts(REQUIRED_FONTS)
     ]);
@@ -193,9 +200,20 @@ export class TalkCardImageService {
     ctx.fillRect(l.pad, y, Math.min(columnWidth, name.width * 0.86), 4);
     y += 4 + 24;
 
-    // Quem não tem apelido de divulgação ganha a origem (ou a cidade) no lugar.
+    // Prêmio em destaque, em Neon Yellow e quebrando em linhas: é longo demais
+    // para encolher numa linha só ao lado da foto.
+    // Sem prêmio, vai o apelido de divulgação ou, sem ele, a origem (ou a cidade).
     const subtitle = speaker.alias ?? speaker.origin?.label ?? speaker.city;
-    if (subtitle) {
+    if (speaker.award) {
+      y = this.drawWrapped(ctx, speaker.award.title.toUpperCase(), l.pad, y, columnWidth, {
+        font: size => `700 ${size}px "Fira Sans", sans-serif`,
+        maxSize: 40,
+        minSize: 28,
+        lineHeight: 1.12,
+        maxHeight: 40 * 1.12 * 3,
+        color: NEON_YELLOW
+      }).bottom;
+    } else if (subtitle) {
       y = this.drawFittedLine(ctx, subtitle.toUpperCase(), l.pad, y, columnWidth,
         size => `700 ${size}px "Fira Sans", sans-serif`, 46, 26, BLUE_YONDER);
     }
@@ -215,7 +233,13 @@ export class TalkCardImageService {
       color: WHITE
     }).bottom + 24;
 
-    const details = separated([speaker.role, speaker.organization, ...speaker.credentials.slice(0, 2)]);
+    // Com prêmio, o detalhe dele ocupa o lugar das credenciais (que não caberiam nas duas linhas).
+    const details = separated([
+      ...(speaker.award?.detail ? [speaker.award.detail] : []),
+      speaker.role,
+      speaker.organization,
+      ...speaker.credentials.slice(0, speaker.award ? 0 : 2)
+    ]);
     y = this.drawParagraph(ctx, details, l.pad + 6, y, l.width - l.pad * 2 - 60, 2, {
       font: '400 25px "Overpass", sans-serif',
       lineHeight: 34,
@@ -391,7 +415,7 @@ export class TalkCardImageService {
 
   // ─── Blocos ─────────────────────────────────────────────────
 
-  /** Logo da sede e, nas palestras em parceria, o do GDG logo abaixo. Devolve o novo `y`. */
+  /** Logo da sede e, logo abaixo, o do GDG ou o da empresa de quem fala. Devolve o novo `y`. */
   private drawHeader(ctx: CanvasRenderingContext2D, l: Layout, assets: Assets): number {
     const logoHeight = l.story ? 200 : 186;
     const logoWidth = (logoHeight * assets.logo.width) / assets.logo.height;
@@ -582,7 +606,9 @@ export class TalkCardImageService {
 
     const x = cx + radius + 34;
     const maxWidth = l.width - x - l.pad;
-    const accent = speaker.alias ?? speaker.origin?.label ?? speaker.city;
+    // O prêmio, quando houver, ocupa a linha de destaque em Neon Yellow.
+    const accent = speaker.award?.title ?? speaker.alias ?? speaker.origin?.label ?? speaker.city;
+    const accentColor = speaker.award ? NEON_YELLOW : BLUE_YONDER;
     const detail = separated([speaker.role, speaker.organization]);
 
     let lineY = this.drawFittedLine(ctx, speaker.name, x, y + 8, maxWidth,
@@ -592,7 +618,7 @@ export class TalkCardImageService {
       ctx.save();
       setLetterSpacing(ctx, '2px');
       lineY = this.drawFittedLine(ctx, accent.toUpperCase(), x, lineY, maxWidth,
-        size => `700 ${size}px "Overpass", sans-serif`, 24, 16, BLUE_YONDER) + 8;
+        size => `700 ${size}px "Overpass", sans-serif`, 24, 16, accentColor) + 8;
       ctx.restore();
     }
 
@@ -846,6 +872,16 @@ export class TalkCardImageService {
       });
 
     return this.whitePartnerLogo;
+  }
+
+  /** Logo de `talk.brand`, que já vem na versão branca: só ajusta à `BRAND_LOGO_WIDTH`. */
+  private async brandLogo(src: string): Promise<HTMLCanvasElement> {
+    const img = await loadImage(src);
+    const canvas = document.createElement('canvas');
+    canvas.width = BRAND_LOGO_WIDTH;
+    canvas.height = Math.ceil((BRAND_LOGO_WIDTH * img.height) / img.width);
+    canvas.getContext('2d')?.drawImage(img, 0, 0, canvas.width, canvas.height);
+    return canvas;
   }
 }
 

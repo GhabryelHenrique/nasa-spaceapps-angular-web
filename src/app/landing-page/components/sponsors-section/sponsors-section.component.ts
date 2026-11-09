@@ -28,6 +28,8 @@ export class SponsorsSectionComponent implements OnDestroy {
       { name: 'Colégio Gabarito', logo: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSwGgksxpwDoLa0Omi11PVWdvOCZxrireXLBS26GdhHY0THxb5OvuAXwijoUU7nT4reQKs&usqp=CAU', url: 'https://gabaritoeducacao.com' },
       { name: 'Instituto Projeto de Vida', logo: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQgoUx2wUbksg5R3ro6o_29riVp6REWXxzIFA&s', url: 'https://institutoprojetodevida.org/' },
       { name: 'Global Shapers Community', logo: 'assets/sponsors/Global Shapers Community.jpg', url: 'https://www.instagram.com/globalshapersuberlandia' },
+      { name: 'Aimirim', logo: 'assets/sponsors/aimirim.png', url: 'https://www.aimirimsti.com.br' },
+      { name: 'Lovable', logo: 'assets/sponsors/lovable.svg', url: 'https://lovable.dev' },
     ],
     silver: [
       { name: 'MFlab', logo: 'assets/sponsors/mf-lab.jpg', url: 'https://www.femec.ufu.br/unidades/laboratorio/laboratorio-de-mecanica-dos-fluidos' },
@@ -68,7 +70,6 @@ export class SponsorsSectionComponent implements OnDestroy {
       // { name: 'Alter', logo: 'https://media.licdn.com/dms/image/v2/D4D0BAQGyhLjeUvvQ3w/company-logo_200_200/company-logo_200_200/0/1685957936806?e=1762387200&v=beta&t=UrXsGLV7RXnyUz-O8Lsbirx9mJZEl4Lt8biA5e-0Elc', url: 'https://www.alterconteudo.com.br/' },
       { name: 'GRVA', logo: 'https://media.licdn.com/dms/image/v2/C4E0BAQH5NIuzpkwyJw/company-logo_200_200/company-logo_200_200/0/1630576065144?e=2147483647&v=beta&t=og3l0xiFg4m_h1ZtJcQO2CcIkVK6ucDcXhZuAYfg_-Q', url: 'https://grva.com.br/' },
       // { name: 'Ntropy', logo: 'https://ffnews.com/wp-content/uploads/2023/06/ntropy-149x149.jpg', url: 'https://www.ntropy.com/' },
-      // { name: 'Aimirim', logo: 'https://media.licdn.com/dms/image/v2/C4D0BAQE5wUH84mceMA/company-logo_200_200/company-logo_200_200/0/1630707182957/aimirim_solues_tecnolgicas_integradas_ltda__logo?e=1759968000&v=beta&t=TMUV2BK2zUCvHnkgl1l6KMp4ILlf3w7JHkYXseWJyXU', url: 'https://www.aimirimsti.com.br' },
       { name: 'Agro Smart', logo: 'https://media.licdn.com/dms/image/v2/C4D0BAQH44jdcui91xA/company-logo_200_200/company-logo_200_200/0/1657037642094/agrosmart_logo?e=2147483647&v=beta&t=uKD3P6woxuauHHnSu2Ir-xijngQMkZJHJZf6ULgxSWo', url: 'https://agrosmart.com.br/' },
       { name: 'LayerX', logo: 'https://media.licdn.com/dms/image/v2/D4D0BAQHZQ8yCJxxisQ/company-logo_200_200/company-logo_200_200/0/1734982286382/layerxsolucoes_logo?e=1767830400&v=beta&t=Nh19j2j7ddWQ25hImkHx0XTA1tEKFBDadPy2hHLXA5k', url: 'https://layerx.com.br' },
       { name: 'Observatório Nacional', logo: 'https://media.licdn.com/dms/image/v2/C4E0BAQFVZtnLQKrmNg/company-logo_200_200/company-logo_200_200/0/1631356595002?e=2147483647&v=beta&t=ONLM2nZjv3fbTw7420qtgQhwiC1ef13bkhIMRscBlaE', url: 'https://www.gov.br/observatorio/pt-br' },

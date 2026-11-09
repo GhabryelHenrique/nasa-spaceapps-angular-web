@@ -151,8 +151,10 @@
 
   &:last-child { margin-bottom: 0; }
 
-  // Palestra internacional: contorno e brilho Neon Yellow para se destacar.
-  &--international {
+  // Palestra internacional ou de quem venceu o Space Apps: contorno e brilho
+  // Neon Yellow para se destacar.
+  &--international,
+  &--award {
     border-color: rgba($sa-neon-yellow, 0.55);
     box-shadow: 0 0 0 1px rgba($sa-neon-yellow, 0.18), 0 18px 48px rgba($sa-neon-yellow, 0.08);
   }
@@ -232,6 +234,23 @@
   box-shadow: 0 0 0 2px $sa-white, 0 4px 12px rgba(0, 0, 0, 0.35);
 }
 
+// Troféu de quem venceu o Space Apps, no mesmo canto da bandeira.
+.talk-trophy {
+  position: absolute;
+  top: 0.4rem;
+  right: 0.4rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: var(--sa-neon-yellow);
+  color: var(--sa-deep-blue);
+  font-size: 1.3rem;
+  box-shadow: 0 0 0 2px $sa-white, 0 4px 12px rgba(0, 0, 0, 0.35);
+}
+
 .talk-aside-name {
   margin: 0 0 0.3rem;
   font-family: 'Fira Sans', sans-serif;
@@ -246,6 +265,26 @@
   font-size: 0.85rem;
   line-height: 1.45;
   color: var(--text-secondary);
+}
+
+// Logo da empresa de quem fala, logo abaixo do cargo (versão branca, sem placa).
+.talk-brand {
+  display: block;
+  margin: -0.4rem 0 1.25rem;
+  transition: opacity 0.2s ease;
+
+  img {
+    display: block;
+    height: 26px;
+    width: auto;
+  }
+
+  &:hover { opacity: 0.8; }
+
+  &:focus-visible {
+    outline: 3px solid var(--sa-neon-yellow);
+    outline-offset: 4px;
+  }
 }
 
 .talk-facts {
@@ -649,6 +688,32 @@
   font-size: 0.88rem;
   font-weight: 600;
   color: $sa-white;
+}
+
+// Prêmio em destaque, antes das credenciais: contorno Neon Yellow como os
+// selos de palestra internacional.
+.speaker-award {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.55rem;
+  margin: -0.2rem 0 1rem;
+  padding: 0.6rem 0.9rem;
+  border: 1px solid rgba($sa-neon-yellow, 0.55);
+  border-radius: 12px;
+  background: rgba($sa-neon-yellow, 0.08);
+  font-family: 'Overpass', sans-serif;
+  font-size: 0.88rem;
+  line-height: 1.45;
+  color: $sa-white;
+
+  i {
+    flex-shrink: 0;
+    margin-top: 0.1rem;
+    font-size: 1.1rem;
+    color: $sa-neon-yellow;
+  }
+
+  strong { color: $sa-neon-yellow; }
 }
 
 .speaker-credentials {

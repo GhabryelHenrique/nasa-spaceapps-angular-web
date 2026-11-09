@@ -13,6 +13,7 @@ import { CountdownComponent } from './components/countdown/countdown.component';
 import { TimelineComponent } from './components/timeline/timeline.component';
 import { TeamsService } from '../services/teams.service';
 import { Team } from '../shared/data/teams.data';
+import { SPONSORS_2026 } from '../shared/data/sponsors-2026.data';
 
 @Component({
   selector: 'app-landing-page',
@@ -33,6 +34,8 @@ import { Team } from '../shared/data/teams.data';
   styleUrl: './landing-page.component.scss',
 })
 export class LandingPageComponent implements OnInit {
+  readonly sponsors2026 = SPONSORS_2026;
+
   totalTeams = 0;
   totalMembers = 0;
 

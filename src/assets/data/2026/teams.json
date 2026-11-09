@@ -533,6 +533,109 @@
             "cursor": "b2Zmc2V0OjU=",
             "node": {
               "__typename": "TeamPage",
+              "id": "aWQ6NzY4MTg=",
+              "title": "arquitetos do cosmo",
+              "meta": {
+                "type": "TEAM",
+                "slug": "arquitetos-do-cosmo",
+                "firstPublishedAt": "2026-11-05T01:24:17.798180Z",
+                "lastPublishedAt": "2026-11-05T01:24:17.798180Z",
+                "relativeUrl": "/2026/find-a-team/arquitetos-do-cosmo/",
+                "live": true,
+                "parent": null,
+                "__typename": "ExpandedPageMeta"
+              },
+              "owner": "aWQ6ZjBlYmJlNzAtNDYyMy00YTYwLThmNDEtYjE0MzhhMTgzNGE3",
+              "ownerDetails": null,
+              "excerpt": "somos uma Equipe focada no desenvolvimento do \"Jogo de Design de Missões Espaciais\". Estamos aqui para trabalhar na simulação e nas mecânicas de jogo para gerir recursos e tomadas de decisão orbitais. Se tens interesse em programação, design de jo...",
+              "project": "aWQ6NzMyMTY=",
+              "projectDetails": {
+                "id": "aWQ6NzMyMTY=",
+                "name": "Project arquitetos do cosmo",
+                "summary": "",
+                "demoLink": "",
+                "projectLink": "",
+                "details": "",
+                "solution": "",
+                "aiReferences": "",
+                "dataReferences": "",
+                "projectReferences": "",
+                "isSubmitted": false,
+                "savedAt": null,
+                "submittedAt": null,
+                "__typename": "Project"
+              },
+              "projectSubmitted": false,
+              "featuredImage": {
+                "id": "aWQ6NTE4Mjcz",
+                "meta": {
+                  "type": "images.CustomImage",
+                  "downloadUrl": "https://assets.spaceappschallenge.org/media/original_images/cosmo.jpeg",
+                  "__typename": "ImageMeta"
+                },
+                "title": "team_image.01:11:48.632325",
+                "alt": "team_image.01:11:48.632325",
+                "caption": "team_image.01:11:48.632325",
+                "displaySize": "or",
+                "rendition": {
+                  "url": "https://assets.spaceappschallenge.org/media/images/cosmo.2e16d0ba.fill-300x250.jpg",
+                  "fullUrl": "https://assets.spaceappschallenge.org/media/images/cosmo.2e16d0ba.fill-300x250.jpg",
+                  "height": 250,
+                  "width": 300,
+                  "__typename": "BaseImage"
+                },
+                "__typename": "DefaultImage"
+              },
+              "description": null,
+              "desiredSkills": null,
+              "languages": null,
+              "challenge": "aWQ6NTUxMzE=",
+              "challengeDetails": {
+                "id": "aWQ6NTUxMzE=",
+                "title": "Space Mission Design Game",
+                "meta": {
+                  "type": "CHALLENGE",
+                  "slug": "space-mission-design-game",
+                  "firstPublishedAt": "2026-09-17T14:22:08.317000Z",
+                  "lastPublishedAt": "2026-10-29T19:55:48.017266Z",
+                  "relativeUrl": "/2026/challenges/space-mission-design-game/",
+                  "live": true,
+                  "parent": null,
+                  "__typename": "ExpandedPageMeta"
+                },
+                "excerpt": "Designing a space mission requires careful consideration of competing demands, including mission objectives, spacecraft design, scientific instruments, launch vehicles, budgets, power, mass, communications, and orbital constraints. For students who  rarely get to experiment with an entire mission from concept to operation, these trade-offs often remain abstract. Your challenge is to create an interactive game that allows participants to design, manage, and simulate a complete space mission while making engineering decisions, managing limited resources, and evaluating how each choice shapes the success of their mission.",
+                "__typename": "ChallengePage"
+              },
+              "location": "aWQ6NTQ0NDY=",
+              "locationDetails": {
+                "id": "aWQ6NTQ0NDY=",
+                "title": "Uberlândia",
+                "displayName": "",
+                "meta": {
+                  "type": "LOCATION",
+                  "slug": "uberlandia",
+                  "firstPublishedAt": "2026-08-20T13:11:16.191000Z",
+                  "lastPublishedAt": "2026-11-02T14:14:24.314767Z",
+                  "relativeUrl": "/2026/local-events/uberlandia/",
+                  "live": true,
+                  "parent": null,
+                  "__typename": "ExpandedPageMeta"
+                },
+                "country": "Brazil",
+                "__typename": "LocationPage"
+              },
+              "event": "aWQ6NA==",
+              "joinEnabled": true,
+              "memberships": null,
+              "nominationBadges": null,
+              "awardBadges": null
+            }
+          },
+          {
+            "__typename": "TeamPageEdge",
+            "cursor": "b2Zmc2V0OjQ=",
+            "node": {
+              "__typename": "TeamPage",
               "id": "aWQ6NTY1NzY=",
               "title": "AstroUdi",
               "meta": {
