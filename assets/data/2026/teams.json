@@ -8,10 +8,10 @@
           "hasPreviousPage": false,
           "hasNextPage": false,
           "startCursor": "b2Zmc2V0OjA=",
-          "endCursor": "b2Zmc2V0OjMz",
+          "endCursor": "b2Zmc2V0OjQw",
           "__typename": "PageInfo"
         },
-        "totalCount": 34,
+        "totalCount": 41,
         "edges": [
           {
             "__typename": "TeamPageEdge",
@@ -34,7 +34,22 @@
               "ownerDetails": null,
               "excerpt": "Turma 27 de Sistemas de Informação da UFU - Universidade Federal de UberlândIA. Disparando 27 threads em paralelo para processar a realidade, quebrar barreiras lógicas e codificar soluções de outro mundo na órbita da NASA. 🚀🌌",
               "project": "aWQ6NjkzODI=",
-              "projectDetails": null,
+              "projectDetails": {
+                "id": "aWQ6NjkzODI=",
+                "name": "Project 27 Threads - UberlandIA",
+                "summary": "",
+                "demoLink": "",
+                "projectLink": "",
+                "details": "",
+                "solution": "",
+                "aiReferences": "",
+                "dataReferences": "",
+                "projectReferences": "",
+                "isSubmitted": false,
+                "savedAt": null,
+                "submittedAt": null,
+                "__typename": "Project"
+              },
               "projectSubmitted": false,
               "featuredImage": {
                 "id": "aWQ6NTAyNzQw",
@@ -122,7 +137,22 @@
               "ownerDetails": null,
               "excerpt": "We're joining NASA Space Apps 2026 to have fun, learn new things, meet people, and hopefully create something awesome together.We have experience with software development, AI, and different technologies, but we're always up for learning something...",
               "project": "aWQ6NjMzMDI=",
-              "projectDetails": null,
+              "projectDetails": {
+                "id": "aWQ6NjMzMDI=",
+                "name": "Project Amigos do PSY",
+                "summary": "",
+                "demoLink": "",
+                "projectLink": "",
+                "details": "",
+                "solution": "",
+                "aiReferences": "",
+                "dataReferences": "",
+                "projectReferences": "",
+                "isSubmitted": false,
+                "savedAt": null,
+                "submittedAt": null,
+                "__typename": "Project"
+              },
               "projectSubmitted": false,
               "featuredImage": {
                 "id": "aWQ6NDc0NzIw",
@@ -199,8 +229,8 @@
               "meta": {
                 "type": "TEAM",
                 "slug": "andromeda-project",
-                "firstPublishedAt": "2026-11-09T12:29:37.286386Z",
-                "lastPublishedAt": "2026-11-09T12:29:37.286386Z",
+                "firstPublishedAt": "2026-11-09T12:29:37.286000Z",
+                "lastPublishedAt": "2026-11-11T12:34:45.411881Z",
                 "relativeUrl": "/2026/find-a-team/andromeda-project/",
                 "live": true,
                 "parent": null,
@@ -210,7 +240,22 @@
               "ownerDetails": null,
               "excerpt": "Estamos procurando pessoas que tenham interesse sério de entrar no desenvolvimento de games educacionais com metodologias orgânicas.",
               "project": "aWQ6NzcxNjE=",
-              "projectDetails": null,
+              "projectDetails": {
+                "id": "aWQ6NzcxNjE=",
+                "name": "Project Andrômeda Project",
+                "summary": "",
+                "demoLink": "",
+                "projectLink": "",
+                "details": "",
+                "solution": "",
+                "aiReferences": "",
+                "dataReferences": "",
+                "projectReferences": "",
+                "isSubmitted": false,
+                "savedAt": null,
+                "submittedAt": null,
+                "__typename": "Project"
+              },
               "projectSubmitted": false,
               "featuredImage": {
                 "id": "aWQ6NTMyOTE2",
@@ -298,7 +343,22 @@
               "ownerDetails": null,
               "excerpt": "Apollo Balboa is an open,  team for professionals and curious minds. I’m passionate about challenges and driven by curiosity, creativity, and problem-solving. My goal is to keep it simple: constantly taking on challenges, keep learning across diff...",
               "project": "aWQ6NTQ3Mjg=",
-              "projectDetails": null,
+              "projectDetails": {
+                "id": "aWQ6NTQ3Mjg=",
+                "name": "Project Apollo Balboa",
+                "summary": "",
+                "demoLink": "",
+                "projectLink": "",
+                "details": "",
+                "solution": "",
+                "aiReferences": "",
+                "dataReferences": "",
+                "projectReferences": "",
+                "isSubmitted": false,
+                "savedAt": null,
+                "submittedAt": null,
+                "__typename": "Project"
+              },
               "projectSubmitted": false,
               "featuredImage": {
                 "id": "aWQ6NDMyODE1",
@@ -386,7 +446,22 @@
               "ownerDetails": null,
               "excerpt": "somos uma Equipe focada no desenvolvimento do \"Jogo de Design de Missões Espaciais\". Estamos aqui para trabalhar na simulação e nas mecânicas de jogo para gerir recursos e tomadas de decisão orbitais. Se tens interesse em programação, design de jo...",
               "project": "aWQ6NzMyMTY=",
-              "projectDetails": null,
+              "projectDetails": {
+                "id": "aWQ6NzMyMTY=",
+                "name": "Project arquitetos do cosmo",
+                "summary": "",
+                "demoLink": "",
+                "projectLink": "",
+                "details": "",
+                "solution": "",
+                "aiReferences": "",
+                "dataReferences": "",
+                "projectReferences": "",
+                "isSubmitted": false,
+                "savedAt": null,
+                "submittedAt": null,
+                "__typename": "Project"
+              },
               "projectSubmitted": false,
               "featuredImage": {
                 "id": "aWQ6NTE4Mjcz",
@@ -458,6 +533,109 @@
             "cursor": "b2Zmc2V0OjU=",
             "node": {
               "__typename": "TeamPage",
+              "id": "aWQ6ODI1NjU=",
+              "title": "Artemis Adventure",
+              "meta": {
+                "type": "TEAM",
+                "slug": "artemis-adventure",
+                "firstPublishedAt": "2026-11-10T22:39:24.938000Z",
+                "lastPublishedAt": "2026-11-10T23:19:54.797742Z",
+                "relativeUrl": "/2026/find-a-team/artemis-adventure/",
+                "live": true,
+                "parent": null,
+                "__typename": "ExpandedPageMeta"
+              },
+              "owner": "aWQ6MzAyNGU3YWItNzBmYy00YWE2LWEzYzMtMjFiYTYyODg5MGJl",
+              "ownerDetails": null,
+              "excerpt": "We're going to create a really fun and realistic game of exploriring the sideral space specific the moon and with this we want to create a experience where the player pass all the problems that the astronaults pass in and out the spacecraft, this ...",
+              "project": "aWQ6Nzg5NjI=",
+              "projectDetails": {
+                "id": "aWQ6Nzg5NjI=",
+                "name": "Project Artemis Adventure",
+                "summary": "",
+                "demoLink": "",
+                "projectLink": "",
+                "details": "",
+                "solution": "",
+                "aiReferences": "",
+                "dataReferences": "",
+                "projectReferences": "",
+                "isSubmitted": false,
+                "savedAt": null,
+                "submittedAt": null,
+                "__typename": "Project"
+              },
+              "projectSubmitted": false,
+              "featuredImage": {
+                "id": "aWQ6NTM5NTE3",
+                "meta": {
+                  "type": "images.CustomImage",
+                  "downloadUrl": "https://assets.spaceappschallenge.org/media/original_images/Astronauta_u3xO8Mt.jpeg",
+                  "__typename": "ImageMeta"
+                },
+                "title": "team_image.22:46:05.583868",
+                "alt": "team_image.22:46:05.583868",
+                "caption": "team_image.22:46:05.583868",
+                "displaySize": "or",
+                "rendition": {
+                  "url": "https://assets.spaceappschallenge.org/media/images/Astronauta_u3xO8Mt.2e16d0ba.fill-300x250.jpg",
+                  "fullUrl": "https://assets.spaceappschallenge.org/media/images/Astronauta_u3xO8Mt.2e16d0ba.fill-300x250.jpg",
+                  "height": 169,
+                  "width": 202,
+                  "__typename": "BaseImage"
+                },
+                "__typename": "DefaultImage"
+              },
+              "description": null,
+              "desiredSkills": null,
+              "languages": null,
+              "challenge": "aWQ6NTUxMzE=",
+              "challengeDetails": {
+                "id": "aWQ6NTUxMzE=",
+                "title": "Space Mission Design Game",
+                "meta": {
+                  "type": "CHALLENGE",
+                  "slug": "space-mission-design-game",
+                  "firstPublishedAt": "2026-09-17T14:22:08.317000Z",
+                  "lastPublishedAt": "2026-10-29T19:55:48.017266Z",
+                  "relativeUrl": "/2026/challenges/space-mission-design-game/",
+                  "live": true,
+                  "parent": null,
+                  "__typename": "ExpandedPageMeta"
+                },
+                "excerpt": "Designing a space mission requires careful consideration of competing demands, including mission objectives, spacecraft design, scientific instruments, launch vehicles, budgets, power, mass, communications, and orbital constraints. For students who  rarely get to experiment with an entire mission from concept to operation, these trade-offs often remain abstract. Your challenge is to create an interactive game that allows participants to design, manage, and simulate a complete space mission while making engineering decisions, managing limited resources, and evaluating how each choice shapes the success of their mission.",
+                "__typename": "ChallengePage"
+              },
+              "location": "aWQ6NTQ0NDY=",
+              "locationDetails": {
+                "id": "aWQ6NTQ0NDY=",
+                "title": "Uberlândia",
+                "displayName": "",
+                "meta": {
+                  "type": "LOCATION",
+                  "slug": "uberlandia",
+                  "firstPublishedAt": "2026-08-20T13:11:16.191000Z",
+                  "lastPublishedAt": "2026-11-02T14:14:24.314767Z",
+                  "relativeUrl": "/2026/local-events/uberlandia/",
+                  "live": true,
+                  "parent": null,
+                  "__typename": "ExpandedPageMeta"
+                },
+                "country": "Brazil",
+                "__typename": "LocationPage"
+              },
+              "event": "aWQ6NA==",
+              "joinEnabled": true,
+              "memberships": null,
+              "nominationBadges": null,
+              "awardBadges": null
+            }
+          },
+          {
+            "__typename": "TeamPageEdge",
+            "cursor": "b2Zmc2V0OjY=",
+            "node": {
+              "__typename": "TeamPage",
               "id": "aWQ6NTY1NzY=",
               "title": "AstroUdi",
               "meta": {
@@ -474,7 +652,22 @@
               "ownerDetails": null,
               "excerpt": "Apenas uma equipe de jovens estudantes programadores",
               "project": "aWQ6NTI5Nzk=",
-              "projectDetails": null,
+              "projectDetails": {
+                "id": "aWQ6NTI5Nzk=",
+                "name": "Project AstroUdi",
+                "summary": "",
+                "demoLink": "",
+                "projectLink": "",
+                "details": "",
+                "solution": "",
+                "aiReferences": "",
+                "dataReferences": "",
+                "projectReferences": "",
+                "isSubmitted": false,
+                "savedAt": null,
+                "submittedAt": null,
+                "__typename": "Project"
+              },
               "projectSubmitted": false,
               "featuredImage": null,
               "description": null,
@@ -524,7 +717,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjY=",
+            "cursor": "b2Zmc2V0Ojc=",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6ODA1MDc=",
@@ -543,7 +736,22 @@
               "ownerDetails": null,
               "excerpt": "Equipe UFU-UNESP.",
               "project": "aWQ6NzY5MDU=",
-              "projectDetails": null,
+              "projectDetails": {
+                "id": "aWQ6NzY5MDU=",
+                "name": "Project BIM1304",
+                "summary": "",
+                "demoLink": "",
+                "projectLink": "",
+                "details": "",
+                "solution": "",
+                "aiReferences": "",
+                "dataReferences": "",
+                "projectReferences": "",
+                "isSubmitted": false,
+                "savedAt": null,
+                "submittedAt": null,
+                "__typename": "Project"
+              },
               "projectSubmitted": false,
               "featuredImage": null,
               "description": null,
@@ -593,7 +801,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0Ojc=",
+            "cursor": "b2Zmc2V0Ojg=",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6NTg2NDg=",
@@ -612,7 +820,22 @@
               "ownerDetails": null,
               "excerpt": "Hi! I’m a solo developer and creator of NullCrew, passionate about technology, software development, space exploration, and interactive experiences. My main skills include React, Next.js, TypeScript, UI/UX, and game logic. I’m looking for teammate...",
               "project": "aWQ6NTUwNTE=",
-              "projectDetails": null,
+              "projectDetails": {
+                "id": "aWQ6NTUwNTE=",
+                "name": "Project NullCrew",
+                "summary": "",
+                "demoLink": "",
+                "projectLink": "",
+                "details": "",
+                "solution": "",
+                "aiReferences": "",
+                "dataReferences": "",
+                "projectReferences": "",
+                "isSubmitted": false,
+                "savedAt": null,
+                "submittedAt": null,
+                "__typename": "Project"
+              },
               "projectSubmitted": false,
               "featuredImage": {
                 "id": "aWQ6NDM0MzU3",
@@ -681,7 +904,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0Ojg=",
+            "cursor": "b2Zmc2V0Ojk=",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6Njg3MzU=",
@@ -700,7 +923,22 @@
               "ownerDetails": null,
               "excerpt": "Ganharemos esse hackathon!",
               "project": "aWQ6NjUxMzc=",
-              "projectDetails": null,
+              "projectDetails": {
+                "id": "aWQ6NjUxMzc=",
+                "name": "Project Blue Marble Records",
+                "summary": "",
+                "demoLink": "",
+                "projectLink": "",
+                "details": "",
+                "solution": "",
+                "aiReferences": "",
+                "dataReferences": "",
+                "projectReferences": "",
+                "isSubmitted": false,
+                "savedAt": null,
+                "submittedAt": null,
+                "__typename": "Project"
+              },
               "projectSubmitted": false,
               "featuredImage": {
                 "id": "aWQ6NDgzNTE2",
@@ -769,7 +1007,194 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0Ojk=",
+            "cursor": "b2Zmc2V0OjEw",
+            "node": {
+              "__typename": "TeamPage",
+              "id": "aWQ6ODMxNjc=",
+              "title": "Cabecinha Conspiration",
+              "meta": {
+                "type": "TEAM",
+                "slug": "cabecinha-conspiration",
+                "firstPublishedAt": "2026-11-11T12:13:08.324000Z",
+                "lastPublishedAt": "2026-11-11T13:33:47.808504Z",
+                "relativeUrl": "/2026/find-a-team/cabecinha-conspiration/",
+                "live": true,
+                "parent": null,
+                "__typename": "ExpandedPageMeta"
+              },
+              "owner": "aWQ6NDYxYTZmNDAtZDBmYy00NDYzLTliNDgtNjQ0OGNmZTUyMmY0",
+              "ownerDetails": null,
+              "excerpt": "We believe kids learn science by making decisions. For the Junior Astronaut Mission Trainer challenge, we will build Base Aurora: a browser card game where 7 to 12 year olds run a base on the Moon. Their cards must last the whole mission, the luna...",
+              "project": "aWQ6Nzk1NjQ=",
+              "projectDetails": {
+                "id": "aWQ6Nzk1NjQ=",
+                "name": "Project Cabecinha Conspiration",
+                "summary": "",
+                "demoLink": "",
+                "projectLink": "",
+                "details": "",
+                "solution": "",
+                "aiReferences": "",
+                "dataReferences": "",
+                "projectReferences": "",
+                "isSubmitted": false,
+                "savedAt": null,
+                "submittedAt": null,
+                "__typename": "Project"
+              },
+              "projectSubmitted": false,
+              "featuredImage": null,
+              "description": null,
+              "desiredSkills": null,
+              "languages": null,
+              "challenge": "aWQ6NTUxMjQ=",
+              "challengeDetails": {
+                "id": "aWQ6NTUxMjQ=",
+                "title": "Build a Junior Astronaut Mission Trainer",
+                "meta": {
+                  "type": "CHALLENGE",
+                  "slug": "junior-astronaut-mission-trainer",
+                  "firstPublishedAt": "2026-09-17T14:22:28.522000Z",
+                  "lastPublishedAt": "2026-10-29T19:51:43.256733Z",
+                  "relativeUrl": "/2026/challenges/junior-astronaut-mission-trainer/",
+                  "live": true,
+                  "parent": null,
+                  "__typename": "ExpandedPageMeta"
+                },
+                "excerpt": "Space-themed STEM content often oversimplifies the engineering trade-offs that define a real mission or presents them at a level too complex to hold a young learner's attention. Few tools make those trade-offs both tangible and fun. Your challenge is to design and build an interactive game or app that lets students run a lunar or Martian outpost, balancing competing demands like life support, radiation shielding, power, and food production, so they experience firsthand the decisions that determine whether a mission fails or succeeds.",
+                "__typename": "ChallengePage"
+              },
+              "location": "aWQ6NTQ0NDY=",
+              "locationDetails": {
+                "id": "aWQ6NTQ0NDY=",
+                "title": "Uberlândia",
+                "displayName": "",
+                "meta": {
+                  "type": "LOCATION",
+                  "slug": "uberlandia",
+                  "firstPublishedAt": "2026-08-20T13:11:16.191000Z",
+                  "lastPublishedAt": "2026-11-02T14:14:24.314767Z",
+                  "relativeUrl": "/2026/local-events/uberlandia/",
+                  "live": true,
+                  "parent": null,
+                  "__typename": "ExpandedPageMeta"
+                },
+                "country": "Brazil",
+                "__typename": "LocationPage"
+              },
+              "event": "aWQ6NA==",
+              "joinEnabled": true,
+              "memberships": null,
+              "nominationBadges": null,
+              "awardBadges": null
+            }
+          },
+          {
+            "__typename": "TeamPageEdge",
+            "cursor": "b2Zmc2V0OjEx",
+            "node": {
+              "__typename": "TeamPage",
+              "id": "aWQ6ODM0Mzg=",
+              "title": "Code",
+              "meta": {
+                "type": "TEAM",
+                "slug": "code642",
+                "firstPublishedAt": null,
+                "lastPublishedAt": null,
+                "relativeUrl": "/2026/find-a-team/code642/",
+                "live": true,
+                "parent": null,
+                "__typename": "ExpandedPageMeta"
+              },
+              "owner": "aWQ6OWY3ZmYyNWMtNmFjOC00NDRlLWI4ZDctZWJiOGNmMjYzMTY2",
+              "ownerDetails": null,
+              "excerpt": "Somos uma equipe apaixonada por tecnologia, ciência e inovação, unida pelo propósito de transformar desafios reais em soluções criativas por meio da programação. Combinamos colaboração, inteligência artificial e engenharia de software para explora...",
+              "project": "aWQ6Nzk4MzU=",
+              "projectDetails": {
+                "id": "aWQ6Nzk4MzU=",
+                "name": "Project Code",
+                "summary": "",
+                "demoLink": "",
+                "projectLink": "",
+                "details": "",
+                "solution": "",
+                "aiReferences": "",
+                "dataReferences": "",
+                "projectReferences": "",
+                "isSubmitted": false,
+                "savedAt": null,
+                "submittedAt": null,
+                "__typename": "Project"
+              },
+              "projectSubmitted": false,
+              "featuredImage": {
+                "id": "aWQ6NTQyNDkw",
+                "meta": {
+                  "type": "images.CustomImage",
+                  "downloadUrl": "https://assets.spaceappschallenge.org/media/original_images/9309133b-dd20-4eee-b981-b77d76a0001f.png",
+                  "__typename": "ImageMeta"
+                },
+                "title": "team_image.15:19:05.775216",
+                "alt": "team_image.15:19:05.775216",
+                "caption": "team_image.15:19:05.775216",
+                "displaySize": "or",
+                "rendition": {
+                  "url": "https://assets.spaceappschallenge.org/media/images/9309133b-dd20-4eee-b981-b77d76a000.2e16d0ba.fill-300x250.png",
+                  "fullUrl": "https://assets.spaceappschallenge.org/media/images/9309133b-dd20-4eee-b981-b77d76a000.2e16d0ba.fill-300x250.png",
+                  "height": 250,
+                  "width": 300,
+                  "__typename": "BaseImage"
+                },
+                "__typename": "DefaultImage"
+              },
+              "description": null,
+              "desiredSkills": null,
+              "languages": null,
+              "challenge": "aWQ6NTUxMzA=",
+              "challengeDetails": {
+                "id": "aWQ6NTUxMzA=",
+                "title": "Create Health Monitoring Software for Astronauts on Space Missions",
+                "meta": {
+                  "type": "CHALLENGE",
+                  "slug": "health-monitoring-software",
+                  "firstPublishedAt": "2026-09-17T14:21:16.942000Z",
+                  "lastPublishedAt": "2026-10-29T19:54:08.931893Z",
+                  "relativeUrl": "/2026/challenges/health-monitoring-software/",
+                  "live": true,
+                  "parent": null,
+                  "__typename": "ExpandedPageMeta"
+                },
+                "excerpt": "Long-duration missions expose astronauts to space radiation, isolation and confinement, altered gravity, and a hostile closed environment, which can bring immune changes, bone loss, cardiovascular events, and behavioral health problems. On long missions, astronauts carry much of the responsibility for spotting these changes in themselves. Your challenge is to build a health monitoring software that gathers health indicators and enables astronauts to evaluate and act on the status of their health.",
+                "__typename": "ChallengePage"
+              },
+              "location": "aWQ6NTQ0NDY=",
+              "locationDetails": {
+                "id": "aWQ6NTQ0NDY=",
+                "title": "Uberlândia",
+                "displayName": "",
+                "meta": {
+                  "type": "LOCATION",
+                  "slug": "uberlandia",
+                  "firstPublishedAt": "2026-08-20T13:11:16.191000Z",
+                  "lastPublishedAt": "2026-11-02T14:14:24.314767Z",
+                  "relativeUrl": "/2026/local-events/uberlandia/",
+                  "live": true,
+                  "parent": null,
+                  "__typename": "ExpandedPageMeta"
+                },
+                "country": "Brazil",
+                "__typename": "LocationPage"
+              },
+              "event": "aWQ6NA==",
+              "joinEnabled": true,
+              "memberships": null,
+              "nominationBadges": null,
+              "awardBadges": null
+            }
+          },
+          {
+            "__typename": "TeamPageEdge",
+            "cursor": "b2Zmc2V0OjEy",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6Njk3NDk=",
@@ -788,7 +1213,22 @@
               "ownerDetails": null,
               "excerpt": "We are a Brazilian team from the field of Computer Science, passionate about space, programming, and innovation. With expertise in full-stack development, AI/machine learning, and computer vision, we transform NASA data into creative, high-impact ...",
               "project": "aWQ6NjYxNTE=",
-              "projectDetails": null,
+              "projectDetails": {
+                "id": "aWQ6NjYxNTE=",
+                "name": "Project Code and cheese",
+                "summary": "",
+                "demoLink": "",
+                "projectLink": "",
+                "details": "",
+                "solution": "",
+                "aiReferences": "",
+                "dataReferences": "",
+                "projectReferences": "",
+                "isSubmitted": false,
+                "savedAt": null,
+                "submittedAt": null,
+                "__typename": "Project"
+              },
               "projectSubmitted": false,
               "featuredImage": null,
               "description": null,
@@ -838,7 +1278,110 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjEw",
+            "cursor": "b2Zmc2V0OjEz",
+            "node": {
+              "__typename": "TeamPage",
+              "id": "aWQ6ODE5Nzc=",
+              "title": "Data Lab Team 01",
+              "meta": {
+                "type": "TEAM",
+                "slug": "data-lab-team-01",
+                "firstPublishedAt": "2026-11-10T14:14:33.015669Z",
+                "lastPublishedAt": "2026-11-10T14:14:33.015669Z",
+                "relativeUrl": "/2026/find-a-team/data-lab-team-01/",
+                "live": true,
+                "parent": null,
+                "__typename": "ExpandedPageMeta"
+              },
+              "owner": "aWQ6NGViOTk4ZmQtNGVjMC00ZTlhLWFiM2YtY2U5OGNmYjM1NmRi",
+              "ownerDetails": null,
+              "excerpt": "Somos uma Liga Acadêmica de Ciência de Dados e Inteligência Artificial - DataLab da Universidade Federal de Uberlândia.",
+              "project": "aWQ6NzgzNzU=",
+              "projectDetails": {
+                "id": "aWQ6NzgzNzU=",
+                "name": "Project Data Lab Team 01",
+                "summary": "",
+                "demoLink": "",
+                "projectLink": "",
+                "details": "",
+                "solution": "",
+                "aiReferences": "",
+                "dataReferences": "",
+                "projectReferences": "",
+                "isSubmitted": false,
+                "savedAt": null,
+                "submittedAt": null,
+                "__typename": "Project"
+              },
+              "projectSubmitted": false,
+              "featuredImage": {
+                "id": "aWQ6NTM3NTY5",
+                "meta": {
+                  "type": "images.CustomImage",
+                  "downloadUrl": "https://assets.spaceappschallenge.org/media/original_images/DataLab_degrade.png",
+                  "__typename": "ImageMeta"
+                },
+                "title": "team_image.14:01:45.222301",
+                "alt": "team_image.14:01:45.222301",
+                "caption": "team_image.14:01:45.222301",
+                "displaySize": "or",
+                "rendition": {
+                  "url": "https://assets.spaceappschallenge.org/media/images/DataLab_degrade.2e16d0ba.fill-300x250.png",
+                  "fullUrl": "https://assets.spaceappschallenge.org/media/images/DataLab_degrade.2e16d0ba.fill-300x250.png",
+                  "height": 250,
+                  "width": 300,
+                  "__typename": "BaseImage"
+                },
+                "__typename": "DefaultImage"
+              },
+              "description": null,
+              "desiredSkills": null,
+              "languages": null,
+              "challenge": "aWQ6NTUxMjY=",
+              "challengeDetails": {
+                "id": "aWQ6NTUxMjY=",
+                "title": "Field Shift: Adapting Farms with NASA Data",
+                "meta": {
+                  "type": "CHALLENGE",
+                  "slug": "adapting-farms-with-nasa-data",
+                  "firstPublishedAt": "2026-09-17T14:22:15.778000Z",
+                  "lastPublishedAt": "2026-10-29T19:53:18.539274Z",
+                  "relativeUrl": "/2026/challenges/adapting-farms-with-nasa-data/",
+                  "live": true,
+                  "parent": null,
+                  "__typename": "ExpandedPageMeta"
+                },
+                "excerpt": "Farmers around the world navigate shifting temperatures, changing rainfall patterns, water shortages, extreme weather, and declining soil health. These pressures make it difficult to choose crop rotations that protect fields, conserve water, and support long‑term resilience. Your challenge is to create a decision‑support tool that uses NASA Earth observations along with local soil information, crop characteristics, and farmer priorities to help farmers explore rotation strategies that could strengthen soil health and adapt their farms to changing conditions.",
+                "__typename": "ChallengePage"
+              },
+              "location": "aWQ6NTQ0NDY=",
+              "locationDetails": {
+                "id": "aWQ6NTQ0NDY=",
+                "title": "Uberlândia",
+                "displayName": "",
+                "meta": {
+                  "type": "LOCATION",
+                  "slug": "uberlandia",
+                  "firstPublishedAt": "2026-08-20T13:11:16.191000Z",
+                  "lastPublishedAt": "2026-11-02T14:14:24.314767Z",
+                  "relativeUrl": "/2026/local-events/uberlandia/",
+                  "live": true,
+                  "parent": null,
+                  "__typename": "ExpandedPageMeta"
+                },
+                "country": "Brazil",
+                "__typename": "LocationPage"
+              },
+              "event": "aWQ6NA==",
+              "joinEnabled": true,
+              "memberships": null,
+              "nominationBadges": null,
+              "awardBadges": null
+            }
+          },
+          {
+            "__typename": "TeamPageEdge",
+            "cursor": "b2Zmc2V0OjE0",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6Nzg0NjI=",
@@ -846,8 +1389,8 @@
               "meta": {
                 "type": "TEAM",
                 "slug": "duolibras",
-                "firstPublishedAt": null,
-                "lastPublishedAt": null,
+                "firstPublishedAt": "2026-11-10T17:42:57.808768Z",
+                "lastPublishedAt": "2026-11-10T17:42:57.808768Z",
                 "relativeUrl": "/2026/find-a-team/duolibras/",
                 "live": true,
                 "parent": null,
@@ -857,7 +1400,22 @@
               "ownerDetails": null,
               "excerpt": "We are building a health monitoring app for astronauts on space missions. It tracks vital signs like heart rate and oxygen levels, shows them in a simple dashboard, and sends alerts when something is out of the safe range.We’re looking for people ...",
               "project": "aWQ6NzQ4NjA=",
-              "projectDetails": null,
+              "projectDetails": {
+                "id": "aWQ6NzQ4NjA=",
+                "name": "Project DUOLIBRAS",
+                "summary": "",
+                "demoLink": "",
+                "projectLink": "",
+                "details": "",
+                "solution": "",
+                "aiReferences": "",
+                "dataReferences": "",
+                "projectReferences": "",
+                "isSubmitted": false,
+                "savedAt": null,
+                "submittedAt": null,
+                "__typename": "Project"
+              },
               "projectSubmitted": false,
               "featuredImage": {
                 "id": "aWQ6NTI0Mjg5",
@@ -926,7 +1484,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjEx",
+            "cursor": "b2Zmc2V0OjE1",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6ODA5NDE=",
@@ -945,7 +1503,22 @@
               "ownerDetails": null,
               "excerpt": "Field Couple is a two-person team from Uberlândia, Brazil: a developer who builds with AI and an accountant. We are taking on Field Shift: Adapting Farms with NASA Data, focused on farmers in Brazil’s Cerrado. We want to help them compare crop rot...",
               "project": "aWQ6NzczMzk=",
-              "projectDetails": null,
+              "projectDetails": {
+                "id": "aWQ6NzczMzk=",
+                "name": "Project Field Couple",
+                "summary": "",
+                "demoLink": "",
+                "projectLink": "",
+                "details": "",
+                "solution": "",
+                "aiReferences": "",
+                "dataReferences": "",
+                "projectReferences": "",
+                "isSubmitted": false,
+                "savedAt": null,
+                "submittedAt": null,
+                "__typename": "Project"
+              },
               "projectSubmitted": false,
               "featuredImage": {
                 "id": "aWQ6NTMzNjU2",
@@ -1014,7 +1587,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjEy",
+            "cursor": "b2Zmc2V0OjE2",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6NjM5OTI=",
@@ -1023,7 +1596,7 @@
                 "type": "TEAM",
                 "slug": "gaiapus",
                 "firstPublishedAt": "2026-10-07T03:09:06.821000Z",
-                "lastPublishedAt": "2026-11-07T00:25:23.442023Z",
+                "lastPublishedAt": "2026-11-11T02:39:24.344673Z",
                 "relativeUrl": "/2026/find-a-team/gaiapus/",
                 "live": true,
                 "parent": null,
@@ -1033,7 +1606,22 @@
               "ownerDetails": null,
               "excerpt": "We are a multidisciplinary team of three Computer Scientists, one Computer Engineer, one Mechanical Engineer, and one Mechatronics Engineer. Our expertise spans software development, AI and machine learning, data analysis, IoT, and hardware-softwa...",
               "project": "aWQ6NjAzOTQ=",
-              "projectDetails": null,
+              "projectDetails": {
+                "id": "aWQ6NjAzOTQ=",
+                "name": "Project Gaiapus",
+                "summary": "",
+                "demoLink": "",
+                "projectLink": "",
+                "details": "",
+                "solution": "",
+                "aiReferences": "",
+                "dataReferences": "",
+                "projectReferences": "",
+                "isSubmitted": false,
+                "savedAt": null,
+                "submittedAt": null,
+                "__typename": "Project"
+              },
               "projectSubmitted": false,
               "featuredImage": {
                 "id": "aWQ6NDU5NTc0",
@@ -1102,7 +1690,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjEz",
+            "cursor": "b2Zmc2V0OjE3",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6NTU1OTM=",
@@ -1121,7 +1709,22 @@
               "ownerDetails": null,
               "excerpt": "é os guri",
               "project": "aWQ6NTE5OTY=",
-              "projectDetails": null,
+              "projectDetails": {
+                "id": "aWQ6NTE5OTY=",
+                "name": "Project GURIS DA CATEQUESE 2026",
+                "summary": "",
+                "demoLink": "",
+                "projectLink": "",
+                "details": "",
+                "solution": "",
+                "aiReferences": "",
+                "dataReferences": "",
+                "projectReferences": "",
+                "isSubmitted": false,
+                "savedAt": null,
+                "submittedAt": null,
+                "__typename": "Project"
+              },
               "projectSubmitted": false,
               "featuredImage": {
                 "id": "aWQ6NDIxMzIx",
@@ -1190,7 +1793,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjE0",
+            "cursor": "b2Zmc2V0OjE4",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6NzIwNTg=",
@@ -1209,7 +1812,22 @@
               "ownerDetails": null,
               "excerpt": "We are happy farmers, who love dirt, cows and happy farmers activities.",
               "project": "aWQ6Njg0NjA=",
-              "projectDetails": null,
+              "projectDetails": {
+                "id": "aWQ6Njg0NjA=",
+                "name": "Project C'Mens",
+                "summary": "",
+                "demoLink": "",
+                "projectLink": "",
+                "details": "",
+                "solution": "",
+                "aiReferences": "",
+                "dataReferences": "",
+                "projectReferences": "",
+                "isSubmitted": false,
+                "savedAt": null,
+                "submittedAt": null,
+                "__typename": "Project"
+              },
               "projectSubmitted": false,
               "featuredImage": {
                 "id": "aWQ6NDk4NTYx",
@@ -1278,7 +1896,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjE1",
+            "cursor": "b2Zmc2V0OjE5",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6NjEwMjA=",
@@ -1286,8 +1904,8 @@
               "meta": {
                 "type": "TEAM",
                 "slug": "helios20",
-                "firstPublishedAt": "2026-09-30T03:03:54.368926Z",
-                "lastPublishedAt": "2026-09-30T03:03:54.368926Z",
+                "firstPublishedAt": "2026-09-30T03:03:54.368000Z",
+                "lastPublishedAt": "2026-11-10T16:33:02.903114Z",
                 "relativeUrl": "/2026/find-a-team/helios20/",
                 "live": true,
                 "parent": null,
@@ -1297,7 +1915,22 @@
               "ownerDetails": null,
               "excerpt": "Junte-se  à minha equipe para este desafio genial, que é criar um software de monitoramento para a saúde dos astronautas! Dentre os membros temos cientistas, fullstack, entusiastas e apenas uma regra clara: fazer destas 48horas de hackathon as mai...",
               "project": "aWQ6NTc0MjM=",
-              "projectDetails": null,
+              "projectDetails": {
+                "id": "aWQ6NTc0MjM=",
+                "name": "Project H.E.L.I.O.S",
+                "summary": "",
+                "demoLink": "",
+                "projectLink": "",
+                "details": "",
+                "solution": "",
+                "aiReferences": "",
+                "dataReferences": "",
+                "projectReferences": "",
+                "isSubmitted": false,
+                "savedAt": null,
+                "submittedAt": null,
+                "__typename": "Project"
+              },
               "projectSubmitted": false,
               "featuredImage": {
                 "id": "aWQ6NDQ1ODY3",
@@ -1366,7 +1999,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjE2",
+            "cursor": "b2Zmc2V0OjIw",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6NzUyMjg=",
@@ -1385,7 +2018,22 @@
               "ownerDetails": null,
               "excerpt": "Somos uma equipe de programadores e desenvolvedores de jogos e aplicações interativas prontos para encarar o NASA Space Apps Challenge! Temos uma base técnica sólida em código, lógica e na criação de experiências digitais envolventes.",
               "project": "aWQ6NzE2MjY=",
-              "projectDetails": null,
+              "projectDetails": {
+                "id": "aWQ6NzE2MjY=",
+                "name": "Project L.O.G.",
+                "summary": "",
+                "demoLink": "",
+                "projectLink": "",
+                "details": "",
+                "solution": "",
+                "aiReferences": "",
+                "dataReferences": "",
+                "projectReferences": "",
+                "isSubmitted": false,
+                "savedAt": null,
+                "submittedAt": null,
+                "__typename": "Project"
+              },
               "projectSubmitted": false,
               "featuredImage": {
                 "id": "aWQ6NTEyMDQx",
@@ -1454,7 +2102,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjE3",
+            "cursor": "b2Zmc2V0OjIx",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6NzE4NzQ=",
@@ -1473,7 +2121,22 @@
               "ownerDetails": null,
               "excerpt": "Love Mode is a two-person team from Bauru, Brazil. We build offline-first software that keeps working when the connection drops, with sensitive data protected from the start. Background: backend (Java, Spring Boot, Kafka, Python), data and machine...",
               "project": "aWQ6NjgyNzY=",
-              "projectDetails": null,
+              "projectDetails": {
+                "id": "aWQ6NjgyNzY=",
+                "name": "Project Love Mode",
+                "summary": "",
+                "demoLink": "",
+                "projectLink": "",
+                "details": "",
+                "solution": "",
+                "aiReferences": "",
+                "dataReferences": "",
+                "projectReferences": "",
+                "isSubmitted": false,
+                "savedAt": null,
+                "submittedAt": null,
+                "__typename": "Project"
+              },
               "projectSubmitted": false,
               "featuredImage": {
                 "id": "aWQ6NDk3Njk2",
@@ -1554,7 +2217,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjE4",
+            "cursor": "b2Zmc2V0OjIy",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6NTU1ODA=",
@@ -1573,7 +2236,22 @@
               "ownerDetails": null,
               "excerpt": "Entre na equipe",
               "project": "aWQ6NTE5ODM=",
-              "projectDetails": null,
+              "projectDetails": {
+                "id": "aWQ6NTE5ODM=",
+                "name": "Project Lumia",
+                "summary": "",
+                "demoLink": "",
+                "projectLink": "",
+                "details": "",
+                "solution": "",
+                "aiReferences": "",
+                "dataReferences": "",
+                "projectReferences": "",
+                "isSubmitted": false,
+                "savedAt": null,
+                "submittedAt": null,
+                "__typename": "Project"
+              },
               "projectSubmitted": false,
               "featuredImage": {
                 "id": "aWQ6NDM5Nzkw",
@@ -1642,7 +2320,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjE5",
+            "cursor": "b2Zmc2V0OjIz",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6Nzk0Nzg=",
@@ -1661,7 +2339,22 @@
               "ownerDetails": null,
               "excerpt": "Programadores e afins, vibe coding to the end.",
               "project": "aWQ6NzU4NzY=",
-              "projectDetails": null,
+              "projectDetails": {
+                "id": "aWQ6NzU4NzY=",
+                "name": "Project MaRaBeTha",
+                "summary": "",
+                "demoLink": "",
+                "projectLink": "",
+                "details": "",
+                "solution": "",
+                "aiReferences": "",
+                "dataReferences": "",
+                "projectReferences": "",
+                "isSubmitted": false,
+                "savedAt": null,
+                "submittedAt": null,
+                "__typename": "Project"
+              },
               "projectSubmitted": false,
               "featuredImage": {
                 "id": "aWQ6NTI4MjY0",
@@ -1738,7 +2431,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjIw",
+            "cursor": "b2Zmc2V0OjI0",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6NjI0Njg=",
@@ -1757,7 +2450,22 @@
               "ownerDetails": null,
               "excerpt": "Time composto por membros do Laboratório de Mecânica dos Fluidos da UFU",
               "project": "aWQ6NTg4Njk=",
-              "projectDetails": null,
+              "projectDetails": {
+                "id": "aWQ6NTg4Njk=",
+                "name": "Project MFLAB_TEAM",
+                "summary": "",
+                "demoLink": "",
+                "projectLink": "",
+                "details": "",
+                "solution": "",
+                "aiReferences": "",
+                "dataReferences": "",
+                "projectReferences": "",
+                "isSubmitted": false,
+                "savedAt": null,
+                "submittedAt": null,
+                "__typename": "Project"
+              },
               "projectSubmitted": false,
               "featuredImage": {
                 "id": "aWQ6NDUyNDM3",
@@ -1790,7 +2498,7 @@
                   "type": "CHALLENGE",
                   "slug": "flame-in-freefall",
                   "firstPublishedAt": "2026-09-17T14:20:54.577000Z",
-                  "lastPublishedAt": "2026-10-28T15:08:29.011645Z",
+                  "lastPublishedAt": "2026-11-10T17:53:38.017617Z",
                   "relativeUrl": "/2026/challenges/flame-in-freefall/",
                   "live": true,
                   "parent": null,
@@ -1826,7 +2534,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjIx",
+            "cursor": "b2Zmc2V0OjI1",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6NjY4Mjc=",
@@ -1845,7 +2553,22 @@
               "ownerDetails": null,
               "excerpt": "DESENVOLVIMENTO DE SOFTWARE APLICADO A TECNOLOGIA",
               "project": "aWQ6NjMyMjk=",
-              "projectDetails": null,
+              "projectDetails": {
+                "id": "aWQ6NjMyMjk=",
+                "name": "Project NET LAB SENAI",
+                "summary": "",
+                "demoLink": "",
+                "projectLink": "",
+                "details": "",
+                "solution": "",
+                "aiReferences": "",
+                "dataReferences": "",
+                "projectReferences": "",
+                "isSubmitted": false,
+                "savedAt": null,
+                "submittedAt": null,
+                "__typename": "Project"
+              },
               "projectSubmitted": false,
               "featuredImage": null,
               "description": null,
@@ -1895,7 +2618,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjIy",
+            "cursor": "b2Zmc2V0OjI2",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6NjY4NTk=",
@@ -1914,7 +2637,22 @@
               "ownerDetails": null,
               "excerpt": "Time da UFU (Sistemas de Informação) participando do desafio Field Shift. Vamos usar dados da NASA pra criar uma solução que ajude fazendas a se adaptarem, com foco em entregar uma demo que funcione.",
               "project": "aWQ6NjMyNjE=",
-              "projectDetails": null,
+              "projectDetails": {
+                "id": "aWQ6NjMyNjE=",
+                "name": "Project Nome do Grupo",
+                "summary": "",
+                "demoLink": "",
+                "projectLink": "",
+                "details": "",
+                "solution": "",
+                "aiReferences": "",
+                "dataReferences": "",
+                "projectReferences": "",
+                "isSubmitted": false,
+                "savedAt": null,
+                "submittedAt": null,
+                "__typename": "Project"
+              },
               "projectSubmitted": false,
               "featuredImage": {
                 "id": "aWQ6NDc0NDY3",
@@ -1993,7 +2731,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjIz",
+            "cursor": "b2Zmc2V0OjI3",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6NTg0NDE=",
@@ -2012,7 +2750,22 @@
               "ownerDetails": null,
               "excerpt": "Sou desenvolvedor de software e pesquisador na área de tecnologia e inovação, com experiência em desenvolvimento de sistemas, integração de dados e soluções aplicadas à saúde.",
               "project": "aWQ6NTQ4NDQ=",
-              "projectDetails": null,
+              "projectDetails": {
+                "id": "aWQ6NTQ4NDQ=",
+                "name": "Project Orbit Sentinel",
+                "summary": "",
+                "demoLink": "",
+                "projectLink": "",
+                "details": "",
+                "solution": "",
+                "aiReferences": "",
+                "dataReferences": "",
+                "projectReferences": "",
+                "isSubmitted": false,
+                "savedAt": null,
+                "submittedAt": null,
+                "__typename": "Project"
+              },
               "projectSubmitted": false,
               "featuredImage": null,
               "description": null,
@@ -2062,7 +2815,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjI0",
+            "cursor": "b2Zmc2V0OjI4",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6NjQ3Mjg=",
@@ -2081,7 +2834,22 @@
               "ownerDetails": null,
               "excerpt": "Students who like technology",
               "project": "aWQ6NjExMzA=",
-              "projectDetails": null,
+              "projectDetails": {
+                "id": "aWQ6NjExMzA=",
+                "name": "Project Overclockeds",
+                "summary": "",
+                "demoLink": "",
+                "projectLink": "",
+                "details": "",
+                "solution": "",
+                "aiReferences": "",
+                "dataReferences": "",
+                "projectReferences": "",
+                "isSubmitted": false,
+                "savedAt": null,
+                "submittedAt": null,
+                "__typename": "Project"
+              },
               "projectSubmitted": false,
               "featuredImage": {
                 "id": "aWQ6NDYzMTMx",
@@ -2114,7 +2882,7 @@
                   "type": "CHALLENGE",
                   "slug": "flame-in-freefall",
                   "firstPublishedAt": "2026-09-17T14:20:54.577000Z",
-                  "lastPublishedAt": "2026-10-28T15:08:29.011645Z",
+                  "lastPublishedAt": "2026-11-10T17:53:38.017617Z",
                   "relativeUrl": "/2026/challenges/flame-in-freefall/",
                   "live": true,
                   "parent": null,
@@ -2150,7 +2918,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjI1",
+            "cursor": "b2Zmc2V0OjI5",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6NzYyNzg=",
@@ -2169,7 +2937,22 @@
               "ownerDetails": null,
               "excerpt": "time Overnight Coders",
               "project": "aWQ6NzI2NzY=",
-              "projectDetails": null,
+              "projectDetails": {
+                "id": "aWQ6NzI2NzY=",
+                "name": "Project Overnight Coders",
+                "summary": "",
+                "demoLink": "",
+                "projectLink": "",
+                "details": "",
+                "solution": "",
+                "aiReferences": "",
+                "dataReferences": "",
+                "projectReferences": "",
+                "isSubmitted": false,
+                "savedAt": null,
+                "submittedAt": null,
+                "__typename": "Project"
+              },
               "projectSubmitted": false,
               "featuredImage": null,
               "description": null,
@@ -2219,7 +3002,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjI2",
+            "cursor": "b2Zmc2V0OjMw",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6NzE1NjU=",
@@ -2238,7 +3021,22 @@
               "ownerDetails": null,
               "excerpt": "Caí de paraquedas aqui, o que custa tentar né?",
               "project": "aWQ6Njc5Njc=",
-              "projectDetails": null,
+              "projectDetails": {
+                "id": "aWQ6Njc5Njc=",
+                "name": "Project Polo",
+                "summary": "",
+                "demoLink": "",
+                "projectLink": "",
+                "details": "",
+                "solution": "",
+                "aiReferences": "",
+                "dataReferences": "",
+                "projectReferences": "",
+                "isSubmitted": false,
+                "savedAt": null,
+                "submittedAt": null,
+                "__typename": "Project"
+              },
               "projectSubmitted": false,
               "featuredImage": {
                 "id": "aWQ6NDk2MDc1",
@@ -2307,7 +3105,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjI3",
+            "cursor": "b2Zmc2V0OjMx",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6NzI5OTE=",
@@ -2326,7 +3124,22 @@
               "ownerDetails": null,
               "excerpt": "Stardust Analytics is a one-person team: an Information Systems student from Uberlândia, Brazil, focused on data analysis. For the “Be an Earth System Trend Detective” challenge, the goal is to explore NASA open data to identify environmental chan...",
               "project": "aWQ6NjkzOTM=",
-              "projectDetails": null,
+              "projectDetails": {
+                "id": "aWQ6NjkzOTM=",
+                "name": "Project Stardust Analytics",
+                "summary": "",
+                "demoLink": "",
+                "projectLink": "",
+                "details": "",
+                "solution": "",
+                "aiReferences": "",
+                "dataReferences": "",
+                "projectReferences": "",
+                "isSubmitted": false,
+                "savedAt": null,
+                "submittedAt": null,
+                "__typename": "Project"
+              },
               "projectSubmitted": false,
               "featuredImage": {
                 "id": "aWQ6NTAyNzYy",
@@ -2395,7 +3208,91 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjI4",
+            "cursor": "b2Zmc2V0OjMy",
+            "node": {
+              "__typename": "TeamPage",
+              "id": "aWQ6ODMxMDI=",
+              "title": "Stars & Beyond",
+              "meta": {
+                "type": "TEAM",
+                "slug": "stars-beyond2",
+                "firstPublishedAt": "2026-11-11T11:21:54.429000Z",
+                "lastPublishedAt": "2026-11-11T13:06:03.015462Z",
+                "relativeUrl": "/2026/find-a-team/stars-beyond2/",
+                "live": true,
+                "parent": null,
+                "__typename": "ExpandedPageMeta"
+              },
+              "owner": "aWQ6MzhiMGE3NDAtNTAzNi00ZDlmLWI2NGYtZWYxMWU3Y2M0NmUx",
+              "ownerDetails": null,
+              "excerpt": "Team",
+              "project": "aWQ6Nzk0OTk=",
+              "projectDetails": {
+                "id": "aWQ6Nzk0OTk=",
+                "name": "Project Stars & Beyond",
+                "summary": "",
+                "demoLink": "",
+                "projectLink": "",
+                "details": "",
+                "solution": "",
+                "aiReferences": "",
+                "dataReferences": "",
+                "projectReferences": "",
+                "isSubmitted": false,
+                "savedAt": null,
+                "submittedAt": null,
+                "__typename": "Project"
+              },
+              "projectSubmitted": false,
+              "featuredImage": null,
+              "description": null,
+              "desiredSkills": null,
+              "languages": null,
+              "challenge": "aWQ6NTUxMjE=",
+              "challengeDetails": {
+                "id": "aWQ6NTUxMjE=",
+                "title": "Flame in Freefall: SI-Powered Fire Safety Insights from Microgravity Combustion Data",
+                "meta": {
+                  "type": "CHALLENGE",
+                  "slug": "flame-in-freefall",
+                  "firstPublishedAt": "2026-09-17T14:20:54.577000Z",
+                  "lastPublishedAt": "2026-11-10T17:53:38.017617Z",
+                  "relativeUrl": "/2026/challenges/flame-in-freefall/",
+                  "live": true,
+                  "parent": null,
+                  "__typename": "ExpandedPageMeta"
+                },
+                "excerpt": "For decades, NASA has studied how flames and fire behave in microgravity, gathering a trove of experimental data along the way. That knowledge matters more than ever as humans gear up to return to the Moon and press on to Mars, yet the volume of results makes them hard to find, compare, and understand. Your challenge is to create an interactive, super intelligence (SI) powered dashboard that summarizes, ranks, and interprets those findings to deliver fire safety insights for human space exploration.",
+                "__typename": "ChallengePage"
+              },
+              "location": "aWQ6NTQ0NDY=",
+              "locationDetails": {
+                "id": "aWQ6NTQ0NDY=",
+                "title": "Uberlândia",
+                "displayName": "",
+                "meta": {
+                  "type": "LOCATION",
+                  "slug": "uberlandia",
+                  "firstPublishedAt": "2026-08-20T13:11:16.191000Z",
+                  "lastPublishedAt": "2026-11-02T14:14:24.314767Z",
+                  "relativeUrl": "/2026/local-events/uberlandia/",
+                  "live": true,
+                  "parent": null,
+                  "__typename": "ExpandedPageMeta"
+                },
+                "country": "Brazil",
+                "__typename": "LocationPage"
+              },
+              "event": "aWQ6NA==",
+              "joinEnabled": true,
+              "memberships": null,
+              "nominationBadges": null,
+              "awardBadges": null
+            }
+          },
+          {
+            "__typename": "TeamPageEdge",
+            "cursor": "b2Zmc2V0OjMz",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6NzU4MDY=",
@@ -2414,7 +3311,22 @@
               "ownerDetails": null,
               "excerpt": "...",
               "project": "aWQ6NzIyMDQ=",
-              "projectDetails": null,
+              "projectDetails": {
+                "id": "aWQ6NzIyMDQ=",
+                "name": "Project Stell4r",
+                "summary": "",
+                "demoLink": "",
+                "projectLink": "",
+                "details": "",
+                "solution": "",
+                "aiReferences": "",
+                "dataReferences": "",
+                "projectReferences": "",
+                "isSubmitted": false,
+                "savedAt": null,
+                "submittedAt": null,
+                "__typename": "Project"
+              },
               "projectSubmitted": false,
               "featuredImage": null,
               "description": null,
@@ -2464,7 +3376,91 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjI5",
+            "cursor": "b2Zmc2V0OjM0",
+            "node": {
+              "__typename": "TeamPage",
+              "id": "aWQ6ODI2OTA=",
+              "title": "Storn",
+              "meta": {
+                "type": "TEAM",
+                "slug": "storn",
+                "firstPublishedAt": null,
+                "lastPublishedAt": null,
+                "relativeUrl": "/2026/find-a-team/storn/",
+                "live": true,
+                "parent": null,
+                "__typename": "ExpandedPageMeta"
+              },
+              "owner": "aWQ6NDgwZWQzNmItNmE2OC00OTdhLTg1YWUtYWI0ZThhYzJiZDRm",
+              "ownerDetails": null,
+              "excerpt": "Sou estudante de tecnologia, gosto de programação e de aprender coisas novas. Tenho conhecimentos em Java, HTML, CSS e JavaScript e quero participar do NASA Space Apps para colocar minhas habilidades em prática, trocar experiências e desenvolver a...",
+              "project": "aWQ6NzkwODc=",
+              "projectDetails": {
+                "id": "aWQ6NzkwODc=",
+                "name": "Project Storn",
+                "summary": "",
+                "demoLink": "",
+                "projectLink": "",
+                "details": "",
+                "solution": "",
+                "aiReferences": "",
+                "dataReferences": "",
+                "projectReferences": "",
+                "isSubmitted": false,
+                "savedAt": null,
+                "submittedAt": null,
+                "__typename": "Project"
+              },
+              "projectSubmitted": false,
+              "featuredImage": null,
+              "description": null,
+              "desiredSkills": null,
+              "languages": null,
+              "challenge": "aWQ6NTUxMjU=",
+              "challengeDetails": {
+                "id": "aWQ6NTUxMjU=",
+                "title": "Abandoned but not Forgotten: Storytelling about NASA's Discarded Equipment on the Moon and Mars",
+                "meta": {
+                  "type": "CHALLENGE",
+                  "slug": "nasas-discarded-equipment-storytelling",
+                  "firstPublishedAt": "2026-09-17T14:22:22.961000Z",
+                  "lastPublishedAt": "2026-10-28T14:17:50.381615Z",
+                  "relativeUrl": "/2026/challenges/nasas-discarded-equipment-storytelling/",
+                  "live": true,
+                  "parent": null,
+                  "__typename": "ExpandedPageMeta"
+                },
+                "excerpt": "Since the 1960s, NASA has left hardware across the solar system–on the Moon, on Mars, and in deep space. From rovers and instruments that completed their science missions to probes still traveling away from Earth this hardware varies widely in both its purpose and current level of functionality. Your challenge is to tell the story of some or all of this equipment that introduces school-age space enthusiasts to the hardware and the science it made possible.",
+                "__typename": "ChallengePage"
+              },
+              "location": "aWQ6NTQ0NDY=",
+              "locationDetails": {
+                "id": "aWQ6NTQ0NDY=",
+                "title": "Uberlândia",
+                "displayName": "",
+                "meta": {
+                  "type": "LOCATION",
+                  "slug": "uberlandia",
+                  "firstPublishedAt": "2026-08-20T13:11:16.191000Z",
+                  "lastPublishedAt": "2026-11-02T14:14:24.314767Z",
+                  "relativeUrl": "/2026/local-events/uberlandia/",
+                  "live": true,
+                  "parent": null,
+                  "__typename": "ExpandedPageMeta"
+                },
+                "country": "Brazil",
+                "__typename": "LocationPage"
+              },
+              "event": "aWQ6NA==",
+              "joinEnabled": true,
+              "memberships": null,
+              "nominationBadges": null,
+              "awardBadges": null
+            }
+          },
+          {
+            "__typename": "TeamPageEdge",
+            "cursor": "b2Zmc2V0OjM1",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6ODAwMzg=",
@@ -2483,7 +3479,22 @@
               "ownerDetails": null,
               "excerpt": "🚀 Team Space Design Challenge | We are a team of 6 locked in for the challenge! Bringing together Information Management, Financial Analysis, Data Modeling, Python/SQL, and Systems Design. We bridge high-level strategy and technical execution to b...",
               "project": "aWQ6NzY0MzY=",
-              "projectDetails": null,
+              "projectDetails": {
+                "id": "aWQ6NzY0MzY=",
+                "name": "Project The Goats",
+                "summary": "",
+                "demoLink": "",
+                "projectLink": "",
+                "details": "",
+                "solution": "",
+                "aiReferences": "",
+                "dataReferences": "",
+                "projectReferences": "",
+                "isSubmitted": false,
+                "savedAt": null,
+                "submittedAt": null,
+                "__typename": "Project"
+              },
               "projectSubmitted": false,
               "featuredImage": {
                 "id": "aWQ6NTMwMzIw",
@@ -2552,7 +3563,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjMw",
+            "cursor": "b2Zmc2V0OjM2",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6NzY3NTY=",
@@ -2571,7 +3582,22 @@
               "ownerDetails": null,
               "excerpt": "Triangle Labs brings together people with diverse levels of experience, from programming beginners to more experienced developers. We believe in collaboration, continuous learning, and the power of technology to make the world a better place. Thro...",
               "project": "aWQ6NzMxNTQ=",
-              "projectDetails": null,
+              "projectDetails": {
+                "id": "aWQ6NzMxNTQ=",
+                "name": "Project Triangle Labs",
+                "summary": "",
+                "demoLink": "",
+                "projectLink": "",
+                "details": "",
+                "solution": "",
+                "aiReferences": "",
+                "dataReferences": "",
+                "projectReferences": "",
+                "isSubmitted": false,
+                "savedAt": null,
+                "submittedAt": null,
+                "__typename": "Project"
+              },
               "projectSubmitted": false,
               "featuredImage": {
                 "id": "aWQ6NTIxMjA3",
@@ -2640,7 +3666,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjMx",
+            "cursor": "b2Zmc2V0OjM3",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6ODE0MzA=",
@@ -2648,8 +3674,8 @@
               "meta": {
                 "type": "TEAM",
                 "slug": "uai-landing",
-                "firstPublishedAt": "2026-11-10T02:02:36.229194Z",
-                "lastPublishedAt": "2026-11-10T02:02:36.229194Z",
+                "firstPublishedAt": "2026-11-10T02:02:36.229000Z",
+                "lastPublishedAt": "2026-11-11T14:53:19.208013Z",
                 "relativeUrl": "/2026/find-a-team/uai-landing/",
                 "live": true,
                 "parent": null,
@@ -2659,7 +3685,22 @@
               "ownerDetails": null,
               "excerpt": "Somos a UAI Landing, equipe de Uberlândia vinculada à UFU, formada por pessoas interessadas em tecnologia, ciência e exploração espacial. Buscamos participantes criativos, comprometidos e dispostos a aprender, colaborar e desenvolver soluções inov...",
               "project": "aWQ6Nzc4Mjg=",
-              "projectDetails": null,
+              "projectDetails": {
+                "id": "aWQ6Nzc4Mjg=",
+                "name": "Project Uai Landing",
+                "summary": "",
+                "demoLink": "",
+                "projectLink": "",
+                "details": "",
+                "solution": "",
+                "aiReferences": "",
+                "dataReferences": "",
+                "projectReferences": "",
+                "isSubmitted": false,
+                "savedAt": null,
+                "submittedAt": null,
+                "__typename": "Project"
+              },
               "projectSubmitted": false,
               "featuredImage": null,
               "description": null,
@@ -2709,7 +3750,110 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjMy",
+            "cursor": "b2Zmc2V0OjM4",
+            "node": {
+              "__typename": "TeamPage",
+              "id": "aWQ6ODIyOTE=",
+              "title": "Vibe Nothing",
+              "meta": {
+                "type": "TEAM",
+                "slug": "vibe-nothing",
+                "firstPublishedAt": null,
+                "lastPublishedAt": null,
+                "relativeUrl": "/2026/find-a-team/vibe-nothing/",
+                "live": true,
+                "parent": null,
+                "__typename": "ExpandedPageMeta"
+              },
+              "owner": "aWQ6Zjg2ZThiYjUtMTNiYy00NzA4LTg5YmYtMWU4ZDc4MTc5NTA0",
+              "ownerDetails": null,
+              "excerpt": ".",
+              "project": "aWQ6Nzg2ODk=",
+              "projectDetails": {
+                "id": "aWQ6Nzg2ODk=",
+                "name": "Project Vibe Nothing",
+                "summary": "",
+                "demoLink": "",
+                "projectLink": "",
+                "details": "",
+                "solution": "",
+                "aiReferences": "",
+                "dataReferences": "",
+                "projectReferences": "",
+                "isSubmitted": false,
+                "savedAt": null,
+                "submittedAt": null,
+                "__typename": "Project"
+              },
+              "projectSubmitted": false,
+              "featuredImage": {
+                "id": "aWQ6NTM4NTUz",
+                "meta": {
+                  "type": "images.CustomImage",
+                  "downloadUrl": "https://assets.spaceappschallenge.org/media/original_images/fij60bbblrph1.jpg",
+                  "__typename": "ImageMeta"
+                },
+                "title": "team_image.17:48:15.592752",
+                "alt": "team_image.17:48:15.592752",
+                "caption": "team_image.17:48:15.592752",
+                "displaySize": "or",
+                "rendition": {
+                  "url": "https://assets.spaceappschallenge.org/media/images/fij60bbblrph1.2e16d0ba.fill-300x250.jpg",
+                  "fullUrl": "https://assets.spaceappschallenge.org/media/images/fij60bbblrph1.2e16d0ba.fill-300x250.jpg",
+                  "height": 250,
+                  "width": 300,
+                  "__typename": "BaseImage"
+                },
+                "__typename": "DefaultImage"
+              },
+              "description": null,
+              "desiredSkills": null,
+              "languages": null,
+              "challenge": "aWQ6NTUxMzA=",
+              "challengeDetails": {
+                "id": "aWQ6NTUxMzA=",
+                "title": "Create Health Monitoring Software for Astronauts on Space Missions",
+                "meta": {
+                  "type": "CHALLENGE",
+                  "slug": "health-monitoring-software",
+                  "firstPublishedAt": "2026-09-17T14:21:16.942000Z",
+                  "lastPublishedAt": "2026-10-29T19:54:08.931893Z",
+                  "relativeUrl": "/2026/challenges/health-monitoring-software/",
+                  "live": true,
+                  "parent": null,
+                  "__typename": "ExpandedPageMeta"
+                },
+                "excerpt": "Long-duration missions expose astronauts to space radiation, isolation and confinement, altered gravity, and a hostile closed environment, which can bring immune changes, bone loss, cardiovascular events, and behavioral health problems. On long missions, astronauts carry much of the responsibility for spotting these changes in themselves. Your challenge is to build a health monitoring software that gathers health indicators and enables astronauts to evaluate and act on the status of their health.",
+                "__typename": "ChallengePage"
+              },
+              "location": "aWQ6NTQ0NDY=",
+              "locationDetails": {
+                "id": "aWQ6NTQ0NDY=",
+                "title": "Uberlândia",
+                "displayName": "",
+                "meta": {
+                  "type": "LOCATION",
+                  "slug": "uberlandia",
+                  "firstPublishedAt": "2026-08-20T13:11:16.191000Z",
+                  "lastPublishedAt": "2026-11-02T14:14:24.314767Z",
+                  "relativeUrl": "/2026/local-events/uberlandia/",
+                  "live": true,
+                  "parent": null,
+                  "__typename": "ExpandedPageMeta"
+                },
+                "country": "Brazil",
+                "__typename": "LocationPage"
+              },
+              "event": "aWQ6NA==",
+              "joinEnabled": true,
+              "memberships": null,
+              "nominationBadges": null,
+              "awardBadges": null
+            }
+          },
+          {
+            "__typename": "TeamPageEdge",
+            "cursor": "b2Zmc2V0OjM5",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6NTY5ODE=",
@@ -2728,7 +3872,22 @@
               "ownerDetails": null,
               "excerpt": "Somos a VoyIAger II, uma equipe de estudantes e entusiastas unidos pelo interesse em exploração espacial,robótica, programação, IA e ciência. No NASA Space Apps Challenge, buscamos transformar ideias em soluções criativas, aprender com novos desaf...",
               "project": "aWQ6NTMzODQ=",
-              "projectDetails": null,
+              "projectDetails": {
+                "id": "aWQ6NTMzODQ=",
+                "name": "Project VoyIAger II",
+                "summary": "",
+                "demoLink": "",
+                "projectLink": "",
+                "details": "",
+                "solution": "",
+                "aiReferences": "",
+                "dataReferences": "",
+                "projectReferences": "",
+                "isSubmitted": false,
+                "savedAt": null,
+                "submittedAt": null,
+                "__typename": "Project"
+              },
               "projectSubmitted": false,
               "featuredImage": {
                 "id": "aWQ6NDI2NDEy",
@@ -2797,7 +3956,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjMz",
+            "cursor": "b2Zmc2V0OjQw",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6NTgyMTg=",
@@ -2816,7 +3975,22 @@
               "ownerDetails": null,
               "excerpt": "We are amazing",
               "project": "aWQ6NTQ2MjE=",
-              "projectDetails": null,
+              "projectDetails": {
+                "id": "aWQ6NTQ2MjE=",
+                "name": "Project XBigDevs",
+                "summary": "",
+                "demoLink": "",
+                "projectLink": "",
+                "details": "",
+                "solution": "",
+                "aiReferences": "",
+                "dataReferences": "",
+                "projectReferences": "",
+                "isSubmitted": false,
+                "savedAt": null,
+                "submittedAt": null,
+                "__typename": "Project"
+              },
               "projectSubmitted": false,
               "featuredImage": {
                 "id": "aWQ6NDMyMjMy",
