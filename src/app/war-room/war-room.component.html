@@ -118,6 +118,9 @@
     }
   }
 
+  <!-- Tendência e comparativo entre edições (carrega as duas por conta própria) -->
+  <app-editions-comparison></app-editions-comparison>
+
   <!-- Mentores e feedback: só existem na edição já realizada -->
   @if (!isCurrentEdition()) {
     @if (loadingMentores()) {

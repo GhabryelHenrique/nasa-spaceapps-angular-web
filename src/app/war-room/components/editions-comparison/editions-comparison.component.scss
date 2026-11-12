@@ -1,0 +1,137 @@
+@use '../../war-room-shared' as *;
+
+.wr-section {
+  @include wr-section;
+}
+
+.section-title {
+  @include wr-section-title;
+}
+
+.section-subtitle {
+  @include wr-section-subtitle;
+}
+
+.tiles {
+  @include wr-tiles;
+}
+
+.chart-grid {
+  @include wr-chart-grid;
+  margin-bottom: 1.1rem;
+}
+
+.card {
+  @include wr-card;
+  min-width: 0;
+
+  &.wide {
+    grid-column: 1 / -1;
+  }
+}
+
+.state {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 1rem 1.25rem;
+  border-radius: 10px;
+  background: rgba(46, 150, 245, 0.08);
+  border: 1px solid rgba(46, 150, 245, 0.25);
+  color: var(--text-secondary, #B8B8B8);
+
+  &.error {
+    background: rgba(228, 55, 0, 0.08);
+    border-color: rgba(228, 55, 0, 0.35);
+  }
+}
+
+.spinner {
+  width: 16px;
+  height: 16px;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  border-top-color: #2E96F5;
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+// ── Tabela ano a ano ───────────────────────────────────────
+
+.table-wrap {
+  overflow-x: auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-family: 'Overpass', sans-serif;
+  font-size: 0.9rem;
+  font-variant-numeric: tabular-nums;
+
+  th,
+  td {
+    padding: 0.6rem 0.75rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.07);
+    text-align: left;
+    white-space: nowrap;
+  }
+
+  thead th {
+    font-size: 0.72rem;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--text-muted, #888888);
+    font-weight: 600;
+  }
+
+  tbody th {
+    font-weight: 500;
+    color: var(--text-primary, #FFFFFF);
+    white-space: normal;
+
+    small {
+      display: block;
+      font-size: 0.72rem;
+      color: var(--text-muted, #888888);
+    }
+  }
+
+  tbody tr:last-child th,
+  tbody tr:last-child td {
+    border-bottom: none;
+  }
+
+  .num {
+    text-align: right;
+  }
+
+  .muted {
+    color: var(--text-secondary, #B8B8B8);
+  }
+
+  .strong {
+    color: var(--text-primary, #FFFFFF);
+    font-weight: 600;
+  }
+
+  .delta {
+    color: var(--text-secondary, #B8B8B8);
+
+    &.good {
+      color: #3ecf8e;
+    }
+
+    &.bad {
+      color: #ff7a7a;
+    }
+
+    span {
+      font-size: 0.7rem;
+      margin-right: 0.15rem;
+    }
+  }
+}

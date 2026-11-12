@@ -1,0 +1,148 @@
+<section class="wr-section">
+  <h2 class="section-title"><span class="title-icon">📊</span>2026 vs 2025</h2>
+  <p class="section-subtitle">
+    Tendência de inscrições e indicadores da sede lado a lado. As curvas são alinhadas pelo
+    primeiro dia do hackathon (D-0: 04/10/2025 e 14/11/2026), então cada ponto compara
+    "quantos inscritos tínhamos a X dias do evento" nas duas edições.
+  </p>
+
+  @if (loading()) {
+    <div class="state">
+      <span class="spinner"></span> Montando o comparativo entre edições…
+    </div>
+  } @else if (error()) {
+    <div class="state error">
+      ⚠️ Não foi possível carregar os dados das duas edições para comparar.
+    </div>
+  } @else {
+
+    <!-- Indicadores de tendência -->
+    @if (current(); as cur) {
+      <div class="tiles">
+        <app-stat-tile
+          [label]="'Inscritos em ' + cur.year"
+          [value]="fmt(cur.total)"
+          [detail]="refDay() === 0 ? 'até o D-0' : 'até D-' + refDay() + ' (último dia do export)'"
+          [accent]="true">
+        </app-stat-tile>
+
+        @if (previousAtSamePoint() !== null) {
+          <app-stat-tile
+            label="2025 no mesmo ponto"
+            [value]="fmt(previousAtSamePoint()!)"
+            [detail]="samePointDelta() !== null
+              ? (samePointDelta()! >= 0 ? '▲ ' : '▼ ') + fmtAbsPct(samePointDelta()!) + ' em 2026'
+              : 'a D-' + refDay() + ' do hackathon'">
+          </app-stat-tile>
+        }
+
+        @if (pace(); as p) {
+          <app-stat-tile
+            label="Ritmo (últimos 7 dias)"
+            [value]="fmt(p.perDay, 1) + '/dia'"
+            [detail]="p.change !== null
+              ? (p.change >= 0 ? '▲ ' : '▼ ') + fmtAbsPct(p.change) + ' vs. 7 dias anteriores'
+              : fmt(p.last7) + ' inscrições na semana'">
+          </app-stat-tile>
+        }
+
+        @if (projection() !== null) {
+          <app-stat-tile
+            label="Projeção para o D-0"
+            [value]="'≈ ' + fmt(projection()!)"
+            detail="mantido o ritmo dos últimos 7 dias">
+          </app-stat-tile>
+        }
+
+        @if (previous(); as prev) {
+          <app-stat-tile
+            label="Total final de 2025"
+            [value]="fmt(prev.total)"
+            [detail]="previousFinalStretch() !== null && refDay()
+              ? '+' + fmt(previousFinalStretch()!) + ' na reta final (D-' + refDay() + ' → D-0)'
+              : 'até o D-0'">
+          </app-stat-tile>
+        }
+      </div>
+    }
+
+    <div class="chart-grid">
+      @if (cumulativeConfig(); as config) {
+        <div class="card wide">
+          <h3>Curva de inscrições acumuladas</h3>
+          <p class="card-subtitle">
+            2025 vem do formulário próprio da organização; 2026, do export da plataforma da NASA.
+            A linha tracejada estende 2026 até o evento no ritmo da última semana.
+          </p>
+          <app-insight-chart [config]="config" [height]="320"></app-insight-chart>
+        </div>
+      }
+
+      @if (weeklyConfig(); as config) {
+        <div class="card">
+          <h3>Inscrições por semana antes do hackathon</h3>
+          <p class="card-subtitle">
+            Mostra quando cada edição ganhou tração. A última semana de 2026 ainda está em andamento.
+          </p>
+          <app-insight-chart [config]="config" [height]="300"></app-insight-chart>
+        </div>
+      }
+
+      @if (brazilCitiesConfig(); as config) {
+        <div class="card">
+          <h3>Maiores sedes do Brasil: inscritos por edição</h3>
+          <p class="card-subtitle">
+            Top 10 de 2026 pelo contador da plataforma, comparado ao fechamento de 2025.
+          </p>
+          <app-insight-chart [config]="config" [height]="brazilCitiesHeight()"></app-insight-chart>
+        </div>
+      }
+    </div>
+
+    <!-- Indicadores ano a ano -->
+    @if (rows().length) {
+      <div class="card yoy">
+        <h3>Uberlândia e o cenário, ano a ano</h3>
+        <p class="card-subtitle">
+          Fotografia da plataforma da NASA: 2025 é o fechamento da edição; 2026 é a última
+          atualização do <code>update_teams.py</code> e ainda pode subir até o evento.
+        </p>
+
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th scope="col">Indicador</th>
+                <th scope="col" class="num">2025</th>
+                <th scope="col" class="num">2026</th>
+                <th scope="col" class="num">Variação</th>
+              </tr>
+            </thead>
+            <tbody>
+              @for (row of rows(); track row.label) {
+                <tr>
+                  <th scope="row">
+                    {{ row.label }}
+                    @if (row.hint) { <small>{{ row.hint }}</small> }
+                  </th>
+                  <td class="num muted">{{ row.previous }}</td>
+                  <td class="num strong">{{ row.current }}</td>
+                  <td
+                    class="num delta"
+                    [class.good]="row.good === true"
+                    [class.bad]="row.good === false">
+                    @switch (row.direction) {
+                      @case ('up') { <span role="img" aria-label="alta">▲</span> }
+                      @case ('down') { <span role="img" aria-label="queda">▼</span> }
+                    }
+                    {{ row.delta }}
+                  </td>
+                </tr>
+              }
+            </tbody>
+          </table>
+        </div>
+      </div>
+    }
+  }
+</section>

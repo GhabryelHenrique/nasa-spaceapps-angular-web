@@ -5,6 +5,7 @@ import { of } from 'rxjs';
 import { catchError, switchMap, tap } from 'rxjs/operators';
 import { CityParticipation } from '../../../shared/interfaces/local-event.interface';
 import { CityTeamStats, OtherCitiesTeamsService } from '../../../services/other-cities-teams.service';
+import { normalizeName, prettifyCityName } from '../../services/editions-comparison.service';
 
 /** Uma sede brasileira na comparação, com as duas fontes já cruzadas. */
 export interface BrazilCityRow {
@@ -15,17 +16,6 @@ export interface BrazilCityRow {
   submissionRate: number;
   isUberlandia: boolean;
   rank: number;
-}
-
-/** Conectivos que não recebem maiúscula ao recompor um nome em caixa uniforme. */
-const MINOR_WORDS = new Set(['de', 'da', 'do', 'das', 'dos', 'e']);
-
-function normalize(value: string): string {
-  return value
-    .normalize('NFD')
-    .replace(/[\u0300-\u036f]/g, '')
-    .toLowerCase()
-    .trim();
 }
 
 @Component({
@@ -81,20 +71,20 @@ export class BrazilianCitiesComparisonComponent {
    */
   readonly rows = computed<BrazilCityRow[]>(() => {
     const teamsByCity = new Map(
-      this.teamStats().map(stats => [normalize(stats.locationName), stats])
+      this.teamStats().map(stats => [normalizeName(stats.locationName), stats])
     );
 
     return this.cities()
-      .filter(city => ['brazil', 'brasil'].includes(normalize(city.country)))
+      .filter(city => ['brazil', 'brasil'].includes(normalizeName(city.country)))
       .map(city => {
-        const stats = teamsByCity.get(normalize(city.city));
+        const stats = teamsByCity.get(normalizeName(city.city));
         return {
-          cityName: this.prettifyCityName(city.city),
+          cityName: prettifyCityName(city.city),
           registrations: city.registrations,
           totalTeams: stats?.totalTeams ?? 0,
           submittedProjects: stats?.submittedProjects ?? 0,
           submissionRate: stats?.submissionRate ?? 0,
-          isUberlandia: normalize(city.city).includes('uberlandia'),
+          isUberlandia: normalizeName(city.city).includes('uberlandia'),
           rank: 0,
         };
       })
@@ -200,24 +190,5 @@ export class BrazilianCitiesComparisonComponent {
     const ordered = [...this.rows()].sort((a, b) => metric(b) - metric(a));
     const index = ordered.findIndex(row => row.isUberlandia);
     return index === -1 ? 0 : index + 1;
-  }
-
-  /**
-   * A plataforma aceita o nome da sede como o organizador digitou, então a lista
-   * mistura `ARACAJU` e `balneário camboriú`. Só reescreve o que veio em caixa
-   * uniforme; nomes já capitalizados ficam como estão.
-   */
-  private prettifyCityName(name: string): string {
-    const trimmed = name.trim();
-    const isUniformCase = trimmed === trimmed.toUpperCase() || trimmed === trimmed.toLowerCase();
-    if (!isUniformCase) return trimmed;
-
-    return trimmed
-      .toLowerCase()
-      .split(/\s+/)
-      .map((word, index) =>
-        index > 0 && MINOR_WORDS.has(word) ? word : word.charAt(0).toUpperCase() + word.slice(1)
-      )
-      .join(' ');
   }
 }

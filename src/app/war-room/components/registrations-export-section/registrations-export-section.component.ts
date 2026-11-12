@@ -57,25 +57,74 @@ export class RegistrationsExportSectionComponent implements OnChanges {
     return this.platformTotal - this.stats.total;
   }
 
+  /**
+   * Barras por dia + média móvel de 7 dias. O export só lista dias com inscrição,
+   * então a série é preenchida com zeros antes — senão a média pularia os dias parados.
+   */
   private buildDaily(): void {
+    const days = this.continuousDaily();
+    const movingAverage = days.map((_, i) => {
+      const window = days.slice(Math.max(0, i - 6), i + 1);
+      return Math.round((window.reduce((sum, d) => sum + d.count, 0) / window.length) * 10) / 10;
+    });
+
     this.dailyConfig = {
       type: 'bar',
       data: {
-        labels: this.stats.daily.map(d => d.label),
-        datasets: [{
-          label: 'Inscrições no dia',
-          data: this.stats.daily.map(d => d.count),
-          backgroundColor: CHART_SERIES[0],
-          borderRadius: 3,
-        }],
+        labels: days.map(d => d.label),
+        datasets: [
+          {
+            type: 'line',
+            label: 'Média móvel (7 dias)',
+            data: movingAverage,
+            borderColor: CHART_SERIES[2],
+            backgroundColor: CHART_SERIES[2],
+            borderWidth: 2,
+            tension: 0.35,
+            pointRadius: 0,
+            pointHoverRadius: 3,
+            order: 0,
+          },
+          {
+            type: 'bar',
+            label: 'Inscrições no dia',
+            data: days.map(d => d.count),
+            backgroundColor: CHART_SERIES[0],
+            borderRadius: 3,
+            order: 1,
+          },
+        ],
       },
       options: {
-        plugins: { legend: { display: false } },
+        interaction: { mode: 'index', intersect: false },
+        plugins: { legend: { position: 'bottom' } },
         scales: {
+          x: { ticks: { maxTicksLimit: 12, autoSkip: true, maxRotation: 0 } },
           y: { beginAtZero: true, ticks: { precision: 0 } },
         },
       },
+    } as ChartConfiguration;
+  }
+
+  /** Todos os dias entre a primeira e a última inscrição, com zero onde não houve nenhuma. */
+  private continuousDaily(): Array<{ label: string; count: number }> {
+    const daily = this.stats.daily;
+    if (!daily.length) return [];
+
+    const counts = new Map(daily.map(d => [d.date, d.count]));
+    const toDate = (iso: string) => {
+      const [y, m, d] = iso.split('-').map(Number);
+      return new Date(y, m - 1, d);
     };
+    const end = toDate(daily[daily.length - 1].date);
+    const result: Array<{ label: string; count: number }> = [];
+
+    for (let day = toDate(daily[0].date); day <= end; day.setDate(day.getDate() + 1)) {
+      const mm = `${day.getMonth() + 1}`.padStart(2, '0');
+      const dd = `${day.getDate()}`.padStart(2, '0');
+      result.push({ label: `${dd}/${mm}`, count: counts.get(`${day.getFullYear()}-${mm}-${dd}`) ?? 0 });
+    }
+    return result;
   }
 
   private buildCumulative(): void {
