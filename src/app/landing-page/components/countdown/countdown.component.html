@@ -28,20 +28,28 @@
         </p>
       }
 
-      @if (!isLive()) {
-        <h2 class="section-title reveal reveal-up delay-1">
-          A próxima missão<br><span class="accent">começa em</span>
-        </h2>
-      } @else {
-        <h2 class="section-title reveal reveal-up delay-1">
-          <span class="accent">Estamos ao vivo!</span><br>O hackathon já começou
-        </h2>
+      @switch (phase()) {
+        @case ('before') {
+          <h2 class="section-title reveal reveal-up delay-1">
+            A próxima missão<br><span class="accent">começa em</span>
+          </h2>
+        }
+        @case ('live') {
+          <h2 class="section-title reveal reveal-up delay-1">
+            <span class="accent">Estamos ao vivo!</span><br>O hackathon termina em
+          </h2>
+        }
+        @case ('ended') {
+          <h2 class="section-title reveal reveal-up delay-1">
+            <span class="accent">Missão cumprida!</span><br>O hackathon 2026 foi encerrado
+          </h2>
+        }
       }
 
       <div class="event-meta reveal reveal-up delay-2">
         <span class="meta-item">
           <i class="ph ph-calendar-dots" aria-hidden="true"></i>
-          14 de Novembro de 2026
+          14 e 15 de Novembro de 2026
         </span>
         <span class="meta-divider" aria-hidden="true"></span>
         <span class="meta-item">
@@ -57,7 +65,7 @@
     </header>
 
     <!-- ─── Relógio ──────────────────────────────────────── -->
-    @if (!isLive()) {
+    @if (!isEnded()) {
       <div class="countdown-timer reveal reveal-up delay-3" role="timer" aria-live="off">
         <div class="time-unit">
           <div class="time-box"><span class="time-value">{{ pad(days()) }}</span></div>
@@ -80,11 +88,12 @@
         </div>
       </div>
 
-      <div class="progress-container reveal reveal-up delay-3" aria-label="Progresso até o evento">
+      <div class="progress-container reveal reveal-up delay-3"
+           [attr.aria-label]="isLive() ? 'Progresso do hackathon' : 'Progresso até o evento'">
         <div class="progress-labels">
-          <span>Jun 2026</span>
+          <span>{{ isLive() ? '14 Nov 00:00' : 'Jun 2026' }}</span>
           <span class="progress-pct">{{ progress() | number:'1.0-0' }}% concluído</span>
-          <span>14 Nov 2026</span>
+          <span>{{ isLive() ? '15 Nov 23:59' : '14 Nov 2026' }}</span>
         </div>
         <div class="progress-track">
           <div class="progress-fill" [style.width.%]="progress()"></div>

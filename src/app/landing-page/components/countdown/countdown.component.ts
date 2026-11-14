@@ -11,27 +11,39 @@ import { REGISTRATION_URL } from '../../../shared/data/registration.data';
 })
 export class CountdownComponent {
   private readonly destroyRef = inject(DestroyRef);
-  private readonly eventDate = new Date('2026-11-14T00:00:00-03:00');
+  private readonly campaignStart = new Date('2026-06-24T00:00:00-03:00');
+  private readonly eventStart = new Date('2026-11-14T00:00:00-03:00');
+  private readonly eventEnd = new Date('2026-11-15T23:59:59-03:00');
   private readonly now = signal(new Date());
   readonly starsArray = Array.from({ length: 60 }, (_, i) => i);
   readonly registrationUrl = REGISTRATION_URL;
 
-  readonly diff = computed(() => Math.max(0, this.eventDate.getTime() - this.now().getTime()));
-  readonly isLive = computed(() => this.diff() <= 0);
+  /** before = contando até o início; live = contando até o fim; ended = encerrado. */
+  readonly phase = computed<'before' | 'live' | 'ended'>(() => {
+    const t = this.now().getTime();
+    if (t < this.eventStart.getTime()) return 'before';
+    if (t < this.eventEnd.getTime()) return 'live';
+    return 'ended';
+  });
+  readonly isLive = computed(() => this.phase() === 'live');
+  readonly isEnded = computed(() => this.phase() === 'ended');
+
+  private readonly target = computed(() =>
+    this.phase() === 'before' ? this.eventStart : this.eventEnd
+  );
+  readonly diff = computed(() => Math.max(0, this.target().getTime() - this.now().getTime()));
   readonly days    = computed(() => Math.floor(this.diff() / 86_400_000));
   readonly hours   = computed(() => Math.floor((this.diff() % 86_400_000) / 3_600_000));
   readonly minutes = computed(() => Math.floor((this.diff() % 3_600_000) / 60_000));
   readonly seconds = computed(() => Math.floor((this.diff() % 60_000) / 1_000));
 
-  readonly totalDays = computed(() =>
-    Math.ceil((this.eventDate.getTime() - new Date('2026-06-24T00:00:00-03:00').getTime()) / 86_400_000)
-  );
-  readonly elapsed = computed(() =>
-    Math.ceil((this.now().getTime() - new Date('2026-06-24T00:00:00-03:00').getTime()) / 86_400_000)
-  );
-  readonly progress = computed(() =>
-    Math.min(100, Math.max(0, (this.elapsed() / this.totalDays()) * 100))
-  );
+  /** Antes do evento: progresso da campanha (jun → início). Durante: progresso do hackathon. */
+  readonly progress = computed(() => {
+    const from = this.phase() === 'before' ? this.campaignStart : this.eventStart;
+    const to = this.target();
+    const pct = ((this.now().getTime() - from.getTime()) / (to.getTime() - from.getTime())) * 100;
+    return Math.min(100, Math.max(0, pct));
+  });
 
   constructor() {
     afterNextRender(() => {
