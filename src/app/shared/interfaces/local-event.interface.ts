@@ -37,6 +37,8 @@ export interface LocalEvent {
 }
 
 export interface CityParticipation {
+  /** ID da sede na plataforma; chave para cruzar com os JSONs de times. */
+  locationId?: string;
   city: string;
   country: string;
   registrations: number;

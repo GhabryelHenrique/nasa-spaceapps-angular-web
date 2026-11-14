@@ -8,11 +8,14 @@ Os arquivos são versionados por edição, em `src/assets/data/<ano>/`:
     teams.json            times de Uberlândia (telas /times e Sala de Guerra)
     otherCitiesTeams.json times das demais sedes (comparativos da Sala de Guerra)
     localEvents.json      todas as sedes do mundo (ranking global)
+    latamTeams.json       resumo de times de todas as sedes da América Latina
+                          (comparativo latino-americano da Sala de Guerra)
 
 Uso:
     python update_teams.py              # edição corrente (2026)
     python update_teams.py --year 2025  # reprocessa uma edição anterior
     python update_teams.py --only uberlandia
+    python update_teams.py --only latam
 
 Observação: em 2026 a formação de equipes só abre em 17/09, então rodar o
 script antes disso grava `teams.json` legitimamente vazio.
@@ -258,6 +261,32 @@ fragment OpenLocationFields on LocationFeature {
 }"""
 
 
+# Versão enxuta da query de times para o resumo latino-americano: são ~150
+# sedes, e só interessam contagem e submissão (a API pública devolve
+# `memberships` nulo, então não dá para contar membros). Puxar o
+# CoreTeamFields inteiro deixaria o JSON servido ao navegador enorme à toa.
+TEAMS_SUMMARY_QUERY = """query Teams($first: Int!, $after: String, $filtering: [Filter!], $q: String) {
+  teams(first: $first, after: $after, filtering: $filtering, q: $q) {
+    pageInfo {
+      hasNextPage
+      endCursor
+      __typename
+    }
+    totalCount
+    edges {
+      cursor
+      node {
+        __typename
+        id
+        projectSubmitted
+      }
+      __typename
+    }
+    __typename
+  }
+}"""
+
+
 def post_graphql(operation: str, query: str, variables: Dict[str, Any],
                  headers: Dict[str, str]) -> Dict[str, Any]:
     """
@@ -362,6 +391,7 @@ def index_locations_by_name(events: Dict[str, Any]) -> List[Dict[str, str]]:
             "title": props.get("title", "") or "",
             "displayName": props.get("displayName", "") or "",
             "country": props.get("country", "") or "",
+            "registrations": props.get("cachedRegistrations") or 0,
         })
     return locations
 
@@ -450,6 +480,59 @@ def fetch_teams_for_cities(locations: List[Dict[str, str]], city_names: List[str
 
 
 # ─────────────────────────────────────────────────────────────
+# América Latina
+# ─────────────────────────────────────────────────────────────
+
+# Países latino-americanos como a API grafa o campo `country` das sedes.
+# Precisa bater com LATAM_COUNTRIES no front
+# (src/app/war-room/data/latam-countries.data.ts). Caribe anglófono (Jamaica,
+# Trinidad e Tobago…) fica de fora, como na definição usual de América Latina.
+LATAM_COUNTRIES = {
+    "Argentina", "Bolivia", "Brazil", "Chile", "Colombia", "Costa Rica", "Cuba",
+    "Dominican Republic", "Ecuador", "El Salvador", "Guatemala", "Haiti",
+    "Honduras", "Mexico", "Nicaragua", "Panama", "Paraguay", "Peru",
+    "Puerto Rico", "Uruguay", "Venezuela",
+}
+
+
+def summarize_location_teams(location: Dict[str, str], year: int) -> Dict[str, Any]:
+    """Conta times, submissões e membros de uma sede (sem guardar os times)."""
+    result = paginate(
+        operation="Teams",
+        query=TEAMS_SUMMARY_QUERY,
+        root_field="teams",
+        base_variables={
+            "q": "",
+            "filtering": [{"field": "location", "value": location["id"], "compare": "id"}],
+        },
+        headers=build_headers(year, tab="teams"),
+        label=f"{location['title']}, {location['country']}",
+    )
+
+    nodes = [edge.get("node") or {} for edge in result["edges"]]
+    return {
+        "locationId": location["id"],
+        "locationName": location["title"],
+        "country": location["country"],
+        "totalTeams": result["totalCount"] or len(nodes),
+        "submittedProjects": sum(1 for node in nodes if node.get("projectSubmitted") is True),
+    }
+
+
+def fetch_latam_summary(locations: List[Dict[str, str]], year: int) -> List[Dict[str, Any]]:
+    """Resumo de times de todas as sedes latino-americanas da edição."""
+    latam = [loc for loc in locations if loc["country"] in LATAM_COUNTRIES]
+    countries = sorted({loc["country"] for loc in latam})
+    print(f"  {len(latam)} sedes em {len(countries)} países")
+
+    summary = []
+    for loc in latam:
+        summary.append(summarize_location_teams(loc, year))
+        time.sleep(PAGE_DELAY_SECONDS)
+    return summary
+
+
+# ─────────────────────────────────────────────────────────────
 # Escrita
 # ─────────────────────────────────────────────────────────────
 
@@ -477,6 +560,17 @@ def write_cities_file(year: int, filename: str, cities_data: List[Dict[str, Any]
         total += count
         print(f"  - {city.get('locationName', '?')}: {count} times")
     print(f"  Total: {total} times em {len(cities_data)} sedes")
+
+
+def write_latam_file(year: int, summary: List[Dict[str, Any]]) -> None:
+    path = write_json(year, "latamTeams.json", {
+        "generatedAt": time.strftime("%Y-%m-%dT%H:%M:%SZ", time.gmtime()),
+        "data": summary,
+    })
+    teams = sum(row["totalTeams"] for row in summary)
+    submitted = sum(row["submittedProjects"] for row in summary)
+    print(f"\n{path} gravado.")
+    print(f"  {len(summary)} sedes, {teams} times, {submitted} projetos enviados")
 
 
 def write_local_events_file(year: int, events: Dict[str, Any]) -> None:
@@ -514,7 +608,7 @@ def main() -> int:
     parser = argparse.ArgumentParser(description="Atualiza os dados de times e sedes do Space Apps.")
     parser.add_argument("--year", type=int, default=CURRENT_YEAR,
                         help=f"edição a buscar (padrão: {CURRENT_YEAR})")
-    parser.add_argument("--only", choices=["uberlandia", "other-cities", "events"],
+    parser.add_argument("--only", choices=["uberlandia", "other-cities", "events", "latam"],
                         help="atualiza apenas uma parte dos dados")
     args = parser.parse_args()
     year = args.year
@@ -548,6 +642,10 @@ def main() -> int:
             write_cities_file(year, "otherCitiesTeams.json",
                               fetch_teams_for_cities(locations, other_cities, year),
                               "OUTRAS SEDES")
+
+        if args.only in (None, "latam"):
+            print(f"\n=== AMÉRICA LATINA {year} ===")
+            write_latam_file(year, fetch_latam_summary(locations, year))
 
         print(f"\n=== EDIÇÃO {year} ATUALIZADA ===")
         return 0

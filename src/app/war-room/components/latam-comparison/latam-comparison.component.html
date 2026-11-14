@@ -1,0 +1,351 @@
+<section class="latam-section">
+  <div class="section-header">
+    <h2 class="section-title">
+      <span class="title-icon">🌎</span>
+      Uberlândia na América Latina
+    </h2>
+    <p class="section-description">
+      Como Uberlândia se compara às {{ fmt(totalCities()) }} sedes de
+      {{ fmt(totalCountries()) }} países latino-americanos no Space Apps Challenge {{ year() }}.
+      Inscritos vêm da plataforma; times e projetos, do resumo por sede.
+    </p>
+  </div>
+
+  @if (uberlandia(); as ube) {
+
+    <!-- Destaques -->
+    <div class="highlights-grid">
+      <div class="highlight-card accent">
+        <h4>Ranking por inscritos</h4>
+        <div class="rank-display">
+          <span class="rank-emoji">{{ getRankEmoji(registrationsRank()) }}</span>
+          <span class="rank-position">#{{ registrationsRank() }}</span>
+          <span class="rank-total">de {{ fmt(totalCities()) }}</span>
+        </div>
+        <span class="card-detail">Top {{ topPercent() }}% da América Latina</span>
+      </div>
+
+      <div class="highlight-card">
+        <h4>Inscritos em Uberlândia</h4>
+        <div class="stats-display">
+          <span class="stats-value">{{ fmt(ube.registrations) }}</span>
+          <span class="stats-label">pessoas</span>
+        </div>
+        <div class="percentage-bar">
+          <div class="percentage-fill" [style.width.%]="registrationsShare()"></div>
+        </div>
+        <span class="card-detail">
+          {{ pct(registrationsShare()) }} da América Latina ·
+          média por sede: {{ fmt(Math.round(averageRegistrations())) }}
+        </span>
+      </div>
+
+      @if (hasTeams()) {
+        <div class="highlight-card">
+          <h4>Ranking por times</h4>
+          <div class="rank-display">
+            @if (teamsRank()) {
+              <span class="rank-emoji">{{ getRankEmoji(teamsRank()) }}</span>
+              <span class="rank-position">#{{ teamsRank() }}</span>
+              <span class="rank-total">de {{ fmt(totalCities()) }}</span>
+            } @else {
+              <span class="rank-position">—</span>
+              <span class="rank-total">ainda sem pontuar</span>
+            }
+          </div>
+          <span class="card-detail">
+            {{ fmt(ube.totalTeams) }} {{ plural(ube.totalTeams, 'time', 'times') }} ·
+            {{ pct(teamsShare()) }} da América Latina
+          </span>
+        </div>
+
+        <div
+          class="highlight-card comparison"
+          [class.above]="ubeTeamsPer100() >= latamTeamsPer100()"
+          [class.below]="ubeTeamsPer100() < latamTeamsPer100()">
+          <h4>Times por 100 inscritos</h4>
+          <div class="comparison-values">
+            <span class="city-value">{{ dec(ubeTeamsPer100()) }}</span>
+            <span class="vs-text">vs</span>
+            <span class="avg-value">{{ dec(latamTeamsPer100()) }}</span>
+          </div>
+          <span class="card-detail">Quanto da inscrição virou equipe — Uberlândia vs América Latina</span>
+        </div>
+      }
+
+      @if (hasSubmissions()) {
+        <div class="highlight-card">
+          <h4>Ranking por projetos enviados</h4>
+          <div class="rank-display">
+            @if (submittedRank()) {
+              <span class="rank-emoji">{{ getRankEmoji(submittedRank()) }}</span>
+              <span class="rank-position">#{{ submittedRank() }}</span>
+              <span class="rank-total">de {{ fmt(totalCities()) }}</span>
+            } @else {
+              <span class="rank-position">—</span>
+              <span class="rank-total">ainda sem pontuar</span>
+            }
+          </div>
+          <span class="card-detail">
+            {{ fmt(ube.submittedProjects) }} {{ plural(ube.submittedProjects, 'projeto', 'projetos') }}
+          </span>
+        </div>
+
+        <div
+          class="highlight-card comparison"
+          [class.above]="ubeSubmissionRate() >= latamSubmissionRate()"
+          [class.below]="ubeSubmissionRate() < latamSubmissionRate()">
+          <h4>Taxa de envio</h4>
+          <div class="comparison-values">
+            <span class="city-value">{{ pct(ubeSubmissionRate()) }}</span>
+            <span class="vs-text">vs</span>
+            <span class="avg-value">{{ pct(latamSubmissionRate()) }}</span>
+          </div>
+          <span class="card-detail">Times que enviaram projeto — Uberlândia vs América Latina</span>
+        </div>
+      }
+    </div>
+
+    <!-- Insights -->
+    <div class="insights-list">
+      @if (registrationsNeighbor(); as neighbor) {
+        @if (neighbor.isLeading) {
+          <div class="insight-item">
+            <span class="insight-icon">🎉</span>
+            <p>
+              <strong>Uberlândia é a maior sede da América Latina!</strong>
+              São {{ fmt(neighbor.gap) }} {{ plural(neighbor.gap, 'inscrito', 'inscritos') }} à frente de
+              {{ neighbor.row.flag }} {{ neighbor.row.cityName }} ({{ neighbor.row.countryName }}).
+            </p>
+          </div>
+        } @else {
+          <div class="insight-item">
+            <span class="insight-icon">🎯</span>
+            <p>
+              Faltam <strong>{{ fmt(neighbor.gap) }}</strong>
+              {{ plural(neighbor.gap, 'inscrito', 'inscritos') }} para Uberlândia passar
+              {{ neighbor.row.flag }} {{ neighbor.row.cityName }}
+              ({{ neighbor.row.countryName }}), a sede logo acima no ranking.
+            </p>
+          </div>
+        }
+      }
+
+      @if (leader(); as lead) {
+        <div class="insight-item">
+          <span class="insight-icon">👑</span>
+          <p>
+            A maior sede latino-americana é {{ lead.row.flag }}
+            <strong>{{ lead.row.cityName }}</strong> ({{ lead.row.countryName }}), com
+            {{ fmt(lead.row.registrations) }} inscritos —
+            {{ fmt(lead.gap) }} a mais que Uberlândia.
+          </p>
+        </div>
+      }
+
+      @if (otherCountriesCount() > 0) {
+        <div class="insight-item">
+          <span class="insight-icon">🗺️</span>
+          <p>
+            Sozinha, Uberlândia tem mais inscritos que
+            <strong>{{ countriesOutnumbered().length }} dos {{ otherCountriesCount() }}</strong>
+            outros países latino-americanos somados
+            @if (countriesOutnumbered().length > 0) {
+              ({{ outnumberedNames() }})
+            }
+            e supera a maior sede de
+            <strong>{{ leadersOutnumbered().length }}</strong>
+            {{ plural(leadersOutnumbered().length, 'país', 'países') }}.
+          </p>
+        </div>
+      }
+
+      @if (brazil(); as br) {
+        <div class="insight-item">
+          <span class="insight-icon">🇧🇷</span>
+          <p>
+            O Brasil é o <strong>#{{ br.rank }}</strong> país da região em inscritos
+            ({{ fmt(br.item.registrations) }} em {{ br.item.sedes }} sedes), e Uberlândia é a
+            <strong>#{{ brazilRank() }}</strong> sede brasileira — responde por
+            {{ pct(br.item.registrations ? (ube.registrations / br.item.registrations) * 100 : 0) }}
+            dos inscritos do país.
+          </p>
+        </div>
+      }
+    </div>
+
+    <!-- Ranking por país -->
+    <div class="table-block">
+      <h3 class="block-title">🏳️ Ranking por país</h3>
+
+      <div class="table-scroll">
+      <div class="data-table country-table" [class.has-teams]="hasTeams()">
+        <div class="table-header">
+          <div class="cell">Pos</div>
+          <div class="cell">País</div>
+          <div class="cell num">Sedes</div>
+          <div class="cell">Inscritos</div>
+          @if (hasTeams()) {
+            <div class="cell num">Times</div>
+          }
+          <div class="cell num">Média/sede</div>
+          <div class="cell">Maior sede</div>
+        </div>
+
+        @for (entry of countryRows(); track entry.item.country) {
+          <div class="table-row" [class.highlight-row]="entry.item.isBrazil">
+            <div class="cell rank">{{ entry.rank }} {{ getRankEmoji(entry.rank) }}</div>
+            <div class="cell name">
+              <span class="flag">{{ entry.item.flag }}</span>
+              {{ entry.item.countryName }}
+            </div>
+            <div class="cell num">{{ entry.item.sedes }}</div>
+            <div class="cell">
+              <div class="bar-line">
+                <div class="bar-track">
+                  <div class="bar-fill" [style.width.%]="countryBarWidth(entry.item)"></div>
+                </div>
+                <span class="bar-value">{{ fmt(entry.item.registrations) }}</span>
+              </div>
+            </div>
+            @if (hasTeams()) {
+              <div class="cell num">{{ fmt(entry.item.totalTeams) }}</div>
+            }
+            <div class="cell num">{{ fmt(Math.round(entry.item.avgPerSede)) }}</div>
+            <div class="cell top-city">
+              <span>{{ entry.item.topCity.name }}</span>
+              <small>{{ fmt(entry.item.topCity.registrations) }}</small>
+              @if (entry.item.topCity.registrations < ube.registrations) {
+                <span class="beat-badge" title="Uberlândia tem mais inscritos que esta sede">UDI ▲</span>
+              }
+            </div>
+          </div>
+        }
+      </div>
+      </div>
+      <p class="table-note">
+        “UDI ▲” marca os países cuja maior sede tem menos inscritos que Uberlândia.
+      </p>
+    </div>
+
+    <!-- Ranking de sedes -->
+    <div class="table-block">
+      <h3 class="block-title">🏅 Ranking de sedes</h3>
+
+      <div class="table-controls">
+        <div class="sort-tabs" role="group" aria-label="Ordenar sedes por">
+          <button type="button" [class.active]="sortKey() === 'registrations'" (click)="setSort('registrations')">
+            Inscritos
+          </button>
+          @if (hasTeams()) {
+            <button type="button" [class.active]="sortKey() === 'teams'" (click)="setSort('teams')">
+              Times
+            </button>
+          }
+          @if (hasSubmissions()) {
+            <button type="button" [class.active]="sortKey() === 'submitted'" (click)="setSort('submitted')">
+              Projetos enviados
+            </button>
+          }
+        </div>
+
+        <label class="country-select">
+          <span>País</span>
+          <select [value]="countryFilter()" (change)="setCountryFilter($any($event.target).value)">
+            <option value="">Todos</option>
+            @for (country of countryOptions(); track country.country) {
+              <option [value]="country.country">{{ country.flag }} {{ country.countryName }}</option>
+            }
+          </select>
+        </label>
+      </div>
+
+      <div class="table-scroll">
+      <div class="data-table city-table" [style.--extra-cols]="extraColumns()">
+        <div class="table-header">
+          <div class="cell">Pos</div>
+          <div class="cell">Sede</div>
+          <div class="cell">
+            {{ sortKey() === 'registrations' ? 'Inscritos' : sortKey() === 'teams' ? 'Times' : 'Projetos enviados' }}
+          </div>
+          @if (sortKey() !== 'registrations') {
+            <div class="cell num">Inscritos</div>
+          }
+          @if (hasTeams() && sortKey() !== 'teams') {
+            <div class="cell num">Times</div>
+          }
+          @if (hasSubmissions()) {
+            <div class="cell num">Taxa de envio</div>
+          }
+        </div>
+
+        @for (entry of visibleRows(); track entry.item.key) {
+          <ng-container *ngTemplateOutlet="cityRow; context: { $implicit: entry }"></ng-container>
+        }
+
+        @if (pinnedUberlandia(); as pinned) {
+          <div class="table-gap">⋯</div>
+          <ng-container *ngTemplateOutlet="cityRow; context: { $implicit: pinned }"></ng-container>
+        }
+      </div>
+      </div>
+
+      <div class="table-footer">
+        @if (loadingTeams()) {
+          <p class="table-note"><span class="spinner-inline"></span> Carregando times por sede…</p>
+        } @else if (teamsUnavailable()) {
+          <p class="table-note">
+            ⚠️ Resumo de times da América Latina indisponível para {{ year() }}
+            (rode <code>python update_teams.py --year {{ year() }} --only latam</code>) —
+            o ranking considera apenas inscritos.
+          </p>
+        }
+
+        @if (!countryFilter() && (hiddenCount() > 0 || showAll())) {
+          <button type="button" class="show-all-btn" (click)="toggleShowAll()">
+            {{ showAll() ? 'Mostrar só o top 15' : 'Ver todas as ' + fmt(totalCities()) + ' sedes' }}
+          </button>
+        }
+      </div>
+    </div>
+
+    <ng-template #cityRow let-entry>
+      <div class="table-row" [class.highlight-row]="entry.item.isUberlandia" [class.top-three]="entry.rank <= 3">
+        <div class="cell rank">{{ entry.rank }} {{ getRankEmoji(entry.rank) }}</div>
+        <div class="cell name">
+          <span class="flag" [title]="entry.item.countryName">{{ entry.item.flag }}</span>
+          <span class="city">{{ entry.item.cityName }}</span>
+          <small class="country">{{ entry.item.countryName }}</small>
+          @if (entry.item.isUberlandia) {
+            <span class="city-badge">🎯</span>
+          }
+        </div>
+        <div class="cell">
+          <div class="bar-line">
+            <div class="bar-track">
+              <div class="bar-fill" [style.width.%]="barWidth(entry.item)"></div>
+            </div>
+            <span class="bar-value">{{ fmt(metricValue(entry.item)) }}</span>
+          </div>
+        </div>
+        @if (sortKey() !== 'registrations') {
+          <div class="cell num">{{ fmt(entry.item.registrations) }}</div>
+        }
+        @if (hasTeams() && sortKey() !== 'teams') {
+          <div class="cell num">{{ fmt(entry.item.totalTeams) }}</div>
+        }
+        @if (hasSubmissions()) {
+          <div class="cell num">
+            {{ entry.item.totalTeams ? pct(rate(entry.item)) : '—' }}
+          </div>
+        }
+      </div>
+    </ng-template>
+
+  } @else {
+    <div class="empty-state">
+      <div class="empty-icon">🌎</div>
+      <p>Uberlândia ainda não aparece entre as sedes latino-americanas desta edição.</p>
+    </div>
+  }
+</section>

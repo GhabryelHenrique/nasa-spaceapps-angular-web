@@ -8,10 +8,10 @@
           "hasPreviousPage": false,
           "hasNextPage": false,
           "startCursor": "b2Zmc2V0OjA=",
-          "endCursor": "b2Zmc2V0OjU4",
+          "endCursor": "b2Zmc2V0OjY0",
           "__typename": "PageInfo"
         },
-        "totalCount": 59,
+        "totalCount": 65,
         "edges": [
           {
             "__typename": "TeamPageEdge",
@@ -24,7 +24,7 @@
                 "type": "TEAM",
                 "slug": "123-idea",
                 "firstPublishedAt": "2026-11-13T00:37:41.879000Z",
-                "lastPublishedAt": "2026-11-13T00:47:39.116695Z",
+                "lastPublishedAt": "2026-11-13T22:14:19.899235Z",
                 "relativeUrl": "/2026/find-a-team/123-idea/",
                 "live": true,
                 "parent": null,
@@ -108,7 +108,7 @@
                 "type": "TEAM",
                 "slug": "27-threads-uberlandia",
                 "firstPublishedAt": "2026-10-29T16:40:57.458000Z",
-                "lastPublishedAt": "2026-10-29T16:59:31.557406Z",
+                "lastPublishedAt": "2026-11-13T15:28:25.058399Z",
                 "relativeUrl": "/2026/find-a-team/27-threads-uberlandia/",
                 "live": true,
                 "parent": null,
@@ -416,8 +416,8 @@
               "meta": {
                 "type": "TEAM",
                 "slug": "angular-lovers",
-                "firstPublishedAt": null,
-                "lastPublishedAt": null,
+                "firstPublishedAt": "2026-11-13T21:33:40.736000Z",
+                "lastPublishedAt": "2026-11-13T23:38:19.009836Z",
                 "relativeUrl": "/2026/find-a-team/angular-lovers/",
                 "live": true,
                 "parent": null,
@@ -503,109 +503,6 @@
                 "__typename": "LocationPage"
               },
               "event": "aWQ6NA==",
-              "joinEnabled": false,
-              "memberships": null,
-              "nominationBadges": null,
-              "awardBadges": null
-            }
-          },
-          {
-            "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjU=",
-            "node": {
-              "__typename": "TeamPage",
-              "id": "aWQ6ODU2NDI=",
-              "title": "APOLLO and ARTEMIS",
-              "meta": {
-                "type": "TEAM",
-                "slug": "apollo-and-artemis",
-                "firstPublishedAt": null,
-                "lastPublishedAt": null,
-                "relativeUrl": "/2026/find-a-team/apollo-and-artemis/",
-                "live": true,
-                "parent": null,
-                "__typename": "ExpandedPageMeta"
-              },
-              "owner": "aWQ6ODJjMmFiYTgtYmM0ZC00MTJlLWI5NzQtZWZhMGY2NzJiY2Uz",
-              "ownerDetails": null,
-              "excerpt": "We are a group that have so many habilities about arts, arquitheture and graphic design.",
-              "project": "aWQ6ODIwMzk=",
-              "projectDetails": {
-                "id": "aWQ6ODIwMzk=",
-                "name": "Project APOLLO and ARTEMIS",
-                "summary": "",
-                "demoLink": "",
-                "projectLink": "",
-                "details": "",
-                "solution": "",
-                "aiReferences": "",
-                "dataReferences": "",
-                "projectReferences": "",
-                "isSubmitted": false,
-                "savedAt": null,
-                "submittedAt": null,
-                "__typename": "Project"
-              },
-              "projectSubmitted": false,
-              "featuredImage": {
-                "id": "aWQ6NTUwNTI4",
-                "meta": {
-                  "type": "images.CustomImage",
-                  "downloadUrl": "https://assets.spaceappschallenge.org/media/original_images/images_1_t1OLoLB.jpeg",
-                  "__typename": "ImageMeta"
-                },
-                "title": "team_image.21:10:59.298960",
-                "alt": "team_image.21:10:59.298960",
-                "caption": "team_image.21:10:59.298960",
-                "displaySize": "or",
-                "rendition": {
-                  "url": "https://assets.spaceappschallenge.org/media/images/images_1_t1OLoLB.2e16d0ba.fill-300x250.jpg",
-                  "fullUrl": "https://assets.spaceappschallenge.org/media/images/images_1_t1OLoLB.2e16d0ba.fill-300x250.jpg",
-                  "height": 250,
-                  "width": 300,
-                  "__typename": "BaseImage"
-                },
-                "__typename": "DefaultImage"
-              },
-              "description": null,
-              "desiredSkills": null,
-              "languages": null,
-              "challenge": "aWQ6NTUxMjc=",
-              "challengeDetails": {
-                "id": "aWQ6NTUxMjc=",
-                "title": "Lunar Landing Site Navigator",
-                "meta": {
-                  "type": "CHALLENGE",
-                  "slug": "lunar-landing-site-navigator",
-                  "firstPublishedAt": "2026-09-17T14:21:09.928000Z",
-                  "lastPublishedAt": "2026-11-13T03:46:21.789089Z",
-                  "relativeUrl": "/2026/challenges/lunar-landing-site-navigator/",
-                  "live": true,
-                  "parent": null,
-                  "__typename": "ExpandedPageMeta"
-                },
-                "excerpt": "Missions to the Moon’s south pole face extreme lighting and communication constraints, and planning  them takes careful coordination between science and engineering teams. Tools for determining Sun and Earth positions at candidate landing sites exist, but their complicated interfaces make it difficult to evaluate critical information with efficiency. Your challenge is to create an intuitive tool or application that lets mission planners, educators, and the public compare landing sites and dates quickly, visualizing Sun and Earth positions relative to the horizon to assess power generation potential and direct-to-Earth communication windows.",
-                "__typename": "ChallengePage"
-              },
-              "location": "aWQ6NTQ0NDY=",
-              "locationDetails": {
-                "id": "aWQ6NTQ0NDY=",
-                "title": "Uberlândia",
-                "displayName": "",
-                "meta": {
-                  "type": "LOCATION",
-                  "slug": "uberlandia",
-                  "firstPublishedAt": "2026-08-20T13:11:16.191000Z",
-                  "lastPublishedAt": "2026-11-02T14:14:24.314767Z",
-                  "relativeUrl": "/2026/local-events/uberlandia/",
-                  "live": true,
-                  "parent": null,
-                  "__typename": "ExpandedPageMeta"
-                },
-                "country": "Brazil",
-                "__typename": "LocationPage"
-              },
-              "event": "aWQ6NA==",
               "joinEnabled": true,
               "memberships": null,
               "nominationBadges": null,
@@ -614,7 +511,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjY=",
+            "cursor": "b2Zmc2V0OjU=",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6NTgzMjU=",
@@ -717,7 +614,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0Ojc=",
+            "cursor": "b2Zmc2V0OjY=",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6ODQ4NDY=",
@@ -820,7 +717,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0Ojg=",
+            "cursor": "b2Zmc2V0Ojc=",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6NzY4MTg=",
@@ -923,7 +820,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0Ojk=",
+            "cursor": "b2Zmc2V0Ojg=",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6ODI1NjU=",
@@ -1026,7 +923,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjEw",
+            "cursor": "b2Zmc2V0Ojk=",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6NTY1NzY=",
@@ -1110,7 +1007,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjEx",
+            "cursor": "b2Zmc2V0OjEw",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6ODA1MDc=",
@@ -1194,7 +1091,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjEy",
+            "cursor": "b2Zmc2V0OjEx",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6NTg2NDg=",
@@ -1297,7 +1194,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjEz",
+            "cursor": "b2Zmc2V0OjEy",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6Njg3MzU=",
@@ -1400,7 +1297,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjE0",
+            "cursor": "b2Zmc2V0OjEz",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6ODMxNjc=",
@@ -1484,7 +1381,297 @@
           },
           {
             "__typename": "TeamPageEdge",
+            "cursor": "b2Zmc2V0OjE0",
+            "node": {
+              "__typename": "TeamPage",
+              "id": "aWQ6ODgzOTc=",
+              "title": "Cartógrafos das galáxias",
+              "meta": {
+                "type": "TEAM",
+                "slug": "cartografos-das-galaxias",
+                "firstPublishedAt": "2026-11-13T21:41:00.060000Z",
+                "lastPublishedAt": "2026-11-13T22:00:05.247490Z",
+                "relativeUrl": "/2026/find-a-team/cartografos-das-galaxias/",
+                "live": true,
+                "parent": null,
+                "__typename": "ExpandedPageMeta"
+              },
+              "owner": "aWQ6ZTQyMTkxMzMtNzE5MS00OWZjLTk1OTEtNzE0ZDhmMzUwYjZj",
+              "ownerDetails": null,
+              "excerpt": "My Interests & Skills:AI Agents & LLMs: Experienced in building autonomous agents and functional prototypes using Python, LangChain, Streamlit, and APIs like OpenAI and Groq.Deep Learning & Computer Vision: Hands-on background with TensorFlow, Ker...",
+              "project": "aWQ6ODQ3OTQ=",
+              "projectDetails": {
+                "id": "aWQ6ODQ3OTQ=",
+                "name": "Project Cartógrafos das galáxias",
+                "summary": "",
+                "demoLink": "",
+                "projectLink": "",
+                "details": "",
+                "solution": "",
+                "aiReferences": "",
+                "dataReferences": "",
+                "projectReferences": "",
+                "isSubmitted": false,
+                "savedAt": null,
+                "submittedAt": null,
+                "__typename": "Project"
+              },
+              "projectSubmitted": false,
+              "featuredImage": null,
+              "description": null,
+              "desiredSkills": null,
+              "languages": null,
+              "challenge": "aWQ6NTUxMTg=",
+              "challengeDetails": {
+                "id": "aWQ6NTUxMTg=",
+                "title": "Interplanetary Survival Guide: Martian Map",
+                "meta": {
+                  "type": "CHALLENGE",
+                  "slug": "interplanetary-survival-guide-martian-map",
+                  "firstPublishedAt": "2026-09-17T14:21:03.079000Z",
+                  "lastPublishedAt": "2026-11-13T03:46:20.420900Z",
+                  "relativeUrl": "/2026/challenges/interplanetary-survival-guide-martian-map/",
+                  "live": true,
+                  "parent": null,
+                  "__typename": "ExpandedPageMeta"
+                },
+                "excerpt": "NASA has explored Mars robotically for decades, studying its extreme environment, mapping its surface, and collecting many types of data. Far from home, the first astronauts to set foot on Mars will want the best map possible, with information on the details of their routes and destinations, updates on current conditions, and the data needed to complete their mission quickly and safely. Your challenge is to create a layered, integrated view of a location or route on the Martian surface that pulls together data from multiple NASA science missions and could help a human explorer plan and carry out a successful Marswalk while conducting new and exciting science along the way.",
+                "__typename": "ChallengePage"
+              },
+              "location": "aWQ6NTQ0NDY=",
+              "locationDetails": {
+                "id": "aWQ6NTQ0NDY=",
+                "title": "Uberlândia",
+                "displayName": "",
+                "meta": {
+                  "type": "LOCATION",
+                  "slug": "uberlandia",
+                  "firstPublishedAt": "2026-08-20T13:11:16.191000Z",
+                  "lastPublishedAt": "2026-11-02T14:14:24.314767Z",
+                  "relativeUrl": "/2026/local-events/uberlandia/",
+                  "live": true,
+                  "parent": null,
+                  "__typename": "ExpandedPageMeta"
+                },
+                "country": "Brazil",
+                "__typename": "LocationPage"
+              },
+              "event": "aWQ6NA==",
+              "joinEnabled": true,
+              "memberships": null,
+              "nominationBadges": null,
+              "awardBadges": null
+            }
+          },
+          {
+            "__typename": "TeamPageEdge",
             "cursor": "b2Zmc2V0OjE1",
+            "node": {
+              "__typename": "TeamPage",
+              "id": "aWQ6ODc3MDI=",
+              "title": "cavalodetroia.exe",
+              "meta": {
+                "type": "TEAM",
+                "slug": "cavalodetroiaexe",
+                "firstPublishedAt": "2026-11-13T17:23:10.895000Z",
+                "lastPublishedAt": "2026-11-13T21:32:17.606644Z",
+                "relativeUrl": "/2026/find-a-team/cavalodetroiaexe/",
+                "live": true,
+                "parent": null,
+                "__typename": "ExpandedPageMeta"
+              },
+              "owner": "aWQ6NTlmOTUyODAtMGFhMy00NGZjLThhMDQtYTUxMDYzZmE4MDAz",
+              "ownerDetails": null,
+              "excerpt": "We're a young team of gamers and tech enthusiasts from Uberlândia, Brazil!Our mission is to build a fun, interactive space survival game that helps young astronauts learn about real NASA missions through challenges, decisions, and resource managem...",
+              "project": "aWQ6ODQwOTk=",
+              "projectDetails": {
+                "id": "aWQ6ODQwOTk=",
+                "name": "Project cavalodetroia.exe",
+                "summary": "",
+                "demoLink": "",
+                "projectLink": "",
+                "details": "",
+                "solution": "",
+                "aiReferences": "",
+                "dataReferences": "",
+                "projectReferences": "",
+                "isSubmitted": false,
+                "savedAt": null,
+                "submittedAt": null,
+                "__typename": "Project"
+              },
+              "projectSubmitted": false,
+              "featuredImage": {
+                "id": "aWQ6NTU2ODc1",
+                "meta": {
+                  "type": "images.CustomImage",
+                  "downloadUrl": "https://assets.spaceappschallenge.org/media/original_images/30faaf81-c45f-4695-8080-8b64a64f3d50.png",
+                  "__typename": "ImageMeta"
+                },
+                "title": "team_image.17:27:18.039975",
+                "alt": "team_image.17:27:18.039975",
+                "caption": "team_image.17:27:18.039975",
+                "displaySize": "or",
+                "rendition": {
+                  "url": "https://assets.spaceappschallenge.org/media/images/30faaf81-c45f-4695-8080-8b64a64f3d.2e16d0ba.fill-300x250.png",
+                  "fullUrl": "https://assets.spaceappschallenge.org/media/images/30faaf81-c45f-4695-8080-8b64a64f3d.2e16d0ba.fill-300x250.png",
+                  "height": 250,
+                  "width": 300,
+                  "__typename": "BaseImage"
+                },
+                "__typename": "DefaultImage"
+              },
+              "description": null,
+              "desiredSkills": null,
+              "languages": null,
+              "challenge": "aWQ6NTUxMjQ=",
+              "challengeDetails": {
+                "id": "aWQ6NTUxMjQ=",
+                "title": "Build a Junior Astronaut Mission Trainer",
+                "meta": {
+                  "type": "CHALLENGE",
+                  "slug": "junior-astronaut-mission-trainer",
+                  "firstPublishedAt": "2026-09-17T14:22:28.522000Z",
+                  "lastPublishedAt": "2026-11-13T03:48:49.413870Z",
+                  "relativeUrl": "/2026/challenges/junior-astronaut-mission-trainer/",
+                  "live": true,
+                  "parent": null,
+                  "__typename": "ExpandedPageMeta"
+                },
+                "excerpt": "Space-themed STEM content often oversimplifies the engineering trade-offs that define a real mission or presents them at a level too complex to hold a young learner's attention. Few tools make those trade-offs both tangible and fun. Your challenge is to design and build an interactive game or app that lets students run a lunar or Martian outpost, balancing competing demands like life support, radiation shielding, power, and food production, so they experience firsthand the decisions that determine whether a mission fails or succeeds.",
+                "__typename": "ChallengePage"
+              },
+              "location": "aWQ6NTQ0NDY=",
+              "locationDetails": {
+                "id": "aWQ6NTQ0NDY=",
+                "title": "Uberlândia",
+                "displayName": "",
+                "meta": {
+                  "type": "LOCATION",
+                  "slug": "uberlandia",
+                  "firstPublishedAt": "2026-08-20T13:11:16.191000Z",
+                  "lastPublishedAt": "2026-11-02T14:14:24.314767Z",
+                  "relativeUrl": "/2026/local-events/uberlandia/",
+                  "live": true,
+                  "parent": null,
+                  "__typename": "ExpandedPageMeta"
+                },
+                "country": "Brazil",
+                "__typename": "LocationPage"
+              },
+              "event": "aWQ6NA==",
+              "joinEnabled": true,
+              "memberships": null,
+              "nominationBadges": null,
+              "awardBadges": null
+            }
+          },
+          {
+            "__typename": "TeamPageEdge",
+            "cursor": "b2Zmc2V0OjE2",
+            "node": {
+              "__typename": "TeamPage",
+              "id": "aWQ6ODc1OTM=",
+              "title": "Cerrado Baja SAE",
+              "meta": {
+                "type": "TEAM",
+                "slug": "cerrado-baja-sae",
+                "firstPublishedAt": "2026-11-13T16:57:49.770000Z",
+                "lastPublishedAt": "2026-11-13T22:17:45.185323Z",
+                "relativeUrl": "/2026/find-a-team/cerrado-baja-sae/",
+                "live": true,
+                "parent": null,
+                "__typename": "ExpandedPageMeta"
+              },
+              "owner": "aWQ6OWRhNjE5ZjEtMGU0MS00ZGI5LWE3YmYtZTI2NGUwZjVkOTQ3",
+              "ownerDetails": null,
+              "excerpt": "Equipe representante do Projeto Cerrado Baja SAE, da Universidade Federal de Uberlândia.Procuramos membros que estejam interessados em compartilhar um momento de desafio e aprendizado na elaboração de soluções para desafios complexos. Todos na equ...",
+              "project": "aWQ6ODM5OTA=",
+              "projectDetails": {
+                "id": "aWQ6ODM5OTA=",
+                "name": "Project Cerrado Baja SAE",
+                "summary": "",
+                "demoLink": "",
+                "projectLink": "",
+                "details": "",
+                "solution": "",
+                "aiReferences": "",
+                "dataReferences": "",
+                "projectReferences": "",
+                "isSubmitted": false,
+                "savedAt": null,
+                "submittedAt": null,
+                "__typename": "Project"
+              },
+              "projectSubmitted": false,
+              "featuredImage": {
+                "id": "aWQ6NTU2NTEz",
+                "meta": {
+                  "type": "images.CustomImage",
+                  "downloadUrl": "https://assets.spaceappschallenge.org/media/original_images/image_1_jvxKqd3.png",
+                  "__typename": "ImageMeta"
+                },
+                "title": "team_image.16:49:32.584792",
+                "alt": "team_image.16:49:32.584792",
+                "caption": "team_image.16:49:32.584792",
+                "displaySize": "or",
+                "rendition": {
+                  "url": "https://assets.spaceappschallenge.org/media/images/image_1_jvxKqd3.2e16d0ba.fill-300x250.png",
+                  "fullUrl": "https://assets.spaceappschallenge.org/media/images/image_1_jvxKqd3.2e16d0ba.fill-300x250.png",
+                  "height": 250,
+                  "width": 300,
+                  "__typename": "BaseImage"
+                },
+                "__typename": "DefaultImage"
+              },
+              "description": null,
+              "desiredSkills": null,
+              "languages": null,
+              "challenge": "aWQ6NTUxMjY=",
+              "challengeDetails": {
+                "id": "aWQ6NTUxMjY=",
+                "title": "Field Shift: Adapting Farms with NASA Data",
+                "meta": {
+                  "type": "CHALLENGE",
+                  "slug": "adapting-farms-with-nasa-data",
+                  "firstPublishedAt": "2026-09-17T14:22:15.778000Z",
+                  "lastPublishedAt": "2026-11-13T03:53:29.737029Z",
+                  "relativeUrl": "/2026/challenges/adapting-farms-with-nasa-data/",
+                  "live": true,
+                  "parent": null,
+                  "__typename": "ExpandedPageMeta"
+                },
+                "excerpt": "Farmers around the world navigate shifting temperatures, changing rainfall patterns, water shortages, extreme weather, and declining soil health. These pressures make it difficult to choose crop rotations that protect fields, conserve water, and support long‑term resilience. Your challenge is to create a decision‑support tool that uses NASA Earth observations along with local soil information, crop characteristics, and farmer priorities to help farmers explore rotation strategies that could strengthen soil health and adapt their farms to changing conditions.",
+                "__typename": "ChallengePage"
+              },
+              "location": "aWQ6NTQ0NDY=",
+              "locationDetails": {
+                "id": "aWQ6NTQ0NDY=",
+                "title": "Uberlândia",
+                "displayName": "",
+                "meta": {
+                  "type": "LOCATION",
+                  "slug": "uberlandia",
+                  "firstPublishedAt": "2026-08-20T13:11:16.191000Z",
+                  "lastPublishedAt": "2026-11-02T14:14:24.314767Z",
+                  "relativeUrl": "/2026/local-events/uberlandia/",
+                  "live": true,
+                  "parent": null,
+                  "__typename": "ExpandedPageMeta"
+                },
+                "country": "Brazil",
+                "__typename": "LocationPage"
+              },
+              "event": "aWQ6NA==",
+              "joinEnabled": true,
+              "memberships": null,
+              "nominationBadges": null,
+              "awardBadges": null
+            }
+          },
+          {
+            "__typename": "TeamPageEdge",
+            "cursor": "b2Zmc2V0OjE3",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6ODM0Mzg=",
@@ -1587,7 +1774,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjE2",
+            "cursor": "b2Zmc2V0OjE4",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6Njk3NDk=",
@@ -1671,7 +1858,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjE3",
+            "cursor": "b2Zmc2V0OjE5",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6ODE5Nzc=",
@@ -1774,7 +1961,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjE4",
+            "cursor": "b2Zmc2V0OjIw",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6Nzg0NjI=",
@@ -1877,7 +2064,122 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjE5",
+            "cursor": "b2Zmc2V0OjIx",
+            "node": {
+              "__typename": "TeamPage",
+              "id": "aWQ6NTk4OTc=",
+              "title": "Farm.py",
+              "meta": {
+                "type": "TEAM",
+                "slug": "farmpy",
+                "firstPublishedAt": "2026-09-26T03:01:42.389000Z",
+                "lastPublishedAt": "2026-11-13T17:13:54.758038Z",
+                "relativeUrl": "/2026/find-a-team/farmpy/",
+                "live": true,
+                "parent": null,
+                "__typename": "ExpandedPageMeta"
+              },
+              "owner": "aWQ6NDRiMzM1NmItNDYwOC00OTU5LThlZGItYTY2YmFhZTkyZWZi",
+              "ownerDetails": null,
+              "excerpt": "A equipe de Inteligência Artificial da UFTM (Universidade Federal do Triângulo Mineiro) está participando do Desafio Field Shift! Estamos desenvolvendo uma solução baseada em dados da NASA para apoiar a adaptação das fazendas, com foco total em en...",
+              "project": "aWQ6NTYzMDA=",
+              "projectDetails": {
+                "id": "aWQ6NTYzMDA=",
+                "name": "Project Farm.py",
+                "summary": "",
+                "demoLink": "",
+                "projectLink": "",
+                "details": "",
+                "solution": "",
+                "aiReferences": "",
+                "dataReferences": "",
+                "projectReferences": "",
+                "isSubmitted": false,
+                "savedAt": null,
+                "submittedAt": null,
+                "__typename": "Project"
+              },
+              "projectSubmitted": false,
+              "featuredImage": {
+                "id": "aWQ6NDQwMzg5",
+                "meta": {
+                  "type": "images.CustomImage",
+                  "downloadUrl": "https://assets.spaceappschallenge.org/media/original_images/WhatsApp_Image_2026-09-25_at_23.46.00.jpeg",
+                  "__typename": "ImageMeta"
+                },
+                "title": "team_image.02:57:07.886892",
+                "alt": "team_image.02:57:07.886892",
+                "caption": "team_image.02:57:07.886892",
+                "displaySize": "or",
+                "rendition": {
+                  "url": "https://assets.spaceappschallenge.org/media/images/WhatsApp_Image_2026-09-25_at_23.46.2e16d0ba.fill-300x250.jpg",
+                  "fullUrl": "https://assets.spaceappschallenge.org/media/images/WhatsApp_Image_2026-09-25_at_23.46.2e16d0ba.fill-300x250.jpg",
+                  "height": 250,
+                  "width": 300,
+                  "__typename": "BaseImage"
+                },
+                "__typename": "DefaultImage"
+              },
+              "description": null,
+              "desiredSkills": [
+                "Agriculture",
+                "Artificial Intelligence & Machine Learning",
+                "Data Analysis",
+                "Data Management",
+                "Data Visualization",
+                "Design",
+                "Software",
+                "Statistics",
+                "Web Development"
+              ],
+              "languages": [
+                "Portuguese"
+              ],
+              "challenge": "aWQ6NTUxMjY=",
+              "challengeDetails": {
+                "id": "aWQ6NTUxMjY=",
+                "title": "Field Shift: Adapting Farms with NASA Data",
+                "meta": {
+                  "type": "CHALLENGE",
+                  "slug": "adapting-farms-with-nasa-data",
+                  "firstPublishedAt": "2026-09-17T14:22:15.778000Z",
+                  "lastPublishedAt": "2026-11-13T03:53:29.737029Z",
+                  "relativeUrl": "/2026/challenges/adapting-farms-with-nasa-data/",
+                  "live": true,
+                  "parent": null,
+                  "__typename": "ExpandedPageMeta"
+                },
+                "excerpt": "Farmers around the world navigate shifting temperatures, changing rainfall patterns, water shortages, extreme weather, and declining soil health. These pressures make it difficult to choose crop rotations that protect fields, conserve water, and support long‑term resilience. Your challenge is to create a decision‑support tool that uses NASA Earth observations along with local soil information, crop characteristics, and farmer priorities to help farmers explore rotation strategies that could strengthen soil health and adapt their farms to changing conditions.",
+                "__typename": "ChallengePage"
+              },
+              "location": "aWQ6NTQ0NDY=",
+              "locationDetails": {
+                "id": "aWQ6NTQ0NDY=",
+                "title": "Uberlândia",
+                "displayName": "",
+                "meta": {
+                  "type": "LOCATION",
+                  "slug": "uberlandia",
+                  "firstPublishedAt": "2026-08-20T13:11:16.191000Z",
+                  "lastPublishedAt": "2026-11-02T14:14:24.314767Z",
+                  "relativeUrl": "/2026/local-events/uberlandia/",
+                  "live": true,
+                  "parent": null,
+                  "__typename": "ExpandedPageMeta"
+                },
+                "country": "Brazil",
+                "__typename": "LocationPage"
+              },
+              "event": "aWQ6NA==",
+              "joinEnabled": true,
+              "memberships": null,
+              "nominationBadges": null,
+              "awardBadges": null
+            }
+          },
+          {
+            "__typename": "TeamPageEdge",
+            "cursor": "b2Zmc2V0OjIy",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6ODA5NDE=",
@@ -1980,7 +2282,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjIw",
+            "cursor": "b2Zmc2V0OjIz",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6ODQwNDA=",
@@ -1989,7 +2291,7 @@
                 "type": "TEAM",
                 "slug": "flipflop-34",
                 "firstPublishedAt": "2026-11-11T23:58:54.298000Z",
-                "lastPublishedAt": "2026-11-12T00:02:29.580615Z",
+                "lastPublishedAt": "2026-11-13T15:07:32.041682Z",
                 "relativeUrl": "/2026/find-a-team/flipflop-34/",
                 "live": true,
                 "parent": null,
@@ -2083,7 +2385,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjIx",
+            "cursor": "b2Zmc2V0OjI0",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6ODQxNTY=",
@@ -2186,7 +2488,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjIy",
+            "cursor": "b2Zmc2V0OjI1",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6NjM5OTI=",
@@ -2289,7 +2591,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjIz",
+            "cursor": "b2Zmc2V0OjI2",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6NTU1OTM=",
@@ -2392,7 +2694,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjI0",
+            "cursor": "b2Zmc2V0OjI3",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6NzIwNTg=",
@@ -2495,7 +2797,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjI1",
+            "cursor": "b2Zmc2V0OjI4",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6NjEwMjA=",
@@ -2598,7 +2900,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjI2",
+            "cursor": "b2Zmc2V0OjI5",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6ODQ2Nzc=",
@@ -2607,7 +2909,7 @@
                 "type": "TEAM",
                 "slug": "iluminat-horizontes",
                 "firstPublishedAt": "2026-11-12T11:45:37.757000Z",
-                "lastPublishedAt": "2026-11-12T12:08:27.935023Z",
+                "lastPublishedAt": "2026-11-13T11:01:32.949577Z",
                 "relativeUrl": "/2026/find-a-team/iluminat-horizontes/",
                 "live": true,
                 "parent": null,
@@ -2701,7 +3003,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjI3",
+            "cursor": "b2Zmc2V0OjMw",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6ODU4MzM=",
@@ -2710,7 +3012,7 @@
                 "type": "TEAM",
                 "slug": "kultive-2026",
                 "firstPublishedAt": "2026-11-13T01:07:36.261000Z",
-                "lastPublishedAt": "2026-11-13T01:49:57.194375Z",
+                "lastPublishedAt": "2026-11-13T22:18:01.269785Z",
                 "relativeUrl": "/2026/find-a-team/kultive-2026/",
                 "live": true,
                 "parent": null,
@@ -2785,7 +3087,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjI4",
+            "cursor": "b2Zmc2V0OjMx",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6NzUyMjg=",
@@ -2794,7 +3096,7 @@
                 "type": "TEAM",
                 "slug": "log",
                 "firstPublishedAt": "2026-11-02T19:41:33.190000Z",
-                "lastPublishedAt": "2026-11-12T16:54:34.218616Z",
+                "lastPublishedAt": "2026-11-13T16:38:36.035702Z",
                 "relativeUrl": "/2026/find-a-team/log/",
                 "live": true,
                 "parent": null,
@@ -2822,19 +3124,19 @@
               },
               "projectSubmitted": false,
               "featuredImage": {
-                "id": "aWQ6NTEyMDQx",
+                "id": "aWQ6NTU2Mzk4",
                 "meta": {
                   "type": "images.CustomImage",
-                  "downloadUrl": "https://assets.spaceappschallenge.org/media/original_images/image_47eafd3f.jpg",
+                  "downloadUrl": "https://assets.spaceappschallenge.org/media/original_images/nova_logo_prUIC2a.png",
                   "__typename": "ImageMeta"
                 },
-                "title": "team_image.19:40:45.606317",
-                "alt": "team_image.19:40:45.606317",
-                "caption": "team_image.19:40:45.606317",
+                "title": "team_image.16:38:35.067335",
+                "alt": "team_image.16:38:35.067335",
+                "caption": "team_image.16:38:35.067335",
                 "displaySize": "or",
                 "rendition": {
-                  "url": "https://assets.spaceappschallenge.org/media/images/image_47eafd3f.2e16d0ba.fill-300x250.jpg",
-                  "fullUrl": "https://assets.spaceappschallenge.org/media/images/image_47eafd3f.2e16d0ba.fill-300x250.jpg",
+                  "url": "https://assets.spaceappschallenge.org/media/images/nova_logo_prUIC2a.2e16d0ba.fill-300x250.png",
+                  "fullUrl": "https://assets.spaceappschallenge.org/media/images/nova_logo_prUIC2a.2e16d0ba.fill-300x250.png",
                   "height": 250,
                   "width": 300,
                   "__typename": "BaseImage"
@@ -2888,7 +3190,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjI5",
+            "cursor": "b2Zmc2V0OjMy",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6ODU4MDY=",
@@ -2991,7 +3293,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjMw",
+            "cursor": "b2Zmc2V0OjMz",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6NzE4NzQ=",
@@ -3106,7 +3408,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjMx",
+            "cursor": "b2Zmc2V0OjM0",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6NTU1ODA=",
@@ -3209,7 +3511,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjMy",
+            "cursor": "b2Zmc2V0OjM1",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6Nzk0Nzg=",
@@ -3218,7 +3520,7 @@
                 "type": "TEAM",
                 "slug": "marabetha",
                 "firstPublishedAt": "2026-11-07T19:40:28.065000Z",
-                "lastPublishedAt": "2026-11-07T19:56:45.978101Z",
+                "lastPublishedAt": "2026-11-13T20:16:03.752919Z",
                 "relativeUrl": "/2026/find-a-team/marabetha/",
                 "live": true,
                 "parent": null,
@@ -3320,7 +3622,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjMz",
+            "cursor": "b2Zmc2V0OjM2",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6NjI0Njg=",
@@ -3423,7 +3725,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjM0",
+            "cursor": "b2Zmc2V0OjM3",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6ODU5MjE=",
@@ -3432,7 +3734,7 @@
                 "type": "TEAM",
                 "slug": "nerv-systems",
                 "firstPublishedAt": "2026-11-13T02:36:35.853000Z",
-                "lastPublishedAt": "2026-11-13T02:50:19.237246Z",
+                "lastPublishedAt": "2026-11-13T11:38:04.442459Z",
                 "relativeUrl": "/2026/find-a-team/nerv-systems/",
                 "live": true,
                 "parent": null,
@@ -3526,7 +3828,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjM1",
+            "cursor": "b2Zmc2V0OjM4",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6NjY4Mjc=",
@@ -3610,7 +3912,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjM2",
+            "cursor": "b2Zmc2V0OjM5",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6ODU3OTI=",
@@ -3713,7 +4015,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjM3",
+            "cursor": "b2Zmc2V0OjQw",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6NjY4NTk=",
@@ -3826,7 +4128,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjM4",
+            "cursor": "b2Zmc2V0OjQx",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6NTg0NDE=",
@@ -3910,7 +4212,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjM5",
+            "cursor": "b2Zmc2V0OjQy",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6ODQ4MTE=",
@@ -4013,7 +4315,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjQw",
+            "cursor": "b2Zmc2V0OjQz",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6NjQ3Mjg=",
@@ -4116,7 +4418,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjQx",
+            "cursor": "b2Zmc2V0OjQ0",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6NzYyNzg=",
@@ -4200,7 +4502,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjQy",
+            "cursor": "b2Zmc2V0OjQ1",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6NzE1NjU=",
@@ -4303,7 +4605,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjQz",
+            "cursor": "b2Zmc2V0OjQ2",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6ODU2MjE=",
@@ -4312,7 +4614,7 @@
                 "type": "TEAM",
                 "slug": "rasterroot",
                 "firstPublishedAt": "2026-11-12T23:45:12.423000Z",
-                "lastPublishedAt": "2026-11-13T02:28:37.781989Z",
+                "lastPublishedAt": "2026-11-13T22:10:13.691869Z",
                 "relativeUrl": "/2026/find-a-team/rasterroot/",
                 "live": true,
                 "parent": null,
@@ -4320,7 +4622,7 @@
               },
               "owner": "aWQ6YzhhZTQ3NmEtN2UxOC00ZmE1LTk1NjgtNjAxODkxZjVkOWY3",
               "ownerDetails": null,
-              "excerpt": "We are the Raster Root!From software engineers to agronomists, we’re a team that looks beyond pure code and technical specs. We want to connect high-end satellite data directly to the hands of farmers facing real climate shifts.We are actively loo...",
+              "excerpt": "From software engineers to agronomists, we’re a team that looks beyond pure code and technical specs. We want to connect high-end satellite data directly to the hands of farmers facing real climate shifts.We are actively looking for teammates in U...",
               "project": "aWQ6ODIwMTg=",
               "projectDetails": {
                 "id": "aWQ6ODIwMTg=",
@@ -4340,19 +4642,19 @@
               },
               "projectSubmitted": false,
               "featuredImage": {
-                "id": "aWQ6NTUxMTk1",
+                "id": "aWQ6NTU1Njkz",
                 "meta": {
                   "type": "images.CustomImage",
-                  "downloadUrl": "https://assets.spaceappschallenge.org/media/original_images/image_9b4d6a30_wA2Xb2K.jpg",
+                  "downloadUrl": "https://assets.spaceappschallenge.org/media/original_images/Logo_Simples_Raster_Root_stSFZKl.png",
                   "__typename": "ImageMeta"
                 },
-                "title": "team_image.01:35:24.297751",
-                "alt": "team_image.01:35:24.297751",
-                "caption": "team_image.01:35:24.297751",
+                "title": "team_image.15:25:31.718353",
+                "alt": "team_image.15:25:31.718353",
+                "caption": "team_image.15:25:31.718353",
                 "displaySize": "or",
                 "rendition": {
-                  "url": "https://assets.spaceappschallenge.org/media/images/image_9b4d6a30_wA2Xb2K.2e16d0ba.fill-300x250.jpg",
-                  "fullUrl": "https://assets.spaceappschallenge.org/media/images/image_9b4d6a30_wA2Xb2K.2e16d0ba.fill-300x250.jpg",
+                  "url": "https://assets.spaceappschallenge.org/media/images/Logo_Simples_Raster_Root_stSFZKl.2e16d0ba.fill-300x250.png",
+                  "fullUrl": "https://assets.spaceappschallenge.org/media/images/Logo_Simples_Raster_Root_stSFZKl.2e16d0ba.fill-300x250.png",
                   "height": 250,
                   "width": 300,
                   "__typename": "BaseImage"
@@ -4417,7 +4719,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjQ0",
+            "cursor": "b2Zmc2V0OjQ3",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6NzI5OTE=",
@@ -4520,7 +4822,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjQ1",
+            "cursor": "b2Zmc2V0OjQ4",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6ODMxMDI=",
@@ -4529,7 +4831,7 @@
                 "type": "TEAM",
                 "slug": "stars-beyond2",
                 "firstPublishedAt": "2026-11-11T11:21:54.429000Z",
-                "lastPublishedAt": "2026-11-11T13:06:03.015462Z",
+                "lastPublishedAt": "2026-11-13T21:40:15.466245Z",
                 "relativeUrl": "/2026/find-a-team/stars-beyond2/",
                 "live": true,
                 "parent": null,
@@ -4556,7 +4858,26 @@
                 "__typename": "Project"
               },
               "projectSubmitted": false,
-              "featuredImage": null,
+              "featuredImage": {
+                "id": "aWQ6NTU4NjU5",
+                "meta": {
+                  "type": "images.CustomImage",
+                  "downloadUrl": "https://assets.spaceappschallenge.org/media/original_images/Gemini_Generated_Image_wn7dmrwn7dmrwn7d.jpg",
+                  "__typename": "ImageMeta"
+                },
+                "title": "team_image.21:40:14.460475",
+                "alt": "team_image.21:40:14.460475",
+                "caption": "team_image.21:40:14.460475",
+                "displaySize": "or",
+                "rendition": {
+                  "url": "https://assets.spaceappschallenge.org/media/images/Gemini_Generated_Image_wn7dmrwn7dm.2e16d0ba.fill-300x250.jpg",
+                  "fullUrl": "https://assets.spaceappschallenge.org/media/images/Gemini_Generated_Image_wn7dmrwn7dm.2e16d0ba.fill-300x250.jpg",
+                  "height": 250,
+                  "width": 300,
+                  "__typename": "BaseImage"
+                },
+                "__typename": "DefaultImage"
+              },
               "description": null,
               "desiredSkills": null,
               "languages": null,
@@ -4604,7 +4925,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjQ2",
+            "cursor": "b2Zmc2V0OjQ5",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6ODUzNDU=",
@@ -4707,7 +5028,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjQ3",
+            "cursor": "b2Zmc2V0OjUw",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6ODUzNzk=",
@@ -4791,7 +5112,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjQ4",
+            "cursor": "b2Zmc2V0OjUx",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6NzU4MDY=",
@@ -4799,8 +5120,8 @@
               "meta": {
                 "type": "TEAM",
                 "slug": "stell4r",
-                "firstPublishedAt": "2026-11-05T16:16:32.310907Z",
-                "lastPublishedAt": "2026-11-05T16:16:32.310907Z",
+                "firstPublishedAt": "2026-11-05T16:16:32.310000Z",
+                "lastPublishedAt": "2026-11-13T20:25:55.637790Z",
                 "relativeUrl": "/2026/find-a-team/stell4r/",
                 "live": true,
                 "parent": null,
@@ -4808,7 +5129,7 @@
               },
               "owner": "aWQ6ODQwZDk2ZjEtM2RhOC00YWExLTk3NmMtMjk5OTc0NzExNzQ5",
               "ownerDetails": null,
-              "excerpt": "...",
+              "excerpt": "Hi! I'm a Computer Science student at the Federal University of Uberlândia (UFU), and I'm also a pixel artist.",
               "project": "aWQ6NzIyMDQ=",
               "projectDetails": {
                 "id": "aWQ6NzIyMDQ=",
@@ -4827,7 +5148,26 @@
                 "__typename": "Project"
               },
               "projectSubmitted": false,
-              "featuredImage": null,
+              "featuredImage": {
+                "id": "aWQ6NTU4MjA1",
+                "meta": {
+                  "type": "images.CustomImage",
+                  "downloadUrl": "https://assets.spaceappschallenge.org/media/original_images/logo4_F9MPmYb.png",
+                  "__typename": "ImageMeta"
+                },
+                "title": "team_image.20:18:22.374768",
+                "alt": "team_image.20:18:22.374768",
+                "caption": "team_image.20:18:22.374768",
+                "displaySize": "or",
+                "rendition": {
+                  "url": "https://assets.spaceappschallenge.org/media/images/logo4_F9MPmYb.2e16d0ba.fill-300x250.png",
+                  "fullUrl": "https://assets.spaceappschallenge.org/media/images/logo4_F9MPmYb.2e16d0ba.fill-300x250.png",
+                  "height": 250,
+                  "width": 300,
+                  "__typename": "BaseImage"
+                },
+                "__typename": "DefaultImage"
+              },
               "description": null,
               "desiredSkills": null,
               "languages": null,
@@ -4875,7 +5215,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjQ5",
+            "cursor": "b2Zmc2V0OjUy",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6ODI2OTA=",
@@ -4959,7 +5299,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjUw",
+            "cursor": "b2Zmc2V0OjUz",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6ODUxMzA=",
@@ -5062,7 +5402,110 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjUx",
+            "cursor": "b2Zmc2V0OjU0",
+            "node": {
+              "__typename": "TeamPage",
+              "id": "aWQ6ODY4NTU=",
+              "title": "Tesseract.exe",
+              "meta": {
+                "type": "TEAM",
+                "slug": "tesseractexe",
+                "firstPublishedAt": "2026-11-13T12:47:49.935000Z",
+                "lastPublishedAt": "2026-11-13T18:39:41.851042Z",
+                "relativeUrl": "/2026/find-a-team/tesseractexe/",
+                "live": true,
+                "parent": null,
+                "__typename": "ExpandedPageMeta"
+              },
+              "owner": "aWQ6Y2IwNjg0YjctZmU1Zi00MDRkLTlhNzQtOWUxY2YwZTUwZjkz",
+              "ownerDetails": null,
+              "excerpt": "🚀 We are Tesseract.exe, a Brazilian team of developers and creative problem-solvers passionate about space, technology, and education. For NASA Space Apps, we're building a Junior Astronaut Mission Trainer: an interactive experience that helps you...",
+              "project": "aWQ6ODMyNTI=",
+              "projectDetails": {
+                "id": "aWQ6ODMyNTI=",
+                "name": "Project Tesseract.exe",
+                "summary": "",
+                "demoLink": "",
+                "projectLink": "",
+                "details": "",
+                "solution": "",
+                "aiReferences": "",
+                "dataReferences": "",
+                "projectReferences": "",
+                "isSubmitted": false,
+                "savedAt": null,
+                "submittedAt": null,
+                "__typename": "Project"
+              },
+              "projectSubmitted": false,
+              "featuredImage": {
+                "id": "aWQ6NTU0MzE1",
+                "meta": {
+                  "type": "images.CustomImage",
+                  "downloadUrl": "https://assets.spaceappschallenge.org/media/original_images/Equipe_Tesseract_sob_o_Ceu_Cosmico_EFQliZI.png",
+                  "__typename": "ImageMeta"
+                },
+                "title": "team_image.12:40:45.398093",
+                "alt": "team_image.12:40:45.398093",
+                "caption": "team_image.12:40:45.398093",
+                "displaySize": "or",
+                "rendition": {
+                  "url": "https://assets.spaceappschallenge.org/media/images/Equipe_Tesseract_sob_o_Ceu_Cosmico.2e16d0ba.fill-300x250.png",
+                  "fullUrl": "https://assets.spaceappschallenge.org/media/images/Equipe_Tesseract_sob_o_Ceu_Cosmico.2e16d0ba.fill-300x250.png",
+                  "height": 250,
+                  "width": 300,
+                  "__typename": "BaseImage"
+                },
+                "__typename": "DefaultImage"
+              },
+              "description": null,
+              "desiredSkills": null,
+              "languages": null,
+              "challenge": "aWQ6NTUxMjQ=",
+              "challengeDetails": {
+                "id": "aWQ6NTUxMjQ=",
+                "title": "Build a Junior Astronaut Mission Trainer",
+                "meta": {
+                  "type": "CHALLENGE",
+                  "slug": "junior-astronaut-mission-trainer",
+                  "firstPublishedAt": "2026-09-17T14:22:28.522000Z",
+                  "lastPublishedAt": "2026-11-13T03:48:49.413870Z",
+                  "relativeUrl": "/2026/challenges/junior-astronaut-mission-trainer/",
+                  "live": true,
+                  "parent": null,
+                  "__typename": "ExpandedPageMeta"
+                },
+                "excerpt": "Space-themed STEM content often oversimplifies the engineering trade-offs that define a real mission or presents them at a level too complex to hold a young learner's attention. Few tools make those trade-offs both tangible and fun. Your challenge is to design and build an interactive game or app that lets students run a lunar or Martian outpost, balancing competing demands like life support, radiation shielding, power, and food production, so they experience firsthand the decisions that determine whether a mission fails or succeeds.",
+                "__typename": "ChallengePage"
+              },
+              "location": "aWQ6NTQ0NDY=",
+              "locationDetails": {
+                "id": "aWQ6NTQ0NDY=",
+                "title": "Uberlândia",
+                "displayName": "",
+                "meta": {
+                  "type": "LOCATION",
+                  "slug": "uberlandia",
+                  "firstPublishedAt": "2026-08-20T13:11:16.191000Z",
+                  "lastPublishedAt": "2026-11-02T14:14:24.314767Z",
+                  "relativeUrl": "/2026/local-events/uberlandia/",
+                  "live": true,
+                  "parent": null,
+                  "__typename": "ExpandedPageMeta"
+                },
+                "country": "Brazil",
+                "__typename": "LocationPage"
+              },
+              "event": "aWQ6NA==",
+              "joinEnabled": true,
+              "memberships": null,
+              "nominationBadges": null,
+              "awardBadges": null
+            }
+          },
+          {
+            "__typename": "TeamPageEdge",
+            "cursor": "b2Zmc2V0OjU1",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6ODAwMzg=",
@@ -5165,7 +5608,199 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjUy",
+            "cursor": "b2Zmc2V0OjU2",
+            "node": {
+              "__typename": "TeamPage",
+              "id": "aWQ6ODg0MDg=",
+              "title": "The Great Gig in the Sky",
+              "meta": {
+                "type": "TEAM",
+                "slug": "the-great-gig-in-the-sky",
+                "firstPublishedAt": null,
+                "lastPublishedAt": null,
+                "relativeUrl": "/2026/find-a-team/the-great-gig-in-the-sky/",
+                "live": true,
+                "parent": null,
+                "__typename": "ExpandedPageMeta"
+              },
+              "owner": "aWQ6YTRjZWU0OWQtYTRmMC00YzA1LThkMjItZDI2NmIyM2M0OGU4",
+              "ownerDetails": null,
+              "excerpt": "Aceitamos membros",
+              "project": "aWQ6ODQ4MDU=",
+              "projectDetails": {
+                "id": "aWQ6ODQ4MDU=",
+                "name": "Project The Great Gig in the Sky",
+                "summary": "",
+                "demoLink": "",
+                "projectLink": "",
+                "details": "",
+                "solution": "",
+                "aiReferences": "",
+                "dataReferences": "",
+                "projectReferences": "",
+                "isSubmitted": false,
+                "savedAt": null,
+                "submittedAt": null,
+                "__typename": "Project"
+              },
+              "projectSubmitted": false,
+              "featuredImage": null,
+              "description": null,
+              "desiredSkills": null,
+              "languages": null,
+              "challenge": "aWQ6NTUxMTc=",
+              "challengeDetails": {
+                "id": "aWQ6NTUxMTc=",
+                "title": "The Earth Information Jukebox",
+                "meta": {
+                  "type": "CHALLENGE",
+                  "slug": "the-earth-information-jukebox",
+                  "firstPublishedAt": "2025-08-18T19:28:40.472000Z",
+                  "lastPublishedAt": "2026-11-13T03:46:20.222487Z",
+                  "relativeUrl": "/2026/challenges/the-earth-information-jukebox/",
+                  "live": true,
+                  "parent": null,
+                  "__typename": "ExpandedPageMeta"
+                },
+                "excerpt": "NASA’s Earth Information Center (EIC) produces stunning visualizations of our changing planet, but presenting Earth science through visualization alone limits who can reach it. We invite you to make this complex Earth science accessible, engaging, and multi-sensory by translating sight into sound. Your challenge is to build an \"Earth Jukebox\"—an interface, script, or application that pairs EIC visual frames with dynamic sonifications generated in real time.",
+                "__typename": "ChallengePage"
+              },
+              "location": "aWQ6NTQ0NDY=",
+              "locationDetails": {
+                "id": "aWQ6NTQ0NDY=",
+                "title": "Uberlândia",
+                "displayName": "",
+                "meta": {
+                  "type": "LOCATION",
+                  "slug": "uberlandia",
+                  "firstPublishedAt": "2026-08-20T13:11:16.191000Z",
+                  "lastPublishedAt": "2026-11-02T14:14:24.314767Z",
+                  "relativeUrl": "/2026/local-events/uberlandia/",
+                  "live": true,
+                  "parent": null,
+                  "__typename": "ExpandedPageMeta"
+                },
+                "country": "Brazil",
+                "__typename": "LocationPage"
+              },
+              "event": "aWQ6NA==",
+              "joinEnabled": true,
+              "memberships": null,
+              "nominationBadges": null,
+              "awardBadges": null
+            }
+          },
+          {
+            "__typename": "TeamPageEdge",
+            "cursor": "b2Zmc2V0OjU3",
+            "node": {
+              "__typename": "TeamPage",
+              "id": "aWQ6ODgwOTI=",
+              "title": "Trem de Ferro",
+              "meta": {
+                "type": "TEAM",
+                "slug": "trem-de-ferro",
+                "firstPublishedAt": "2026-11-13T19:24:08.862000Z",
+                "lastPublishedAt": "2026-11-13T19:30:06.495268Z",
+                "relativeUrl": "/2026/find-a-team/trem-de-ferro/",
+                "live": true,
+                "parent": null,
+                "__typename": "ExpandedPageMeta"
+              },
+              "owner": "aWQ6OGYxNTcxYWItNmQyOC00YWJkLTljNTMtNGE4MGUxOGQ2ODA4",
+              "ownerDetails": null,
+              "excerpt": "Gostaríamos de pessoas com interesse na área química de Marte",
+              "project": "aWQ6ODQ0ODk=",
+              "projectDetails": {
+                "id": "aWQ6ODQ0ODk=",
+                "name": "Project Trem de Ferro",
+                "summary": "",
+                "demoLink": "",
+                "projectLink": "",
+                "details": "",
+                "solution": "",
+                "aiReferences": "",
+                "dataReferences": "",
+                "projectReferences": "",
+                "isSubmitted": false,
+                "savedAt": null,
+                "submittedAt": null,
+                "__typename": "Project"
+              },
+              "projectSubmitted": false,
+              "featuredImage": {
+                "id": "aWQ6NTU3ODU5",
+                "meta": {
+                  "type": "images.CustomImage",
+                  "downloadUrl": "https://assets.spaceappschallenge.org/media/original_images/WhatsApp_Image_2026-11-13_at_16.13.36.jpeg",
+                  "__typename": "ImageMeta"
+                },
+                "title": "team_image.19:20:35.206423",
+                "alt": "team_image.19:20:35.206423",
+                "caption": "team_image.19:20:35.206423",
+                "displaySize": "or",
+                "rendition": {
+                  "url": "https://assets.spaceappschallenge.org/media/images/WhatsApp_Image_2026-11-13_at_16.13.2e16d0ba.fill-300x250.jpg",
+                  "fullUrl": "https://assets.spaceappschallenge.org/media/images/WhatsApp_Image_2026-11-13_at_16.13.2e16d0ba.fill-300x250.jpg",
+                  "height": 250,
+                  "width": 300,
+                  "__typename": "BaseImage"
+                },
+                "__typename": "DefaultImage"
+              },
+              "description": null,
+              "desiredSkills": [
+                "Web Development",
+                "Software",
+                "Arts & Multimedia",
+                "Mars"
+              ],
+              "languages": null,
+              "challenge": "aWQ6NTUxMjk=",
+              "challengeDetails": {
+                "id": "aWQ6NTUxMjk=",
+                "title": "Identify Earth Locations that Analog the Permanent Moon Base Locations and Mars",
+                "meta": {
+                  "type": "CHALLENGE",
+                  "slug": "permanent-moon-base-locations-and-mars",
+                  "firstPublishedAt": "2026-09-17T14:21:29.086000Z",
+                  "lastPublishedAt": "2026-11-13T03:52:04.820266Z",
+                  "relativeUrl": "/2026/challenges/permanent-moon-base-locations-and-mars/",
+                  "live": true,
+                  "parent": null,
+                  "__typename": "ExpandedPageMeta"
+                },
+                "excerpt": "Selecting future landing sites and lunar base locations depends on many factors, including topography, geology, environment, and available resources, to name a few. Places on Earth that have analogous characteristics to the Moon or Mars – the Atacama Desert, Haughton Crater, Death Valley – allow mission teams to test equipment and methods before they fly; however, such terrestrial analog sites are not entirely well characterized. Your challenge is to use open Earth, Moon, and Mars data from NASA and other space agencies to identify and characterize new terrestrial analogs for future bases or landing sites, drawing on deserts, polar regions, volcanic and arid terrains, caves, and other environments that share conditions with the lunar or Martian surface, then present your findings as a map, visualization, or other tool.",
+                "__typename": "ChallengePage"
+              },
+              "location": "aWQ6NTQ0NDY=",
+              "locationDetails": {
+                "id": "aWQ6NTQ0NDY=",
+                "title": "Uberlândia",
+                "displayName": "",
+                "meta": {
+                  "type": "LOCATION",
+                  "slug": "uberlandia",
+                  "firstPublishedAt": "2026-08-20T13:11:16.191000Z",
+                  "lastPublishedAt": "2026-11-02T14:14:24.314767Z",
+                  "relativeUrl": "/2026/local-events/uberlandia/",
+                  "live": true,
+                  "parent": null,
+                  "__typename": "ExpandedPageMeta"
+                },
+                "country": "Brazil",
+                "__typename": "LocationPage"
+              },
+              "event": "aWQ6NA==",
+              "joinEnabled": true,
+              "memberships": null,
+              "nominationBadges": null,
+              "awardBadges": null
+            }
+          },
+          {
+            "__typename": "TeamPageEdge",
+            "cursor": "b2Zmc2V0OjU4",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6NzY3NTY=",
@@ -5268,7 +5903,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjUz",
+            "cursor": "b2Zmc2V0OjU5",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6ODM3NjM=",
@@ -5276,8 +5911,8 @@
               "meta": {
                 "type": "TEAM",
                 "slug": "uai-fi-espacial",
-                "firstPublishedAt": "2026-11-11T18:54:50.438588Z",
-                "lastPublishedAt": "2026-11-11T18:54:50.438588Z",
+                "firstPublishedAt": "2026-11-11T18:54:50.438000Z",
+                "lastPublishedAt": "2026-11-13T22:24:39.069676Z",
                 "relativeUrl": "/2026/find-a-team/uai-fi-espacial/",
                 "live": true,
                 "parent": null,
@@ -5371,7 +6006,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjU0",
+            "cursor": "b2Zmc2V0OjYw",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6ODE0MzA=",
@@ -5455,7 +6090,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjU1",
+            "cursor": "b2Zmc2V0OjYx",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6ODUzNTM=",
@@ -5539,7 +6174,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjU2",
+            "cursor": "b2Zmc2V0OjYy",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6ODIyOTE=",
@@ -5642,7 +6277,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjU3",
+            "cursor": "b2Zmc2V0OjYz",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6NTY5ODE=",
@@ -5745,7 +6380,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjU4",
+            "cursor": "b2Zmc2V0OjY0",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6NTgyMTg=",

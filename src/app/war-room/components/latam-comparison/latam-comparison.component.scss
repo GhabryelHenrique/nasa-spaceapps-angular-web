@@ -1,0 +1,537 @@
+// Mesmo vocabulário visual da comparação brasileira (cards translúcidos,
+// barras azuis NASA), para as duas seções lerem como um par.
+
+$blue: #2E96F5;
+$blue-deep: #0960E1;
+$muted: #a0aec0;
+$faint: #718096;
+$green: #48bb78;
+$amber: #f59e0b;
+
+.latam-section {
+  margin: 2rem 0;
+  padding: 2rem;
+  background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+  border-radius: 16px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+}
+
+.section-header {
+  text-align: center;
+  margin-bottom: 2rem;
+
+  .section-title {
+    font-family: 'Fira Sans', sans-serif;
+    font-size: 2rem;
+    font-weight: 700;
+    color: #fff;
+    margin: 0 0 0.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+
+    .title-icon {
+      font-size: 2.5rem;
+    }
+  }
+
+  .section-description {
+    color: $muted;
+    font-size: 1rem;
+    max-width: 760px;
+    margin: 0 auto;
+  }
+}
+
+// ─── Destaques ────────────────────────────────────────────
+
+.highlights-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.highlight-card {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  padding: 1.25rem 1.4rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+
+  &.accent {
+    border-color: rgba($blue, 0.5);
+    background: rgba($blue, 0.1);
+  }
+
+  h4 {
+    margin: 0;
+    font-size: 0.82rem;
+    color: $muted;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+
+  .rank-display {
+    display: flex;
+    align-items: baseline;
+    gap: 0.5rem;
+
+    .rank-emoji {
+      font-size: 1.8rem;
+    }
+
+    .rank-position {
+      font-size: 2.2rem;
+      font-weight: 700;
+      color: $blue;
+    }
+
+    .rank-total {
+      color: $muted;
+    }
+  }
+
+  .stats-display {
+    display: flex;
+    align-items: baseline;
+    gap: 0.5rem;
+
+    .stats-value {
+      font-size: 2.2rem;
+      font-weight: 700;
+      color: $blue;
+    }
+
+    .stats-label {
+      color: $muted;
+    }
+  }
+
+  .percentage-bar {
+    height: 8px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 4px;
+    overflow: hidden;
+
+    .percentage-fill {
+      height: 100%;
+      background: linear-gradient(90deg, $blue, $blue-deep);
+      border-radius: 4px;
+      transition: width 0.5s ease;
+    }
+  }
+
+  .card-detail {
+    font-size: 0.85rem;
+    color: $muted;
+  }
+
+  .comparison-values {
+    display: flex;
+    align-items: baseline;
+    gap: 0.6rem;
+
+    .city-value {
+      font-size: 2rem;
+      font-weight: 700;
+      color: $blue;
+    }
+
+    .vs-text {
+      color: $muted;
+    }
+
+    .avg-value {
+      font-size: 1.4rem;
+      font-weight: 600;
+      color: $faint;
+    }
+  }
+
+  &.comparison.above {
+    border-color: rgba($green, 0.5);
+    background: rgba($green, 0.08);
+    .city-value { color: $green; }
+  }
+
+  &.comparison.below {
+    border-color: rgba($amber, 0.5);
+    background: rgba($amber, 0.08);
+    .city-value { color: $amber; }
+  }
+}
+
+// ─── Insights ─────────────────────────────────────────────
+
+.insights-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  margin-bottom: 2rem;
+
+  .insight-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.9rem;
+    padding: 1rem 1.25rem;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+
+    .insight-icon {
+      font-size: 1.4rem;
+      flex-shrink: 0;
+    }
+
+    p {
+      margin: 0;
+      color: #e2e8f0;
+      line-height: 1.6;
+
+      strong {
+        color: $blue;
+      }
+    }
+
+  }
+}
+
+// ─── Tabelas ──────────────────────────────────────────────
+
+.table-block {
+  margin-bottom: 2rem;
+
+  .block-title {
+    font-family: 'Fira Sans', sans-serif;
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: #fff;
+    margin: 0 0 1rem;
+  }
+}
+
+.table-scroll {
+  overflow-x: auto;
+}
+
+.data-table {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  overflow: hidden;
+
+  .table-header,
+  .table-row {
+    display: grid;
+    gap: 0.75rem;
+    padding: 0.7rem 1.25rem;
+    align-items: center;
+  }
+
+  .table-header {
+    background: rgba(255, 255, 255, 0.05);
+    border-bottom: 2px solid rgba($blue, 0.3);
+    color: $blue;
+    font-size: 0.78rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+
+  .table-row {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    color: #fff;
+    transition: background 0.2s ease;
+
+    &:hover {
+      background: rgba(255, 255, 255, 0.06);
+    }
+
+    &.top-three {
+      font-weight: 600;
+    }
+
+    &.highlight-row {
+      background: rgba($blue, 0.12);
+      box-shadow: inset 3px 0 0 $blue;
+    }
+  }
+
+  .cell {
+    min-width: 0;
+
+    &.num {
+      text-align: right;
+      font-variant-numeric: tabular-nums;
+    }
+
+    &.rank {
+      font-weight: 700;
+      white-space: nowrap;
+    }
+
+    &.name {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+
+      .city {
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+      }
+
+      .country {
+        color: $faint;
+        font-size: 0.75rem;
+        font-weight: 400;
+        white-space: nowrap;
+      }
+    }
+
+    .flag {
+      font-size: 1.15rem;
+    }
+
+    &.top-city {
+      display: flex;
+      align-items: baseline;
+      flex-wrap: wrap;
+      gap: 0.4rem;
+
+      small {
+        color: $faint;
+        font-variant-numeric: tabular-nums;
+      }
+    }
+  }
+
+  .bar-line {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+
+    .bar-track {
+      flex: 1;
+      height: 8px;
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 4px;
+      overflow: hidden;
+    }
+
+    .bar-fill {
+      height: 100%;
+      background: linear-gradient(90deg, $blue, $blue-deep);
+      border-radius: 4px;
+      transition: width 0.4s ease;
+    }
+
+    .bar-value {
+      min-width: 52px;
+      text-align: right;
+      font-weight: 600;
+      font-variant-numeric: tabular-nums;
+    }
+  }
+
+  .beat-badge {
+    font-size: 0.68rem;
+    font-weight: 700;
+    color: $green;
+    border: 1px solid rgba($green, 0.5);
+    border-radius: 999px;
+    padding: 0.05rem 0.45rem;
+  }
+
+  .table-gap {
+    text-align: center;
+    color: $faint;
+    padding: 0.2rem 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  }
+}
+
+// Pos | País | Sedes | Inscritos | [Times] | Média | Maior sede
+.country-table {
+  min-width: 720px;
+
+  .table-header,
+  .table-row {
+    grid-template-columns: 64px minmax(150px, 1.2fr) 60px minmax(160px, 1.6fr) 90px minmax(170px, 1.4fr);
+  }
+
+  &.has-teams {
+    .table-header,
+    .table-row {
+      grid-template-columns: 64px minmax(150px, 1.2fr) 60px minmax(160px, 1.6fr) 70px 90px minmax(170px, 1.4fr);
+    }
+  }
+}
+
+// Pos | Sede | métrica ordenada | colunas extras (0 a 3)
+.city-table {
+  --extra-cols: 0;
+  min-width: calc(480px + var(--extra-cols) * 100px);
+
+  .table-header,
+  .table-row {
+    grid-template-columns:
+      64px
+      minmax(160px, 1.4fr)
+      minmax(160px, 1.6fr)
+      repeat(var(--extra-cols), minmax(80px, 0.6fr));
+  }
+}
+
+// ─── Controles e rodapé ───────────────────────────────────
+
+.table-controls {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+  margin-bottom: 0.9rem;
+}
+
+.sort-tabs {
+  display: inline-flex;
+  flex-wrap: wrap;
+  gap: 0.35rem;
+
+  button {
+    font: inherit;
+    font-size: 0.85rem;
+    color: $muted;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 999px;
+    padding: 0.35rem 0.9rem;
+    cursor: pointer;
+    transition: all 0.2s ease;
+
+    &:hover {
+      color: #fff;
+      border-color: rgba($blue, 0.5);
+    }
+
+    &.active {
+      color: #fff;
+      background: rgba($blue, 0.25);
+      border-color: $blue;
+    }
+  }
+}
+
+.country-select {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: $muted;
+  font-size: 0.85rem;
+
+  select {
+    font: inherit;
+    color: #fff;
+    background: #16213e;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 8px;
+    padding: 0.35rem 0.6rem;
+  }
+}
+
+.table-footer {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+  margin-top: 0.85rem;
+}
+
+.table-note {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin: 0.6rem 0 0;
+  font-size: 0.82rem;
+  line-height: 1.5;
+  color: $faint;
+
+  code {
+    color: $muted;
+  }
+}
+
+.show-all-btn {
+  font: inherit;
+  font-size: 0.85rem;
+  color: $blue;
+  background: transparent;
+  border: 1px solid rgba($blue, 0.5);
+  border-radius: 8px;
+  padding: 0.45rem 1rem;
+  cursor: pointer;
+  margin-left: auto;
+
+  &:hover {
+    background: rgba($blue, 0.12);
+  }
+}
+
+.spinner-inline {
+  width: 13px;
+  height: 13px;
+  flex-shrink: 0;
+  border: 2px solid rgba(255, 255, 255, 0.15);
+  border-top-color: $blue;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+.empty-state {
+  text-align: center;
+  padding: 3rem 1rem;
+  color: $muted;
+
+  .empty-icon {
+    font-size: 3.5rem;
+    opacity: 0.5;
+  }
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (max-width: 768px) {
+  .latam-section {
+    padding: 1.25rem 1rem;
+  }
+
+  .section-header .section-title {
+    font-size: 1.5rem;
+
+    .title-icon {
+      font-size: 2rem;
+    }
+  }
+
+  .highlights-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .data-table {
+    .table-header,
+    .table-row {
+      padding: 0.6rem 0.75rem;
+      font-size: 0.9rem;
+    }
+  }
+}

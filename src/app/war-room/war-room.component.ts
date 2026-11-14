@@ -28,6 +28,7 @@ import { RegistrationMapComponent } from './components/registration-map/registra
 import { ParticipantsByCountryChartComponent } from './components/participants-by-country-chart/participants-by-country-chart.component';
 import { BrazilianCitiesComparisonComponent } from './components/brazilian-cities-comparison/brazilian-cities-comparison.component';
 import { EditionsComparisonComponent } from './components/editions-comparison/editions-comparison.component';
+import { LatamComparisonComponent } from './components/latam-comparison/latam-comparison.component';
 
 /** Edições com Sala de Guerra, da mais recente para a mais antiga. */
 export const WAR_ROOM_YEARS = [2026, 2025];
@@ -46,6 +47,7 @@ export const WAR_ROOM_YEARS = [2026, 2025];
     RegistrationMapComponent,
     ParticipantsByCountryChartComponent,
     BrazilianCitiesComparisonComponent,
+    LatamComparisonComponent,
     EditionsComparisonComponent,
   ],
   templateUrl: './war-room.component.html',
@@ -234,6 +236,7 @@ export class WarRoomComponent implements OnInit {
       .subscribe(events => {
         const mappedCities = events
           .map(event => ({
+            locationId: event.properties.id,
             city: event.properties.displayName,
             country: event.properties.country,
             registrations: event.properties.cachedRegistrations,
