@@ -8,10 +8,10 @@
           "hasPreviousPage": false,
           "hasNextPage": false,
           "startCursor": "b2Zmc2V0OjA=",
-          "endCursor": "b2Zmc2V0Ojc5",
+          "endCursor": "b2Zmc2V0Ojgw",
           "__typename": "PageInfo"
         },
-        "totalCount": 80,
+        "totalCount": 81,
         "edges": [
           {
             "__typename": "TeamPageEdge",
@@ -19,12 +19,12 @@
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6ODU4MTU=",
-              "title": "123 Idea",
+              "title": "21 Pyro Rangers",
               "meta": {
                 "type": "TEAM",
                 "slug": "123-idea",
                 "firstPublishedAt": "2026-11-13T00:37:41.879000Z",
-                "lastPublishedAt": "2026-11-14T00:09:25.128286Z",
+                "lastPublishedAt": "2026-11-14T21:10:02.911376Z",
                 "relativeUrl": "/2026/find-a-team/123-idea/",
                 "live": true,
                 "parent": null,
@@ -32,11 +32,11 @@
               },
               "owner": "aWQ6MWJmNjExYmEtNWNjNC00NDM5LWI0OTYtNjQ3ZDQ3MmRjNzU3",
               "ownerDetails": null,
-              "excerpt": ".",
+              "excerpt": "We are six Information Systems students at the Federal University of Uberlândia (UFU) in Brazil: Celina Vieira, Gabriel Esquivel, Isabela Dantas, Isabela Rocha, Leandro Elias, and Leandro Pina. Outside of class, we spend most of our time building ...",
               "project": "aWQ6ODIyMTI=",
               "projectDetails": {
                 "id": "aWQ6ODIyMTI=",
-                "name": "Project 123 Idea",
+                "name": "AstroFire 3D",
                 "summary": "",
                 "demoLink": "",
                 "projectLink": "",
@@ -46,7 +46,7 @@
                 "dataReferences": "",
                 "projectReferences": "",
                 "isSubmitted": false,
-                "savedAt": null,
+                "savedAt": "2026-11-14T21:42:20.488235Z",
                 "submittedAt": null,
                 "__typename": "Project"
               },
@@ -91,7 +91,7 @@
                 "__typename": "LocationPage"
               },
               "event": "aWQ6NA==",
-              "joinEnabled": true,
+              "joinEnabled": false,
               "memberships": null,
               "nominationBadges": null,
               "awardBadges": null
@@ -1055,17 +1055,17 @@
               "project": "aWQ6NTI5Nzk=",
               "projectDetails": {
                 "id": "aWQ6NTI5Nzk=",
-                "name": "Project AstroUdi",
-                "summary": "",
-                "demoLink": "",
-                "projectLink": "",
-                "details": "",
+                "name": "Outpost — Space Survival and Exploration Simulator",
+                "summary": "**Outpost** is an interactive educational simulator designed to explore the challenges of human survival in space environments. The project places users in the role of an astronaut, allowing them to interact with the systems of a fictional space outpost.\n\nThe platform features resource management, an interactive cockpit, piloting missions, and a multilingual interface, combining exploration, decision-making, and educational experiences.\n\nIts main objective is to introduce users to the technological and operational challenges involved in establishing and maintaining human habitats beyond Earth. By transforming space exploration concepts into an interactive experience, Outpost encourages curiosity about science, engineering, technology, and the future of human space exploration.\n\nThe project aims to make space-related learning more accessible, engaging, and immersive.",
+                "demoLink": "https://canva.link/rahowahueqmz6u7",
+                "projectLink": "https://github.com/Akira-Yon-Star/astronaut-simulator/settings/pages",
+                "details": "<h3><span style=\"white-space:pre-wrap\">1. What the Project Does and How It Works</span></h3><p><span style=\"white-space:pre-wrap\">Outpost is an interactive space survival and exploration simulator designed to introduce users to the challenges of living and operating in space environments.</span></p><p><span style=\"white-space:pre-wrap\">Users take on the role of an astronaut and interact with a simulated space outpost through different features, including resource management systems, an interactive cockpit, piloting missions, and multilingual interface options.</span></p><p><span style=\"white-space:pre-wrap\">The simulator combines interactive elements with educational concepts related to space exploration, encouraging users to make decisions and understand the complexity of operating a space habitat.</span></p><h3><span style=\"white-space:pre-wrap\">2. Benefits and Expected Impact</span></h3><p><span style=\"white-space:pre-wrap\">Outpost aims to make space exploration concepts more accessible and engaging, particularly for students and people interested in science, technology, engineering, and space exploration.</span></p><p><span style=\"white-space:pre-wrap\">Its educational approach encourages curiosity, critical thinking, problem-solving, and awareness of the challenges associated with human space missions.</span></p><p><span style=\"white-space:pre-wrap\">The intended impact is to create an accessible learning experience that helps users better understand the responsibilities and difficulties involved in maintaining human presence beyond Earth.</span></p><h3><span style=\"white-space:pre-wrap\">3. Technologies and Development Tools</span></h3><p><span style=\"white-space:pre-wrap\">The project was developed using web technologies:</span></p><ul><li><b><strong style=\"white-space:pre-wrap\">HTML5:</strong></b><span style=\"white-space:pre-wrap\"> Structure and organization of the simulator.</span></li><li><b><strong style=\"white-space:pre-wrap\">CSS3:</strong></b><span style=\"white-space:pre-wrap\"> Visual design, interface styling, and responsive elements.</span></li><li><b><strong style=\"white-space:pre-wrap\">JavaScript:</strong></b><span style=\"white-space:pre-wrap\"> Interactive functionality and simulator mechanics.</span></li><li><b><strong style=\"white-space:pre-wrap\">GitHub:</strong></b><span style=\"white-space:pre-wrap\"> Source code management and project collaboration.</span></li><li><b><strong style=\"white-space:pre-wrap\">GitHub Pages:</strong></b><span style=\"white-space:pre-wrap\"> Public hosting and deployment.</span></li></ul><p><span style=\"white-space:pre-wrap\">Artificial intelligence tools, including ChatGPT (OpenAI) and Claude (Anthropic), were also used to support brainstorming, programming, debugging, problem-solving, and documentation.</span></p><h3><span style=\"white-space:pre-wrap\">4. Creative Aspects</span></h3><p><span style=\"white-space:pre-wrap\">The main creative aspect of Outpost is its combination of an educational experience with interactive space simulation.</span></p><p><span style=\"white-space:pre-wrap\">Instead of presenting space exploration exclusively through static information, the project allows users to experience selected aspects of astronaut activities through a simulated environment.</span></p><p><span style=\"white-space:pre-wrap\">The combination of resource management, cockpit interaction, piloting missions, and multilingual accessibility creates an engaging approach to introducing space-related concepts.</span></p><h3><span style=\"white-space:pre-wrap\">5. Design Considerations and Development Decisions</span></h3><p><span style=\"white-space:pre-wrap\">During development, the team considered usability, accessibility, educational value, and technical feasibility.</span></p><p><span style=\"white-space:pre-wrap\">The interface was designed to provide an understandable experience while maintaining a space exploration aesthetic. The multilingual functionality was included to make the simulator accessible to a broader audience.</span></p><p><span style=\"white-space:pre-wrap\">The team also considered the importance of creating an experience that could run through a web browser without requiring specialized hardware or software installation.</span></p><p><span style=\"white-space:pre-wrap\">Outpost represents an educational exploration of the challenges of human spaceflight, combining interactive web development with an interest in the future of space exploration.</span></p>",
                 "solution": "",
                 "aiReferences": "",
-                "dataReferences": "",
-                "projectReferences": "",
+                "dataReferences": "[NASA POWER](https://power.larc.nasa.gov/)\n[NASA Open APIs](https://api.nasa.gov/)",
+                "projectReferences": "[HTML Living Standard (WHATWG)](https://html.spec.whatwg.org/)\n[MDN Web Docs — HTML, CSS e JavaScript](https://developer.mozilla.org/)\n[JavaScript Documentation](https://developer.mozilla.org/en-US/docs/Web/JavaScript)\n[CSS Documentation](https://developer.mozilla.org/en-US/docs/Web/CSS)\n[GitHub](https://github.com/)\n[GitHub Pages](https://pages.github.com/)\n[Anthropic Documentation](https://docs.anthropic.com/)\n[Claude (Anthropic)](https://claude.ai/)\n[ChatGPT (OpenAI)](https://chatgpt.com/)\n[OpenAI](https://openai.com/)",
                 "isSubmitted": false,
-                "savedAt": null,
+                "savedAt": "2026-11-15T05:06:42.292147Z",
                 "submittedAt": null,
                 "__typename": "Project"
               },
@@ -1140,20 +1140,20 @@
               "projectDetails": {
                 "id": "aWQ6NzY5MDU=",
                 "name": "ABI Monitor for Astronauts",
-                "summary": "",
-                "demoLink": "",
-                "projectLink": "",
-                "details": "",
+                "summary": "This project is a cardiovascular health monitoring software designed for astronauts on space missions to other planets or natural satellites. It is based on the Ankle-Brachial Index to assess general and peripheral cardiovascular health, as well as the risk of serious cardiovascular events, helping to determine appropriate physical exercise regimens to prevent health complications.\nThe software is founded on the principle that the space environment triggers vascular adaptations that mimic premature arterial aging, and loss of elasticity like observed in the atherosclerosis. The software assists astronauts in performing the examination, interpreting results, tracking clinical progress, managing cardiovascular rehabilitation, and maintaining overall health.\nFeaturing a simple, interactive interface, the software handles measurements and health/risk indicators, and is operated via keyboard and mouse. The examination process is straightforward, and the results generated by the software can guide decision-making for tripulation and medical team on Earth.\nOur goal is to enable astronauts to spend longer periods in extraterrestrial environments without compromising their health, ultimately contributing to the success of their missions.\nTo develop this project, we utilized Python 3, HTML, CSS, JavaScript, and SVG. We also drew upon NASA databases, covering human research and physical exercise equipment, as well as various scientific articles.",
+                "demoLink": "https://drive.google.com/file/d/1Qg2VEk6NwZnc2EJbF3Xore6MwG_Sq7hQ/view?usp=drive_link",
+                "projectLink": "https://drive.google.com/drive/folders/16iHTDy7RmL8Rz8PhziQKgAh65XxlabSQ?usp=drive_link",
+                "details": "<p><span style=\"white-space:pre-wrap\">This project is a cardiovascular health monitoring software designed for astronauts on space missions to other planets and/or natural satellites. It is based on the Ankle-Brachial Index (ABI) examination, which assesses general and peripheral cardiovascular health, as well as the risk of serious cardiovascular events—such as myocardial infarction (heart attack) and stroke—to help guide the prescription of physical exercise aimed at preventing health complications in astronauts.</span></p><p><span style=\"white-space:pre-wrap\">The project is founded on the principle that the space environment triggers vascular adaptations that mimic the premature aging of arteries. Studies indicate that six months in space leads to arterial narrowing, reflecting a loss of elasticity similar to that observed in the early stages of atherosclerosis. As a countermeasure, we have developed this software to assist astronauts in performing the examination, interpreting results, tracking clinical progress, managing cardiovascular rehabilitation (if necessary), and maintaining overall health.</span></p><p><span style=\"white-space:pre-wrap\">The software features a simple, interactive interface that provides detailed health and risk indicators. Data can be entered using a keyboard and mouse. The examination process is straightforward, thanks to the portability and simplicity of the required equipment, making it highly practical for use in space environments. The results generated by the software can inform decision-making for both the crew and the medical team on Earth.</span></p><p><span style=\"white-space:pre-wrap\">Our goal is to make a positive impact on space missions by enabling astronauts to spend longer periods in extraterrestrial environments without compromising their health, thereby expanding the scope and ensuring the success of these missions. Furthermore, the software aims to mitigate health-related impacts for astronauts on current and future missions.</span></p><p><span style=\"white-space:pre-wrap\">This project was developed using Python 3, HTML, CSS, JavaScript, and SVG. We use the artificial intelligence Claude AI to assist in searching for information and writing code. This includes accessing resources such as NASA databases—covering human research and physical exercise equipment—as well as scientific articles available through the space agency’s partners and other data sources.</span></p><p><span style=\"white-space:pre-wrap\">Our project takes a creative approach by integrating knowledge from the fields of computing, cardiovascular health, physical exercise, and space engineering to develop innovative software designed for the identification, promotion, maintenance, and rehabilitation of cardiovascular health.</span></p><p><span style=\"white-space:pre-wrap\">Our team is currently examining topics such as cardiovascular health and the ankle-brachial index; human health data in space environments; issues related to gravitational differences between planets and their impact on human physiology; the effects of space travel and microgravity environments; the adverse effects experienced by astronauts during and after space missions; equipment and strategies for maintaining health in space; and existing or potential digital tools and devices for use during space missions.</span></p>",
                 "solution": "",
                 "aiReferences": "",
-                "dataReferences": "[Human Research Program](https://www.nasa.gov/hrp/)\n[Advanced Resistive Exercise Device (ARED)](https://nlsp.nasa.gov/search/data/details/IDP-LSDA_HARDWARE-0000000000000312?dataType=HARDWARE)",
-                "projectReferences": "[Article 1](https://www.aafp.org/afp/2025/1100/practice-guidelines-lower-extremity-peripheral-artery)\n[Article 2](https://www.msdmanuals.com/professional/cardiovascular-disorders/peripheral-artery-disorders/peripheral-artery-disease?ruleredirectid=743autoredirectid=34164)\n[Article 3](https://vascular.org/news-advocacy/articles-press-releases/new-clinical-practice-guideline-management-intermittent)\n[Article 4](https://www.guidelinecentral.com/guideline/6981/)\n[Article 5](https://eguideline.guidelinecentral.com/i/810885-lower-extremity-peripheral-artery-disease/17?)\n[Article 6](https://www.preprints.org/manuscript/202603.0698)",
-                "isSubmitted": false,
-                "savedAt": "2026-11-14T19:36:41.266571Z",
-                "submittedAt": null,
+                "dataReferences": "[Human Research Program](https://www.nasa.gov/hrp/)\n[Advanced Resistive Exercise Device (ARED)](https://nlsp.nasa.gov/search/data/details/IDP-LSDA_HARDWARE-0000000000000312?dataType=HARDWARE)\n[Health Cardiovascular](https://ntrs.nasa.gov/api/citations/20140010332/downloads/20140010332.pdf)",
+                "projectReferences": "[Article 1](https://www.aafp.org/afp/2025/1100/practice-guidelines-lower-extremity-peripheral-artery)\n[Article 2](https://www.msdmanuals.com/professional/cardiovascular-disorders/peripheral-artery-disorders/peripheral-artery-disease?ruleredirectid=743autoredirectid=34164)\n[Article 3](https://vascular.org/news-advocacy/articles-press-releases/new-clinical-practice-guideline-management-intermittent)\n[Article 4](https://www.guidelinecentral.com/guideline/6981/)\n[Article 5](https://eguideline.guidelinecentral.com/i/810885-lower-extremity-peripheral-artery-disease/17?)\n[Article 6](https://www.preprints.org/manuscript/202603.0698)\n[Article 7](https://pubmed.ncbi.nlm.nih.gov/26747504/)\n[Article 8](https://www.mdpi.com/1422-0067/25/21/11812)\n[Article 9](https://www.researchgate.net/publication/343573224_Vascular_Adaptations_to_Spaceflight_Results_from_the_Vascular_Series_Experiments)\n[Article 10](https://www.nature.com/articles/s41526-025-00534-4)\n[Article 11](https://pubmed.ncbi.nlm.nih.gov/37531984/)",
+                "isSubmitted": true,
+                "savedAt": "2026-11-14T21:56:49.479443Z",
+                "submittedAt": "2026-11-14T21:56:49.479443Z",
                 "__typename": "Project"
               },
-              "projectSubmitted": false,
+              "projectSubmitted": true,
               "featuredImage": {
                 "id": "aWQ6NTY3MTk4",
                 "meta": {
@@ -1658,7 +1658,7 @@
                 "type": "TEAM",
                 "slug": "cartografos-das-galaxias",
                 "firstPublishedAt": "2026-11-13T21:41:00.060000Z",
-                "lastPublishedAt": "2026-11-13T22:00:05.247490Z",
+                "lastPublishedAt": "2026-11-15T03:11:08.832913Z",
                 "relativeUrl": "/2026/find-a-team/cartografos-das-galaxias/",
                 "live": true,
                 "parent": null,
@@ -1685,7 +1685,26 @@
                 "__typename": "Project"
               },
               "projectSubmitted": false,
-              "featuredImage": null,
+              "featuredImage": {
+                "id": "aWQ6NTcwMDY0",
+                "meta": {
+                  "type": "images.CustomImage",
+                  "downloadUrl": "https://assets.spaceappschallenge.org/media/original_images/Exploration_of_Valles_Marineris_by_Sean_Brady_2009.jpg",
+                  "__typename": "ImageMeta"
+                },
+                "title": "team_image.03:11:08.020972",
+                "alt": "team_image.03:11:08.020972",
+                "caption": "team_image.03:11:08.020972",
+                "displaySize": "or",
+                "rendition": {
+                  "url": "https://assets.spaceappschallenge.org/media/images/Exploration_of_Valles_Marineris_by.2e16d0ba.fill-300x250.jpg",
+                  "fullUrl": "https://assets.spaceappschallenge.org/media/images/Exploration_of_Valles_Marineris_by.2e16d0ba.fill-300x250.jpg",
+                  "height": 250,
+                  "width": 300,
+                  "__typename": "BaseImage"
+                },
+                "__typename": "DefaultImage"
+              },
               "description": null,
               "desiredSkills": null,
               "languages": null,
@@ -2849,7 +2868,7 @@
                 "type": "TEAM",
                 "slug": "formandos-udi",
                 "firstPublishedAt": "2026-11-12T02:39:03.459000Z",
-                "lastPublishedAt": "2026-11-14T15:33:58.203904Z",
+                "lastPublishedAt": "2026-11-14T23:08:22.711190Z",
                 "relativeUrl": "/2026/find-a-team/formandos-udi/",
                 "live": true,
                 "parent": null,
@@ -2857,7 +2876,7 @@
               },
               "owner": "aWQ6ZWNhZDE3ZjYtZmIwMi00MTU1LTg5NTItMTM2YzQ0OWVkMWEx",
               "ownerDetails": null,
-              "excerpt": "Somos a Formandos UDI, uma equipe de Uberlândia (MG) apaixonada por tecnologia, ciência e inovação. No NASA Space Apps Challenge 2026, buscamos desenvolver uma plataforma inteligente para monitorar a saúde de astronautas em missões espaciais. Comb...",
+              "excerpt": "We are Formandos UDI, a Brazilian team passionate about software engineering, artificial intelligence, data science, and user experience. Our mission is to develop innovative, accessible, and scientifically grounded solutions for space exploration...",
               "project": "aWQ6ODA1NTM=",
               "projectDetails": {
                 "id": "aWQ6ODA1NTM=",
@@ -2952,7 +2971,7 @@
                 "type": "TEAM",
                 "slug": "forsaken-elite",
                 "firstPublishedAt": "2026-11-14T18:14:33.065000Z",
-                "lastPublishedAt": "2026-11-14T19:18:52.973843Z",
+                "lastPublishedAt": "2026-11-15T08:33:09.968980Z",
                 "relativeUrl": "/2026/find-a-team/forsaken-elite/",
                 "live": true,
                 "parent": null,
@@ -2960,7 +2979,7 @@
               },
               "owner": "aWQ6N2RlMTk4YjktNjVkNS00NzYyLTllOTQtNjIzMjZjNzI1ZTkx",
               "ownerDetails": null,
-              "excerpt": "While humanity plans intergalactic trips 🚀, we turn our sensors to the \"forgotten\"—the rovers, probes & elite instruments left on the Moon 🌕, Mars 🔴, and at the solar system's edge 🌌. Straight from Planet Phoenix ☄️, we, the Forsaken Elite, realiz...",
+              "excerpt": "While humanity plans intergalactic trips, we turn our sensors to the “forgotten ones” — the rovers, probes, and top-tier instruments left on the Moon, on Mars, and at the edge of the solar system. At Planet Phoenix, as bold visionaries, we realize...",
               "project": "aWQ6ODgyNDk=",
               "projectDetails": {
                 "id": "aWQ6ODgyNDk=",
@@ -3376,17 +3395,17 @@
               "project": "aWQ6Njg0NjA=",
               "projectDetails": {
                 "id": "aWQ6Njg0NjA=",
-                "name": "Project C'Mens",
-                "summary": "",
+                "name": "Happy Farmers",
+                "summary": "Happy Farmers is a web-based software tool that helps farmers choose their next crop rotation under a changing climate. In this first version it covers fields in Minas Gerais, Brazil. The farmer draws a field on a satellite map, optionally adds what was planted before, and compares three paths: highest income, best soil health and greatest climate resilience. Each path opens a monthly calendar with planting windows and water balance.\n\nThe engine runs on NASA POWER (observed climate, 2005–2024), NASA NEX-GDDP-CMIP6 (projections), MODIS (vegetation), SRTM (terrain) and FAO ECOCROP (crop requirements). Its rules are transparent, so every number on screen can be explained, and the tool flags where a local agronomist should validate the result.\n\nClimate conditions are constantly shifting, so the engine evaluates each rotation under today's climate and under the climate projected for around 2050 (2041–2060). The rotation that wins today may not win then. Happy Farmers complements open NASA data with Brazilian sources (INMET, IBGE, Conab and CEPEA) that bring local weather measurements, yields and market prices, so farmers can weigh each path against their own priorities, such as water availability or market preferences, and discuss it with their agronomist before planting.",
                 "demoLink": "",
-                "projectLink": "",
-                "details": "",
+                "projectLink": "https://web-production-c486b0f2.up.railway.app/",
+                "details": "<p><span style=\"white-space:pre-wrap\">Happy Farmers' Project Solution</span></p><p><span style=\"white-space:pre-wrap\">Happy Farmers is a web-based decision-support tool for crop rotation. A farmer draws a field on a satellite map and receives three rotation paths to compare: highest income, best soil health and greatest climate resilience. Each path is evaluated under today's climate and under the climate projected for 2041–2060. This first version covers fields in Minas Gerais, Brazil.</span></p><p><b><strong style=\"white-space:pre-wrap\">[IMAGE 1: field drawn on the satellite map]</strong></b></p><p><span style=\"white-space:pre-wrap\">How Does Our Solution Work</span></p><p><span style=\"white-space:pre-wrap\">1. Define the field. The farmer draws the boundary on satellite imagery or imports a GeoJSON file. The tool calculates the area and locates the field.</span></p><p><span style=\"white-space:pre-wrap\">2. Add context (optional). The farmer enters the last crops planted and the month the field becomes free.</span></p><p><span style=\"white-space:pre-wrap\">3. Get the climate for that exact spot. The tool fetches 20 years of daily NASA POWER data for the field's location and adds the change projected by three NASA NEX-GDDP-CMIP6 climate models (SSP2-4.5).</span></p><p><span style=\"white-space:pre-wrap\">4. Simulate every rotation. For 10 crops grown in the region, the engine simulates each one- or two-crop sequence day by day: planting windows, crop water demand, soil water balance, temperature and rainfall fit, and heat stress during flowering and grain filling.</span></p><p><span style=\"white-space:pre-wrap\">5. Compare three paths. Each path opens a monthly calendar that shows planting, harvest and water deficit, today versus 2041–2060.</span></p><p><b><strong style=\"white-space:pre-wrap\">[IMAGE 2: the three path cards]</strong></b></p><p><span style=\"white-space:pre-wrap\">What the Data Shows: Our Demo Field</span></p><p><span style=\"white-space:pre-wrap\">Our demo field is a 219-hectare farm in the Triângulo Mineiro region of Minas Gerais.</span></p><p><span style=\"white-space:pre-wrap\">Heat. Days above 35 °C rise from 34 per year today to 84 per year in 2041–2060.</span></p><p><span style=\"white-space:pre-wrap\">A changing winner. When the field is free in February, sunn hemp followed by cotton ranks first today. By 2041–2060, heat during cotton's flowering pushes that rotation out of the top three, and sunn hemp followed by soybean takes first place.</span></p><p><span style=\"white-space:pre-wrap\">A dry year. In the real dry season of 2020/21 (813 mm of rain, against an average of 1,236 mm), maize followed by sunn hemp overtakes soybean followed by maize.</span></p><p><span style=\"white-space:pre-wrap\">Satellite plus ground. A weather station 40 km away (INMET A520) records nights 1.2 to 2.5 °C colder than the NASA POWER estimate. The tool applies this correction near the station and shows it to the farmer.</span></p><p><span style=\"white-space:pre-wrap\">Bare soil. Ten years of MODIS vegetation data show signs of bare soil or crop residue in August (50% of years) and September (60% of years).</span></p><p><b><strong style=\"white-space:pre-wrap\">[IMAGE 3: calendar comparing today and 2041–2060]</strong></b></p><p><span style=\"white-space:pre-wrap\">Benefits</span></p><p><span style=\"white-space:pre-wrap\">Farmers see how each rotation performs in income, soil health and water use before planting, in plain language and with a glossary of scientific terms.</span></p><p><span style=\"white-space:pre-wrap\">Agronomists get a transparent starting point: every score comes from documented rules, and the tool flags the values that need local validation.</span></p><p><span style=\"white-space:pre-wrap\">Communities gain access to climate projections that rarely reach the field in a usable form.</span></p><p><b><strong style=\"white-space:pre-wrap\">[IMAGE 4: \"Your field\" panel with monthly NDVI]</strong></b></p><p><span style=\"white-space:pre-wrap\">Our Goal</span></p><p><span style=\"white-space:pre-wrap\">Our goal is to turn open NASA data into a decision farmers can discuss with their agronomist before planting. The tool supports local knowledge and does not replace it.</span></p><p><span style=\"white-space:pre-wrap\">We are open about its limits. This version covers Minas Gerais only, and the planting calendar comes from one region of the state. Revenue is gross, without production costs. The soil is assumed to hold the same amount of water everywhere. Some engine constants are provisional and are flagged on screen for validation.</span></p><p><span style=\"white-space:pre-wrap\">Next steps: planting calendars for other regions, soil data for each field, and letting farmers set their own priorities.</span></p><p><span style=\"white-space:pre-wrap\">Tools and Technologies Used</span></p><p><span style=\"white-space:pre-wrap\">Coding languages: Python (scoring engine, data pipeline and API), Rust compiled to WebAssembly (interface) and JavaScript (map and browser integration).</span></p><p><span style=\"white-space:pre-wrap\">Frameworks and libraries: FastAPI, pandas, xarray, Rune and rune-kit, Leaflet and Leaflet-Geoman, Vite.</span></p><p><span style=\"white-space:pre-wrap\">Infrastructure: Docker, Railway, GitHub Actions for automated tests.</span></p><p><span style=\"white-space:pre-wrap\">Scoring engine: rules and arithmetic only, with no machine learning, so every number can be traced back to its source.</span></p><p><span style=\"white-space:pre-wrap\">GitHub: https://github.com/Vlencio/happy_farmers_repo</span></p>",
                 "solution": "",
                 "aiReferences": "",
                 "dataReferences": "",
                 "projectReferences": "",
                 "isSubmitted": false,
-                "savedAt": null,
+                "savedAt": "2026-11-14T21:17:11.454406Z",
                 "submittedAt": null,
                 "__typename": "Project"
               },
@@ -3459,6 +3478,109 @@
           {
             "__typename": "TeamPageEdge",
             "cursor": "b2Zmc2V0OjM0",
+            "node": {
+              "__typename": "TeamPage",
+              "id": "aWQ6OTIzODk=",
+              "title": "Harmonia",
+              "meta": {
+                "type": "TEAM",
+                "slug": "harmonia",
+                "firstPublishedAt": null,
+                "lastPublishedAt": null,
+                "relativeUrl": "/2026/find-a-team/harmonia/",
+                "live": true,
+                "parent": null,
+                "__typename": "ExpandedPageMeta"
+              },
+              "owner": "aWQ6Y2U1MTIyYjQtM2RkYy00NjVkLWE1ZDItM2ExNGIyMzZkZDY1",
+              "ownerDetails": null,
+              "excerpt": "In pursuit of creativity and harmony.",
+              "project": "aWQ6ODg3ODc=",
+              "projectDetails": {
+                "id": "aWQ6ODg3ODc=",
+                "name": "Project Harmonia",
+                "summary": "",
+                "demoLink": "",
+                "projectLink": "",
+                "details": "",
+                "solution": "",
+                "aiReferences": "",
+                "dataReferences": "",
+                "projectReferences": "",
+                "isSubmitted": false,
+                "savedAt": null,
+                "submittedAt": null,
+                "__typename": "Project"
+              },
+              "projectSubmitted": false,
+              "featuredImage": {
+                "id": "aWQ6NTY5OTE3",
+                "meta": {
+                  "type": "images.CustomImage",
+                  "downloadUrl": "https://assets.spaceappschallenge.org/media/original_images/vivid-double-rainbow-stockcake.jpg",
+                  "__typename": "ImageMeta"
+                },
+                "title": "team_image.02:35:52.849735",
+                "alt": "team_image.02:35:52.849735",
+                "caption": "team_image.02:35:52.849735",
+                "displaySize": "or",
+                "rendition": {
+                  "url": "https://assets.spaceappschallenge.org/media/images/vivid-double-rainbow-stockcake.2e16d0ba.fill-300x250.jpg",
+                  "fullUrl": "https://assets.spaceappschallenge.org/media/images/vivid-double-rainbow-stockcake.2e16d0ba.fill-300x250.jpg",
+                  "height": 250,
+                  "width": 300,
+                  "__typename": "BaseImage"
+                },
+                "__typename": "DefaultImage"
+              },
+              "description": null,
+              "desiredSkills": null,
+              "languages": null,
+              "challenge": "aWQ6NTUxMTc=",
+              "challengeDetails": {
+                "id": "aWQ6NTUxMTc=",
+                "title": "The Earth Information Jukebox",
+                "meta": {
+                  "type": "CHALLENGE",
+                  "slug": "the-earth-information-jukebox",
+                  "firstPublishedAt": "2025-08-18T19:28:40.472000Z",
+                  "lastPublishedAt": "2026-11-13T03:46:20.222487Z",
+                  "relativeUrl": "/2026/challenges/the-earth-information-jukebox/",
+                  "live": true,
+                  "parent": null,
+                  "__typename": "ExpandedPageMeta"
+                },
+                "excerpt": "NASA’s Earth Information Center (EIC) produces stunning visualizations of our changing planet, but presenting Earth science through visualization alone limits who can reach it. We invite you to make this complex Earth science accessible, engaging, and multi-sensory by translating sight into sound. Your challenge is to build an \"Earth Jukebox\"—an interface, script, or application that pairs EIC visual frames with dynamic sonifications generated in real time.",
+                "__typename": "ChallengePage"
+              },
+              "location": "aWQ6NTQ0NDY=",
+              "locationDetails": {
+                "id": "aWQ6NTQ0NDY=",
+                "title": "Uberlândia",
+                "displayName": "",
+                "meta": {
+                  "type": "LOCATION",
+                  "slug": "uberlandia",
+                  "firstPublishedAt": "2026-08-20T13:11:16.191000Z",
+                  "lastPublishedAt": "2026-11-02T14:14:24.314767Z",
+                  "relativeUrl": "/2026/local-events/uberlandia/",
+                  "live": true,
+                  "parent": null,
+                  "__typename": "ExpandedPageMeta"
+                },
+                "country": "Brazil",
+                "__typename": "LocationPage"
+              },
+              "event": "aWQ6NA==",
+              "joinEnabled": true,
+              "memberships": null,
+              "nominationBadges": null,
+              "awardBadges": null
+            }
+          },
+          {
+            "__typename": "TeamPageEdge",
+            "cursor": "b2Zmc2V0OjM1",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6NjEwMjA=",
@@ -3561,7 +3683,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjM1",
+            "cursor": "b2Zmc2V0OjM2",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6ODQ2Nzc=",
@@ -3664,7 +3786,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjM2",
+            "cursor": "b2Zmc2V0OjM3",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6ODU4MzM=",
@@ -3673,7 +3795,7 @@
                 "type": "TEAM",
                 "slug": "kultive-2026",
                 "firstPublishedAt": "2026-11-13T01:07:36.261000Z",
-                "lastPublishedAt": "2026-11-14T15:13:06.453726Z",
+                "lastPublishedAt": "2026-11-15T02:12:41.669077Z",
                 "relativeUrl": "/2026/find-a-team/kultive-2026/",
                 "live": true,
                 "parent": null,
@@ -3748,7 +3870,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjM3",
+            "cursor": "b2Zmc2V0OjM4",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6ODg5MzQ=",
@@ -3832,7 +3954,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjM4",
+            "cursor": "b2Zmc2V0OjM5",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6ODg4Njg=",
@@ -3935,7 +4057,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjM5",
+            "cursor": "b2Zmc2V0OjQw",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6NzUyMjg=",
@@ -4038,7 +4160,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjQw",
+            "cursor": "b2Zmc2V0OjQx",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6ODU4MDY=",
@@ -4141,7 +4263,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjQx",
+            "cursor": "b2Zmc2V0OjQy",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6NzE4NzQ=",
@@ -4256,7 +4378,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjQy",
+            "cursor": "b2Zmc2V0OjQz",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6NTU1ODA=",
@@ -4359,7 +4481,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjQz",
+            "cursor": "b2Zmc2V0OjQ0",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6Nzk0Nzg=",
@@ -4470,7 +4592,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjQ0",
+            "cursor": "b2Zmc2V0OjQ1",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6NjI0Njg=",
@@ -4573,7 +4695,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjQ1",
+            "cursor": "b2Zmc2V0OjQ2",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6OTAxNTI=",
@@ -4647,109 +4769,6 @@
                   "__typename": "ExpandedPageMeta"
                 },
                 "excerpt": "NASA’s Earth Information Center (EIC) produces stunning visualizations of our changing planet, but presenting Earth science through visualization alone limits who can reach it. We invite you to make this complex Earth science accessible, engaging, and multi-sensory by translating sight into sound. Your challenge is to build an \"Earth Jukebox\"—an interface, script, or application that pairs EIC visual frames with dynamic sonifications generated in real time.",
-                "__typename": "ChallengePage"
-              },
-              "location": "aWQ6NTQ0NDY=",
-              "locationDetails": {
-                "id": "aWQ6NTQ0NDY=",
-                "title": "Uberlândia",
-                "displayName": "",
-                "meta": {
-                  "type": "LOCATION",
-                  "slug": "uberlandia",
-                  "firstPublishedAt": "2026-08-20T13:11:16.191000Z",
-                  "lastPublishedAt": "2026-11-02T14:14:24.314767Z",
-                  "relativeUrl": "/2026/local-events/uberlandia/",
-                  "live": true,
-                  "parent": null,
-                  "__typename": "ExpandedPageMeta"
-                },
-                "country": "Brazil",
-                "__typename": "LocationPage"
-              },
-              "event": "aWQ6NA==",
-              "joinEnabled": true,
-              "memberships": null,
-              "nominationBadges": null,
-              "awardBadges": null
-            }
-          },
-          {
-            "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjQ2",
-            "node": {
-              "__typename": "TeamPage",
-              "id": "aWQ6ODU3OTI=",
-              "title": "Mission Mars team",
-              "meta": {
-                "type": "TEAM",
-                "slug": "nocodeteam",
-                "firstPublishedAt": "2026-11-13T00:15:28.212000Z",
-                "lastPublishedAt": "2026-11-14T19:19:04.506357Z",
-                "relativeUrl": "/2026/find-a-team/nocodeteam/",
-                "live": true,
-                "parent": null,
-                "__typename": "ExpandedPageMeta"
-              },
-              "owner": "aWQ6MThhYmI2NDgtNDgyOS00NTE3LTkxMzMtNTBlMDk1NjI1MzBk",
-              "ownerDetails": null,
-              "excerpt": "Se você esta afim de aprender, treinar e ganhar entra nesse time",
-              "project": "aWQ6ODIxODk=",
-              "projectDetails": {
-                "id": "aWQ6ODIxODk=",
-                "name": "Project NOCODETEAM",
-                "summary": "",
-                "demoLink": "",
-                "projectLink": "",
-                "details": "",
-                "solution": "",
-                "aiReferences": "",
-                "dataReferences": "",
-                "projectReferences": "",
-                "isSubmitted": false,
-                "savedAt": null,
-                "submittedAt": null,
-                "__typename": "Project"
-              },
-              "projectSubmitted": false,
-              "featuredImage": {
-                "id": "aWQ6NTUwOTk2",
-                "meta": {
-                  "type": "images.CustomImage",
-                  "downloadUrl": "https://assets.spaceappschallenge.org/media/original_images/Henri_Lehmann_-_Portrait_of_the_Composer_Franz_Liszt_1811-1886_1839_-_Meis.jpg",
-                  "__typename": "ImageMeta"
-                },
-                "title": "team_image.00:15:27.473521",
-                "alt": "team_image.00:15:27.473521",
-                "caption": "team_image.00:15:27.473521",
-                "displaySize": "or",
-                "rendition": {
-                  "url": "https://assets.spaceappschallenge.org/media/images/Henri_Lehmann_-_Portrait_of_the_Co.2e16d0ba.fill-300x250.jpg",
-                  "fullUrl": "https://assets.spaceappschallenge.org/media/images/Henri_Lehmann_-_Portrait_of_the_Co.2e16d0ba.fill-300x250.jpg",
-                  "height": 250,
-                  "width": 300,
-                  "__typename": "BaseImage"
-                },
-                "__typename": "DefaultImage"
-              },
-              "description": null,
-              "desiredSkills": null,
-              "languages": null,
-              "challenge": "aWQ6NTUxMjQ=",
-              "challengeDetails": {
-                "id": "aWQ6NTUxMjQ=",
-                "title": "Build a Junior Astronaut Mission Trainer",
-                "meta": {
-                  "type": "CHALLENGE",
-                  "slug": "junior-astronaut-mission-trainer",
-                  "firstPublishedAt": "2026-09-17T14:22:28.522000Z",
-                  "lastPublishedAt": "2026-11-13T03:48:49.413870Z",
-                  "relativeUrl": "/2026/challenges/junior-astronaut-mission-trainer/",
-                  "live": true,
-                  "parent": null,
-                  "__typename": "ExpandedPageMeta"
-                },
-                "excerpt": "Space-themed STEM content often oversimplifies the engineering trade-offs that define a real mission or presents them at a level too complex to hold a young learner's attention. Few tools make those trade-offs both tangible and fun. Your challenge is to design and build an interactive game or app that lets students run a lunar or Martian outpost, balancing competing demands like life support, radiation shielding, power, and food production, so they experience firsthand the decisions that determine whether a mission fails or succeeds.",
                 "__typename": "ChallengePage"
               },
               "location": "aWQ6NTQ0NDY=",
@@ -5275,7 +5294,7 @@
                 "type": "TEAM",
                 "slug": "orbit-sentinel",
                 "firstPublishedAt": "2026-09-22T14:31:05.892000Z",
-                "lastPublishedAt": "2026-09-27T01:04:38.518301Z",
+                "lastPublishedAt": "2026-11-14T23:59:16.924903Z",
                 "relativeUrl": "/2026/find-a-team/orbit-sentinel/",
                 "live": true,
                 "parent": null,
@@ -5291,18 +5310,37 @@
                 "summary": "",
                 "demoLink": "",
                 "projectLink": "",
-                "details": "",
+                "details": "<h4><b><strong style=\"white-space:pre-wrap\">Summary</strong></b></h4><p><span style=\"white-space:pre-wrap\">1) Introduction</span></p><p><span style=\"white-space:pre-wrap\">2) Radiation</span></p><p><b><strong style=\"white-space:pre-wrap\"> </strong></b></p><p><b><strong style=\"white-space:pre-wrap\"> </strong></b></p><p><b><strong style=\"white-space:pre-wrap\"> </strong></b></p><h3><b><strong style=\"white-space:pre-wrap\">1) Introduction</strong></b></h3><h3><b><strong style=\"white-space:pre-wrap\">2) Radiation</strong></b><br/><img alt=\"Radition Screen\" class=\"richtext-image full-width\" data-format=\"fullwidth\" data-id=\"569728\" height=\"517\" src=\"https://assets.spaceappschallenge.org/media/images/Radiacao.width-1024.png\" width=\"900\"></h3><p style=\"text-align:justify\"><span style=\"white-space:pre-wrap\">Space radiation is one of the most significant health challenges in human space exploration, particularly during long-duration missions to the Moon and Mars. Orbit Sentinel doesn't just monitor radiation. It helps astronauts understand exposure, respond to alerts, and follow protective procedures, even when Earth is far away. </span><b><strong style=\"white-space:pre-wrap\">Is designed to transform scientific radiation measurements into actionable health-monitoring information</strong></b><span style=\"white-space:pre-wrap\">, combining NASA radiation datasets, automated data processing, exposure visualization, and mission-specific safety guidance.</span></p><p><b><strong style=\"white-space:pre-wrap\">2.1. Integration with NASA Radiation Data - Real Scientific Measurements</strong></b></p><p style=\"text-align:justify\"><span style=\"white-space:pre-wrap\">Orbit Sentinel's proposed radiation monitoring architecture integrates with </span><b><strong style=\"white-space:pre-wrap\">NASA's Radiation Laboratory (RadLab) API</strong></b><span style=\"white-space:pre-wrap\">, part of NASA's Open Science Data Repository ecosystem. This integration enables the application to retrieve historical radiation measurements collected by scientific instruments aboard spacecraft, including the International Space Station (ISS). Using NASA's documented API, the system can query radiation data according to spacecraft, instrument, measurement type, and observation period.</span></p><p><b><strong style=\"white-space:pre-wrap\">2.2 Example NASA API endpoint:</strong></b></p><p><a rel=\"noopener noreferrer\"><u><span class=\"editor-text-underline\" style=\"white-space:pre-wrap\">https://visualization.osdr.nasa.gov/radlab/api/?spacecraft=ISS&amp;instrument=DosTel&amp;timestamp%3E=2022-04-01T23%3A00&amp;timestamp%3C2022-04-02T01%3A05&amp;dose_equivalent_rate&amp;format=json</span></u></a></p><p><span style=\"white-space:pre-wrap\">This request is designed to retrieve dose-equivalent-rate measurements from the DosTel instrument for a specified historical period. By incorporating NASA's scientific datasets, Orbit Sentinel aims to demonstrate how actual space radiation observations can support astronaut health-monitoring applications, reducing dependence on exclusively simulated measurements.</span><br/><br/><b><strong style=\"white-space:pre-wrap\">2.3 Radiation Data Processing - Backend Architecture</strong></b></p><p><span style=\"white-space:pre-wrap\">Orbit Sentinel uses a proposed backend architecture to process, standardize, and organize radiation measurements. The backend acts as an intermediary between external scientific data sources and the astronaut-facing monitoring interface. Its processing workflow consists of five stages:</span></p><ol><li><b><strong style=\"white-space:pre-wrap\">Data Acquisition:</strong></b><span style=\"white-space:pre-wrap\"> Retrieve radiation measurements from NASA RadLab or other compatible sources.</span></li><li><b><strong style=\"white-space:pre-wrap\">Data Validation:</strong></b><span style=\"white-space:pre-wrap\"> Verify measurement availability, timestamps, units, instrument identification, and data integrity.</span></li><li><b><strong style=\"white-space:pre-wrap\">Unit Standardization:</strong></b><span style=\"white-space:pre-wrap\"> Convert compatible radiation measurements into standardized units for consistent presentation.</span></li><li><b><strong style=\"white-space:pre-wrap\">Exposure Monitoring:</strong></b><span style=\"white-space:pre-wrap\"> Organize measurements into historical time series and calculate exposure trends.</span></li><li><b><strong style=\"white-space:pre-wrap\">API Distribution:</strong></b><span style=\"white-space:pre-wrap\"> Deliver structured JSON responses to the Orbit Sentinel dashboard.</span></li></ol><p><span style=\"white-space:pre-wrap\">This modular architecture is intended to support additional radiation monitoring instruments in the future, including compatible personal dosimeters and spacecraft radiation sensors, subject to their communication protocols and data-access permissions.</span><br/></p><p><b><strong style=\"white-space:pre-wrap\">3. Radiation Calculations — Transforming Scientific Data into Structured JSON</strong></b></p><p><span style=\"white-space:pre-wrap\">One of Orbit Sentinel's key technical capabilities is its proposed radiation data-processing pipeline. NASA RadLab can provide dose-equivalent-rate measurements expressed in microsieverts per hour (µSv/h). When this measurement is available, the Laravel backend converts it into millisieverts per hour (mSv/h) using the following equation:</span></p><p><b><strong style=\"white-space:pre-wrap\">Dose Rate (mSv/h) = Dose Rate (µSv/h) / 1,000</strong></b></p><p><span style=\"white-space:pre-wrap\">For example, a hypothetical measurement of 14 µSv/h produces:</span></p><p><b><strong style=\"white-space:pre-wrap\">14 / 1,000 = 0.014 mSv/h</strong></b></p><p><span style=\"white-space:pre-wrap\">This standardized measurement can then be displayed in the astronaut's radiation monitoring dashboard. For time-series measurements, accumulated dose can be estimated by integrating the dose-equivalent rate over time:</span></p><p><b><strong style=\"white-space:pre-wrap\">Accumulated Dose (mSv) ≈ Σ [Dose Rate (mSv/h) × Time Interval (hours)]</strong></b></p><p><span style=\"white-space:pre-wrap\">This calculation requires valid measurement intervals and consistent dosimetric quantities. It does not automatically represent an astronaut's total mission exposure unless the relevant personal exposure history is available. After processing, the backend is designed to expose a standardized REST endpoint:</span></p><p><b><strong style=\"white-space:pre-wrap\">GET /api/radiation/latest</strong></b></p><p><span style=\"white-space:pre-wrap\">Example JSON response:</span></p><p><span style=\"white-space:pre-wrap\">{</span></p><p><span style=\"white-space:pre-wrap\">  \"source\": \"nasa_radlab\",</span></p><p><span style=\"white-space:pre-wrap\">  \"spacecraft\": \"ISS\",</span></p><p><span style=\"white-space:pre-wrap\">  \"instrument\": \"DosTel\",</span></p><p><span style=\"white-space:pre-wrap\">  \"measurement\": {</span></p><p><span style=\"white-space:pre-wrap\">    \"quantity\": \"dose_equivalent_rate\",</span></p><p><span style=\"white-space:pre-wrap\">    \"value\": 0.014,</span></p><p><span style=\"white-space:pre-wrap\">    \"unit\": \"mSv/h\"</span></p><p><span style=\"white-space:pre-wrap\">  },</span></p><p><span style=\"white-space:pre-wrap\">  \"mission_dose_mSv\": null,</span></p><p><span style=\"white-space:pre-wrap\">  \"status\": \"not_evaluated\",</span></p><p><span style=\"white-space:pre-wrap\">  \"sensor_status\": \"unknown\",</span></p><p><span style=\"white-space:pre-wrap\">  \"alert\": null,</span></p><p><span style=\"white-space:pre-wrap\">  \"data_mode\": \"historical\",</span></p><p><span style=\"white-space:pre-wrap\">  \"is_simulated\": false</span></p><p><span style=\"white-space:pre-wrap\">}</span></p><p><i><em style=\"white-space:pre-wrap\">This JSON illustrates the proposed data transformation using a hypothetical measurement, not a verified API response.</em></i></p><p><span style=\"white-space:pre-wrap\">The structured response allows the frontend to consume radiation information independently of the original scientific data format.</span></p><p><span style=\"white-space:pre-wrap\">It also distinguishes historical measurements from simulated data and avoids assigning safety classifications when validated mission-specific thresholds are unavailable.</span></p>",
                 "solution": "",
                 "aiReferences": "",
-                "dataReferences": "",
-                "projectReferences": "",
+                "dataReferences": "[Hazard: Space Radiation](https://www.nasa.gov/hrp/hazard-space-radiation/)\n[NASA's Radiation Laboratory (RadLab) API](https://visualization.osdr.nasa.gov/radlab/api/?spacecraft=ISS&instrument=DosTel×tamp%3E=2022-04-01T23%3A00×tamp%3C2022-04-02T01%3A05&dose_equivalent_rate&format=json)",
+                "projectReferences": "[Monitoring Radiation for Astronaut Health](https://www.asc-csa.gc.ca/eng/news/articles/2026/2026-02-26-monitoring-radiation-astronaut-health.asp)",
                 "isSubmitted": false,
-                "savedAt": null,
+                "savedAt": "2026-11-15T01:04:58.596718Z",
                 "submittedAt": null,
                 "__typename": "Project"
               },
               "projectSubmitted": false,
-              "featuredImage": null,
+              "featuredImage": {
+                "id": "aWQ6NTY5NTk4",
+                "meta": {
+                  "type": "images.CustomImage",
+                  "downloadUrl": "https://assets.spaceappschallenge.org/media/original_images/Imagem_Equipe.png",
+                  "__typename": "ImageMeta"
+                },
+                "title": "team_image.23:59:16.035295",
+                "alt": "team_image.23:59:16.035295",
+                "caption": "team_image.23:59:16.035295",
+                "displaySize": "or",
+                "rendition": {
+                  "url": "https://assets.spaceappschallenge.org/media/images/Imagem_Equipe.2e16d0ba.fill-300x250.png",
+                  "fullUrl": "https://assets.spaceappschallenge.org/media/images/Imagem_Equipe.2e16d0ba.fill-300x250.png",
+                  "height": 250,
+                  "width": 300,
+                  "__typename": "BaseImage"
+                },
+                "__typename": "DefaultImage"
+              },
               "description": null,
               "desiredSkills": null,
               "languages": null,
@@ -5963,6 +6001,109 @@
             "cursor": "b2Zmc2V0OjU5",
             "node": {
               "__typename": "TeamPage",
+              "id": "aWQ6ODU3OTI=",
+              "title": "REDTEAM",
+              "meta": {
+                "type": "TEAM",
+                "slug": "nocodeteam",
+                "firstPublishedAt": "2026-11-13T00:15:28.212000Z",
+                "lastPublishedAt": "2026-11-14T23:22:47.224781Z",
+                "relativeUrl": "/2026/find-a-team/nocodeteam/",
+                "live": true,
+                "parent": null,
+                "__typename": "ExpandedPageMeta"
+              },
+              "owner": "aWQ6MThhYmI2NDgtNDgyOS00NTE3LTkxMzMtNTBlMDk1NjI1MzBk",
+              "ownerDetails": null,
+              "excerpt": "Se você esta afim de aprender, treinar e ganhar entra nesse time",
+              "project": "aWQ6ODIxODk=",
+              "projectDetails": {
+                "id": "aWQ6ODIxODk=",
+                "name": "Mission Mars Game",
+                "summary": "Mission Mars is a browser-based mission trainer that lets a child run a Mars colony for eleven sols. Five resources — water, oxygen, energy, food and materials — rise and fall in real time while the colony moves through 90-second days and nights. Twenty-five events, from dust storms and marsquakes to crew conflicts, appear in a Mission Log with four trade-off choices each, and ignoring one has its own consequence. Buildings have levels and build timers, research takes time, robots explore the surface and can break down, and a radio link to Houston answers 15 to 20 seconds late, the way real deep-space communication does. Every event, site and term is tagged with the open NASA source behind it: DONKI space weather, OSDR life sciences, Perseverance, Curiosity, InSight and SCaN. Losing opens a science debriefing instead of a \"game over\", so failure becomes a lesson. Three difficulty modes let younger and older players train at their own pace. Mars is the hook; systems thinking is the lesson.",
+                "demoLink": "https://www.youtube.com/watch?v=gqlKBezVmL4",
+                "projectLink": "https://missionmars.lovable.app/",
+                "details": "<p style=\"text-align:start\"><b><strong style=\"white-space:pre-wrap\">What it does and how it works.</strong></b><span style=\"white-space:pre-wrap\"> Mission Mars is a browser-based mission trainer where a child commands a Mars colony for eleven sols. The screen is a mission control center: a header with the mission clock and a day/night indicator, a COLONY RESOURCES panel with five live bars — water, oxygen, energy, food and materials — and a Mission Log that is the heart of the game. Every event appears there as a large Mars image, a timestamp, a short narrative and four big decision buttons. Time runs on a fixed cycle: 90 seconds of daylight and 90 seconds of night, three minutes per sol. Solar panels produce energy only in daylight, batteries carry the base through the night, and the crew keeps consuming water, oxygen and food the whole time. Twenty-five events are drawn at random and weighted toward pressure — 20% opportunities, 40% dilemmas, 40% crises — and every one of them has four choices with real trade-offs, hidden risks and a consequence if the player ignores the event for 60 seconds. Buildings have five levels and take time to build or upgrade. Ten research technologies reach three levels each and cost 30, 60 or 90 seconds per level. Robots with 100 hit points are built, sent to twenty real Martian sites such as Jezero Crater, Gale Crater, Utopia Planitia and Olympus Mons, and can break down and be repaired or lost. A radio link to Houston costs energy and answers 15 to 20 seconds late, the way deep-space communication really works. Winning means surviving to sol 11 and returning to Earth; losing opens a science debriefing that explains the cause, what was learned and one tip for the next flight.</span></p><p style=\"text-align:start\"><b><strong style=\"white-space:pre-wrap\">Benefits and intended impact.</strong></b><span style=\"white-space:pre-wrap\"> The game teaches systems thinking: saving energy can starve oxygen, a fast trip can cost a robot, and a party raises morale but eats the food stores. Children practice reading trends, comparing costs and asking for help before an emergency grows — with no penalty for failing, because every loss is explained. It also makes open NASA data a story kids can touch, and it runs in any browser on a school computer or tablet with nothing to install.</span></p><p style=\"text-align:start\"><b><strong style=\"white-space:pre-wrap\">Tools and languages.</strong></b><span style=\"white-space:pre-wrap\"> React 19 with TypeScript and TanStack Start, styled with Tailwind CSS v4. The whole simulation is one pure reducer in a single engine file, so every tab reads the same state and every rule can be unit-tested; 106 automated tests cover resource flow, death rules, research, robots, exploration, radio support and difficulty. Event art is generated imagery, and the project was built and iterated with Lovable.</span></p><p style=\"text-align:start\"><b><strong style=\"white-space:pre-wrap\">What makes it creative.</strong></b><span style=\"white-space:pre-wrap\"> Instead of a quiz or a score, failure is rewritten as a debriefing; instead of instant answers, the radio reproduces real signal latency; instead of a \"correct\" option, each choice is only better or worse for the colony you actually have.</span></p><p style=\"text-align:start\"><b><strong style=\"white-space:pre-wrap\">Factors considered.</strong></b><span style=\"white-space:pre-wrap\"> Difficulty for ages 7–12 without unfair punishment, honest sourcing of NASA data, screen simplicity and large touch targets, three difficulty modes, and no names, faces or voices of anyone under 18 anywhere in the project.</span></p><p style=\"text-align:start\"><span style=\"white-space:pre-wrap\">The file also has a ≈250-word version, the NASA data links for those fields, and a pre-paste checklist. I ran the tests to confirm the numbers quoted: 106 passing, 25 events, 20 sites, 10 researches, 8 buildings, 15–20 s radio delay.</span></p>",
+                "solution": "",
+                "aiReferences": "",
+                "dataReferences": "[NASA DONKI — Space Weather Database Of Notifications, Knowledge, Information](https://kauai.ccmc.gsfc.nasa.gov/DONKI/)\n[NASA Open Science Data Repository (OSDR) ](https://science.nasa.gov/biological-physical/data/osdr/)\n[NASA Mars 2020 Perseverance rover](https://science.nasa.gov/mission/mars-2020-perseverance/)\n[NASA Curiosity rover (Mars Science Laboratory) ](https://science.nasa.gov/mission/msl-curiosity/)\n[NASA InSight — SEIS seismometer](https://science.nasa.gov/mission/insight/science-instruments/)\n[NASA Space Communications and Navigation (SCaN)](https://www.nasa.gov/centers-and-facilities/goddard/space-communications-7-things-you-need-to-know/)\n[NASA Mars Exploration](https://science.nasa.gov/mars/)",
+                "projectReferences": "[React 19 ](https://react.dev/)\n[TypeScript](https://www.typescriptlang.org/)\n[TanStack Start ](https://tanstack.com/start)\n[TanStack Router](https://tanstack.com/router)\n[TanStack Query](https://tanstack.com/query)\n[Vite 8 ](https://vite.dev/)\n[Tailwind CSS v4 ](https://tailwindcss.com/)\n[clsx ](https://github.com/lukeed/clsx and tailwind-merge — https://github.com/dcastil/tailwind-merge)\n[Vitest](https://vitest.dev/)\n[Testing Library ](https://testing-library.com/)\n[Lovable](https://lovable.dev/)\n[Google Fonts: Chakra Petch](https://fonts.google.com/specimen/Chakra+Petch · IBM Plex Sans — https://fonts.google.com/specimen/IBM+Plex+Sans · JetBrains Mono — https://fonts.google.com/specimen/JetBrains+Mono)",
+                "isSubmitted": true,
+                "savedAt": "2026-11-15T01:23:45.263070Z",
+                "submittedAt": "2026-11-15T01:23:45.263070Z",
+                "__typename": "Project"
+              },
+              "projectSubmitted": true,
+              "featuredImage": {
+                "id": "aWQ6NTUwOTk2",
+                "meta": {
+                  "type": "images.CustomImage",
+                  "downloadUrl": "https://assets.spaceappschallenge.org/media/original_images/Henri_Lehmann_-_Portrait_of_the_Composer_Franz_Liszt_1811-1886_1839_-_Meis.jpg",
+                  "__typename": "ImageMeta"
+                },
+                "title": "team_image.00:15:27.473521",
+                "alt": "team_image.00:15:27.473521",
+                "caption": "team_image.00:15:27.473521",
+                "displaySize": "or",
+                "rendition": {
+                  "url": "https://assets.spaceappschallenge.org/media/images/Henri_Lehmann_-_Portrait_of_the_Co.2e16d0ba.fill-300x250.jpg",
+                  "fullUrl": "https://assets.spaceappschallenge.org/media/images/Henri_Lehmann_-_Portrait_of_the_Co.2e16d0ba.fill-300x250.jpg",
+                  "height": 250,
+                  "width": 300,
+                  "__typename": "BaseImage"
+                },
+                "__typename": "DefaultImage"
+              },
+              "description": null,
+              "desiredSkills": null,
+              "languages": null,
+              "challenge": "aWQ6NTUxMjQ=",
+              "challengeDetails": {
+                "id": "aWQ6NTUxMjQ=",
+                "title": "Build a Junior Astronaut Mission Trainer",
+                "meta": {
+                  "type": "CHALLENGE",
+                  "slug": "junior-astronaut-mission-trainer",
+                  "firstPublishedAt": "2026-09-17T14:22:28.522000Z",
+                  "lastPublishedAt": "2026-11-13T03:48:49.413870Z",
+                  "relativeUrl": "/2026/challenges/junior-astronaut-mission-trainer/",
+                  "live": true,
+                  "parent": null,
+                  "__typename": "ExpandedPageMeta"
+                },
+                "excerpt": "Space-themed STEM content often oversimplifies the engineering trade-offs that define a real mission or presents them at a level too complex to hold a young learner's attention. Few tools make those trade-offs both tangible and fun. Your challenge is to design and build an interactive game or app that lets students run a lunar or Martian outpost, balancing competing demands like life support, radiation shielding, power, and food production, so they experience firsthand the decisions that determine whether a mission fails or succeeds.",
+                "__typename": "ChallengePage"
+              },
+              "location": "aWQ6NTQ0NDY=",
+              "locationDetails": {
+                "id": "aWQ6NTQ0NDY=",
+                "title": "Uberlândia",
+                "displayName": "",
+                "meta": {
+                  "type": "LOCATION",
+                  "slug": "uberlandia",
+                  "firstPublishedAt": "2026-08-20T13:11:16.191000Z",
+                  "lastPublishedAt": "2026-11-02T14:14:24.314767Z",
+                  "relativeUrl": "/2026/local-events/uberlandia/",
+                  "live": true,
+                  "parent": null,
+                  "__typename": "ExpandedPageMeta"
+                },
+                "country": "Brazil",
+                "__typename": "LocationPage"
+              },
+              "event": "aWQ6NA==",
+              "joinEnabled": true,
+              "memberships": null,
+              "nominationBadges": null,
+              "awardBadges": null
+            }
+          },
+          {
+            "__typename": "TeamPageEdge",
+            "cursor": "b2Zmc2V0OjYw",
+            "node": {
+              "__typename": "TeamPage",
               "id": "aWQ6OTE1OTQ=",
               "title": "Selene Vector 301",
               "meta": {
@@ -6063,7 +6204,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjYw",
+            "cursor": "b2Zmc2V0OjYx",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6NzI5OTE=",
@@ -6166,7 +6307,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjYx",
+            "cursor": "b2Zmc2V0OjYy",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6ODMxMDI=",
@@ -6269,7 +6410,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjYy",
+            "cursor": "b2Zmc2V0OjYz",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6ODUzNDU=",
@@ -6372,7 +6513,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjYz",
+            "cursor": "b2Zmc2V0OjY0",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6ODUzNzk=",
@@ -6456,7 +6597,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjY0",
+            "cursor": "b2Zmc2V0OjY1",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6NzU4MDY=",
@@ -6559,7 +6700,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjY1",
+            "cursor": "b2Zmc2V0OjY2",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6ODg4MDQ=",
@@ -6568,7 +6709,7 @@
                 "type": "TEAM",
                 "slug": "still-blue",
                 "firstPublishedAt": "2026-11-14T01:23:44.501000Z",
-                "lastPublishedAt": "2026-11-14T02:56:28.930022Z",
+                "lastPublishedAt": "2026-11-14T22:51:13.248895Z",
                 "relativeUrl": "/2026/find-a-team/still-blue/",
                 "live": true,
                 "parent": null,
@@ -6662,7 +6803,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjY2",
+            "cursor": "b2Zmc2V0OjY3",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6ODI2OTA=",
@@ -6746,7 +6887,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjY3",
+            "cursor": "b2Zmc2V0OjY4",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6ODUxMzA=",
@@ -6849,7 +6990,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjY4",
+            "cursor": "b2Zmc2V0OjY5",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6ODY4NTU=",
@@ -6952,7 +7093,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjY5",
+            "cursor": "b2Zmc2V0Ojcw",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6ODg3NDM=",
@@ -7055,7 +7196,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0Ojcw",
+            "cursor": "b2Zmc2V0Ojcx",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6ODAwMzg=",
@@ -7158,7 +7299,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0Ojcx",
+            "cursor": "b2Zmc2V0Ojcy",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6ODg0MDg=",
@@ -7242,7 +7383,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0Ojcy",
+            "cursor": "b2Zmc2V0Ojcz",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6ODgwOTI=",
@@ -7263,17 +7404,17 @@
               "project": "aWQ6ODQ0ODk=",
               "projectDetails": {
                 "id": "aWQ6ODQ0ODk=",
-                "name": "Project Trem de Ferro",
-                "summary": "",
-                "demoLink": "",
-                "projectLink": "",
-                "details": "",
+                "name": "'TREM' DE FERRO: O Quadrilátero Ferrífero de Minas Gerais - BR como Campo de Testes Geoquímico para ISRU em Marte.",
+                "summary": "Desenvolvemos uma plataforma interativa e simulador de ISRU (Utilização de Recursos In Situ) que utiliza as formações ferríferas bandadas do Quadrilátero Ferrífero, em Minas Gerais - BR, como análogo geoquímico e funcional dos solos ricos em óxidos de ferro de Marte (Meridiani Planum e Cratera Gale).\n\nA proposta resolve o desafio indo além de analogias visuais com desertos áridos: ela foca na extração mineral de recursos vitais. A partir da reação química 2Fe₂O₃ → 4Fe + 3O₂, modelamos duas rotas da siderurgia — Redução Direta com Hidrogênio (DRI-H₂) e Eletrólise de Óxido Fundido (MOE) — para calcular a coprodução de oxigênio (para respiração e propelente) e ferro metálico (para impressão 3D de estruturas).\n\nO projeto é importante porque o propelente de retorno (LOX) representa o maior peso a ser transportado da Terra (~25 t segundo a arquitetura DRA 5.0 da NASA). Validar essas rotas com minérios de Minas Gerais permite calibrar consumo energético e mitigar falhas em solo terrestre antes do envio de equipamentos ao espaço.",
+                "demoLink": "https://drive.google.com/drive/u/0/home",
+                "projectLink": "https://tremdeferro.lovable.app/",
+                "details": "<p><span style=\"white-space:pre-wrap\">“TREM” DE FERRO is a digital platform and interactive in-situ resource utilization (ISRU) simulator that establishes a geochemical and functional analogy between the banded iron formations of the Iron Quadrangle (Quadrilátero Ferrífero) in Minas Gerais, Brazil, and the hematite-rich soils of Mars (Meridiani Planum and Gale Crater). Rather than merely seeking a visual resemblance to deserts, we use the iron oxide (Fe₂O₃) grades of terrestrial itabirites and hematitites as a model to test ironmaking extraction routes: Hydrogen Direct Reduction (H₂-DRI) and Molten Oxide Electrolysis (MOE). The baseline reaction (2Fe₂O₃ → 4Fe + 3O₂) lets us calculate the mass and energy balances for the co-production of breathable oxygen, propellant, and metallic iron for the additive manufacturing of habitats.</span></p><p><span style=\"white-space:pre-wrap\">The project aims to reduce the operational and financial risk of sending experimental machinery into space. The heaviest input for crewed Mars missions is the liquid oxygen (LOX) needed for the return trip (approximately 25 tonnes, according to NASA’s Mars Design Reference Architecture 5.0 report). Our simulator shows that by validating dry concentration and thermochemical reduction of iron ores at terrestrial pilot plants in Minas Gerais, Brazil, research centers and space agencies can calibrate specific energy consumption (kWh/kg of O₂) and real-world yields before building final flight payloads.</span></p><p><span style=\"white-space:pre-wrap\">The platform was built with React, TypeScript, Tailwind CSS, and analytical libraries for the mathematical modeling of stoichiometric and energy balances. Planetary data were extracted from the Geosciences and Atmospheres nodes of the NASA Planetary Data System (PDS), cross-referencing spectrometric data from APXS/CheMin (Curiosity), PIXL (Perseverance), and Mössbauer (Opportunity) with MOXIE’s O₂ production telemetry. Terrestrial geological data come from geochemical surveys by CPRM (Geological Survey of Brazil).</span></p><p><span style=\"white-space:pre-wrap\">The conceptual turning point of the project was to move away from a landscape analogy (desert terrain) and focus on an analogy of chemical and mineralogical processes. Brazil has a large high-grade iron ore supply chain and strong technological expertise in direct reduction. Turning this existing infrastructure into a proving ground for Mars exploration is a pragmatic and economically viable solution.</span></p><p><span style=\"white-space:pre-wrap\">The team has explicitly defined the boundaries of the analogy: what can be validated on Earth (dry magnetic separation efficiency, reduction kinetics, and thermal balance) versus what requires controlled laboratory simulation (Martian gravity of 0.38 g, a thin CO₂ atmosphere at about 6 hPa, and oxidizing perchlorates in the regolith).</span></p>",
                 "solution": "",
                 "aiReferences": "",
-                "dataReferences": "",
-                "projectReferences": "",
+                "dataReferences": "[NASA PDS Geosciences Node - Mars 2020 Perseverance Mission](https://pds-geosciences.wustl.edu/missions/mars2020/index.html)\n[NASA PDS Atmospheres Node - MOXIE Instrument Data](https://pds-atmospheres.nmsu.edu/data_and_services/atmospheres_data/PERSEVERANCE/moxie.html)\n[NASA Planetary Data System (PDS Central)](https://pds.nasa.gov/)\n[NASA Mars Design Reference Architecture 5.0 (DRA 5.0)](https://www.nasa.gov/pdf/373665main_NASA-SP-2009-566.pdf)",
+                "projectReferences": "[CPRM / Serviço Geológico do Brasil - Geologia do Quadrilátero Ferrífero](https://www.sgb.gov.br/)\n[USGS Astrogeology Science Center - Mars Exploration Datasets](https://astrogeology.usgs.gov/)\n[TREM DE FERRO - Aplicação Web Interativa e Simulador ISRU](https://tremdeferro.lovable.app)",
                 "isSubmitted": false,
-                "savedAt": null,
+                "savedAt": "2026-11-15T06:09:47.233062Z",
                 "submittedAt": null,
                 "__typename": "Project"
               },
@@ -7350,7 +7491,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0Ojcz",
+            "cursor": "b2Zmc2V0Ojc0",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6NzY3NTY=",
@@ -7453,7 +7594,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0Ojc0",
+            "cursor": "b2Zmc2V0Ojc1",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6ODM3NjM=",
@@ -7556,7 +7697,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0Ojc1",
+            "cursor": "b2Zmc2V0Ojc2",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6ODE0MzA=",
@@ -7640,7 +7781,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0Ojc2",
+            "cursor": "b2Zmc2V0Ojc3",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6ODUzNTM=",
@@ -7724,7 +7865,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0Ojc3",
+            "cursor": "b2Zmc2V0Ojc4",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6ODIyOTE=",
@@ -7827,7 +7968,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0Ojc4",
+            "cursor": "b2Zmc2V0Ojc5",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6NTY5ODE=",
@@ -7930,7 +8071,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0Ojc5",
+            "cursor": "b2Zmc2V0Ojgw",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6NTgyMTg=",
