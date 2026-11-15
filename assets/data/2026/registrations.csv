@@ -1,4 +1,28 @@
 ﻿"Attended Event","Status","Type","Email","Name","Location","Parent/Guardian Name","Parent/Guardian Email","Team Name","Project Submitted","Created At"
+"No","Registered","Virtual","lucasdutraalves70@gmail.com","Lucas Dutra Alves","Brazil","N/A","N/A","NERV Systems","No","
+				15
+				November
+				2026
+				14:58
+			"
+"No","Registered","In-Person","gabrielmdab@gmail.com","Gabriel Martins Diniz Alves Barreto","Brazil","N/A","N/A","N/A","N/A","
+				15
+				November
+				2026
+				11:29
+			"
+"No","Registered","Virtual","aurea.lazsn@gmail.com","Aurea Simões Nunes","Brazil","N/A","N/A","Bebop Crew","No","
+				15
+				November
+				2026
+				11:25
+			"
+"No","Registered","In-Person","lohan.pascoa@gmail.com","Lohan Miguel de Oliveira Páscoa","Brazil","N/A","N/A","Planet Lohan","Yes","
+				15
+				November
+				2026
+				10:06
+			"
 "No","Registered","Virtual","hsnriquedev@gmail.com","Henrique Braga","Brazil","N/A","N/A","N/A","N/A","
 				15
 				November
@@ -11,13 +35,13 @@
 				2026
 				16:30
 			"
-"No","Registered","Virtual","infinityluck557@gmail.com","Nara Caroline Linhares Alves","Spain","N/A","N/A","Forsaken Elite","No","
+"No","Registered","Virtual","infinityluck557@gmail.com","Nara Caroline Linhares Alves","Spain","N/A","N/A","Forsaken Elite","Yes","
 				14
 				November
 				2026
 				16:17
 			"
-"No","Registered","Virtual","andressabuglio@hotmail.com","Isabella Azeredo","Portugal","N/A","N/A","Forsaken Elite","No","
+"No","Registered","Virtual","andressabuglio@hotmail.com","Isabella Azeredo","Portugal","N/A","N/A","Forsaken Elite","Yes","
 				14
 				November
 				2026
@@ -41,7 +65,7 @@
 				2026
 				13:58
 			"
-"No","Registered","Virtual","vivianvitoriadasilva475@gmail.com","Vivian vitória da Silva","Brazil","N/A","N/A","Formandos UDI","No","
+"No","Registered","Virtual","vivianvitoriadasilva475@gmail.com","Vivian vitória da Silva","Brazil","N/A","N/A","Formandos UDI","Yes","
 				14
 				November
 				2026
@@ -59,7 +83,7 @@
 				2026
 				11:00
 			"
-"No","Registered","In-Person","felipe.lfbss@gmail.com","Luiz Felipe Barroso Santos Silva","Brazil","N/A","N/A","N/A","N/A","
+"No","Registered","In-Person","felipe.lfbss@gmail.com","Luiz Felipe Barroso Santos Silva","Brazil","N/A","N/A","STARTEC 2","Yes","
 				14
 				November
 				2026
@@ -779,13 +803,13 @@
 				2026
 				22:31
 			"
-"Yes","Attended Event","Virtual","moacirnascimento1999@gmail.com","Moacir de Jesus Nascimento","Brazil","Moacir de Jesus Nascimento","moacirnascimento1999@gmail.com","Formandos UDI","No","
+"Yes","Attended Event","Virtual","moacirnascimento1999@gmail.com","Moacir de Jesus Nascimento","Brazil","Moacir de Jesus Nascimento","moacirnascimento1999@gmail.com","Formandos UDI","Yes","
 				11
 				November
 				2026
 				22:01
 			"
-"Yes","Attended Event","Virtual","wedersonsantos2004@gmail.com","Wederson Ferreira dos santos","Brazil","N/A","N/A","Formandos UDI","No","
+"Yes","Attended Event","Virtual","wedersonsantos2004@gmail.com","Wederson Ferreira dos santos","Brazil","N/A","N/A","Formandos UDI","Yes","
 				11
 				November
 				2026
@@ -923,13 +947,13 @@
 				2026
 				11:49
 			"
-"No","Registered","In-Person","0001003719@alunosesimg.com.br","JOÃO GABRIEL DE ANDRADE","Brazil","Milton Moreira de Andrade Júnior","miltonandradejr@hotmail.com","STARTEC","No","
+"Yes","Attended Event","In-Person","0001003719@alunosesimg.com.br","JOÃO GABRIEL DE ANDRADE","Brazil","Milton Moreira de Andrade Júnior","miltonandradejr@hotmail.com","STARTEC","No","
 				11
 				November
 				2026
 				11:39
 			"
-"No","Registered","In-Person","0000911174@alunosesimg.com.br","PEDRO FERNANDES OLANDA","Brazil","Jeferson Viera Olanda","pedromajuh@gmail.com","STARTEC","No","
+"Yes","Attended Event","In-Person","0000911174@alunosesimg.com.br","PEDRO FERNANDES OLANDA","Brazil","Jeferson Viera Olanda","pedromajuh@gmail.com","STARTEC","No","
 				11
 				November
 				2026
@@ -947,19 +971,19 @@
 				2026
 				09:34
 			"
-"No","Registered","In-Person","0000785282@alunosesimg.com.br","DAVI SILVA MARTINS","Brazil","Priscilla Jaqueline Silva","pricilla-jack@hotmail.com","STARTEC","No","
+"Yes","Attended Event","In-Person","0000785282@alunosesimg.com.br","DAVI SILVA MARTINS","Brazil","Priscilla Jaqueline Silva","pricilla-jack@hotmail.com","STARTEC","No","
 				11
 				November
 				2026
 				09:07
 			"
-"No","Registered","In-Person","0000649827@alunosesimg.com.br","MANUELA MARTINS DE OLIVEIRA","Brazil","Gilson Fernando de Oliveira","gilsonfernandoprofessor@gmail.com","STARTEC","No","
+"Yes","Attended Event","In-Person","0000649827@alunosesimg.com.br","MANUELA MARTINS DE OLIVEIRA","Brazil","Gilson Fernando de Oliveira","gilsonfernandoprofessor@gmail.com","STARTEC","No","
 				11
 				November
 				2026
 				08:56
 			"
-"No","Registered","In-Person","0000906509@alunosesimg.com.br","ARTHUR DIAS SIQUEIRA","Brazil","Francyelle Dias Siqueira","francyelle.diassiqueira@gmail.com","STARTEC","No","
+"Yes","Attended Event","In-Person","0000906509@alunosesimg.com.br","ARTHUR DIAS SIQUEIRA","Brazil","Francyelle Dias Siqueira","francyelle.diassiqueira@gmail.com","STARTEC","No","
 				11
 				November
 				2026
@@ -971,7 +995,7 @@
 				2026
 				08:33
 			"
-"No","Registered","In-Person","0000907763@alunosesimg.com.br","PAULO HENRIQUE POLO TOLEDO","Brazil","Alexsandra Cristina Polizer Polo","poloalexsandra@gmail.com","STARTEC","No","
+"Yes","Attended Event","In-Person","0000907763@alunosesimg.com.br","PAULO HENRIQUE POLO TOLEDO","Brazil","Alexsandra Cristina Polizer Polo","poloalexsandra@gmail.com","STARTEC","No","
 				11
 				November
 				2026
@@ -995,13 +1019,13 @@
 				2026
 				22:14
 			"
-"No","Registered","In-Person","priscila.morais.helena@gmail.com","PRISCILA HELENA DE MORAIS","Brazil","N/A","N/A","STARTEC 2","No","
+"No","Registered","In-Person","priscila.morais.helena@gmail.com","PRISCILA HELENA DE MORAIS","Brazil","N/A","N/A","STARTEC 2","Yes","
 				10
 				November
 				2026
 				20:41
 			"
-"No","Registered","Virtual","isabeladantasms@ufu.br","Isabela Dantas de Moraes","Brazil","Aline Dantas de Moraes","alinedantasdemoraes77@gmail.com","21 Pyro Rangers","No","
+"Yes","Attended Event","Virtual","isabeladantasms@ufu.br","Isabela Dantas de Moraes","Brazil","Aline Dantas de Moraes","alinedantasdemoraes77@gmail.com","21 PyroRangers","No","
 				10
 				November
 				2026
@@ -1061,7 +1085,7 @@
 				2026
 				15:07
 			"
-"No","Registered","In-Person","pedro.hmn29@gmail.com","Pedro Henrique de Miranda Nogueira","Brazil","N/A","N/A","N/A","N/A","
+"No","Registered","In-Person","pedro.hmn29@gmail.com","Pedro Henrique de Miranda Nogueira","Brazil","N/A","N/A","Uai Orbit","Yes","
 				10
 				November
 				2026
@@ -1145,7 +1169,7 @@
 				2026
 				22:17
 			"
-"Yes","Attended Event","In-Person","p4blosp@gmail.com","Pablo Silva Prado","Brazil","N/A","N/A","STARTEC 2","No","
+"Yes","Attended Event","In-Person","p4blosp@gmail.com","Pablo Silva Prado","Brazil","N/A","N/A","STARTEC 2","Yes","
 				09
 				November
 				2026
@@ -1325,7 +1349,7 @@
 				2026
 				22:02
 			"
-"No","Registered","In-Person","juliogabrielrf@gmail.com","Júlio Gabriel Rodrigues Fernandes","Brazil","N/A","N/A","iluminat horizontes","No","
+"Yes","Attended Event","In-Person","juliogabrielrf@gmail.com","Júlio Gabriel Rodrigues Fernandes","Brazil","N/A","N/A","iluminat horizontes","No","
 				07
 				November
 				2026
@@ -1385,7 +1409,7 @@
 				2026
 				08:11
 			"
-"No","Registered","In-Person","samuel.gc.professional@gmail.com","Samuel Gomes Costa","Brazil","N/A","N/A","Fundação Futuro","No","
+"Yes","Attended Event","In-Person","samuel.gc.professional@gmail.com","Samuel Gomes Costa","Brazil","N/A","N/A","Fundação Futuro","No","
 				06
 				November
 				2026
@@ -1409,7 +1433,7 @@
 				2026
 				20:29
 			"
-"No","Registered","In-Person","bibi.paulamartins@gmail.com","Bianca de Paula Martins","Brazil","N/A","N/A","Stars & Beyond","No","
+"Yes","Attended Event","In-Person","bibi.paulamartins@gmail.com","Bianca de Paula Martins","Brazil","N/A","N/A","Stars & Beyond","No","
 				05
 				November
 				2026
@@ -1775,7 +1799,7 @@
 				2026
 				23:22
 			"
-"No","Registered","In-Person","mateus.g.dev@gmail.com","Mateus Nogueira","Brazil","N/A","N/A","27 Threads","No","
+"Yes","Attended Event","In-Person","mateus.g.dev@gmail.com","Mateus Nogueira","Brazil","N/A","N/A","27 Threads","No","
 				27
 				October
 				2026
@@ -1925,7 +1949,7 @@
 				2026
 				11:24
 			"
-"No","Registered","Virtual","felipegabfd@gmail.com","Felipe Gabriel Reis Sousa","Brazil","N/A","N/A","N/A","N/A","
+"No","Registered","Virtual","felipegabfd@gmail.com","Felipe Gabriel Reis Sousa","Brazil","N/A","N/A","CodeBioZero","No","
 				15
 				October
 				2026
@@ -2027,7 +2051,7 @@
 				2026
 				19:07
 			"
-"Yes","Attended Event","In-Person","4zyr.ia@gmail.com","Henry Bonasi","Italy","N/A","N/A","Forsaken Elite","No","
+"Yes","Attended Event","In-Person","4zyr.ia@gmail.com","Henry Bonasi","Italy","N/A","N/A","Forsaken Elite","Yes","
 				05
 				October
 				2026
@@ -2201,7 +2225,7 @@
 				2026
 				21:56
 			"
-"No","Registered","In-Person","pr54582@gmail.com","O Grande Soldador","Brazil","N/A","N/A","XBigDevs","No","
+"Yes","Attended Event","In-Person","pr54582@gmail.com","O Grande Soldador","Brazil","N/A","N/A","XBigDevs","No","
 				21
 				September
 				2026
@@ -2225,7 +2249,7 @@
 				2026
 				21:12
 			"
-"No","Registered","In-Person","isabeladesousa.rocha@gmail.com","Isabela de Sousa Faria Pereira Rocha","Brazil","N/A","N/A","21 Pyro Rangers","No","
+"Yes","Attended Event","In-Person","isabeladesousa.rocha@gmail.com","Isabela de Sousa Faria Pereira Rocha","Brazil","N/A","N/A","21 PyroRangers","No","
 				21
 				September
 				2026
@@ -2249,7 +2273,7 @@
 				2026
 				22:03
 			"
-"No","Registered","In-Person","leandroelias16020212@gmail.com","Leandro Elias Fontes Carrijo","Brazil","N/A","N/A","21 Pyro Rangers","No","
+"No","Registered","In-Person","leandroelias16020212@gmail.com","Leandro Elias Fontes Carrijo","Brazil","N/A","N/A","21 PyroRangers","No","
 				17
 				September
 				2026
@@ -2267,7 +2291,7 @@
 				2026
 				21:42
 			"
-"No","Registered","In-Person","celinavieirasilva27@gmail.com","Celina Vieira Silva","Brazil","N/A","N/A","21 Pyro Rangers","No","
+"Yes","Attended Event","In-Person","celinavieirasilva27@gmail.com","Celina Vieira Silva","Brazil","N/A","N/A","21 PyroRangers","No","
 				17
 				September
 				2026
@@ -2327,7 +2351,7 @@
 				2026
 				19:47
 			"
-"No","Registered","In-Person","leandrospcampos@gmail.com","Leandro Silva Pina de Campos","Brazil","N/A","N/A","21 Pyro Rangers","No","
+"Yes","Attended Event","In-Person","leandrospcampos@gmail.com","Leandro Silva Pina de Campos","Brazil","N/A","N/A","21 PyroRangers","No","
 				14
 				September
 				2026
@@ -2363,7 +2387,7 @@
 				2026
 				10:19
 			"
-"No","Registered","In-Person","gabrielesquivel1304@gmail.com","Gabriel Henrique Borges Esquivel","Brazil","N/A","N/A","21 Pyro Rangers","No","
+"No","Registered","In-Person","gabrielesquivel1304@gmail.com","Gabriel Henrique Borges Esquivel","Brazil","N/A","N/A","21 PyroRangers","No","
 				12
 				September
 				2026
