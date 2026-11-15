@@ -8,10 +8,10 @@
           "hasPreviousPage": false,
           "hasNextPage": false,
           "startCursor": "b2Zmc2V0OjA=",
-          "endCursor": "b2Zmc2V0Ojgw",
+          "endCursor": "b2Zmc2V0Ojg0",
           "__typename": "PageInfo"
         },
-        "totalCount": 81,
+        "totalCount": 85,
         "edges": [
           {
             "__typename": "TeamPageEdge",
@@ -19,12 +19,12 @@
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6ODU4MTU=",
-              "title": "21 Pyro Rangers",
+              "title": "21 PyroRangers",
               "meta": {
                 "type": "TEAM",
                 "slug": "123-idea",
                 "firstPublishedAt": "2026-11-13T00:37:41.879000Z",
-                "lastPublishedAt": "2026-11-14T21:10:02.911376Z",
+                "lastPublishedAt": "2026-11-15T15:31:21.908670Z",
                 "relativeUrl": "/2026/find-a-team/123-idea/",
                 "live": true,
                 "parent": null,
@@ -43,15 +43,34 @@
                 "details": "",
                 "solution": "",
                 "aiReferences": "",
-                "dataReferences": "",
-                "projectReferences": "",
+                "dataReferences": "[BASS-II (PSI-25) Empirical Microgravity Combustion Dataset (DOI 10.60555/4qc4-de67)](https://doi.org/10.60555/4qc4-de67)\n[NASA/TM-20210011385: BASS-II Summary Report (Olson et al., 2021)](https://ntrs.nasa.gov/citations/20210011385)\n[NTRS-20160000593: Combustion of Solids in Microgravity (BASS-II Results)](https://ntrs.nasa.gov/citations/20160000593)\n[NTRS-20150019858: On-Board CSA-CP & CDM Sensor Readings During BASS-II](https://ntrs.nasa.gov/citations/20150019858)\n[NTRS-20170006615: Mixed Convection Blowoff Limits for Burning PMMA Rods](https://ntrs.nasa.gov/citations/20170006615)\n[NTRS-20160012691: Normal Gravity vs. Microgravity Forced Flow Blowoff Limits](https://ntrs.nasa.gov/citations/20160012691)\n[NTRS-20150008961: Microgravity Flammability of PMMA Rods in Concurrent Flow](https://ntrs.nasa.gov/citations/20150008961)\n[NTRS-20170000230: Operation and Development Status of Saffire](https://ntrs.nasa.gov/citations/20170000230)\n[NTRS-20240002981: Preliminary Results from the Saffire VI Experiment (Paper)](https://ntrs.nasa.gov/citations/20240002981)\n[NTRS-20240007488: Preliminary Results from the Saffire VI Experiment (Presentation)](https://ntrs.nasa.gov/citations/20240007488)\n[NTRS-20260001600: Spacecraft Fire Safety Predictions using Verified Saffire Model](https://ntrs.nasa.gov/citations/20260001600)\n[NTRS-20220002714: Model Development of Large-Scale Fires During Saffire-IV](https://ntrs.nasa.gov/citations/20220002714)\n[NTRS-20210017780: Fire Safety Implications from Saffire IV and V](https://ntrs.nasa.gov/citations/20210017780)\n[NTRS-20180005168: Saffire Novel Approach Using Un-Manned Spacecraft](https://ntrs.nasa.gov/citations/20180005168)\n[NTRS-20170001636: The Spacecraft Fire Experiment (Saffire) Objectives & Status](https://ntrs.nasa.gov/citations/20170001636)\n[NTRS-20150000894: Large-Scale Spacecraft Fire Safety Tests (Saffire)](https://ntrs.nasa.gov/citations/20150000894)\n[NTRS-20170007283: Spacecraft Fire Safety & SAME Research at NASA Glenn](https://ntrs.nasa.gov/citations/20170007283)\n[NTRS-20130011664: ISS Fine Water Mist Portable Fire Extinguisher (FWM PFE)](https://ntrs.nasa.gov/citations/20130011664)\n[NTRS-20030003652: Microgravity Boiling Heat Transfer (NASA Glenn)](https://ntrs.nasa.gov/citations/20030003652)\n[NASA PSI: SoFIE (Solid Fuel Ignition and Extinction)](https://psi.nasa.gov/physci/repo/search?q=SoFIE)\n[NASA PSI: FLEX (Flame Extinguishment Experiment)](https://psi.nasa.gov/physci/repo/search?q=FLEX)\n[NASA PSI: SPICE (Smoke Point In Co-flow Experiment)](https://psi.nasa.gov/physci/repo/search?q=SPICE)",
+                "projectReferences": "[Brazilian Microgravity Heat Transfer Research — VSB-30 Rocket (UFSC / AEB / INPE)](https://lepten.ufsc.br/publicacoes/boiling/eventos/2011/COBEM/souza_passos.pdf)\n[Unity WebGL (3D Fire & Suppression Simulator)](https://unity.com)\n[FastAPI (Backend API Framework, MIT License)](https://fastapi.tiangolo.com)\n[Pydantic V2 (Data Validation & Schema, MIT License)](https://docs.pydantic.dev)\n[React & TypeScript (Frontend UI, MIT / Apache-2.0)](https://react.dev)\n[Three.js (3D Microgravity Chamber, MIT License)](https://threejs.org)\n[Tailwind CSS (UI Styling, MIT License)](https://tailwindcss.com)\n[Vite (Frontend Build Tooling, MIT License)](https://vite.dev)\n[React Router (Client-Side Routing, MIT License)](https://reactrouter.com)\n[Ajv (JSON Schema Validator, MIT License)](https://ajv.js.org)\n[Lucide Icons (UI Vector Icons, ISC License)](https://lucide.dev/license)\n[IBM Plex Sans & Mono Fonts (SIL OFL 1.1)](https://github.com/IBM/plex)\n[Fontsource (Self-Hosted Font Packaging, MIT License)](https://fontsource.org)",
                 "isSubmitted": false,
-                "savedAt": "2026-11-14T21:42:20.488235Z",
+                "savedAt": "2026-11-15T17:52:03.244753Z",
                 "submittedAt": null,
                 "__typename": "Project"
               },
               "projectSubmitted": false,
-              "featuredImage": null,
+              "featuredImage": {
+                "id": "aWQ6NTc2NDY2",
+                "meta": {
+                  "type": "images.CustomImage",
+                  "downloadUrl": "https://assets.spaceappschallenge.org/media/original_images/WhatsApp_Image_2026-11-15_at_12.30.53.jpeg",
+                  "__typename": "ImageMeta"
+                },
+                "title": "team_image.15:31:21.025373",
+                "alt": "team_image.15:31:21.025373",
+                "caption": "team_image.15:31:21.025373",
+                "displaySize": "or",
+                "rendition": {
+                  "url": "https://assets.spaceappschallenge.org/media/images/WhatsApp_Image_2026-11-15_at_12.30.2e16d0ba.fill-300x250.jpg",
+                  "fullUrl": "https://assets.spaceappschallenge.org/media/images/WhatsApp_Image_2026-11-15_at_12.30.2e16d0ba.fill-300x250.jpg",
+                  "height": 250,
+                  "width": 300,
+                  "__typename": "BaseImage"
+                },
+                "__typename": "DefaultImage"
+              },
               "description": null,
               "desiredSkills": null,
               "languages": null,
@@ -738,17 +757,17 @@
               "project": "aWQ6ODEyNDM=",
               "projectDetails": {
                 "id": "aWQ6ODEyNDM=",
-                "name": "Project ARARA",
-                "summary": "",
+                "name": "ARARA — Exploring Water Change",
+                "summary": "ARARA is an interactive web platform that helps people investigate how surface water changes over time using NASA–ISRO NISAR radar data. Users can select an area on a world map and discover available observations through the Alaska Satellite Facility catalog. Our processing prototype classifies open water and produces temporal comparisons, helping users explore water expansion, retreat, and persistence.\n\nDeveloped for “Dancing with the SARs,” ARARA focuses on an essential question: what changed in the water we can observe, and how much can we trust that change? Radar can observe through clouds and without daylight, making it valuable where optical monitoring is interrupted.\n\nThe platform combines geographic exploration, preserved case studies, and evidence-aware results. It distinguishes satellite coverage from classified water, flags limitations, and uses Sentinel-2 comparisons where available. Our goal is to make radar-based water studies more accessible to students, researchers, and water-resource practitioners—supporting investigation without presenting uncertain measurements as confirmed environmental events.",
                 "demoLink": "",
                 "projectLink": "",
-                "details": "",
+                "details": "<h3 style=\"text-align:start\"><span style=\"white-space:pre-wrap\">The problem</span></h3><p style=\"text-align:start\"><span style=\"white-space:pre-wrap\">Water changes affect ecosystems, agriculture, and water-resource planning. However, satellite observations are often difficult to access and interpret. Optical imagery can be interrupted by clouds, while radar requires specialized processing. A visually convincing map can also be misleading if classification errors and observation quality are not explained.</span></p><h3 style=\"text-align:start\"><span style=\"white-space:pre-wrap\">Our solution</span></h3><p style=\"text-align:start\"><span style=\"white-space:pre-wrap\">ARARA is an interactive study platform built around a world map. Instead of limiting users to a single location, it allows them to select their own area and explore available NISAR observations. Furnas, Brazil, serves as a preserved reference study—not as the boundary of the platform.</span></p><p style=\"text-align:start\"><span style=\"white-space:pre-wrap\">The project separates three questions:</span></p><ol><li><span style=\"white-space:pre-wrap\">Are satellite observations available for this area?</span></li><li><span style=\"white-space:pre-wrap\">What surface-water change does the classification suggest?</span></li><li><span style=\"white-space:pre-wrap\">What evidence and limitations should be checked before interpreting it?</span></li></ol><h3 style=\"text-align:start\"><span style=\"white-space:pre-wrap\">How it works</span></h3><p style=\"text-align:start\"><span style=\"white-space:pre-wrap\">The web interface queries the Alaska Satellite Facility catalog for NISAR scenes intersecting a selected area. It summarizes observation dates, revisit intervals, and acquisition geometries.</span></p><p style=\"text-align:start\"><span style=\"white-space:pre-wrap\">A separate processing service performs the computationally intensive water analysis. Its outputs include classified water area by date, expansion and retreat between observations, temporal trends, and water persistence within the observed period. Where available, Sentinel-2 imagery provides an independent optical comparison.</span></p><p style=\"text-align:start\"><span style=\"white-space:pre-wrap\">The results interface presents measurements alongside caveats such as wind interference, incomplete coverage, experimental classification, and disagreement between radar and optical observations. Persistence within a short series is not presented as proof of year-round permanence, and water-area change is not treated as a direct measurement of water volume.</span></p><h3 style=\"text-align:start\"><span style=\"white-space:pre-wrap\">Current prototype and limitations</span></h3><p style=\"text-align:start\"><span style=\"white-space:pre-wrap\">The web prototype supports global catalog exploration and a preserved Furnas study. New water analyses and completed-study retrieval require a publicly reachable ARARA processing service; this connection is not yet deployed in the current web preview.</span></p><p style=\"text-align:start\"><span style=\"white-space:pre-wrap\">Classification is not universally validated. Agricultural surfaces, wet soil, and other low-backscatter areas can be confused with open water. These limitations motivate our emphasis on verification rather than automatic conclusions. The current prototype does not establish flood damage, water quality, or the cause of a detected change.</span></p><blockquote style=\"text-align:start\"><p style=\"text-align:start\"><span style=\"white-space:pre-wrap\">Classified area was compared against ANA's official reservoir area, with a mean absolute difference of about 1.0% over the seven calm dates; this agreement is specific to Furnas and does not extend to other regions.</span></p></blockquote><h3 style=\"text-align:start\"><span style=\"white-space:pre-wrap\">Creativity and intended impact</span></h3><p style=\"text-align:start\"><span style=\"white-space:pre-wrap\">ARARA combines global discovery with local investigation and makes uncertainty part of the user experience. Its intended impact is to reduce the barrier between open satellite data and reproducible water studies, helping users identify changes worth investigating and understand when additional evidence is needed.</span></p><h3 style=\"text-align:start\"><span style=\"white-space:pre-wrap\">Tools and development</span></h3><p style=\"text-align:start\"><span style=\"white-space:pre-wrap\">The web application uses TypeScript, React, TanStack Start, Tailwind CSS, and Leaflet. The separate analysis pipeline uses Python. NASA–ISRO NISAR observations are accessed through ASF, with Sentinel-2 used for optical validation where available. Source code and documented limitations support transparency and further development.</span></p>",
                 "solution": "",
                 "aiReferences": "",
-                "dataReferences": "",
-                "projectReferences": "",
+                "dataReferences": "[NASA–ISRO Synthetic Aperture Radar (NISAR)](https://nisar.jpl.nasa.gov/)\n[NASA Earthdata — Alaska Satellite Facility DAAC](https://www.earthdata.nasa.gov/centers/asf-daac)\n[ASF Search API](https://docs.asf.alaska.edu/api/)",
+                "projectReferences": "[Copernicus Sentinel-2 — optical validation](https://www.esa.int/Applications/Observing_the_Earth/Copernicus/Sentinel-2)\n[Leaflet — interactive maps](https://leafletjs.com/)\n[OpenStreetMap — basemap data](https://www.openstreetmap.org/copyright)\n[ANA — Agência Nacional de Águas e Saneamento Básico (Brazil)](https://www.gov.br/ana/pt-br/sala-de-situacao/sistemas-hidricos-dos-rios-grande-e-paranaiba)",
                 "isSubmitted": false,
-                "savedAt": null,
+                "savedAt": "2026-11-15T14:24:20.366191Z",
                 "submittedAt": null,
                 "__typename": "Project"
               },
@@ -829,7 +848,7 @@
                 "type": "TEAM",
                 "slug": "arquitetos-do-cosmo",
                 "firstPublishedAt": "2026-11-05T01:24:17.798000Z",
-                "lastPublishedAt": "2026-11-14T18:20:28.487184Z",
+                "lastPublishedAt": "2026-11-15T18:20:07.957089Z",
                 "relativeUrl": "/2026/find-a-team/arquitetos-do-cosmo/",
                 "live": true,
                 "parent": null,
@@ -1121,6 +1140,90 @@
             "cursor": "b2Zmc2V0OjEx",
             "node": {
               "__typename": "TeamPage",
+              "id": "aWQ6OTMyNjM=",
+              "title": "Bebop Crew",
+              "meta": {
+                "type": "TEAM",
+                "slug": "bebop-crew",
+                "firstPublishedAt": null,
+                "lastPublishedAt": null,
+                "relativeUrl": "/2026/find-a-team/bebop-crew/",
+                "live": true,
+                "parent": null,
+                "__typename": "ExpandedPageMeta"
+              },
+              "owner": "aWQ6MDY0ZGJmZjQtOGJhMC00ZGNmLTk1NjQtZDQyZThmMjM0MzE1",
+              "ownerDetails": null,
+              "excerpt": "Hi! I'm Áurea Simões, a Mechanical Engineering student passionate about robotics, Python, C/C++, PID control, and neural networks. I'm forming a team for the Martian Map challenge to build Martian Pathfinder: an intelligent system that uses NASA t...",
+              "project": "aWQ6ODk2NjE=",
+              "projectDetails": {
+                "id": "aWQ6ODk2NjE=",
+                "name": "Project Bebop Crew",
+                "summary": "",
+                "demoLink": "",
+                "projectLink": "",
+                "details": "",
+                "solution": "",
+                "aiReferences": "",
+                "dataReferences": "",
+                "projectReferences": "",
+                "isSubmitted": false,
+                "savedAt": null,
+                "submittedAt": null,
+                "__typename": "Project"
+              },
+              "projectSubmitted": false,
+              "featuredImage": null,
+              "description": null,
+              "desiredSkills": null,
+              "languages": null,
+              "challenge": "aWQ6NTUxMTg=",
+              "challengeDetails": {
+                "id": "aWQ6NTUxMTg=",
+                "title": "Interplanetary Survival Guide: Martian Map",
+                "meta": {
+                  "type": "CHALLENGE",
+                  "slug": "interplanetary-survival-guide-martian-map",
+                  "firstPublishedAt": "2026-09-17T14:21:03.079000Z",
+                  "lastPublishedAt": "2026-11-13T03:46:20.420900Z",
+                  "relativeUrl": "/2026/challenges/interplanetary-survival-guide-martian-map/",
+                  "live": true,
+                  "parent": null,
+                  "__typename": "ExpandedPageMeta"
+                },
+                "excerpt": "NASA has explored Mars robotically for decades, studying its extreme environment, mapping its surface, and collecting many types of data. Far from home, the first astronauts to set foot on Mars will want the best map possible, with information on the details of their routes and destinations, updates on current conditions, and the data needed to complete their mission quickly and safely. Your challenge is to create a layered, integrated view of a location or route on the Martian surface that pulls together data from multiple NASA science missions and could help a human explorer plan and carry out a successful Marswalk while conducting new and exciting science along the way.",
+                "__typename": "ChallengePage"
+              },
+              "location": "aWQ6NTQ0NDY=",
+              "locationDetails": {
+                "id": "aWQ6NTQ0NDY=",
+                "title": "Uberlândia",
+                "displayName": "",
+                "meta": {
+                  "type": "LOCATION",
+                  "slug": "uberlandia",
+                  "firstPublishedAt": "2026-08-20T13:11:16.191000Z",
+                  "lastPublishedAt": "2026-11-02T14:14:24.314767Z",
+                  "relativeUrl": "/2026/local-events/uberlandia/",
+                  "live": true,
+                  "parent": null,
+                  "__typename": "ExpandedPageMeta"
+                },
+                "country": "Brazil",
+                "__typename": "LocationPage"
+              },
+              "event": "aWQ6NA==",
+              "joinEnabled": true,
+              "memberships": null,
+              "nominationBadges": null,
+              "awardBadges": null
+            }
+          },
+          {
+            "__typename": "TeamPageEdge",
+            "cursor": "b2Zmc2V0OjEy",
+            "node": {
+              "__typename": "TeamPage",
               "id": "aWQ6ODA1MDc=",
               "title": "BIM1304",
               "meta": {
@@ -1237,7 +1340,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjEy",
+            "cursor": "b2Zmc2V0OjEz",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6NTg2NDg=",
@@ -1340,7 +1443,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjEz",
+            "cursor": "b2Zmc2V0OjE0",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6Njg3MzU=",
@@ -1443,7 +1546,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjE0",
+            "cursor": "b2Zmc2V0OjE1",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6ODkxODA=",
@@ -1546,7 +1649,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjE1",
+            "cursor": "b2Zmc2V0OjE2",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6ODMxNjc=",
@@ -1649,7 +1752,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjE2",
+            "cursor": "b2Zmc2V0OjE3",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6ODgzOTc=",
@@ -1752,7 +1855,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjE3",
+            "cursor": "b2Zmc2V0OjE4",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6ODc3MDI=",
@@ -1855,7 +1958,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjE4",
+            "cursor": "b2Zmc2V0OjE5",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6ODc1OTM=",
@@ -1958,7 +2061,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjE5",
+            "cursor": "b2Zmc2V0OjIw",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6OTA2ODU=",
@@ -2042,7 +2145,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjIw",
+            "cursor": "b2Zmc2V0OjIx",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6Njk3NDk=",
@@ -2063,17 +2166,17 @@
               "project": "aWQ6NjYxNTE=",
               "projectDetails": {
                 "id": "aWQ6NjYxNTE=",
-                "name": "Project Code and cheese",
-                "summary": "",
+                "name": "CheeseOS",
+                "summary": "CheeseOS is an autonomous health system for astronauts, built for missions where a doctor isn’t just a click away. The astronaut interacts with a 3D human body and uses their voice to describe what they feel and where. The system interprets the report, pinpoints the symptom on the 3D model, and instantly returns clear, practical care guidance.\n\nMonitoring health in space gets harder with every mission. On trips to the Moon and Mars, communication with Earth can be delayed by several minutes or even lost entirely, so waiting for a doctor’s response isn’t always an option. CheeseOS solves this by giving astronauts an immediate answer without relying on anyone on the ground. At the same time, every report is logged, and medical teams on Earth can review this history later to follow the crew’s health throughout the mission.\n\nThis matters because the farther humanity travels, the more autonomous the crew needs to be. CheeseOS is a step in that direction.",
                 "demoLink": "",
-                "projectLink": "",
-                "details": "",
+                "projectLink": "https://github.com/isabelacode/cheeseOS",
+                "details": "<p><b><strong style=\"white-space:pre-wrap\">What it does and how it works</strong></b><br/><span style=\"white-space:pre-wrap\">CheeseOS is an autonomous health system for astronauts. Its core interface is a 3D human body. The astronaut describes what they feel and where, either by speaking or typing. The system interprets the report, highlights the affected area on the 3D model, and instantly returns clear, practical care guidance. Voice input was designed to be built into the helmet, so even during an extravehicular activity the astronaut has a guide for what to do about an injury. Every report is saved to a history that reaches medical teams on Earth as soon as communication allows. Doctors analyze the case and send back more detailed feedback. This way the astronaut is never left without knowing what to do in the moment and, shortly after, receives a complete professional assessment.</span></p><p><b><strong style=\"white-space:pre-wrap\">Benefits</strong></b><br/><span style=\"white-space:pre-wrap\">Astronauts get immediate help without waiting for mission control. They choose how to communicate: typing inside the spacecraft, or speaking when their hands are busy or they are suited up. With voice in the helmet, support doesn’t stop at the hatch and follows the astronaut on spacewalks, one of the highest risk moments for injury. The 3D model makes reports more precise, since showing where it hurts is easier than explaining it. And care happens in two layers: instant guidance from the system, followed by detailed feedback from doctors on the ground, who also gain a continuous view of the crew’s health.</span></p><p><b><strong style=\"white-space:pre-wrap\">Factors the team considered</strong></b><br/><span style=\"white-space:pre-wrap\">Communication delays and blackouts with Earth, which is why the first guidance has to come from the system itself. Ease of use under stress, since someone who is hurt needs something simple. Flexible input, with voice and text for different situations. The limitations of the spacesuit, which make using hands difficult and led to the idea of voice in the helmet. Clear guidance that any crew member can follow, even without medical training. And continuity of care, with everything logged so the medical team on the ground can analyze it and build on the initial guidance.</span></p>",
                 "solution": "",
                 "aiReferences": "",
-                "dataReferences": "",
+                "dataReferences": "[5 Hazards of Human Spaceflight](https://www.nasa.gov/hrp/hazards/)\n[The Human Body in Space](https://www.nasa.gov/humans-in-space/the-human-body-in-space/)\n[Human Research Roadmap](https://humanresearchroadmap.nasa.gov/)\n[Risk of Spaceflight Associated Neuro-ocular Syndrome ](https://humanresearchroadmap.nasa.gov/evidence/reports/SANS%20EB%202022%20FINAL_8-15-22.pdf)",
                 "projectReferences": "",
                 "isSubmitted": false,
-                "savedAt": "2026-11-14T16:33:08.803942Z",
+                "savedAt": "2026-11-15T14:38:45.145984Z",
                 "submittedAt": null,
                 "__typename": "Project"
               },
@@ -2145,7 +2248,110 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjIx",
+            "cursor": "b2Zmc2V0OjIy",
+            "node": {
+              "__typename": "TeamPage",
+              "id": "aWQ6OTM1MjI=",
+              "title": "CodeBioZero",
+              "meta": {
+                "type": "TEAM",
+                "slug": "codebiozero",
+                "firstPublishedAt": null,
+                "lastPublishedAt": null,
+                "relativeUrl": "/2026/find-a-team/codebiozero/",
+                "live": true,
+                "parent": null,
+                "__typename": "ExpandedPageMeta"
+              },
+              "owner": "aWQ6OWY3ZmYyNWMtNmFjOC00NDRlLWI4ZDctZWJiOGNmMjYzMTY2",
+              "ownerDetails": null,
+              "excerpt": "A codeZero é uma equipe apaixonada por tecnologia, inovação e resolução de problemas. Unimos criatividade, programação e colaboração para transformar desafios complexos em soluções inteligentes e de impacto real. Acreditamos que toda grande inovaç...",
+              "project": "aWQ6ODk5MjA=",
+              "projectDetails": {
+                "id": "aWQ6ODk5MjA=",
+                "name": "Project CodeBioZero",
+                "summary": "",
+                "demoLink": "",
+                "projectLink": "",
+                "details": "",
+                "solution": "",
+                "aiReferences": "",
+                "dataReferences": "",
+                "projectReferences": "",
+                "isSubmitted": false,
+                "savedAt": null,
+                "submittedAt": null,
+                "__typename": "Project"
+              },
+              "projectSubmitted": false,
+              "featuredImage": {
+                "id": "aWQ6NTc3NTYy",
+                "meta": {
+                  "type": "images.CustomImage",
+                  "downloadUrl": "https://assets.spaceappschallenge.org/media/original_images/9309133b-dd20-4eee-b981-b77d76a0001f_wsg0Hap.png",
+                  "__typename": "ImageMeta"
+                },
+                "title": "team_image.16:46:49.946274",
+                "alt": "team_image.16:46:49.946274",
+                "caption": "team_image.16:46:49.946274",
+                "displaySize": "or",
+                "rendition": {
+                  "url": "https://assets.spaceappschallenge.org/media/images/9309133b-dd20-4eee-b981-b77d76a000_sG7ZZ4O.2e16d0ba.fill-300x250.png",
+                  "fullUrl": "https://assets.spaceappschallenge.org/media/images/9309133b-dd20-4eee-b981-b77d76a000_sG7ZZ4O.2e16d0ba.fill-300x250.png",
+                  "height": 250,
+                  "width": 300,
+                  "__typename": "BaseImage"
+                },
+                "__typename": "DefaultImage"
+              },
+              "description": null,
+              "desiredSkills": null,
+              "languages": null,
+              "challenge": "aWQ6NTUxMzA=",
+              "challengeDetails": {
+                "id": "aWQ6NTUxMzA=",
+                "title": "Create Health Monitoring Software for Astronauts on Space Missions",
+                "meta": {
+                  "type": "CHALLENGE",
+                  "slug": "health-monitoring-software",
+                  "firstPublishedAt": "2026-09-17T14:21:16.942000Z",
+                  "lastPublishedAt": "2026-11-13T03:46:22.373143Z",
+                  "relativeUrl": "/2026/challenges/health-monitoring-software/",
+                  "live": true,
+                  "parent": null,
+                  "__typename": "ExpandedPageMeta"
+                },
+                "excerpt": "Long-duration missions expose astronauts to space radiation, isolation and confinement, altered gravity, and a hostile closed environment, which can bring immune changes, bone loss, cardiovascular events, and behavioral health problems. On long missions, astronauts carry much of the responsibility for spotting these changes in themselves. Your challenge is to build a health monitoring software that gathers health indicators and enables astronauts to evaluate and act on the status of their health.",
+                "__typename": "ChallengePage"
+              },
+              "location": "aWQ6NTQ0NDY=",
+              "locationDetails": {
+                "id": "aWQ6NTQ0NDY=",
+                "title": "Uberlândia",
+                "displayName": "",
+                "meta": {
+                  "type": "LOCATION",
+                  "slug": "uberlandia",
+                  "firstPublishedAt": "2026-08-20T13:11:16.191000Z",
+                  "lastPublishedAt": "2026-11-02T14:14:24.314767Z",
+                  "relativeUrl": "/2026/local-events/uberlandia/",
+                  "live": true,
+                  "parent": null,
+                  "__typename": "ExpandedPageMeta"
+                },
+                "country": "Brazil",
+                "__typename": "LocationPage"
+              },
+              "event": "aWQ6NA==",
+              "joinEnabled": false,
+              "memberships": null,
+              "nominationBadges": null,
+              "awardBadges": null
+            }
+          },
+          {
+            "__typename": "TeamPageEdge",
+            "cursor": "b2Zmc2V0OjIz",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6Nzg0NjI=",
@@ -2166,7 +2372,7 @@
               "project": "aWQ6NzQ4NjA=",
               "projectDetails": {
                 "id": "aWQ6NzQ4NjA=",
-                "name": "Project DUOLIBRAS",
+                "name": "Project CosmoHealth",
                 "summary": "",
                 "demoLink": "",
                 "projectLink": "",
@@ -2176,7 +2382,7 @@
                 "dataReferences": "",
                 "projectReferences": "",
                 "isSubmitted": false,
-                "savedAt": null,
+                "savedAt": "2026-11-15T17:55:49.341988Z",
                 "submittedAt": null,
                 "__typename": "Project"
               },
@@ -2248,7 +2454,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjIy",
+            "cursor": "b2Zmc2V0OjI0",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6ODE5Nzc=",
@@ -2351,7 +2557,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjIz",
+            "cursor": "b2Zmc2V0OjI1",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6OTE2ODQ=",
@@ -2435,7 +2641,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjI0",
+            "cursor": "b2Zmc2V0OjI2",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6NTk4OTc=",
@@ -2550,7 +2756,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjI1",
+            "cursor": "b2Zmc2V0OjI3",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6ODA5NDE=",
@@ -2653,7 +2859,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjI2",
+            "cursor": "b2Zmc2V0OjI4",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6OTExMTU=",
@@ -2756,7 +2962,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjI3",
+            "cursor": "b2Zmc2V0OjI5",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6ODQwNDA=",
@@ -2859,7 +3065,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjI4",
+            "cursor": "b2Zmc2V0OjMw",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6ODQxNTY=",
@@ -2880,21 +3086,21 @@
               "project": "aWQ6ODA1NTM=",
               "projectDetails": {
                 "id": "aWQ6ODA1NTM=",
-                "name": "Project Formandos UDI",
-                "summary": "",
-                "demoLink": "",
-                "projectLink": "",
-                "details": "",
+                "name": "Vigília — Explainable Health Monitoring for Astronauts",
+                "summary": "Vigília is an offline web app that helps astronauts notice changes in their own health and know what to do, without depending on a live link to Earth. It follows the flow Collect → Interpret → Guide. Crew members log seven indicators: resting heart rate, heart rate variability, blood pressure, sleep, self-reported mood/stress/fatigue, body mass and exercise load. A deterministic rule engine compares each measurement with the astronaut's own pre-flight baseline, never with population ranges. It recognizes patterns across signals: short sleep, falling HRV and rising heart rate together become an \"overload\" alert. It also links exercise adherence to body-mass loss, without claiming causation. Every alert shows the formula, the numbers behind it, practical guidance, the NASA source, and when to contact the crew medical officer. Missing data is shown as \"Not assessed\", never as \"Normal\". The demo uses clearly labeled synthetic data in three scenarios. Vigília matters because on long missions, communication delays and limited medical resources mean the crew must detect problems early and act on their own.",
+                "demoLink": "https://github.com/WedersonSantos/Nasa-Space-Apps---Health-Monitoring/blob/main/presentation-output/Vigilia-Space-Apps.pdf",
+                "projectLink": "https://nasa-chi-ten.vercel.app",
+                "details": "<p><span style=\"white-space:pre-wrap\">WHAT IT DOES</span></p><p><span style=\"white-space:pre-wrap\">Vigília monitors astronaut health over a mission in three steps:</span></p><p><span style=\"white-space:pre-wrap\">1. Collect: crew members log measurements (manual entry with validation, plus a 1–5 self-report of mood, stress and fatigue). Each value carries its origin: Synthetic, Measured or Estimated.</span></p><p><span style=\"white-space:pre-wrap\">2. Interpret: a pure, deterministic rule engine compares each value with the astronaut's individual pre-flight baseline (7 days). Rules: resting HR z-score, HRV drop, blood-pressure drift, accumulated sleep deficit, self-report decline, body-mass loss and exercise adherence. A composite rule detects overload (sleep ↓, HRV ↓, HR ↑ together). An association rule links body-mass loss with low exercise adherence over 21 days, using the language of possibility, never causation. Combined with a blood-pressure deviation, it escalates to the crew medical officer.</span></p><p><span style=\"white-space:pre-wrap\">3. Guide: every alert shows its title, explanation, the exact arithmetic, the numeric evidence (current × baseline × deviation), preventive guidance, the scientific source, and whether to escalate. The crew can log what they did (\"Measurement repeated\", \"CMO contacted\", \"Action completed\").</span></p><p><span style=\"white-space:pre-wrap\">KEY FEATURES</span></p><p><span style=\"white-space:pre-wrap\">- Explainable by design: no alert exists without a visible formula. Thresholds without a published source are labeled \"Arbitrary threshold · subject to clinical validation\".</span></p><p><span style=\"white-space:pre-wrap\">- \"No alert\" is never shown as \"normal\": when data is missing, stale or the baseline is still forming, the signal is shown as \"Not assessed\" with the reason.</span></p><p><span style=\"white-space:pre-wrap\">- Each indicator is mapped to a NASA HRP spaceflight hazard and comes with microgravity-adapted measurement instructions (for example, blood pressure with the body restrained, mass measured by linear acceleration).</span></p><p><span style=\"white-space:pre-wrap\">- Mission track: replay any mission day and see exactly when each pattern emerged.</span></p><p><span style=\"white-space:pre-wrap\">- Crew registration: up to 8 members with role on board; each member's data, baseline and actions stay separate.</span></p><p><span style=\"white-space:pre-wrap\">- Works offline (service worker, local storage, no backend), because an app for astronauts must work without Earth.</span></p><p><span style=\"white-space:pre-wrap\">- Bilingual interface (English / Portuguese), light and dark themes, responsive, keyboard and screen-reader friendly; status is never conveyed by color alone.</span></p><p><span style=\"white-space:pre-wrap\">DEMO SCENARIOS (synthetic data, 120 days each)</span></p><p><span style=\"white-space:pre-wrap\">1. Nominal: stays \"Normal\" on all 113 mission days, with zero false positives.</span></p><p><span style=\"white-space:pre-wrap\">2. Gradual degradation: the overload alert fires on day 102.</span></p><p><span style=\"white-space:pre-wrap\">3. Critical with countermeasure: low exercise adherence, body-mass loss and blood-pressure drift escalate to the crew medical officer on day 111.</span></p><p><span style=\"white-space:pre-wrap\">All scenarios are checked by 76 automated tests.</span></p><p><span style=\"white-space:pre-wrap\">TOOLS AND TECHNOLOGIES</span></p><p><span style=\"white-space:pre-wrap\">TypeScript, React 18, Vite, Recharts, Vitest; rule engine in plain TypeScript with no dependencies; service worker for offline use; static deployment on Vercel. Open source under Apache-2.0.</span></p><p><span style=\"white-space:pre-wrap\">CREATIVITY AND DESIGN CHOICES</span></p><p><span style=\"white-space:pre-wrap\">Instead of a dashboard of vital signs, Vigília reads patterns across signals and tells the astronaut what to do. It deliberately associates rather than models, keeps AI out of the decision path so every alert stays auditable, and is honest about its limits.</span></p><p><span style=\"white-space:pre-wrap\">FACTORS WE CONSIDERED</span></p><p><span style=\"white-space:pre-wrap\">Communication delay and offline operation; crew fatigue and limited time; individual baselines instead of clinical cutoffs; false-alarm prevention (SD floors, consecutive-day rules); data honesty (synthetic data labeled everywhere); privacy (nicknames only, data stays on the device); and the limits of a non-diagnostic tool.</span></p><p><span style=\"white-space:pre-wrap\">LIMITATIONS AND FUTURE WORK</span></p><p><span style=\"white-space:pre-wrap\">Thresholds need clinical validation; there is no real astronaut telemetry; there is no login or access control. Next steps: radiation dosimetry as mission context, SANS screening, bone markers, validation with aerospace medical teams, and adaptation for remote environments on Earth (Antarctic bases, offshore platforms).</span></p>",
                 "solution": "",
                 "aiReferences": "",
-                "dataReferences": "",
-                "projectReferences": "",
-                "isSubmitted": false,
-                "savedAt": null,
-                "submittedAt": null,
+                "dataReferences": "[NASA HRP — 5 Hazards of Human Spaceflight](https://www.nasa.gov/hrp/hazards/)\n[NASA HRP — Risks of Human Spaceflight](https://www.nasa.gov/hrp/risks/)\n[NASA HRP — Ongoing HRP Research in Space](https://www.nasa.gov/hrp/ongoing-hrp-research/)\n[NASA Human Research Roadmap — Sleep Evidence Report](https://humanresearchroadmap.nasa.gov/evidence/reports/Sleep.pdf)\n[NASA Human Research Roadmap — Osteoporosis Evidence Report](https://humanresearchroadmap.nasa.gov/evidence/reports/Osteo.pdf)\n[NASA-STD-3001 Technical Brief — Sleep Accommodations](https://www.nasa.gov/wp-content/uploads/2023/03/sleep-accomodations-technical-brief-ochmo.pdf)\n[NASA Ames — Interesting Fact of the Month 2022 (astronaut sleep)](https://www.nasa.gov/space-science-and-astrobiology-at-ames/interesting-fact-of-the-month-current/interesting-fact-of-the-month-2022/)\n[NASA/SP-20250000273 — Astronaut Physiological Deconditioning](https://www.nasa.gov/wp-content/uploads/2025/02/sp-20250000273.pdf)\n[NASA — Astronaut Exercise (ISS Research)](https://www.nasa.gov/missions/station/iss-research/astronaut-exercise/)\n[NASA — Nutritional Biochemistry of Space Flight](https://www.nasa.gov/wp-content/uploads/2023/04/nutritional-biochemistry-of-space-flight.pdf)\n[NASA Open Science Data Repository (OSDR)](https://osdr.nasa.gov/)\n[NASA Life Sciences Portal (NLSP)](https://nlsp.nasa.gov/)\n[NASA Image — Astronaut Bob Hines works out on the space station (used in the slides)](https://www.nasa.gov/image-article/astronaut-bob-hines-works-out-space-station-2/)",
+                "projectReferences": "[CSA — Monitoring Radiation for Astronaut Health](https://www.asc-csa.gc.ca/eng/news/articles/2026/2026-02-26-monitoring-radiation-astronaut-health.asp)\n[CSA — Why Do We Conduct Science Experiments in Space?](https://www.asc-csa.gc.ca/eng/iss/science/why-do-we-conduct-science-experiments-in-space.asp)\n[React (MIT)](https://react.dev/)\n[Recharts (MIT)](https://recharts.org/)\n[Vite (MIT)](https://vite.dev/)\n[Vitest (MIT)](https://vitest.dev/)\n[TypeScript (Apache-2.0)\t](https://www.typescriptlang.org/)\n[Archivo font via Fontsource (SIL OFL 1.1)](https://fontsource.org/fonts/archivo)\n[Lucide icons, used in the slides (ISC)](https://lucide.dev/license)\n[Vercel (hosting)](https://vercel.com/)\n[Claude by Anthropic (SI assistant)](https://www.anthropic.com/claude)\n[Codex by OpenAI (SI assistant)](https://openai.com/codex/)",
+                "isSubmitted": true,
+                "savedAt": "2026-11-15T17:50:13.011574Z",
+                "submittedAt": "2026-11-15T17:50:13.011574Z",
                 "__typename": "Project"
               },
-              "projectSubmitted": false,
+              "projectSubmitted": true,
               "featuredImage": {
                 "id": "aWQ6NTQ1MDUx",
                 "meta": {
@@ -2962,7 +3168,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjI5",
+            "cursor": "b2Zmc2V0OjMx",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6OTE4NTI=",
@@ -2984,20 +3190,20 @@
               "projectDetails": {
                 "id": "aWQ6ODgyNDk=",
                 "name": "Project Forsaken Elite",
-                "summary": "",
-                "demoLink": "",
-                "projectLink": "",
-                "details": "",
+                "summary": "Solar Atlas is an interactive web platform turning NASA's hardware left on the Moon, Mars, and deep space into visual stories, connecting engineering design to science to inspire STEM students.",
+                "demoLink": "https://docs.google.com/presentation/d/1t7zxN_k7YqrnSRTtTOU2UGdFKZk4KXNru24cMcDcoEI/edit?usp=sharing",
+                "projectLink": "https://atlas-solar.ai.studio/",
+                "details": "<p><b><strong style=\"white-space:pre-wrap\">What does it do and how does it work?</strong></b><span style=\"white-space:pre-wrap\"> </span><b><strong style=\"white-space:pre-wrap\">Solar Atlas</strong></b><span style=\"white-space:pre-wrap\"> functions as an interactive guide and digital museum of the Solar System dedicated to NASA's historical space artifacts—equipment that fulfilled its missions on the lunar and Martian surfaces, or probes that continue traveling through deep space.</span></p><p><span style=\"white-space:pre-wrap\">Upon accessing the application, users navigate through different destinations (the Moon, Mars, and Deep Space) and historical eras to explore each piece of equipment in detail:</span></p><p><b><strong style=\"white-space:pre-wrap\">Guided Narrative (Storytelling):</strong></b><span style=\"white-space:pre-wrap\"> Instead of presenting dry technical spec sheets, each artifact (such as the Apollo Lunar Modules, the Lunar Roving Vehicle, the Surveyor and Viking probes, or the Sojourner, Spirit, Opportunity, and InSight rovers) is given an engaging narrative that explains why it was built, the extreme challenges it faced, how it operated, and its current status.</span></p><p><b><strong style=\"white-space:pre-wrap\">Bridge Between Engineering and Science:</strong></b><span style=\"white-space:pre-wrap\"> The platform breaks down complex systems—such as heat shields, radioisotope thermoelectric generators (RTGs), seismometers, and spectral cameras—into educational and visual explanations, demonstrating how each piece of hardware enabled fundamental discoveries (such as confirming past water on Mars or revealing the internal structure of the Moon).</span></p><p><b><strong style=\"white-space:pre-wrap\">Visual Exploration and 3D Models:</strong></b><span style=\"white-space:pre-wrap\"> It integrates visual references and official NASA 3D resources so students can inspect the anatomy of the spacecraft and understand their scale and functionality.</span></p><p><b><strong style=\"white-space:pre-wrap\">What benefits does it bring and what is the intended impact?</strong></b></p><p><b><strong style=\"white-space:pre-wrap\">Democratization of Space Science:</strong></b><span style=\"white-space:pre-wrap\"> It removes the barrier of dense technical reports and academic textbooks, delivering rigorous scientific content in clear, exciting, and jargon-free language for school-age youth and casual enthusiasts.</span></p><p><b><strong style=\"white-space:pre-wrap\">Pedagogical Support for Educators (STEM):</strong></b><span style=\"white-space:pre-wrap\"> It provides science, physics, and technology teachers with a ready-to-use interactive classroom tool, making it easier to teach concepts of aerospace engineering, robotics, and astronomy.</span></p><p><b><strong style=\"white-space:pre-wrap\">Emotional Connection and Inspiration:</strong></b><span style=\"white-space:pre-wrap\"> By presenting inactive equipment not as \"discarded scrap,\" but as robotic pioneers and archaeological heritage of humanity, the project sparks scientific curiosity and encourages young people to pursue careers in science, technology, engineering, and mathematics (STEM).</span></p><p><b><strong style=\"white-space:pre-wrap\">Tools, programming languages, hardware, and software used</strong></b></p><p><b><strong style=\"white-space:pre-wrap\">Artificial Intelligence and Prototyping:</strong></b><span style=\"white-space:pre-wrap\"> Google AI Studio and Gemini API for structuring the application's architecture, curating educational content, and adapting technical engineering language into educational storytelling tailored for students.</span></p><p><b><strong style=\"white-space:pre-wrap\">Front-End Development:</strong></b><span style=\"white-space:pre-wrap\"> React, TypeScript, JavaScript (ES6+), HTML5, and Tailwind CSS / CSS3 to build a fast, responsive Single-Page Application (SPA) with an immersive aesthetic inspired by space telemetry interfaces.</span></p><p><b><strong style=\"white-space:pre-wrap\">Design, Icons, and Typography:</strong></b><span style=\"white-space:pre-wrap\"> Google Fonts and Lucide Icons to ensure high readability, accessible contrast, and an intuitive visual hierarchy.</span></p><p><b><strong style=\"white-space:pre-wrap\">Infrastructure and Deployment:</strong></b><span style=\"white-space:pre-wrap\"> Cloud hosting via Google AI Studio Apps (</span><a href=\"https://atlas-solar.ai.studio/\" target=\"_blank\" rel=\"noopener noreferrer\" data-external ><span style=\"white-space:pre-wrap\">https://atlas-solar.ai.studio/</span></a><span style=\"white-space:pre-wrap\">), enabling instant browser access across computers, tablets, and smartphones with no installation required.</span></p><p><b><strong style=\"white-space:pre-wrap\">How is the project creative?</strong></b><span style=\"white-space:pre-wrap\"> The project subverts the common perception of \"abandoned equipment\" by treating every inactive probe, lander, and rover as a historical character and a living monument to human engineering. Instead of listing dates and specifications in a static table, the </span><b><strong style=\"white-space:pre-wrap\">Solar Hardware Atlas</strong></b><span style=\"white-space:pre-wrap\"> creates a space exploration experience where students uncover the \"invisible legacy\" of each machine—showing that a silent rover covered in Martian dust still tells the story of how we learned to navigate another world.</span></p><p><b><strong style=\"white-space:pre-wrap\">What factors did the team consider?</strong></b></p><p><b><strong style=\"white-space:pre-wrap\">Age and Language Appropriateness:</strong></b><span style=\"white-space:pre-wrap\"> We calibrated the depth of the text to captivate school-age students and beginners while maintaining 100% fidelity to historical facts and real NASA mission data.</span></p><p><b><strong style=\"white-space:pre-wrap\">Accessibility and Performance:</strong></b><span style=\"white-space:pre-wrap\"> We designed a lightweight, intuitive, and responsive web interface, ensuring that schools or users with modest internet connections and devices can navigate the experience smoothly without lag.</span></p><p><b><strong style=\"white-space:pre-wrap\">Balance Between Scope and Depth:</strong></b><span style=\"white-space:pre-wrap\"> We selected iconic missions distributed across the Moon, Mars, and Deep Space to illustrate both the technological evolution since the 1960s and the diverse functions of space hardware (landing, mobility, sample collection, communication, and seismic measurement).</span></p><p><u><i><b><strong style=\"white-space:pre-wrap\">Versão em Português</strong></b></i></u></p><p><b><strong style=\"white-space:pre-wrap\">O que ele faz e como funciona?</strong></b></p><p><span style=\"white-space:pre-wrap\">O Atlas Solar funciona como um guia interativo e museu digital do Sistema Solar dedicado aos artefatos espaciais históricos da NASA — equipamentos que cumpriram suas missões na superfície lunar e marciana ou sondas que seguem viajando pelo espaço profundo.</span></p><p><span style=\"white-space:pre-wrap\">Ao acessar a aplicação o usuário navega por diferentes destinos (Lua, Marte e Espaço Profundo) e épocas históricas para explorar cada equipamento em detalhes:</span></p><p><b><strong style=\"white-space:pre-wrap\">Narrativa Guiada (Storytelling):</strong></b><span style=\"white-space:pre-wrap\"> Em vez de apresentar fichas técnicas áridas, cada artefato (como os módulos lunares Apollo, o Lunar Roving Vehicle, as sondas Surveyor e Viking, ou os rovers Sojourner, Spirit, Opportunity e InSight) ganha uma narrativa envolvente que explica por que foi construído, os desafios extremos que enfrentou, como operava e seu estado atual.</span></p><p><b><strong style=\"white-space:pre-wrap\">Ponte entre Engenharia e Ciência:</strong></b><span style=\"white-space:pre-wrap\"> A plataforma decompõe sistemas complexos — como escudos térmicos, geradores termoelétricos de radioisótopos (RTGs), sismômetros e câmeras espectrais — em explicações didáticas e visuais, demonstrando como cada peça de hardware permitiu descobertas fundamentais (como a confirmação de água no passado de Marte ou a estrutura interna da Lua).</span></p><p><b><strong style=\"white-space:pre-wrap\">Exploração Visual e Modelos 3D:</strong></b><span style=\"white-space:pre-wrap\"> Integra referências visuais e recursos tridimensionais oficiais da NASA para que estudantes possam inspecionar a anatomia das espaçonaves e compreender sua escala e funcionamento.</span></p><p><b><strong style=\"white-space:pre-wrap\">Quais benefícios isso traz e qual é o impacto pretendido?</strong></b></p><p><b><strong style=\"white-space:pre-wrap\">Democratização da Ciência Espacial:</strong></b><span style=\"white-space:pre-wrap\"> Elimina a barreira dos relatórios técnicos e livros acadêmicos densos, entregando conteúdo científico rigoroso em uma linguagem clara, empolgante e livre de jargões para jovens em idade escolar e entusiastas casuais.</span></p><p><b><strong style=\"white-space:pre-wrap\">Apoio Pedagógico para Educadores (STEM):</strong></b><span style=\"white-space:pre-wrap\"> Oferece a professores de ciências, física e tecnologia uma ferramenta interativa pronta para uso em sala de aula, facilitando o ensino de conceitos de engenharia aeroespacial, robótica e astronomia.</span></p><p><b><strong style=\"white-space:pre-wrap\">Conexão Emocional e Inspiração:</strong></b><span style=\"white-space:pre-wrap\"> Ao apresentar equipamentos inativos não como \"sucata descartada\", mas como pioneiros robóticos e patrimônios arqueológicos da humanidade, o projeto desperta curiosidade científica e incentiva jovens a seguirem carreiras nas áreas de ciência, tecnologia, engenharia e matemática.</span></p><p><b><strong style=\"white-space:pre-wrap\">Ferramentas, linguagens de programação, hardware e software utilizados:</strong></b></p><p><b><strong style=\"white-space:pre-wrap\">Inteligência Artificial e Prototipação: </strong></b><span style=\"white-space:pre-wrap\">Google AI Studio e Gemini API para estruturação arquitetural da aplicação, curadoria de conteúdo educativo e adaptação da linguagem técnica de engenharia para storytelling didático voltado ao público estudantil.</span></p><p><b><strong style=\"white-space:pre-wrap\">Desenvolvimento Front-End:</strong></b><span style=\"white-space:pre-wrap\"> React, TypeScript, JavaScript (ES6+), HTML5 e Tailwind CSS / CSS3 para construir uma Single-Page Application (SPA) responsiva, rápida e com estética imersiva inspirada em interfaces de telemetria espacial.</span></p><p><b><strong style=\"white-space:pre-wrap\">Design, Ícones e Tipografia:</strong></b><span style=\"white-space:pre-wrap\"> Google Fonts e Lucide Icons para garantir alta legibilidade, contraste acessível e hierarquia visual intuitiva.</span></p><p><b><strong style=\"white-space:pre-wrap\">Infraestrutura e Deploy:</strong></b><span style=\"white-space:pre-wrap\"> Hospedagem em nuvem via Google AI Studio Apps (https://atlas-solar.ai.studio/), permitindo acesso instantâneo via navegador em computadores, tablets e smartphones sem necessidade de instalação.</span></p><p><b><strong style=\"white-space:pre-wrap\">Como o projeto é criativo?</strong></b></p><p><span style=\"white-space:pre-wrap\">O projeto subverte a percepção comum de \"equipamento abandonado\" ao tratar cada sonda, lander e rover inativo como um personagem histórico e monumento vivo da engenharia humana. Em vez de listar datas e especificações em uma tabela estática, o Atlas do Hardware Solar cria uma experiência de exploração espacial onde o estudante descobre o \"legado invisível\" de cada máquina — mostrando que um rover silencioso coberto de poeira marciana ainda conta a história de como aprendemos a navegar em outro mundo.</span></p><p><b><strong style=\"white-space:pre-wrap\">Quais fatores a equipe considerou?</strong></b></p><p><b><strong style=\"white-space:pre-wrap\">Adequação de Faixa Etária e Linguagem: </strong></b><span style=\"white-space:pre-wrap\">Calibramos a profundidade do texto para cativar estudantes em idade escolar e iniciantes, mantendo 100% de fidelidade aos fatos históricos e dados reais das missões da NASA.</span></p><p><b><strong style=\"white-space:pre-wrap\">Acessibilidade e Desempenho:</strong></b><span style=\"white-space:pre-wrap\"> Projetamos uma interface web leve, intuitiva e responsiva, garantindo que escolas ou usuários com conexões e dispositivos modestos possam navegar pela experiência sem travamentos.</span></p><p><b><strong style=\"white-space:pre-wrap\">Equilíbrio entre Escopo e Profundidade:</strong></b><span style=\"white-space:pre-wrap\"> Selecionamos missões icônicas distribuídas entre a Lua, Marte e o Espaço Profundo para ilustrar tanto a evolução tecnológica desde os anos 1960 quanto a diversidade de funções do hardware espacial (pouso, locomoção, coleta de amostras, comunicação e medição sísmica).</span></p>",
                 "solution": "",
                 "aiReferences": "",
-                "dataReferences": "",
-                "projectReferences": "",
-                "isSubmitted": false,
-                "savedAt": null,
-                "submittedAt": null,
+                "dataReferences": "[NASA 3D Resources — Repositório Oficial de Modelos 3D e Texturas](https://science.nasa.gov/3d-resources/)\n[NASA Science — Solar System Exploration](https://science.nasa.gov/solar-system/)\n[NASA Missions A–Z Directory](https://www.nasa.gov/missions/)\n[NASA Jet Propulsion Laboratory (JPL) — Missions Database](https://www.jpl.nasa.gov/missions/)\n[NASA Image and Video Library](https://images.nasa.gov/)\n[NASA Eyes on the Solar System](https://eyes.nasa.gov/)\n[NASA 3D Resources Official GitHub Repository](https://github.com/nasa/NASA-3D-Resources)",
+                "projectReferences": "[React — Biblioteca JavaScript Open Source para Interfaces de Usuário](https://react.dev/)\n[Tailwind CSS — Framework CSS Open Source](https://tailwindcss.com/)\n[TypeScript — Linguagem de Programação Open Source](https://www.typescriptlang.org/)\n[Lucide Icons — Biblioteca de Ícones Vetoriais Open Source](https://lucide.dev/)\n[Google Fonts — Catálogo de Fontes Open Source](https://fonts.google.com/)",
+                "isSubmitted": true,
+                "savedAt": "2026-11-15T15:55:13.417781Z",
+                "submittedAt": "2026-11-15T15:55:13.417781Z",
                 "__typename": "Project"
               },
-              "projectSubmitted": false,
+              "projectSubmitted": true,
               "featuredImage": {
                 "id": "aWQ6NTY4Mjg3",
                 "meta": {
@@ -3065,7 +3271,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjMw",
+            "cursor": "b2Zmc2V0OjMy",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6OTEzMTQ=",
@@ -3086,8 +3292,8 @@
               "project": "aWQ6ODc3MTE=",
               "projectDetails": {
                 "id": "aWQ6ODc3MTE=",
-                "name": "Project Fundação Futuro",
-                "summary": "",
+                "name": "Future Foundation",
+                "summary": "Orbit is a health self-monitoring system that turns each astronaut into the first responder for their own health, even when the nearest doctor is 20 light-minutes away.\n\nOn long missions to the Moon and Mars, delays and blackouts make real-time medical support impossible, while risks like bone loss, vision changes (SANS), radiation, and isolation develop slowly and silently. Astronauts can take measurements but are not doctors, so they need help interpreting them.\n\nOrbit combines a 2-minute daily check-in, wearable data (heart rate, SpO2, eye attention) and radiation readings. Each value is compared with the astronaut's own baseline and, where they exist, official NASA limits, then shown on a clickable body map with a color, an icon and a word for every state. Every alert explains its rule, its evidence and the recommended action, in supportive language rather than diagnosis.\n\nThe prototype runs offline with simulated data and includes a crew view and an offline assistant. Next step: syncing compact reports to flight surgeons when a communication window opens.",
                 "demoLink": "",
                 "projectLink": "",
                 "details": "",
@@ -3096,7 +3302,7 @@
                 "dataReferences": "",
                 "projectReferences": "",
                 "isSubmitted": false,
-                "savedAt": null,
+                "savedAt": "2026-11-15T17:47:49.976811Z",
                 "submittedAt": null,
                 "__typename": "Project"
               },
@@ -3168,7 +3374,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjMx",
+            "cursor": "b2Zmc2V0OjMz",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6NjM5OTI=",
@@ -3271,7 +3477,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjMy",
+            "cursor": "b2Zmc2V0OjM0",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6NTU1OTM=",
@@ -3374,7 +3580,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjMz",
+            "cursor": "b2Zmc2V0OjM1",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6NzIwNTg=",
@@ -3477,7 +3683,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjM0",
+            "cursor": "b2Zmc2V0OjM2",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6OTIzODk=",
@@ -3580,7 +3786,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjM1",
+            "cursor": "b2Zmc2V0OjM3",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6NjEwMjA=",
@@ -3683,7 +3889,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjM2",
+            "cursor": "b2Zmc2V0OjM4",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6ODQ2Nzc=",
@@ -3786,7 +3992,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjM3",
+            "cursor": "b2Zmc2V0OjM5",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6ODU4MzM=",
@@ -3870,7 +4076,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjM4",
+            "cursor": "b2Zmc2V0OjQw",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6ODg5MzQ=",
@@ -3954,7 +4160,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjM5",
+            "cursor": "b2Zmc2V0OjQx",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6ODg4Njg=",
@@ -4057,7 +4263,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjQw",
+            "cursor": "b2Zmc2V0OjQy",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6NzUyMjg=",
@@ -4160,7 +4366,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjQx",
+            "cursor": "b2Zmc2V0OjQz",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6ODU4MDY=",
@@ -4263,7 +4469,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjQy",
+            "cursor": "b2Zmc2V0OjQ0",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6NzE4NzQ=",
@@ -4378,7 +4584,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjQz",
+            "cursor": "b2Zmc2V0OjQ1",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6NTU1ODA=",
@@ -4481,7 +4687,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjQ0",
+            "cursor": "b2Zmc2V0OjQ2",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6Nzk0Nzg=",
@@ -4592,7 +4798,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjQ1",
+            "cursor": "b2Zmc2V0OjQ3",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6NjI0Njg=",
@@ -4695,7 +4901,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjQ2",
+            "cursor": "b2Zmc2V0OjQ4",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6OTAxNTI=",
@@ -4798,7 +5004,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjQ3",
+            "cursor": "b2Zmc2V0OjQ5",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6OTA3ODg=",
@@ -4901,7 +5107,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjQ4",
+            "cursor": "b2Zmc2V0OjUw",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6ODU5MjE=",
@@ -4910,7 +5116,7 @@
                 "type": "TEAM",
                 "slug": "nerv-systems",
                 "firstPublishedAt": "2026-11-13T02:36:35.853000Z",
-                "lastPublishedAt": "2026-11-14T17:03:11.395420Z",
+                "lastPublishedAt": "2026-11-15T18:02:58.361266Z",
                 "relativeUrl": "/2026/find-a-team/nerv-systems/",
                 "live": true,
                 "parent": null,
@@ -4938,19 +5144,19 @@
               },
               "projectSubmitted": false,
               "featuredImage": {
-                "id": "aWQ6NTY3NzA0",
+                "id": "aWQ6NTc4NzUz",
                 "meta": {
                   "type": "images.CustomImage",
-                  "downloadUrl": "https://assets.spaceappschallenge.org/media/original_images/WhatsApp_Image_2026-11-14_at_14.01.57.jpeg",
+                  "downloadUrl": "https://assets.spaceappschallenge.org/media/original_images/WhatsApp_Image_2026-11-15_at_15.02.26.jpeg",
                   "__typename": "ImageMeta"
                 },
-                "title": "team_image.17:03:02.679293",
-                "alt": "team_image.17:03:02.679293",
-                "caption": "team_image.17:03:02.679293",
+                "title": "team_image.18:02:57.322494",
+                "alt": "team_image.18:02:57.322494",
+                "caption": "team_image.18:02:57.322494",
                 "displaySize": "or",
                 "rendition": {
-                  "url": "https://assets.spaceappschallenge.org/media/images/WhatsApp_Image_2026-11-14_at_14.01.2e16d0ba.fill-300x250.jpg",
-                  "fullUrl": "https://assets.spaceappschallenge.org/media/images/WhatsApp_Image_2026-11-14_at_14.01.2e16d0ba.fill-300x250.jpg",
+                  "url": "https://assets.spaceappschallenge.org/media/images/WhatsApp_Image_2026-11-15_at_15.02.2e16d0ba.fill-300x250.jpg",
+                  "fullUrl": "https://assets.spaceappschallenge.org/media/images/WhatsApp_Image_2026-11-15_at_15.02.2e16d0ba.fill-300x250.jpg",
                   "height": 250,
                   "width": 300,
                   "__typename": "BaseImage"
@@ -5004,7 +5210,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjQ5",
+            "cursor": "b2Zmc2V0OjUx",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6NjY4Mjc=",
@@ -5088,7 +5294,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjUw",
+            "cursor": "b2Zmc2V0OjUy",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6ODg3ODg=",
@@ -5172,7 +5378,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjUx",
+            "cursor": "b2Zmc2V0OjUz",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6NjY4NTk=",
@@ -5285,7 +5491,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjUy",
+            "cursor": "b2Zmc2V0OjU0",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6NTg0NDE=",
@@ -5310,13 +5516,13 @@
                 "summary": "",
                 "demoLink": "",
                 "projectLink": "",
-                "details": "<h4><b><strong style=\"white-space:pre-wrap\">Summary</strong></b></h4><p><span style=\"white-space:pre-wrap\">1) Introduction</span></p><p><span style=\"white-space:pre-wrap\">2) Radiation</span></p><p><b><strong style=\"white-space:pre-wrap\"> </strong></b></p><p><b><strong style=\"white-space:pre-wrap\"> </strong></b></p><p><b><strong style=\"white-space:pre-wrap\"> </strong></b></p><h3><b><strong style=\"white-space:pre-wrap\">1) Introduction</strong></b></h3><h3><b><strong style=\"white-space:pre-wrap\">2) Radiation</strong></b><br/><img alt=\"Radition Screen\" class=\"richtext-image full-width\" data-format=\"fullwidth\" data-id=\"569728\" height=\"517\" src=\"https://assets.spaceappschallenge.org/media/images/Radiacao.width-1024.png\" width=\"900\"></h3><p style=\"text-align:justify\"><span style=\"white-space:pre-wrap\">Space radiation is one of the most significant health challenges in human space exploration, particularly during long-duration missions to the Moon and Mars. Orbit Sentinel doesn't just monitor radiation. It helps astronauts understand exposure, respond to alerts, and follow protective procedures, even when Earth is far away. </span><b><strong style=\"white-space:pre-wrap\">Is designed to transform scientific radiation measurements into actionable health-monitoring information</strong></b><span style=\"white-space:pre-wrap\">, combining NASA radiation datasets, automated data processing, exposure visualization, and mission-specific safety guidance.</span></p><p><b><strong style=\"white-space:pre-wrap\">2.1. Integration with NASA Radiation Data - Real Scientific Measurements</strong></b></p><p style=\"text-align:justify\"><span style=\"white-space:pre-wrap\">Orbit Sentinel's proposed radiation monitoring architecture integrates with </span><b><strong style=\"white-space:pre-wrap\">NASA's Radiation Laboratory (RadLab) API</strong></b><span style=\"white-space:pre-wrap\">, part of NASA's Open Science Data Repository ecosystem. This integration enables the application to retrieve historical radiation measurements collected by scientific instruments aboard spacecraft, including the International Space Station (ISS). Using NASA's documented API, the system can query radiation data according to spacecraft, instrument, measurement type, and observation period.</span></p><p><b><strong style=\"white-space:pre-wrap\">2.2 Example NASA API endpoint:</strong></b></p><p><a rel=\"noopener noreferrer\"><u><span class=\"editor-text-underline\" style=\"white-space:pre-wrap\">https://visualization.osdr.nasa.gov/radlab/api/?spacecraft=ISS&amp;instrument=DosTel&amp;timestamp%3E=2022-04-01T23%3A00&amp;timestamp%3C2022-04-02T01%3A05&amp;dose_equivalent_rate&amp;format=json</span></u></a></p><p><span style=\"white-space:pre-wrap\">This request is designed to retrieve dose-equivalent-rate measurements from the DosTel instrument for a specified historical period. By incorporating NASA's scientific datasets, Orbit Sentinel aims to demonstrate how actual space radiation observations can support astronaut health-monitoring applications, reducing dependence on exclusively simulated measurements.</span><br/><br/><b><strong style=\"white-space:pre-wrap\">2.3 Radiation Data Processing - Backend Architecture</strong></b></p><p><span style=\"white-space:pre-wrap\">Orbit Sentinel uses a proposed backend architecture to process, standardize, and organize radiation measurements. The backend acts as an intermediary between external scientific data sources and the astronaut-facing monitoring interface. Its processing workflow consists of five stages:</span></p><ol><li><b><strong style=\"white-space:pre-wrap\">Data Acquisition:</strong></b><span style=\"white-space:pre-wrap\"> Retrieve radiation measurements from NASA RadLab or other compatible sources.</span></li><li><b><strong style=\"white-space:pre-wrap\">Data Validation:</strong></b><span style=\"white-space:pre-wrap\"> Verify measurement availability, timestamps, units, instrument identification, and data integrity.</span></li><li><b><strong style=\"white-space:pre-wrap\">Unit Standardization:</strong></b><span style=\"white-space:pre-wrap\"> Convert compatible radiation measurements into standardized units for consistent presentation.</span></li><li><b><strong style=\"white-space:pre-wrap\">Exposure Monitoring:</strong></b><span style=\"white-space:pre-wrap\"> Organize measurements into historical time series and calculate exposure trends.</span></li><li><b><strong style=\"white-space:pre-wrap\">API Distribution:</strong></b><span style=\"white-space:pre-wrap\"> Deliver structured JSON responses to the Orbit Sentinel dashboard.</span></li></ol><p><span style=\"white-space:pre-wrap\">This modular architecture is intended to support additional radiation monitoring instruments in the future, including compatible personal dosimeters and spacecraft radiation sensors, subject to their communication protocols and data-access permissions.</span><br/></p><p><b><strong style=\"white-space:pre-wrap\">3. Radiation Calculations — Transforming Scientific Data into Structured JSON</strong></b></p><p><span style=\"white-space:pre-wrap\">One of Orbit Sentinel's key technical capabilities is its proposed radiation data-processing pipeline. NASA RadLab can provide dose-equivalent-rate measurements expressed in microsieverts per hour (µSv/h). When this measurement is available, the Laravel backend converts it into millisieverts per hour (mSv/h) using the following equation:</span></p><p><b><strong style=\"white-space:pre-wrap\">Dose Rate (mSv/h) = Dose Rate (µSv/h) / 1,000</strong></b></p><p><span style=\"white-space:pre-wrap\">For example, a hypothetical measurement of 14 µSv/h produces:</span></p><p><b><strong style=\"white-space:pre-wrap\">14 / 1,000 = 0.014 mSv/h</strong></b></p><p><span style=\"white-space:pre-wrap\">This standardized measurement can then be displayed in the astronaut's radiation monitoring dashboard. For time-series measurements, accumulated dose can be estimated by integrating the dose-equivalent rate over time:</span></p><p><b><strong style=\"white-space:pre-wrap\">Accumulated Dose (mSv) ≈ Σ [Dose Rate (mSv/h) × Time Interval (hours)]</strong></b></p><p><span style=\"white-space:pre-wrap\">This calculation requires valid measurement intervals and consistent dosimetric quantities. It does not automatically represent an astronaut's total mission exposure unless the relevant personal exposure history is available. After processing, the backend is designed to expose a standardized REST endpoint:</span></p><p><b><strong style=\"white-space:pre-wrap\">GET /api/radiation/latest</strong></b></p><p><span style=\"white-space:pre-wrap\">Example JSON response:</span></p><p><span style=\"white-space:pre-wrap\">{</span></p><p><span style=\"white-space:pre-wrap\">  \"source\": \"nasa_radlab\",</span></p><p><span style=\"white-space:pre-wrap\">  \"spacecraft\": \"ISS\",</span></p><p><span style=\"white-space:pre-wrap\">  \"instrument\": \"DosTel\",</span></p><p><span style=\"white-space:pre-wrap\">  \"measurement\": {</span></p><p><span style=\"white-space:pre-wrap\">    \"quantity\": \"dose_equivalent_rate\",</span></p><p><span style=\"white-space:pre-wrap\">    \"value\": 0.014,</span></p><p><span style=\"white-space:pre-wrap\">    \"unit\": \"mSv/h\"</span></p><p><span style=\"white-space:pre-wrap\">  },</span></p><p><span style=\"white-space:pre-wrap\">  \"mission_dose_mSv\": null,</span></p><p><span style=\"white-space:pre-wrap\">  \"status\": \"not_evaluated\",</span></p><p><span style=\"white-space:pre-wrap\">  \"sensor_status\": \"unknown\",</span></p><p><span style=\"white-space:pre-wrap\">  \"alert\": null,</span></p><p><span style=\"white-space:pre-wrap\">  \"data_mode\": \"historical\",</span></p><p><span style=\"white-space:pre-wrap\">  \"is_simulated\": false</span></p><p><span style=\"white-space:pre-wrap\">}</span></p><p><i><em style=\"white-space:pre-wrap\">This JSON illustrates the proposed data transformation using a hypothetical measurement, not a verified API response.</em></i></p><p><span style=\"white-space:pre-wrap\">The structured response allows the frontend to consume radiation information independently of the original scientific data format.</span></p><p><span style=\"white-space:pre-wrap\">It also distinguishes historical measurements from simulated data and avoids assigning safety classifications when validated mission-specific thresholds are unavailable.</span></p>",
+                "details": "<h3><b><strong style=\"white-space:pre-wrap\">1) Introduction</strong></b></h3><h3><b><strong style=\"white-space:pre-wrap\">2) Radiation</strong></b></h3><p style=\"text-align:justify\"><span style=\"white-space:pre-wrap\">Space radiation is one of the most significant health challenges in human space exploration, particularly during long-duration missions to the Moon and Mars. Orbit Sentinel doesn't just monitor radiation. It helps astronauts understand exposure, respond to alerts, and follow protective procedures, even when Earth is far away. </span><b><strong style=\"white-space:pre-wrap\">Is designed to transform scientific radiation measurements into actionable health-monitoring information</strong></b><span style=\"white-space:pre-wrap\">, combining NASA radiation datasets, automated data processing, exposure visualization, and mission-specific safety guidance.</span></p><p><b><strong style=\"white-space:pre-wrap\">2.1. Integration with NASA Radiation Data - Real Scientific Measurements</strong></b></p><p style=\"text-align:justify\"><span style=\"white-space:pre-wrap\">Orbit Sentinel's proposed radiation monitoring architecture integrates with </span><b><strong style=\"white-space:pre-wrap\">NASA's Radiation Laboratory (RadLab) API</strong></b><span style=\"white-space:pre-wrap\">, part of NASA's Open Science Data Repository ecosystem. This integration enables the application to retrieve historical radiation measurements collected by scientific instruments aboard spacecraft, including the International Space Station (ISS). Using NASA's documented API, the system can query radiation data according to spacecraft, instrument, measurement type, and observation period.</span></p><p><b><strong style=\"white-space:pre-wrap\">2.2 Example NASA API endpoint: </strong></b></p><p><a rel=\"noopener noreferrer\"><u><span class=\"editor-text-underline\" style=\"white-space:pre-wrap\">https://visualization.osdr.nasa.gov/radlab/api/?spacecraft=ISS&amp;instrument=DosTel&amp;timestamp%3E=2022-04-01T23%3A00&amp;timestamp%3C2022-04-02T01%3A05&amp;dose_equivalent_rate&amp;format=json</span></u></a></p><p><span style=\"white-space:pre-wrap\">This request is designed to retrieve dose-equivalent-rate measurements from the DosTel instrument for a specified historical period. By incorporating NASA's scientific datasets, Orbit Sentinel aims to demonstrate how actual space radiation observations can support astronaut health-monitoring applications, reducing dependence on exclusively simulated measurements.</span><br/><br/><b><strong style=\"white-space:pre-wrap\">2.3 Radiation Data Processing - Backend Architecture</strong></b></p><p><span style=\"white-space:pre-wrap\">Orbit Sentinel uses a proposed backend architecture to process, standardize, and organize radiation measurements. The backend acts as an intermediary between external scientific data sources and the astronaut-facing monitoring interface. Its processing workflow consists of five stages:</span></p><ol><li><b><strong style=\"white-space:pre-wrap\">Data Acquisition:</strong></b><span style=\"white-space:pre-wrap\"> Retrieve radiation measurements from NASA RadLab or other compatible sources.</span></li><li><b><strong style=\"white-space:pre-wrap\">Data Validation:</strong></b><span style=\"white-space:pre-wrap\"> Verify measurement availability, timestamps, units, instrument identification, and data integrity.</span></li><li><b><strong style=\"white-space:pre-wrap\">Unit Standardization:</strong></b><span style=\"white-space:pre-wrap\"> Convert compatible radiation measurements into standardized units for consistent presentation.</span></li><li><b><strong style=\"white-space:pre-wrap\">Exposure Monitoring:</strong></b><span style=\"white-space:pre-wrap\"> Organize measurements into historical time series and calculate exposure trends.</span></li><li><b><strong style=\"white-space:pre-wrap\">API Distribution:</strong></b><span style=\"white-space:pre-wrap\"> Deliver structured JSON responses to the Orbit Sentinel dashboard.</span></li></ol><p><span style=\"white-space:pre-wrap\">This modular architecture is intended to support additional radiation monitoring instruments in the future, including compatible personal dosimeters and spacecraft radiation sensors, subject to their communication protocols and data-access permissions.</span></p><p><b><strong style=\"white-space:pre-wrap\">3. Radiation Calculations — Transforming Scientific Data into Structured JSON</strong></b></p><p><span style=\"white-space:pre-wrap\">One of Orbit Sentinel's key technical capabilities is its proposed radiation data-processing pipeline. NASA RadLab can provide dose-equivalent-rate measurements expressed in microsieverts per hour (µSv/h). When this measurement is available, the Laravel backend converts it into millisieverts per hour (mSv/h) using the following equation: </span><b><strong style=\"white-space:pre-wrap\">Dose Rate (mSv/h) = Dose Rate (µSv/h) / 1,000</strong></b></p><p><span style=\"white-space:pre-wrap\">For example, a hypothetical measurement of 14 µSv/h produces: </span><b><strong style=\"white-space:pre-wrap\">14 / 1,000 = 0.014 mSv/h</strong></b></p><p><span style=\"white-space:pre-wrap\">This standardized measurement can then be displayed in the astronaut's radiation monitoring dashboard. For time-series measurements, accumulated dose can be estimated by integrating the dose-equivalent rate over time: </span><b><strong style=\"white-space:pre-wrap\">Accumulated Dose (mSv) ≈ Σ [Dose Rate (mSv/h) × Time Interval (hours)]</strong></b></p><p><span style=\"white-space:pre-wrap\">This calculation requires valid measurement intervals and consistent dosimetric quantities. It does not automatically represent an astronaut's total mission exposure unless the relevant personal exposure history is available. After processing, the backend is designed to expose a standardized REST endpoint:</span></p><p><b><strong style=\"white-space:pre-wrap\">GET /api/radiation/latest</strong></b></p><p><span style=\"white-space:pre-wrap\">Example JSON response: {  \"source\": \"nasa_radlab\",  \"spacecraft\": \"ISS\",  \"instrument\": DosTel\",  \"measurement\": { \"quantity\": \"dose_equivalent_rate\", \"value\": 0.014, \"unit\": \"mSv/h\"  },  \"mission_dose_mSv\": null,  \"status\": \"not_evaluated\",  \"sensor_status\": \"unknown\",  \"alert\": null,  \"data_mode\": \"historical\",  \"is_simulated\": false}</span></p><p><i><em style=\"white-space:pre-wrap\">This JSON illustrates the proposed data transformation using a hypothetical measurement, not a verified API response.</em></i></p><p><span style=\"white-space:pre-wrap\">The structured response allows the frontend to consume radiation information independently of the original scientific data format. It also distinguishes historical measurements from simulated data and avoids assigning safety classifications when validated mission-specific thresholds are unavailable.</span></p><p><b><strong style=\"white-space:pre-wrap\">4. Radiation Monitoring and Astronaut Decision Support</strong></b></p><p><span style=\"white-space:pre-wrap\">Orbit Sentinel is designed to go beyond radiation data visualization by connecting exposure measurements with astronaut health-monitoring workflows. Its radiation monitoring interface is structured around four complementary capabilities:</span></p><p><b><strong style=\"white-space:pre-wrap\">Continuous Exposure Visualization</strong></b></p><p><span style=\"white-space:pre-wrap\">Display the latest available radiation measurements, historical trends, and accumulated exposure when sufficient data exists.</span><img alt=\"Radiation Screen\" class=\"richtext-image full-width\" data-format=\"fullwidth\" data-id=\"576914\" height=\"517\" src=\"https://assets.spaceappschallenge.org/media/images/Radiacao_KZU2KMv.width-1024.png\" width=\"900\"></p><p><img alt=\"Alerts and Symptom\" class=\"richtext-image left\" data-format=\"left\" data-id=\"577350\" height=\"564\" src=\"https://assets.spaceappschallenge.org/media/images/Radiacao-Sintomas-Monitor.width-500.png\" width=\"380\"><b><strong style=\"white-space:pre-wrap\">Radiation Alerts</strong></b></p><p><span style=\"white-space:pre-wrap\">Evaluate incoming measurements against configurable, mission-approved exposure criteria and identify potentially abnormal changes. In the demonstration environment, simulated radiation events can trigger illustrative alerts without representing operational NASA safety thresholds.</span></p><p><b><strong style=\"white-space:pre-wrap\">Health Symptom Reporting</strong></b></p><p><span style=\"white-space:pre-wrap\">Connect radiation monitoring with the Orbit Sentinel </span><i><em style=\"white-space:pre-wrap\">Report Symptoms</em></i><span style=\"white-space:pre-wrap\"> module, enabling astronauts to document symptoms, record their onset and severity, and associate reports with available exposure measurements for subsequent medical review. The application does not assume that symptoms are caused by radiation exposure and does not replace medical diagnosis or mission medical protocols.</span></p><p><b><strong style=\"white-space:pre-wrap\">Protective Action Guidance</strong></b></p><p><span style=\"white-space:pre-wrap\">Provide astronauts with offline-accessible guidance based on mission-approved radiation protection procedures, including shelter instructions and communication protocols during potential radiation events.</span></p><img alt=\"Radiation Guidance\" class=\"richtext-image full-width\" data-format=\"fullwidth\" data-id=\"577226\" height=\"516\" src=\"https://assets.spaceappschallenge.org/media/images/Radiacao_Protecao.width-1024.png\" width=\"900\"><p><b><strong style=\"white-space:pre-wrap\">Technical Innovation and Mission Impact</strong></b></p><p><span style=\"white-space:pre-wrap\">The central innovation of Orbit Sentinel is not the radiation sensor itself, but the software architecture that transforms complex scientific measurements into accessible information for astronaut health monitoring. Orbit Sentinel's vision is to turn space radiation data into meaningful, timely, and actionable information, helping astronauts monitor their exposure, recognize potential hazards, and follow appropriate protective procedures during missions beyond Earth.</span></p>",
                 "solution": "",
                 "aiReferences": "",
                 "dataReferences": "[Hazard: Space Radiation](https://www.nasa.gov/hrp/hazard-space-radiation/)\n[NASA's Radiation Laboratory (RadLab) API](https://visualization.osdr.nasa.gov/radlab/api/?spacecraft=ISS&instrument=DosTel×tamp%3E=2022-04-01T23%3A00×tamp%3C2022-04-02T01%3A05&dose_equivalent_rate&format=json)",
                 "projectReferences": "[Monitoring Radiation for Astronaut Health](https://www.asc-csa.gc.ca/eng/news/articles/2026/2026-02-26-monitoring-radiation-astronaut-health.asp)",
                 "isSubmitted": false,
-                "savedAt": "2026-11-15T01:04:58.596718Z",
+                "savedAt": "2026-11-15T17:28:46.836089Z",
                 "submittedAt": null,
                 "__typename": "Project"
               },
@@ -5388,7 +5594,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjUz",
+            "cursor": "b2Zmc2V0OjU1",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6ODQ4MTE=",
@@ -5491,7 +5697,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjU0",
+            "cursor": "b2Zmc2V0OjU2",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6NjQ3Mjg=",
@@ -5594,7 +5800,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjU1",
+            "cursor": "b2Zmc2V0OjU3",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6NzYyNzg=",
@@ -5678,7 +5884,91 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjU2",
+            "cursor": "b2Zmc2V0OjU4",
+            "node": {
+              "__typename": "TeamPage",
+              "id": "aWQ6OTMwODU=",
+              "title": "Planet Lohan",
+              "meta": {
+                "type": "TEAM",
+                "slug": "planet-lohan",
+                "firstPublishedAt": null,
+                "lastPublishedAt": null,
+                "relativeUrl": "/2026/find-a-team/planet-lohan/",
+                "live": true,
+                "parent": null,
+                "__typename": "ExpandedPageMeta"
+              },
+              "owner": "aWQ6YWExMGYxNmMtN2JiYS00OTZjLTgxMTEtZmVkYWViNTZjYzc3",
+              "ownerDetails": null,
+              "excerpt": "Não terei equipe",
+              "project": "aWQ6ODk0ODM=",
+              "projectDetails": {
+                "id": "aWQ6ODk0ODM=",
+                "name": "Project Planet Lohan",
+                "summary": "Fiz o programa e os testes rígidos. Os 8 testes passaram, tanto nas simulações quanto com dados reais da NASA.\n\nO método compara duas fotos tiradas em sequência no pico da explosão, ajusta a escala, localiza a estrela e mede seu deslocamento com precisão de fração de pixel. Se o movimento superar o ruído da imagem, indica um possível exoplaneta; caso contrário, é alarme falso.\n\nFase 1 – Simulações:\n\n- Detectou pelo menos 95% das estrelas em movimento, com no máximo 2% de alarmes falsos.\n- Explosões mais fortes não geraram falsos alarmes.\n- Fotos corrompidas foram recusadas.\n- Nos testes com 100, 200 e 400 análises simultâneas, houve 0% de erros, 95% das análises ocorreram em até 50 ms e não houve crescimento de memória.\n\nFase 2 – Dados reais: Foram utilizadas 600 estrelas do telescópio Kepler, do arquivo da NASA. O programa acertou 99,5%, com 0% de erros, cerca de 2.400 análises por segundo e menos de 1 MB de memória adicional.\n\nLimitação: As fotos foram reconstruídas a partir de dados reais, pois o arquivo da NASA contém números, não imagens de explosões. Portanto, os resultados confirmam a lógica, mas ainda precisam de testes com fotos reais de telescópios.\n\nAs soluções de desempenho foram adaptadas ao programa, incluindo limite de análises simultâneas e reaproveitamento de memória.\n\nOs erros que impediam a pré-visualização foram corrigidos.  Na página, basta tocar em \"1. Rodar simulações\" e \"2. Rodar com dados reais\" para conferir os resultados.",
+                "demoLink": "https://flare-drift-orbit-finder.lovable.app",
+                "projectLink": "https://flare-drift-orbit-finder.lovable.app",
+                "details": "<p><span style=\"white-space:pre-wrap\">Fiz o programa e os testes rígidos. Os 8 testes passaram, tanto nas simulações quanto com dados reais da NASA.\n\nO método compara duas fotos tiradas em sequência no pico da explosão, ajusta a escala, localiza a estrela e mede seu deslocamento com precisão de fração de pixel. Se o movimento superar o ruído da imagem, indica um possível exoplaneta; caso contrário, é alarme falso.\n\nFase 1 – Simulações:\n\n- Detectou pelo menos 95% das estrelas em movimento, com no máximo 2% de alarmes falsos.\n- Explosões mais fortes não geraram falsos alarmes.\n- Fotos corrompidas foram recusadas.\n- Nos testes com 100, 200 e 400 análises simultâneas, houve 0% de erros, 95% das análises ocorreram em até 50 ms e não houve crescimento de memória.\n\nFase 2 – Dados reais: Foram utilizadas 600 estrelas do telescópio Kepler, do arquivo da NASA. O programa acertou 99,5%, com 0% de erros, cerca de 2.400 análises por segundo e menos de 1 MB de memória adicional.\n\nLimitação: As fotos foram reconstruídas a partir de dados reais, pois o arquivo da NASA contém números, não imagens de explosões. Portanto, os resultados confirmam a lógica, mas ainda precisam de testes com fotos reais de telescópios.\n\nAs soluções de desempenho foram adaptadas ao programa, incluindo limite de análises simultâneas e reaproveitamento de memória.\n\nOs erros que impediam a pré-visualização foram corrigidos. A checagem do código não encontra problemas e os 8 testes continuam passando. Na página, basta tocar em \"1. Rodar simulações\" e \"2. Rodar com dados reais\" para conferir os resultados.</span></p>",
+                "solution": "",
+                "aiReferences": "",
+                "dataReferences": "[Dados NASA ](https://www.spaceappschallenge.org/2025/challenges/a-world-away-hunting-for-exoplanets-with-ai/)",
+                "projectReferences": "",
+                "isSubmitted": true,
+                "savedAt": "2026-11-15T13:33:20.059560Z",
+                "submittedAt": "2026-11-15T13:33:20.059560Z",
+                "__typename": "Project"
+              },
+              "projectSubmitted": true,
+              "featuredImage": null,
+              "description": null,
+              "desiredSkills": null,
+              "languages": null,
+              "challenge": "aWQ6NTUxMjk=",
+              "challengeDetails": {
+                "id": "aWQ6NTUxMjk=",
+                "title": "Identify Earth Locations that Analog the Permanent Moon Base Locations and Mars",
+                "meta": {
+                  "type": "CHALLENGE",
+                  "slug": "permanent-moon-base-locations-and-mars",
+                  "firstPublishedAt": "2026-09-17T14:21:29.086000Z",
+                  "lastPublishedAt": "2026-11-13T03:52:04.820266Z",
+                  "relativeUrl": "/2026/challenges/permanent-moon-base-locations-and-mars/",
+                  "live": true,
+                  "parent": null,
+                  "__typename": "ExpandedPageMeta"
+                },
+                "excerpt": "Selecting future landing sites and lunar base locations depends on many factors, including topography, geology, environment, and available resources, to name a few. Places on Earth that have analogous characteristics to the Moon or Mars – the Atacama Desert, Haughton Crater, Death Valley – allow mission teams to test equipment and methods before they fly; however, such terrestrial analog sites are not entirely well characterized. Your challenge is to use open Earth, Moon, and Mars data from NASA and other space agencies to identify and characterize new terrestrial analogs for future bases or landing sites, drawing on deserts, polar regions, volcanic and arid terrains, caves, and other environments that share conditions with the lunar or Martian surface, then present your findings as a map, visualization, or other tool.",
+                "__typename": "ChallengePage"
+              },
+              "location": "aWQ6NTQ0NDY=",
+              "locationDetails": {
+                "id": "aWQ6NTQ0NDY=",
+                "title": "Uberlândia",
+                "displayName": "",
+                "meta": {
+                  "type": "LOCATION",
+                  "slug": "uberlandia",
+                  "firstPublishedAt": "2026-08-20T13:11:16.191000Z",
+                  "lastPublishedAt": "2026-11-02T14:14:24.314767Z",
+                  "relativeUrl": "/2026/local-events/uberlandia/",
+                  "live": true,
+                  "parent": null,
+                  "__typename": "ExpandedPageMeta"
+                },
+                "country": "Brazil",
+                "__typename": "LocationPage"
+              },
+              "event": "aWQ6NA==",
+              "joinEnabled": false,
+              "memberships": null,
+              "nominationBadges": null,
+              "awardBadges": null
+            }
+          },
+          {
+            "__typename": "TeamPageEdge",
+            "cursor": "b2Zmc2V0OjU5",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6NzE1NjU=",
@@ -5781,7 +6071,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjU3",
+            "cursor": "b2Zmc2V0OjYw",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6ODg2NzU=",
@@ -5884,7 +6174,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjU4",
+            "cursor": "b2Zmc2V0OjYx",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6ODU2MjE=",
@@ -5998,7 +6288,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjU5",
+            "cursor": "b2Zmc2V0OjYy",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6ODU3OTI=",
@@ -6101,7 +6391,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjYw",
+            "cursor": "b2Zmc2V0OjYz",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6OTE1OTQ=",
@@ -6204,7 +6494,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjYx",
+            "cursor": "b2Zmc2V0OjY0",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6NzI5OTE=",
@@ -6307,7 +6597,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjYy",
+            "cursor": "b2Zmc2V0OjY1",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6ODMxMDI=",
@@ -6410,7 +6700,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjYz",
+            "cursor": "b2Zmc2V0OjY2",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6ODUzNDU=",
@@ -6513,7 +6803,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjY0",
+            "cursor": "b2Zmc2V0OjY3",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6ODUzNzk=",
@@ -6521,8 +6811,8 @@
               "meta": {
                 "type": "TEAM",
                 "slug": "startec-2",
-                "firstPublishedAt": "2026-11-14T13:52:53.998998Z",
-                "lastPublishedAt": "2026-11-14T13:52:53.998998Z",
+                "firstPublishedAt": "2026-11-14T13:52:53.998000Z",
+                "lastPublishedAt": "2026-11-15T13:18:47.231236Z",
                 "relativeUrl": "/2026/find-a-team/startec-2/",
                 "live": true,
                 "parent": null,
@@ -6535,20 +6825,20 @@
               "projectDetails": {
                 "id": "aWQ6ODE3NzY=",
                 "name": "Project STARTEC 2",
-                "summary": "",
-                "demoLink": "",
-                "projectLink": "",
-                "details": "",
+                "summary": "Earth System Detective is an interactive web application developed by Team Startec – SESI Araguari for the NASA Space Apps Challenge 2026, addressing the challenge Earth System Trend Detective.\n\nThe platform uses real, open NASA POWER data to help users investigate environmental changes across different locations and time periods. Users can select environmental variables, explore maps and time-series charts, examine statistical indicators such as Mann–Kendall and Sen's slope, and download reports for further analysis.\n\nThe project addresses the challenge by transforming complex Earth system data into accessible visualizations and evidence-based investigations. It is designed to support students, educators and anyone interested in understanding environmental patterns.\n\nBy making scientific data easier to explore and interpret, Earth System Detective promotes scientific curiosity, environmental awareness and informed discussions about our changing planet. The MODIS NDVI module is planned for future expansion and is not yet validated with official imported data.",
+                "demoLink": "https://docs.google.com/presentation/d/17zwXTR-eJuFjuazvh9meU7oiCm-C9Fl_qNxOzkQ5EZo/edit?usp=sharing",
+                "projectLink": "https://picture-to-language-bridge.lovable.app/",
+                "details": "<p><b><strong style=\"white-space:pre-wrap\">Earth System Detective</strong></b><span style=\"white-space:pre-wrap\">, developed by Team Startec – SESI Araguari, is an interactive web application designed to make Earth observation data more accessible and understandable.</span></p><p><span style=\"white-space:pre-wrap\">The platform allows users to investigate environmental changes by selecting variables, geographic locations and time periods. It presents information through interactive maps, time-series charts and statistical indicators, including the Mann–Kendall test, Sen's slope and linear regression. Users can also download reports in CSV, TXT and PDF formats for further analysis.</span></p><p><span style=\"white-space:pre-wrap\">The current application uses real, open NASA POWER data, including relative humidity and evapotranspiration variables. These resources help users explore environmental patterns and investigate whether changes over time show statistically significant trends.</span></p><p><span style=\"white-space:pre-wrap\">The project was developed as a web application using Lovable and Lovable Cloud, with AI-assisted tools supporting code generation, interface development, debugging and testing. ChatGPT also supported scientific research, statistical methodology, documentation and project planning.</span></p><p><span style=\"white-space:pre-wrap\">Our creative approach is to transform complex scientific datasets into an interactive investigation experience. Instead of simply displaying environmental information, the application encourages users to ask questions, select locations, explore evidence and interpret results.</span></p><p><span style=\"white-space:pre-wrap\">The intended impact is to support environmental education, scientific literacy and informed discussions about changes in Earth's systems, particularly among students, educators and communities.</span></p><p><span style=\"white-space:pre-wrap\">Throughout development, we considered scientific validity, data quality, traceability, spatial and temporal resolution, accessibility, transparency and responsible interpretation of statistical results. We also ensured that simulated information would not be presented as real NASA observations.</span></p><p><span style=\"white-space:pre-wrap\">The MODIS NDVI module is part of our planned expansion. Its interface and processing workflow have been developed, but official MODIS files have not yet been imported and validated. Therefore, NDVI results are not currently presented as verified scientific findings.</span></p>",
                 "solution": "",
                 "aiReferences": "",
-                "dataReferences": "",
-                "projectReferences": "",
-                "isSubmitted": false,
-                "savedAt": null,
-                "submittedAt": null,
+                "dataReferences": "[NASA POWER API Documentation](https://power.larc.nasa.gov/docs/services/api/)",
+                "projectReferences": "[Python](https://www.python.org/)",
+                "isSubmitted": true,
+                "savedAt": "2026-11-15T18:00:46.390199Z",
+                "submittedAt": "2026-11-15T18:00:46.390199Z",
                 "__typename": "Project"
               },
-              "projectSubmitted": false,
+              "projectSubmitted": true,
               "featuredImage": null,
               "description": null,
               "desiredSkills": null,
@@ -6597,7 +6887,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjY1",
+            "cursor": "b2Zmc2V0OjY4",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6NzU4MDY=",
@@ -6700,7 +6990,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjY2",
+            "cursor": "b2Zmc2V0OjY5",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6ODg4MDQ=",
@@ -6803,7 +7093,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjY3",
+            "cursor": "b2Zmc2V0Ojcw",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6ODI2OTA=",
@@ -6887,7 +7177,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjY4",
+            "cursor": "b2Zmc2V0Ojcx",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6ODUxMzA=",
@@ -6990,7 +7280,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0OjY5",
+            "cursor": "b2Zmc2V0Ojcy",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6ODY4NTU=",
@@ -7093,7 +7383,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0Ojcw",
+            "cursor": "b2Zmc2V0Ojcz",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6ODg3NDM=",
@@ -7196,7 +7486,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0Ojcx",
+            "cursor": "b2Zmc2V0Ojc0",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6ODAwMzg=",
@@ -7227,7 +7517,7 @@
                 "dataReferences": "",
                 "projectReferences": "",
                 "isSubmitted": false,
-                "savedAt": "2026-11-14T17:50:06.859693Z",
+                "savedAt": "2026-11-15T15:45:18.755222Z",
                 "submittedAt": null,
                 "__typename": "Project"
               },
@@ -7299,7 +7589,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0Ojcy",
+            "cursor": "b2Zmc2V0Ojc1",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6ODg0MDg=",
@@ -7383,7 +7673,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0Ojcz",
+            "cursor": "b2Zmc2V0Ojc2",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6ODgwOTI=",
@@ -7404,17 +7694,17 @@
               "project": "aWQ6ODQ0ODk=",
               "projectDetails": {
                 "id": "aWQ6ODQ0ODk=",
-                "name": "'TREM' DE FERRO: O Quadrilátero Ferrífero de Minas Gerais - BR como Campo de Testes Geoquímico para ISRU em Marte.",
-                "summary": "Desenvolvemos uma plataforma interativa e simulador de ISRU (Utilização de Recursos In Situ) que utiliza as formações ferríferas bandadas do Quadrilátero Ferrífero, em Minas Gerais - BR, como análogo geoquímico e funcional dos solos ricos em óxidos de ferro de Marte (Meridiani Planum e Cratera Gale).\n\nA proposta resolve o desafio indo além de analogias visuais com desertos áridos: ela foca na extração mineral de recursos vitais. A partir da reação química 2Fe₂O₃ → 4Fe + 3O₂, modelamos duas rotas da siderurgia — Redução Direta com Hidrogênio (DRI-H₂) e Eletrólise de Óxido Fundido (MOE) — para calcular a coprodução de oxigênio (para respiração e propelente) e ferro metálico (para impressão 3D de estruturas).\n\nO projeto é importante porque o propelente de retorno (LOX) representa o maior peso a ser transportado da Terra (~25 t segundo a arquitetura DRA 5.0 da NASA). Validar essas rotas com minérios de Minas Gerais permite calibrar consumo energético e mitigar falhas em solo terrestre antes do envio de equipamentos ao espaço.",
-                "demoLink": "https://drive.google.com/drive/u/0/home",
+                "name": "\"TREM\" DE FERRO: Minas Gerais Banded Iron Formations as Geochemical Analogs for Martian ISRU",
+                "summary": "We developed an interactive web platform and in situ resource utilization (ISRU) simulator benchmarking the Banded Iron Formations (BIFs) of Brazil's Iron Quadrangle (Minas Gerais) as functional geochemical analogs for hematite-rich Martian regolith at Meridiani Planum and Gale Crater. Our solution moves beyond surface visual resemblances with terrestrial deserts by targeting mineral extraction. Based on the fundamental reduction reaction (2Fe₂O₃ → 4Fe + 3O₂), we model two mature metallurgical pathways—Hydrogen Direct Reduction (DRI-H₂) and Molten Oxide Electrolysis (MOE)—to co-produce breathable life-support oxygen, rocket propellant, and structural metallic iron for additive habitat manufacturing. This work addresses a primary constraint of deep space missions: return propellant (LOX) represents the single largest mass penalty from Earth (~25 metric tons for a four-person crew under NASA DRA 5.0). Testing these processing routes using Minas Gerais ores enables early calibration of specific energy consumption, chemical yields, and equipment reliability in terrestrial pilot facilities before launching payloads to Mars.",
+                "demoLink": "https://youtu.be/C7gT1t_x3a0",
                 "projectLink": "https://tremdeferro.lovable.app/",
-                "details": "<p><span style=\"white-space:pre-wrap\">“TREM” DE FERRO is a digital platform and interactive in-situ resource utilization (ISRU) simulator that establishes a geochemical and functional analogy between the banded iron formations of the Iron Quadrangle (Quadrilátero Ferrífero) in Minas Gerais, Brazil, and the hematite-rich soils of Mars (Meridiani Planum and Gale Crater). Rather than merely seeking a visual resemblance to deserts, we use the iron oxide (Fe₂O₃) grades of terrestrial itabirites and hematitites as a model to test ironmaking extraction routes: Hydrogen Direct Reduction (H₂-DRI) and Molten Oxide Electrolysis (MOE). The baseline reaction (2Fe₂O₃ → 4Fe + 3O₂) lets us calculate the mass and energy balances for the co-production of breathable oxygen, propellant, and metallic iron for the additive manufacturing of habitats.</span></p><p><span style=\"white-space:pre-wrap\">The project aims to reduce the operational and financial risk of sending experimental machinery into space. The heaviest input for crewed Mars missions is the liquid oxygen (LOX) needed for the return trip (approximately 25 tonnes, according to NASA’s Mars Design Reference Architecture 5.0 report). Our simulator shows that by validating dry concentration and thermochemical reduction of iron ores at terrestrial pilot plants in Minas Gerais, Brazil, research centers and space agencies can calibrate specific energy consumption (kWh/kg of O₂) and real-world yields before building final flight payloads.</span></p><p><span style=\"white-space:pre-wrap\">The platform was built with React, TypeScript, Tailwind CSS, and analytical libraries for the mathematical modeling of stoichiometric and energy balances. Planetary data were extracted from the Geosciences and Atmospheres nodes of the NASA Planetary Data System (PDS), cross-referencing spectrometric data from APXS/CheMin (Curiosity), PIXL (Perseverance), and Mössbauer (Opportunity) with MOXIE’s O₂ production telemetry. Terrestrial geological data come from geochemical surveys by CPRM (Geological Survey of Brazil).</span></p><p><span style=\"white-space:pre-wrap\">The conceptual turning point of the project was to move away from a landscape analogy (desert terrain) and focus on an analogy of chemical and mineralogical processes. Brazil has a large high-grade iron ore supply chain and strong technological expertise in direct reduction. Turning this existing infrastructure into a proving ground for Mars exploration is a pragmatic and economically viable solution.</span></p><p><span style=\"white-space:pre-wrap\">The team has explicitly defined the boundaries of the analogy: what can be validated on Earth (dry magnetic separation efficiency, reduction kinetics, and thermal balance) versus what requires controlled laboratory simulation (Martian gravity of 0.38 g, a thin CO₂ atmosphere at about 6 hPa, and oxidizing perchlorates in the regolith).</span></p>",
+                "details": "<p><span style=\"white-space:pre-wrap\">\"TREM\" DE FERRO is an open-access web platform and ISRU simulator establishing a functional and geochemical bridge between terrestrial Banded Iron Formations (itabirites and hematites from Minas Gerais, Brazil) and Martian iron-oxide deposits identified by NASA rovers. Rather than seeking morphological desert analogs, we target chemical and mineral parity: extracting oxygen and metallic iron from ferric oxide (2Fe₂O₃ → 4Fe + 3O₂). The platform models two core industrial pathways: Hydrogen Direct Reduction (DRI-H₂), which thermochemically reduces ore into sponge iron and water vapor before recovering H₂ through water electrolysis, and Molten Oxide Electrolysis (MOE), which electrochemically cracks molten iron oxide at ~1,600 °C directly into pure liquid iron and gaseous oxygen without requiring water.</span></p><p><span style=\"white-space:pre-wrap\">The primary benefit is substantially derisking surface operations and reducing launch mass. According to NASA’s Mars Design Reference Architecture 5.0 (DRA 5.0), return descent/ascent vehicles require approximately 25 metric tons of liquid oxygen (LOX). While NASA’s MOXIE experiment proved that atmospheric oxygen generation works, it produced 122 grams total throughout its mission. Sustained surface habitats require regolith mineral processing. By benchmarking processing routes in Minas Gerais pilot facilities, researchers can validate specific energy consumption (kWh/kg O₂), powder fluidization, and reduction kinetics on Earth prior to flight hardware fabrication.</span></p><p><span style=\"white-space:pre-wrap\">The interactive platform was developed using React, TypeScript, Tailwind CSS, and custom numerical models for stoichiometric and thermodynamic balances. Planetary datasets were retrieved from the NASA Planetary Data System (PDS) Geosciences and Atmospheres nodes, integrating APXS/CheMin spectrometry from Curiosity, PIXL data from Perseverance, Mössbauer hematite spectra from Opportunity, and MOXIE operational telemetry. Terrestrial geological grades and mineralogical baselines were sourced from CPRM/Geological Survey of Brazil (SGB) database surveys.</span></p><p><span style=\"white-space:pre-wrap\">Our key conceptual shift was discarding passive landscape analogies in favor of active geochemical and metallurgical testing. Brazil possesses one of the world's most advanced mining and direct-reduction industrial ecosystems; mobilizing this infrastructure as an accessible proving ground for space exploration turns a major terrestrial industry into an operational asset for Mars.</span></p><p><span style=\"white-space:pre-wrap\">The team established an explicit boundary for the analogy: what can be directly validated on Earth (dry magnetic pre-concentration efficiency, reduction kinetics, and thermodynamic efficiency) versus what strictly requires environmental simulation chambers (0.38 g Martian gravity, a 6 hPa CO₂ atmosphere, and reactive perchlorate salts in the regolith).</span></p>",
                 "solution": "",
                 "aiReferences": "",
                 "dataReferences": "[NASA PDS Geosciences Node - Mars 2020 Perseverance Mission](https://pds-geosciences.wustl.edu/missions/mars2020/index.html)\n[NASA PDS Atmospheres Node - MOXIE Instrument Data](https://pds-atmospheres.nmsu.edu/data_and_services/atmospheres_data/PERSEVERANCE/moxie.html)\n[NASA Planetary Data System (PDS Central)](https://pds.nasa.gov/)\n[NASA Mars Design Reference Architecture 5.0 (DRA 5.0)](https://www.nasa.gov/pdf/373665main_NASA-SP-2009-566.pdf)",
                 "projectReferences": "[CPRM / Serviço Geológico do Brasil - Geologia do Quadrilátero Ferrífero](https://www.sgb.gov.br/)\n[USGS Astrogeology Science Center - Mars Exploration Datasets](https://astrogeology.usgs.gov/)\n[TREM DE FERRO - Aplicação Web Interativa e Simulador ISRU](https://tremdeferro.lovable.app)",
                 "isSubmitted": false,
-                "savedAt": "2026-11-15T06:09:47.233062Z",
+                "savedAt": "2026-11-15T16:46:25.576239Z",
                 "submittedAt": null,
                 "__typename": "Project"
               },
@@ -7491,7 +7781,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0Ojc0",
+            "cursor": "b2Zmc2V0Ojc3",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6NzY3NTY=",
@@ -7594,7 +7884,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0Ojc1",
+            "cursor": "b2Zmc2V0Ojc4",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6ODM3NjM=",
@@ -7697,7 +7987,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0Ojc2",
+            "cursor": "b2Zmc2V0Ojc5",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6ODE0MzA=",
@@ -7781,7 +8071,91 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0Ojc3",
+            "cursor": "b2Zmc2V0Ojgw",
+            "node": {
+              "__typename": "TeamPage",
+              "id": "aWQ6OTI5Nzk=",
+              "title": "Uai Orbit",
+              "meta": {
+                "type": "TEAM",
+                "slug": "uai-orbit",
+                "firstPublishedAt": null,
+                "lastPublishedAt": null,
+                "relativeUrl": "/2026/find-a-team/uai-orbit/",
+                "live": true,
+                "parent": null,
+                "__typename": "ExpandedPageMeta"
+              },
+              "owner": "aWQ6NGFlNjM2YWYtNjI0ZC00YWRhLTk1MzAtOGY5NWQyNTAyYmUy",
+              "ownerDetails": null,
+              "excerpt": "Solo team from Uberlândia, Brazil. I'm Pedro Nogueira, a biomedical engineer with a background in clinical engineering and software automation. I'm building CrewVitals, a web app that lets astronauts on long missions check their own health each da...",
+              "project": "aWQ6ODkzNzc=",
+              "projectDetails": {
+                "id": "aWQ6ODkzNzc=",
+                "name": "CrewVitals",
+                "summary": "CrewVitals is a web app that lets an astronaut on a long mission check their own health in about a minute a day. The crew member logs six indicators: blood pressure, resting heart rate, blood glucose, body temperature, sleep and mood. The app compares each reading with a clinical reference range, shows a green, yellow or red status with plain-language guidance, tracks trends across mission days, and says when a result should go to the Crew Medical Officer or the flight surgeon on the ground. A clickable body map explains how spaceflight affects each body system, with every statement linked to its NASA source. A radiation panel compares dose rates measured by real instruments in six environments, from the International Space Station to the surface of Mars, and a banner reports recent solar events, all from NASA databases. On missions far from Earth, communication with the ground is delayed and crews carry much of the responsibility for noticing changes in their own health. CrewVitals is built for that situation.",
+                "demoLink": "https://drive.google.com/file/d/1WA2X2u_DFUZRI7M2Tr40z3TTsFSz9DU9/view?usp=sharing",
+                "projectLink": "https://crewvitals.pages.dev/",
+                "details": "<p><b><strong style=\"white-space:pre-wrap\">What it does</strong></b></p><ul><li><b><strong style=\"white-space:pre-wrap\">Daily check-in.</strong></b><span style=\"white-space:pre-wrap\"> One short form for six indicators, with a note beside each field on how to take the measurement. A status badge updates as the crew member types.</span></li><li><b><strong style=\"white-space:pre-wrap\">Dashboard.</strong></b><span style=\"white-space:pre-wrap\"> The mission day, an overall status, and one card per indicator with the reading, its position against the reference range, and what to do next.</span></li><li><b><strong style=\"white-space:pre-wrap\">Guidance and escalation.</strong></b><span style=\"white-space:pre-wrap\"> Green means keep the routine. Yellow gives self-care steps and asks for a new reading the next day. Red gives the next step for that indicator and says when to inform the Crew Medical Officer. A red trend goes to the Crew Medical Officer and the flight surgeon on the ground. A small set of critical values triggers an urgent message.</span></li><li><b><strong style=\"white-space:pre-wrap\">Trends.</strong></b><span style=\"white-space:pre-wrap\"> One chart per indicator across mission days, with the reference band shaded and out-of-range days marked. Four trend rules look at three consecutive days, for example sleep under six hours three nights in a row, and raise an alert that a single reading would not.</span></li><li><b><strong style=\"white-space:pre-wrap\">Body map.</strong></b><span style=\"white-space:pre-wrap\"> A figure with six regions. Selecting a region shows its latest readings, how spaceflight affects that body system, the related hazards of human spaceflight, related open-science studies, and the reason for tracking it.</span></li><li><b><strong style=\"white-space:pre-wrap\">Radiation across six environments.</strong></b><span style=\"white-space:pre-wrap\"> The radiation panel shows absorbed dose measured on the same day, 1 December 2022, by instruments on the ISS, in lunar orbit, inside the Orion capsule during Artemis I, in deep space, in Mars orbit and on the surface of Mars. The crew member can select each one to see its dose rate through the day. The panel states that the instruments differ in design, shielding and location, so the values are what each instrument measured and not comparable crew doses.</span></li><li><b><strong style=\"white-space:pre-wrap\">Space weather.</strong></b><span style=\"white-space:pre-wrap\"> A banner reports solar flares and solar energetic particle events from the last seven days.</span></li><li><b><strong style=\"white-space:pre-wrap\">Mission setting.</strong></b><span style=\"white-space:pre-wrap\"> The crew member chooses ISS, Lunar surface or Mars transit. On Mars transit, every instruction that sends the crew to the ground adds a reminder that communication is delayed and the onboard procedure comes first. The panel also says plainly where no measured data exists for the chosen setting.</span></li><li><b><strong style=\"white-space:pre-wrap\">Two languages.</strong></b><span style=\"white-space:pre-wrap\"> The app opens in English and can be switched to Brazilian Portuguese with one selector. Links to NASA pages are marked as English-language pages when the app is in Portuguese.</span></li><li><b><strong style=\"white-space:pre-wrap\">Demo mission.</strong></b><span style=\"white-space:pre-wrap\"> One button loads 30 days of simulated crew data, clearly labelled as simulated, so the trends and alerts can be seen at once.</span></li></ul><p><b><strong style=\"white-space:pre-wrap\">How it works</strong></b></p><p><span style=\"white-space:pre-wrap\">CrewVitals is a single-page web app that runs in the browser. Health entries are stored only on the device, in the browser's local storage, and nothing the crew member types is sent to a server. Status rules and reference ranges live in one file, so a flight surgeon could review or replace them in one place. Three small server functions fetch NASA data and fall back to a saved copy when a source is unavailable. The app always shows whether NASA data is live or a saved snapshot, and always labels simulated crew data.</span></p><p><b><strong style=\"white-space:pre-wrap\">What we were careful about</strong></b></p><ul><li><span style=\"white-space:pre-wrap\">The alert thresholds are adult clinical reference ranges used on Earth, and the app says so on every card. We did not invent spaceflight-specific thresholds. They were reviewed by the team's biomedical engineer.</span></li><li><span style=\"white-space:pre-wrap\">NASA statements are paraphrased and shown with a link to the NASA page they come from. A team member checked each paraphrase against its NASA source. The team's own reasoning is shown separately and labelled as ours.</span></li><li><span style=\"white-space:pre-wrap\">No environment is presented as another. There is no measured lunar-surface or Mars-transit radiation data in the source database, and the app says so instead of substituting a different environment.</span></li><li><span style=\"white-space:pre-wrap\">Status is never shown by colour alone. Each status has an icon and a text label. An automated accessibility check reports no violations on any screen.</span></li><li><span style=\"white-space:pre-wrap\">The app is a hackathon prototype and not a medical device, and it says so on every page.</span></li></ul><p><b><strong style=\"white-space:pre-wrap\">Benefits and goals</strong></b></p><p><span style=\"white-space:pre-wrap\">On a Mars mission a message to the ground can take up to 20 minutes to arrive, and the answer as long to come back. A crew member needs a tool that helps them notice a change early, tells them what they can do themselves, and makes clear when to involve the crew's medical officer. Our goal was a tool simple enough to use every day and honest about what it knows. Next steps would be readings taken directly from onboard medical devices, thresholds set by flight surgeons, and a personal radiation dose record fed by the crew member's own dosimeter.</span></p><p><b><strong style=\"white-space:pre-wrap\">Tools and technologies</strong></b></p><p><span style=\"white-space:pre-wrap\">TypeScript, React, Vite, Tailwind CSS, Recharts, React Router, Lucide icons, Vitest. Hosted on Cloudflare Pages with Pages Functions. Source code: </span><a href=\"https://github.com/pedronogueira21/crewvitals\" target=\"_blank\" rel=\"noopener noreferrer\" data-external ><span style=\"white-space:pre-wrap\">https://github.com/pedronogueira21/crewvitals</span></a></p><p><b><strong style=\"white-space:pre-wrap\">How we used NASA and partner data</strong></b></p><ul><li><span style=\"white-space:pre-wrap\">NASA Human Research Program, \"5 Hazards of Human Spaceflight\": the frame for the whole app. Each indicator and body region is linked to the hazards that affect it.</span></li><li><span style=\"white-space:pre-wrap\">NASA, \"The Human Body in Space\": source of the paraphrased statements in the body map.</span></li><li><span style=\"white-space:pre-wrap\">NASA RadLab (Open Science Data Repository): absorbed dose rates for one common day, 1 December 2022, from six instruments: ISS (DosTel1), lunar orbit (LRO, CRaTER), inside Orion on Artemis I (HERA), deep space (BioSentinel, BPD), Mars orbit (TGO, Liulin-MO) and Mars surface (Curiosity, MSL-RAD).</span></li><li><span style=\"white-space:pre-wrap\">NASA CCMC DONKI: recent solar flares and solar energetic particle events for the space-weather banner.</span></li><li><span style=\"white-space:pre-wrap\">NASA Open Science Data Repository search: related open-science studies for each indicator, shown with organism and study type because many are animal or ground studies.</span></li><li><span style=\"white-space:pre-wrap\">ESA: the Mars-orbit measurements come from the Liulin-MO dosimeter on the ExoMars Trace Gas Orbiter, a joint ESA–Roscosmos mission. We accessed them through NASA's RadLab database.</span></li><li><span style=\"white-space:pre-wrap\">The alert ranges are adapted from ACC/AHA blood pressure categories and American Diabetes Association glucose criteria.</span></li></ul><p><b><strong style=\"white-space:pre-wrap\">Use of AI</strong></b></p><p><span style=\"white-space:pre-wrap\">The application code was written with Claude Code (Anthropic) and reviewed and tested by the team. Claude also helped plan the project and drafted the interface text, the paraphrases of NASA pages (each checked by a team member against its source), the Portuguese translation and the demo slides. Gemini (Google) was used as an aid in the clinical review, which the team's biomedical engineer approved. The body map figure and the app icon are simple schematics drawn in code with AI assistance, identified as such in the app. The demo mission is simulated data and is labelled as simulated. No NASA logos or mission identifiers are used.</span></p>",
+                "solution": "",
+                "aiReferences": "",
+                "dataReferences": "[5 Hazards of Human Spaceflight (NASA Human Research Program)](https://www.nasa.gov/hrp/hazards)\n[The Human Body in Space (NASA)](https://www.nasa.gov/humans-in-space/the-human-body-in-space/)\n[RadLab radiation dosimetry database (NASA OSDR)](https://visualization.osdr.nasa.gov/radlab/)\n[DONKI space weather database (NASA CCMC)](https://ccmc.gsfc.nasa.gov/tools/DONKI)\n[NASA Open Science Data Repository (OSDR)](https://osdr.nasa.gov)",
+                "projectReferences": "[ESA: ExoMars Trace Gas Orbiter radiation results (Liulin-MO)](https://esa.int/About_Us/ESAC/ExoMars_highlights_radia)\n[CrewVitals source code (GitHub)](https://github.com/pedronogueira21/crewvitals)\n[React](https://react.dev)\n[Vite](https://vite.dev)\n[Tailwind CSS](https://tailwindcss.com)\n[Recharts](https://recharts.org)\n[React Router](https://reactrouter.com)\n[Lucide icons](https://lucide.dev)\n[Vitest](https://vitest.dev)",
+                "isSubmitted": true,
+                "savedAt": "2026-11-15T12:50:32.046717Z",
+                "submittedAt": "2026-11-15T12:50:32.046717Z",
+                "__typename": "Project"
+              },
+              "projectSubmitted": true,
+              "featuredImage": null,
+              "description": null,
+              "desiredSkills": null,
+              "languages": null,
+              "challenge": "aWQ6NTUxMzA=",
+              "challengeDetails": {
+                "id": "aWQ6NTUxMzA=",
+                "title": "Create Health Monitoring Software for Astronauts on Space Missions",
+                "meta": {
+                  "type": "CHALLENGE",
+                  "slug": "health-monitoring-software",
+                  "firstPublishedAt": "2026-09-17T14:21:16.942000Z",
+                  "lastPublishedAt": "2026-11-13T03:46:22.373143Z",
+                  "relativeUrl": "/2026/challenges/health-monitoring-software/",
+                  "live": true,
+                  "parent": null,
+                  "__typename": "ExpandedPageMeta"
+                },
+                "excerpt": "Long-duration missions expose astronauts to space radiation, isolation and confinement, altered gravity, and a hostile closed environment, which can bring immune changes, bone loss, cardiovascular events, and behavioral health problems. On long missions, astronauts carry much of the responsibility for spotting these changes in themselves. Your challenge is to build a health monitoring software that gathers health indicators and enables astronauts to evaluate and act on the status of their health.",
+                "__typename": "ChallengePage"
+              },
+              "location": "aWQ6NTQ0NDY=",
+              "locationDetails": {
+                "id": "aWQ6NTQ0NDY=",
+                "title": "Uberlândia",
+                "displayName": "",
+                "meta": {
+                  "type": "LOCATION",
+                  "slug": "uberlandia",
+                  "firstPublishedAt": "2026-08-20T13:11:16.191000Z",
+                  "lastPublishedAt": "2026-11-02T14:14:24.314767Z",
+                  "relativeUrl": "/2026/local-events/uberlandia/",
+                  "live": true,
+                  "parent": null,
+                  "__typename": "ExpandedPageMeta"
+                },
+                "country": "Brazil",
+                "__typename": "LocationPage"
+              },
+              "event": "aWQ6NA==",
+              "joinEnabled": false,
+              "memberships": null,
+              "nominationBadges": null,
+              "awardBadges": null
+            }
+          },
+          {
+            "__typename": "TeamPageEdge",
+            "cursor": "b2Zmc2V0Ojgx",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6ODUzNTM=",
@@ -7865,7 +8239,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0Ojc4",
+            "cursor": "b2Zmc2V0Ojgy",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6ODIyOTE=",
@@ -7968,7 +8342,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0Ojc5",
+            "cursor": "b2Zmc2V0Ojgz",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6NTY5ODE=",
@@ -8071,7 +8445,7 @@
           },
           {
             "__typename": "TeamPageEdge",
-            "cursor": "b2Zmc2V0Ojgw",
+            "cursor": "b2Zmc2V0Ojg0",
             "node": {
               "__typename": "TeamPage",
               "id": "aWQ6NTgyMTg=",
