@@ -65,29 +65,75 @@
     </header>
 
     <!-- ─── Relógio ──────────────────────────────────────── -->
-    @if (!isEnded()) {
-      <div class="countdown-timer reveal reveal-up delay-3" role="timer" aria-live="off">
-        <div class="time-unit">
-          <div class="time-box"><span class="time-value">{{ pad(days()) }}</span></div>
-          <span class="time-label">Dias</span>
-        </div>
-        <span class="time-separator" aria-hidden="true">:</span>
-        <div class="time-unit">
-          <div class="time-box"><span class="time-value">{{ pad(hours()) }}</span></div>
-          <span class="time-label">Horas</span>
-        </div>
-        <span class="time-separator" aria-hidden="true">:</span>
-        <div class="time-unit">
-          <div class="time-box"><span class="time-value">{{ pad(minutes()) }}</span></div>
-          <span class="time-label">Minutos</span>
-        </div>
-        <span class="time-separator" aria-hidden="true">:</span>
-        <div class="time-unit">
-          <div class="time-box"><span class="time-value">{{ pad(seconds()) }}</span></div>
-          <span class="time-label">Segundos</span>
+    @if (showTimer()) {
+      <div class="reveal reveal-up delay-3">
+        <!-- Elemento que vai para tela cheia: só o relógio (e a festa) -->
+        <div #stage class="timer-stage"
+             [class.is-fullscreen]="isFullscreen()"
+             [class.is-celebrating]="celebration() !== null">
+
+          @if (isFullscreen()) {
+            <p class="stage-title">
+              @if (celebration() === 'ended' || isEnded()) {
+                NASA Space Apps Uberlândia 2026
+              } @else if (isLive()) {
+                <span class="live-dot" aria-hidden="true"></span> O hackathon termina em
+              } @else {
+                A missão começa em
+              }
+            </p>
+          }
+
+          <div class="countdown-timer" role="timer" aria-live="off"
+               [class.urgency-warming]="urgency() === 'warming'"
+               [class.urgency-red]="urgency() === 'red'"
+               [class.urgency-final]="urgency() === 'final'"
+               [style.--digit-color]="digitColor()">
+            <div class="time-unit">
+              <div class="time-box"><span class="time-value">{{ pad(hours()) }}</span></div>
+              <span class="time-label">Horas</span>
+            </div>
+            <span class="time-separator" aria-hidden="true">:</span>
+            <div class="time-unit">
+              <div class="time-box"><span class="time-value">{{ pad(minutes()) }}</span></div>
+              <span class="time-label">Minutos</span>
+            </div>
+            <span class="time-separator" aria-hidden="true">:</span>
+            <div class="time-unit">
+              <div class="time-box"><span class="time-value">{{ pad(seconds()) }}</span></div>
+              <span class="time-label">Segundos</span>
+            </div>
+          </div>
+
+          @if (celebration(); as kind) {
+            <div class="celebration-banner" role="status" aria-live="polite">
+              <i class="ph ph-confetti celebration-icon" aria-hidden="true"></i>
+              @if (kind === 'ended') {
+                <p class="celebration-title">Missão cumprida!</p>
+                <p class="celebration-text">Tempo esgotado — parabéns a todos os times do NASA Space Apps Uberlândia 2026! 🚀</p>
+              } @else {
+                <p class="celebration-title">Decolamos!</p>
+                <p class="celebration-text">O hackathon começou — boa missão, equipes! 🚀</p>
+              }
+              <button type="button" class="celebration-close" (click)="closeCelebration()">
+                <i class="ph ph-x" aria-hidden="true"></i> Fechar
+              </button>
+            </div>
+          }
+
+          @if (fullscreenSupported()) {
+            <button type="button" class="fullscreen-toggle"
+                    (click)="toggleFullscreen()"
+                    [attr.aria-label]="isFullscreen() ? 'Sair da tela cheia' : 'Exibir contagem em tela cheia'">
+              <i [class]="isFullscreen() ? 'ph ph-arrows-in' : 'ph ph-arrows-out'" aria-hidden="true"></i>
+              {{ isFullscreen() ? 'Sair da tela cheia' : 'Tela cheia' }}
+            </button>
+          }
         </div>
       </div>
+    }
 
+    @if (!isEnded()) {
       <div class="progress-container reveal reveal-up delay-3"
            [attr.aria-label]="isLive() ? 'Progresso do hackathon' : 'Progresso até o evento'">
         <div class="progress-labels">

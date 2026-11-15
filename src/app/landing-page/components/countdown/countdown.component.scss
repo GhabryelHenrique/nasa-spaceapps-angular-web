@@ -129,12 +129,232 @@
 }
 
 // ─── Relógio ──────────────────────────────────────────────
+.timer-stage {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.25rem;
+  margin: 3rem 0 2.5rem;
+}
+
 .countdown-timer {
   display: flex;
   align-items: flex-start;
   justify-content: center;
   gap: 0.5rem;
-  margin: 3rem 0 2.5rem;
+}
+
+// ─── Urgência: branco → amarelo (1h–30min) → vermelho (30min–1min) → pisca (último minuto)
+// A cor intermediária vem do TS em --digit-color.
+.countdown-timer .time-value {
+  color: var(--digit-color, #{$sa-white});
+  transition: color 0.9s linear, text-shadow 0.9s linear;
+}
+
+.countdown-timer.urgency-warming .time-value {
+  text-shadow: 0 0 24px rgba($sa-neon-yellow, 0.25);
+}
+
+.countdown-timer.urgency-red {
+  .time-value {
+    text-shadow: 0 0 26px color-mix(in srgb, var(--digit-color) 45%, transparent);
+  }
+
+  .time-box {
+    border-color: color-mix(in srgb, var(--digit-color) 45%, transparent);
+    transition: border-color 0.9s linear;
+  }
+}
+
+.countdown-timer.urgency-final {
+  .time-value {
+    transition: none;
+    animation: final-blink 0.5s steps(1, end) infinite;
+  }
+
+  .time-box { animation: final-box-blink 0.5s steps(1, end) infinite; }
+}
+
+@keyframes final-blink {
+  0%  { color: #FF3B1F; text-shadow: 0 0 30px rgba(#FF3B1F, 0.7); }
+  50% { color: $sa-neon-yellow; text-shadow: 0 0 30px rgba($sa-neon-yellow, 0.7); }
+}
+
+@keyframes final-box-blink {
+  0%  { border-color: rgba(#FF3B1F, 0.8); }
+  50% { border-color: rgba($sa-neon-yellow, 0.8); }
+}
+
+.fullscreen-toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  padding: 0.5rem 1rem;
+  border-radius: 100px;
+  border: 1px solid var(--border-subtle);
+  background: rgba(0, 66, 166, 0.18);
+  color: var(--text-secondary);
+  font: 600 0.78rem/1 'Overpass', sans-serif;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: background 0.2s ease, color 0.2s ease, border-color 0.2s ease, opacity 0.2s ease;
+
+  i { font-size: 1rem; }
+
+  &:hover,
+  &:focus-visible {
+    background: rgba($sa-neon-blue, 0.35);
+    border-color: $sa-blue-yonder;
+    color: $sa-white;
+  }
+
+  &:focus-visible { outline: 2px solid $sa-blue-yonder; outline-offset: 3px; }
+}
+
+// ─── Modo tela cheia (só o relógio) ───────────────────────
+.timer-stage.is-fullscreen {
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+  padding: 4vh 4vw;
+  justify-content: center;
+  gap: clamp(1.5rem, 4vh, 3.5rem);
+  overflow: hidden;
+  background:
+    radial-gradient(ellipse at 50% 40%, rgba($sa-neon-blue, 0.28), transparent 60%),
+    radial-gradient(ellipse at 15% 90%, rgba($sa-electric-blue, 0.35), transparent 55%),
+    #000;
+
+  .countdown-timer { gap: clamp(0.5rem, 1.5vw, 1.5rem); }
+
+  .time-box {
+    min-width: 0;
+    padding: clamp(1rem, 3vh, 2.5rem) clamp(1rem, 2.5vw, 2.5rem);
+    border-radius: clamp(18px, 2vw, 32px);
+  }
+
+  .time-value { font-size: min(15vw, 30vh); }
+
+  .time-label { font-size: clamp(0.85rem, 1.6vw, 1.4rem); }
+
+  .time-separator {
+    font-size: min(8vw, 16vh);
+    padding-top: clamp(1rem, 5vh, 4rem);
+  }
+
+  .fullscreen-toggle {
+    position: absolute;
+    right: 1.5rem;
+    bottom: 1.5rem;
+    opacity: 0.35;
+
+    &:hover, &:focus-visible { opacity: 1; }
+  }
+}
+
+.timer-stage::backdrop { background: #000; }
+
+.stage-title {
+  @include section-eyebrow;
+  margin: 0;
+  font-size: clamp(1rem, 2.4vw, 2rem);
+
+  .live-dot { width: 0.6em; height: 0.6em; }
+}
+
+// ─── Comemoração (contagem zerada) ────────────────────────
+.timer-stage.is-celebrating {
+  .time-box {
+    border-color: rgba($sa-neon-yellow, 0.7);
+    animation: party-glow 0.9s ease-in-out infinite alternate;
+  }
+
+  .time-value {
+    color: $sa-neon-yellow;
+    animation: party-bounce 0.9s ease-in-out infinite;
+  }
+}
+
+@keyframes party-glow {
+  from { box-shadow: 0 0 0 rgba($sa-neon-yellow, 0); background: rgba(0, 66, 166, 0.24); }
+  to   { box-shadow: 0 0 42px rgba($sa-neon-yellow, 0.45); background: rgba($sa-rocket-red, 0.28); }
+}
+
+@keyframes party-bounce {
+  0%, 100% { transform: scale(1); }
+  50%      { transform: scale(1.08); }
+}
+
+.celebration-banner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  max-width: 720px;
+  animation: banner-pop 0.7s cubic-bezier(0.2, 1.4, 0.4, 1) both;
+}
+
+.celebration-icon {
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  color: $sa-neon-yellow;
+  animation: icon-wiggle 1.2s ease-in-out infinite;
+}
+
+.celebration-title {
+  margin: 0;
+  font-family: 'Fira Sans', sans-serif;
+  font-size: clamp(2rem, 6vw, 4.5rem);
+  font-weight: 900;
+  line-height: 1.05;
+  background: linear-gradient(90deg, $sa-neon-yellow, #FF8A3D, $sa-rocket-red, $sa-blue-yonder, $sa-neon-yellow);
+  background-size: 300% 100%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  animation: title-shimmer 3s linear infinite;
+}
+
+.celebration-text {
+  margin: 0;
+  font-size: clamp(1rem, 2vw, 1.4rem);
+  color: var(--text-secondary);
+}
+
+.celebration-close {
+  margin-top: 0.5rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.45rem 1rem;
+  border-radius: 100px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  background: transparent;
+  color: var(--text-muted);
+  font: 600 0.75rem/1 'Overpass', sans-serif;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  cursor: pointer;
+
+  &:hover, &:focus-visible { color: $sa-white; border-color: rgba(255, 255, 255, 0.5); }
+}
+
+.timer-stage.is-fullscreen .celebration-text { font-size: clamp(1.1rem, 2.4vw, 1.8rem); }
+
+@keyframes banner-pop {
+  from { opacity: 0; transform: scale(0.6) translateY(20px); }
+  to   { opacity: 1; transform: none; }
+}
+
+@keyframes icon-wiggle {
+  0%, 100% { transform: rotate(-12deg) scale(1); }
+  50%      { transform: rotate(12deg) scale(1.15); }
+}
+
+@keyframes title-shimmer {
+  from { background-position: 0% 50%; }
+  to   { background-position: 300% 50%; }
 }
 
 .time-unit {
@@ -256,10 +476,9 @@
 @media (max-width: 768px) {
   .countdown-section { padding: 70px 0; }
 
-  .countdown-timer {
-    gap: 0.3rem;
-    margin: 2.25rem 0 2rem;
-  }
+  .timer-stage:not(.is-fullscreen) { margin: 2.25rem 0 2rem; }
+
+  .countdown-timer { gap: 0.3rem; }
 
   .time-box {
     min-width: 0;
@@ -288,5 +507,7 @@
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .star, .live-dot { animation: none !important; }
+  .star, .live-dot,
+  .time-box, .time-value,
+  .celebration-banner, .celebration-icon, .celebration-title { animation: none !important; }
 }
