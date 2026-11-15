@@ -1,4 +1,22 @@
 ﻿"Attended Event","Status","Type","Email","Name","Location","Parent/Guardian Name","Parent/Guardian Email","Team Name","Project Submitted","Created At"
+"No","Registered","Virtual","hsnriquedev@gmail.com","Henrique Braga","Brazil","N/A","N/A","N/A","N/A","
+				15
+				November
+				2026
+				01:59
+			"
+"No","Registered","In-Person","mrotranfield@gmail.com","Melissa Tranfield","United Kingdom","N/A","N/A","N/A","N/A","
+				14
+				November
+				2026
+				16:30
+			"
+"No","Registered","Virtual","infinityluck557@gmail.com","Nara Caroline Linhares Alves","Spain","N/A","N/A","Forsaken Elite","No","
+				14
+				November
+				2026
+				16:17
+			"
 "No","Registered","Virtual","andressabuglio@hotmail.com","Isabella Azeredo","Portugal","N/A","N/A","Forsaken Elite","No","
 				14
 				November
@@ -83,7 +101,7 @@
 				2026
 				07:50
 			"
-"No","Registered","In-Person","sam03amorim@gmail.com","Samuel Ferreira Amorim","Brazil","N/A","N/A","MINEIRØ","No","
+"Yes","Attended Event","In-Person","sam03amorim@gmail.com","Samuel Ferreira Amorim","Brazil","N/A","N/A","MINEIRØ","No","
 				14
 				November
 				2026
@@ -191,7 +209,7 @@
 				2026
 				23:00
 			"
-"No","Registered","Virtual","beatriz.tassoni@unesp.br","Beatriz Pires Tassoni","Brazil","N/A","N/A","BIM1304","No","
+"No","Registered","Virtual","beatriz.tassoni@unesp.br","Beatriz Pires Tassoni","Brazil","N/A","N/A","BIM1304","Yes","
 				13
 				November
 				2026
@@ -647,7 +665,7 @@
 				2026
 				17:17
 			"
-"No","Registered","In-Person","nkaiomiguel@gmail.com","Kaio Miguel Nascimento Silva","Brazil","Bruna Margarida Silva Nascimento","brunakaiokaroline@gmail.com","MISSAO MARTE","No","
+"No","Registered","In-Person","nkaiomiguel@gmail.com","Kaio Miguel Nascimento Silva","Brazil","Bruna Margarida Silva Nascimento","brunakaiokaroline@gmail.com","REDTEAM","Yes","
 				12
 				November
 				2026
@@ -869,12 +887,6 @@
 				2026
 				14:56
 			"
-"No","Registered","Virtual","abnerlucassantoss2@gmail.com","Abner Nogueira","Brazil","N/A","N/A","N/A","N/A","
-				11
-				November
-				2026
-				14:44
-			"
 "No","Registered","Virtual","halina.oliveira2021@gmail.com","Halina de Oliveira Vieira","Brazil","N/A","N/A","N/A","N/A","
 				11
 				November
@@ -989,7 +1001,7 @@
 				2026
 				20:41
 			"
-"No","Registered","Virtual","isabeladantasms@ufu.br","Isabela Dantas de Moraes","Brazil","Aline Dantas de Moraes","alinedantasdemoraes77@gmail.com","123 Idea","No","
+"No","Registered","Virtual","isabeladantasms@ufu.br","Isabela Dantas de Moraes","Brazil","Aline Dantas de Moraes","alinedantasdemoraes77@gmail.com","21 Pyro Rangers","No","
 				10
 				November
 				2026
@@ -1259,7 +1271,7 @@
 				2026
 				09:00
 			"
-"No","Registered","Virtual","stohlermiguel7@gmail.com","Miguel Gouvea Sampaio Stohler","Brazil","N/A","N/A","BIM1304","No","
+"No","Registered","Virtual","stohlermiguel7@gmail.com","Miguel Gouvea Sampaio Stohler","Brazil","N/A","N/A","BIM1304","Yes","
 				09
 				November
 				2026
@@ -1535,7 +1547,7 @@
 				2026
 				14:20
 			"
-"Yes","Attended Event","In-Person","nicolas.rodrigues@ufu.br","Nicolas Garcia","Brazil","N/A","N/A","Kultive 2026","No","
+"Yes","Attended Event","In-Person","nicolas.rodrigues@ufu.br","Nicolas Garcia","Brazil","N/A","N/A","Harmonia","No","
 				02
 				November
 				2026
@@ -1913,7 +1925,7 @@
 				2026
 				11:24
 			"
-"No","Registered","Virtual","felipegabfd@gmail.com","Felipe Gabriel Reis Sousa","Brazil","N/A","N/A","Still Blue","No","
+"No","Registered","Virtual","felipegabfd@gmail.com","Felipe Gabriel Reis Sousa","Brazil","N/A","N/A","N/A","N/A","
 				15
 				October
 				2026
@@ -2213,7 +2225,7 @@
 				2026
 				21:12
 			"
-"No","Registered","In-Person","isabeladesousa.rocha@gmail.com","Isabela de Sousa Faria Pereira Rocha","Brazil","N/A","N/A","123 Idea","No","
+"No","Registered","In-Person","isabeladesousa.rocha@gmail.com","Isabela de Sousa Faria Pereira Rocha","Brazil","N/A","N/A","21 Pyro Rangers","No","
 				21
 				September
 				2026
@@ -2237,7 +2249,7 @@
 				2026
 				22:03
 			"
-"No","Registered","In-Person","leandroelias16020212@gmail.com","Leandro Elias Fontes Carrijo","Brazil","N/A","N/A","123 Idea","No","
+"No","Registered","In-Person","leandroelias16020212@gmail.com","Leandro Elias Fontes Carrijo","Brazil","N/A","N/A","21 Pyro Rangers","No","
 				17
 				September
 				2026
@@ -2255,7 +2267,7 @@
 				2026
 				21:42
 			"
-"No","Registered","In-Person","celinavieirasilva27@gmail.com","Celina Vieira Silva","Brazil","N/A","N/A","123 Idea","No","
+"No","Registered","In-Person","celinavieirasilva27@gmail.com","Celina Vieira Silva","Brazil","N/A","N/A","21 Pyro Rangers","No","
 				17
 				September
 				2026
@@ -2315,7 +2327,7 @@
 				2026
 				19:47
 			"
-"No","Registered","In-Person","leandrospcampos@gmail.com","Leandro Silva Pina de Campos","Brazil","N/A","N/A","123 Idea","No","
+"No","Registered","In-Person","leandrospcampos@gmail.com","Leandro Silva Pina de Campos","Brazil","N/A","N/A","21 Pyro Rangers","No","
 				14
 				September
 				2026
@@ -2339,7 +2351,7 @@
 				2026
 				16:20
 			"
-"Yes","Attended Event","In-Person","aquinojuniorjoel@gmail.com","Joel de Aquino Junior","Brazil","Joel de Aquino","joeldeaquino@yahoo.com.br","MISSAO MARTE","No","
+"Yes","Attended Event","In-Person","aquinojuniorjoel@gmail.com","Joel de Aquino Junior","Brazil","Joel de Aquino","joeldeaquino@yahoo.com.br","REDTEAM","Yes","
 				13
 				September
 				2026
@@ -2351,7 +2363,7 @@
 				2026
 				10:19
 			"
-"No","Registered","In-Person","gabrielesquivel1304@gmail.com","Gabriel Henrique Borges Esquivel","Brazil","N/A","N/A","123 Idea","No","
+"No","Registered","In-Person","gabrielesquivel1304@gmail.com","Gabriel Henrique Borges Esquivel","Brazil","N/A","N/A","21 Pyro Rangers","No","
 				12
 				September
 				2026
