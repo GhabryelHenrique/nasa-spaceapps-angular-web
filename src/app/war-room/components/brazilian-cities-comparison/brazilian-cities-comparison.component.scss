@@ -634,3 +634,61 @@
     }
   }
 }
+
+// --- Ordenacao por clique no cabecalho ------------------------------------
+.table-subtitle {
+  font-size: 0.6em;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.6);
+  margin-left: 0.4rem;
+}
+
+.sort-hint {
+  margin: -0.5rem 0 1rem;
+  font-size: 0.8rem;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.sort-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.2rem 0.35rem;
+  margin: -0.2rem -0.35rem;
+  border: 0;
+  border-radius: 6px;
+  background: transparent;
+  color: inherit;
+  font: inherit;
+  letter-spacing: inherit;
+  text-transform: inherit;
+  cursor: pointer;
+  transition: background 0.2s ease, color 0.2s ease;
+
+  i {
+    font-size: 0.95em;
+    opacity: 0.45;
+  }
+
+  &:hover,
+  &:focus-visible {
+    background: rgba(46, 150, 245, 0.15);
+    color: #ffffff;
+
+    i { opacity: 0.8; }
+  }
+
+  &:focus-visible {
+    outline: 2px solid #2E96F5;
+    outline-offset: 2px;
+  }
+
+  &.active {
+    color: #ffffff;
+
+    i {
+      opacity: 1;
+      color: #EAFE07;
+    }
+  }
+}

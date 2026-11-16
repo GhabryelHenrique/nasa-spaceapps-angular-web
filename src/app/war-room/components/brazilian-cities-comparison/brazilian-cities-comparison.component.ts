@@ -18,6 +18,22 @@ export interface BrazilCityRow {
   rank: number;
 }
 
+/** Colunas pelas quais o "Ranking Detalhado" pode ser ordenado (clique no cabeçalho). */
+export type BrazilSortKey = 'city' | 'registrations' | 'teams' | 'submitted' | 'rate';
+export type SortDirection = 'asc' | 'desc';
+
+const SORT_METRICS: Record<Exclude<BrazilSortKey, 'city'>, (row: BrazilCityRow) => number> = {
+  registrations: row => row.registrations,
+  teams: row => row.totalTeams,
+  submitted: row => row.submittedProjects,
+  rate: row => row.submissionRate,
+};
+
+/** Linha da tabela já com a posição no ranking da coluna ativa. */
+export interface BrazilRankedRow extends BrazilCityRow {
+  position: number;
+}
+
 @Component({
   selector: 'app-brazilian-cities-comparison',
   standalone: true,
@@ -91,6 +107,67 @@ export class BrazilianCitiesComparisonComponent {
       .sort((a, b) => b.registrations - a.registrations)
       .map((row, index) => ({ ...row, rank: index + 1 }));
   });
+
+  // ─── Ordenação da tabela ────────────────────────────────
+  readonly sortKey = signal<BrazilSortKey>('registrations');
+  readonly sortDirection = signal<SortDirection>('desc');
+
+  /**
+   * Linhas na ordem da coluna clicada. A posição é um ranking de competição
+   * (empates dividem a posição: 1, 1, 3) sempre do maior para o menor na métrica
+   * ativa — inverter a ordem só inverte a exibição, não o ranking. Ordenando por
+   * cidade, a posição continua sendo a de inscritos.
+   */
+  readonly sortedRows = computed<BrazilRankedRow[]>(() => {
+    const key = this.sortKey();
+    const metric = SORT_METRICS[key === 'city' ? 'registrations' : key];
+
+    const byMetric = [...this.rows()].sort((a, b) => metric(b) - metric(a));
+    const positions = new Map<string, number>();
+    byMetric.forEach((row, index) => {
+      const prev = byMetric[index - 1];
+      const position = prev && metric(prev) === metric(row)
+        ? positions.get(prev.cityName)!
+        : index + 1;
+      positions.set(row.cityName, position);
+    });
+
+    const dir = this.sortDirection() === 'asc' ? 1 : -1;
+    const byName = (a: BrazilCityRow, b: BrazilCityRow) => a.cityName.localeCompare(b.cityName, 'pt-BR');
+    return [...this.rows()]
+      .sort((a, b) => {
+        if (key === 'city') return dir * byName(a, b);
+        // Empate na métrica: desempata por inscritos e depois pelo nome.
+        return dir * (metric(a) - metric(b))
+          || b.registrations - a.registrations
+          || byName(a, b);
+      })
+      .map(row => ({ ...row, position: positions.get(row.cityName)! }));
+  });
+
+  /** Clicar na coluna ativa inverte a ordem; numa nova coluna começa do maior (cidade: A→Z). */
+  setSort(key: BrazilSortKey): void {
+    if (this.sortKey() === key) {
+      this.sortDirection.update(dir => (dir === 'asc' ? 'desc' : 'asc'));
+      return;
+    }
+    this.sortKey.set(key);
+    this.sortDirection.set(key === 'city' ? 'asc' : 'desc');
+  }
+
+  sortIcon(key: BrazilSortKey): string {
+    if (this.sortKey() !== key) return 'ph ph-caret-up-down';
+    return this.sortDirection() === 'asc' ? 'ph ph-caret-up' : 'ph ph-caret-down';
+  }
+
+  /** Título curto do ranking ativo, exibido acima da tabela. */
+  readonly sortLabel = computed(() => ({
+    city: 'por cidade (inscritos)',
+    registrations: 'por inscritos',
+    teams: 'por times',
+    submitted: 'por projetos enviados',
+    rate: 'por taxa de envio',
+  })[this.sortKey()]);
 
   readonly uberlandia = computed(() => this.rows().find(row => row.isUberlandia) ?? null);
   readonly totalCities = computed(() => this.rows().length);

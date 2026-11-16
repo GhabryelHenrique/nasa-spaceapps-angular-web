@@ -1,5 +1,5 @@
 ﻿"Attended Event","Status","Type","Email","Name","Location","Parent/Guardian Name","Parent/Guardian Email","Team Name","Project Submitted","Created At"
-"No","Registered","Virtual","lucasdutraalves70@gmail.com","Lucas Dutra Alves","Brazil","N/A","N/A","NERV Systems","No","
+"No","Registered","Virtual","lucasdutraalves70@gmail.com","Lucas Dutra Alves","Brazil","N/A","N/A","Astro Health BR","No","
 				15
 				November
 				2026
@@ -29,7 +29,7 @@
 				2026
 				01:59
 			"
-"No","Registered","In-Person","mrotranfield@gmail.com","Melissa Tranfield","United Kingdom","N/A","N/A","Harmonia","No","
+"No","Registered","In-Person","mrotranfield@gmail.com","Melissa Tranfield","United Kingdom","N/A","N/A","Harmonia","Yes","
 				14
 				November
 				2026
@@ -101,13 +101,13 @@
 				2026
 				09:35
 			"
-"No","Registered","In-Person","brennoribeiro052013@gmail.com","Brenno Ribeiro","Brazil","N/A","N/A","Chip Happens","No","
+"No","Registered","In-Person","brennoribeiro052013@gmail.com","Brenno Ribeiro","Brazil","N/A","N/A","Chip Happens","Yes","
 				14
 				November
 				2026
 				09:18
 			"
-"Yes","Attended Event","In-Person","bernardomacedo2013@icloud.com","Bernardo Macedo Ribeiro","Brazil","Brenno Ribeiro","brennoribeiro052013@gmail.com","Chip Happens","No","
+"Yes","Attended Event","In-Person","bernardomacedo2013@icloud.com","Bernardo Macedo Ribeiro","Brazil","Brenno Ribeiro","brennoribeiro052013@gmail.com","Chip Happens","Yes","
 				14
 				November
 				2026
@@ -191,7 +191,7 @@
 				2026
 				23:33
 			"
-"Yes","Attended Event","In-Person","pedropaulop12carvalho@gmail.com","Pedro Paulo Pires Carvalho","Brazil","Francimeire Flávia Pires Carvalho","francimeirepires@yahoo.com.br","Chip Happens","No","
+"Yes","Attended Event","In-Person","pedropaulop12carvalho@gmail.com","Pedro Paulo Pires Carvalho","Brazil","Francimeire Flávia Pires Carvalho","francimeirepires@yahoo.com.br","Chip Happens","Yes","
 				13
 				November
 				2026
@@ -239,7 +239,7 @@
 				2026
 				22:57
 			"
-"No","Registered","Virtual","anajusimioni@gmail.com","Ana Julia Simioni Almeida","Brazil","N/A","N/A","Happy Farmers","No","
+"No","Registered","Virtual","anajusimioni@gmail.com","Ana Julia Simioni Almeida","Brazil","N/A","N/A","Happy Farmers","Yes","
 				13
 				November
 				2026
@@ -269,7 +269,7 @@
 				2026
 				22:25
 			"
-"Yes","Attended Event","In-Person","tiagoavj@gmail.com","Tiago Arthur Vidoto Jorge","Brazil","N/A","N/A","N/A","N/A","
+"Yes","Attended Event","In-Person","tiagoavj@gmail.com","Tiago Arthur Vidoto Jorge","Brazil","N/A","N/A","Orichalcum","No","
 				13
 				November
 				2026
@@ -335,7 +335,7 @@
 				2026
 				18:59
 			"
-"No","Registered","Virtual","brenomiele2@gmail.com","Breno Palma Miele Aniceto","Brazil","N/A","N/A","The Great Gig in the Sky","No","
+"No","Registered","Virtual","brenomiele2@gmail.com","Breno Palma Miele Aniceto","Brazil","N/A","N/A","The Great Gig in the Sky","Yes","
 				13
 				November
 				2026
@@ -347,7 +347,7 @@
 				2026
 				18:43
 			"
-"No","Registered","In-Person","juliacaetanorossi@gmail.com","Julia Gabriele Caetano De Alencar","Brazil","N/A","N/A","H.E.L.I.O.S","No","
+"No","Registered","In-Person","juliacaetanorossi@gmail.com","Julia Gabriele Caetano De Alencar","Brazil","N/A","N/A","N/A","N/A","
 				13
 				November
 				2026
@@ -425,7 +425,7 @@
 				2026
 				16:48
 			"
-"No","Registered","Virtual","biancass_malta@hotmail.com","Bianca Santana Soares Malta","Brazil","N/A","N/A","The Great Gig in the Sky","No","
+"No","Registered","Virtual","biancass_malta@hotmail.com","Bianca Santana Soares Malta","Brazil","N/A","N/A","The Great Gig in the Sky","Yes","
 				13
 				November
 				2026
@@ -527,7 +527,7 @@
 				2026
 				11:18
 			"
-"No","Registered","In-Person","edwardmiguelbrasil@gmail.com","Edward Miguel Alves","Brazil","N/A","N/A","Future Foundation","No","
+"No","Registered","In-Person","edwardmiguelbrasil@gmail.com","Edward Miguel Alves","Brazil","N/A","N/A","Future Foundation","Yes","
 				13
 				November
 				2026
@@ -551,7 +551,7 @@
 				2026
 				07:55
 			"
-"No","Registered","Virtual","pedrohsl2999@gmail.com","Pedro Henrique Soares Lage","Brazil","N/A","N/A","NERV Systems","No","
+"No","Registered","Virtual","pedrohsl2999@gmail.com","Pedro Henrique Soares Lage","Brazil","N/A","N/A","Astro Health BR","No","
 				13
 				November
 				2026
@@ -713,13 +713,13 @@
 				2026
 				14:52
 			"
-"No","Registered","In-Person","lucas.souzadev@yahoo.com","lucas souza de andrade","Brazil","N/A","N/A","apollo.exe","No","
+"No","Registered","In-Person","lucas.souzadev@yahoo.com","lucas souza de andrade","Brazil","N/A","N/A","apollo.exe","Yes","
 				12
 				November
 				2026
 				14:31
 			"
-"Yes","Attended Event","In-Person","paoladanyelle@gmail.com","Paola Danyelle Novaes Queiroz","Brazil","N/A","N/A","Happy Farmers","No","
+"Yes","Attended Event","In-Person","paoladanyelle@gmail.com","Paola Danyelle Novaes Queiroz","Brazil","N/A","N/A","Happy Farmers","Yes","
 				12
 				November
 				2026
@@ -749,7 +749,7 @@
 				2026
 				12:10
 			"
-"No","Registered","In-Person","lnnn123@gmail.com","Leonardo Navarro Neves","Brazil","N/A","N/A","iluminat horizontes","No","
+"No","Registered","In-Person","lnnn123@gmail.com","Leonardo Navarro Neves","Brazil","N/A","N/A","iluminat horizontes","Yes","
 				12
 				November
 				2026
@@ -767,13 +767,13 @@
 				2026
 				10:07
 			"
-"No","Registered","In-Person","leandrordesenvolvedor@gmail.com","leandro silva ramos","Brazil","N/A","N/A","apollo.exe","No","
+"No","Registered","In-Person","leandrordesenvolvedor@gmail.com","leandro silva ramos","Brazil","N/A","N/A","apollo.exe","Yes","
 				12
 				November
 				2026
 				09:44
 			"
-"No","Registered","In-Person","horizon0875@gmail.com","Ariel Sobrinho Santana","Brazil","Geovane de Oliveira Espíndola","09112816@senaimgdocente.com.br","iluminat horizontes","No","
+"No","Registered","In-Person","horizon0875@gmail.com","Ariel Sobrinho Santana","Brazil","Geovane de Oliveira Espíndola","09112816@senaimgdocente.com.br","iluminat horizontes","Yes","
 				12
 				November
 				2026
@@ -797,7 +797,7 @@
 				2026
 				23:03
 			"
-"No","Registered","Virtual","brunobhhf@gmail.com","Bruno Henrique Firmino","Brazil","N/A","N/A","ARARA","No","
+"No","Registered","Virtual","brunobhhf@gmail.com","Bruno Henrique Firmino","Brazil","N/A","N/A","ARARA","Yes","
 				11
 				November
 				2026
@@ -815,7 +815,7 @@
 				2026
 				22:01
 			"
-"No","Registered","Virtual","moraesgabriel0003@gmail.com","Gabriel Moraes de Oliveira","Brazil","N/A","N/A","ARARA","No","
+"No","Registered","Virtual","moraesgabriel0003@gmail.com","Gabriel Moraes de Oliveira","Brazil","N/A","N/A","ARARA","Yes","
 				11
 				November
 				2026
@@ -827,7 +827,7 @@
 				2026
 				21:26
 			"
-"No","Registered","Virtual","lararlinhares@gmail.com","Lara Ramos Linhares","Brazil","Lilian Cristina Ramos","lilian_ufla@yahoo.com.br","ARARA","No","
+"No","Registered","Virtual","lararlinhares@gmail.com","Lara Ramos Linhares","Brazil","Lilian Cristina Ramos","lilian_ufla@yahoo.com.br","ARARA","Yes","
 				11
 				November
 				2026
@@ -839,7 +839,7 @@
 				2026
 				21:02
 			"
-"No","Registered","Virtual","danilo.chagasclem@gmail.com","Danilo Chagas Clemente","Brazil","N/A","N/A","ARARA","No","
+"No","Registered","Virtual","danilo.chagasclem@gmail.com","Danilo Chagas Clemente","Brazil","N/A","N/A","ARARA","Yes","
 				11
 				November
 				2026
@@ -941,7 +941,7 @@
 				2026
 				13:00
 			"
-"No","Registered","In-Person","leticiarodriguesreis12@gmail.com","Letícia Rodrigues Reis","Brazil","N/A","N/A","Uai Landing","No","
+"No","Registered","In-Person","leticiarodriguesreis12@gmail.com","Letícia Rodrigues Reis","Brazil","N/A","N/A","Uai Landing","Yes","
 				11
 				November
 				2026
@@ -1097,7 +1097,7 @@
 				2026
 				14:13
 			"
-"No","Registered","Virtual","xulia@ufu.br","Julia Gonçalves Silva","Brazil","N/A","N/A","H.E.L.I.O.S","No","
+"No","Registered","Virtual","xulia@ufu.br","Julia Gonçalves Silva","Brazil","N/A","N/A","N/A","N/A","
 				10
 				November
 				2026
@@ -1235,7 +1235,7 @@
 				2026
 				15:15
 			"
-"No","Registered","In-Person","yudi.nicoletti@gmail.com","Alexandre Yudi Aihara Nicoletti","Brazil","N/A","N/A","Uai Landing","No","
+"No","Registered","In-Person","yudi.nicoletti@gmail.com","Alexandre Yudi Aihara Nicoletti","Brazil","N/A","N/A","Uai Landing","Yes","
 				09
 				November
 				2026
@@ -1247,7 +1247,7 @@
 				2026
 				12:57
 			"
-"Yes","Attended Event","In-Person","sulivansergio22@gmail.com","Sulivan Sérgio da Matta","Brazil","N/A","N/A","iluminat horizontes","No","
+"Yes","Attended Event","In-Person","sulivansergio22@gmail.com","Sulivan Sérgio da Matta","Brazil","N/A","N/A","iluminat horizontes","Yes","
 				09
 				November
 				2026
@@ -1337,7 +1337,7 @@
 				2026
 				14:58
 			"
-"Yes","Attended Event","In-Person","gespindola@fiemg.com.br","Geovane De Oliveira Espíndola","Brazil","N/A","N/A","iluminat horizontes","No","
+"Yes","Attended Event","In-Person","gespindola@fiemg.com.br","Geovane De Oliveira Espíndola","Brazil","N/A","N/A","iluminat horizontes","Yes","
 				07
 				November
 				2026
@@ -1349,7 +1349,7 @@
 				2026
 				22:02
 			"
-"Yes","Attended Event","In-Person","juliogabrielrf@gmail.com","Júlio Gabriel Rodrigues Fernandes","Brazil","N/A","N/A","iluminat horizontes","No","
+"Yes","Attended Event","In-Person","juliogabrielrf@gmail.com","Júlio Gabriel Rodrigues Fernandes","Brazil","N/A","N/A","iluminat horizontes","Yes","
 				07
 				November
 				2026
@@ -1409,13 +1409,13 @@
 				2026
 				08:11
 			"
-"Yes","Attended Event","In-Person","samuel.gc.professional@gmail.com","Samuel Gomes Costa","Brazil","N/A","N/A","Future Foundation","No","
+"Yes","Attended Event","In-Person","samuel.gc.professional@gmail.com","Samuel Gomes Costa","Brazil","N/A","N/A","Future Foundation","Yes","
 				06
 				November
 				2026
 				05:17
 			"
-"No","Registered","In-Person","josenetomg@gmail.com","Jose Joaquim Brandao Neto","Brazil","N/A","N/A","Kultive 2026","No","
+"No","Registered","In-Person","josenetomg@gmail.com","Jose Joaquim Brandao Neto","Brazil","N/A","N/A","Kultive 2026","Yes","
 				06
 				November
 				2026
@@ -1571,7 +1571,7 @@
 				2026
 				14:20
 			"
-"Yes","Attended Event","In-Person","nicolas.rodrigues@ufu.br","Nicolas Garcia","Brazil","N/A","N/A","Harmonia","No","
+"Yes","Attended Event","In-Person","nicolas.rodrigues@ufu.br","Nicolas Garcia","Brazil","N/A","N/A","Harmonia","Yes","
 				02
 				November
 				2026
@@ -1667,19 +1667,19 @@
 				2026
 				12:48
 			"
-"No","Registered","In-Person","maurotablet01@gmail.com","Mauro Humberto Silva","Brazil","N/A","N/A","'TREM' DE FERRO","No","
+"No","Registered","In-Person","maurotablet01@gmail.com","Mauro Humberto Silva","Brazil","N/A","N/A","'TREM' DE FERRO","Yes","
 				30
 				October
 				2026
 				01:37
 			"
-"Yes","Attended Event","In-Person","targinoraquel62@gmail.com","Raquel Targino Araujo","Brazil","N/A","N/A","'TREM' DE FERRO","No","
+"Yes","Attended Event","In-Person","targinoraquel62@gmail.com","Raquel Targino Araujo","Brazil","N/A","N/A","'TREM' DE FERRO","Yes","
 				30
 				October
 				2026
 				01:37
 			"
-"No","Registered","Virtual","allexxasilva1@gmail.com","ALEXANDRA SILVESTRE DE SOUZA DA SILVA","Brazil","N/A","N/A","NERV Systems","No","
+"No","Registered","Virtual","allexxasilva1@gmail.com","ALEXANDRA SILVESTRE DE SOUZA DA SILVA","Brazil","N/A","N/A","Astro Health BR","No","
 				29
 				October
 				2026
@@ -1691,7 +1691,7 @@
 				2026
 				17:04
 			"
-"No","Registered","Virtual","rafaelbaruc2015@gmail.com","Rafael Baruc Silva","Brazil","N/A","N/A","NERV Systems","No","
+"No","Registered","Virtual","rafaelbaruc2015@gmail.com","Rafael Baruc Silva","Brazil","N/A","N/A","Astro Health BR","No","
 				29
 				October
 				2026
@@ -1751,7 +1751,7 @@
 				2026
 				11:17
 			"
-"No","Registered","Virtual","larissa.santana.docs@gmail.com","Larissa Santana Silva","Brazil","N/A","N/A","NERV Systems","No","
+"No","Registered","Virtual","larissa.santana.docs@gmail.com","Larissa Santana Silva","Brazil","N/A","N/A","Astro Health BR","No","
 				29
 				October
 				2026
@@ -1805,7 +1805,7 @@
 				2026
 				21:08
 			"
-"Yes","Attended Event","In-Person","brennoconzatti13@gmail.com","Brenno Garcia Lopes Conzatti de Oliveira","Brazil","N/A","N/A","Happy Farmers","No","
+"Yes","Attended Event","In-Person","brennoconzatti13@gmail.com","Brenno Garcia Lopes Conzatti de Oliveira","Brazil","N/A","N/A","Happy Farmers","Yes","
 				27
 				October
 				2026
@@ -1847,7 +1847,7 @@
 				2026
 				09:09
 			"
-"No","Registered","In-Person","eduardomachadorezende0@gmail.com","Eduardo Machado Rezende","Brazil","N/A","N/A","Code and Cheese","No","
+"No","Registered","In-Person","eduardomachadorezende0@gmail.com","Eduardo Machado Rezende","Brazil","N/A","N/A","Code and Cheese","Yes","
 				27
 				October
 				2026
@@ -1883,7 +1883,7 @@
 				2026
 				18:52
 			"
-"Yes","Attended Event","In-Person","nwvidal@gmail.com","Newton Vidal","Brazil","N/A","N/A","Future Foundation","No","
+"Yes","Attended Event","In-Person","nwvidal@gmail.com","Newton Vidal","Brazil","N/A","N/A","Future Foundation","Yes","
 				26
 				October
 				2026
@@ -1931,7 +1931,7 @@
 				2026
 				20:32
 			"
-"Yes","Attended Event","In-Person","guirodovalho10@gmail.com","Guilherme Rodrigues Rodovalho","Brazil","N/A","N/A","Amigos do PSY","No","
+"Yes","Attended Event","In-Person","guirodovalho10@gmail.com","Guilherme Rodrigues Rodovalho","Brazil","N/A","N/A","Amigos do PSY","Yes","
 				16
 				October
 				2026
@@ -1949,7 +1949,7 @@
 				2026
 				11:24
 			"
-"No","Registered","Virtual","felipegabfd@gmail.com","Felipe Gabriel Reis Sousa","Brazil","N/A","N/A","CodeBioZero","No","
+"No","Registered","Virtual","felipegabfd@gmail.com","Felipe Gabriel Reis Sousa","Brazil","N/A","N/A","N/A","N/A","
 				15
 				October
 				2026
@@ -1961,7 +1961,7 @@
 				2026
 				07:30
 			"
-"Yes","Attended Event","In-Person","wallacegelmp@gmail.com","Wallace Geraldo Marcos Pinheiro","Brazil","N/A","N/A","Amigos do PSY","No","
+"Yes","Attended Event","In-Person","wallacegelmp@gmail.com","Wallace Geraldo Marcos Pinheiro","Brazil","N/A","N/A","Amigos do PSY","Yes","
 				14
 				October
 				2026
@@ -2021,7 +2021,7 @@
 				2026
 				19:56
 			"
-"Yes","Attended Event","In-Person","lucas.dalps@gmail.com","Lucas da Silva Lopes","Brazil","N/A","N/A","iluminat horizontes","No","
+"Yes","Attended Event","In-Person","lucas.dalps@gmail.com","Lucas da Silva Lopes","Brazil","N/A","N/A","iluminat horizontes","Yes","
 				13
 				October
 				2026
@@ -2069,7 +2069,7 @@
 				2026
 				14:05
 			"
-"Yes","Attended Event","In-Person","gabrielpedroso321@gmail.com","Gabriel Pedroso Naves Monteiro","Brazil","N/A","N/A","Happy Farmers","No","
+"Yes","Attended Event","In-Person","gabrielpedroso321@gmail.com","Gabriel Pedroso Naves Monteiro","Brazil","N/A","N/A","Happy Farmers","Yes","
 				01
 				October
 				2026
@@ -2159,7 +2159,7 @@
 				2026
 				13:31
 			"
-"Yes","Attended Event","In-Person","valenciopedro158@gmail.com","Pedro Valencio Souza Marques Moutinho","Brazil","N/A","N/A","Happy Farmers","No","
+"Yes","Attended Event","In-Person","valenciopedro158@gmail.com","Pedro Valencio Souza Marques Moutinho","Brazil","N/A","N/A","Happy Farmers","Yes","
 				23
 				September
 				2026
@@ -2207,43 +2207,43 @@
 				2026
 				13:34
 			"
-"No","Registered","Virtual","jhenifer.meneses10@gmail.com","Jhenifer Ferreira Meneses","Brazil","N/A","N/A","Orbit Sentinel","No","
+"No","Registered","Virtual","jhenifer.meneses10@gmail.com","Jhenifer Ferreira Meneses","Brazil","N/A","N/A","Orbit Sentinel","Yes","
 				22
 				September
 				2026
 				11:38
 			"
-"No","Registered","Virtual","leonardo.a.ribeiro.21@gmail.com","Leonardo Almeida Ribeiro","Brazil","N/A","N/A","Orbit Sentinel","No","
+"No","Registered","Virtual","leonardo.a.ribeiro.21@gmail.com","Leonardo Almeida Ribeiro","Brazil","N/A","N/A","Orbit Sentinel","Yes","
 				22
 				September
 				2026
 				11:19
 			"
-"Yes","Attended Event","In-Person","michaelvinhal23@hotmail.com","Dom Aço","Brazil","N/A","N/A","XBigDevs","No","
+"Yes","Attended Event","In-Person","michaelvinhal23@hotmail.com","Dom Aço","Brazil","N/A","N/A","XBigDevs","Yes","
 				21
 				September
 				2026
 				21:56
 			"
-"Yes","Attended Event","In-Person","pr54582@gmail.com","O Grande Soldador","Brazil","N/A","N/A","XBigDevs","No","
+"Yes","Attended Event","In-Person","pr54582@gmail.com","O Grande Soldador","Brazil","N/A","N/A","XBigDevs","Yes","
 				21
 				September
 				2026
 				21:56
 			"
-"No","Registered","In-Person","lm159753456@gmail.com","Diesel","Brazil","N/A","N/A","XBigDevs","No","
+"No","Registered","In-Person","lm159753456@gmail.com","Diesel","Brazil","N/A","N/A","XBigDevs","Yes","
 				21
 				September
 				2026
 				21:56
 			"
-"No","Registered","In-Person","phkourly@gmail.com","Tim","Brazil","N/A","N/A","XBigDevs","No","
+"No","Registered","In-Person","phkourly@gmail.com","Tim","Brazil","N/A","N/A","XBigDevs","Yes","
 				21
 				September
 				2026
 				21:53
 			"
-"No","Registered","In-Person","cauacavalcante2021@gmail.com","Manivela","Brazil","N/A","N/A","XBigDevs","No","
+"No","Registered","In-Person","cauacavalcante2021@gmail.com","Manivela","Brazil","N/A","N/A","XBigDevs","Yes","
 				21
 				September
 				2026
@@ -2261,7 +2261,7 @@
 				2026
 				08:08
 			"
-"Yes","Attended Event","In-Person","miguelsimamotolemes@gmail.com","Miguel Simamoto Lemes","Brazil","N/A","N/A","Amigos do PSY","No","
+"Yes","Attended Event","In-Person","miguelsimamotolemes@gmail.com","Miguel Simamoto Lemes","Brazil","N/A","N/A","Amigos do PSY","Yes","
 				17
 				September
 				2026
@@ -2321,7 +2321,7 @@
 				2026
 				19:48
 			"
-"No","Registered","In-Person","matheusn06leite@gmail.com","Matheus Nascimento leite","Brazil","N/A","N/A","Amigos do PSY","No","
+"No","Registered","In-Person","matheusn06leite@gmail.com","Matheus Nascimento leite","Brazil","N/A","N/A","Amigos do PSY","Yes","
 				17
 				September
 				2026
@@ -2333,7 +2333,7 @@
 				2026
 				16:23
 			"
-"No","Registered","Virtual","morais.a.kaio@gmail.com","Kaio Alexandre de Morais","Brazil","N/A","N/A","Orbit Sentinel","No","
+"No","Registered","Virtual","morais.a.kaio@gmail.com","Kaio Alexandre de Morais","Brazil","N/A","N/A","Orbit Sentinel","Yes","
 				17
 				September
 				2026
@@ -2345,7 +2345,7 @@
 				2026
 				12:23
 			"
-"Yes","Attended Event","In-Person","flavio_contato@outlook.com","Flavio Vezono Filho","Brazil","N/A","N/A","Amigos do PSY","No","
+"Yes","Attended Event","In-Person","flavio_contato@outlook.com","Flavio Vezono Filho","Brazil","N/A","N/A","Amigos do PSY","Yes","
 				14
 				September
 				2026
@@ -2453,7 +2453,7 @@
 				2026
 				22:11
 			"
-"Yes","Attended Event","In-Person","sandrovictors@gmail.com","sandro Victor Souza Ipuchima","Brazil","N/A","N/A","Uai Landing","No","
+"Yes","Attended Event","In-Person","sandrovictors@gmail.com","sandro Victor Souza Ipuchima","Brazil","N/A","N/A","Uai Landing","Yes","
 				04
 				September
 				2026
@@ -2543,19 +2543,19 @@
 				2026
 				18:09
 			"
-"No","Registered","Virtual","belaine2828@gmail.com","Elaine Barbosa da Silva","Brazil","N/A","N/A","Orbit Sentinel","No","
+"No","Registered","Virtual","belaine2828@gmail.com","Elaine Barbosa da Silva","Brazil","N/A","N/A","Orbit Sentinel","Yes","
 				01
 				September
 				2026
 				10:15
 			"
-"No","Registered","Virtual","lucybaia2004@gmail.com","Marcela Lucy Baia de Jesus","Brazil","N/A","N/A","Orbit Sentinel","No","
+"No","Registered","Virtual","lucybaia2004@gmail.com","Marcela Lucy Baia de Jesus","Brazil","N/A","N/A","Orbit Sentinel","Yes","
 				01
 				September
 				2026
 				10:14
 			"
-"Yes","Attended Event","In-Person","pso180807@gmail.com","Pedro santos oliveira","Brazil","N/A","N/A","Future Foundation","No","
+"Yes","Attended Event","In-Person","pso180807@gmail.com","Pedro santos oliveira","Brazil","N/A","N/A","Future Foundation","Yes","
 				31
 				August
 				2026
@@ -2669,7 +2669,7 @@
 				2026
 				16:06
 			"
-"No","Registered","In-Person","ecfgustavo@gmail.com","Crank","Brazil","N/A","N/A","XBigDevs","No","
+"No","Registered","In-Person","ecfgustavo@gmail.com","Crank","Brazil","N/A","N/A","XBigDevs","Yes","
 				26
 				August
 				2026
@@ -2681,7 +2681,7 @@
 				2026
 				15:27
 			"
-"No","Registered","Virtual","mjdos.2014@gmail.com","Marcelo José de Oliveira Santos","Brazil","N/A","N/A","Orbit Sentinel","No","
+"No","Registered","Virtual","mjdos.2014@gmail.com","Marcelo José de Oliveira Santos","Brazil","N/A","N/A","Orbit Sentinel","Yes","
 				26
 				August
 				2026
@@ -2711,7 +2711,7 @@
 				2026
 				14:23
 			"
-"No","Registered","In-Person","isabelacristinasilveira1@gmail.com","Isabela Cristina Silveira","Brazil","N/A","N/A","Code and Cheese","No","
+"No","Registered","In-Person","isabelacristinasilveira1@gmail.com","Isabela Cristina Silveira","Brazil","N/A","N/A","Code and Cheese","Yes","
 				26
 				August
 				2026

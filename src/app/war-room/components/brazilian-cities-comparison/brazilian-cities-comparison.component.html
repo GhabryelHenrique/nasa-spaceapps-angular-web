@@ -150,36 +150,48 @@
 
       <!-- Ranking detalhado -->
       <div class="comparison-table-container">
-        <h3 class="table-title">🏅 Ranking Detalhado</h3>
+        <h3 class="table-title">🏅 Ranking Detalhado <small class="table-subtitle">{{ sortLabel() }}</small></h3>
+        <p class="sort-hint">Clique no cabeçalho de uma coluna para reordenar o ranking.</p>
 
         <div
           class="comparison-table"
+         
           [class.has-teams]="hasTeams()"
           [class.has-submissions]="hasSubmissions()">
 
           <div class="table-header">
             <div class="table-cell rank-cell">Pos</div>
-            <div class="table-cell city-cell">Cidade</div>
-            <div class="table-cell registrations-cell">Inscritos</div>
+            <ng-container *ngTemplateOutlet="sortHeader; context: { key: 'city', label: 'Cidade', cls: 'city-cell' }"></ng-container>
+            <ng-container *ngTemplateOutlet="sortHeader; context: { key: 'registrations', label: 'Inscritos', cls: 'registrations-cell' }"></ng-container>
             @if (hasTeams()) {
-              <div class="table-cell teams-cell">Times</div>
+              <ng-container *ngTemplateOutlet="sortHeader; context: { key: 'teams', label: 'Times', cls: 'teams-cell' }"></ng-container>
             }
             @if (hasSubmissions()) {
-              <div class="table-cell submitted-cell">Submetidos</div>
-              <div class="table-cell rate-cell">Taxa</div>
+              <ng-container *ngTemplateOutlet="sortHeader; context: { key: 'submitted', label: 'Enviados', cls: 'submitted-cell' }"></ng-container>
+              <ng-container *ngTemplateOutlet="sortHeader; context: { key: 'rate', label: 'Taxa', cls: 'rate-cell' }"></ng-container>
             }
           </div>
 
-          @for (city of rows(); track city.cityName) {
+          <ng-template #sortHeader let-key="key" let-label="label" let-cls="cls">
+            <div class="table-cell" [ngClass]="cls">
+              <button type="button" class="sort-btn" [class.active]="sortKey() === key" (click)="setSort(key)"
+                      [attr.aria-label]="'Ordenar por ' + label + (sortKey() === key ? (sortDirection() === 'asc' ? ' (crescente)' : ' (decrescente)') : '')">
+                {{ label }}
+                <i [class]="sortIcon(key)" aria-hidden="true"></i>
+              </button>
+            </div>
+          </ng-template>
+
+          @for (city of sortedRows(); track city.cityName) {
             <div
               class="table-row"
               [class.uberlandia-row]="city.isUberlandia"
-              [class.top-three]="city.rank <= 3">
+              [class.top-three]="city.position <= 3">
 
               <div class="table-cell rank-cell">
-                <span class="rank-number">{{ city.rank }}</span>
-                @if (city.rank <= 3) {
-                  <span class="rank-emoji">{{ getRankEmoji(city.rank) }}</span>
+                <span class="rank-number">{{ city.position }}</span>
+                @if (city.position <= 3) {
+                  <span class="rank-emoji">{{ getRankEmoji(city.position) }}</span>
                 }
               </div>
 

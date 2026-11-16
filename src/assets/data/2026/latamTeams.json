@@ -1,19 +1,19 @@
 {
-  "generatedAt": "2026-11-15T21:54:15Z",
+  "generatedAt": "2026-11-16T00:36:55Z",
   "data": [
     {
       "locationId": "aWQ6NTQ0MTQ=",
       "locationName": "ZACATEPEC",
       "country": "Mexico",
       "totalTeams": 176,
-      "submittedProjects": 71
+      "submittedProjects": 86
     },
     {
       "locationId": "aWQ6NTQ0MjE=",
       "locationName": "Xalapa",
       "country": "Mexico",
       "totalTeams": 29,
-      "submittedProjects": 3
+      "submittedProjects": 4
     },
     {
       "locationId": "aWQ6NTQ0MjY=",
@@ -34,7 +34,7 @@
       "locationName": "Vilhena",
       "country": "Brazil",
       "totalTeams": 17,
-      "submittedProjects": 1
+      "submittedProjects": 5
     },
     {
       "locationId": "aWQ6NTQ0Mzk=",
@@ -48,28 +48,28 @@
       "locationName": "Uberlândia",
       "country": "Brazil",
       "totalTeams": 85,
-      "submittedProjects": 14
+      "submittedProjects": 25
     },
     {
       "locationId": "aWQ6NTQ0NDc=",
       "locationName": "Tuxtla Gutiérrez",
       "country": "Mexico",
       "totalTeams": 33,
-      "submittedProjects": 25
+      "submittedProjects": 26
     },
     {
       "locationId": "aWQ6NTQ0NTE=",
       "locationName": "Trujillo",
       "country": "Peru",
-      "totalTeams": 64,
-      "submittedProjects": 10
+      "totalTeams": 66,
+      "submittedProjects": 15
     },
     {
       "locationId": "aWQ6NTQ0NjA=",
       "locationName": "Tlaxcala City",
       "country": "Mexico",
       "totalTeams": 18,
-      "submittedProjects": 2
+      "submittedProjects": 4
     },
     {
       "locationId": "aWQ6NTQ0NjM=",
@@ -83,28 +83,28 @@
       "locationName": "Temuco",
       "country": "Chile",
       "totalTeams": 29,
-      "submittedProjects": 8
+      "submittedProjects": 9
     },
     {
       "locationId": "aWQ6NTQ0ODY=",
       "locationName": "São Paulo",
       "country": "Brazil",
       "totalTeams": 54,
-      "submittedProjects": 11
+      "submittedProjects": 18
     },
     {
       "locationId": "aWQ6NTQ0ODc=",
       "locationName": "São José dos Campos",
       "country": "Brazil",
       "totalTeams": 18,
-      "submittedProjects": 1
+      "submittedProjects": 8
     },
     {
       "locationId": "aWQ6NTQ0ODg=",
       "locationName": "São Gonçalo",
       "country": "Brazil",
-      "totalTeams": 44,
-      "submittedProjects": 14
+      "totalTeams": 46,
+      "submittedProjects": 16
     },
     {
       "locationId": "aWQ6NTQ0OTg=",
@@ -117,8 +117,8 @@
       "locationId": "aWQ6NTQ1MDM=",
       "locationName": "Sorocaba",
       "country": "Brazil",
-      "totalTeams": 30,
-      "submittedProjects": 2
+      "totalTeams": 31,
+      "submittedProjects": 4
     },
     {
       "locationId": "aWQ6NTQ1Mjc=",
@@ -132,35 +132,35 @@
       "locationName": "Santo Domingo, Dominican Republic",
       "country": "Dominican Republic",
       "totalTeams": 48,
-      "submittedProjects": 4
+      "submittedProjects": 7
     },
     {
       "locationId": "aWQ6NTQ1Mjk=",
       "locationName": "Santo André",
       "country": "Brazil",
       "totalTeams": 6,
-      "submittedProjects": 0
+      "submittedProjects": 1
     },
     {
       "locationId": "aWQ6NTQ1MzA=",
       "locationName": "Santiago del Estero",
       "country": "Argentina",
       "totalTeams": 94,
-      "submittedProjects": 10
+      "submittedProjects": 25
     },
     {
       "locationId": "aWQ6NTQ1MzE=",
       "locationName": "Santiago, Chile",
       "country": "Chile",
       "totalTeams": 67,
-      "submittedProjects": 20
+      "submittedProjects": 21
     },
     {
       "locationId": "aWQ6NTQ1MzI=",
       "locationName": "Santa Rosa de Calamuchita",
       "country": "Argentina",
       "totalTeams": 13,
-      "submittedProjects": 11
+      "submittedProjects": 12
     },
     {
       "locationId": "aWQ6NTQ1MzM=",
@@ -174,105 +174,105 @@
       "locationName": "Santa Cruz das Palmeiras",
       "country": "Brazil",
       "totalTeams": 9,
-      "submittedProjects": 4
+      "submittedProjects": 5
     },
     {
       "locationId": "aWQ6NTQ1MzU=",
       "locationName": "Sangolqui",
       "country": "Ecuador",
       "totalTeams": 52,
-      "submittedProjects": 3
+      "submittedProjects": 5
     },
     {
       "locationId": "aWQ6NTQ1MzY=",
       "locationName": "San Vicente Ferrer",
       "country": "Colombia",
-      "totalTeams": 25,
-      "submittedProjects": 1
+      "totalTeams": 26,
+      "submittedProjects": 7
     },
     {
       "locationId": "aWQ6NTQ1Mzg=",
       "locationName": "San Vicente de Cañete",
       "country": "Peru",
       "totalTeams": 18,
-      "submittedProjects": 1
+      "submittedProjects": 4
     },
     {
       "locationId": "aWQ6NTQ1Mzk=",
       "locationName": "San Salvador",
       "country": "El Salvador",
       "totalTeams": 59,
-      "submittedProjects": 5
+      "submittedProjects": 6
     },
     {
       "locationId": "aWQ6NTQ1NDA=",
       "locationName": "San Pedro Sula",
       "country": "Honduras",
       "totalTeams": 16,
-      "submittedProjects": 1
+      "submittedProjects": 5
     },
     {
       "locationId": "aWQ6NTQ1NDI=",
       "locationName": "San Luis",
       "country": "Argentina",
-      "totalTeams": 61,
-      "submittedProjects": 8
+      "totalTeams": 62,
+      "submittedProjects": 29
     },
     {
       "locationId": "aWQ6NTQ1NDM=",
       "locationName": "San Juan, Argentina",
       "country": "Argentina",
       "totalTeams": 21,
-      "submittedProjects": 0
+      "submittedProjects": 3
     },
     {
       "locationId": "aWQ6NTQ1NDU=",
       "locationName": "San Jeronimo de Juarez",
       "country": "Mexico",
       "totalTeams": 20,
-      "submittedProjects": 3
+      "submittedProjects": 4
     },
     {
       "locationId": "aWQ6NTQ1NDg=",
       "locationName": "Salvador",
       "country": "Brazil",
-      "totalTeams": 26,
-      "submittedProjects": 14
+      "totalTeams": 25,
+      "submittedProjects": 13
     },
     {
       "locationId": "aWQ6NTQ1NDk=",
       "locationName": "Salto",
       "country": "Uruguay",
       "totalTeams": 15,
-      "submittedProjects": 3
+      "submittedProjects": 4
     },
     {
       "locationId": "aWQ6NTQ1NTA=",
       "locationName": "Saltillo",
       "country": "Mexico",
       "totalTeams": 76,
-      "submittedProjects": 12
+      "submittedProjects": 16
     },
     {
       "locationId": "aWQ6NTQ1NTE=",
       "locationName": "Salta",
       "country": "Argentina",
-      "totalTeams": 21,
-      "submittedProjects": 1
+      "totalTeams": 20,
+      "submittedProjects": 7
     },
     {
       "locationId": "aWQ6NTQ1NjA=",
       "locationName": "Rosario",
       "country": "Argentina",
       "totalTeams": 20,
-      "submittedProjects": 2
+      "submittedProjects": 7
     },
     {
       "locationId": "aWQ6NTQ1NjQ=",
       "locationName": "Tegucigalpa",
       "country": "Honduras",
       "totalTeams": 32,
-      "submittedProjects": 3
+      "submittedProjects": 17
     },
     {
       "locationId": "aWQ6NTQ1NjY=",
@@ -286,14 +286,14 @@
       "locationName": "Riobamba",
       "country": "Ecuador",
       "totalTeams": 33,
-      "submittedProjects": 2
+      "submittedProjects": 7
     },
     {
       "locationId": "aWQ6NTQ1Njg=",
       "locationName": "Rio Verde",
       "country": "Brazil",
       "totalTeams": 9,
-      "submittedProjects": 0
+      "submittedProjects": 5
     },
     {
       "locationId": "aWQ6NTQ1NzA=",
@@ -307,14 +307,14 @@
       "locationName": "Ribeirao Preto",
       "country": "Brazil",
       "totalTeams": 20,
-      "submittedProjects": 2
+      "submittedProjects": 5
     },
     {
       "locationId": "aWQ6NTQ1NzY=",
       "locationName": "Recife",
       "country": "Brazil",
-      "totalTeams": 51,
-      "submittedProjects": 6
+      "totalTeams": 53,
+      "submittedProjects": 9
     },
     {
       "locationId": "aWQ6NTQ1ODQ=",
@@ -327,8 +327,8 @@
       "locationId": "aWQ6NTQ1ODY=",
       "locationName": "Quito",
       "country": "Ecuador",
-      "totalTeams": 32,
-      "submittedProjects": 3
+      "totalTeams": 31,
+      "submittedProjects": 4
     },
     {
       "locationId": "aWQ6NTQ1ODc=",
@@ -342,28 +342,28 @@
       "locationName": "Querétaro",
       "country": "Mexico",
       "totalTeams": 123,
-      "submittedProjects": 34
+      "submittedProjects": 42
     },
     {
       "locationId": "aWQ6NTQ1OTA=",
       "locationName": "Quemchi",
       "country": "Chile",
       "totalTeams": 12,
-      "submittedProjects": 3
+      "submittedProjects": 5
     },
     {
       "locationId": "aWQ6NTQ1OTQ=",
       "locationName": "Punta del Este",
       "country": "Uruguay",
-      "totalTeams": 29,
-      "submittedProjects": 19
+      "totalTeams": 30,
+      "submittedProjects": 21
     },
     {
       "locationId": "aWQ6NTQ1OTU=",
       "locationName": "Punta Arenas",
       "country": "Chile",
       "totalTeams": 10,
-      "submittedProjects": 3
+      "submittedProjects": 4
     },
     {
       "locationId": "aWQ6NTQ1OTc=",
@@ -377,7 +377,7 @@
       "locationName": "Puerto Madryn",
       "country": "Argentina",
       "totalTeams": 10,
-      "submittedProjects": 3
+      "submittedProjects": 4
     },
     {
       "locationId": "aWQ6NTQ1OTk=",
@@ -391,49 +391,49 @@
       "locationName": "Pouso Alegre",
       "country": "Brazil",
       "totalTeams": 13,
-      "submittedProjects": 3
+      "submittedProjects": 7
     },
     {
       "locationId": "aWQ6NTQ2MDc=",
       "locationName": "Popayán",
       "country": "Colombia",
-      "totalTeams": 8,
-      "submittedProjects": 1
+      "totalTeams": 7,
+      "submittedProjects": 2
     },
     {
       "locationId": "aWQ6NTQ2MTE=",
       "locationName": "PIURA",
       "country": "Peru",
-      "totalTeams": 43,
-      "submittedProjects": 1
+      "totalTeams": 44,
+      "submittedProjects": 6
     },
     {
       "locationId": "aWQ6NTQ2MjQ=",
       "locationName": "Panama City",
       "country": "Panama",
       "totalTeams": 21,
-      "submittedProjects": 7
+      "submittedProjects": 10
     },
     {
       "locationId": "aWQ6NTQ2Mjk=",
       "locationName": "Ouro Preto",
       "country": "Brazil",
       "totalTeams": 18,
-      "submittedProjects": 1
+      "submittedProjects": 2
     },
     {
       "locationId": "aWQ6NTQ2NDA=",
       "locationName": "Nova Iguaçu",
       "country": "Brazil",
       "totalTeams": 16,
-      "submittedProjects": 1
+      "submittedProjects": 4
     },
     {
       "locationId": "aWQ6NTQ2NTE=",
       "locationName": "Neiva",
       "country": "Colombia",
       "totalTeams": 35,
-      "submittedProjects": 18
+      "submittedProjects": 26
     },
     {
       "locationId": "aWQ6NTQ2NTc=",
@@ -447,35 +447,35 @@
       "locationName": "Moquegua",
       "country": "Peru",
       "totalTeams": 48,
-      "submittedProjects": 5
+      "submittedProjects": 10
     },
     {
       "locationId": "aWQ6NTQ2NzU=",
       "locationName": "Montevideo",
       "country": "Uruguay",
       "totalTeams": 74,
-      "submittedProjects": 13
+      "submittedProjects": 31
     },
     {
       "locationId": "aWQ6NTQ2NzY=",
       "locationName": "Monterrey",
       "country": "Mexico",
       "totalTeams": 60,
-      "submittedProjects": 7
+      "submittedProjects": 16
     },
     {
       "locationId": "aWQ6NTQ2ODc=",
       "locationName": "Mexico City",
       "country": "Mexico",
       "totalTeams": 60,
-      "submittedProjects": 18
+      "submittedProjects": 19
     },
     {
       "locationId": "aWQ6NTQ2ODg=",
       "locationName": "Mexicali",
       "country": "Mexico",
       "totalTeams": 34,
-      "submittedProjects": 1
+      "submittedProjects": 2
     },
     {
       "locationId": "aWQ6NTQ2OTE=",
@@ -488,8 +488,8 @@
       "locationId": "aWQ6NTQ2OTQ=",
       "locationName": "Medellín",
       "country": "Colombia",
-      "totalTeams": 91,
-      "submittedProjects": 17
+      "totalTeams": 92,
+      "submittedProjects": 31
     },
     {
       "locationId": "aWQ6NTQ2OTg=",
@@ -503,21 +503,21 @@
       "locationName": "Manaus",
       "country": "Brazil",
       "totalTeams": 22,
-      "submittedProjects": 5
+      "submittedProjects": 8
     },
     {
       "locationId": "aWQ6NTQ3MDk=",
       "locationName": "Managua",
       "country": "Nicaragua",
       "totalTeams": 30,
-      "submittedProjects": 14
+      "submittedProjects": 17
     },
     {
       "locationId": "aWQ6NTQ3MjU=",
       "locationName": "Londrina",
       "country": "Brazil",
       "totalTeams": 9,
-      "submittedProjects": 1
+      "submittedProjects": 2
     },
     {
       "locationId": "aWQ6NTQ3MzA=",
@@ -531,21 +531,21 @@
       "locationName": "Lima",
       "country": "Peru",
       "totalTeams": 174,
-      "submittedProjects": 7
+      "submittedProjects": 14
     },
     {
       "locationId": "aWQ6NTQ3MzY=",
       "locationName": "Latacunga",
       "country": "Ecuador",
       "totalTeams": 15,
-      "submittedProjects": 7
+      "submittedProjects": 10
     },
     {
       "locationId": "aWQ6NTQ3Mzk=",
       "locationName": "Lajeado",
       "country": "Brazil",
       "totalTeams": 16,
-      "submittedProjects": 2
+      "submittedProjects": 7
     },
     {
       "locationId": "aWQ6NTQ3NDI=",
@@ -566,70 +566,70 @@
       "locationName": "Juazeiro do Norte",
       "country": "Brazil",
       "totalTeams": 8,
-      "submittedProjects": 0
+      "submittedProjects": 2
     },
     {
       "locationId": "aWQ6NTQ3OTc=",
       "locationName": "Jalapa",
       "country": "Guatemala",
       "totalTeams": 33,
-      "submittedProjects": 5
+      "submittedProjects": 10
     },
     {
       "locationId": "aWQ6NTQ4MDE=",
       "locationName": "Jaguariúna",
       "country": "Brazil",
       "totalTeams": 29,
-      "submittedProjects": 4
+      "submittedProjects": 14
     },
     {
       "locationId": "aWQ6NTQ4MDk=",
       "locationName": "Itabira",
       "country": "Brazil",
       "totalTeams": 6,
-      "submittedProjects": 0
+      "submittedProjects": 1
     },
     {
       "locationId": "aWQ6NTQ4MTQ=",
       "locationName": "Ipiales",
       "country": "Colombia",
-      "totalTeams": 49,
-      "submittedProjects": 6
+      "totalTeams": 52,
+      "submittedProjects": 12
     },
     {
       "locationId": "aWQ6NTQ4MTg=",
       "locationName": "Ica",
       "country": "Peru",
       "totalTeams": 17,
-      "submittedProjects": 1
+      "submittedProjects": 3
     },
     {
       "locationId": "aWQ6NTQ4MjI=",
       "locationName": "Huánuco",
       "country": "Peru",
       "totalTeams": 42,
-      "submittedProjects": 8
+      "submittedProjects": 10
     },
     {
       "locationId": "aWQ6NTQ4MjU=",
       "locationName": "Huancayo",
       "country": "Peru",
       "totalTeams": 32,
-      "submittedProjects": 1
+      "submittedProjects": 2
     },
     {
       "locationId": "aWQ6NTQ4Mjk=",
       "locationName": "Hidalgo del Parral",
       "country": "Mexico",
       "totalTeams": 8,
-      "submittedProjects": 1
+      "submittedProjects": 2
     },
     {
       "locationId": "aWQ6NTQ4MzA=",
       "locationName": "Hermosillo",
       "country": "Mexico",
       "totalTeams": 30,
-      "submittedProjects": 20
+      "submittedProjects": 25
     },
     {
       "locationId": "aWQ6NTQ4NDY=",
@@ -643,20 +643,20 @@
       "locationName": "Guatemala",
       "country": "Guatemala",
       "totalTeams": 59,
-      "submittedProjects": 1
+      "submittedProjects": 4
     },
     {
       "locationId": "aWQ6NTQ4NDg=",
       "locationName": "Guarulhos",
       "country": "Brazil",
       "totalTeams": 13,
-      "submittedProjects": 3
+      "submittedProjects": 4
     },
     {
       "locationId": "aWQ6NTQ4NDk=",
       "locationName": "Guadalajara",
       "country": "Mexico",
-      "totalTeams": 36,
+      "totalTeams": 38,
       "submittedProjects": 2
     },
     {
@@ -664,35 +664,35 @@
       "locationName": "Goiânia",
       "country": "Brazil",
       "totalTeams": 31,
-      "submittedProjects": 1
+      "submittedProjects": 3
     },
     {
       "locationId": "aWQ6NTQ4NjQ=",
       "locationName": "General San Martín",
       "country": "Argentina",
       "totalTeams": 16,
-      "submittedProjects": 2
+      "submittedProjects": 6
     },
     {
       "locationId": "aWQ6NTQ4NzM=",
       "locationName": "Fortaleza",
       "country": "Brazil",
       "totalTeams": 44,
-      "submittedProjects": 4
+      "submittedProjects": 9
     },
     {
       "locationId": "aWQ6NTQ4NzU=",
       "locationName": "Florianopolis",
       "country": "Brazil",
-      "totalTeams": 14,
-      "submittedProjects": 3
+      "totalTeams": 15,
+      "submittedProjects": 7
     },
     {
       "locationId": "aWQ6NTQ4Nzk=",
       "locationName": "Facatativa",
       "country": "Colombia",
-      "totalTeams": 43,
-      "submittedProjects": 8
+      "totalTeams": 44,
+      "submittedProjects": 9
     },
     {
       "locationId": "aWQ6NTQ4ODI=",
@@ -713,28 +713,28 @@
       "locationName": "Encarnación",
       "country": "Paraguay",
       "totalTeams": 12,
-      "submittedProjects": 1
+      "submittedProjects": 2
     },
     {
       "locationId": "aWQ6NTQ4OTY=",
       "locationName": "Durango",
       "country": "Mexico",
       "totalTeams": 50,
-      "submittedProjects": 5
+      "submittedProjects": 9
     },
     {
       "locationId": "aWQ6NTQ4OTc=",
       "locationName": "Duitama",
       "country": "Colombia",
       "totalTeams": 41,
-      "submittedProjects": 7
+      "submittedProjects": 10
     },
     {
       "locationId": "aWQ6NTQ5MTg=",
       "locationName": "Curitiba",
       "country": "Brazil",
       "totalTeams": 12,
-      "submittedProjects": 1
+      "submittedProjects": 3
     },
     {
       "locationId": "aWQ6NTQ5MjA=",
@@ -762,7 +762,7 @@
       "locationName": "Coracora",
       "country": "Peru",
       "totalTeams": 9,
-      "submittedProjects": 0
+      "submittedProjects": 2
     },
     {
       "locationId": "aWQ6NTQ5MjY=",
@@ -776,14 +776,14 @@
       "locationName": "Comodoro Rivadavia",
       "country": "Argentina",
       "totalTeams": 25,
-      "submittedProjects": 3
+      "submittedProjects": 10
     },
     {
       "locationId": "aWQ6NTQ5MzI=",
       "locationName": "Cochabamba",
       "country": "Bolivia",
       "totalTeams": 82,
-      "submittedProjects": 70
+      "submittedProjects": 71
     },
     {
       "locationId": "aWQ6NTQ5MzM=",
@@ -797,42 +797,42 @@
       "locationName": "Ciudad del Este",
       "country": "Paraguay",
       "totalTeams": 35,
-      "submittedProjects": 4
+      "submittedProjects": 12
     },
     {
       "locationId": "aWQ6NTQ5Mzg=",
       "locationName": "Ciudad de la Costa",
       "country": "Uruguay",
       "totalTeams": 58,
-      "submittedProjects": 27
+      "submittedProjects": 32
     },
     {
       "locationId": "aWQ6NTQ5NDA=",
       "locationName": "Cianorte",
       "country": "Brazil",
       "totalTeams": 13,
-      "submittedProjects": 9
+      "submittedProjects": 10
     },
     {
       "locationId": "aWQ6NTQ5NDQ=",
       "locationName": "Chimbote",
       "country": "Peru",
       "totalTeams": 15,
-      "submittedProjects": 1
+      "submittedProjects": 2
     },
     {
       "locationId": "aWQ6NTQ5NDY=",
       "locationName": "Chihuahua",
       "country": "Mexico",
       "totalTeams": 28,
-      "submittedProjects": 5
+      "submittedProjects": 6
     },
     {
       "locationId": "aWQ6NTQ5NDc=",
       "locationName": "Chiclayo",
       "country": "Peru",
       "totalTeams": 22,
-      "submittedProjects": 2
+      "submittedProjects": 3
     },
     {
       "locationId": "aWQ6NTQ5NTA=",
@@ -860,7 +860,7 @@
       "locationName": "Caxias do Sul",
       "country": "Brazil",
       "totalTeams": 8,
-      "submittedProjects": 0
+      "submittedProjects": 1
     },
     {
       "locationId": "aWQ6NTQ5NjA=",
@@ -874,7 +874,7 @@
       "locationName": "Catamarca",
       "country": "Argentina",
       "totalTeams": 16,
-      "submittedProjects": 1
+      "submittedProjects": 2
     },
     {
       "locationId": "aWQ6NTQ5NjM=",
@@ -901,29 +901,29 @@
       "locationId": "aWQ6NTQ5NzA=",
       "locationName": "Campinas",
       "country": "Brazil",
-      "totalTeams": 61,
-      "submittedProjects": 11
+      "totalTeams": 60,
+      "submittedProjects": 22
     },
     {
       "locationId": "aWQ6NTQ5NzE=",
       "locationName": "CAMPINA GRANDE",
       "country": "Brazil",
       "totalTeams": 21,
-      "submittedProjects": 6
+      "submittedProjects": 9
     },
     {
       "locationId": "aWQ6NTQ5Nzc=",
       "locationName": "Caleta Olivia",
       "country": "Argentina",
       "totalTeams": 53,
-      "submittedProjects": 17
+      "submittedProjects": 28
     },
     {
       "locationId": "aWQ6NTQ5ODA=",
       "locationName": "Cajamarca",
       "country": "Peru",
       "totalTeams": 57,
-      "submittedProjects": 7
+      "submittedProjects": 12
     },
     {
       "locationId": "aWQ6NTQ5ODI=",
@@ -936,8 +936,8 @@
       "locationId": "aWQ6NTQ5ODY=",
       "locationName": "Buenos Aires",
       "country": "Argentina",
-      "totalTeams": 91,
-      "submittedProjects": 9
+      "totalTeams": 92,
+      "submittedProjects": 25
     },
     {
       "locationId": "aWQ6NTQ5OTI=",
@@ -958,28 +958,28 @@
       "locationName": "Bogotá",
       "country": "Colombia",
       "totalTeams": 47,
-      "submittedProjects": 5
+      "submittedProjects": 6
     },
     {
       "locationId": "aWQ6NTQ5OTk=",
       "locationName": "Bocas del Toro",
       "country": "Panama",
       "totalTeams": 8,
-      "submittedProjects": 0
+      "submittedProjects": 1
     },
     {
       "locationId": "aWQ6NTUwMDA=",
       "locationName": "Boca del Río",
       "country": "Mexico",
       "totalTeams": 30,
-      "submittedProjects": 24
+      "submittedProjects": 25
     },
     {
       "locationId": "aWQ6NTUwMDE=",
       "locationName": "Boa Vista",
       "country": "Brazil",
-      "totalTeams": 32,
-      "submittedProjects": 23
+      "totalTeams": 33,
+      "submittedProjects": 25
     },
     {
       "locationId": "aWQ6NTUwMTc=",
@@ -993,70 +993,70 @@
       "locationName": "Belém",
       "country": "Brazil",
       "totalTeams": 5,
-      "submittedProjects": 0
+      "submittedProjects": 1
     },
     {
       "locationId": "aWQ6NTUwMjI=",
       "locationName": "Belo Horizonte",
       "country": "Brazil",
       "totalTeams": 20,
-      "submittedProjects": 1
+      "submittedProjects": 5
     },
     {
       "locationId": "aWQ6NTUwMzQ=",
       "locationName": "balneário camboriú",
       "country": "Brazil",
       "totalTeams": 10,
-      "submittedProjects": 1
+      "submittedProjects": 3
     },
     {
       "locationId": "aWQ6NTUwMzY=",
       "locationName": "Bahía Blanca",
       "country": "Argentina",
       "totalTeams": 11,
-      "submittedProjects": 3
+      "submittedProjects": 5
     },
     {
       "locationId": "aWQ6NTUwNDM=",
       "locationName": "Ayacucho",
       "country": "Peru",
       "totalTeams": 12,
-      "submittedProjects": 0
+      "submittedProjects": 4
     },
     {
       "locationId": "aWQ6NTUwNDg=",
       "locationName": "Asunción",
       "country": "Paraguay",
       "totalTeams": 40,
-      "submittedProjects": 2
+      "submittedProjects": 9
     },
     {
       "locationId": "aWQ6NTUwNTY=",
       "locationName": "Arequipa",
       "country": "Peru",
       "totalTeams": 91,
-      "submittedProjects": 4
+      "submittedProjects": 8
     },
     {
       "locationId": "aWQ6NTUwNTg=",
       "locationName": "Aracaju",
       "country": "Brazil",
       "totalTeams": 19,
-      "submittedProjects": 2
+      "submittedProjects": 3
     },
     {
       "locationId": "aWQ6NTUwNjQ=",
       "locationName": "Andahuaylas",
       "country": "Peru",
       "totalTeams": 16,
-      "submittedProjects": 0
+      "submittedProjects": 3
     },
     {
       "locationId": "aWQ6NTUwOTc=",
       "locationName": "Santiago, Dominican Republic",
       "country": "Dominican Republic",
       "totalTeams": 82,
-      "submittedProjects": 38
+      "submittedProjects": 41
     },
     {
       "locationId": "aWQ6NTUwOTk=",
@@ -1077,7 +1077,7 @@
       "locationName": "San Jose, Costa Rica",
       "country": "Costa Rica",
       "totalTeams": 96,
-      "submittedProjects": 6
+      "submittedProjects": 14
     }
   ]
 }
