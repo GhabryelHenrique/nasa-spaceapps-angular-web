@@ -24,6 +24,7 @@ script antes disso grava `teams.json` legitimamente vazio.
 import argparse
 import json
 import os
+import re
 import sys
 import time
 from typing import Any, Dict, List
@@ -542,10 +543,38 @@ def data_dir(year: int) -> str:
     return path
 
 
+# Textos livres das equipes (details, dataReferences...) às vezes trazem
+# credenciais coladas ou URLs pré-assinadas do S3. Se forem gravados, o
+# GitHub Push Protection bloqueia o push (master e gh-pages), então tudo
+# passa por aqui antes de ir para o disco.
+REDACTED = "[REDACTED]"
+SECRET_PATTERNS = [
+    # Access Key IDs da AWS (permanentes e temporárias)
+    (re.compile(r"\b(?:AKIA|ASIA|AROA|AIDA)[A-Z0-9]{16}\b"), REDACTED),
+    # AWS_SECRET_ACCESS_KEY=... / aws_session_token: ...
+    (re.compile(r"(?i)(aws_?(?:secret_?access_?key|session_?token)[\"'\s]*[=:][\"'\s]*)[A-Za-z0-9/+=]{16,}"),
+     r"\1" + REDACTED),
+    # Parâmetros de URLs pré-assinadas do S3
+    (re.compile(r"(?i)(X-Amz-(?:Credential|Signature|Security-Token)=)[^&\s\"')]+"), r"\1" + REDACTED),
+]
+
+
+def redact_secrets(value: Any) -> Any:
+    if isinstance(value, str):
+        for pattern, repl in SECRET_PATTERNS:
+            value = pattern.sub(repl, value)
+        return value
+    if isinstance(value, dict):
+        return {k: redact_secrets(v) for k, v in value.items()}
+    if isinstance(value, list):
+        return [redact_secrets(v) for v in value]
+    return value
+
+
 def write_json(year: int, filename: str, payload: Any) -> str:
     path = os.path.join(data_dir(year), filename)
     with open(path, "w", encoding="utf-8") as f:
-        json.dump(payload, f, ensure_ascii=False, indent=2)
+        json.dump(redact_secrets(payload), f, ensure_ascii=False, indent=2)
     return path
 
 
