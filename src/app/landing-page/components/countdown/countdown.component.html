@@ -147,37 +147,54 @@
       </div>
     }
 
-    <!-- ─── Prova social de 2025 ─────────────────────────── -->
+    <!-- ─── Números da edição 2026 ───────────────────────── -->
     <div class="hype-stats reveal reveal-up delay-4">
       @for (stat of hypeStats; track stat.label) {
         <div class="hype-stat">
           <i [class]="stat.icon" aria-hidden="true"></i>
-          <span class="hype-value">{{ stat.value }}@if (stat.plus) {<span class="plus">+</span>}</span>
+          <span class="hype-value">{{ stat.value }}</span>
           <span class="hype-label">{{ stat.label }}</span>
         </div>
       }
     </div>
 
     <!-- ─── CTAs ─────────────────────────────────────────── -->
-    <div class="countdown-actions reveal reveal-up delay-5">
-      <a [href]="registrationUrl"
-         class="btn-primary"
-         target="_blank" rel="noopener noreferrer"
-         aria-label="Fazer inscrição no site oficial da NASA">
-        <i class="ph ph-rocket-launch" aria-hidden="true"></i>
-        Garantir meu lugar
-      </a>
-      <a routerLink="/como-se-inscrever"
-         class="btn-secondary"
-         aria-label="Ver o passo a passo da inscrição">
-        <i class="ph ph-list-numbers" aria-hidden="true"></i>
-        Como se inscrever
-      </a>
-    </div>
+    @if (isEnded()) {
+      <div class="countdown-actions reveal reveal-up delay-5">
+        <a href="#global-nominees" class="btn-primary">
+          <i class="ph ph-trophy" aria-hidden="true"></i>
+          Ver os Global Nominees
+        </a>
+        <a routerLink="/times" class="btn-secondary">
+          <i class="ph ph-users-three" aria-hidden="true"></i>
+          Ver os times de 2026
+        </a>
+      </div>
 
-    <p class="countdown-hint reveal reveal-up delay-5">
-      Inscrições abertas · Gratuito · Vagas limitadas
-    </p>
+      <p class="countdown-hint reveal reveal-up delay-5">
+        Obrigado a cada participante, mentor, juiz e voluntário · Até 2027!
+      </p>
+    } @else {
+      <div class="countdown-actions reveal reveal-up delay-5">
+        <a [href]="registrationUrl"
+           class="btn-primary"
+           target="_blank" rel="noopener noreferrer"
+           aria-label="Fazer inscrição no site oficial da NASA">
+          <i class="ph ph-rocket-launch" aria-hidden="true"></i>
+          Garantir meu lugar
+        </a>
+        <a routerLink="/como-se-inscrever"
+           class="btn-secondary"
+           aria-label="Ver o passo a passo da inscrição">
+          <i class="ph ph-list-numbers" aria-hidden="true"></i>
+          Como se inscrever
+        </a>
+      </div>
+
+      <p class="countdown-hint reveal reveal-up delay-5">
+        Inscrições abertas · Gratuito · Vagas limitadas
+      </p>
+    }
 
   </div>
 </section>

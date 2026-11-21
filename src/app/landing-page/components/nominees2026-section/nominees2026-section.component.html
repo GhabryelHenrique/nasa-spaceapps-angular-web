@@ -1,0 +1,82 @@
+<section class="nominees26" id="global-nominees" aria-labelledby="global-nominees-titulo">
+  <div class="nominees26-pattern" aria-hidden="true"></div>
+
+  <div class="nominees26-container">
+
+    <!-- ─── Cabeçalho ────────────────────────────────────── -->
+    <header class="nominees26-head">
+      <p class="nominees26-badge reveal reveal-up">
+        <i class="ph ph-trophy" aria-hidden="true"></i>
+        Indicados globais · {{ year }}
+      </p>
+
+      <h2 id="global-nominees-titulo" class="nominees26-title reveal reveal-up delay-1">
+        Uberlândia tem <span class="count">{{ nominees().length }}</span><br>
+        <span class="accent">Global Nominees</span> em {{ year }}
+      </h2>
+
+      <p class="nominees26-lead reveal reveal-up delay-2">
+        Os juízes locais escolheram os projetos criados no hackathon de <strong>14 e 15 de novembro</strong>
+        que representam a nossa sede na avaliação global da NASA. Agora eles concorrem a
+        <strong>Global Finalist</strong> com projetos do mundo inteiro.
+      </p>
+    </header>
+
+    <!-- ─── Times ────────────────────────────────────────── -->
+    <ul class="nominees26-grid reveal reveal-up delay-2">
+      @for (nominee of nominees(); track nominee.slug) {
+        <li>
+          <a class="nominee26-card" [href]="nominee.url" target="_blank" rel="noopener noreferrer"
+             [attr.aria-label]="'Ver o projeto da equipe ' + nominee.name + ' no site do Space Apps'">
+            <figure class="nominee26-photo">
+              @if (nominee.thumbnail) {
+                <img [src]="nominee.thumbnail" [alt]="'Imagem da equipe ' + nominee.name" loading="lazy"
+                     onerror="this.src='assets/organizers/placeholder.svg'">
+              } @else {
+                <span class="nominee26-initials" aria-hidden="true">{{ initials(nominee.name) }}</span>
+              }
+              <span class="nominee26-tag">
+                <i class="ph-fill ph-star" aria-hidden="true"></i>
+                Global Nominee
+              </span>
+            </figure>
+
+            <div class="nominee26-body">
+              <h3 class="nominee26-name">{{ nominee.name }}</h3>
+              @if (nominee.project && nominee.project !== nominee.name) {
+                <p class="nominee26-project">{{ nominee.project }}</p>
+              }
+              @if (nominee.challenge) {
+                <p class="nominee26-challenge">
+                  <i class="ph ph-target" aria-hidden="true"></i>
+                  <span>{{ nominee.challenge }}</span>
+                </p>
+              }
+              <span class="nominee26-link">
+                Ver projeto
+                <i class="ph ph-arrow-up-right" aria-hidden="true"></i>
+              </span>
+            </div>
+          </a>
+        </li>
+      }
+    </ul>
+
+    <!-- ─── Ações ────────────────────────────────────────── -->
+    <div class="nominees26-actions reveal reveal-up delay-3">
+      <button type="button" class="btn-primary" (click)="openShare()" [disabled]="!ready()">
+        <i class="ph ph-instagram-logo" aria-hidden="true"></i>
+        {{ ready() ? 'Criar post para o Instagram' : 'Carregando times…' }}
+      </button>
+      <a routerLink="/times" class="btn-secondary">
+        <i class="ph ph-users-three" aria-hidden="true"></i>
+        Ver todos os times de {{ year }}
+      </a>
+    </div>
+
+  </div>
+
+  @if (sharing()) {
+    <app-nominees-share-modal [nominees]="nominees()" [year]="year" (closed)="closeShare()" />
+  }
+</section>

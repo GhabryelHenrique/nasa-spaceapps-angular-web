@@ -23,6 +23,8 @@ export interface Challenge {
   id: string;
   title: string;
   excerpt: string;
+  /** O `slug` é o mesmo dos desafios em `challenges-2026.data.ts`. */
+  meta?: { slug?: string };
 }
 
 export interface Location {
@@ -66,6 +68,8 @@ export interface Team {
     id: string;
     title: string;
     alt: string;
+    /** `downloadUrl` é a imagem original enviada pelo time (a `rendition` é um recorte de 300×250). */
+    meta?: { downloadUrl?: string };
     rendition: {
       url: string;
       fullUrl: string;

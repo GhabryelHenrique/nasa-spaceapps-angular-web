@@ -46,30 +46,31 @@ describe('HeroSectionComponent', () => {
     expect(component.particles.length).toBe(20);
   });
 
-  it('should point the primary CTA at the official NASA registration page', () => {
+  it('should point the primary CTA at the Global Nominees section', () => {
     const cta = fixture.nativeElement.querySelector('.hero-actions .btn-primary') as HTMLAnchorElement;
 
-    expect(cta.getAttribute('href')).toBe(component.registrationUrl);
-    expect(cta.target).toBe('_blank');
-    expect(cta.rel).toContain('noopener');
+    expect(cta.getAttribute('href')).toBe('#global-nominees');
   });
 
-  it('should announce that registration is open', () => {
+  it('should announce that the 2026 hackathon is over', () => {
     const badge = fixture.nativeElement.querySelector('.hero-live-badge') as HTMLElement;
 
-    expect(badge.textContent?.trim()).toBe('Inscrições abertas');
+    expect(badge.textContent?.trim()).toBe('Hackathon 2026 encerrado');
   });
 
-  it('should offer the mentor, volunteer and speaker forms as secondary paths', () => {
-    const links = [...fixture.nativeElement.querySelectorAll('.hero-mentor-note a')] as HTMLAnchorElement[];
+  it('should show the 2026 results in the stats bar', () => {
+    const values = [...fixture.nativeElement.querySelectorAll('.hero-stat-value')]
+      .map((el: Element) => el.textContent?.trim());
 
-    expect(links.map(a => a.getAttribute('href'))).toEqual([
-      component.mentorFormUrl,
-      component.volunteerFormUrl,
-      component.speakerFormUrl,
-    ]);
-    for (const link of links) {
-      expect(link.target).toBe('_blank');
-    }
+    expect(values).toEqual(component.stats.map(stat => stat.value));
+    expect(values).toContain(String(component.results.teams));
+    expect(values).toContain(String(component.results.globalNominees));
+  });
+
+  it('should no longer invite registrations', () => {
+    const text = (fixture.nativeElement as HTMLElement).textContent ?? '';
+
+    expect(text).not.toContain('Inscreva-se');
+    expect(fixture.nativeElement.querySelector('.hero-mentor-note')).toBeNull();
   });
 });

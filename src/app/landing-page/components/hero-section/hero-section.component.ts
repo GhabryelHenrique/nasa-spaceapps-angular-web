@@ -1,14 +1,8 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterLink } from '@angular/router';
-import { CHALLENGES_DATA } from '../../../shared/data/challenges.data';
-import {
-  MENTOR_FORM_URL,
-  REGISTRATION_URL,
-  SPEAKER_FORM_URL,
-  VOLUNTEER_FORM_URL,
-  WHATSAPP_URL,
-} from '../../../shared/data/registration.data';
+import { WHATSAPP_URL } from '../../../shared/data/registration.data';
+import { EDITION_2026_RESULTS, EDITION_2026_STATS } from '../../../shared/data/edition-2026-results.data';
 
 @Component({
   selector: 'app-hero-section',
@@ -25,12 +19,9 @@ export class HeroSectionComponent {
   readonly themeImageAlt = 'NASA Space Apps Challenge';
   readonly particles = Array.from({ length: 20 }, (_, i) => i);
 
-  readonly registrationUrl = REGISTRATION_URL;
-  readonly mentorFormUrl = MENTOR_FORM_URL;
-  readonly volunteerFormUrl = VOLUNTEER_FORM_URL;
-  readonly speakerFormUrl = SPEAKER_FORM_URL;
   readonly whatsappUrl = WHATSAPP_URL;
 
-  /** Quantos desafios a edição corrente tem — usado no selo "desafios divulgados". */
-  readonly challengeCount = CHALLENGES_DATA.length;
+  /** Resultado da edição 2026 (inscritos, times, projetos, ranking, indicados). */
+  readonly results = EDITION_2026_RESULTS;
+  readonly stats = EDITION_2026_STATS;
 }

@@ -1,17 +1,17 @@
 import { Component, signal } from '@angular/core';
 import { RouterLink } from '@angular/router';
 import { Challenge, CHALLENGES_DATA } from '../../../shared/data/challenges.data';
-import { REGISTRATION_URL } from '../../../shared/data/registration.data';
+import { EDITION_2026_RESULTS } from '../../../shared/data/edition-2026-results.data';
 import { ChallengeDetailModalComponent } from '../../../shared/challenge-detail-modal/challenge-detail-modal.component';
 import { ChallengeShareModalComponent } from '../../../shared/challenge-share/challenge-share-modal.component';
 
 /**
- * "Os desafios saíram" — bloco logo abaixo do hero.
+ * Desafios da edição 2026 na home.
  *
- * Os resumos da edição 2026 foram publicados em 17/09, junto com a liberação da
- * formação de equipes, e os enunciados completos em 28/10 (traduzidos no modal
- * de detalhes). A seção anuncia isso e leva para `/desafios`, mostrando uma
- * prévia de três desafios — um de cada nível — em vez de repetir a lista inteira.
+ * Depois do hackathon (14 e 15/11), a seção deixou de convidar para a inscrição
+ * e passou a contar o que os times fizeram com os desafios. Leva para
+ * `/desafios`, com uma prévia de três desafios de áreas diferentes em vez de
+ * repetir a lista inteira (os enunciados traduzidos ficam no modal de detalhes).
  */
 @Component({
   selector: 'app-challenges-live-section',
@@ -20,8 +20,9 @@ import { ChallengeShareModalComponent } from '../../../shared/challenge-share/ch
   styleUrl: './challenges-live-section.component.scss'
 })
 export class ChallengesLiveSectionComponent {
-  readonly registrationUrl = REGISTRATION_URL;
   readonly challengeCount = CHALLENGES_DATA.length;
+  readonly teamCount = EDITION_2026_RESULTS.teams;
+  readonly submittedProjects = EDITION_2026_RESULTS.submittedProjects;
 
   /** Áreas distintas cobertas pela edição — os "Temas" que a NASA marca em cada desafio. */
   readonly areaCount = new Set(CHALLENGES_DATA.flatMap(challenge => challenge.tags)).size;

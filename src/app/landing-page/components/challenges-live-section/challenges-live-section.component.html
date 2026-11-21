@@ -6,18 +6,18 @@
     <!-- ─── Cabeçalho ────────────────────────────────────── -->
     <header class="challenges-live-head">
       <p class="live-badge reveal reveal-up">
-        <span class="live-dot" aria-hidden="true"></span>
-        Novidade · Desafios divulgados
+        <i class="ph ph-flask" aria-hidden="true"></i>
+        Desafios 2026 · The Next Frontier
       </p>
 
       <h2 id="desafios-2026-titulo" class="challenges-live-title reveal reveal-up delay-1">
-        Os {{ challengeCount }} desafios de 2026<br><span class="accent">já estão no ar</span>
+        Os {{ challengeCount }} desafios<br><span class="accent">que os times enfrentaram</span>
       </h2>
 
       <p class="challenges-live-lead reveal reveal-up delay-2">
-        A NASA publicou os enunciados completos dos desafios da edição <strong>The Next Frontier</strong>
-        — e eles já estão traduzidos aqui. Escolha o seu, monte a equipe e estude o tema: o projeto
-        só começa no hackathon, em <strong>14 e 15 de novembro</strong>.
+        Em <strong>14 e 15 de novembro</strong>, {{ teamCount }} times de Uberlândia trabalharam nos desafios
+        da edição <strong>The Next Frontier</strong> e entregaram {{ submittedProjects }} projetos. Os enunciados
+        completos continuam traduzidos aqui.
       </p>
     </header>
 
@@ -32,8 +32,8 @@
         <span class="fact-label">Áreas do conhecimento</span>
       </li>
       <li>
-        <span class="fact-value">14–15/11</span>
-        <span class="fact-label">Hackathon</span>
+        <span class="fact-value">{{ submittedProjects }}</span>
+        <span class="fact-label">Projetos entregues</span>
       </li>
     </ul>
 
@@ -72,19 +72,11 @@
         <i class="ph ph-list-magnifying-glass" aria-hidden="true"></i>
         Ver os {{ challengeCount }} desafios
       </a>
-      <a [href]="registrationUrl" class="btn-secondary" target="_blank" rel="noopener noreferrer">
-        <i class="ph ph-rocket-launch" aria-hidden="true"></i>
-        Inscreva-se para participar
+      <a routerLink="/times" class="btn-secondary">
+        <i class="ph ph-users-three" aria-hidden="true"></i>
+        Ver os projetos dos times
       </a>
     </div>
-
-    <p class="challenges-live-note reveal reveal-up delay-4">
-      <i class="ph ph-warning-circle" aria-hidden="true"></i>
-      <span>
-        Escolher o desafio e formar a equipe já pode. Desenvolver o projeto, não: o trabalho
-        só começa no hackathon, em <strong>14 e 15 de novembro</strong> — começar antes desclassifica.
-      </span>
-    </p>
 
   </div>
 

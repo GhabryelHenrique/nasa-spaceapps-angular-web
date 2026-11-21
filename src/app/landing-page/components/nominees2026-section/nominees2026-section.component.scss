@@ -1,0 +1,244 @@
+@use '../../../../styles/section' as *;
+
+// ─────────────────────────────────────────────────────────────
+// Global Nominees 2026 (home)
+// Primeiro bloco depois do hero: os times de Uberlândia indicados
+// à avaliação global, com atalho para o post do Instagram.
+// ─────────────────────────────────────────────────────────────
+
+.nominees26 {
+  @include section-shell(deep, 96px);
+  // O header é fixo — evita que o alvo do link âncora fique escondido atrás dele.
+  scroll-margin-top: 84px;
+}
+
+.nominees26-pattern { @include section-pattern('Rosette.png', 720px, 0.22); }
+
+.nominees26-container { @include section-container(1180px); }
+
+.nominees26-head { @include section-head; }
+
+// Mesmo vocabulário do selo "Desafios divulgados", em Neon Yellow.
+.nominees26-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.55rem;
+  margin: 0 0 1rem;
+  padding: 0.4rem 1rem;
+  border: 1px solid rgba($sa-neon-yellow, 0.45);
+  border-radius: 100px;
+  background: rgba($sa-neon-yellow, 0.08);
+  font-family: 'Overpass', sans-serif;
+  font-size: 0.74rem;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: $sa-neon-yellow;
+
+  i { font-size: 0.95rem; }
+}
+
+.nominees26-title {
+  @include section-title(clamp(2rem, 4.6vw, 3.3rem));
+
+  .count {
+    color: $sa-neon-yellow;
+    text-shadow: 0 0 24px rgba($sa-neon-yellow, 0.35);
+  }
+}
+
+.nominees26-lead {
+  @include section-lead(700px);
+
+  strong { color: $sa-white; font-weight: 600; }
+}
+
+// ─── Cartões ──────────────────────────────────────────────
+// Até 4 por linha; a última linha fica centralizada (7 = 4 + 3).
+.nominees26-grid {
+  list-style: none;
+  margin: 0 0 2.75rem;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.25rem;
+
+  > li {
+    flex: 0 1 calc((100% - 3 * 1.25rem) / 4);
+    min-width: 230px;
+    display: flex;
+  }
+}
+
+.nominee26-card {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  border-radius: 18px;
+  overflow: hidden;
+  background: rgba(0, 66, 166, 0.18);
+  border: 1px solid var(--border-subtle);
+  color: inherit;
+  text-decoration: none;
+  transition: transform 0.25s ease, border-color 0.25s ease, background 0.25s ease, box-shadow 0.25s ease;
+
+  &:hover,
+  &:focus-visible {
+    transform: translateY(-5px);
+    background: rgba(0, 66, 166, 0.3);
+    border-color: rgba($sa-neon-yellow, 0.55);
+    box-shadow: 0 14px 36px rgba(0, 0, 0, 0.35);
+
+    .nominee26-link { color: $sa-neon-yellow; }
+    .nominee26-photo img { transform: scale(1.04); }
+  }
+
+  &:focus-visible {
+    outline: 2px solid $sa-neon-yellow;
+    outline-offset: 3px;
+  }
+}
+
+.nominee26-photo {
+  position: relative;
+  margin: 0;
+  aspect-ratio: 6 / 5; // recorte 300×250 do Space Apps
+  overflow: hidden;
+  background: $sa-deep-blue;
+
+  img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+  }
+}
+
+.nominee26-initials {
+  display: grid;
+  place-items: center;
+  width: 100%;
+  height: 100%;
+  font-family: 'Fira Sans', sans-serif;
+  font-size: 3rem;
+  font-weight: 900;
+  color: $sa-neon-yellow;
+}
+
+.nominee26-tag {
+  position: absolute;
+  top: 0.75rem;
+  left: 0.75rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.3rem 0.7rem;
+  border-radius: 100px;
+  background: rgba(7, 23, 63, 0.88);
+  border: 1px solid rgba($sa-neon-yellow, 0.6);
+  font-family: 'Overpass', sans-serif;
+  font-size: 0.66rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: $sa-neon-yellow;
+}
+
+.nominee26-body {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  gap: 0.45rem;
+  padding: 1.15rem 1.2rem 1.25rem;
+}
+
+.nominee26-name {
+  font-family: 'Fira Sans', sans-serif;
+  font-size: 1.3rem;
+  font-weight: 900;
+  line-height: 1.15;
+  color: $sa-white;
+  margin: 0;
+  overflow-wrap: anywhere;
+}
+
+.nominee26-project {
+  font-family: 'Overpass', sans-serif;
+  font-size: 0.92rem;
+  font-weight: 600;
+  line-height: 1.35;
+  color: $sa-blue-yonder;
+  margin: 0;
+}
+
+.nominee26-challenge {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.45rem;
+  font-size: 0.84rem;
+  font-weight: 300;
+  line-height: 1.45;
+  color: var(--text-secondary);
+  margin: 0;
+
+  i {
+    flex-shrink: 0;
+    margin-top: 0.15rem;
+    color: $sa-neon-yellow;
+  }
+}
+
+.nominee26-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  margin-top: auto;
+  padding-top: 0.6rem;
+  font-family: 'Overpass', sans-serif;
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: $sa-white;
+  transition: color 0.2s ease;
+}
+
+// ─── Ações ────────────────────────────────────────────────
+.nominees26-actions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.9rem;
+
+  button.btn-primary:disabled {
+    opacity: 0.6;
+    cursor: wait;
+    transform: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .nominees26 { padding: 72px 0; }
+
+  .nominees26-grid > li {
+    flex-basis: calc((100% - 1.25rem) / 2);
+    min-width: 0;
+  }
+
+  .nominee26-name { font-size: 1.1rem; }
+  .nominee26-body { padding: 1rem; }
+}
+
+@media (max-width: 480px) {
+  .nominees26-grid > li { flex-basis: 100%; }
+
+  .nominees26-actions {
+    flex-direction: column;
+    align-items: stretch;
+
+    .btn-primary,
+    .btn-secondary { justify-content: center; }
+  }
+}

@@ -157,7 +157,7 @@
 
 // ─── Selos de estado ────────────────────────────
 // Neon Yellow como acento de estado, nunca como fundo cheio (pág. 13).
-// Dois selos lado a lado: inscrições abertas e desafios divulgados.
+// Dois selos lado a lado: situação da edição e o destaque do momento.
 .hero-flags {
   display: flex;
   flex-wrap: wrap;
@@ -511,6 +511,8 @@
     font-size: 1.3rem;
     color: $sa-neon-yellow;
   }
+
+  &.is-accent { color: $sa-neon-yellow; }
 
   .hero-stat-plus {
     font-size: 0.65em;

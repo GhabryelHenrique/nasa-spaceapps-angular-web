@@ -5,6 +5,7 @@ import {
 import { CommonModule } from '@angular/common';
 import { RouterLink } from '@angular/router';
 import { REGISTRATION_URL } from '../../../shared/data/registration.data';
+import { EDITION_2026_STATS } from '../../../shared/data/edition-2026-results.data';
 
 type Phase = 'before' | 'live' | 'ended';
 
@@ -353,11 +354,6 @@ export class CountdownComponent {
     };
   }
 
-  /** Números de 2025 usados como prova social. */
-  readonly hypeStats = [
-    { icon: 'ph ph-users-three', value: '1400', plus: true, label: 'Participantes em 2025' },
-    { icon: 'ph ph-trophy', value: '10', plus: false, label: 'Global Nominees' },
-    { icon: 'ph ph-globe-hemisphere-west', value: '#1', plus: false, label: 'Hemisfério Ocidental' },
-    { icon: 'ph ph-shooting-star', value: '160', plus: true, label: 'Times formados' }
-  ];
+  /** Números da edição 2026 — centralizados em `edition-2026-results.data.ts`. */
+  readonly hypeStats = EDITION_2026_STATS;
 }

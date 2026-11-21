@@ -11,7 +11,6 @@
   position: relative;
   z-index: 1;
   color: var(--text-primary);
-  overflow-x: hidden;
 }
 
 .hero-wrapper {
@@ -230,83 +229,6 @@
 }
 
 // ─────────────────────────────────────────────────────────────
-// Global Nominees
-// ─────────────────────────────────────────────────────────────
-.nominees-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
-  gap: 1.1rem;
-}
-
-.nominee-card {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  border-radius: 16px;
-  overflow: hidden;
-  background: rgba(0, 66, 166, 0.16);
-  border: 1px solid var(--border-subtle);
-  transition: transform 0.25s ease, border-color 0.25s ease, background 0.25s ease;
-
-  &:hover {
-    transform: translateY(-5px);
-    background: rgba(0, 66, 166, 0.28);
-    border-color: rgba($sa-blue-yonder, 0.45);
-  }
-}
-
-.nominee-rank {
-  position: absolute;
-  top: 0.75rem;
-  left: 0.75rem;
-  z-index: 2;
-  display: grid;
-  place-items: center;
-  width: 30px;
-  height: 30px;
-  border-radius: 50%;
-  background: rgba(7, 23, 63, 0.88);
-  border: 1px solid rgba($sa-blue-yonder, 0.5);
-  font-family: 'Fira Sans', sans-serif;
-  font-size: 0.85rem;
-  font-weight: 900;
-  color: $sa-white;
-}
-
-.nominee-photo {
-  margin: 0;
-  aspect-ratio: 16 / 10;
-  overflow: hidden;
-
-  img {
-    display: block;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
-}
-
-.nominee-body {
-  padding: 1.1rem 1.2rem 1.3rem;
-
-  h3 {
-    font-family: 'Overpass', sans-serif;
-    font-size: 1rem;
-    font-weight: 600;
-    color: $sa-white;
-    margin: 0 0 0.4rem;
-  }
-}
-
-.nominee-challenge {
-  font-size: 0.85rem;
-  font-weight: 300;
-  line-height: 1.45;
-  color: var(--text-secondary);
-  margin: 0;
-}
-
-// ─────────────────────────────────────────────────────────────
 // Prêmios Especiais
 // ─────────────────────────────────────────────────────────────
 .special-awards-grid {
@@ -419,8 +341,6 @@
 
   .winners-grid,
   .special-awards-grid { grid-template-columns: 1fr; }
-
-  .nominees-grid { grid-template-columns: repeat(auto-fill, minmax(160px, 1fr)); }
 
   .winner-name { font-size: 1.5rem; }
   .winner-body { padding: 1.35rem 1.2rem; }

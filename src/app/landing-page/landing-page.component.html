@@ -5,11 +5,14 @@
     <app-hero-section></app-hero-section>
   </section>
 
+  <!-- Global Nominees 2026 — em destaque logo após o hero -->
+  <app-nominees2026-section></app-nominees2026-section>
+
   <!-- Desafios 2026 divulgados -->
   <app-challenges-live-section></app-challenges-live-section>
 
   <!-- Inscrições 2026 abertas -->
-  <app-registration-section></app-registration-section>
+  <!-- <app-registration-section></app-registration-section> -->
 
   <!-- Semana de palestras (parceria GDG) -->
   <app-talks-section></app-talks-section>
@@ -41,10 +44,10 @@
   <app-timeline></app-timeline>
 
   <!-- Recap 2025 -->
-  <app-recap2025-section></app-recap2025-section>
+  <!-- <app-recap2025-section></app-recap2025-section> -->
 
   <!-- ─── Destaques Globais ──────────────────────────────── -->
-  <section class="sa-section sa-section--deep winners-section">
+  <!-- <section class="sa-section sa-section--deep winners-section">
     <div class="sa-pattern sa-pattern--voronoi" aria-hidden="true"></div>
     <div class="sa-container">
 
@@ -95,49 +98,10 @@
       </div>
 
     </div>
-  </section>
-
-  <!-- ─── Global Nominees 2025 ───────────────────────────── -->
-  <section class="sa-section sa-section--sunken nominees-section">
-    <div class="sa-pattern sa-pattern--orbits" aria-hidden="true"></div>
-    <div class="sa-container">
-
-      <header class="sa-head reveal reveal-up">
-        <p class="sa-eyebrow">Indicados globais</p>
-        <h2 class="sa-title">Global <span class="accent">Nominees</span> 2025</h2>
-        <p class="sa-lead">
-          Dez projetos de Uberlândia indicados aos Global Nominees do
-          NASA Space Apps Challenge 2025.
-        </p>
-      </header>
-
-      <div class="nominees-grid reveal reveal-up delay-1">
-        @for (team of globalNomineesTeams(); track team.title; let i = $index) {
-          <a class="nominee-card"
-             [href]="'https://www.spaceappschallenge.org' + team.meta.relativeUrl"
-             target="_blank" rel="noopener noreferrer">
-            <span class="nominee-rank">{{ i + 1 }}</span>
-            @if (team.featuredImage) {
-              <figure class="nominee-photo">
-                <img [src]="team.featuredImage.rendition.fullUrl" [alt]="team.title" loading="lazy"
-                     onerror="this.src='assets/organizers/placeholder.svg'">
-              </figure>
-            }
-            <div class="nominee-body">
-              <h3>{{ team.title }}</h3>
-              @if (team.challengeDetails) {
-                <p class="nominee-challenge">{{ team.challengeDetails.title }}</p>
-              }
-            </div>
-          </a>
-        }
-      </div>
-
-    </div>
-  </section>
+  </section> -->
 
   <!-- ─── Prêmios Especiais ──────────────────────────────── -->
-  <section class="sa-section sa-section--deep awards-section">
+  <!-- <section class="sa-section sa-section--sunken awards-section">
     <div class="sa-pattern sa-pattern--rosette" aria-hidden="true"></div>
     <div class="sa-container">
 
@@ -168,7 +132,7 @@
       </div>
 
     </div>
-  </section>
+  </section> -->
 
   <!-- Informações do Evento -->
   <section class="event-info-wrapper reveal reveal-up">
@@ -176,7 +140,7 @@
   </section>
 
   <!-- ─── Torne-se um Parceiro ───────────────────────────── -->
-  <section class="sa-section sa-section--deep partner-section">
+  <!-- <section class="sa-section sa-section--deep partner-section">
     <div class="sa-pattern sa-pattern--fiduciaries" aria-hidden="true"></div>
     <div class="sa-container">
       <div class="partner-card reveal reveal-up">
@@ -200,6 +164,6 @@
         </div>
       </div>
     </div>
-  </section>
+  </section> -->
 
 </div>

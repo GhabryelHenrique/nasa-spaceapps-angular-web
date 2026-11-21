@@ -134,13 +134,18 @@ export function setLetterSpacing(ctx: CanvasRenderingContext2D, value: string): 
   (ctx as CanvasRenderingContext2D & { letterSpacing?: string }).letterSpacing = value;
 }
 
-/** Imagens são assets locais: o canvas não fica "tainted" e o `toBlob()` funciona. */
+/**
+ * Assets locais não deixam o canvas "tainted". Imagens externas (as dos times,
+ * no CDN do Space Apps, que responde com `Access-Control-Allow-Origin: *`) vão
+ * com `crossOrigin` — sem isso o `toBlob()` falha.
+ */
 export function loadImage(src: string): Promise<HTMLImageElement> {
   const cached = imageCache.get(src);
   if (cached) return cached;
 
   const loading = new Promise<HTMLImageElement>((resolve, reject) => {
     const img = new Image();
+    if (/^https?:\/\//.test(src)) img.crossOrigin = 'anonymous';
     img.onload = () => resolve(img);
     img.onerror = () => reject(new Error(`Não foi possível carregar a imagem ${src}.`));
     img.src = src;

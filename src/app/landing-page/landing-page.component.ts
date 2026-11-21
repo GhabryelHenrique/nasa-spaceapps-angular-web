@@ -1,8 +1,8 @@
-import { Component, OnInit, inject, signal } from '@angular/core';
+import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
-import { HeaderComponent } from './components/header/header.component';
 import { HeroSectionComponent } from './components/hero-section/hero-section.component';
+import { Nominees2026SectionComponent } from './components/nominees2026-section/nominees2026-section.component';
 import { ChallengesLiveSectionComponent } from './components/challenges-live-section/challenges-live-section.component';
 import { RegistrationSectionComponent } from './components/registration-section/registration-section.component';
 import { TalksSectionComponent } from './components/talks-section/talks-section.component';
@@ -11,8 +11,6 @@ import { EventInfoTabsComponent } from './components/event-info-tabs/event-info-
 import { Recap2025SectionComponent } from './components/recap2025-section/recap2025-section.component';
 import { CountdownComponent } from './components/countdown/countdown.component';
 import { TimelineComponent } from './components/timeline/timeline.component';
-import { TeamsService } from '../services/teams.service';
-import { Team } from '../shared/data/teams.data';
 import { SPONSORS_2026 } from '../shared/data/sponsors-2026.data';
 
 @Component({
@@ -21,6 +19,7 @@ import { SPONSORS_2026 } from '../shared/data/sponsors-2026.data';
     CommonModule,
     RouterModule,
     HeroSectionComponent,
+    Nominees2026SectionComponent,
     ChallengesLiveSectionComponent,
     RegistrationSectionComponent,
     TalksSectionComponent,
@@ -33,27 +32,8 @@ import { SPONSORS_2026 } from '../shared/data/sponsors-2026.data';
   templateUrl: './landing-page.component.html',
   styleUrl: './landing-page.component.scss',
 })
-export class LandingPageComponent implements OnInit {
+export class LandingPageComponent {
   readonly sponsors2026 = SPONSORS_2026;
-
-  totalTeams = 0;
-  totalMembers = 0;
-
-  // Global Nominees 2025 - Nomes dos times vencedores
-  globalNomineesNames = [
-    'Titan',
-    'Finstream',
-    'Gauss n roses',
-    'Orbital token market',
-    'Asteroid watchers',
-    'Cosmos explorers',
-    'Diário de ideia espacial',
-    'Guardians of the city',
-    'Extraplant',
-  ];
-
-  // Times vencedores com dados completos da API
-  globalNomineesTeams = signal<Team[]>([]);
 
   // Times Vencedores Destacados
   highlightedWinners = [
@@ -133,72 +113,6 @@ export class LandingPageComponent implements OnInit {
       description: 'Pela avaliação criteriosa e imparcial dos projetos'
     },
   ];
-
-  private readonly teamsService = inject(TeamsService);
-
-  ngOnInit(): void {
-    this.loadTeamsStats();
-  }
-
-  private loadTeamsStats(): void {
-    // Fixo em 2025: os números e os indicados globais desta seção são o retrospecto
-    // da edição passada. A listagem da edição corrente vive em /times.
-    this.teamsService.getTeams(2025).subscribe({
-      next: (response) => {
-        if (response.data && response.data[0] && response.data[0].teams) {
-          const teamsData = response.data[0].teams;
-          this.totalTeams = teamsData.totalCount;
-
-          let memberCount = 0;
-          const allTeams: Team[] = [];
-
-          teamsData.edges.forEach((edge) => {
-            allTeams.push(edge.node);
-            if (edge.node.memberships) {
-              memberCount += edge.node.memberships.length;
-            }
-          });
-
-          this.totalMembers = memberCount;
-          console.log('Total Teams:', allTeams);
-
-          this.globalNomineesTeams.set(allTeams.filter(
-            (team) =>
-              team.title.toLowerCase().includes('Titan'.toLowerCase()) ||
-              team.title.toLowerCase().includes('Finstream'.toLowerCase()) ||
-              team.title
-                .toLowerCase()
-                .includes('Gauss'.toLowerCase()) ||
-              team.title
-                .toLowerCase()
-                .includes('Orbital token market'.toLowerCase()) ||
-              team.title
-                .toLowerCase()
-                .includes('Asteroid watchers'.toLowerCase()) ||
-              team.title
-                .toLowerCase()
-                .includes('Cosmos explorers'.toLowerCase()) ||
-              team.title
-                .toLowerCase()
-                .includes('Diário de ideias espacial'.toLowerCase()) ||
-              team.title
-                .toLowerCase()
-                .includes('Guardians of the city'.toLowerCase()) ||
-              team.title.toLowerCase().includes('Extraplant'.toLowerCase()) ||
-              team.title.toLowerCase().includes('Code and cheese'.toLowerCase())
-          ));
-
-          console.log(this.globalNomineesTeams);
-
-        }
-      },
-      error: (error) => {
-        console.error('Error loading teams stats:', error);
-        this.totalTeams = 0;
-        this.totalMembers = 0;
-      },
-    });
-  }
 
   organizers = [
     {

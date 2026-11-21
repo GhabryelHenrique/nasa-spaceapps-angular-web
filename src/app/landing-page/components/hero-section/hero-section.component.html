@@ -28,34 +28,35 @@
 
       <div class="hero-flags reveal reveal-up delay-1">
         <p class="hero-live-badge">
-          <span class="live-dot" aria-hidden="true"></span>
-          Inscrições abertas
+          <i class="ph ph-check-circle" aria-hidden="true"></i>
+          Hackathon 2026 encerrado
         </p>
-        <a routerLink="/desafios" class="hero-news-badge">
-          <i class="ph ph-flask" aria-hidden="true"></i>
-          {{ challengeCount }} desafios divulgados
+        <a href="#global-nominees" class="hero-news-badge">
+          <i class="ph ph-trophy" aria-hidden="true"></i>
+          {{ results.globalNominees }} Global Nominees
         </a>
       </div>
 
       <h1 class="hero-title reveal reveal-up delay-1">
         O maior hackathon<br>
         <span class="hero-title-highlight">espacial do mundo</span><br>
-        <span class="hero-title-sub">volta em novembro</span>
+        <span class="hero-title-sub">missão 2026 cumprida</span>
       </h1>
 
       <p class="hero-subtitle reveal reveal-up delay-2">
-        Em 2025 fomos <strong>#1 no Hemisfério Ocidental</strong> com 1400+ participantes e 10 Global Nominees.<br>
-        Em 2026, a missão recomeça. <strong>14 de Novembro.</strong> Você vai estar lá?
+        Em 2026, Uberlândia foi a <strong>#{{ results.brazilRank }} sede do Brasil</strong>: {{ results.registrations }} inscritos,
+        {{ results.teams }} times e {{ results.submittedProjects }} projetos entregues.<br>
+        <strong>{{ results.globalNominees }} deles</strong> foram indicados à avaliação global da NASA.
       </p>
 
       <div class="hero-actions reveal reveal-up delay-3">
-        <a [href]="registrationUrl" class="btn-primary" target="_blank" rel="noopener noreferrer">
-          <i class="ph ph-rocket-launch" aria-hidden="true"></i>
-          Inscreva-se agora
+        <a href="#global-nominees" class="btn-primary">
+          <i class="ph ph-trophy" aria-hidden="true"></i>
+          Ver os Global Nominees
         </a>
-        <a routerLink="/como-se-inscrever" class="btn-secondary">
-          <i class="ph ph-list-numbers" aria-hidden="true"></i>
-          Como se inscrever
+        <a routerLink="/times" class="btn-secondary">
+          <i class="ph ph-users-three" aria-hidden="true"></i>
+          Times de {{ results.year }}
         </a>
         <a [href]="whatsappUrl" class="btn-link" target="_blank" rel="noopener noreferrer">
           <i class="fab fa-whatsapp" aria-hidden="true"></i>
@@ -63,23 +64,16 @@
         </a>
       </div>
 
-      <p class="hero-mentor-note reveal reveal-up delay-3">
-        Quer apoiar o evento? Inscreva-se como
-        <a [href]="mentorFormUrl" target="_blank" rel="noopener noreferrer">mentor</a>,
-        <a [href]="volunteerFormUrl" target="_blank" rel="noopener noreferrer">voluntário</a> ou
-        <a [href]="speakerFormUrl" target="_blank" rel="noopener noreferrer">palestrante</a>.
-      </p>
-
-      <!-- Badge duplo: edição passada + próxima -->
+      <!-- Badge duplo: edição que passou + próxima etapa -->
       <div class="hero-badges reveal reveal-up delay-4">
         <div class="hero-badge hero-badge-past">
           <span class="badge-dot"></span>
-          2025 · Uberlândia escreveu história
+          2026 · #{{ results.brazilRank }} do Brasil
         </div>
         <div class="hero-badge-sep" aria-hidden="true">→</div>
         <div class="hero-badge hero-badge-next">
           <span class="badge-pulse"></span>
-          2026 · Prepare-se
+          Avaliação global da NASA
         </div>
       </div>
 
@@ -98,31 +92,17 @@
   </div>
 
   <!-- Stat bar na base do hero -->
+  <!-- Números de 2026 (EDITION_2026_STATS); o último, os indicados, em destaque -->
   <div class="hero-stats reveal reveal-up delay-4">
-    <div class="hero-stat">
-      <span class="hero-stat-value">1400<span class="hero-stat-plus">+</span></span>
-      <span class="hero-stat-label">Participantes 2025</span>
-    </div>
-    <div class="hero-stat-divider" aria-hidden="true"></div>
-    <div class="hero-stat">
-      <span class="hero-stat-value">160<span class="hero-stat-plus">+</span></span>
-      <span class="hero-stat-label">Times</span>
-    </div>
-    <div class="hero-stat-divider" aria-hidden="true"></div>
-    <div class="hero-stat">
-      <span class="hero-stat-value">#1</span>
-      <span class="hero-stat-label">Hemisfério Ocidental</span>
-    </div>
-    <div class="hero-stat-divider" aria-hidden="true"></div>
-    <div class="hero-stat">
-      <span class="hero-stat-value">10</span>
-      <span class="hero-stat-label">Global Nominees</span>
-    </div>
-    <div class="hero-stat-divider" aria-hidden="true"></div>
-    <div class="hero-stat hero-stat-next">
-      <span class="hero-stat-value hero-stat-date">14 Nov</span>
-      <span class="hero-stat-label">Próxima edição 2026</span>
-    </div>
+    @for (stat of stats; track stat.label; let last = $last) {
+      <div class="hero-stat">
+        <span class="hero-stat-value" [class.is-accent]="last">{{ stat.value }}</span>
+        <span class="hero-stat-label">{{ stat.label }}</span>
+      </div>
+      @if (!last) {
+        <div class="hero-stat-divider" aria-hidden="true"></div>
+      }
+    }
   </div>
 
   <div class="scroll-indicator" aria-hidden="true">
