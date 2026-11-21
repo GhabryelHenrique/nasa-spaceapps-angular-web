@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-16T12:04:40Z",
+  "generatedAt": "2026-11-21T21:25:25Z",
   "data": [
     {
       "locationId": "aWQ6NTQ0MTQ=",
@@ -439,7 +439,7 @@
       "locationId": "aWQ6NTQ2NTc=",
       "locationName": "Mérida",
       "country": "Mexico",
-      "totalTeams": 80,
+      "totalTeams": 79,
       "submittedProjects": 56
     },
     {
@@ -1056,7 +1056,7 @@
       "locationName": "Santiago, Dominican Republic",
       "country": "Dominican Republic",
       "totalTeams": 82,
-      "submittedProjects": 59
+      "submittedProjects": 60
     },
     {
       "locationId": "aWQ6NTUwOTk=",
